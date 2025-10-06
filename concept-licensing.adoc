@@ -1,0 +1,286 @@
+---
+sidebar: sidebar 
+permalink: concept-licensing.html 
+keywords: 'freemium, professional, essentials, licensing, licenses, cloud volumes ontap charging, cloud volumes ontap licenses, cloud volumes ontap licensing, cvo licenses, cvo licensing, byol, bring your own license, paygo, pay as you go, keystone flex, keystone, cloud backup, digital wallet, bluexp license conversion for node based, license end of support (EOS) node-based, end of availability (EOA) of node-based' 
+summary: Hay varias opciones de licencia disponibles para Cloud Volumes ONTAP. Cada opción le permite elegir una configuración que se adapte a sus necesidades. 
+---
+= Licencias para Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Hay varias opciones de licencia disponibles para Cloud Volumes ONTAP. Cada opción te permite elegir un modelo de consumo que se adapte a tus necesidades.
+
+
+
+== Descripción general de la licencia
+
+Las siguientes opciones de licencia están disponibles para nuevos clientes.
+
+Licencias basadas en capacidad:: Pague por varios sistemas Cloud Volumes ONTAP en su cuenta de NetApp según la capacidad aprovisionada.  Incluye la posibilidad de comprar servicios de datos en la nube complementarios.  Para obtener más información sobre los modelos de consumo en licencias basadas en capacidad, consultelink:concept-licensing-charging.html["Obtenga más información sobre las licencias basadas en capacidad"] .
+Suscripción a Keystone:: Un servicio basado en suscripción de pago por crecimiento que ofrece una experiencia de nube híbrida perfecta para pares de alta disponibilidad (HA).
+
+
+Las siguientes secciones proporcionan más detalles sobre cada una de estas opciones.
+
+
+NOTE: No hay soporte disponible para el uso de funciones con licencia sin una licencia.
+
+
+
+== Licencias basadas en capacidad
+
+Los paquetes de licencias basados ​​en capacidad le permiten pagar Cloud Volumes ONTAP por TiB de capacidad. La licencia está asociada a su cuenta de NetApp y le permite cargar varios sistemas con la licencia, siempre que haya suficiente capacidad disponible a través de la licencia.
+
+Por ejemplo, puede comprar una sola licencia de 20 TiB, implementar cuatro sistemas Cloud Volumes ONTAP y luego asignar un volumen de 5 TiB a cada sistema, para un total de 20 TiB.  La capacidad está disponible para los volúmenes en cada sistema Cloud Volumes ONTAP implementado en esa cuenta.
+
+La licencia basada en capacidad está disponible en forma de _paquete_. Cuando implementa un sistema Cloud Volumes ONTAP , puede elegir entre varios paquetes de licencias según las necesidades de su negocio.
+
+
+NOTE: Si bien el uso real y la medición de los productos y servicios administrados en la consola de NetApp siempre se calculan en GiB y TiB, los términos GB/GiB y TB/TiB se usan indistintamente.  Esto se refleja en los listados del mercado de la nube, en las cotizaciones de precios, en las descripciones de los listados y en otra documentación de respaldo.
+
+
+
+=== Paquetes
+
+Los siguientes paquetes basados ​​en capacidad están disponibles para Cloud Volumes ONTAP.  Para obtener más información sobre los paquetes de licencias basados ​​en capacidad, consultelink:concept-licensing-charging.html["Obtenga más información sobre las licencias basadas en capacidad"] .
+
+Para obtener una lista de los tipos de máquinas virtuales compatibles con los siguientes paquetes basados en capacidad, consulte:
+
+ifdef::azure[]
+
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html["Configuraciones admitidas en Azure"^]
+
+
+endif::azure[]
+
+ifdef::gcp[]
+
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html["Configuraciones compatibles en Google Cloud"^]
+
+
+endif::gcp[]
+
+
+
+==== Freemium
+
+Proporciona todas las funciones de Cloud Volumes ONTAP de forma gratuita desde NetApp (aún se aplican cargos del proveedor de nube).  Un paquete Freemium tiene estas características:
+
+* No se necesita licencia ni contrato.
+* El soporte de NetApp no ​​está incluido.
+* Está limitado a 500 GiB de capacidad aprovisionada por sistema Cloud Volumes ONTAP .
+* Puede utilizar hasta 10 sistemas Cloud Volumes ONTAP con la oferta Freemium por cuenta de NetApp , para cualquier proveedor de nube.
+* Si la capacidad aprovisionada para un sistema Cloud Volumes ONTAP supera los 500 GiB, la consola convierte el sistema en un paquete Essentials.
++
+Tan pronto como un sistema se convierte al paquete Essentials,link:concept-licensing-charging.html#minimum-charge["carga mínima"] Se aplica a él.
+
++
+Un sistema Cloud Volumes ONTAP que se ha convertido a un paquete Essentials no puede volver a ser Freemium incluso si la capacidad aprovisionada se reduce a menos de 500 GiB.  Otros sistemas con menos de 500 GiB de capacidad aprovisionada permanecen en Freemium (siempre que se hayan implementado utilizando la oferta Freemium).
+
+
+
+
+
+==== Lo esencial
+
+Puedes pagar por capacidad en varias configuraciones diferentes:
+
+* Elija su configuración de Cloud Volumes ONTAP :
++
+** Un solo nodo o sistema HA
+** Almacenamiento de archivos y bloques o datos secundarios para recuperación ante desastres (DR)
+
+
+* Agregue cualquiera de los servicios de datos en la nube de NetApp con un costo adicional
+
+
+
+
+==== Profesional
+
+Pague por capacidad para cualquier tipo de configuración de Cloud Volumes ONTAP con copias de seguridad ilimitadas.
+
+* Proporciona licencias para cualquier configuración de Cloud Volumes ONTAP
++
+Nodo único o HA con capacidad de carga para volúmenes primarios y secundarios a la misma tarifa
+
+* Incluye copias de seguridad de volumen ilimitadas mediante NetApp Backup and Recovery, pero solo para sistemas Cloud Volumes ONTAP que utilizan el paquete Professional.
++
+
+NOTE: Se requiere una suscripción de pago por uso (PAYGO) para Copia de seguridad y recuperación, sin embargo no se incurrirá en cargos por utilizar este servicio.  Para obtener más información sobre cómo configurar las licencias para Copia de seguridad y recuperación, consulte https://docs.netapp.com/us-en/bluexp-backup-recovery/task-licensing-cloud-backup.html["Configurar licencias para copias de seguridad y recuperación"^] .
+
+* Agregue cualquiera de los servicios de datos en la nube de NetApp con un costo adicional
+
+
+
+
+=== Disponibilidad de licencias basadas en capacidad
+
+La disponibilidad de las licencias PAYGO y BYOL para los sistemas Cloud Volumes ONTAP requiere que el agente de consola esté en funcionamiento.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#impact-on-cloud-volumes-ontap["Obtenga más información sobre los agentes de consola"^] .
+
+
+NOTE: NetApp ha restringido la compra, extensión y renovación de licencias BYOL. Para más información, consulte  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidad restringida de licencias BYOL para Cloud Volumes ONTAPP"^] .
+
+
+
+=== Cómo empezar
+
+Descubra cómo comenzar a utilizar licencias basadas en capacidad:
+
+ifdef::aws[]
+
+* link:task-set-up-licensing-aws.html["Configurar licencias para Cloud Volumes ONTAP en AWS"]
+
+
+endif::aws[]
+
+ifdef::azure[]
+
+* link:task-set-up-licensing-azure.html["Configurar licencias para Cloud Volumes ONTAP en Azure"]
+
+
+endif::azure[]
+
+ifdef::gcp[]
+
+* link:task-set-up-licensing-google.html["Configurar licencias para Cloud Volumes ONTAP en Google Cloud"]
+
+
+endif::gcp[]
+
+
+
+== Suscripción a Keystone
+
+Un servicio basado en suscripción de pago por crecimiento que brinda una experiencia de nube híbrida perfecta para aquellos que prefieren modelos de consumo de OpEx a CapEx inicial o arrendamiento.
+
+El cobro se basa en el tamaño de su capacidad comprometida para uno o más pares de Cloud Volumes ONTAP HA en su suscripción a Keystone .
+
+La capacidad aprovisionada para cada volumen se agrega y se compara periódicamente con la capacidad comprometida en su suscripción a Keystone , y cualquier exceso se cobra como ráfaga en su suscripción a Keystone .
+
+link:https://docs.netapp.com/us-en/keystone-staas/index.html["Obtenga más información sobre NetApp Keystone"^] .
+
+
+
+=== Configuraciones compatibles
+
+Las suscripciones de Keystone son compatibles con pares HA.  Esta opción de licencia no es compatible con sistemas de nodo único en este momento.
+
+
+
+=== Límite de capacidad
+
+En el modelo de licencias basado en capacidad, cada sistema Cloud Volumes ONTAP admite la organización en niveles del almacenamiento de objetos, y la capacidad total en niveles puede escalar hasta el límite de contenedores del proveedor de la nube. Aunque la licencia no impone restricciones de capacidad, siga las https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Mejores prácticas de FabricPool"^] para garantizar un rendimiento óptimo, confiabilidad y rentabilidad al configurar y administrar la organización en niveles.
+
+Para obtener información sobre los límites de capacidad de cada proveedor de nube, consulte su documentación:
+
+* https://docs.aws.amazon.com/AmazonS3/latest/userguide/BucketRestrictions.html["Documentación de AWS"^]
+* https://learn.microsoft.com/en-us/azure/storage/common/scalability-targets-standard-account["Documentación de Azure para discos administrados"^]y https://learn.microsoft.com/en-us/azure/storage/blobs/scalability-targets["Documentación de Azure para el almacenamiento de blobs"^]
+* https://cloud.google.com/storage/docs/buckets["Documentación de Google Cloud"^]
+
+
+
+
+=== Cómo empezar
+
+Descubra cómo comenzar con una suscripción a Keystone :
+
+ifdef::aws[]
+
+* link:task-set-up-licensing-aws.html["Configurar licencias para Cloud Volumes ONTAP en AWS"]
+
+
+endif::aws[]
+
+ifdef::azure[]
+
+* link:task-set-up-licensing-azure.html["Configurar licencias para Cloud Volumes ONTAP en Azure"]
+
+
+endif::azure[]
+
+ifdef::gcp[]
+
+* link:task-set-up-licensing-google.html["Configurar licencias para Cloud Volumes ONTAP en Google Cloud"]
+
+
+endif::gcp[]
+
+
+
+== Licencias basadas en nodos
+
+La licencia basada en nodos es el modelo de licencia de la generación anterior que le permitía licenciar Cloud Volumes ONTAP por nodo.  Este modelo de licencia no está disponible para nuevos clientes.  La carga por nodo ha sido reemplazada por los métodos de carga por capacidad descritos anteriormente.
+
+NetApp ha planificado el fin de la disponibilidad (EOA) y el soporte (EOS) de las licencias basadas en nodos.  Después de EOA y EOS, las licencias basadas en nodos deberán convertirse en licencias basadas en capacidad.
+
+Para obtener más información, consulte https://mysupport.netapp.com/info/communications/CPC-00589.html["Comunicado al cliente: CPC-00589"^] .
+
+
+
+=== Fin de la disponibilidad de las licencias basadas en nodos
+
+A partir del 11 de noviembre de 2024, se finalizará la disponibilidad limitada de licencias basadas en nodos. El soporte para licencias basadas en nodos finaliza el 31 de diciembre de 2024.
+
+Si tiene un contrato válido basado en nodos que se extiende más allá de la fecha EOA, puede continuar usando la licencia hasta que el contrato expire.  Una vez que expire el contrato, será necesario pasar al modelo de licencia basado en capacidad.  Si no tiene un contrato a largo plazo para un nodo de Cloud Volumes ONTAP , es importante planificar su conversión antes de la fecha de finalización.
+
+Obtenga más información sobre cada tipo de licencia y el impacto de EOA en él en esta tabla:
+
+[cols="2*"]
+|===
+| Tipo de licencia | Impacto después del fin de la actividad 
+
+
+ a| 
+Licencia válida basada en nodo adquirida mediante BYOL (traiga su propia licencia)
+ a| 
+La licencia sigue siendo válida hasta su vencimiento.  Las licencias basadas en nodos existentes no utilizadas se pueden usar para implementar nuevos sistemas Cloud Volumes ONTAP .
+
+
+
+ a| 
+Licencia basada en nodo vencida adquirida a través de BYOL
+ a| 
+No tendrá derecho a implementar nuevos sistemas Cloud Volumes ONTAP utilizando esta licencia.  Los sistemas existentes podrían seguir funcionando, pero no recibirás ningún soporte ni actualizaciones para tus sistemas después de la fecha EOS.
+
+
+
+ a| 
+Licencia válida basada en nodo con suscripción PAYGO
+ a| 
+Dejará de recibir soporte de NetApp después de la fecha EOS, hasta que realice la transición a una licencia basada en capacidad.
+
+|===
+.Exclusiones
+NetApp reconoce que ciertas situaciones requieren una consideración especial, y EOA y EOS de las licencias basadas en nodos no se aplicarán a los siguientes casos:
+
+* Clientes del sector público de EE. UU.
+* Despliegues en modo privado
+* Implementaciones de Cloud Volumes ONTAP en AWS en la región de China
+
+
+Para estos escenarios particulares, NetApp ofrecerá soporte para abordar los requisitos de licencia únicos en cumplimiento con las obligaciones contractuales y las necesidades operativas.
+
+
+NOTE: Incluso en estos escenarios, las nuevas licencias basadas en nodos y las renovaciones de licencias son válidas por un máximo de un año a partir de la fecha de aprobación.
+
+
+
+== Conversión de licencia
+
+La consola permite una conversión perfecta de licencias basadas en nodos a licencias basadas en capacidad a través de la herramienta de conversión de licencias.  Para obtener información sobre el fin de la licencia basada en nodos, consultelink:concept-licensing.html#end-of-availability-of-node-based-licenses["Fin de la disponibilidad de las licencias basadas en nodos"] .
+
+Antes de realizar la transición, es bueno familiarizarse con la diferencia entre los dos modelos de licencia.  Las licencias basadas en nodos incluyen una capacidad fija para cada instancia de ONTAP , lo que puede restringir la flexibilidad.  Por otro lado, las licencias basadas en capacidad permiten un grupo compartido de almacenamiento entre múltiples instancias, lo que ofrece mayor flexibilidad, optimiza la utilización de recursos y reduce el potencial de sanciones financieras al redistribuir cargas de trabajo.  La carga basada en capacidad se ajusta perfectamente a los requisitos cambiantes de almacenamiento.
+
+Para saber cómo puedes realizar esta conversión, consultalink:task-convert-node-capacity.html["Convertir una licencia basada en nodos de Cloud Volumes ONTAP a una licencia basada en capacidad"] .
+
+
+NOTE: No se admite la conversión de un sistema de licencias basadas en capacidad a licencias basadas en nodos.

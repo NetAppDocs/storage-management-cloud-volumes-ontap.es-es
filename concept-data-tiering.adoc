@@ -1,0 +1,220 @@
+---
+sidebar: sidebar 
+permalink: concept-data-tiering.html 
+keywords: storage tiering, tier, tiering, data tiering, s3, s3 tiering, capacity, performance, s3 endpoint, fabric pool, fabricpool, s3 bucket, requirement, vpc endpoint, policy, policies, tiering policies, auto, snapshot only, backup, none, cooling period, volume tiering policies, blob, standard, infrequent access, hot, cool, tiering level, storage tier, storage class 
+summary: Reduzca sus costos de almacenamiento al habilitar la clasificación automatizada de datos fríos en almacenamiento de objetos de bajo costo. 
+---
+= Obtenga información sobre la organización en niveles de datos con Cloud Volumes ONTAP en AWS, Azure o Google Cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Reduzca sus costos de almacenamiento al habilitar la clasificación automatizada de datos inactivos en almacenamiento de objetos de bajo costo.  Los datos activos permanecen en discos duros o unidades SSD de alto rendimiento, mientras que los datos inactivos se almacenan en un almacenamiento de objetos de bajo costo.  Esto le permite recuperar espacio en su almacenamiento principal y reducir el almacenamiento secundario.
+
+image:diagram_data_tiering.png["Esta es una imagen conceptual que muestra datos activos que van al almacenamiento EBS y datos inactivos que van al almacenamiento S3."]
+
+La clasificación de datos está impulsada por la tecnología FabricPool .  Cloud Volumes ONTAP proporciona niveles de datos para todos los clústeres de Cloud Volumes ONTAP sin una licencia adicional.  Cuando habilita la organización en niveles de datos, los datos organizados en niveles en el almacenamiento de objetos generan cargos.  Consulte la documentación de su proveedor de nube para obtener detalles sobre los costos de almacenamiento de objetos.
+
+ifdef::aws[]
+
+
+
+== Nivelación de datos en AWS
+
+Cuando habilita la organización en niveles de datos en AWS, Cloud Volumes ONTAP utiliza EBS como nivel de rendimiento para datos activos y AWS S3 como nivel de capacidad para datos inactivos.
+
+Nivel de rendimiento:: El nivel de rendimiento puede ser SSD de uso general (gp3 o gp2) o SSD de IOPS aprovisionados (io1).
++
+--
+No se recomienda la organización de datos en niveles de almacenamiento de objetos cuando se utilizan discos duros optimizados para rendimiento (st1).
+
+--
+Nivel de capacidad:: Un sistema Cloud Volumes ONTAP agrupa los datos inactivos en un único depósito S3.
++
+--
+La consola de NetApp crea un único bucket S3 para cada sistema y lo denomina fabric-pool-_cluster unique identifier_.  No se crea un bucket S3 diferente para cada volumen.
+
+Cuando la consola crea el bucket S3, utiliza la siguiente configuración predeterminada:
+
+* Clase de almacenamiento: Estándar
+* Cifrado predeterminado: Deshabilitado
+* Bloquear el acceso público: Bloquear todo acceso público
+* Propiedad de objetos: ACL habilitadas
+* Control de versiones de bucket: deshabilitado
+* Bloqueo de objetos: Deshabilitado
+
+
+--
+Clases de almacenamiento:: La clase de almacenamiento predeterminada para datos escalonados en AWS es _Standard_.  El estándar es ideal para datos a los que se accede con frecuencia y que están almacenados en múltiples zonas de disponibilidad.
++
+--
+Si no planea acceder a los datos inactivos, puede reducir sus costos de almacenamiento cambiando la clase de almacenamiento a una de las siguientes: _Niveles inteligentes_, _Acceso poco frecuente de una zona_, _Acceso poco frecuente estándar_ o _Recuperación instantánea de S3 Glacier_.  Cuando cambia la clase de almacenamiento, los datos inactivos comienzan en la clase de almacenamiento Estándar y pasan a la clase de almacenamiento que seleccionó, si no se accede a ellos después de 30 días.
+
+Los costos de acceso son más altos si accede a los datos, así que considere esto antes de cambiar la clase de almacenamiento. https://aws.amazon.com/s3/storage-classes["Documentación de Amazon S3: Obtenga más información sobre las clases de almacenamiento de Amazon S3"^] .
+
+Puede seleccionar una clase de almacenamiento cuando crea el sistema y puede cambiarla en cualquier momento posteriormente.  Para obtener instrucciones sobre cómo cambiar la clase de almacenamiento, consultelink:task-tiering.html["Agrupar datos inactivos en almacenamiento de objetos de bajo costo"] .
+
+La clase de almacenamiento para la clasificación de datos es para todo el sistema, no por volumen.
+
+--
+
+
+endif::aws[]
+
+ifdef::azure[]
+
+
+
+== Organización de datos en niveles en Azure
+
+Cuando habilita la organización en niveles de datos en Azure, Cloud Volumes ONTAP usa discos administrados de Azure como un nivel de rendimiento para datos activos y Azure Blob Storage como un nivel de capacidad para datos inactivos.
+
+Nivel de rendimiento:: El nivel de rendimiento puede ser SSD o HDD.
+Nivel de capacidad:: Un sistema Cloud Volumes ONTAP agrupa los datos inactivos en un único contenedor Blob.
++
+--
+La consola crea una nueva cuenta de almacenamiento con un contenedor para cada sistema Cloud Volumes ONTAP .  El nombre de la cuenta de almacenamiento es aleatorio.  No se crea un contenedor diferente para cada volumen.
+
+La consola crea la cuenta de almacenamiento con la siguiente configuración:
+
+* Nivel de acceso: Caliente
+* Rendimiento: Estándar
+* Redundancia: según la implementación de Cloud Volume ONTAP
++
+** Zona de disponibilidad única: almacenamiento con redundancia local (LRS)
+** Zona de disponibilidad múltiple: almacenamiento con redundancia de zona (ZRS)
+
+
+* Cuenta: StorageV2 (propósito general v2)
+* Requerir transferencia segura para operaciones de API REST: Habilitado
+* Acceso a la clave de la cuenta de almacenamiento: habilitado
+* Versión mínima de TLS: Versión 1.2
+* Cifrado de infraestructura: Deshabilitado
+
+
+--
+Niveles de acceso al almacenamiento:: El nivel de acceso de almacenamiento predeterminado para datos estratificados en Azure es el nivel _hot_.  El nivel activo es ideal para datos a los que se accede con frecuencia en el nivel de capacidad.
++
+--
+Si no planea acceder a los datos inactivos en el nivel de capacidad, puede elegir el nivel de almacenamiento _cool_, donde los datos inactivos se conservan durante un mínimo de 30 días.  También puede optar por el nivel _frío_, donde los datos inactivos se almacenan durante un mínimo de 90 días.  Según sus requisitos de almacenamiento y consideraciones de costos, puede seleccionar el nivel que mejor se adapte a sus necesidades.  Cuando cambia el nivel de almacenamiento a _cool_ o _cold_, los datos del nivel de capacidad inactivo se mueven directamente al nivel de almacenamiento cool o cold.  Los niveles fríos y frescos ofrecen costos de almacenamiento más bajos en comparación con el nivel caliente, pero tienen costos de acceso más altos, así que tenga esto en cuenta antes de cambiar el nivel de almacenamiento. Referirse a https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers["Documentación de Microsoft Azure: Obtenga más información sobre los niveles de acceso al almacenamiento de blobs de Azure"^] .
+
+Puede seleccionar un nivel de almacenamiento cuando agrega un sistema Cloud Volumes ONTAP y puede cambiarlo en cualquier momento posteriormente.  Para obtener detalles sobre cómo cambiar el nivel de almacenamiento, consultelink:task-tiering.html["Agrupar datos inactivos en almacenamiento de objetos de bajo costo"] .
+
+El nivel de acceso al almacenamiento para la clasificación de datos se aplica a todo el sistema, no por volumen.
+
+--
+
+
+endif::azure[]
+
+ifdef::gcp[]
+
+
+
+== Nivelación de datos en Google Cloud
+
+Cuando habilita la organización en niveles de datos en Google Cloud, Cloud Volumes ONTAP utiliza discos persistentes como nivel de rendimiento para datos activos y un depósito de Google Cloud Storage como nivel de capacidad para datos inactivos.
+
+Nivel de rendimiento:: El nivel de rendimiento puede ser discos persistentes SSD, discos persistentes equilibrados o discos persistentes estándar.
+Nivel de capacidad:: Un sistema Cloud Volumes ONTAP agrupa los datos inactivos en un único depósito de Google Cloud Storage.
++
+--
+La consola crea un depósito para cada sistema y lo llama fabric-pool-_cluster unique identifier_.  No se crea un depósito diferente para cada volumen.
+
+Cuando la consola crea el depósito, utiliza la siguiente configuración predeterminada:
+
+* Tipo de ubicación: Región
+* Clase de almacenamiento: Estándar
+* Acceso público: Sujeto a ACL de objeto
+* Control de acceso: de grano fino
+* Protección: Ninguna
+* Cifrado de datos: clave administrada por Google
+
+
+--
+Clases de almacenamiento:: La clase de almacenamiento predeterminada para datos en niveles es la clase _Almacenamiento estándar_.  Si se accede con poca frecuencia a los datos, puede reducir los costos de almacenamiento cambiando a _Nearline Storage_ o _Coldline Storage_.  Cuando cambia la clase de almacenamiento, los datos inactivos posteriores se mueven directamente a la clase que seleccionó.
++
+--
+
+NOTE: Cualquier dato inactivo existente mantendrá la clase de almacenamiento predeterminada cuando cambie la clase de almacenamiento.  Para cambiar la clase de almacenamiento de datos inactivos existentes, debe realizar la designación manualmente.
+
+Los costos de acceso son más altos si accedes a los datos, así que tenlo en cuenta antes de cambiar la clase de almacenamiento.  Para obtener más información, consulte la https://cloud.google.com/storage/docs/storage-classes["Documentación de Google Cloud: Clases de almacenamiento"^] .
+
+Puede seleccionar un nivel de almacenamiento cuando crea el sistema y puede cambiarlo en cualquier momento posteriormente.  Para obtener detalles sobre cómo cambiar la clase de almacenamiento, consultelink:task-tiering.html["Agrupar datos inactivos en almacenamiento de objetos de bajo costo"] .
+
+La clase de almacenamiento para la clasificación de datos es para todo el sistema, no por volumen.
+
+--
+
+
+endif::gcp[]
+
+
+
+== Niveles de datos y límites de capacidad
+
+Si habilita la clasificación de datos, el límite de capacidad de un sistema permanece igual.  El límite se distribuye entre el nivel de rendimiento y el nivel de capacidad.
+
+
+
+== Políticas de niveles de volumen
+
+Para habilitar la organización en niveles de datos, debe seleccionar una política de organización en niveles de volumen al crear, modificar o replicar un volumen.  Puede seleccionar una política diferente para cada volumen.
+
+Algunas políticas de niveles tienen un período de enfriamiento mínimo asociado, que establece el tiempo que los datos del usuario en un volumen deben permanecer inactivos para que los datos se consideren "fríos" y se muevan al nivel de capacidad.  El período de enfriamiento comienza cuando se escriben datos en el agregado.
+
+
+TIP: Puede cambiar el período mínimo de enfriamiento y el umbral agregado predeterminado del 50 % (más información al respecto a continuación). http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-mgng-stor-tier-fp/GUID-AD522711-01F9-4413-A254-929EAE871EBF.html["Aprenda a cambiar el período de enfriamiento"^] y http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-mgng-stor-tier-fp/GUID-8FC4BFD5-F258-4AA6-9FCB-663D42D92CAA.html["Aprende a cambiar el umbral"^] .
+
+La consola le permite elegir entre las siguientes políticas de niveles de volumen cuando crea o modifica un volumen:
+
+Solo instantánea:: Una vez que un agregado alcanza el 50 % de su capacidad, Cloud Volumes ONTAP clasifica los datos de usuario fríos de las copias Snapshot que no están asociadas con el sistema de archivos activo en el nivel de capacidad.  El período de enfriamiento es de aproximadamente 2 días.
++
+--
+Si se leen, los bloques de datos fríos en el nivel de capacidad se vuelven activos y se mueven al nivel de rendimiento.
+
+--
+Todo:: Todos los datos (sin incluir los metadatos) se marcan inmediatamente como fríos y se almacenan en niveles en el almacenamiento de objetos lo antes posible. No es necesario esperar 48 horas para que los nuevos bloques de un volumen se enfríen. Tenga en cuenta que los bloques ubicados en el volumen antes de que se estableciera la política Todo requieren 48 horas para enfriarse.
++
+--
+Si se leen, los bloques de datos fríos en el nivel de nube permanecen fríos y no se vuelven a escribir en el nivel de rendimiento. Esta política está disponible a partir de ONTAP 9.6.
+
+--
+Auto:: Una vez que un agregado alcanza el 50 % de su capacidad, Cloud Volumes ONTAP clasifica los bloques de datos fríos de un volumen en un nivel de capacidad.  Los datos fríos incluyen no solo copias instantáneas, sino también datos fríos del usuario del sistema de archivos activo.  El período de enfriamiento es de aproximadamente 31 días.
++
+--
+Esta política es compatible a partir de Cloud Volumes ONTAP 9.4.
+
+Si se leen mediante lecturas aleatorias, los bloques de datos fríos en el nivel de capacidad se vuelven calientes y pasan al nivel de rendimiento.  Si se leen mediante lecturas secuenciales, como las asociadas con escaneos de índices y antivirus, los bloques de datos fríos permanecen fríos y no se mueven al nivel de rendimiento.
+
+--
+Ninguno:: Mantiene los datos de un volumen en el nivel de rendimiento, evitando que se muevan al nivel de capacidad.
+
+
+Al replicar un volumen, puede elegir si desea organizar los datos en niveles de almacenamiento de objetos.  Si lo hace, la consola aplicará la política *Copia de seguridad* al volumen de protección de datos.  A partir de Cloud Volumes ONTAP 9.6, la política de niveles *Todos* reemplaza la política de respaldo.
+
+
+
+=== Desactivar Cloud Volumes ONTAP afecta el período de enfriamiento
+
+Los bloques de datos se enfrían mediante escaneos de enfriamiento.  Durante este proceso, los bloques que no se han utilizado tienen su temperatura movida (enfriada) al siguiente valor más bajo.  El tiempo de enfriamiento predeterminado depende de la política de niveles de volumen:
+
+* Automático: 31 días
+* Solo instantánea: 2 días
+
+
+Cloud Volumes ONTAP debe estar ejecutándose para que el escaneo de enfriamiento funcione.  Si Cloud Volumes ONTAP está desactivado, el enfriamiento también se detendrá.  Como resultado, puede experimentar tiempos de enfriamiento más prolongados.
+
+
+TIP: Cuando Cloud Volumes ONTAP está desactivado, la temperatura de cada bloque se conserva hasta que se reinicia el sistema.  Por ejemplo, si la temperatura de un bloque es 5 cuando apagas el sistema, la temperatura seguirá siendo 5 cuando vuelvas a encenderlo.
+
+
+
+== Configuración de niveles de datos
+
+Para obtener instrucciones y una lista de configuraciones compatibles, consultelink:task-tiering.html["Agrupar datos inactivos en almacenamiento de objetos de bajo costo"] .

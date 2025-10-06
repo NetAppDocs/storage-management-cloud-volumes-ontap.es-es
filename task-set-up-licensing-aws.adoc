@@ -1,0 +1,173 @@
+---
+sidebar: sidebar 
+permalink: task-set-up-licensing-aws.html 
+keywords: freemium, professional, essentials, licensing, licenses, cloud volumes ontap charging, cloud volumes ontap licenses, cloud volumes ontap licensing, cvo licenses, cvo licensing, byol, bring your own license, paygo, pay as you go, keystone flex, keystone, digital wallet 
+summary: Después de decidir qué opción de licencia desea utilizar para Cloud Volumes ONTAP, se requieren algunos pasos antes de poder elegir esa opción de licencia al implementar un nuevo sistema. 
+---
+= Configurar licencias para Cloud Volumes ONTAP en AWS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Después de decidir qué opción de licencia desea utilizar con Cloud Volumes ONTAP, se requieren algunos pasos antes de poder elegir esa opción de licencia al crear un nuevo sistema.
+
+
+
+== Freemium
+
+Seleccione la oferta Freemium para utilizar Cloud Volumes ONTAP de forma gratuita con hasta 500 GiB de capacidad aprovisionada. link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#free-trials["Obtenga más información sobre la oferta Freemium"^] .
+
+.Pasos
+. Desde el menú de navegación izquierdo de la consola de NetApp , seleccione *Almacenamiento > Administración*.
+. En la página *Sistemas*, haga clic en *Agregar sistema* y siga los pasos.
++
+.. En la página *Detalles y credenciales*, haga clic en *Editar credenciales > Agregar suscripción* y luego siga las instrucciones para suscribirse a la oferta de pago por uso en AWS Marketplace.
++
+No se le cobrará a través de la suscripción del mercado a menos que exceda los 500 GiB de capacidad aprovisionada, momento en el cual el sistema se convierte automáticamente allink:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#packages["Paquete esencial"^] .
+
++
+image:screenshot-aws-paygo-subscription.png["Una captura de pantalla de la opción de suscripción PAYGO al crear un sistema Cloud Volumes ONTAP ."]
+
+.. Después de regresar a la consola, seleccione *Freemium* cuando llegue a la página de métodos de cobro.
++
+image:screenshot-freemium.png["Una captura de pantalla de la opción Freemium al crear un sistema Cloud Volumes ONTAP ."]
+
+
+
+
+
+link:task-deploying-otc-aws.html["Vea las instrucciones paso a paso para iniciar Cloud Volumes ONTAP en AWS"] .
+
+
+
+== Licencia basada en capacidad
+
+Las licencias basadas en capacidad le permiten pagar Cloud Volumes ONTAP por TiB de capacidad. La licencia basada en capacidad está disponible en forma de _paquete_: el paquete Essentials o el paquete Professional.
+
+Los paquetes Essentials y Professional están disponibles con los siguientes modelos de consumo:
+
+* Una licencia (traiga su propia licencia (BYOL)) comprada a NetApp
+* Una suscripción por hora, de pago por uso (PAYGO) desde AWS Marketplace
+* Un contrato anual del AWS Marketplace
+
+
+link:concept-licensing.html["Obtenga más información sobre las licencias basadas en capacidad"] .
+
+Las siguientes secciones describen cómo comenzar a utilizar cada uno de estos modelos de consumo.
+
+
+
+=== Trae tu propia bebida
+
+Pague por adelantado comprando una licencia (BYOL) de NetApp para implementar sistemas Cloud Volumes ONTAP en cualquier proveedor de nube.
+
+NetApp ha restringido la compra, extensión y renovación de licencias BYOL. Para más información, consulte  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidad restringida de licencias BYOL para Cloud Volumes ONTAP"^] .
+
+.Pasos
+. https://bluexp.netapp.com/contact-cds["Comuníquese con el departamento de ventas de NetApp para obtener una licencia"^]
+. https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html#add-an-nss-account["Agregue su cuenta del sitio de soporte de NetApp a la consola"^]
++
+La consola consulta automáticamente el servicio de licencias de NetApp para obtener detalles sobre las licencias asociadas a su cuenta del sitio de soporte de NetApp .  Si no hay errores, la Consola agrega automáticamente las licencias a la Consola.
+
++
+Su licencia debe estar disponible en la consola antes de poder usarla con Cloud Volumes ONTAP.  Si es necesario, puedeslink:task-manage-capacity-licenses.html#add-purchased-licenses-to-your-account["agregar manualmente la licencia a la consola"] .
+
+. En la página *Sistemas* de la Consola, haga clic en *Agregar sistema* y siga los pasos.
++
+.. En la página *Detalles y credenciales*, haga clic en *Editar credenciales > Agregar suscripción* y luego siga las instrucciones para suscribirse a la oferta de pago por uso en AWS Marketplace.
++
+La licencia que usted compró de NetApp siempre se cobra primero, pero se le cobrará la tarifa por hora del mercado si excede su capacidad de licencia o si vence el plazo de su licencia.
+
++
+image:screenshot-aws-paygo-subscription.png["Una captura de pantalla de la opción de suscripción PAYGO al crear un sistema Cloud Volumes ONTAP ."]
+
+.. Después de regresar a la consola, seleccione un paquete basado en capacidad cuando llegue a la página de métodos de carga.
++
+image:screenshot-professional.png["Una captura de pantalla de la opción Profesional al crear un sistema Cloud Volumes ONTAP ."]
+
+
+
+
+
+link:task-deploying-otc-aws.html["Vea las instrucciones paso a paso para iniciar Cloud Volumes ONTAP en AWS"] .
+
+
+
+=== Suscripción PAYGO
+
+Pague por hora suscribiéndose a la oferta del mercado de su proveedor de nube.
+
+Cuando crea un sistema Cloud Volumes ONTAP , la consola le solicita que se suscriba al acuerdo que está disponible en AWS Marketplace.  Esa suscripción se asocia luego al sistema para su cobro.  Puede utilizar esa misma suscripción para sistemas Cloud Volumes ONTAP adicionales.
+
+.Pasos
+. Desde el menú de navegación de la izquierda, seleccione *Almacenamiento > Administración*.
+. En la página *Sistemas*, haga clic en *Agregar sistema* y siga los pasos.
++
+.. En la página *Detalles y credenciales*, haga clic en *Editar credenciales > Agregar suscripción* y luego siga las instrucciones para suscribirse a la oferta de pago por uso en AWS Marketplace.
++
+image:screenshot-aws-paygo-subscription.png["Una captura de pantalla de la opción de suscripción PAYGO al crear un sistema Cloud Volumes ONTAP ."]
+
+.. Después de regresar a la consola, seleccione un paquete basado en capacidad cuando llegue a la página de métodos de carga.
++
+image:screenshot-professional.png["Una captura de pantalla de la opción Profesional al crear un sistema Cloud Volumes ONTAP ."]
+
+
+
+
+
+link:task-deploying-otc-aws.html["Vea las instrucciones paso a paso para iniciar Cloud Volumes ONTAP en AWS"] .
+
+
+TIP: Puede administrar las suscripciones de AWS Marketplace asociadas con sus cuentas de AWS desde la página Configuración > Credenciales. https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-aws-accounts.html["Aprenda a administrar sus cuentas y suscripciones de AWS"^]
+
+
+
+=== Contrato anual
+
+Pague anualmente comprando un contrato anual en el mercado de su proveedor de nube.
+
+De manera similar a una suscripción por hora, la consola le solicita que se suscriba al contrato anual que está disponible en AWS Marketplace.
+
+.Pasos
+. En la página *Sistemas*, haga clic en *Agregar sistema* y siga los pasos.
++
+.. En la página *Detalles y credenciales*, haga clic en *Editar credenciales > Agregar suscripción* y luego siga las instrucciones para suscribirse al contrato anual en AWS Marketplace.
++
+image:screenshot-aws-annual-subscription.png["Una captura de pantalla de la oferta de contrato anual al crear un sistema Cloud Volumes ONTAP ."]
+
+.. Después de regresar a la consola, seleccione un paquete basado en capacidad cuando llegue a la página de métodos de carga.
++
+image:screenshot-professional.png["Una captura de pantalla de la opción Profesional al crear un sistema Cloud Volumes ONTAP ."]
+
+
+
+
+
+link:task-deploying-otc-aws.html["Vea las instrucciones paso a paso para iniciar Cloud Volumes ONTAP en AWS"] .
+
+
+
+== Suscripción a Keystone
+
+Una suscripción a Keystone es un servicio basado en suscripción de pago por uso. link:concept-licensing.html#keystone-subscription["Obtenga más información sobre las suscripciones de NetApp Keystone"^] .
+
+.Pasos
+. Si aún no tienes una suscripción, https://www.netapp.com/forms/keystone-sales-contact/["Contactar con NetApp"^]
+. mailto:ng-keystone-success@netapp.com[Contacto NetApp] para autorizar su cuenta de usuario con una o más suscripciones de Keystone .
+. Después de que NetApp autorice su cuenta,link:task-manage-keystone.html#link-a-subscription["Vincula tus suscripciones para usarlas con Cloud Volumes ONTAP"] .
+. En la página *Sistemas*, haga clic en *Agregar sistema* y siga los pasos.
++
+.. Seleccione el método de cobro de suscripción de Keystone cuando se le solicite que elija un método de cobro.
++
+image:screenshot-keystone.png["Una captura de pantalla de la opción de suscripción de Keystone al crear un sistema Cloud Volumes ONTAP ."]
+
+
+
+
+
+link:task-deploying-otc-aws.html["Vea las instrucciones paso a paso para iniciar Cloud Volumes ONTAP en AWS"] .

@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: task-change-route-tables.html 
+keywords: route tables, update route tables, modify route tables, change route table 
+summary: Puede modificar las tablas de rutas de AWS que incluyen rutas a las direcciones IP flotantes para un par de alta disponibilidad implementado en varias zonas de disponibilidad de AWS.  Puede hacer esto si los nuevos clientes NFS o CIFS necesitan acceder a un par HA en AWS. 
+---
+= Modificar tablas de rutas para pares de alta Cloud Volumes ONTAP en varias AZ de AWS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede modificar las tablas de rutas de AWS que incluyen rutas a las direcciones IP flotantes para un par de alta disponibilidad implementado en varias zonas de disponibilidad (AZ) de AWS.  Puede hacer esto si los nuevos clientes NFS o CIFS necesitan acceder a un par HA en AWS.
+
+.Pasos
+. En la página *Sistemas*, seleccione el sistema.
+. En la pestaña Descripción general, haga clic en el panel Características y luego haga clic en el ícono de lápiz junto a *Tablas de rutas*.
+. Modifique la lista de tablas de rutas seleccionadas y luego haga clic en *Guardar*.
+
+
+.Resultado
+La consola de NetApp envía una solicitud de AWS para modificar las tablas de ruta.

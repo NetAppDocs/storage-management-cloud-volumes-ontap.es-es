@@ -1,0 +1,158 @@
+---
+sidebar: sidebar 
+permalink: concept-security.html 
+keywords: security, encryption, antivirus, concepts, key managers, safenet, kms, keys, vscan, encrypt, key management service, cmk, customer master key, data at rest, data-at-rest, netapp storage encryption, certificate signing request, csr, certificate, ca certificate, virus, scan, virus scan, certificate authority, netapp volume encryption, nve, volume encryption, key management server, ransomware, fpolicy, snapshots 
+summary: Cloud Volumes ONTAP admite el cifrado de datos y brinda protección contra virus y ransomware. 
+---
+= Obtenga más información sobre el cifrado de datos y la protección contra ransomware de Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Volumes ONTAP admite el cifrado de datos y brinda protección contra virus y ransomware.
+
+
+
+== Cifrado de datos en reposo
+
+Cloud Volumes ONTAP admite las siguientes tecnologías de cifrado:
+
+* Soluciones de cifrado de NetApp (NVE y NAE)
+
+
+ifdef::aws[]
+
+* Servicio de administración de claves de AWS
+
+
+endif::aws[]
+
+ifdef::azure[]
+
+* Cifrado del servicio de almacenamiento de Azure
+
+
+endif::azure[]
+
+ifdef::gcp[]
+
+* Cifrado predeterminado de Google Cloud Platform
+
+
+endif::gcp[]
+
+Puede utilizar soluciones de cifrado de NetApp con cifrado nativo de su proveedor de nube, que cifra los datos a nivel de hipervisor.  De esta manera se obtendría un doble cifrado, algo que podría ser deseable para datos muy sensibles.  Cuando se accede a los datos cifrados, se descifran dos veces: una vez en el nivel de hipervisor (utilizando claves del proveedor de la nube) y otra vez utilizando soluciones de cifrado de NetApp (utilizando claves de un administrador de claves externo).
+
+
+
+=== Soluciones de cifrado de NetApp (NVE y NAE)
+
+Cloud Volumes ONTAP https://www.netapp.com/pdf.html?item=/media/17070-ds-3899.pdf["Cifrado de volumen de NetApp (NVE) y cifrado agregado de NetApp (NAE)"^] .  NVE y NAE son soluciones basadas en software que permiten el cifrado de datos en reposo de volúmenes conforme a FIPS 140-2.  Tanto NVE como NAE utilizan cifrado AES de 256 bits.
+
+* NVE cifra datos en reposo, un volumen a la vez.  Cada volumen de datos tiene su propia clave de cifrado única.
+* NAE es una extensión de NVE: cifra los datos de cada volumen y los volúmenes comparten una clave en todo el agregado.  NAE también permite desduplicar bloques comunes en todos los volúmenes del agregado.
+
+
+Cloud Volumes ONTAP admite NVE y NAE con servicios de administración de claves externas (EKM) proporcionados por AWS, Azure y Google Cloud, incluidas soluciones de terceros, como Fortanix.  A diferencia de ONTAP, para Cloud Volumes ONTAP, las claves de cifrado se generan en el lado del proveedor de la nube, no en ONTAP.
+
+Cloud Volumes ONTAP utiliza los servicios del Protocolo de interoperabilidad de administración de claves (KMIP) estándar que utiliza ONTAP .  Para obtener más información sobre los servicios admitidos, consulte la https://imt.netapp.com/imt/#welcome["Herramienta de matriz de interoperabilidad"^] .
+
+Si usa NVE, tiene la opción de usar el almacén de claves de su proveedor de nube para proteger las claves de cifrado de ONTAP :
+
+ifdef::aws[]
+
+* Servicio de administración de claves de AWS (KMS)
+
+
+endif::aws[]
+
+ifdef::azure[]
+
+* Almacén de claves de Azure (AKV)
+
+
+endif::azure[]
+
+ifdef::gcp[]
+
+* Servicio de administración de claves de Google Cloud
+
+
+endif::gcp[]
+
+Los nuevos agregados tienen NetApp Aggregate Encryption (NAE) habilitado de manera predeterminada después de configurar un administrador de claves externo.  Los volúmenes nuevos que no forman parte de un agregado NAE tienen NVE habilitado de manera predeterminada (por ejemplo, si tiene agregados existentes que se crearon antes de configurar un administrador de claves externo).
+
+Configurar un administrador de claves compatible es el único paso necesario.  Para obtener instrucciones de configuración, consultelink:task-encrypting-volumes.html["Cifre volúmenes con soluciones de cifrado de NetApp"] .
+
+ifdef::aws[]
+
+
+
+=== Servicio de administración de claves de AWS
+
+Cuando inicia un sistema Cloud Volumes ONTAP en AWS, puede habilitar el cifrado de datos mediante el http://docs.aws.amazon.com/kms/latest/developerguide/overview.html["Servicio de administración de claves de AWS (KMS)"^] .  La consola de NetApp solicita claves de datos mediante una clave maestra de cliente (CMK).
+
+
+TIP: No puede cambiar el método de cifrado de datos de AWS después de crear un sistema Cloud Volumes ONTAP .
+
+Si desea utilizar esta opción de cifrado, debe asegurarse de que AWS KMS esté configurado correctamente.  Para obtener más información, consultelink:task-setting-up-kms.html["Configuración de AWS KMS"] .
+
+endif::aws[]
+
+ifdef::azure[]
+
+
+
+=== Cifrado del servicio de almacenamiento de Azure
+
+Los datos se cifran automáticamente en Cloud Volumes ONTAP en Azure mediante https://learn.microsoft.com/en-us/azure/security/fundamentals/encryption-overview["Cifrado del servicio de almacenamiento de Azure"^] con una clave administrada por Microsoft.
+
+Puede utilizar sus propias claves de cifrado si lo prefiere. link:task-set-up-azure-encryption.html["Aprenda a configurar Cloud Volumes ONTAP para usar una clave administrada por el cliente en Azure"] .
+
+endif::azure[]
+
+ifdef::gcp[]
+
+
+
+=== Cifrado predeterminado de Google Cloud Platform
+
+https://cloud.google.com/security/encryption-at-rest/["Cifrado de datos en reposo de Google Cloud Platform"^]Está habilitado de forma predeterminada para Cloud Volumes ONTAP.  No se requiere configuración
+
+Si bien Google Cloud Storage siempre cifra sus datos antes de escribirlos en el disco, puede usar las API de la consola para crear un sistema Cloud Volumes ONTAP que use _claves de cifrado administradas por el cliente_.  Se trata de claves que usted genera y administra en GCP mediante el Servicio de administración de claves en la nube. link:task-setting-up-gcp-encryption.html["Más información"] .
+
+endif::gcp[]
+
+
+
+== Análisis de virus ONTAP
+
+Puede utilizar la funcionalidad antivirus integrada en los sistemas ONTAP para proteger los datos y evitar que se vean comprometidos por virus u otros códigos maliciosos.
+
+El análisis de virus de ONTAP , llamado _Vscan_, combina el mejor software antivirus de terceros con funciones de ONTAP que le brindan la flexibilidad que necesita para controlar qué archivos se analizan y cuándo.
+
+Para obtener información sobre los proveedores, el software y las versiones compatibles con Vscan, consulte la http://mysupport.netapp.com/matrix["Matriz de interoperabilidad de NetApp"^] .
+
+Para obtener información sobre cómo configurar y administrar la funcionalidad antivirus en los sistemas ONTAP , consulte la http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-acg/home.html["Guía de configuración del antivirus ONTAP 9"^] .
+
+
+
+== Protección contra ransomware
+
+Los ataques de ransomware pueden costarle a una empresa tiempo, recursos y reputación.  La consola le permite implementar la solución NetApp para ransomware, que proporciona herramientas efectivas para la visibilidad, detección y remediación.
+
+* La consola identifica los volúmenes que no están protegidos por una política de instantáneas y le permite activar la política de instantáneas predeterminada en esos volúmenes.
++
+Las copias instantáneas son de solo lectura, lo que evita la corrupción por ransomware.  También pueden proporcionar la granularidad necesaria para crear imágenes de una única copia de archivo o una solución completa de recuperación ante desastres.
+
+* La consola también le permite bloquear extensiones de archivos de ransomware comunes al habilitar la solución FPolicy de ONTAP.
+
+
+image:screenshot_ransomware_protection.gif["Una captura de pantalla que muestra la página de protección contra ransomware que está disponible desde dentro de un sistema.  La pantalla muestra la cantidad de volúmenes sin una política de instantáneas y la capacidad de bloquear extensiones de archivos de ransomware."]
+
+link:task-protecting-ransomware.html["Aprenda a implementar la solución NetApp para ransomware"] .

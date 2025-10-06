@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: concept-degraded-ha-pair.html 
+keywords: storage takeover, storage giveback, degraded, degraded status, degraded state, ha pair, ha takeover, takeover, giveback 
+summary: Cuando un nodo de un par de alta disponibilidad no está disponible, el otro nodo envía datos a su socio para brindar un servicio de datos continuo.  Esto se llama toma de control de almacenamiento.  Varias acciones no están disponibles hasta que se complete la devolución del almacenamiento. 
+---
+= Operaciones no disponibles cuando un nodo en el par Cloud Volumes ONTAP HA está fuera de línea
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cuando un nodo de un par de alta disponibilidad no está disponible, el otro nodo envía datos a su socio para brindar un servicio de datos continuo.  Esto se llama _toma de control de almacenamiento_.  Varias acciones no están disponibles hasta que se complete la devolución del almacenamiento.
+
+
+TIP: Cuando un nodo de un par de alta disponibilidad no está disponible, el estado del sistema en la consola de NetApp es _Degradado_.
+
+Las siguientes acciones no están disponibles desde la toma de control de almacenamiento:
+
+* Registro de soporte
+* Cambios de licencia
+* Cambios de tipo de instancia o máquina virtual
+* Cambios en la velocidad de escritura
+* Configuración de CIFS
+* Cambiar la ubicación de las copias de seguridad de la configuración
+* Configuración de la contraseña del clúster
+* Administración de discos y agregados (asignación avanzada)
+
+
+Estas acciones estarán disponibles nuevamente después de que se complete la devolución de almacenamiento y el estado del sistema vuelva a la normalidad.

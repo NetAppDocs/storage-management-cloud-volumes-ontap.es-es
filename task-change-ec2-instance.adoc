@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: task-change-ec2-instance.html 
+keywords: ec2 instance type, change ec2 instance type, change instance type, modify instance type, modify ec2 instance, amazon ec2 
+summary: Puede elegir entre varias instancias o tipos cuando inicia Cloud Volumes ONTAP en AWS.  Puede cambiar el tipo de instancia en cualquier momento si determina que es demasiado grande o demasiado pequeño para sus necesidades. 
+---
+= Modificar el tipo de instancia EC2 para un sistema Cloud Volumes ONTAP en AWS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede elegir entre varias instancias o tipos cuando inicia Cloud Volumes ONTAP en AWS.  Puede cambiar el tipo de instancia en cualquier momento si determina que es demasiado grande o demasiado pequeño para sus necesidades.
+
+.Acerca de esta tarea
+* La devolución automática debe estar habilitada en un par de Cloud Volumes ONTAP HA (esta es la configuración predeterminada).  Si no es así la operación fallará.
++
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/GUID-3F50DE15-0D01-49A5-BEFD-D529713EC1FA.html["Documentación de ONTAP 9: Comandos para configurar la devolución automática"^]
+
+* Cambiar el tipo de instancia puede afectar los cargos por servicios de AWS.
+* La operación reinicia Cloud Volumes ONTAP.
++
+En los sistemas de nodo único, la E/S se interrumpe.
+
++
+Para los pares HA, el cambio no es disruptivo.  Los pares HA continúan proporcionando datos.
+
++
+
+TIP: La consola de NetApp cambia un nodo a la vez iniciando la toma de control y esperando la devolución.  El equipo de control de calidad de NetApp probó tanto la escritura como la lectura de archivos durante este proceso y no detectó ningún problema en el lado del cliente.  A medida que cambiaban las conexiones, se observaron algunos reintentos en el nivel de E/S, pero la capa de aplicación superó el recableado de las conexiones NFS/CIFS.
+
+
+
+.Referencia
+Para obtener una lista de los tipos de instancias compatibles en AWS, consultelink:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-aws.html#supported-ec2-compute["Instancias EC2 compatibles"^] .
+
+Si no puede cambiar el tipo de instancia de las instancias c4, m4 o r4, consulte el artículo de Knowledge Baselink:https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/Converting_an_AWS_Xen_CVO_instance_to_Nitro_(KVM)["Conversión de una instancia de AWS Xen CVO a Nitro (KVM)"^] .
+
+.Pasos
+. En la página *Sistemas*, seleccione el sistema.
+. En la pestaña Descripción general, haga clic en el panel Características y luego haga clic en el ícono de lápiz junto a *Tipo de instancia*.
++
+image::screenshot_features_instance_type.png[400]
+
++
+Si está utilizando una licencia de pago por uso (PAYGO) basada en nodos, puede elegir opcionalmente una licencia y un tipo de instancia diferentes haciendo clic en el ícono de lápiz junto a *Tipo de licencia*.
+
+. Seleccione un tipo de instancia, seleccione la casilla de verificación para confirmar que comprende las implicaciones del cambio y luego haga clic en *Cambiar*.
+
+
+.Resultado
+Cloud Volumes ONTAP se reinicia con la nueva configuración.

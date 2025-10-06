@@ -1,0 +1,32 @@
+= Autenticación de usuario habilitada para acceder al Administrador del sistema desde BlueXP
+:allow-uri-read: 
+
+
+
+
+=== Autenticación de usuario habilitada para acceder al Administrador del sistema desde BlueXP
+
+Como administrador de BlueXP , ahora puede activar la autenticación para los usuarios de ONTAP que acceden a ONTAP System Manager desde BlueXP.  Puede habilitar esta opción editando la configuración del conector BlueXP .  Esta opción está disponible para los modos estándar y privado.
+
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-administer-advanced-view.html["Administrar Cloud Volumes ONTAP mediante el Administrador del sistema"^] .
+
+
+
+=== La Vista avanzada de BlueXP ahora se llama Administrador del sistema
+
+La opción para la gestión avanzada de Cloud Volumes ONTAP desde BlueXP a través de ONTAP System Manager ha cambiado de nombre de *Vista avanzada* a *Administrador del sistema*.
+
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-administer-advanced-view.html["Administrar Cloud Volumes ONTAP mediante el Administrador del sistema"^] .
+
+
+
+=== Presentamos una forma más sencilla de administrar licencias con la BlueXP digital wallet
+
+Ahora, puede experimentar una gestión simplificada de las licencias de Cloud Volumes ONTAP mediante el uso de puntos de navegación mejorados dentro de la BlueXP digital wallet:
+
+* Acceda fácilmente a la información de su licencia de Cloud Volumes ONTAP a través de las pestañas *Administración > Licencias y suscripciones > Descripción general/Licencias directas*.
+* Haga clic en *Ver* en el panel Cloud Volume ONTAP en la pestaña *Descripción general* para obtener una comprensión integral de sus licencias basadas en capacidad.  Esta vista avanzada ofrece información detallada de sus licencias y suscripciones.
+* Si prefiere la interfaz anterior, puede hacer clic en el botón *Cambiar a vista heredada* para ver los detalles de la licencia por tipo y modificar los métodos de cobro de sus licencias.
+
+
+link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-capacity-licenses.html["Administrar licencias basadas en capacidad"^] .

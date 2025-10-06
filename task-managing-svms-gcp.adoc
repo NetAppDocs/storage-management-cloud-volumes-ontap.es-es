@@ -1,0 +1,152 @@
+---
+sidebar: sidebar 
+permalink: task-managing-svms-gcp.html 
+keywords: storage virtual machine, vserver, svm, storage vm, supported number, number supported, create svm, create storage vm, create vserver 
+summary: Una VM de almacenamiento es una máquina virtual que se ejecuta dentro de ONTAP y que proporciona servicios de almacenamiento y datos a sus clientes.  Quizás lo conozcas como SVM o vserver.  Cloud Volumes ONTAP está configurado con una máquina virtual de almacenamiento de manera predeterminada, pero algunas configuraciones admiten máquinas virtuales de almacenamiento adicionales. 
+---
+= Administrar máquinas virtuales de almacenamiento que brindan servicio de datos para Cloud Volumes ONTAP en Google Cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Una VM de almacenamiento es una máquina virtual que se ejecuta dentro de ONTAP y que proporciona servicios de almacenamiento y datos a sus clientes.  Quizás lo conozcas como _SVM_ o _vserver_.  Cloud Volumes ONTAP está configurado con una máquina virtual de almacenamiento de manera predeterminada, pero algunas configuraciones admiten máquinas virtuales de almacenamiento adicionales.
+
+Para crear y administrar máquinas virtuales de almacenamiento de servicio de datos adicionales en Google Cloud, debes usar las API.  Esto se debe a que las API automatizan el proceso de creación de las máquinas virtuales de almacenamiento y la configuración de las interfaces de red necesarias.  Al crear las máquinas virtuales de almacenamiento, la consola de NetApp configura los servicios LIF necesarios, así como un LIF iSCSI necesario para las comunicaciones SMB/CIFS salientes desde la máquina virtual de almacenamiento.
+
+Para obtener información sobre cómo ejecutar llamadas API de Cloud Volumes ONTAP , consulte https://docs.netapp.com/us-en/bluexp-automation/cm/your_api_call.html#step-1-select-the-identifie["Su primera llamada a la API"^] .
+
+
+
+== Número de máquinas virtuales de almacenamiento admitidas
+
+A partir de Cloud Volumes ONTAP 9.11.1, según su licencia, se admiten varias máquinas virtuales de almacenamiento con configuraciones específicas.  Consulte la https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Notas de la versión de Cloud Volumes ONTAP"^] para verificar la cantidad de máquinas virtuales de almacenamiento admitidas para su versión de Cloud Volumes ONTAP.
+
+Todas las versiones de Cloud Volumes ONTAP anteriores a 9.11.1 admiten una máquina virtual de almacenamiento de servicio de datos y una máquina virtual de almacenamiento de destino utilizada para la recuperación ante desastres.  Puede activar la máquina virtual de almacenamiento de destino para acceder a los datos si hay una interrupción en la máquina virtual de almacenamiento de origen.
+
+
+
+== Crear una máquina virtual de almacenamiento
+
+Según su configuración y tipo de licencia, puede crear varias máquinas virtuales de almacenamiento en un sistema de un solo nodo o en una configuración de alta disponibilidad (HA) mediante las API.
+
+.Acerca de esta tarea
+Cuando crea máquinas virtuales de almacenamiento mediante las API, además de configurar las interfaces de red necesarias, la consola también modifica las `default-data-files` políticas en las máquinas virtuales de almacenamiento de datos eliminando los siguientes servicios del LIF de datos NAS y agregándolos al LIF de datos iSCSI que se utiliza para las conexiones de administración salientes:
+
+* `data-fpolicy-client`
+* `management-ad-client`
+* `management-dns-client`
+* `management-ldap-client`
+* `management-nis-client`
+
+
+.Antes de empezar
+El agente de consola requiere permisos específicos para crear máquinas virtuales de almacenamiento para pares de Cloud Volumes ONTAP HA.  Los permisos necesarios están incluidos en https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-gcp.html["las políticas proporcionadas por NetApp"^] .
+
+
+
+=== Sistema de nodo único
+
+Utilice la siguiente llamada API para crear una máquina virtual de almacenamiento en un sistema de un solo nodo.
+
+`POST /gcp/vsa/working-environments/{workingEnvironmentId}/svm`
+
+Incluya los siguientes parámetros en el cuerpo de la solicitud:
+
+[source, json]
+----
+{ "svmName": "NewSvmName"
+   "svmPassword": "optional value, the API takes the cluster password if not provided"
+   "mgmtLif": "optional value, to create an additional management LIF, if you want to use the storage VM for management purposes"}
+----
+
+
+=== par HA
+
+Utilice la siguiente llamada API para crear una máquina virtual de almacenamiento en un par de alta disponibilidad:
+
+`POST /gcp/ha/working-environments/{workingEnvironmentId}/svm/`
+
+Incluya los siguientes parámetros en el cuerpo de la solicitud:
+
+[source, json]
+----
+{ "svmName": "NewSvmName"
+   "svmPassword": "optional value, the API takes the cluster password if not provided"
+}
+----
+
+
+== Administrar máquinas virtuales de almacenamiento
+
+Al utilizar las API, puede cambiar el nombre y eliminar máquinas virtuales de almacenamiento tanto en configuraciones de nodo único como de alta disponibilidad.
+
+.Antes de empezar
+El agente de la consola requiere permisos específicos para administrar las máquinas virtuales de almacenamiento para los pares HA de Cloud Volumes ONTAP .  Los permisos necesarios están incluidos en https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-gcp.html["las políticas proporcionadas por NetApp"^] .
+
+
+
+=== Cambiar el nombre de una máquina virtual de almacenamiento
+
+Para cambiar el nombre de una máquina virtual de almacenamiento, debe proporcionar los nombres de la máquina virtual de almacenamiento existente y de la nueva máquina virtual de almacenamiento como parámetros.
+
+.Pasos
+* Utilice la siguiente llamada API para cambiar el nombre de una máquina virtual de almacenamiento en un sistema de un solo nodo:
++
+`PUT /gcp/vsa/working-environments/{workingEnvironmentId}/svm`
+
++
+Incluya los siguientes parámetros en el cuerpo de la solicitud:
+
++
+[source, json]
+----
+{
+  "svmNewName": "NewSvmName",
+  "svmName": "OldSvmName"
+}
+----
+* Utilice la siguiente llamada API para cambiar el nombre de una máquina virtual de almacenamiento en un par de alta disponibilidad:
++
+`PUT /gcp/ha/working-environments/{workingEnvironmentId}/svm`
+
++
+Incluya los siguientes parámetros en el cuerpo de la solicitud:
+
++
+[source, json]
+----
+{
+  "svmNewName": "NewSvmName",
+  "svmName": "OldSvmName"
+}
+----
+
+
+
+
+=== Eliminar una máquina virtual de almacenamiento
+
+En una configuración de nodo único o HA, puede eliminar una máquina virtual de almacenamiento si no tiene ningún volumen activo.
+
+.Pasos
+* Utilice la siguiente llamada API para eliminar una máquina virtual de almacenamiento en un sistema de un solo nodo:
++
+`DELETE /gcp/vsa/working-environments/{workingEnvironmentId}/svm/{svmName}`
+
+* Utilice la siguiente llamada API para eliminar una máquina virtual de almacenamiento en un par de alta disponibilidad:
++
+`DELETE /gcp/ha/working-environments/{workingEnvironmentId}/svm/{svmName}`
+
+
+
+.Información relacionada
+* https://docs.netapp.com/us-en/bluexp-automation/cm/prepare.html["Prepárese para usar la API"^]
+* https://docs.netapp.com/us-en/bluexp-automation/cm/workflow_processes.html#organization-of-cloud-volumes-ontap-workflows["Flujos de trabajo de Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html#get-the-connector-identifier["Obtener los identificadores requeridos"^]
+* https://docs.netapp.com/us-en/bluexp-automation/platform/use_rest_apis.html["Utilice las API REST para la consola de NetApp"^]
+

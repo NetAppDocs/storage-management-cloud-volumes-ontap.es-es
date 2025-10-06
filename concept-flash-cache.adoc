@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: concept-flash-cache.html 
+keywords: cloud volumes ontap, flash cache, read-intensive, read, random, databases, email, file services, compression, performance, nvme 
+summary: Algunas configuraciones de Cloud Volumes ONTAP incluyen almacenamiento NVMe local, que Cloud Volumes ONTAP utiliza como caché flash para un mejor rendimiento. 
+---
+= Flash Cache
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Algunas configuraciones de Cloud Volumes ONTAP incluyen almacenamiento NVMe local, que Cloud Volumes ONTAP utiliza como _Flash Cache_ para un mejor rendimiento.
+
+
+
+== ¿Qué es Flash Cache?
+
+Flash Cache acelera el acceso a los datos a través del almacenamiento en caché inteligente en tiempo real de datos de usuario leídos recientemente y metadatos de NetApp . Es eficaz para cargas de trabajo intensivas de lectura aleatorias, incluidas bases de datos, correo electrónico y servicios de archivos.
+
+
+
+== Configuraciones compatibles
+
+Flash Cache es compatible con configuraciones específicas de Cloud Volumes ONTAP .  Ver configuraciones admitidas en el https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Notas de la versión de Cloud Volumes ONTAP"^]
+
+
+
+== Limitaciones
+
+ifdef::aws[]
+
+* Al configurar Flash Cache para Cloud Volumes ONTAP 9.12.0 o anterior en AWS, la compresión debe estar deshabilitada en todos los volúmenes para aprovechar las mejoras de rendimiento de Flash Cache.  Cuando implementa o actualiza a Cloud Volumes ONTAP 9.12.1 o posterior, no necesita deshabilitar la compresión.
++
+Omita la selección de configuraciones de eficiencia de almacenamiento al crear un volumen desde la consola de NetApp , o cree un volumen y luego http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html["deshabilitar la compresión de datos mediante la CLI"^] .
+
+
+
+endif::aws[]
+
+* El recalentamiento de la caché después de un reinicio no es compatible con Cloud Volumes ONTAP.
+

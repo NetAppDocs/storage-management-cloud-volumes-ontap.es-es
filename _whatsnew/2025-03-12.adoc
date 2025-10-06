@@ -1,0 +1,15 @@
+= Nuevas regiones compatibles con implementaciones de múltiples zonas de disponibilidad en Azure
+:allow-uri-read: 
+
+
+
+
+=== Nuevas regiones compatibles con implementaciones de múltiples zonas de disponibilidad en Azure
+
+Las siguientes regiones ahora admiten implementaciones de zonas de disponibilidad múltiples de alta disponibilidad en Azure para Cloud Volumes ONTAP 9.12.1 GA y versiones posteriores:
+
+* Centro de EE. UU.
+* Gobierno de EE. UU. en Virginia (Región del Gobierno de EE. UU. - Virginia)
+
+
+Para obtener una lista de todas las regiones, consulte la https://bluexp.netapp.com/cloud-volumes-global-regions["Mapa de regiones globales en Azure"^] .

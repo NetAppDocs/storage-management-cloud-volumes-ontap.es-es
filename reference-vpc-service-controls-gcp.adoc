@@ -1,0 +1,124 @@
+---
+sidebar: sidebar 
+permalink: reference-vpc-service-controls-gcp.html 
+keywords: vpc, service controls, vpc-sc, google, psc, private service connect 
+summary: Al elegir bloquear su entorno de Google con controles de servicio de VPC, debe comprender cómo interactúan NetApp Console y Cloud Volumes ONTAP con las API de Google, así como también cómo configurar su parámetro de servicio para implementar Cloud Volumes ONTAP. 
+---
+= Configurar controles de servicio de VPC para implementar Cloud Volumes ONTAP en Google Cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Al elegir bloquear su entorno de Google Cloud con controles de servicio de VPC, debe comprender cómo interactúan NetApp Console y Cloud Volumes ONTAP con las API de Google Cloud, así como también cómo configurar su perímetro de servicio para implementar Console y Cloud Volumes ONTAP.
+
+Los controles de servicio de VPC le permiten controlar el acceso a los servicios administrados por Google fuera de un perímetro confiable, bloquear el acceso a datos desde ubicaciones no confiables y mitigar los riesgos de transferencia de datos no autorizada. https://cloud.google.com/vpc-service-controls/docs["Obtenga más información sobre los controles de servicio de Google Cloud VPC"^] .
+
+
+
+== Cómo se comunican los servicios de NetApp con los controles de servicio de VPC
+
+La consola se comunica directamente con las API de Google Cloud.  Esto se activa desde una dirección IP externa fuera de Google Cloud (por ejemplo, desde api.services.cloud.netapp.com) o dentro de Google Cloud desde una dirección interna asignada al agente de la consola.
+
+Según el estilo de implementación del agente de consola, es posible que se deban realizar ciertas excepciones para el perímetro de su servicio.
+
+
+
+== Imágenes
+
+Tanto Cloud Volumes ONTAP como la consola utilizan imágenes de un proyecto dentro de GCP administrado por NetApp.  Esto puede afectar la implementación del agente de consola y Cloud Volumes ONTAP, si su organización tiene una política que bloquea el uso de imágenes que no están alojadas dentro de la organización.
+
+Puede implementar un agente de consola manualmente mediante el método de instalación manual, pero Cloud Volumes ONTAP también necesitará extraer imágenes del proyecto de NetApp .  Debe proporcionar una lista permitida para implementar un agente de consola y Cloud Volumes ONTAP.
+
+
+
+=== Implementación de un agente de consola
+
+El usuario que implementa un agente de consola debe poder hacer referencia a una imagen alojada en el proyecto _netapp-cloudmanager_ y el número de proyecto _14190056516_.
+
+
+
+=== Implementación de Cloud Volumes ONTAP
+
+* La cuenta de servicio de la consola debe hacer referencia a una imagen alojada en el proyecto _netapp-cloudmanager_ y al número de proyecto _14190056516_ del proyecto de servicio.
+* La cuenta de servicio del agente de servicio de las API de Google predeterminado debe hacer referencia a una imagen alojada en el proyecto Id. _netapp-cloudmanager_ y al número de proyecto _14190056516_ del proyecto de servicio.
+
+
+A continuación se definen ejemplos de las reglas necesarias para extraer estas imágenes con los controles de servicio de VPC.
+
+
+
+== Políticas perimetrales de controles de servicio de VPC
+
+Las políticas permiten excepciones a los conjuntos de reglas de controles de servicio de VPC.  Para obtener más información sobre las políticas, visite el https://cloud.google.com/vpc-service-controls/docs/ingress-egress-rules#policy-model["Documentación de la política de controles de servicio de GCP VPC"^] .
+
+Para configurar las políticas que requiere la consola, navegue al perímetro de controles de servicio de VPC dentro de su organización y agregue las siguientes políticas.  Los campos deben coincidir con las opciones proporcionadas en la página de políticas de Controles de servicio de VPC.  Tenga en cuenta también que *todas* las reglas son obligatorias y que los parámetros *OR* deben utilizarse en el conjunto de reglas.
+
+
+
+=== Reglas de ingreso
+
+....
+From:
+	Identities:
+		[User Email Address]
+	Source > All sources allowed
+To:
+	Projects =
+		[Service Project]
+	Services =
+		Service name: iam.googleapis.com
+		  Service methods: All actions
+		Service name: compute.googleapis.com
+		  Service methods:All actions
+....
+O
+
+....
+From:
+	Identities:
+		[User Email Address]
+	Source > All sources allowed
+To:
+	Projects =
+		[Host Project]
+	Services =
+		Service name: compute.googleapis.com
+		  Service methods: All actions
+....
+O
+
+....
+From:
+	Identities:
+		[Service Project Number]@cloudservices.gserviceaccount.com
+	Source > All sources allowed
+To:
+	Projects =
+		[Service Project]
+		[Host Project]
+	Services =
+		Service name: compute.googleapis.com
+		Service methods: All actions
+....
+
+
+=== Reglas de salida
+
+....
+From:
+	Identities:
+		[Service Project Number]@cloudservices.gserviceaccount.com
+To:
+	Projects =
+		14190056516
+	Service =
+		Service name: compute.googleapis.com
+		Service methods: All actions
+....
+
+TIP: El número de proyecto descrito anteriormente es el proyecto _netapp-cloudmanager_ utilizado por NetApp para almacenar imágenes para el agente de consola y para Cloud Volumes ONTAP.

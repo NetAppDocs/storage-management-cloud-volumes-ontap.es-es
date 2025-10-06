@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: task-manage-aggregates.html 
+keywords: aggregates, delete aggregates, add disks, view aggregates 
+summary: Administre los agregados usted mismo agregando discos, viendo información sobre los agregados y eliminándolos. 
+---
+= Administrar agregados para clústeres de Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Administre los agregados usted mismo agregando discos, viendo información sobre los agregados y eliminándolos.
+
+
+CAUTION: Todos los discos y agregados deben crearse y eliminarse directamente desde la consola de NetApp . No debe realizar estas acciones desde otra herramienta de administración. Hacerlo puede afectar la estabilidad del sistema, obstaculizar la capacidad de agregar discos en el futuro y potencialmente generar tarifas redundantes del proveedor de la nube.
+
+.Antes de empezar
+Si desea eliminar un agregado, primero debe haber eliminado los volúmenes del agregado.
+
+.Acerca de esta tarea
+Si un agregado se está quedando sin espacio, puede mover volúmenes a otro agregado mediante ONTAP System Manager.
+
+.Pasos
+. Desde el menú de navegación de la izquierda, seleccione *Almacenamiento > Administración*.
+. En la página *Sistemas*, haga doble clic en el sistema Cloud Volumes ONTAP en el que desea administrar los agregados.
+. Desde los detalles del sistema, haga clic en la pestaña *Agregados*.
+. Para el agregado requerido, haga clic en elimage:icon-action.png[""] Icono para las acciones de gestión.
++
+image:screenshot_aggr_menu_options.png["Una captura de pantalla de las opciones del menú Agregados."]
+
+. Gestiona tus agregados desde las opciones disponibles en elimage:icon-action.png[""] menú.
+
+
+
+NOTE: Para agregar discos a un agregado, todos los discos del agregado deben ser del mismo tamaño.
+
+ifdef::aws[]
+
+Para AWS, puede aumentar la capacidad de un agregado que admita volúmenes elásticos de Amazon EBS.
+
+. Bajo elimage:icon-action.png[""] Menú, haga clic en *Aumentar capacidad*.
+. Ingrese la capacidad adicional que desea agregar y luego haga clic en *Aumentar*.
+
+
+Tenga en cuenta que debe aumentar la capacidad del agregado en un mínimo de 256 GiB o el 10 % del tamaño del agregado.  Por ejemplo, si tiene un agregado de 1,77 TiB, el 10 % es 181 GiB.  Esto es inferior a 256 GiB, por lo que el tamaño del agregado debe incrementarse al mínimo de 256 GiB.
+
+endif::aws[]

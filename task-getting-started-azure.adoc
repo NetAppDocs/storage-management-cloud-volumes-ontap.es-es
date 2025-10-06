@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: task-getting-started-azure.html 
+keywords: microsoft, azure, netapp, data fabric, hybrid cloud, cloud, public cloud, networking, marketplace, virtual machine, vnet, quick, getting started, install, installing, deploy, deploying, setup, setting up, launching, requirements, prerequisites, cloud central, permissions, custom role, role, json, permissions, virtual machine, connectivity, internet, outbound, endpoint, connection, networks, vpn, replicating, policy, iam, setupasservice, sign up, cloud manager, BlueXP, cloud volumes ontap, cloud ontap, subscription, create 
+summary: Comience a utilizar Cloud Volumes ONTAP para Azure en unos pocos pasos. 
+---
+= Inicio rápido de Cloud Volumes ONTAP en Azure
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Comience a utilizar Cloud Volumes ONTAP para Azure en unos pocos pasos.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"]Crear un agente de consola
+[role="quick-margin-para"]
+Si no tienes una https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Agente de consola"^] Aún así, es necesario crear uno. https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Aprenda a crear un agente de consola en Azure"^]
+
+[role="quick-margin-para"]
+Tenga en cuenta que si desea implementar Cloud Volumes ONTAP en una subred donde no hay acceso a Internet disponible, deberá instalar manualmente el agente de consola y acceder a la consola de NetApp que se ejecuta en ese agente de consola. https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Aprenda a instalar manualmente el agente de consola en una ubicación sin acceso a Internet"^]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"]Planifique su configuración
+[role="quick-margin-para"]
+La consola ofrece paquetes preconfigurados que se adaptan a los requisitos de su carga de trabajo, o puede crear su propia configuración.  Si elige su propia configuración, debe comprender las opciones disponibles.  Para obtener más información, consultelink:task-planning-your-config-azure.html["Planifique su configuración de Cloud Volumes ONTAP en Azure"] .
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"]Configura tu red
+[role="quick-margin-list"]
+. Asegúrese de que su VNet y sus subredes admitan la conectividad entre el agente de la consola y Cloud Volumes ONTAP.
+. Habilite el acceso a Internet saliente desde la VPC de destino para NetApp AutoSupport.
++
+Este paso no es necesario si está implementando Cloud Volumes ONTAP en una ubicación donde no hay acceso a Internet disponible.
+
+
+
+[role="quick-margin-para"]
+link:reference-networking-azure.html["Obtenga más información sobre los requisitos de red"] .
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Cuatro"]Lanzamiento de Cloud Volumes ONTAP
+[role="quick-margin-para"]
+Haga clic en *Agregar sistema*, seleccione el tipo de sistema que desea implementar y complete los pasos del asistente. link:task-deploying-otc-azure.html["Lea las instrucciones paso a paso"] .
+
+.Enlaces relacionados
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Creación de un agente de consola desde la consola"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-azure-marketplace.html["Creación de un agente de consola desde Azure Marketplace"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["Instalación del software del agente de consola en un host Linux"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["Qué hace la consola con los permisos"^]
+

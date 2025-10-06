@@ -1,0 +1,706 @@
+---
+sidebar: sidebar 
+permalink: task-getting-started-aws-c2s.html 
+keywords: commercial cloud services, c2s, secret cloud, top secret cloud, aws secret region, the Console 
+summary: De manera similar a una región estándar de AWS, puede implementar Cloud Volumes ONTAP en entornos AWS Secret Cloud y Top Secret Cloud, que brindan funciones de clase empresarial para su almacenamiento en la nube.  Las regiones AWS Secret Cloud y Top Secret Cloud son regiones cerradas específicas de la Comunidad de Inteligencia de EE. UU.; las instrucciones de esta página solo se aplican a los usuarios de las regiones AWS Secret Cloud y Top Secret Cloud. 
+---
+= Implementar Cloud Volumes ONTAP en AWS Secret Cloud o AWS Top Secret Cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+De manera similar a una región estándar de AWS, puede usar la consola de NetApp enlink:https://aws.amazon.com/federal/secret-cloud/["Nube secreta de AWS"^] y enlink:https://aws.amazon.com/federal/top-secret-cloud/["Nube de alto secreto de AWS"^] para implementar Cloud Volumes ONTAP, que proporciona funciones de clase empresarial para su almacenamiento en la nube.  AWS Secret Cloud y Top Secret Cloud son regiones cerradas específicas de la Comunidad de Inteligencia de EE. UU.; las instrucciones de esta página solo se aplican a los usuarios de las regiones AWS Secret Cloud y Top Secret Cloud.
+
+.Antes de empezar
+Antes de comenzar, revise las versiones compatibles con AWS Secret Cloud y Top Secret Cloud, y obtenga información sobre el modo privado en la consola.
+
+* Revise las siguientes versiones compatibles con AWS Secret Cloud y Top Secret Cloud:
++
+** Cloud Volumes ONTAP 9.12.1 P2
+** Versión 3.9.32 del agente de consola
++
+El agente de consola es necesario para implementar y administrar Cloud Volumes ONTAP en AWS.  Iniciará sesión en la consola desde el software que se instala en la instancia del agente de la consola.  El sitio web SaaS para la consola no es compatible con AWS Secret Cloud y Top Secret Cloud.
+
+
+
+* Conozca el modo privado
++
+En AWS Secret Cloud y Top Secret Cloud, la consola funciona en _modo privado_.  En el modo privado, no hay conectividad a la capa SaaS desde la consola.  Puede acceder a la consola a través de una aplicación web local que pueda acceder al agente de la consola.
+
++
+Para obtener más información sobre cómo funciona el modo privado, consultelink:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html#private-mode["el modo de implementación privada en la consola"^] .
+
+
+
+
+
+== Paso 1: Configura tu red
+
+Configure su red de AWS para que Cloud Volumes ONTAP pueda funcionar correctamente.
+
+.Pasos
+. Elija la VPC y las subredes en las que desea iniciar la instancia del agente de consola y las instancias de Cloud Volumes ONTAP .
+. Asegúrese de que su VPC y sus subredes admitan la conectividad entre el agente de la consola y Cloud Volumes ONTAP.
+. Configure un punto final de VPC para el servicio S3.
++
+Se requiere un punto final de VPC si desea organizar en niveles datos fríos de Cloud Volumes ONTAP en un almacenamiento de objetos de bajo costo.
+
+
+
+
+
+== Paso 2: Configurar permisos
+
+Configure políticas y roles de IAM que proporcionen al agente de la consola y a Cloud Volumes ONTAP los permisos que necesitan para realizar acciones en AWS Secret Cloud o Top Secret Cloud.
+
+Necesita una política de IAM y un rol de IAM para cada uno de los siguientes:
+
+* La instancia del agente de consola
+* Instancias de Cloud Volumes ONTAP
+* Para pares de alta disponibilidad, la instancia del mediador de alta disponibilidad de Cloud Volumes ONTAP (si desea implementar pares de alta disponibilidad)
+
+
+.Pasos
+. Vaya a la consola de AWS IAM y haga clic en *Políticas*.
+. Cree una política para la instancia del agente de consola.
++
+
+NOTE: Crea estas políticas para respaldar los depósitos S3 en tu entorno de AWS.  Al crear los depósitos más tarde, asegúrese de que los nombres de los depósitos tengan el prefijo `fabric-pool-` .  Este requisito se aplica tanto a las regiones AWS Secret Cloud como a las Top Secret Cloud.
+
++
+[role="tabbed-block"]
+====
+.Regiones secretas
+--
+[source, json]
+----
+{
+    "Version": "2012-10-17",
+    "Statement": [{
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeInstances",
+                "ec2:DescribeInstanceStatus",
+                "ec2:RunInstances",
+                "ec2:ModifyInstanceAttribute",
+                "ec2:DescribeRouteTables",
+                "ec2:DescribeImages",
+                "ec2:CreateTags",
+                "ec2:CreateVolume",
+                "ec2:DescribeVolumes",
+                "ec2:ModifyVolumeAttribute",
+                "ec2:DeleteVolume",
+                "ec2:CreateSecurityGroup",
+                "ec2:DeleteSecurityGroup",
+                "ec2:DescribeSecurityGroups",
+                "ec2:RevokeSecurityGroupEgress",
+                "ec2:RevokeSecurityGroupIngress",
+                "ec2:AuthorizeSecurityGroupEgress",
+                "ec2:AuthorizeSecurityGroupIngress",
+                "ec2:CreateNetworkInterface",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DeleteNetworkInterface",
+                "ec2:ModifyNetworkInterfaceAttribute",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeVpcs",
+                "ec2:DescribeDhcpOptions",
+                "ec2:CreateSnapshot",
+                "ec2:DeleteSnapshot",
+                "ec2:DescribeSnapshots",
+                "ec2:GetConsoleOutput",
+                "ec2:DescribeKeyPairs",
+                "ec2:DescribeRegions",
+                "ec2:DeleteTags",
+                "ec2:DescribeTags",
+                "cloudformation:CreateStack",
+                "cloudformation:DeleteStack",
+                "cloudformation:DescribeStacks",
+                "cloudformation:DescribeStackEvents",
+                "cloudformation:ValidateTemplate",
+                "iam:PassRole",
+                "iam:CreateRole",
+                "iam:DeleteRole",
+                "iam:PutRolePolicy",
+                "iam:ListInstanceProfiles",
+                "iam:CreateInstanceProfile",
+                "iam:DeleteRolePolicy",
+                "iam:AddRoleToInstanceProfile",
+                "iam:RemoveRoleFromInstanceProfile",
+                "iam:DeleteInstanceProfile",
+                "s3:GetObject",
+                "s3:ListBucket",
+                "s3:GetBucketTagging",
+                "s3:GetBucketLocation",
+                "s3:ListAllMyBuckets",
+                "kms:List*",
+                "kms:Describe*",
+                "ec2:AssociateIamInstanceProfile",
+                "ec2:DescribeIamInstanceProfileAssociations",
+                "ec2:DisassociateIamInstanceProfile",
+                "ec2:DescribeInstanceAttribute",
+                "ec2:CreatePlacementGroup",
+                "ec2:DeletePlacementGroup"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "fabricPoolPolicy",
+            "Effect": "Allow",
+            "Action": [
+                "s3:DeleteBucket",
+                "s3:GetLifecycleConfiguration",
+                "s3:PutLifecycleConfiguration",
+                "s3:PutBucketTagging",
+                "s3:ListBucketVersions"
+            ],
+            "Resource": [
+                "arn:aws-iso-b:s3:::fabric-pool*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:StartInstances",
+                "ec2:StopInstances",
+                "ec2:TerminateInstances",
+                "ec2:AttachVolume",
+                "ec2:DetachVolume"
+            ],
+            "Condition": {
+                "StringLike": {
+                    "ec2:ResourceTag/WorkingEnvironment": "*"
+                }
+            },
+            "Resource": [
+                "arn:aws-iso-b:ec2:*:*:instance/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:AttachVolume",
+                "ec2:DetachVolume"
+            ],
+            "Resource": [
+                "arn:aws-iso-b:ec2:*:*:volume/*"
+            ]
+        }
+    ]
+}
+----
+--
+.Regiones de alto secreto
+--
+[source, json]
+----
+{
+    "Version": "2012-10-17",
+    "Statement": [{
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeInstances",
+                "ec2:DescribeInstanceStatus",
+                "ec2:RunInstances",
+                "ec2:ModifyInstanceAttribute",
+                "ec2:DescribeRouteTables",
+                "ec2:DescribeImages",
+                "ec2:CreateTags",
+                "ec2:CreateVolume",
+                "ec2:DescribeVolumes",
+                "ec2:ModifyVolumeAttribute",
+                "ec2:DeleteVolume",
+                "ec2:CreateSecurityGroup",
+                "ec2:DeleteSecurityGroup",
+                "ec2:DescribeSecurityGroups",
+                "ec2:RevokeSecurityGroupEgress",
+                "ec2:RevokeSecurityGroupIngress",
+                "ec2:AuthorizeSecurityGroupEgress",
+                "ec2:AuthorizeSecurityGroupIngress",
+                "ec2:CreateNetworkInterface",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:DeleteNetworkInterface",
+                "ec2:ModifyNetworkInterfaceAttribute",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeVpcs",
+                "ec2:DescribeDhcpOptions",
+                "ec2:CreateSnapshot",
+                "ec2:DeleteSnapshot",
+                "ec2:DescribeSnapshots",
+                "ec2:GetConsoleOutput",
+                "ec2:DescribeKeyPairs",
+                "ec2:DescribeRegions",
+                "ec2:DeleteTags",
+                "ec2:DescribeTags",
+                "cloudformation:CreateStack",
+                "cloudformation:DeleteStack",
+                "cloudformation:DescribeStacks",
+                "cloudformation:DescribeStackEvents",
+                "cloudformation:ValidateTemplate",
+                "iam:PassRole",
+                "iam:CreateRole",
+                "iam:DeleteRole",
+                "iam:PutRolePolicy",
+                "iam:ListInstanceProfiles",
+                "iam:CreateInstanceProfile",
+                "iam:DeleteRolePolicy",
+                "iam:AddRoleToInstanceProfile",
+                "iam:RemoveRoleFromInstanceProfile",
+                "iam:DeleteInstanceProfile",
+                "s3:GetObject",
+                "s3:ListBucket",
+                "s3:GetBucketTagging",
+                "s3:GetBucketLocation",
+                "s3:ListAllMyBuckets",
+                "kms:List*",
+                "kms:Describe*",
+                "ec2:AssociateIamInstanceProfile",
+                "ec2:DescribeIamInstanceProfileAssociations",
+                "ec2:DisassociateIamInstanceProfile",
+                "ec2:DescribeInstanceAttribute",
+                "ec2:CreatePlacementGroup",
+                "ec2:DeletePlacementGroup"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "fabricPoolPolicy",
+            "Effect": "Allow",
+            "Action": [
+                "s3:DeleteBucket",
+                "s3:GetLifecycleConfiguration",
+                "s3:PutLifecycleConfiguration",
+                "s3:PutBucketTagging",
+                "s3:ListBucketVersions"
+            ],
+            "Resource": [
+                "arn:aws-iso:s3:::fabric-pool*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:StartInstances",
+                "ec2:StopInstances",
+                "ec2:TerminateInstances",
+                "ec2:AttachVolume",
+                "ec2:DetachVolume"
+            ],
+            "Condition": {
+                "StringLike": {
+                    "ec2:ResourceTag/WorkingEnvironment": "*"
+                }
+            },
+            "Resource": [
+                "arn:aws-iso:ec2:*:*:instance/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:AttachVolume",
+                "ec2:DetachVolume"
+            ],
+            "Resource": [
+                "arn:aws-iso:ec2:*:*:volume/*"
+            ]
+        }
+    ]
+}
+----
+--
+====
+. Cree una política para Cloud Volumes ONTAP.
++
+[role="tabbed-block"]
+====
+.Regiones secretas
+--
+[source, json]
+----
+{
+    "Version": "2012-10-17",
+    "Statement": [{
+        "Action": "s3:ListAllMyBuckets",
+        "Resource": "arn:aws-iso-b:s3:::*",
+        "Effect": "Allow"
+    }, {
+        "Action": [
+            "s3:ListBucket",
+            "s3:GetBucketLocation"
+        ],
+        "Resource": "arn:aws-iso-b:s3:::fabric-pool-*",
+        "Effect": "Allow"
+    }, {
+        "Action": [
+            "s3:GetObject",
+            "s3:PutObject",
+            "s3:DeleteObject"
+        ],
+        "Resource": "arn:aws-iso-b:s3:::fabric-pool-*",
+        "Effect": "Allow"
+    }]
+}
+----
+--
+.Regiones de alto secreto
+--
+[source, json]
+----
+{
+    "Version": "2012-10-17",
+    "Statement": [{
+        "Action": "s3:ListAllMyBuckets",
+        "Resource": "arn:aws-iso:s3:::*",
+        "Effect": "Allow"
+    }, {
+        "Action": [
+            "s3:ListBucket",
+            "s3:GetBucketLocation"
+        ],
+        "Resource": "arn:aws-iso:s3:::fabric-pool-*",
+        "Effect": "Allow"
+    }, {
+        "Action": [
+            "s3:GetObject",
+            "s3:PutObject",
+            "s3:DeleteObject"
+        ],
+        "Resource": "arn:aws-iso:s3:::fabric-pool-*",
+        "Effect": "Allow"
+    }]
+}
+----
+--
+====
++
+Para los pares de alta disponibilidad, si planea implementar un par de alta disponibilidad de Cloud Volumes ONTAP , cree una política para el mediador de alta disponibilidad.
+
++
+[source, json]
+----
+{
+	"Version": "2012-10-17",
+	"Statement": [{
+			"Effect": "Allow",
+			"Action": [
+				"ec2:AssignPrivateIpAddresses",
+				"ec2:CreateRoute",
+				"ec2:DeleteRoute",
+				"ec2:DescribeNetworkInterfaces",
+				"ec2:DescribeRouteTables",
+				"ec2:DescribeVpcs",
+				"ec2:ReplaceRoute",
+				"ec2:UnassignPrivateIpAddresses"
+			],
+			"Resource": "*"
+		}
+	]
+}
+----
+. Cree roles de IAM con el tipo de rol Amazon EC2 y adjunte las políticas que creó en los pasos anteriores.
++
+.Crear el rol:
+De manera similar a las políticas, debe tener un rol de IAM para el agente de consola y uno para los nodos de Cloud Volumes ONTAP .  Para pares de alta disponibilidad: de manera similar a las políticas, debe tener un rol de IAM para el agente de consola, uno para los nodos de Cloud Volumes ONTAP y uno para el mediador de alta disponibilidad (si desea implementar pares de alta disponibilidad).
+
++
+.Seleccione el rol:
+Debe seleccionar la función IAM del agente de consola cuando inicie la instancia del agente de consola.  Puede seleccionar los roles de IAM para Cloud Volumes ONTAP cuando crea un sistema Cloud Volumes ONTAP desde la consola.  Para los pares de alta disponibilidad, puede seleccionar los roles de IAM para Cloud Volumes ONTAP y el mediador de alta disponibilidad cuando crea un sistema Cloud Volumes ONTAP .
+
+
+
+
+
+== Paso 3: Configurar AWS KMS
+
+Si desea utilizar el cifrado de Amazon con Cloud Volumes ONTAP, asegúrese de que se cumplan los requisitos para el Servicio de administración de claves de AWS (KMS).
+
+.Pasos
+. Asegúrese de que exista una clave maestra de cliente (CMK) activa en su cuenta o en otra cuenta de AWS.
++
+La CMK puede ser una CMK administrada por AWS o una CMK administrada por el cliente.
+
+. Si la CMK está en una cuenta de AWS separada de la cuenta donde planea implementar Cloud Volumes ONTAP, entonces deberá obtener el ARN de esa clave.
++
+Debe proporcionar el ARN a la consola cuando crea el sistema Cloud Volumes ONTAP .
+
+. Agregue la función IAM para la instancia a la lista de usuarios clave para una CMK.
++
+Esto le otorga a la consola permisos para usar la CMK con Cloud Volumes ONTAP.
+
+
+
+
+
+== Paso 4: Instalar el agente de la consola y configurar la consola
+
+Antes de poder comenzar a usar la consola para implementar Cloud Volumes ONTAP en AWS, debe instalar y configurar el agente de la consola.  Permite que la consola administre recursos y procesos dentro de su entorno de nube pública (esto incluye Cloud Volumes ONTAP).
+
+.Pasos
+. Obtenga un certificado raíz firmado por una autoridad de certificación (CA) en el formato X.509 codificado Base-64 de correo con privacidad mejorada (PEM).  Consulte las políticas y procedimientos de su organización para obtener el certificado.
++
+
+NOTE: Para las regiones de AWS Secret Cloud, debe cargar el `NSS Root CA 2` certificado, y para Top Secret Cloud, el `Amazon Root CA 4` certificado.  Asegúrese de cargar solo estos certificados y no la cadena completa.  El archivo de la cadena de certificados es grande y la carga puede fallar.  Si tiene certificados adicionales, puede cargarlos más tarde, como se describe en el siguiente paso.
+
++
+Debes cargar el certificado durante el proceso de configuración.  La consola utiliza el certificado confiable al enviar solicitudes a AWS a través de HTTPS.
+
+. Inicie la instancia del agente de consola:
++
+.. Vaya a la página de AWS Intelligence Community Marketplace para obtener la consola.
+.. En la pestaña Lanzamiento personalizado, elija la opción para iniciar la instancia desde la consola EC2.
+.. Siga las instrucciones para configurar la instancia.
++
+Tenga en cuenta lo siguiente al configurar la instancia:
+
++
+*** Recomendamos t3.xlarge.
+*** Debes elegir la función de IAM que creaste al configurar los permisos.
+*** Debes mantener las opciones de almacenamiento predeterminadas.
+*** Los métodos de conexión necesarios para el agente de consola son los siguientes: SSH, HTTP y HTTPS.
+
+
+
+
+. Configurar la consola desde un host que tenga una conexión a la instancia:
++
+.. Abra un navegador web e ingrese https://_ipaddress_[] donde _ipaddress_ es la dirección IP del host Linux donde instaló el agente de consola.
+.. Especifique un servidor proxy para la conectividad a los servicios de AWS.
+.. Sube el certificado que obtuviste en el paso 1.
+.. Siga las instrucciones para configurar un nuevo sistema.
++
+*** *Detalles del sistema*: Ingrese un nombre para el agente de consola y el nombre de su empresa.
+*** *Crear usuario administrador*: crea el usuario administrador para el sistema.
++
+Esta cuenta de usuario se ejecuta localmente en el sistema.  No hay conexión con el servicio auth0 disponible a través de la consola.
+
+*** *Revisar*: Revise los detalles, acepte el acuerdo de licencia y luego seleccione *Configurar*.
+
+
+.. Para completar la instalación del certificado firmado por la CA, reinicie la instancia del agente de la consola desde la consola EC2.
+
+
+. Después de reiniciar el agente de la consola, inicie sesión con la cuenta de usuario administrador que creó en el asistente de configuración.
+
+
+
+
+== Paso 5: (opcional) Instalar un certificado de modo privado
+
+Este paso es opcional para las regiones AWS Secret Cloud y Top Secret Cloud, y solo es necesario si tiene certificados adicionales además de los certificados raíz que instaló en el paso anterior.
+
+.Pasos
+. Enumerar los certificados instalados existentes.
++
+.. Para recopilar el ID del contenedor occm (nombre identificado “ds-occm-1”), ejecute el siguiente comando:
++
+[source, CLI]
+----
+docker ps
+----
+.. Para ingresar al contenedor occm, ejecute el siguiente comando:
++
+[source, CLI]
+----
+docker exec -it <docker-id> /bin/sh
+----
+.. Para recopilar la contraseña de la variable de entorno “TRUST_STORE_PASSWORD”, ejecute el siguiente comando:
++
+[source, CLI]
+----
+env
+----
+.. Para enumerar todos los certificados instalados en el almacén de confianza, ejecute el siguiente comando y use la contraseña recopilada en el paso anterior:
++
+[source, CLI]
+----
+keytool -list -v -keystore occm.truststore
+----
+
+
+. Añadir un certificado.
++
+.. Para recopilar el ID de Docker del contenedor occm (nombre identificado “ds-occm-1”), ejecute el siguiente comando:
++
+[source, CLI]
+----
+docker ps
+----
+.. Para ingresar al contenedor occm, ejecute el siguiente comando:
++
+[source, CLI]
+----
+docker exec -it <docker-id> /bin/sh
+----
++
+Guarde el nuevo archivo de certificado dentro.
+
+.. Para recopilar la contraseña de la variable de entorno “TRUST_STORE_PASSWORD”, ejecute el siguiente comando:
++
+[source, CLI]
+----
+env
+----
+.. Para agregar el certificado al almacén de confianza, ejecute el siguiente comando y use la contraseña del paso anterior:
++
+[source, CLI]
+----
+keytool -import -alias <alias-name> -file <certificate-file-name> -keystore occm.truststore
+----
+.. Para comprobar que el certificado está instalado, ejecute el siguiente comando:
++
+[source, CLI]
+----
+keytool -list -v -keystore occm.truststore -alias <alias-name>
+----
+.. Para salir del contenedor occm, ejecute el siguiente comando:
++
+[source, CLI]
+----
+exit
+----
+.. Para restablecer el contenedor occm, ejecute el siguiente comando:
++
+[source, CLI]
+----
+docker restart <docker-id>
+----
+
+
+
+
+--
+
+--
+
+
+== Paso 6: Agregar una licencia a la consola
+
+Si compró una licencia de NetApp, debe agregarla a la consola para poder seleccionarla cuando cree un nuevo sistema Cloud Volumes ONTAP .  Estas licencias permanecerán sin asignar hasta que las asocie con un nuevo sistema Cloud Volumes ONTAP .
+
+.Pasos
+. Desde el menú de navegación de la izquierda, seleccione *Licencias y suscripciones*.
+. En el panel * Cloud Volumes ONTAP*, seleccione *Ver*.
+. En la pestaña * Cloud Volumes ONTAP*, seleccione *Licencias > Licencias basadas en nodos*.
+. Haga clic en *Sin asignar*.
+. Haga clic en *Agregar licencias no asignadas*.
+. Ingrese el número de serie de la licencia o cargue el archivo de licencia.
+. Si aún no tiene el archivo de licencia, deberá cargarlo manualmente desde netapp.com.
++
+.. Ir a lalink:https://register.netapp.com/site/vsnr/register/getlicensefile["Generador de archivos de licencia de NetApp"^] e inicie sesión utilizando sus credenciales del sitio de soporte de NetApp .
+.. Ingrese su contraseña, elija su producto, ingrese el número de serie, confirme que ha leído y aceptado la política de privacidad y luego haga clic en *Enviar*.
+.. Elija si desea recibir el archivo JSON serialnumber.NLF por correo electrónico o descarga directa.
+
+
+. Haga clic en *Agregar licencia*.
+
+
+.Resultado
+La consola agrega la licencia como no asignada hasta que la asocie con un nuevo sistema Cloud Volumes ONTAP .  Puede ver la licencia en el menú de navegación izquierdo en *Licencias y suscripciones > Cloud Volumes ONTAP > Ver > Licencias*.
+
+
+
+== Paso 7: Inicie Cloud Volumes ONTAP desde la consola
+
+Puede iniciar instancias de Cloud Volumes ONTAP en AWS Secret Cloud y Top Secret Cloud creando nuevos sistemas en la consola.
+
+.Antes de empezar
+Para los pares de HA, se requiere un par de claves para habilitar la autenticación SSH basada en clave para el mediador de HA.
+
+.Pasos
+. En la página *Sistemas*, haga clic en *Agregar sistema*.
+. En *Crear*, seleccione Cloud Volumes ONTAP.
++
+Para HA: en *Crear*, seleccione Cloud Volumes ONTAP o Cloud Volumes ONTAP HA.
+
+. Complete los pasos del asistente para iniciar el sistema Cloud Volumes ONTAP .
++
+
+CAUTION: Al realizar selecciones a través del asistente, no seleccione *Data Sense & Compliance* y *Backup to Cloud* en *Servicios*.  En *Paquetes preconfigurados*, seleccione solamente *Cambiar configuración* y asegúrese de no haber seleccionado ninguna otra opción.  Los paquetes preconfigurados no son compatibles con las regiones AWS Secret Cloud y Top Secret Cloud y, si se seleccionan, su implementación fallará.
+
+
+
+.Notas para implementar Cloud Volumes ONTAP HA en múltiples zonas de disponibilidad
+Tenga en cuenta lo siguiente a medida que completa el asistente para pares de alta disponibilidad.
+
+* Debe configurar una puerta de enlace de tránsito cuando implemente Cloud Volumes ONTAP HA en múltiples zonas de disponibilidad (AZ).  Para obtener instrucciones, consultelink:task-setting-up-transit-gateway.html["Configurar una puerta de enlace de tránsito de AWS"] .
+* Implemente la configuración de la siguiente manera porque solo dos AZ estaban disponibles en AWS Top Secret Cloud en el momento de la publicación:
++
+** Nodo 1: Zona de disponibilidad A
+** Nodo 2: Zona de disponibilidad B
+** Mediador: Zona de disponibilidad A o B
+
+
+
+
+.Notas para la implementación de Cloud Volumes ONTAP en nodos individuales y de alta disponibilidad
+Tenga en cuenta lo siguiente a medida que completa el asistente:
+
+* Debe dejar la opción predeterminada para utilizar un grupo de seguridad generado.
++
+El grupo de seguridad predefinido incluye las reglas que Cloud Volumes ONTAP necesita para funcionar correctamente.  Si necesita utilizar el suyo propio, puede consultar la sección de grupo de seguridad a continuación.
+
+* Debe elegir la función de IAM que creó al preparar su entorno de AWS.
+* El tipo de disco AWS subyacente es para el volumen inicial de Cloud Volumes ONTAP .
++
+Puede elegir un tipo de disco diferente para los volúmenes posteriores.
+
+* El rendimiento de los discos de AWS está vinculado al tamaño del disco.
++
+Debe elegir el tamaño de disco que le proporcione el rendimiento sostenido que necesita.  Consulte la documentación de AWS para obtener más detalles sobre el rendimiento de EBS.
+
+* El tamaño del disco es el tamaño predeterminado para todos los discos del sistema.
++
+
+NOTE: Si más adelante necesita un tamaño diferente, puede utilizar la opción de Asignación avanzada para crear un agregado que utilice discos de un tamaño específico.
+
+
+
+.Resultado
+Se lanza la instancia de Cloud Volumes ONTAP .  Puede seguir el progreso en la página *Auditoría*.
+
+
+
+== Paso 8: Instalar certificados de seguridad para la clasificación de datos
+
+Debe instalar manualmente certificados de seguridad para habilitar la clasificación de datos en las regiones AWS Secret Cloud y Top Secret Cloud.
+
+.Antes de empezar
+. Crear depósitos S3.
++
+
+NOTE: Asegúrese de que los nombres de los depósitos tengan el prefijo `fabric-pool-.` Por ejemplo `fabric-pool-testbucket` .
+
+. Conserve los certificados raíz que instaló en `step 4` práctico.
+
+
+.Pasos
+. Copie el texto de los certificados raíz que instaló en `step 4` .
+. Conéctese de forma segura al sistema Cloud Volumes ONTAP mediante la CLI.
+. Instalar los certificados raíz.  Es posible que tengas que presionar el `ENTER` tecla varias veces:
++
+[listing]
+----
+security certificate install -type server-ca -cert-name <certificate-name>
+----
+. Cuando se le solicite, ingrese todo el texto copiado, incluyendo y desde `----- BEGIN CERTIFICATE -----` a `----- END CERTIFICATE -----` .
+. Conserve una copia del certificado digital firmado por la CA para referencia futura.
+. Conserve el nombre de la CA y el número de serie del certificado.
+. Configurar el almacén de objetos para las regiones AWS Secret Cloud y Top Secret Cloud: `set -privilege advanced -confirmations off`
+. Ejecute este comando para configurar el almacén de objetos.
++
+
+NOTE: Todos los nombres de recursos de Amazon (ARN) deben tener el sufijo `-iso-b` , como `arn:aws-iso-b` .  Por ejemplo, si un recurso requiere un ARN con una región, para Top Secret Cloud, utilice la convención de nomenclatura como `us-iso-b` Para el `-server` bandera.  Para AWS Secret Cloud, utilice `us-iso-b-1` .
+
++
+[listing]
+----
+storage aggregate object-store config create -object-store-name <S3Bucket> -provider-type AWS_S3 -auth-type EC2-IAM -server <s3.us-iso-b-1.server_name> -container-name <fabric-pool-testbucket> -is-ssl-enabled true -port 443
+----
+. Verifique que el almacén de objetos se haya creado correctamente: `storage aggregate object-store show -instance`
+. Adjunte el almacén de objetos al agregado.  Esto debe repetirse para cada nuevo agregado: `storage aggregate object-store attach -aggregate <aggr1> -object-store-name <S3Bucket>`
+

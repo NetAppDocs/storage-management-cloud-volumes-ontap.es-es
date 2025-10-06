@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: concept-performance.html 
+keywords: performance, technical report, TR, workload, cpu 
+summary: Puede revisar los resultados de rendimiento para ayudarlo a decidir qué cargas de trabajo son adecuadas para Cloud Volumes ONTAP. 
+---
+= Obtenga información sobre la supervisión del rendimiento de las cargas de trabajo de Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede revisar los resultados de rendimiento para ayudarlo a decidir qué cargas de trabajo son adecuadas para Cloud Volumes ONTAP.
+
+
+
+== Informes técnicos de rendimiento
+
+ifdef::aws[]
+
+* Cloud Volumes ONTAP para AWS
++
+link:https://www.netapp.com/pdf.html?item=/media/9088-tr4383pdf.pdf["Informe técnico 4383 de NetApp : Caracterización del rendimiento de Cloud Volumes ONTAP en Amazon Web Services con cargas de trabajo de aplicaciones"^]
+
+
+
+endif::aws[]
+
+ifdef::azure[]
+
+* Cloud Volumes ONTAP para Microsoft Azure
++
+link:https://www.netapp.com/pdf.html?item=/media/9089-tr-4671pdf.pdf["Informe técnico 4671 de NetApp : Caracterización del rendimiento de Cloud Volumes ONTAP en Azure con cargas de trabajo de aplicaciones"^]
+
+
+
+endif::azure[]
+
+ifdef::gcp[]
+
+* Cloud Volumes ONTAP para Google Cloud
++
+link:https://www.netapp.com/pdf.html?item=/media/9090-tr4816pdf.pdf["Informe técnico 4816 de NetApp : Caracterización del rendimiento de Cloud Volumes ONTAP para Google Cloud"^]
+
+
+
+endif::gcp[]
+
+
+
+== Rendimiento de la CPU
+
+Los nodos de Cloud Volumes ONTAP se muestran como altamente utilizados (más del 90 %) según las herramientas de monitoreo de su proveedor de nube.  Esto se debe a que ONTAP reserva todas las vCPU presentadas a la máquina virtual para que estén disponibles cuando sea necesario.
+
+Para obtener información, consulte la https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/Monitoring_CPU_utilization_before_an_ONTAP_upgrade["Artículo de la base de conocimientos de NetApp sobre cómo supervisar el uso de la CPU de ONTAP mediante la CLI"^]

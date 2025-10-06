@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: task-connecting-to-otc.html 
+keywords: connecting, cli, command, command line, connect, shell, interface 
+summary: La CLI de Cloud Volumes ONTAP le permite ejecutar todos los comandos administrativos y es una buena opción para tareas avanzadas o si se siente más cómodo usando la CLI.  Puede conectarse a la CLI mediante SSH. 
+---
+= Administrar Cloud Volumes ONTAP desde la CLI
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La CLI de Cloud Volumes ONTAP le permite ejecutar todos los comandos administrativos y es una buena opción para tareas avanzadas o si se siente más cómodo usando la CLI.  Puede conectarse a la CLI mediante Secure Shell (SSH).
+
+.Antes de empezar
+El host desde el cual utiliza SSH para conectarse a Cloud Volumes ONTAP debe tener una conexión de red a Cloud Volumes ONTAP.  Por ejemplo, es posible que necesites acceder por SSH desde un host de salto que esté en la red de tu proveedor de nube.
+
+ifdef::aws[]
+
+
+NOTE: Cuando se implementan en varias AZ, las configuraciones de HA de Cloud Volumes ONTAP usan una dirección IP flotante para la interfaz de administración del clúster, lo que significa que el enrutamiento externo no está disponible.  Debe conectarse desde un host que sea parte del mismo dominio de enrutamiento.
+
+endif::aws[]
+
+.Pasos
+. En la consola de NetApp , identifique la dirección IP de la interfaz de administración del clúster:
++
+.. Desde el menú de navegación de la izquierda, seleccione *Almacenamiento > Administración*.
+.. En la página *Sistemas*, seleccione el sistema Cloud Volumes ONTAP .
+.. Copie la dirección IP de administración del clúster que aparece en el panel derecho.
+
+
+. Utilice SSH para conectarse a la dirección IP de la interfaz de administración del clúster usando la cuenta de administrador.
++
+*Ejemplo*
+
++
+La siguiente imagen muestra un ejemplo utilizando PuTTY:
+
++
+image:screenshot_cli2.gif["Captura de pantalla: muestra el destino admin@192.168.11.5 en el puerto 22."]
+
+. En el mensaje de inicio de sesión, ingrese la contraseña de la cuenta de administrador.
++
+*Ejemplo*
+
++
+....
+Password: ********
+COT2::>
+....
+

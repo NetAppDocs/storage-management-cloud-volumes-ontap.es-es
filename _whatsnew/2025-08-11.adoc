@@ -1,0 +1,15 @@
+= Fin de la disponibilidad de las licencias optimizadas
+:allow-uri-read: 
+
+
+
+
+=== Fin de la disponibilidad de las licencias optimizadas
+
+A partir del 11 de agosto de 2025, la licencia optimizada de Cloud Volumes ONTAP quedará obsoleta y ya no estará disponible para compra ni renovación en los mercados de Azure y Google Cloud para suscripciones de pago por uso (PAYGO). Si tiene un contrato anual existente con una licencia optimizada, puede continuar utilizando la licencia hasta el final de su contrato. Cuando caduque su licencia optimizada, podrá optar por licencias Cloud Volumes ONTAP Essentials o Professional en BlueXP.
+
+Sin embargo, la capacidad de agregar o renovar licencias optimizadas estará disponible a través de las API.
+
+Para obtener información sobre los paquetes de licencias, consulte https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Licencias para Cloud Volumes ONTAP"^] .
+
+Para obtener información sobre cómo cambiar a un método de carga diferente, consulte https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-capacity-licenses.html["Gestionar licencias basadas en capacidad"^] .

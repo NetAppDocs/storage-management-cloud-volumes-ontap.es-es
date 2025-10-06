@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: task-configure-placement-group-failure-aws.html 
+keywords: placement group, failure, HA single zone, app.conf, rollback, AWS 
+summary: Cloud Volumes ONTAP utiliza un vínculo privado de Azure para las conexiones a sus cuentas de almacenamiento asociadas.  Si es necesario, puede deshabilitar Azure Private Links y usar puntos de conexión de servicio en su lugar. 
+---
+= Configurar la creación de grupos de ubicación para pares de alta disponibilidad de Cloud Volumes ONTAP en zonas de disponibilidad únicas de AWS
+:allow-uri-read: 
+
+
+[role="lead"]
+Las implementaciones de alta disponibilidad (HA) de Cloud Volumes ONTAP en la zona de disponibilidad única (AZ) de AWS pueden fallar y revertirse si falla la creación del grupo de ubicación.  La creación del grupo de ubicación también falla y la implementación se revierte si el nodo de Cloud Volumes ONTAP y la instancia del mediador no están disponibles.  Para evitar esto, puede modificar la configuración para permitir que la implementación finalice incluso si falla la creación del grupo de ubicación.
+
+Al omitir el proceso de reversión, el proceso de implementación de Cloud Volumes ONTAP se completa correctamente y le notifica que la creación del grupo de ubicación está incompleta.
+
+.Pasos
+. Utilice SSH para conectarse al host del agente de la consola de NetApp e iniciar sesión.
+. Navegar a `/opt/application/netapp/cloudmanager/docker_occm/data` .
+. Editar `app.conf` cambiando el valor de la `rollback-on-placement-group-failure` parámetro a `false` .  El valor predeterminado de este parámetro es `true` .
++
+[listing]
+----
+{
+    "occm" : {
+        "aws" : {
+            "rollback-on-placement-group-failure" : false
+        }
+    }
+}
+----
+. Guarde el archivo y cierre la sesión del agente de la consola.  No es necesario reiniciar el agente de la consola.
+

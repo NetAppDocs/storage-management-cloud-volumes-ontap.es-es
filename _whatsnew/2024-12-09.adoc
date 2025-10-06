@@ -1,0 +1,11 @@
+= Lista de máquinas virtuales compatibles actualizada para Azure para alinearse con las prácticas recomendadas
+:allow-uri-read: 
+
+
+
+
+=== Lista de máquinas virtuales compatibles actualizada para Azure para alinearse con las prácticas recomendadas
+
+Las familias de máquinas DS_v2 y Es_v3 ya no están disponibles para su selección en BlueXP al implementar nuevas instancias de Cloud Volumes ONTAP en Azure. Estas familias serán retenidas y apoyadas únicamente en los sistemas más antiguos y existentes. Las nuevas implementaciones de Cloud Volumes ONTAP solo se admiten en Azure a partir de la versión 9.12.1. Le recomendamos que cambie a Es_v4 o cualquier otra serie compatible con Cloud Volumes ONTAP 9.12.1 y versiones posteriores. Sin embargo, las máquinas de las series DS_v2 y Es_v3 estarán disponibles para nuevas implementaciones realizadas a través de la API.
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html["Configuraciones admitidas en Azure"^]

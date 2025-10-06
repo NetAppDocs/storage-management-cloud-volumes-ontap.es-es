@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: task-configure-ems.html 
+keywords: ems, event management system, ems notifications, notifications 
+summary: El sistema de gestión de eventos recopila y muestra información sobre los eventos que ocurren en los sistemas ONTAP .  Para recibir notificaciones de eventos, puede establecer destinos y rutas de eventos para una gravedad de evento particular. 
+---
+= Configurar EMS para sistemas Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+El sistema de gestión de eventos (EMS) recopila y muestra información sobre los eventos que ocurren en los sistemas ONTAP .  Para recibir notificaciones de eventos, puede configurar destinos de eventos (direcciones de correo electrónico, hosts de trampa SNMP o servidores syslog) y rutas de eventos para una gravedad de evento particular.
+
+Puede configurar EMS mediante la CLI.  Para obtener instrucciones, consulte la https://docs.netapp.com/us-en/ontap/error-messages/index.html["Documentación de ONTAP : Descripción general de la configuración de EMS"^] .

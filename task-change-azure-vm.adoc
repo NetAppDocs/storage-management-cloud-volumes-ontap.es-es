@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: task-change-azure-vm.html 
+keywords: machine type, virtual machine type, vm instance, change vm type, azure vm type 
+summary: Puede elegir entre varios tipos de máquinas virtuales al iniciar Cloud Volumes ONTAP en Microsoft Azure.  Puede cambiar el tipo de máquina virtual en cualquier momento si determina que su tamaño es demasiado pequeño o demasiado grande para sus necesidades. 
+---
+= Cambiar el tipo de máquina virtual de Azure para Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede elegir entre varios tipos de máquinas virtuales al iniciar Cloud Volumes ONTAP en Microsoft Azure.  Puede cambiar el tipo de máquina virtual en cualquier momento si determina que su tamaño es demasiado pequeño o demasiado grande para sus necesidades.
+
+.Acerca de esta tarea
+* La devolución automática debe estar habilitada en un par de Cloud Volumes ONTAP HA (esta es la configuración predeterminada).  Si no es así la operación fallará.
++
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/GUID-3F50DE15-0D01-49A5-BEFD-D529713EC1FA.html["Documentación de ONTAP 9: Comandos para configurar la devolución automática"^]
+
+* Cambiar el tipo de máquina virtual puede afectar los cargos por servicio de Microsoft Azure.
+* La operación reinicia Cloud Volumes ONTAP.
++
+En los sistemas de nodo único, la E/S se interrumpe.
+
++
+Para los pares HA, el cambio no es disruptivo.  Los pares HA continúan proporcionando datos.
+
++
+
+TIP: La consola de NetApp cambia un nodo a la vez iniciando la toma de control y esperando la devolución.  El equipo de control de calidad de NetApp probó tanto la escritura como la lectura de archivos durante este proceso y no detectó ningún problema en el lado del cliente.  A medida que cambiaban las conexiones, se observaron algunos reintentos en el nivel de E/S, pero la capa de aplicación superó el recableado de las conexiones NFS/CIFS.
+
+
+
+.Pasos
+. En la página *Sistemas*, seleccione el sistema.
+. En la pestaña Descripción general, haga clic en el panel Características y luego haga clic en el ícono de lápiz junto a *Tipo de VM*.
++
+Si está utilizando una licencia de pago por uso (PAYGO) basada en nodos, puede elegir opcionalmente una licencia y un tipo de VM diferentes haciendo clic en el ícono de lápiz junto a *Tipo de licencia*.
+
+. Seleccione un tipo de VM, seleccione la casilla de verificación para confirmar que comprende las implicaciones del cambio y luego haga clic en *Cambiar*.
+
+
+.Resultado
+Cloud Volumes ONTAP se reinicia con la nueva configuración.

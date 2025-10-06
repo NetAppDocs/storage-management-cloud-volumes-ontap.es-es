@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: task-managing-svms.html 
+keywords: storage virtual machine, vserver, svm, storage vm, supported number, number supported 
+summary: Una VM de almacenamiento es una máquina virtual que se ejecuta dentro de ONTAP y que proporciona servicios de almacenamiento y datos a sus clientes.  Quizás lo conozcas como SVM o vserver.  Cloud Volumes ONTAP está configurado con una máquina virtual de almacenamiento de manera predeterminada, pero algunas configuraciones admiten máquinas virtuales de almacenamiento adicionales. 
+---
+= Administrar máquinas virtuales de almacenamiento para Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Una VM de almacenamiento es una máquina virtual que se ejecuta dentro de ONTAP y que proporciona servicios de almacenamiento y datos a sus clientes.  Quizás lo conozcas como _SVM_ o _vserver_.  Cloud Volumes ONTAP está configurado con una máquina virtual de almacenamiento de manera predeterminada, pero algunas configuraciones admiten máquinas virtuales de almacenamiento adicionales.
+
+
+
+== Número de máquinas virtuales de almacenamiento admitidas
+
+Se admiten varias máquinas virtuales de almacenamiento con determinadas configuraciones.  Ir a la https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Notas de la versión de Cloud Volumes ONTAP"^] para verificar la cantidad de máquinas virtuales de almacenamiento admitidas para su versión de Cloud Volumes ONTAP.
+
+
+
+== Trabajar con múltiples máquinas virtuales de almacenamiento
+
+La consola de NetApp admite cualquier máquina virtual de almacenamiento adicional que cree desde ONTAP System Manager o la CLI de ONTAP .
+
+Por ejemplo, la siguiente imagen muestra cómo puede elegir una máquina virtual de almacenamiento al crear un volumen.
+
+image:screenshot_create_volume_svm.gif["Una captura de pantalla que muestra la capacidad de seleccionar la máquina virtual de almacenamiento en la que desea crear un volumen."]
+
+Y la siguiente imagen muestra cómo puedes elegir una máquina virtual de almacenamiento al replicar un volumen a otro sistema.
+
+image:screenshot_replicate_volume_svm.gif["Una captura de pantalla que muestra la capacidad de seleccionar la máquina virtual de almacenamiento en la que desea replicar un volumen."]
+
+
+
+== Modificar el nombre de la máquina virtual de almacenamiento predeterminada
+
+La consola nombra automáticamente la única máquina virtual de almacenamiento que crea para Cloud Volumes ONTAP.  Desde ONTAP System Manager, la CLI de ONTAP o la API, puede modificar el nombre de la VM de almacenamiento si tiene estándares de nombres estrictos.  Por ejemplo, es posible que desee que el nombre coincida con la forma en que nombra las máquinas virtuales de almacenamiento para sus clústeres ONTAP .

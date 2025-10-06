@@ -1,0 +1,90 @@
+---
+sidebar: sidebar 
+permalink: task-managing-state.html 
+keywords: schedule, schedules, scheduling, shutdowns, shut down, restart, stop, stopping, turn off, weekday, weekend 
+summary: Puede detener e iniciar Cloud Volumes ONTAP desde la consola de NetApp para administrar sus costos de computación en la nube. 
+---
+= Iniciar y detener un sistema Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede detener e iniciar Cloud Volumes ONTAP desde la consola de NetApp para administrar sus costos de computación en la nube.
+
+
+
+== Programación de apagados automáticos de Cloud Volumes ONTAP
+
+Es posible que desee apagar Cloud Volumes ONTAP durante intervalos de tiempo específicos para reducir sus costos de procesamiento.  En lugar de hacerlo manualmente, puede configurar la consola para que apague y reinicie automáticamente los sistemas en momentos específicos.
+
+.Acerca de esta tarea
+* Cuando programa un apagado automático de su sistema Cloud Volumes ONTAP , la consola pospone el apagado si hay una transferencia de datos activa en curso.
++
+Apaga el sistema una vez completada la transferencia.
+
+* Esta tarea programa apagados automáticos de ambos nodos en un par HA.
+* No se crean instantáneas de los discos de arranque y raíz al apagar Cloud Volumes ONTAP mediante apagados programados.
++
+Las instantáneas se crean automáticamente solo cuando se realiza un apagado manual, como se describe en la siguiente sección.
+
+
+
+.Pasos
+. En la página *Sistemas*, haga doble clic en el sistema Cloud Volumes ONTAP .
+. En la pestaña Descripción general, haga clic en el panel Características y luego haga clic en el ícono de lápiz junto a *Tiempo de inactividad programado*.
++
+image::screenshot_schedule_downtime.png[400]
+
+. Especifique el programa de apagado:
++
+.. Elija si desea apagar el sistema todos los días, todos los días de la semana, todos los fines de semana o cualquier combinación de las tres opciones.
+.. Especifique cuándo desea apagar el sistema y durante cuánto tiempo desea que permanezca apagado.
++
+*Ejemplo*
+
++
+La siguiente imagen muestra una programación que indica a la Consola que apague el sistema todos los sábados a las 20:00 p. m. (8:00 p. m.) durante 12 horas.  La consola reinicia el sistema todos los lunes a las 12:00 am
+
++
+image:screenshot_schedule_downtime_window.png["Captura de pantalla: muestra la pantalla de tiempo de inactividad programado."]
+
+
+
+. Haga clic en *Guardar*.
+
+
+.Resultado
+El horario está guardado.  La línea de ítem correspondiente de Tiempo de Inactividad Programado en el panel Características muestra 'Activado'.
+
+
+
+== Detener Cloud Volumes ONTAP
+
+Al detener Cloud Volumes ONTAP, evita acumular costos de procesamiento y crea instantáneas de los discos raíz y de arranque, lo que puede resultar útil para solucionar problemas.
+
+
+NOTE: Para reducir costos, la consola elimina periódicamente instantáneas antiguas de discos raíz y de arranque.  Solo se conservan las dos instantáneas más recientes tanto para el disco raíz como para el de arranque.
+
+.Acerca de esta tarea
+Cuando se detiene un par HA, la consola apaga ambos nodos.
+
+.Pasos
+. Desde el sistema, haga clic en el ícono *Apagar*.
++
+image:screenshot_turn_off_redesign.png["Captura de pantalla: muestra el ícono para apagar un sistema Cloud Volumes ONTAP ."]
+
+. Mantenga habilitada la opción para crear instantáneas porque las instantáneas pueden habilitar la recuperación del sistema.
+. Haga clic en *Desactivar*.
++
+Puede tomar hasta algunos minutos detener el sistema.  Puede reiniciar los sistemas más tarde desde la página *Sistemas*.
+
++
+
+NOTE: Las instantáneas se crean automáticamente al reiniciar.
+
+

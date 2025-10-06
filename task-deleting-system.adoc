@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: task-deleting-system.html 
+keywords: terminate, delete, system, remove, terminate system, terminate instance, delete cloud volumes ontap, delete instance, delete system, delete backups, cloud backup, cloud data sense 
+summary: Siempre debe eliminar los sistemas Cloud Volumes ONTAP , en lugar de hacerlo desde la consola de su proveedor de nube.  Por ejemplo, si cancela una instancia de Cloud Volumes ONTAP con licencia de su proveedor de nube, no podrá usar la clave de licencia para otra instancia.  Debes eliminar el sistema para liberar la licencia. 
+---
+= Eliminar un sistema Cloud Volumes ONTAP desde la consola de NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Siempre debe eliminar los sistemas Cloud Volumes ONTAP desde la consola de NetApp , en lugar de desde la aplicación de su proveedor de nube.  Por ejemplo, si cancela una instancia de Cloud Volumes ONTAP con licencia de su proveedor de nube, no podrá usar la clave de licencia para otra instancia.  Debe eliminar el sistema Cloud Volumes ONTAP de la consola para liberar la licencia.
+
+Cuando elimina un sistema, la consola finaliza las instancias de Cloud Volumes ONTAP y elimina los discos y las instantáneas.
+
+
+NOTE: Otros recursos, como las copias de seguridad administradas por NetApp Backup and Recovery y las instancias de NetApp Data Classification, no se eliminan cuando se elimina un sistema. Necesitarás eliminarlos manualmente. Si no lo hace, seguirá pagando cargos por estos recursos.
+
+Cuando la consola implementa Cloud Volumes ONTAP en su proveedor de nube, habilita la protección de terminación en las instancias.  Esta opción ayuda a prevenir la finalización accidental.
+
+.Pasos
+. Si habilitó Copia de seguridad y recuperación en el sistema, determine si los datos respaldados aún son necesarios y luego https://docs.netapp.com/us-en/bluexp-backup-recovery/task-manage-backups-ontap.html#deleting-backups["Eliminar las copias de seguridad, si es necesario"^] .
++
+La copia de seguridad y la recuperación son independientes de Cloud Volumes ONTAP por diseño.  Backup and Recovery no elimina automáticamente las copias de seguridad cuando se elimina un sistema Cloud Volumes ONTAP y no existe soporte actual en la interfaz de usuario para eliminar las copias de seguridad después de que se haya eliminado el sistema.
+
+. Si habilitó la Clasificación de datos en este sistema y ningún otro sistema utiliza este servicio, entonces deberá eliminar la instancia del servicio.
++
+https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#the-cloud-data-sense-instance["Obtenga más información sobre la instancia de Clasificación de datos"^] .
+
+. Eliminar el sistema Cloud Volumes ONTAP .
++
+.. En la página *Sistemas*, haga doble clic en el nombre del sistema Cloud Volumes ONTAP que desea eliminar.
+.. En la parte superior derecha de la consola, haga clic en el iconoimage:icon-action.png[""] icono y seleccione *Eliminar*.
+.. Escriba el nombre del sistema que desea eliminar y luego haga clic en *Eliminar*.  Eliminar un sistema puede tardar hasta cinco minutos.
+
+
+
+
+
+NOTE: La copia de seguridad y la recuperación son gratuitas solo para las licencias profesionales de Cloud Volumes ONTAP . Este beneficio gratuito no se aplica a entornos eliminados.  Si se conservan copias de seguridad del entorno de Cloud Volumes ONTAP en una instancia de Backup and Recovery, se le cobrará por las copias de seguridad hasta que se eliminen.

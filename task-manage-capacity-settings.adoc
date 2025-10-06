@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: task-manage-capacity-settings.html 
+keywords: aggregates, delete aggregates, add disks, view aggregates 
+summary: Administre los agregados usted mismo agregando discos, viendo información sobre los agregados y eliminándolos. 
+---
+= Administrar la capacidad agregada de Cloud Volumes ONTAP en un agente de consola
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cada agente de consola tiene configuraciones que determinan cómo administra la capacidad agregada para Cloud Volumes ONTAP.
+
+Estas configuraciones afectan a todos los sistemas Cloud Volumes ONTAP administrados por un agente de consola.  Si tiene otro agente de consola, se puede configurar de forma diferente.
+
+.Permisos necesarios
+Necesita los privilegios de administrador de cuenta o organización de la consola de NetApp para modificar la configuración de Cloud Volumes ONTAP .
+
+.Pasos
+. Desde el panel de navegación izquierdo, vaya a *Administración > Agentes*.
+. Haga clic en elimage:icon-action.png[""] Icono del agente de consola que administra su sistema Cloud Volumes ONTAP .
+. Seleccione *Configuración de Cloud Volumes ONTAP *.
++
+image::screenshot-settings-cloud-volumes-ontap.png[Una captura de pantalla de la opción Configuración de Cloud Volumes ONTAP en el ícono Configuración.]
+
+. En *Capacidad*, modifique cualquiera de las siguientes configuraciones:
++
+image:screenshot-cvo-settings-page.png["Una descripción general de la configuración de capacidad de Cloud Volumes ONTAP."]
+
++
+Modo de gestión de capacidad:: Elija si la consola debe notificarle sobre las decisiones sobre capacidad de almacenamiento o si debe administrar automáticamente los requisitos de capacidad para usted.
++
+--
+link:concept-storage-management.html#capacity-management["Descubra cómo funciona el modo de gestión de capacidad"] .
+
+--
+Umbral de capacidad agregada - Relación espacio libre:: Esta relación es un parámetro clave en las decisiones de gestión de la capacidad, y comprender su impacto es esencial independientemente de si se utiliza un modo automático o manual de gestión de la capacidad.  Se recomienda establecer este umbral teniendo en cuenta sus necesidades de almacenamiento específicas y el crecimiento previsto para mantener un equilibrio entre la utilización de recursos y el costo.
++
+--
+En el modo manual, si la relación de espacio libre de un agregado cae por debajo del umbral especificado, se activa una notificación que le alerta de que debe tomar medidas para abordar la baja relación de espacio libre.  Es importante monitorear estas notificaciones y administrar manualmente la capacidad agregada para evitar la interrupción del servicio y garantizar un rendimiento óptimo.
+
+La relación de espacio libre se calcula de la siguiente manera: (capacidad agregada - capacidad total utilizada en el agregado) / capacidad agregada
+
+Referirse alink:concept-storage-management.html#automatic-capacity-management["Gestión automática de la capacidad"] Para saber ahora la capacidad se administra automáticamente en Cloud Volumes ONTAP.
+
+--
+Umbrales de capacidad agregada: relación de espacio libre para la clasificación de datos:: Define cuánto espacio libre se requiere en el nivel de rendimiento (discos) al organizar los datos en niveles de capacidad (almacenamiento de objetos).
++
+--
+La relación es importante para los escenarios de recuperación ante desastres.  A medida que se leen los datos desde el nivel de capacidad, Cloud Volumes ONTAP mueve los datos al nivel de rendimiento para proporcionar un mejor rendimiento.  Si no hay suficiente espacio, Cloud Volumes ONTAP no puede mover los datos.
+
+--
+
+
+. Haga clic en *Guardar*.
+

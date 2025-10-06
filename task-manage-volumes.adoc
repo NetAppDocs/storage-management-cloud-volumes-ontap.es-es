@@ -1,0 +1,392 @@
+---
+sidebar: sidebar 
+permalink: task-manage-volumes.html 
+keywords: volumes, managing, cloning, editing, CIFS server, edit, flexclone, snapshot copy, restore, mount, delete, cifs setup, DNS, active directory, AD, domain, NetBIOS, identify, move, capacity, action required, clone, snapshot copies, restoring, vol move, volume move, move a volume, volume move slow, volume move performance 
+summary: La consola de NetApp le permite administrar volúmenes y servidores CIFS.  También le solicita que mueva volúmenes para evitar problemas de capacidad. 
+---
+= Administrar volúmenes en sistemas Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede administrar volúmenes y servidores CIFS en la consola de NetApp .  También puede mover volúmenes para evitar problemas de capacidad.
+
+Puede administrar volúmenes en la Vista estándar de la consola de NetApp o a través de ONTAP System Manager, que está incluido en la consola para la administración avanzada de volúmenes.  La vista estándar proporciona un conjunto limitado de opciones para modificar sus volúmenes.  System Manager proporciona un nivel avanzado de gestión, como clonación, cambio de tamaño, modificación de configuraciones para antiransomware, análisis, protección y seguimiento de actividad, y traslado de volúmenes entre niveles.  Para obtener más información, consultelink:task-administer-advanced-view.html["Administrar Cloud Volumes ONTAP mediante el Administrador del sistema"] .
+
+
+
+== Administrar volúmenes
+
+Al utilizar la vista estándar de la consola, puede administrar volúmenes según sus necesidades de almacenamiento.  Puede ver, editar, clonar, restaurar y eliminar volúmenes.
+
+.Pasos
+. Desde el menú de navegación de la izquierda, seleccione *Almacenamiento > Administración*.
+. En la página *Sistemas*, haga doble clic en el sistema Cloud Volumes ONTAP en el que desea administrar los volúmenes.
+. Seleccione la pestaña *Volúmenes*.
++
+image:screenshot_manage_vol_button.png["Una captura de pantalla del botón Administrar volumen en la pestaña Volúmenes."]
+
+. En el mosaico de volumen requerido, haga clic en *Administrar volumen*.
++
+[cols="30,70"]
+|===
+| Tarea | Acción 
+
+
+| Ver información sobre un volumen | En Acciones de volumen, en el panel Administrar volúmenes, haga clic en *Ver detalles del volumen*. 
+
+
+| Obtener el comando de montaje NFS  a| 
+.. En Acciones de volumen, en el panel Administrar volúmenes, haga clic en *Comando de montaje*.
+.. Haga clic en *Copiar*.
+
+
+
+
+| Clonar un volumen  a| 
+.. En Acciones de volumen, en el panel Administrar volúmenes, haga clic en *Clonar el volumen*.
+.. Modifique el nombre del clon según sea necesario y luego haga clic en *Clonar*.
+
+
+Este proceso crea un volumen FlexClone .  Un volumen FlexClone es una copia escribible en un punto en el tiempo que ahorra espacio porque utiliza una pequeña cantidad de espacio para metadatos y luego solo consume espacio adicional a medida que se modifican o agregan datos.
+
+Para obtener más información sobre los volúmenes FlexClone , consulte la http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["Guía de administración de almacenamiento lógico de ONTAP 9"^] .
+
+
+
+| Editar un volumen (solo volúmenes de lectura y escritura)  a| 
+.. En Acciones de volumen, en el panel Administrar volúmenes, haga clic en *Editar configuración de volumen*
+.. Modifique la política de instantáneas del volumen, la versión del protocolo NFS, la lista de control de acceso NFS (política de exportación) o los permisos de uso compartido y luego haga clic en *Aplicar*.
+
+
+
+NOTE: Si necesita políticas de instantáneas personalizadas, puede crearlas utilizando ONTAP System Manager.
+
+
+
+| Eliminar un volumen  a| 
+.. En Acciones de volumen, en el panel Administrar volúmenes, haga clic en *Eliminar el volumen*.
+.. En la ventana Eliminar volumen, ingrese el nombre del volumen que desea eliminar.
+.. Haga clic en *Eliminar* nuevamente para confirmar.
+
+
+
+
+| Crear una copia instantánea a pedido  a| 
+.. En Acciones de protección en el panel Administrar volúmenes, haga clic en *Crear una copia instantánea*.
+.. Cambie el nombre, si es necesario, y luego haga clic en *Crear*.
+
+
+
+
+| Restaurar datos de una copia de instantánea a un nuevo volumen  a| 
+.. En Acciones de protección en el panel Administrar volúmenes, haga clic en *Restaurar desde copia de instantánea*.
+.. Seleccione una copia instantánea, ingrese un nombre para el nuevo volumen y luego haga clic en *Restaurar*.
+
+
+
+
+| Cambiar el tipo de disco subyacente  a| 
+.. En Acciones avanzadas del panel Administrar volúmenes, haga clic en *Cambiar tipo de disco*.
+.. Seleccione el tipo de disco y luego haga clic en *Cambiar*.
+
+
+
+NOTE: La consola mueve el volumen a un agregado existente que utiliza el tipo de disco seleccionado o crea un nuevo agregado para el volumen.
+
+
+
+| Cambiar la política de niveles  a| 
+.. En Acciones avanzadas en el panel Administrar volúmenes, haga clic en *Cambiar política de niveles*.
+.. Seleccione una política diferente y haga clic en *Cambiar*.
+
+
+
+NOTE: La consola mueve el volumen a un agregado existente que utiliza el tipo de disco seleccionado con niveles, o crea un nuevo agregado para el volumen.
+
+
+
+| Eliminar un volumen  a| 
+.. Seleccione un volumen y luego haga clic en *Eliminar*.
+.. Escriba el nombre del volumen en el cuadro de diálogo.
+.. Haga clic en *Eliminar* nuevamente para confirmar.
+
+
+|===
+
+
+
+
+== Cambiar el tamaño de un volumen
+
+De forma predeterminada, un volumen crece automáticamente hasta alcanzar un tamaño máximo cuando se queda sin espacio.  El valor predeterminado es 1000, lo que significa que el volumen puede crecer hasta 11 veces su tamaño.  Este valor se puede configurar en la configuración del agente de la consola.
+
+Si necesita cambiar el tamaño de su volumen, puede hacerlo desde el Administrador del sistema ONTAP en la Consola.
+
+.Pasos
+. Haga clic en la vista Administrador del sistema para cambiar el tamaño de un volumen a través del Administrador del sistema ONTAP . Consulte link:task-administer-advanced-view.html#how-to-get-started["Cómo empezar"] .
+. Desde el menú de navegación de la izquierda, seleccione *Almacenamiento > Volúmenes*.
+. De la lista de volúmenes, identifique el que debe redimensionar.
+. Haga clic en el icono de opcionesimage:screenshot_gallery_options.gif["icono de kebab"] .
+. Seleccione *Cambiar tamaño*.
+. En la pantalla *Cambiar tamaño de volumen*, edite la capacidad y el porcentaje de reserva de instantáneas según sea necesario.  Puede comparar el espacio disponible existente con la capacidad modificada.
+. Haga clic en *Guardar*.
+
+
+image:screenshot-resize-volume.png["La pantalla muestra la capacidad modificada después del cambio de tamaño del volumen."]
+
+Asegúrese de tener en cuenta los límites de capacidad de su sistema al cambiar el tamaño de los volúmenes.  Ir a la https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Notas de la versión de Cloud Volumes ONTAP"^] Para más información.
+
+
+
+== Modificar el servidor CIFS
+
+Si cambia sus servidores DNS o su dominio de Active Directory, deberá modificar el servidor CIFS en Cloud Volumes ONTAP para que pueda continuar brindando almacenamiento a los clientes.
+
+.Pasos
+. Desde la pestaña *Descripción general* del sistema Cloud Volumes ONTAP , haga clic en la pestaña *Función* debajo del panel del lado derecho.
+. En el campo Configuración CIFS, haga clic en el *ícono de lápiz* para mostrar la ventana Configuración CIFS.
+. Especifique la configuración para el servidor CIFS:
++
+[cols="30,70"]
+|===
+| Tarea | Acción 
+
+
+| Seleccionar máquina virtual de almacenamiento (SVM) | Al seleccionar la máquina virtual de almacenamiento (SVM) de Cloud Volume ONTAP , se muestra su información CIFS configurada. 
+
+
+| Dominio de Active Directory al que unirse | El FQDN del dominio de Active Directory (AD) al que desea que se una el servidor CIFS. 
+
+
+| Credenciales autorizadas para unirse al dominio | El nombre y la contraseña de una cuenta de Windows con privilegios suficientes para agregar computadoras a la unidad organizativa (OU) especificada dentro del dominio de AD. 
+
+
+| Dirección IP primaria y secundaria de DNS | Las direcciones IP de los servidores DNS que proporcionan resolución de nombres para el servidor CIFS.  Los servidores DNS enumerados deben contener los registros de ubicación de servicio (SRV) necesarios para ubicar los servidores LDAP de Active Directory y los controladores de dominio para el dominio al que se unirá el servidor CIFS. ifdef::gcp[] Si está configurando Google Managed Active Directory, se puede acceder a AD de manera predeterminada con la dirección IP 169.254.169.254. endif::gcp[] 
+
+
+| Dominio DNS | El dominio DNS para la máquina virtual de almacenamiento (SVM) de Cloud Volumes ONTAP .  En la mayoría de los casos, el dominio es el mismo que el dominio de AD. 
+
+
+| Nombre NetBIOS del servidor CIFS | Un nombre de servidor CIFS que es único en el dominio AD. 
+
+
+| Unidad organizativa  a| 
+La unidad organizativa dentro del dominio AD para asociarse con el servidor CIFS.  El valor predeterminado es CN=Computers.
+
+ifdef::aws[]
+
+** Para configurar AWS Managed Microsoft AD como servidor AD para Cloud Volumes ONTAP, ingrese *OU=Computers,OU=corp* en este campo.
+
+
+endif::aws[]
+
+ifdef::azure[]
+
+** Para configurar Azure AD Domain Services como servidor de AD para Cloud Volumes ONTAP, ingrese *OU=AADDC Computers* o *OU=AADDC Users* en este campo.link:https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-ou["Documentación de Azure: Crear una unidad organizativa (OU) en un dominio administrado de Azure AD Domain Services"^]
+
+
+endif::azure[]
+
+ifdef::gcp[]
+
+** Para configurar Google Managed Microsoft AD como servidor AD para Cloud Volumes ONTAP, ingrese *OU=Computers,OU=Cloud* en este campo.link:https://cloud.google.com/managed-microsoft-ad/docs/manage-active-directory-objects#organizational_units["Documentación de Google Cloud: Unidades organizativas en Google Managed Microsoft AD"^]
+
+
+endif::gcp[]
+
+|===
+. Haga clic en *Establecer*.
+
+
+.Resultado
+Cloud Volumes ONTAP actualiza el servidor CIFS con los cambios.
+
+
+
+== Mover un volumen
+
+Mueva volúmenes para aprovechar la capacidad, mejorar el rendimiento y satisfacer los acuerdos de nivel de servicio.
+
+Puede mover un volumen en ONTAP System Manager seleccionando un volumen y el agregado de destino, iniciando la operación de movimiento de volumen y, opcionalmente, monitoreando el trabajo de movimiento de volumen.  Al utilizar el Administrador del sistema, la operación de movimiento de volumen finaliza automáticamente.
+
+.Pasos
+. Utilice ONTAP System Manager o la CLI de ONTAP para mover los volúmenes al agregado.
++
+En la mayoría de las situaciones, puede utilizar el Administrador del sistema para mover volúmenes.
+
++
+Para obtener instrucciones, consulte lalink:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-vol-move/home.html["Guía rápida de movimiento de volumen de ONTAP 9"^] .
+
+
+
+
+
+== Mover un volumen cuando la consola muestra un mensaje de Acción requerida
+
+Es posible que la consola muestre un mensaje de Acción requerida que indica que es necesario mover un volumen para evitar problemas de capacidad, pero que debe corregir el problema usted mismo.  Si esto sucede, debe identificar cómo corregir el problema y luego mover uno o más volúmenes.
+
+
+TIP: La consola muestra estos mensajes de Acción requerida cuando un agregado ha alcanzado el 90 % de su capacidad utilizada.  Si la clasificación de datos está habilitada, los mensajes se muestran cuando un agregado ha alcanzado el 80 % de su capacidad utilizada.  De forma predeterminada, el 10 % del espacio libre está reservado para la clasificación de datos. link:task-tiering.html#changing-the-free-space-ratio-for-data-tiering["Obtenga más información sobre la relación de espacio libre para la clasificación de datos"^] .
+
+.Pasos
+. <<Identificar cómo corregir problemas de capacidad>> .
+. Según su análisis, mueva volúmenes para evitar problemas de capacidad:
++
+** <<Mueva volúmenes a otro sistema para evitar problemas de capacidad>> .
+** <<Mueva volúmenes a otro agregado para evitar problemas de capacidad>> .
+
+
+
+
+
+
+=== Identificar cómo corregir problemas de capacidad
+
+Si la consola no puede proporcionar recomendaciones para mover un volumen para evitar problemas de capacidad, debe identificar los volúmenes que necesita mover y si debe moverlos a otro agregado en el mismo sistema o a otro sistema.
+
+.Pasos
+. Vea la información avanzada en el mensaje Acción requerida para identificar el agregado que ha alcanzado su límite de capacidad.
++
+Por ejemplo, la información avanzada debería decir algo similar a lo siguiente: El agregado aggr1 ha alcanzado su límite de capacidad.
+
+. Identifique uno o más volúmenes para sacar del agregado:
++
+.. En el sistema Cloud Volumes ONTAP , haga clic en la pestaña *Agregados*.
+.. En el mosaico agregado, haga clic en elimage:icon-action.png[""] icono y luego haga clic en *Ver detalles agregados*.
+.. En la pestaña *Descripción general* de la pantalla *Detalles agregados*, revise el tamaño de cada volumen y elija uno o más volúmenes para sacar del agregado.
++
+Debe elegir volúmenes que sean lo suficientemente grandes como para liberar espacio en conjunto y así evitar problemas de capacidad adicionales en el futuro.
+
++
+image::screenshot_aggr_volume_overview.png[Descripción general del volumen de agregación de captura de pantalla]
+
+
+
+. Si el sistema no ha alcanzado el límite del disco, debe mover los volúmenes a un agregado existente o a un nuevo agregado en el mismo sistema.
++
+Para obtener más información, consulte<<move-volumes-aggregate-capacity,Mueva volúmenes a otro agregado para evitar problemas de capacidad>> .
+
+. Si el sistema ha alcanzado el límite de disco, realice alguna de las siguientes acciones:
++
+.. Eliminar cualquier volumen no utilizado.
+.. Reorganizar los volúmenes para liberar espacio en un agregado.
++
+Para obtener más información, consulte<<move-volumes-aggregate-capacity,Mueva volúmenes a otro agregado para evitar problemas de capacidad>> .
+
+.. Mover dos o más volúmenes a otro sistema que tenga espacio.
++
+Para obtener más información, consulte<<move-volumes-aggregate-capacity,Mueva volúmenes a otro agregado para evitar problemas de capacidad>> .
+
+
+
+
+
+
+
+=== Mueva volúmenes a otro sistema para evitar problemas de capacidad
+
+Puede mover uno o más volúmenes a otro sistema Cloud Volumes ONTAP para evitar problemas de capacidad.  Es posible que necesites hacer esto si el sistema alcanzó su límite de disco.
+
+.Acerca de esta tarea
+Puede seguir los pasos de esta tarea para corregir el siguiente mensaje de Acción requerida:
+
+[]
+====
+Mover un volumen es necesario para evitar problemas de capacidad; sin embargo, la consola no puede realizar esta acción porque el sistema ha alcanzado el límite del disco.
+
+====
+.Pasos
+. Identifique un sistema Cloud Volumes ONTAP que tenga capacidad disponible o implemente un nuevo sistema.
+. Arrastre y suelte el sistema de origen en el sistema de destino para realizar una replicación de datos única del volumen.
++
+Para obtener más información, consultelink:https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html["Replicación de datos entre sistemas"^] .
+
+. Vaya a la página Estado de replicación y luego rompa la relación SnapMirror para convertir el volumen replicado de un volumen de protección de datos a un volumen de lectura/escritura.
++
+Para obtener más información, consultelink:https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html#managing-data-replication-schedules-and-relationships["Gestión de relaciones y programas de replicación de datos"^] .
+
+. Configurar el volumen para el acceso a los datos.
++
+Para obtener información sobre cómo configurar un volumen de destino para el acceso a datos, consulte lalink:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-sm-ic-fr/home.html["Guía rápida de recuperación ante desastres de volumen de ONTAP 9"^] .
+
+. Eliminar el volumen original.
++
+Para obtener más información, consultelink:task-manage-volumes.html#manage-volumes["Administrar volúmenes"] .
+
+
+
+
+
+=== Mueva volúmenes a otro agregado para evitar problemas de capacidad
+
+Puede mover uno o más volúmenes a otro agregado para evitar problemas de capacidad.
+
+.Acerca de esta tarea
+Puede seguir los pasos de esta tarea para corregir el siguiente mensaje de Acción requerida:
+
+[]
+====
+Es necesario mover dos o más volúmenes para evitar problemas de capacidad; sin embargo, la consola no puede realizar esta acción por usted.
+
+====
+.Pasos
+. Verifique si un agregado existente tiene capacidad disponible para los volúmenes que necesita mover:
++
+.. En el sistema Cloud Volumes ONTAP , haga clic en la *pestaña Agregados*.
+.. En el mosaico agregado requerido, haga clic en elimage:icon-action.png[""] icono y luego *Ver detalles agregados* para ver la capacidad disponible (tamaño aprovisionado menos capacidad agregada utilizada).
++
+image::screenshot_aggr_capacity.png[capacidad agregada de captura de pantalla]
+
+
+
+. Si es necesario, agregue discos a un agregado existente:
++
+.. Seleccione el agregado y luego haga clic en elimage:icon-action.png[""] icono > *Agregar discos*.
+.. Seleccione la cantidad de discos que desea agregar y luego haga clic en *Agregar*.
+
+
+. Si ningún agregado tiene capacidad disponible, cree un nuevo agregado.
++
+Para obtener más información, consultelink:task-create-aggregates.html["Creando agregados"^] .
+
+. Utilice ONTAP System Manager o la CLI de ONTAP para mover los volúmenes al agregado.
+. En la mayoría de las situaciones, puede utilizar el Administrador del sistema para mover volúmenes.
++
+Para obtener instrucciones, consulte lalink:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-vol-move/home.html["Guía rápida de movimiento de volumen de ONTAP 9"^] .
+
+
+
+
+
+== Razones por las que un movimiento de volumen podría tener un rendimiento lento
+
+Mover un volumen puede tardar más de lo esperado si se cumple alguna de las siguientes condiciones para Cloud Volumes ONTAP:
+
+* El volumen es un clon.
+* El volumen es padre de un clon.
+* El agregado de origen o destino tiene un único disco HDD optimizado para rendimiento (st1).
+* Uno de los agregados utiliza un esquema de nombres más antiguo para los objetos.  Ambos agregados deben utilizar el mismo formato de nombre.
++
+Se utiliza un esquema de nombres más antiguo si se habilitó la clasificación de datos en un agregado en la versión 9.4 o anterior.
+
+* Las configuraciones de cifrado no coinciden en los agregados de origen y destino, o se está realizando una regeneración de clave.
+* Se especificó la opción _-tiering-policy_ en el movimiento de volumen para cambiar la política de niveles.
+* Se especificó la opción _-generate-destination-key_ al mover el volumen.
+
+
+
+
+== Ver volúmenes de FlexGroup
+
+Puede ver los volúmenes FlexGroup creados a través del Administrador del sistema ONTAP o la CLI de ONTAP directamente a través de la pestaña Volúmenes en la Consola.  Puede ver información detallada de los volúmenes de FleGroup a través de un mosaico dedicado *Volúmenes*, donde puede identificar cada grupo de volúmenes de FlexGroup a través del texto flotante del ícono.  Además, puede identificar y ordenar los volúmenes FlexGroup en la vista de lista de volúmenes a través de la columna Estilo de volumen.
+
+image::screenshot_show_flexgroup_vol.png[captura de pantalla muestra flexgroup vol]
+
+
+NOTE: Actualmente, solo puedes ver los volúmenes FlexGroup existentes en la consola.  No se pueden crear volúmenes FlexGroup en la consola.

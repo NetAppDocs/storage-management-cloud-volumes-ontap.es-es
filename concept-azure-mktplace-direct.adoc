@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: concept-azure-mktplace-direct.html 
+keywords: azure marketplace direct, cvo in azure marketplace 
+summary:  
+---
+= Obtenga información sobre las opciones de implementación de Cloud Volumes ONTAP en Azure
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp ofrece dos opciones para implementar Cloud Volumes ONTAP en Azure.  Cloud Volumes ONTAP tradicionalmente se basa en la consola de NetApp para la implementación y la orquestación.  A partir de Cloud Volumes ONTAP 9.16.1, puede aprovechar la implementación directa del mercado de Azure, un proceso optimizado que brinda acceso a un conjunto limitado, pero aún potente, de características y opciones de Cloud Volumes ONTAP .
+
+Cuando implementa Cloud Volumes ONTAP directamente desde Azure Marketplace, no es necesario configurar el agente de la consola ni cumplir con otros criterios de seguridad e incorporación necesarios para implementar Cloud Volumes ONTAP a través de la consola.  Desde el mercado de Azure, puede implementar rápidamente Cloud Volumes ONTAP con unos pocos clics y explorar sus características y capacidades principales en su entorno.
+
+Al completar la implementación en Azure Marketplace, podrá descubrir estos sistemas en la consola.  Después del descubrimiento, puede administrarlos como sistemas Cloud Volumes ONTAP y aprovechar todas las capacidades de la consola. Consulte link:task-deploy-cvo-azure-mktplc.html["Descubra los sistemas implementados en la consola"] .
+
+Aquí está la comparación de características entre las dos opciones.  Tenga en cuenta que las características de una instancia independiente implementada a través de Azure Marketplace cambian cuando se detecta en la consola.
+
+[cols="3*"]
+|===
+|  | Mercado de Azure | Consola de NetApp 
+
+
+| *Incorporación* | Más corto y sencillo, se requiere una preparación mínima para la implementación directa | Proceso de incorporación más largo, incluida la instalación del agente de consola 
+
+
+| *Tipos de máquinas virtuales (VM) compatibles*  a| 
+Tipos de instancia Eds_v5 y Ls_v3
+| Gama completa de tipos de máquinas virtuales.https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html["Configuraciones admitidas en Azure"^] 
+
+
+| *Licencia* | Licencia libre | Cualquier licencia basada en capacidad.link:concept-licensing.html["Licencias de Cloud Volumes ONTAP"] 
+
+
+| * Soporte de NetApp * | No incluido | Disponible, según el tipo de licencia 
+
+
+| *Capacidad* | Hasta 500 GiB | Ampliable por configuración 
+
+
+| *Modelo de implementación* | Implementación en modo de alta disponibilidad (HA) en una única zona de disponibilidad (AZ) | Todas las configuraciones compatibles, incluidos los modos de nodo único y alta disponibilidad, implementaciones de zona de disponibilidad única y múltiple 
+
+
+| *Tipo de disco compatible* | Discos administrados SSD v2 Premium | Apoyo más amplio.link:concept-storage.html#azure-storage["Configuración predeterminada para Cloud Volumes ONTAP"] 
+
+
+| *Velocidad de escritura (modo de escritura rápida)* | No compatible | Compatible, según su configuración. link:concept-write-speed.html["Obtenga información sobre las velocidades de escritura en Cloud Volumes ONTAP"] . 
+
+
+| *Capacidades de orquestación* | No disponible | Disponible a través de NetApp Console, según el tipo de licencia 
+
+
+| *Número de máquinas virtuales de almacenamiento compatibles* | Uno por implementación | Varias máquinas virtuales de almacenamiento, según su configuración.link:task-managing-svms-azure.html#supported-number-of-storage-vms["Número de máquinas virtuales de almacenamiento admitidas"] 
+
+
+| *Cambiar el tipo de instancia* | No compatible | Apoyado 
+
+
+| *Niveles de FabricPool * | No compatible | Apoyado 
+|===
+.Enlaces relacionados
+* Implementación directa de Azure Marketplace:link:task-deploy-cvo-azure-mktplc.html["Implementar Cloud Volumes ONTAP desde Azure Marketplace"]
+* Implementación a través de la consola:link:task-getting-started-azure.html["Inicio rápido de Cloud Volumes ONTAP en Azure"]
+* https://docs.netapp.com/us-en/bluexp-family/index.html["Documentación de la consola de NetApp"^]
+

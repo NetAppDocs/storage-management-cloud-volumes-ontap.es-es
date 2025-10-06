@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: task-connect-lun.html 
+keywords: lun, connect lun, iscsi lun, target iqn, iqn 
+summary: Cuando crea un volumen iSCSI, NetApp Console crea automáticamente un LUN para usted.  Lo hemos simplificado creando solo un LUN por volumen, por lo que no es necesario realizar ninguna gestión.  Después de crear el volumen, utilice el IQN para conectarse al LUN desde sus hosts. 
+---
+= Conéctese a un LUN en Cloud Volumes ONTAP desde su sistema host
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cuando crea un volumen iSCSI, la consola de NetApp crea automáticamente un LUN para usted.  Lo hemos simplificado creando solo un LUN por volumen, por lo que no es necesario realizar ninguna gestión.  Después de crear el volumen, utilice el IQN para conectarse al LUN desde sus hosts.
+
+Tenga en cuenta lo siguiente:
+
+* La gestión automática de capacidad de la consola no se aplica a los LUN.  Cuando crea un LUN, deshabilita la función de crecimiento automático.
+* Puede crear LUN adicionales desde el Administrador del sistema ONTAP o la CLI de ONTAP .
+
+
+.Pasos
+. Desde el menú de navegación de la izquierda, seleccione *Almacenamiento > Administración*.
+. En la página *Sistemas*, haga doble clic en el sistema Cloud Volumes ONTAP en el que desea administrar los volúmenes.
+. En el sistema, seleccione la pestaña *Volúmenes*.
+. Vaya al mosaico de volumen requerido y luego seleccione *Administrar volumen* para acceder al panel Administrar volúmenes a la derecha.
+. Haga clic en *iQN de destino*.
+. Haga clic en *Copiar* para copiar el nombre iQN.
+. Configure una conexión iSCSI desde el host al LUN.
++
+** http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-iscsi-rhel-cg/GUID-15E8C226-BED5-46D0-BAED-379EA4311340.html["Configuración de iSCSI express de ONTAP 9 para Red Hat Enterprise Linux: Inicio de las sesiones iSCSI con el destino"^]
+** http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-iscsi-cpg/GUID-857453EC-90E9-4AB6-B543-83827CF374BF.html["Configuración de ONTAP 9 iSCSI express para Windows: Inicio de sesiones iSCSI con el destino"^]
+** https://docs.netapp.com/us-en/ontap-sanhost/["Configuración del host SAN de ONTAP"^]
+
+
+

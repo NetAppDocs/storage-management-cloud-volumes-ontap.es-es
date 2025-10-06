@@ -1,0 +1,367 @@
+---
+sidebar: sidebar 
+permalink: task-tiering.html 
+keywords: tier, tiering, cold data, hot data, storage tiering, data tiering, fabricpool, fabric pool, s3 endpoint, endpoint, connection, performance tier, capacity tier, object store, blob tiering, container, inactive, tiering requirements, remove S3 bucket, delete S3 CVO bucket, tenant, multi-tenant tiering 
+summary: Puede reducir los costos de almacenamiento de Cloud Volumes ONTAP al combinar un nivel de rendimiento SSD o HDD para datos activos con un nivel de capacidad de almacenamiento de objetos para datos inactivos.  La clasificación de datos está impulsada por la tecnología FabricPool . 
+---
+= Transfiera los datos inactivos de Cloud Volumes ONTAP a un almacenamiento de objetos de bajo costo
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede reducir los costos de almacenamiento de Cloud Volumes ONTAP al combinar un nivel de rendimiento SSD o HDD para datos activos con un nivel de capacidad de almacenamiento de objetos para datos inactivos.  La clasificación de datos está impulsada por la tecnología FabricPool .  Para obtener una descripción general de alto nivel, consultelink:concept-data-tiering.html["Descripción general de la clasificación de datos"] .
+
+Para configurar la clasificación de datos, debe hacer lo siguiente:
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"]Elija una configuración compatible
+[role="quick-margin-para"]
+Se admiten la mayoría de las configuraciones.  Si tiene un sistema Cloud Volumes ONTAP que ejecuta la versión más reciente, entonces está listo para comenzar. link:task-tiering.html#configurations-that-support-data-tiering["Más información"] .
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"]Garantizar la conectividad entre Cloud Volumes ONTAP y el almacenamiento de objetos
+[role="quick-margin-list"]
+ifdef::aws[]
+
+* Para AWS, necesitará un punto final de VPC a S3. <<Requisitos para agrupar datos fríos en AWS S3,Más información>> .
+
+
+endif::aws[]
+
+ifdef::azure[]
+
+* Para Azure, no necesitará hacer nada siempre que la consola de NetApp tenga los permisos necesarios. <<Requisitos para organizar en niveles datos inactivos en el almacenamiento de blobs de Azure,Más información>> .
+
+
+endif::azure[]
+
+ifdef::gcp[]
+
+* Para Google Cloud, debe configurar la subred para el acceso privado de Google y configurar una cuenta de servicio. <<Requisitos para agrupar datos fríos en un depósito de Google Cloud Storage,Más información>> .
+
+
+endif::gcp[]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"]Asegúrese de tener un agregado con niveles habilitados
+[role="quick-margin-para"]
+La clasificación de datos se debe habilitar en un agregado para habilitarla en un volumen.  Debe tener en cuenta los requisitos para los volúmenes nuevos y existentes. <<Asegúrese de que la clasificación en niveles esté habilitada en los agregados,Más información>> .
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Cuatro"]Elija una política de niveles al crear, modificar o replicar un volumen
+[role="quick-margin-para"]
+La consola de NetApp le solicita que elija una política de niveles cuando crea, modifica o replica un volumen.
+
+[role="quick-margin-list"]
+* link:task-tiering.html#tier-data-from-read-write-volumes["Datos de niveles de volúmenes de lectura y escritura"]
+* link:task-tiering.html#tier-data-from-data-protection-volumes["Datos de niveles de volúmenes de protección de datos"]
+
+
+[NOTE]
+.¿Qué no es necesario para la clasificación de datos?
+====
+* No es necesario instalar una licencia de función para habilitar la clasificación de datos.
+* No es necesario crear un almacén de objetos para el nivel de capacidad.  La consola lo hace por ti.
+* No es necesario habilitar la clasificación de datos a nivel del sistema.
++
+La consola crea un almacén de objetos para datos fríos cuando crea el sistema,<<Habilitar la estratificación de datos después de implementar los requisitos,siempre y cuando no haya problemas de conectividad o permisos>> .  Después de eso, solo necesita habilitar la clasificación de datos en los volúmenes (y en algunos casos,<<Asegúrese de que la clasificación en niveles esté habilitada en los agregados,sobre agregados>> ).
+
+
+
+====
+
+
+== Configuraciones que admiten la estratificación de datos
+
+Puede habilitar la clasificación de datos al utilizar configuraciones y funciones específicas.
+
+ifdef::aws[]
+
+
+
+=== Soporte en AWS
+
+* La organización de datos en niveles es compatible con AWS a partir de Cloud Volumes ONTAP 9.2.
+* El nivel de rendimiento puede ser SSD de uso general (gp3 o gp2) o SSD de IOPS aprovisionados (io1).
++
+
+NOTE: No recomendamos organizar los datos en niveles de almacenamiento de objetos cuando se utilizan discos duros optimizados para rendimiento (st1).
+
+* Los datos inactivos se agrupan en depósitos de Amazon S3.  No se admite la combinación con otros proveedores.
+
+
+endif::aws[]
+
+ifdef::azure[]
+
+
+
+=== Soporte en Azure
+
+* En Azure se admite la organización de datos en niveles de la siguiente manera:
++
+** Versión 9.4 en sistemas de nodo único
+** Versión 9.6 con pares HA
+
+
+* El nivel de rendimiento puede ser discos administrados SSD Premium, discos administrados SSD estándar o discos administrados HDD estándar.
+* Los datos inactivos se agrupan en Microsoft Azure Blob.  No se admite la combinación con otros proveedores.
+
+
+endif::azure[]
+
+ifdef::gcp[]
+
+
+
+=== Soporte en Google Cloud
+
+* La clasificación de datos es compatible con Google Cloud a partir de Cloud Volumes ONTAP 9.6.
+* El nivel de rendimiento puede ser discos persistentes SSD, discos persistentes equilibrados o discos persistentes estándar.
+* Los datos inactivos se almacenan en Google Cloud Storage.  No se admite la combinación con otros proveedores.
+
+
+endif::gcp[]
+
+
+
+=== Interoperabilidad de funciones
+
+* La clasificación de datos está respaldada por tecnologías de cifrado.
+* El aprovisionamiento fino debe estar habilitado en los volúmenes.
+
+
+
+
+== Requisitos
+
+Según su proveedor de nube, se deben configurar ciertas conexiones y permisos para que Cloud Volumes ONTAP pueda organizar en niveles los datos fríos en el almacenamiento de objetos.
+
+ifdef::aws[]
+
+
+
+=== Requisitos para agrupar datos fríos en AWS S3
+
+Asegúrese de que Cloud Volumes ONTAP tenga una conexión a S3.  La mejor forma de proporcionar esa conexión es creando un punto final de VPC para el servicio S3.  Para obtener instrucciones, consulte la https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-gateway.html#create-gateway-endpoint["Documentación de AWS: Creación de un punto final de puerta de enlace"^] .
+
+Al crear el punto final de VPC, asegúrese de seleccionar la región, la VPC y la tabla de rutas que corresponden a la instancia de Cloud Volumes ONTAP .  También debe modificar el grupo de seguridad para agregar una regla HTTPS saliente que habilite el tráfico al punto final S3.  De lo contrario, Cloud Volumes ONTAP no podrá conectarse al servicio S3.
+
+Si experimenta algún problema, consulte https://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint/["Centro de conocimiento de soporte de AWS: ¿Por qué no puedo conectarme a un bucket S3 mediante un punto final de VPC de puerta de enlace?"^] .
+
+endif::aws[]
+
+ifdef::azure[]
+
+
+
+=== Requisitos para organizar en niveles datos inactivos en el almacenamiento de blobs de Azure
+
+No es necesario configurar una conexión entre el nivel de rendimiento y el nivel de capacidad siempre que la consola tenga los permisos necesarios.  La consola habilita un punto final de servicio de VNet para usted si el rol personalizado para el agente de la consola tiene estos permisos:
+
+[source, json]
+----
+"Microsoft.Network/virtualNetworks/subnets/write",
+"Microsoft.Network/routeTables/join/action",
+----
+El rol personalizado incluye los permisos por defecto. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["Ver el permiso de Azure para el agente de consola"^]
+
+endif::azure[]
+
+ifdef::gcp[]
+
+
+
+=== Requisitos para agrupar datos fríos en un depósito de Google Cloud Storage
+
+* La subred en la que reside Cloud Volumes ONTAP debe estar configurada para el acceso privado de Google.  Para obtener instrucciones, consulte https://cloud.google.com/vpc/docs/configure-private-google-access["Documentación de Google Cloud: Configuración del acceso privado a Google"^] .
+* Se debe asociar una cuenta de servicio a Cloud Volumes ONTAP.
++
+link:task-creating-gcp-service-account.html["Aprenda a configurar esta cuenta de servicio"] .
+
++
+Se le solicitará que seleccione esta cuenta de servicio cuando cree un sistema Cloud Volumes ONTAP .
+
++
+Si no selecciona una cuenta de servicio durante la implementación, deberá cerrar Cloud Volumes ONTAP, ir a la consola de Google Cloud y luego adjuntar la cuenta de servicio a las instancias de Cloud Volumes ONTAP .  Luego puede habilitar la clasificación de datos como se describe en la siguiente sección.
+
+* Para cifrar el depósito con claves de cifrado administradas por el cliente, habilite el depósito de almacenamiento de Google Cloud para usar la clave.
++
+link:task-setting-up-gcp-encryption.html["Aprenda a usar claves de cifrado administradas por el cliente con Cloud Volumes ONTAP"] .
+
+
+
+endif::gcp[]
+
+
+
+=== Habilitar la estratificación de datos después de implementar los requisitos
+
+La consola crea un almacén de objetos para datos fríos cuando se crea el sistema, siempre que no haya problemas de conectividad o permisos.  Si no implementó los requisitos enumerados anteriormente hasta después de crear el sistema, deberá habilitar manualmente la clasificación a través de la API o el Administrador del sistema ONTAP , que crea el almacén de objetos.
+
+
+NOTE: La capacidad de habilitar la clasificación por niveles a través de la consola estará disponible en una futura versión de Cloud Volumes ONTAP .
+
+
+
+== Asegúrese de que la clasificación en niveles esté habilitada en los agregados
+
+La clasificación de datos en niveles se debe habilitar en un agregado para poder habilitar la clasificación de datos en un volumen.  Debe tener en cuenta los requisitos para los volúmenes nuevos y existentes.
+
+* *Nuevos volúmenes*
++
+Si está habilitando la organización en niveles de datos en un nuevo volumen, entonces no necesita preocuparse por habilitar la organización en niveles de datos en un agregado.  La consola crea el volumen en un agregado existente que tiene niveles habilitados, o crea un nuevo agregado para el volumen si aún no existe un agregado con niveles de datos habilitados.
+
+* *Volúmenes existentes*
++
+Para habilitar la clasificación de datos en un volumen existente, asegúrese de que esté habilitada en el agregado subyacente.  Si la clasificación de datos no está habilitada en el agregado existente, deberá usar ONTAP System Manager para adjuntar un agregado existente al almacén de objetos.
+
+
+
+.Pasos para confirmar si la clasificación por niveles está habilitada en un agregado
+. Desde el menú de navegación de la izquierda, seleccione *Almacenamiento > Administración*.
+. Abra el sistema Cloud Volumes ONTAP .
+. Seleccione la pestaña *Agregados* y verifique si la clasificación en niveles está habilitada o deshabilitada en el agregado.
++
+image:screenshot_aggregate_tiering_enabled.png["Una captura de pantalla que muestra información sobre un agregado en la consola que incluye el estado de niveles."]
+
+
+
+.Pasos para habilitar la estratificación en un agregado
+. En el Administrador del sistema ONTAP , haga clic en *Almacenamiento > Niveles*.
+. Haga clic en el menú de acciones para el agregado y seleccione *Adjuntar niveles de nube*.
+. Seleccione el nivel de nube que desea adjuntar y haga clic en *Guardar*.
+
+
+.¿Que sigue?
+Ahora puede habilitar la clasificación de datos en volúmenes nuevos y existentes, como se explica en la siguiente sección.
+
+
+
+== Datos de niveles de volúmenes de lectura y escritura
+
+Cloud Volumes ONTAP puede organizar en niveles los datos inactivos en volúmenes de lectura y escritura para un almacenamiento de objetos rentable, liberando así el nivel de rendimiento para los datos activos.
+
+.Pasos
+. En la pestaña *Volúmenes* debajo del sistema, cree un nuevo volumen o cambie el nivel de un volumen existente:
++
+[cols="30,70"]
+|===
+| Tarea | Acción 
+
+
+| Crear un nuevo volumen | Haga clic en *Agregar nuevo volumen*. 
+
+
+| Modificar un volumen existente | Seleccione el mosaico de volumen deseado, haga clic en *Administrar volumen* para acceder al panel derecho Administrar volúmenes y luego haga clic en *Acciones avanzadas* y *Cambiar política de niveles* debajo del panel derecho. 
+|===
+. Seleccione una política de niveles.
++
+Para obtener una descripción de estas políticas, consultelink:concept-data-tiering.html["Descripción general de la clasificación de datos"] .
+
++
+*Ejemplo*
+
++
+image:screenshot_volumes_change_tiering_policy.png["Captura de pantalla que muestra las opciones disponibles para cambiar la política de niveles de un volumen."]
+
++
+La consola crea un nuevo agregado para el volumen si aún no existe un agregado habilitado para niveles de datos.
+
+
+
+
+
+== Datos de niveles de volúmenes de protección de datos
+
+Cloud Volumes ONTAP puede organizar datos desde un volumen de protección de datos hasta un nivel de capacidad.  Si activa el volumen de destino, los datos se mueven gradualmente al nivel de rendimiento a medida que se leen.
+
+.Pasos
+. Desde el menú de navegación de la izquierda, seleccione *Almacenamiento > Administración*.
+. En la página *Sistemas*, seleccione el sistema Cloud Volumes ONTAP que contiene el volumen de origen y luego arrástrelo al sistema al que desea replicar el volumen.
+. Siga las instrucciones hasta llegar a la página de niveles y habilite la clasificación de datos en el almacenamiento de objetos.
++
+*Ejemplo*
+
++
+image:screenshot_replication_tiering.gif["Captura de pantalla que muestra la opción de niveles S3 al replicar un volumen."]
+
++
+Para obtener ayuda con la replicación de datos, consulte https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html["Replicación de datos hacia y desde la nube"^] .
+
+
+
+
+
+== Cambiar la clase de almacenamiento para datos en niveles
+
+Después de implementar Cloud Volumes ONTAP, puede reducir sus costos de almacenamiento cambiando la clase de almacenamiento de los datos inactivos a los que no se ha accedido durante 30 días.  Los costos de acceso son más altos si accedes a los datos, por lo que debes tenerlo en cuenta antes de cambiar la clase de almacenamiento.
+
+La clase de almacenamiento para datos en niveles es para todo el sistema, no por volumen.
+
+Para obtener información sobre las clases de almacenamiento admitidas, consultelink:concept-data-tiering.html["Descripción general de la clasificación de datos"] .
+
+.Pasos
+. En el sistema Cloud Volumes ONTAP , haga clic en el ícono de menú y luego en *Clases de almacenamiento* o *Niveles de almacenamiento de blobs*.
+. Seleccione una clase de almacenamiento y luego haga clic en *Guardar*.
+
+
+
+
+== Cambiar la proporción de espacio libre para la clasificación de datos
+
+La relación de espacio libre para la clasificación de datos define cuánto espacio libre se requiere en los SSD/HDD de Cloud Volumes ONTAP al clasificar datos en almacenamiento de objetos.  La configuración predeterminada es 10% de espacio libre, pero puedes modificar la configuración según tus necesidades.
+
+Por ejemplo, puede elegir menos del 10 % de espacio libre para asegurarse de utilizar la capacidad adquirida.  Luego, la consola puede comprar discos adicionales para usted cuando se requiera capacidad adicional (hasta que alcance el límite de discos para el agregado).
+
+
+CAUTION: Si no hay suficiente espacio, Cloud Volumes ONTAP no puede mover los datos y es posible que experimente una degradación del rendimiento.  Cualquier cambio debe realizarse con precaución.  Si no está seguro, comuníquese con el soporte de NetApp para obtener orientación.
+
+La relación es importante para los escenarios de recuperación ante desastres porque a medida que se leen los datos del almacén de objetos, Cloud Volumes ONTAP mueve los datos a SSD/HDD para proporcionar un mejor rendimiento.  Si no hay suficiente espacio, Cloud Volumes ONTAP no puede mover los datos.  Tenga esto en cuenta al cambiar la proporción para poder satisfacer los requisitos de su negocio.
+
+.Pasos
+. Desde el panel de navegación izquierdo, vaya a *Administración > Agentes*.
+. Haga clic en elimage:icon-action.png[""] Icono del agente de consola que administra su sistema Cloud Volumes ONTAP .
+. Seleccione *Configuración de Cloud Volumes ONTAP *.
++
+image::screenshot-settings-cloud-volumes-ontap.png[Una captura de pantalla de la opción Configuración de Cloud Volumes ONTAP en el ícono Configuración.]
+
+. En *Capacidad*, haga clic en *Umbrales de capacidad agregada - Relación de espacio libre para niveles de datos*.
++
+image:screenshot-cvo-settings-page.png["Una descripción general de la configuración de capacidad de Cloud Volumes ONTAP."]
+
+. Cambie la proporción de espacio libre según sus requisitos y haga clic en *Guardar*.
+
+
+
+
+== Cambiar el período de enfriamiento para la política de niveles automáticos
+
+Si habilitó la organización en niveles de datos en un volumen de Cloud Volumes ONTAP mediante la política de organización en niveles _automática_, puede ajustar el período de enfriamiento predeterminado según las necesidades de su negocio.  Esta acción solo se admite mediante ONTAP CLI y API.
+
+El período de enfriamiento es la cantidad de días que los datos del usuario en un volumen deben permanecer inactivos antes de que se consideren "fríos" y se muevan al almacenamiento de objetos.
+
+El período de enfriamiento predeterminado para la política de niveles automáticos es de 31 días.  Puede cambiar el período de enfriamiento de la siguiente manera:
+
+* 9.8 o posterior: 2 días a 183 días
+* 9.7 o anterior: 2 días a 63 días
+
+
+.Paso
+. Utilice el parámetro _minimumCoolingDays_ con su solicitud de API al crear un volumen o modificar un volumen existente.
+
+
+
+
+== Eliminar un depósito S3 al desmantelar un sistema
+
+Puede eliminar un depósito S3 con datos organizados en niveles desde un sistema Cloud Volumes ONTAP cuando desmantele el entorno.
+
+Puedes eliminar el bucket S3 solo si:
+
+* El sistema Cloud Volume ONTAP se elimina de la consola.
+* Se eliminan todos los objetos del depósito y el depósito S3 queda vacío.
+
+
+Cuando se desmantela un sistema Cloud Volumes ONTAP , el depósito S3 que se creó para el entorno no se elimina automáticamente.  En cambio, permanece en un estado huérfano para evitar cualquier pérdida accidental de datos.  Puede eliminar los objetos en el bucket, luego quitar el bucket S3 o conservarlo para usarlo más adelante. Referirse a https://docs.netapp.com/us-en/ontap-cli/vserver-object-store-server-bucket-delete.html#description["CLI de ONTAP : eliminación del depósito del servidor de objetos del almacén de vserver"^] .

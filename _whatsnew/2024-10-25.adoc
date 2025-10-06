@@ -1,0 +1,22 @@
+= Lista de máquinas virtuales compatibles actualizada para Google Cloud para alinearse con las mejores prácticas
+:allow-uri-read: 
+
+
+
+
+=== Lista de máquinas virtuales compatibles actualizada para Google Cloud para alinearse con las mejores prácticas
+
+Las máquinas de la serie n1 ya no están disponibles para su selección en BlueXP al implementar nuevas instancias de Cloud Volumes ONTAP en Google Cloud. Las máquinas de la serie n1 se conservarán y recibirán soporte únicamente en sistemas más antiguos y existentes. Las nuevas implementaciones de Cloud Volumes ONTAP solo son compatibles con Google Cloud a partir de la versión 9.8.  Le recomendamos que cambie a los tipos de máquinas de la serie n2 que sean compatibles con Cloud Volumes ONTAP 9.8 y versiones posteriores. Sin embargo, las máquinas de la serie n1 estarán disponibles para nuevas implementaciones realizadas a través de la API.
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html["Configuraciones compatibles en Google Cloud"^] .
+
+
+
+=== Compatibilidad de zonas locales con Amazon Web Services en modo privado
+
+BlueXP ahora admite zonas locales de AWS para implementaciones de alta disponibilidad (HA) de Cloud Volumes ONTAP en modo privado.  El soporte que antes estaba limitado únicamente al modo estándar ahora se ha ampliado para incluir el modo privado.
+
+
+NOTE: Las zonas locales de AWS no son compatibles cuando se utiliza BlueXP en modo restringido.
+
+Para obtener más información sobre las zonas locales de AWS con implementaciones de alta disponibilidad, consultelink:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha.html#aws-local-zones["Zonas locales de AWS"^] .
