@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-versions.html 
 keywords: versions, supported versions, new versions, cloud volumes ontap version 
-summary: La consola de NetApp le permite elegir entre varias versiones diferentes de ONTAP cuando crea un nuevo sistema Cloud Volumes ONTAP . 
+summary: La NetApp Console le permite elegir entre varias versiones diferentes de ONTAP cuando crea un nuevo sistema Cloud Volumes ONTAP . 
 ---
 = Versiones de ONTAP compatibles con implementaciones de Cloud Volumes ONTAP
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: La consola de NetApp le permite elegir entre varias versiones diferente
 
 
 [role="lead"]
-La consola de NetApp le permite elegir entre varias versiones diferentes de ONTAP cuando agrega un sistema Cloud Volumes ONTAP .
+La NetApp Console le permite elegir entre varias versiones diferentes de ONTAP cuando agrega un sistema Cloud Volumes ONTAP .
 
 Las versiones de Cloud Volumes ONTAP distintas a las que se enumeran aquí no están disponibles para nuevas implementaciones.  Para obtener información sobre la actualización, consultelink:task-updating-ontap-cloud.html#supported-upgrade-paths["Rutas de actualización admitidas"] .
 

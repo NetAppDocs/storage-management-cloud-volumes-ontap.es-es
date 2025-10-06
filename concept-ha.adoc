@@ -41,7 +41,7 @@ Sistema operativo:: Debian 11
 NOTE: Para Cloud Volumes ONTAP 9.10.0 y versiones anteriores, se instaló Debian 10 en el mediador.
 
 --
-Actualizaciones:: Cuando actualiza Cloud Volumes ONTAP, la consola de NetApp también actualiza la instancia del mediador según sea necesario.
+Actualizaciones:: Cuando actualiza Cloud Volumes ONTAP, la NetApp Console también actualiza la instancia del mediador según sea necesario.
 Acceso a la instancia:: Cuando crea un par de Cloud Volumes ONTAP HA desde la consola, se le solicita que proporcione un par de claves para la instancia del mediador.  Puede utilizar ese par de claves para acceder a SSH mediante el `admin` usuario.
 Agentes de terceros:: Los agentes de terceros o las extensiones de VM no son compatibles con la instancia del mediador.
 
@@ -241,7 +241,7 @@ Para obtener más detalles sobre el rendimiento de Cloud Volumes ONTAP , consult
 Los clientes deben acceder a los volúmenes NFS y CIFS utilizando la dirección IP de datos del nodo en el que reside el volumen.  Si los clientes NAS acceden a un volumen utilizando la dirección IP del nodo asociado, el tráfico pasa entre ambos nodos, lo que reduce el rendimiento.
 
 
-TIP: Si mueve un volumen entre nodos en un par de alta disponibilidad, debe volver a montar el volumen utilizando la dirección IP del otro nodo.  De lo contrario, puede experimentar una reducción en el rendimiento.  Si los clientes admiten referencias NFSv4 o redirección de carpetas para CIFS, puede habilitar esas funciones en los sistemas Cloud Volumes ONTAP para evitar volver a montar el volumen.  Para obtener más detalles, consulte la documentación de ONTAP .
+TIP: Si mueve un volumen entre nodos en un par HA, debe volver a montar el volumen utilizando la dirección IP del otro nodo.  De lo contrario, puede experimentar una reducción en el rendimiento.  Si los clientes admiten referencias NFSv4 o redirección de carpetas para CIFS, puede habilitar esas funciones en los sistemas Cloud Volumes ONTAP para evitar volver a montar el volumen.  Para obtener más detalles, consulte la documentación de ONTAP .
 
 Puede identificar fácilmente la dirección IP correcta a través de la opción _Comando de montaje_ en el panel de administración de volúmenes.
 

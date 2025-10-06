@@ -14,7 +14,7 @@ summary: De manera similar a una región estándar de AWS, puede implementar Clo
 
 
 [role="lead"]
-De manera similar a una región estándar de AWS, puede usar la consola de NetApp enlink:https://aws.amazon.com/federal/secret-cloud/["Nube secreta de AWS"^] y enlink:https://aws.amazon.com/federal/top-secret-cloud/["Nube de alto secreto de AWS"^] para implementar Cloud Volumes ONTAP, que proporciona funciones de clase empresarial para su almacenamiento en la nube.  AWS Secret Cloud y Top Secret Cloud son regiones cerradas específicas de la Comunidad de Inteligencia de EE. UU.; las instrucciones de esta página solo se aplican a los usuarios de las regiones AWS Secret Cloud y Top Secret Cloud.
+De manera similar a una región estándar de AWS, puede usar la NetApp Console enlink:https://aws.amazon.com/federal/secret-cloud/["Nube secreta de AWS"^] y enlink:https://aws.amazon.com/federal/top-secret-cloud/["Nube de alto secreto de AWS"^] para implementar Cloud Volumes ONTAP, que proporciona funciones de clase empresarial para su almacenamiento en la nube.  AWS Secret Cloud y Top Secret Cloud son regiones cerradas específicas de la Comunidad de Inteligencia de EE. UU.; las instrucciones de esta página solo se aplican a los usuarios de las regiones AWS Secret Cloud y Top Secret Cloud.
 
 .Antes de empezar
 Antes de comenzar, revise las versiones compatibles con AWS Secret Cloud y Top Secret Cloud, y obtenga información sobre el modo privado en la consola.
@@ -441,7 +441,7 @@ Esto le otorga a la consola permisos para usar la CMK con Cloud Volumes ONTAP.
 Antes de poder comenzar a usar la consola para implementar Cloud Volumes ONTAP en AWS, debe instalar y configurar el agente de la consola.  Permite que la consola administre recursos y procesos dentro de su entorno de nube pública (esto incluye Cloud Volumes ONTAP).
 
 .Pasos
-. Obtenga un certificado raíz firmado por una autoridad de certificación (CA) en el formato X.509 codificado Base-64 de correo con privacidad mejorada (PEM).  Consulte las políticas y procedimientos de su organización para obtener el certificado.
+. Obtenga un certificado raíz firmado por una autoridad de certificación (CA) en el formato X.509 codificado en Base-64 de Privacy Enhanced Mail (PEM).  Consulte las políticas y procedimientos de su organización para obtener el certificado.
 +
 
 NOTE: Para las regiones de AWS Secret Cloud, debe cargar el `NSS Root CA 2` certificado, y para Top Secret Cloud, el `Amazon Root CA 4` certificado.  Asegúrese de cargar solo estos certificados y no la cadena completa.  El archivo de la cadena de certificados es grande y la carga puede fallar.  Si tiene certificados adicionales, puede cargarlos más tarde, como se describe en el siguiente paso.
@@ -481,7 +481,7 @@ Esta cuenta de usuario se ejecuta localmente en el sistema.  No hay conexión co
 *** *Revisar*: Revise los detalles, acepte el acuerdo de licencia y luego seleccione *Configurar*.
 
 
-.. Para completar la instalación del certificado firmado por la CA, reinicie la instancia del agente de la consola desde la consola EC2.
+.. Para completar la instalación del certificado firmado por CA, reinicie la instancia del agente de consola desde la consola EC2.
 
 
 . Después de reiniciar el agente de la consola, inicie sesión con la cuenta de usuario administrador que creó en el asistente de configuración.
@@ -583,7 +583,7 @@ docker restart <docker-id>
 Si compró una licencia de NetApp, debe agregarla a la consola para poder seleccionarla cuando cree un nuevo sistema Cloud Volumes ONTAP .  Estas licencias permanecerán sin asignar hasta que las asocie con un nuevo sistema Cloud Volumes ONTAP .
 
 .Pasos
-. Desde el menú de navegación de la izquierda, seleccione *Licencias y suscripciones*.
+. Desde el menú de navegación de la izquierda, seleccione * Licenses and subscriptions*.
 . En el panel * Cloud Volumes ONTAP*, seleccione *Ver*.
 . En la pestaña * Cloud Volumes ONTAP*, seleccione *Licencias > Licencias basadas en nodos*.
 . Haga clic en *Sin asignar*.
@@ -600,7 +600,7 @@ Si compró una licencia de NetApp, debe agregarla a la consola para poder selecc
 
 
 .Resultado
-La consola agrega la licencia como no asignada hasta que la asocie con un nuevo sistema Cloud Volumes ONTAP .  Puede ver la licencia en el menú de navegación izquierdo en *Licencias y suscripciones > Cloud Volumes ONTAP > Ver > Licencias*.
+La consola agrega la licencia como no asignada hasta que la asocie con un nuevo sistema Cloud Volumes ONTAP .  Puede ver la licencia en el menú de navegación izquierdo en * Licenses and subscriptions > Cloud Volumes ONTAP > Ver > Licencias*.
 
 
 

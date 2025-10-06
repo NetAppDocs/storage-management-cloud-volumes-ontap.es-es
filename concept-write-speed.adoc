@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-write-speed.html 
 keywords: write speed, high write speed, normal write speed, nvfail, writing speed, ldm, low durability mode 
-summary: La consola de NetApp le permite elegir una velocidad de escritura normal o alta para Cloud Volumes ONTAP.  Antes de elegir una velocidad de escritura, debe comprender las diferencias entre las configuraciones normales y altas, así como los riesgos y recomendaciones al utilizar una velocidad de escritura alta. 
+summary: La NetApp Console le permite elegir una velocidad de escritura normal o alta para Cloud Volumes ONTAP.  Antes de elegir una velocidad de escritura, debe comprender las diferencias entre las configuraciones normales y altas, así como los riesgos y recomendaciones al utilizar una velocidad de escritura alta. 
 ---
 = Velocidad de escritura
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: La consola de NetApp le permite elegir una velocidad de escritura norma
 
 
 [role="lead"]
-La consola de NetApp le permite elegir una velocidad de escritura normal o alta para la mayoría de las configuraciones de Cloud Volumes ONTAP .  Antes de elegir una velocidad de escritura, debe comprender las diferencias entre las configuraciones normales y altas, así como los riesgos y recomendaciones al utilizar una velocidad de escritura alta.
+La NetApp Console le permite elegir una velocidad de escritura normal o alta para la mayoría de las configuraciones de Cloud Volumes ONTAP .  Antes de elegir una velocidad de escritura, debe comprender las diferencias entre las configuraciones normales y altas, así como los riesgos y recomendaciones al utilizar una velocidad de escritura alta.
 
 
 
@@ -28,7 +28,7 @@ La velocidad de escritura normal es la opción predeterminada.
 
 == Alta velocidad de escritura
 
-Cuando elige alta velocidad de escritura, los datos se almacenan en la memoria antes de escribirse en el disco, lo que proporciona un rendimiento de escritura más rápido.  Debido a este almacenamiento en caché, existe la posibilidad de pérdida de datos si ocurre una interrupción no planificada del sistema.
+Cuando elige alta velocidad de escritura, los datos se almacenan en la memoria intermedia antes de escribirse en el disco, lo que proporciona un rendimiento de escritura más rápido.  Debido a este almacenamiento en caché, existe la posibilidad de pérdida de datos si ocurre una interrupción no planificada del sistema.
 
 La cantidad de datos que se pueden perder en caso de una interrupción no planificada del sistema es el lapso de los dos últimos puntos de consistencia.  Un punto de consistencia es el acto de escribir datos almacenados en el buffer en el disco.  Un punto de consistencia ocurre cuando el registro de escritura está lleno o después de 10 segundos (lo que ocurra primero).  Sin embargo, el rendimiento del almacenamiento proporcionado por su proveedor de nube puede afectar el tiempo de procesamiento del punto de consistencia.
 

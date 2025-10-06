@@ -21,7 +21,7 @@ Al utilizar Cloud KMS, tenga en cuenta que, de forma predeterminada, se utiliza 
 .Antes de empezar
 * Su sistema debe ejecutar Cloud Volumes ONTAP 9.10.1 o posterior
 * Debe utilizar un SVM de datos.  Cloud KMS solo se puede configurar en un SVM de datos.
-* Debe ser administrador de clúster o SVM
+* Debe ser un administrador de clúster o SVM
 * La licencia de cifrado de volumen (VE) debe estar instalada en el SVM
 * A partir de Cloud Volumes ONTAP 9.12.1 GA, también se debe instalar la licencia de administración de claves de cifrado multiinquilino (MTEKM)
 * Se requiere una suscripción activa a Google Cloud Platform

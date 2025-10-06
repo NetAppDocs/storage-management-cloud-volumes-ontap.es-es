@@ -19,7 +19,7 @@ El soporte de NetApp está incluido con los sistemas de pago por uso (PAYGO) de 
 Es necesario registrar un sistema PAYGO con NetApp para actualizar el software ONTAP mediante cualquiera de los métodoslink:task-updating-ontap-cloud.html["descrito en esta página"] .
 
 
-TIP: Un sistema que no esté registrado para recibir soporte seguirá recibiendo las notificaciones de actualización de software que aparecen en la Consola de NetApp cuando haya una nueva versión disponible.  Pero necesitará registrar el sistema antes de poder actualizar el software.
+TIP: Un sistema que no esté registrado para recibir soporte seguirá recibiendo las notificaciones de actualización de software que aparecen en la NetApp Console cuando haya una nueva versión disponible.  Pero necesitará registrar el sistema antes de poder actualizar el software.
 
 .Pasos
 . Si aún no ha agregado su cuenta del sitio de soporte de NetApp a la consola, vaya a *Configuración de la cuenta* y agréguela ahora.

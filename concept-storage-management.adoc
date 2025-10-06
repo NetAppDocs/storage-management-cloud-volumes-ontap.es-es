@@ -14,7 +14,7 @@ summary: La consola proporciona una gestión simplificada y avanzada del almacen
 
 
 [role="lead"]
-La consola de NetApp proporciona una gestión simplificada y avanzada del almacenamiento de Cloud Volumes ONTAP .
+La NetApp Console proporciona una gestión simplificada y avanzada del almacenamiento de Cloud Volumes ONTAP .
 
 
 CAUTION: Debe crear y eliminar todos los discos y agregados directamente desde la consola. No debe realizar estas acciones desde otra herramienta de administración. Hacerlo puede afectar la estabilidad del sistema, obstaculizar la capacidad de agregar discos en el futuro y potencialmente generar tarifas redundantes del proveedor de la nube.

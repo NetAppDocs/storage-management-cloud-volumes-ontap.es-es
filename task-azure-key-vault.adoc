@@ -24,7 +24,7 @@ Al utilizar AKV, tenga en cuenta que, de forma predeterminada, se utiliza un LIF
 * Cloud Volumes ONTAP debe ejecutar la versión 9.10.1 o posterior
 * Licencia de Volume Encryption (VE) instalada (la licencia de Volume Encryption de NetApp se instala automáticamente en cada sistema Cloud Volumes ONTAP registrado en el soporte de NetApp )
 * Debe tener una licencia de administración de claves de cifrado multiinquilino (MT_EK_MGMT)
-* Debe ser administrador de clúster o SVM
+* Debe ser un administrador de clúster o SVM
 * Una suscripción activa de Azure
 
 
@@ -126,7 +126,7 @@ image:screenshot-azure-key-secret-cert-principal.png["Captura de pantalla de la 
 . En el portal de Azure, navegue a **Redes virtuales**.
 . Seleccione la red virtual donde implementó el sistema Cloud Volumes ONTAP y seleccione el menú **Subredes** en el lado izquierdo de la página.
 . Seleccione el nombre de subred para su implementación de Cloud Volumes ONTAP de la lista.
-. Vaya al encabezado **Puntos finales del servicio**.  En el menú desplegable, seleccione lo siguiente:
+. Vaya al encabezado **Puntos finales de servicio**.  En el menú desplegable, seleccione lo siguiente:
 +
 ** **Microsoft.AzureActiveDirectory**
 ** **Microsoft.KeyVault**

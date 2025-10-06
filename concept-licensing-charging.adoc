@@ -56,7 +56,7 @@ Su licencia siempre se cobra primero, pero se le cobrará la tarifa por hora del
 
 == Cambio de paquetes
 
-Después de la implementación, puede cambiar el paquete para un sistema Cloud Volumes ONTAP que utilice licencias basadas en capacidad. Por ejemplo, si implementó un sistema Cloud Volumes ONTAP con el paquete Essentials, puede cambiarlo al paquete Professional si las necesidades de su negocio cambian.
+Después de la implementación, puede cambiar el paquete para un sistema Cloud Volumes ONTAP que utilice licencias basadas en capacidad.  Por ejemplo, si implementó un sistema Cloud Volumes ONTAP con el paquete Essentials, puede cambiarlo al paquete Professional si las necesidades de su negocio cambian.
 
 link:task-manage-capacity-licenses.html["Aprenda a cambiar los métodos de carga"] .
 
@@ -66,7 +66,7 @@ Para obtener información sobre cómo convertir licencias basadas en nodos a lic
 
 == Precios y configuraciones admitidas
 
-Para obtener detalles sobre los precios, visite https://bluexp.netapp.com/pricing/["Sitio web de la consola de NetApp"^] .
+Para obtener detalles sobre los precios, visite https://bluexp.netapp.com/pricing/["Sitio web de la NetApp Console"^] .
 
 Los paquetes de licencias basados ​​en capacidad están disponibles con Cloud Volumes ONTAP 9.7 y versiones posteriores.
 
@@ -109,7 +109,7 @@ Para obtener información sobre los límites de capacidad de cada proveedor de n
 
 == Número máximo de sistemas
 
-Con licencias basadas en capacidad, la cantidad máxima de sistemas Cloud Volumes ONTAP está limitada a 24 por cuenta de consola de NetApp .  Un _sistema_ es un par de Cloud Volumes ONTAP HA, un sistema de nodo único de Cloud Volumes ONTAP o cualquier máquina virtual de almacenamiento adicional que usted cree.  La VM de almacenamiento predeterminada no cuenta para el límite.  Este límite se aplica a todos los modelos de licencia.
+Con licencias basadas en capacidad, la cantidad máxima de sistemas Cloud Volumes ONTAP está limitada a 24 por cuenta de NetApp Console .  Un _sistema_ es un par de Cloud Volumes ONTAP HA, un sistema de nodo único de Cloud Volumes ONTAP o cualquier máquina virtual de almacenamiento adicional que usted cree.  La VM de almacenamiento predeterminada no cuenta para el límite.  Este límite se aplica a todos los modelos de licencia.
 
 Por ejemplo, digamos que tienes tres sistemas:
 
@@ -186,7 +186,7 @@ He aquí un ejemplo. Digamos que tiene las siguientes licencias para el paquete 
 
 Se aprovisionan otros 50 TiB en un par HA con volúmenes secundarios.  En lugar de cargar esos 50 TiB a PAYGO, la consola cobra el excedente de 50 TiB contra la licencia _Essentials Single Node_.  Esa licencia tiene un precio más alto que _Essentials Secondary HA_, pero utiliza una licencia que ya ha comprado y no agregará costos a su factura mensual.
 
-En *Administración > Licencias y suscripciones*, puedes ver 50 TiB cargados contra la licencia _Essentials Single Node_.
+En *Administración > Licenses and subscriptions*, puedes ver los 50 TiB cobrados contra la licencia _Essentials Single Node_.
 
 He aquí otro ejemplo.  Digamos que tiene las siguientes licencias para el paquete Essentials:
 

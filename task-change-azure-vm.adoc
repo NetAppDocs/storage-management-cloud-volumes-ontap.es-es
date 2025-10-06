@@ -31,7 +31,7 @@ Para los pares HA, el cambio no es disruptivo.  Los pares HA continúan proporci
 
 +
 
-TIP: La consola de NetApp cambia un nodo a la vez iniciando la toma de control y esperando la devolución.  El equipo de control de calidad de NetApp probó tanto la escritura como la lectura de archivos durante este proceso y no detectó ningún problema en el lado del cliente.  A medida que cambiaban las conexiones, se observaron algunos reintentos en el nivel de E/S, pero la capa de aplicación superó el recableado de las conexiones NFS/CIFS.
+TIP: La NetApp Console cambia un nodo a la vez iniciando la toma de control y esperando la devolución.  El equipo de control de calidad de NetApp probó tanto la escritura como la lectura de archivos durante este proceso y no detectó ningún problema en el lado del cliente.  A medida que cambiaban las conexiones, se observaron algunos reintentos en el nivel de E/S, pero la capa de aplicación superó el recableado de las conexiones NFS/CIFS.
 
 
 

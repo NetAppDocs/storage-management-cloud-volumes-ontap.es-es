@@ -40,7 +40,7 @@ Los siguientes pasos ilustran cómo establecer una configuración similar.
 
 . Cree rutas en la tabla de rutas de la puerta de enlace de tránsito especificando las direcciones IP flotantes del par HA.
 +
-Puede encontrar las direcciones IP flotantes en la página de información del sistema en la consola de NetApp . He aquí un ejemplo:
+Puede encontrar las direcciones IP flotantes en la página de información del sistema en la NetApp Console. He aquí un ejemplo:
 
 +
 image:screenshot_floating_ips.gif["Una captura de pantalla que muestra las direcciones IP flotantes para la interfaz de administración del clúster, dos interfaces de datos NFS y CIFS y la interfaz de administración SVM."]

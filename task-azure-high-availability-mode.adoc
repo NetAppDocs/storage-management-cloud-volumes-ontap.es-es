@@ -18,7 +18,7 @@ El modo de alta disponibilidad (HA) de Microsoft Azure debe estar habilitado par
 
 A partir de Cloud Volumes ONTAP 9.10.1, redujimos el tiempo de conmutación por error no planificado para los pares de Cloud Volumes ONTAP HA que se ejecutan en Microsoft Azure y agregamos compatibilidad con NFSv4.  Para que estas mejoras estén disponibles para Cloud Volumes ONTAP, debe habilitar la función de alta disponibilidad en su suscripción de Azure.
 
-La consola de NetApp le solicita estos detalles cuando es necesario habilitar la función en una suscripción de Azure.
+La NetApp Console le solicita estos detalles cuando es necesario habilitar la función en una suscripción de Azure.
 
 Tenga en cuenta lo siguiente:
 

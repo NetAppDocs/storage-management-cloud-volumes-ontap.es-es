@@ -14,7 +14,7 @@ summary: Configure su red de Google Cloud para que los sistemas Cloud Volumes ON
 
 
 [role="lead"]
-La consola de NetApp maneja la configuración de componentes de red para Cloud Volumes ONTAP, como direcciones IP, máscaras de red y rutas.  Debe asegurarse de que el acceso a Internet saliente esté disponible, que haya suficientes direcciones IP privadas disponibles, que existan las conexiones correctas y más.
+La NetApp Console maneja la configuración de componentes de red para Cloud Volumes ONTAP, como direcciones IP, máscaras de red y rutas.  Debe asegurarse de que el acceso a Internet saliente esté disponible, que haya suficientes direcciones IP privadas disponibles, que existan las conexiones correctas y más.
 
 Si desea implementar un par HA, debelink:concept-ha-google-cloud.html["Descubra cómo funcionan los pares HA en Google Cloud"] .
 

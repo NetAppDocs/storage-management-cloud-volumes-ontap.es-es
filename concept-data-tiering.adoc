@@ -37,7 +37,7 @@ No se recomienda la organización de datos en niveles de almacenamiento de objet
 Nivel de capacidad:: Un sistema Cloud Volumes ONTAP agrupa los datos inactivos en un único depósito S3.
 +
 --
-La consola de NetApp crea un único bucket S3 para cada sistema y lo denomina fabric-pool-_cluster unique identifier_.  No se crea un bucket S3 diferente para cada volumen.
+La NetApp Console crea un único bucket S3 para cada sistema y lo denomina fabric-pool-_cluster unique identifier_.  No se crea un bucket S3 diferente para cada volumen.
 
 Cuando la consola crea el bucket S3, utiliza la siguiente configuración predeterminada:
 
@@ -130,7 +130,7 @@ Cuando la consola crea el depósito, utiliza la siguiente configuración predete
 
 * Tipo de ubicación: Región
 * Clase de almacenamiento: Estándar
-* Acceso público: Sujeto a ACL de objeto
+* Acceso público: Sujeto a las ACL de objetos
 * Control de acceso: de grano fino
 * Protección: Ninguna
 * Cifrado de datos: clave administrada por Google
@@ -179,10 +179,10 @@ Solo instantánea:: Una vez que un agregado alcanza el 50 % de su capacidad, Clo
 Si se leen, los bloques de datos fríos en el nivel de capacidad se vuelven activos y se mueven al nivel de rendimiento.
 
 --
-Todo:: Todos los datos (sin incluir los metadatos) se marcan inmediatamente como fríos y se almacenan en niveles en el almacenamiento de objetos lo antes posible. No es necesario esperar 48 horas para que los nuevos bloques de un volumen se enfríen. Tenga en cuenta que los bloques ubicados en el volumen antes de que se estableciera la política Todo requieren 48 horas para enfriarse.
+Todo:: Todos los datos (sin incluir los metadatos) se marcan inmediatamente como fríos y se almacenan en niveles en el almacenamiento de objetos lo antes posible.  No es necesario esperar 48 horas para que los nuevos bloques de un volumen se enfríen.  Tenga en cuenta que los bloques ubicados en el volumen antes de que se estableciera la política Todo requieren 48 horas para enfriarse.
 +
 --
-Si se leen, los bloques de datos fríos en el nivel de nube permanecen fríos y no se vuelven a escribir en el nivel de rendimiento. Esta política está disponible a partir de ONTAP 9.6.
+Si se leen, los bloques de datos fríos en el nivel de nube permanecen fríos y no se vuelven a escribir en el nivel de rendimiento.  Esta política está disponible a partir de ONTAP 9.6.
 
 --
 Auto:: Una vez que un agregado alcanza el 50 % de su capacidad, Cloud Volumes ONTAP clasifica los bloques de datos fríos de un volumen en un nivel de capacidad.  Los datos fríos incluyen no solo copias instantáneas, sino también datos fríos del usuario del sistema de archivos activo.  El período de enfriamiento es de aproximadamente 31 días.

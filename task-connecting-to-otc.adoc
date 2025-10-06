@@ -27,7 +27,7 @@ NOTE: Cuando se implementan en varias AZ, las configuraciones de HA de Cloud Vol
 endif::aws[]
 
 .Pasos
-. En la consola de NetApp , identifique la dirección IP de la interfaz de administración del clúster:
+. En la NetApp Console, identifique la dirección IP de la interfaz de administración del clúster:
 +
 .. Desde el menú de navegación de la izquierda, seleccione *Almacenamiento > Administración*.
 .. En la página *Sistemas*, seleccione el sistema Cloud Volumes ONTAP .

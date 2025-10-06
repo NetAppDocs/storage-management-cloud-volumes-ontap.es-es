@@ -26,7 +26,7 @@ Se admiten varias máquinas virtuales de almacenamiento con determinadas configu
 
 == Trabajar con múltiples máquinas virtuales de almacenamiento
 
-La consola de NetApp admite cualquier máquina virtual de almacenamiento adicional que cree desde ONTAP System Manager o la CLI de ONTAP .
+La NetApp Console admite cualquier máquina virtual de almacenamiento adicional que cree desde ONTAP System Manager o la CLI de ONTAP .
 
 Por ejemplo, la siguiente imagen muestra cómo puede elegir una máquina virtual de almacenamiento al crear un volumen.
 

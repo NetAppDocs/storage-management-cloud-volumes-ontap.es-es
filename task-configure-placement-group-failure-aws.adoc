@@ -14,7 +14,7 @@ Las implementaciones de alta disponibilidad (HA) de Cloud Volumes ONTAP en la zo
 Al omitir el proceso de reversión, el proceso de implementación de Cloud Volumes ONTAP se completa correctamente y le notifica que la creación del grupo de ubicación está incompleta.
 
 .Pasos
-. Utilice SSH para conectarse al host del agente de la consola de NetApp e iniciar sesión.
+. Utilice SSH para conectarse al host del agente de la NetApp Console e iniciar sesión.
 . Navegar a `/opt/application/netapp/cloudmanager/docker_occm/data` .
 . Editar `app.conf` cambiando el valor de la `rollback-on-placement-group-failure` parámetro a `false` .  El valor predeterminado de este parámetro es `true` .
 +

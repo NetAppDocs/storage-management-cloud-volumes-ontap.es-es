@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-create-volumes.html 
 keywords: storage, provisioning, iscsi, nfs, cifs, volumes, create a volume, add a volume, create volumes, add volumes, creating a volume, adding a volume, provision volume, provision a volume, provisioning volumes, add volume to second node, add volume to node 2, cloud backup 
-summary: Si necesita más almacenamiento después de lanzar su sistema Cloud Volumes ONTAP inicial, puede crear nuevos volúmenes FlexVol para NFS, CIFS o iSCSI desde la consola de NetApp . 
+summary: Si necesita más almacenamiento después de lanzar su sistema Cloud Volumes ONTAP inicial, puede crear nuevos volúmenes FlexVol para NFS, CIFS o iSCSI desde la NetApp Console. 
 ---
 = Cree un FlexVol volume en un sistema Cloud Volumes ONTAP
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Si necesita más almacenamiento después de lanzar su sistema Cloud Vol
 
 
 [role="lead"]
-Si necesita más almacenamiento después de lanzar su sistema Cloud Volumes ONTAP inicial, puede crear nuevos volúmenes FlexVol para NFS, CIFS o iSCSI desde la consola de NetApp .
+Si necesita más almacenamiento después de lanzar su sistema Cloud Volumes ONTAP inicial, puede crear nuevos volúmenes FlexVol para NFS, CIFS o iSCSI desde la NetApp Console.
 
 Tienes varias formas de crear un nuevo volumen:
 
@@ -155,7 +155,7 @@ ifdef::gcp[]
 endif::gcp[]
 
 Dominio DNS:: El dominio DNS para la máquina virtual de almacenamiento (SVM) de Cloud Volumes ONTAP .  En la mayoría de los casos, el dominio es el mismo que el dominio de AD.
-Servidor NTP:: Seleccione *Usar dominio de Active Directory* para configurar un servidor NTP utilizando el DNS de Active Directory.  Si necesita configurar un servidor NTP utilizando una dirección diferente, debe utilizar la API.  Para obtener información, consulte la https://docs.netapp.com/us-en/bluexp-automation/index.html["Documentación de automatización de la consola de NetApp"^] .
+Servidor NTP:: Seleccione *Usar dominio de Active Directory* para configurar un servidor NTP utilizando el DNS de Active Directory.  Si necesita configurar un servidor NTP utilizando una dirección diferente, debe utilizar la API.  Para obtener más información, consulte la https://docs.netapp.com/us-en/bluexp-automation/index.html["Documentación de automatización de la NetApp Console"^] .
 +
 --
 Tenga en cuenta que solo puede configurar un servidor NTP al crear un servidor CIFS.  No es configurable después de crear el servidor CIFS.

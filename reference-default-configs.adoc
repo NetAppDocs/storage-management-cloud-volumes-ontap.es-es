@@ -20,9 +20,9 @@ Comprender cómo se configura Cloud Volumes ONTAP de manera predeterminada puede
 
 == Configuración predeterminada
 
-* La consola de NetApp crea una máquina virtual de almacenamiento que sirve datos cuando implementa Cloud Volumes ONTAP.  Algunas configuraciones admiten máquinas virtuales de almacenamiento adicionales. link:task-managing-svms.html["Obtenga más información sobre la gestión de máquinas virtuales de almacenamiento"] .
+* La NetApp Console crea una máquina virtual de almacenamiento que sirve datos cuando implementa Cloud Volumes ONTAP.  Algunas configuraciones admiten máquinas virtuales de almacenamiento adicionales. link:task-managing-svms.html["Obtenga más información sobre la gestión de máquinas virtuales de almacenamiento"] .
 +
-A partir de la versión 3.9.5, los informes de espacio lógico están habilitados en la máquina virtual de almacenamiento inicial.  Cuando el espacio se informa de manera lógica, ONTAP informa el espacio del volumen de modo que todo el espacio físico ahorrado por las funciones de eficiencia de almacenamiento también se informa como utilizado.  Para obtener información sobre las funciones de eficiencia del almacenamiento en línea, consulte el artículo de la base de conocimientos https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/What_Inline_Storage_Efficiency_features_are_supported_with_CVO#["KB: ¿Qué funciones de eficiencia de almacenamiento en línea son compatibles con CVO?"^]
+A partir de la versión 3.9.5, los informes de espacio lógico están habilitados en la máquina virtual de almacenamiento inicial.  Cuando el espacio se informa de manera lógica, ONTAP informa el espacio del volumen de tal manera que todo el espacio físico ahorrado por las funciones de eficiencia de almacenamiento también se informa como utilizado.  Para obtener información sobre las funciones de eficiencia del almacenamiento en línea, consulte el artículo de la base de conocimientos https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/What_Inline_Storage_Efficiency_features_are_supported_with_CVO#["KB: ¿Qué funciones de eficiencia de almacenamiento en línea son compatibles con CVO?"^]
 
 * La consola instala automáticamente las siguientes licencias de funciones de ONTAP en Cloud Volumes ONTAP:
 +

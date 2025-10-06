@@ -16,7 +16,7 @@ summary: Las limitaciones conocidas identifican plataformas, dispositivos o func
 [role="lead"]
 Las limitaciones conocidas identifican plataformas, dispositivos o funciones que no son compatibles con esta versión del producto o que no interoperan correctamente con él. Revise estas limitaciones cuidadosamente.
 
-Estas limitaciones son específicas de la administración de Cloud Volumes ONTAP en la consola de NetApp .  Para ver las limitaciones del software Cloud Volumes ONTAP , https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limitations.html["Vaya a las notas de la versión de Cloud Volumes ONTAP"^] .
+Estas limitaciones son específicas de la administración de Cloud Volumes ONTAP en la NetApp Console.  Para ver las limitaciones del software Cloud Volumes ONTAP , https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limitations.html["Vaya a las notas de la versión de Cloud Volumes ONTAP"^] .
 
 
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-manage-volumes.html 
 keywords: volumes, managing, cloning, editing, CIFS server, edit, flexclone, snapshot copy, restore, mount, delete, cifs setup, DNS, active directory, AD, domain, NetBIOS, identify, move, capacity, action required, clone, snapshot copies, restoring, vol move, volume move, move a volume, volume move slow, volume move performance 
-summary: La consola de NetApp le permite administrar volúmenes y servidores CIFS.  También le solicita que mueva volúmenes para evitar problemas de capacidad. 
+summary: La NetApp Console le permite administrar volúmenes y servidores CIFS.  También le solicita que mueva volúmenes para evitar problemas de capacidad. 
 ---
 = Administrar volúmenes en sistemas Cloud Volumes ONTAP
 :hardbreaks:
@@ -14,9 +14,9 @@ summary: La consola de NetApp le permite administrar volúmenes y servidores CIF
 
 
 [role="lead"]
-Puede administrar volúmenes y servidores CIFS en la consola de NetApp .  También puede mover volúmenes para evitar problemas de capacidad.
+Puede administrar volúmenes y servidores CIFS en la NetApp Console.  También puede mover volúmenes para evitar problemas de capacidad.
 
-Puede administrar volúmenes en la Vista estándar de la consola de NetApp o a través de ONTAP System Manager, que está incluido en la consola para la administración avanzada de volúmenes.  La vista estándar proporciona un conjunto limitado de opciones para modificar sus volúmenes.  System Manager proporciona un nivel avanzado de gestión, como clonación, cambio de tamaño, modificación de configuraciones para antiransomware, análisis, protección y seguimiento de actividad, y traslado de volúmenes entre niveles.  Para obtener más información, consultelink:task-administer-advanced-view.html["Administrar Cloud Volumes ONTAP mediante el Administrador del sistema"] .
+Puede administrar volúmenes en la Vista estándar de la NetApp Console o a través de ONTAP System Manager, que está incluido en la consola para la administración avanzada de volúmenes.  La vista estándar proporciona un conjunto limitado de opciones para modificar sus volúmenes.  System Manager proporciona un nivel avanzado de gestión, como clonación, cambio de tamaño, modificación de configuraciones para antiransomware, análisis, protección y seguimiento de actividad, y traslado de volúmenes entre niveles.  Para obtener más información, consultelink:task-administer-advanced-view.html["Administrar Cloud Volumes ONTAP mediante el Administrador del sistema"] .
 
 
 
@@ -221,7 +221,7 @@ Puede mover un volumen en ONTAP System Manager seleccionando un volumen y el agr
 En la mayoría de las situaciones, puede utilizar el Administrador del sistema para mover volúmenes.
 
 +
-Para obtener instrucciones, consulte lalink:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-vol-move/home.html["Guía rápida de movimiento de volumen de ONTAP 9"^] .
+Para obtener instrucciones, consulte lalink:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-vol-move/home.html["Guía rápida de transferencia de volumen de ONTAP 9"^] .
 
 
 
@@ -358,7 +358,7 @@ Para obtener más información, consultelink:task-create-aggregates.html["Creand
 . Utilice ONTAP System Manager o la CLI de ONTAP para mover los volúmenes al agregado.
 . En la mayoría de las situaciones, puede utilizar el Administrador del sistema para mover volúmenes.
 +
-Para obtener instrucciones, consulte lalink:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-vol-move/home.html["Guía rápida de movimiento de volumen de ONTAP 9"^] .
+Para obtener instrucciones, consulte lalink:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-vol-move/home.html["Guía rápida de transferencia de volumen de ONTAP 9"^] .
 
 
 

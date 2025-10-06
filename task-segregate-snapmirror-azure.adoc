@@ -20,7 +20,7 @@ Con Cloud Volumes ONTAP en Azure, puede segregar el tráfico de replicación de 
 
 == Acerca de la segregación de tráfico de SnapMirror en Azure
 
-De forma predeterminada, la consola de NetApp configura todas las NIC y LIF en una implementación de Cloud Volumes ONTAP en la misma subred.  En tales configuraciones, el tráfico de replicación de SnapMirror y el tráfico de datos y administración utilizan la misma subred.  La segregación del tráfico de SnapMirror aprovecha una subred adicional que no se puede enrutar a la subred existente utilizada para el tráfico de datos y administración.
+De forma predeterminada, la NetApp Console configura todas las NIC y LIF en una implementación de Cloud Volumes ONTAP en la misma subred.  En tales configuraciones, el tráfico de replicación de SnapMirror y el tráfico de datos y administración utilizan la misma subred.  La segregación del tráfico de SnapMirror aprovecha una subred adicional que no se puede enrutar a la subred existente utilizada para el tráfico de datos y administración.
 
 .Figura 1
 Los siguientes diagramas muestran la segregación del tráfico de replicación de SnapMirror con una NIC adicional, un LIF entre clústeres asociado y una subred no enrutable en una implementación de un solo nodo.  La implementación de un par HA difiere ligeramente.

@@ -26,9 +26,9 @@ Un par de alta disponibilidad (HA) de Cloud Volumes ONTAP proporciona confiabili
 
 Una configuración de blob de página de Cloud Volumes ONTAP HA en Azure incluye los siguientes componentes:
 
-image:diagram_ha_azure.png["Una imagen conceptual que muestra un balanceador de carga que administra el tráfico entrante desde la consola de NetApp y los clientes, dos nodos de Cloud Volumes ONTAP en un VMSS Flex, discos SSD para datos de arranque y Page Blobs para datos de clientes."]
+image:diagram_ha_azure.png["Una imagen conceptual que muestra un balanceador de carga que administra el tráfico entrante desde la NetApp Console y los clientes, dos nodos de Cloud Volumes ONTAP en un VMSS Flex, discos SSD para datos de arranque y Page Blobs para datos de clientes."]
 
-Tenga en cuenta lo siguiente acerca de los componentes de Azure que la consola de NetApp implementa para usted:
+Tenga en cuenta lo siguiente acerca de los componentes de Azure que la NetApp Console implementa para usted:
 
 Equilibrador de carga estándar de Azure:: El equilibrador de carga administra el tráfico entrante al par Cloud Volumes ONTAP HA.
 Máquinas virtuales en zonas de disponibilidad única:: A partir de Cloud Volumes ONTAP 9.15.1, puede crear y administrar máquinas virtuales (VM) heterogéneas en una única zona de disponibilidad (AZ).  Puede implementar nodos de alta disponibilidad (HA) en dominios de falla separados dentro de la misma AZ, lo que garantiza una disponibilidad óptima.  Para obtener más información sobre el modo de orquestación flexible que habilita esta capacidad, consulte https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/["Documentación de Microsoft Azure: Conjuntos de escalado de máquinas virtuales"^] .

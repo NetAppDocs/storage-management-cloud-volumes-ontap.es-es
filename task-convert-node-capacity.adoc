@@ -14,9 +14,9 @@ summary: 'Una vez finalizada la disponibilidad (EOA) de sus licencias basadas en
 
 
 [role="lead"]
-Una vez finalizada la disponibilidad (EOA) de sus licencias basadas en nodos, debe realizar la transición a una licencia basada en capacidad mediante la herramienta de conversión de licencias en la consola de NetApp .
+Una vez finalizada la disponibilidad (EOA) de sus licencias basadas en nodos, debe realizar la transición a una licencia basada en capacidad mediante la herramienta de conversión de licencias en la NetApp Console.
 
-Para compromisos anuales o de largo plazo, NetApp recomienda que se comunique con su representante de NetApp antes de la fecha de EOA (11 de noviembre de 2024) o la fecha de vencimiento de la licencia para asegurarse de que se cumplan los requisitos previos para la transición.  Si no tiene un contrato a largo plazo para un nodo Cloud Volumes ONTAP y ejecuta su sistema con una suscripción de pago por uso (PAYGO) a pedido, es importante planificar su conversión antes del final del soporte (EOS) el 31 de diciembre de 2024.  En ambos casos, debe asegurarse de que su sistema cumpla con los requisitos antes de utilizar la herramienta de conversión de licencias en la consola de NetApp para una transición sin problemas.
+Para compromisos anuales o de largo plazo, NetApp recomienda que se comunique con su representante de NetApp antes de la fecha de EOA (11 de noviembre de 2024) o la fecha de vencimiento de la licencia para asegurarse de que se cumplan los requisitos previos para la transición.  Si no tiene un contrato a largo plazo para un nodo Cloud Volumes ONTAP y ejecuta su sistema con una suscripción de pago por uso (PAYGO) a pedido, es importante planificar su conversión antes del final del soporte (EOS) el 31 de diciembre de 2024.  En ambos casos, debe asegurarse de que su sistema cumpla con los requisitos antes de utilizar la herramienta de conversión de licencias en la NetApp Console para una transición sin problemas.
 
 Para obtener información sobre la EOA y la EOS, consultelink:concept-licensing.html#end-of-availability-of-node-based-licenses["Fin de la disponibilidad de las licencias basadas en nodos"] .
 
@@ -37,7 +37,7 @@ Para obtener información sobre la EOA y la EOS, consultelink:concept-licensing.
 * Su cuenta NSS debe estar registrada con las credenciales de usuario que utilizó para acceder a la Consola.
 * El sistema Cloud Volumes ONTAP debe estar vinculado a la cuenta NSS con acceso de cliente o acceso de administrador.
 * Debe tener una licencia válida basada en capacidad, ya sea una licencia BYOL o una suscripción al mercado.
-* Una licencia basada en capacidad debería estar disponible en su cuenta.  Esta licencia puede ser una suscripción de mercado o un paquete BYOL/oferta privada disponible en *Licencias y suscripciones* en la Consola.
+* Una licencia basada en capacidad debería estar disponible en su cuenta.  Esta licencia puede ser una suscripción de mercado o un paquete de oferta BYOL/privada disponible en * Licenses and subscriptions* en la Consola.
 * Comprenda los siguientes criterios antes de seleccionar un paquete de destino:
 +
 ** Si la cuenta tiene una licencia BYOL basada en capacidad, el paquete de destino seleccionado debe alinearse con las licencias BYOL basadas en capacidad de la cuenta:
@@ -78,13 +78,13 @@ TIP: El ícono está deshabilitado si su sistema Cloud Volumes ONTAP ya está co
 
 
 .Después de terminar
-Visualice el nuevo número de serie de la licencia y verifique los cambios en el menú *Licencias y suscripciones* de la Consola.
+Visualice el nuevo número de serie de la licencia y verifique los cambios en el menú * Licenses and subscriptions* de la Consola.
 
 
 
 == Precios en diferentes hiperescalares
 
-Para obtener más detalles sobre los precios, visite https://bluexp.netapp.com/pricing/["Sitio web de la consola de NetApp"^] .
+Para obtener más detalles sobre los precios, visite https://bluexp.netapp.com/pricing/["Sitio web de la NetApp Console"^] .
 
 Para obtener información sobre ofertas privadas en hiperescalares específicos, escriba a:
 

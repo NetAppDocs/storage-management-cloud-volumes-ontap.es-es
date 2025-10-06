@@ -17,7 +17,7 @@ summary: Administre los agregados usted mismo agregando discos, viendo informaci
 Administre los agregados usted mismo agregando discos, viendo información sobre los agregados y eliminándolos.
 
 
-CAUTION: Todos los discos y agregados deben crearse y eliminarse directamente desde la consola de NetApp . No debe realizar estas acciones desde otra herramienta de administración. Hacerlo puede afectar la estabilidad del sistema, obstaculizar la capacidad de agregar discos en el futuro y potencialmente generar tarifas redundantes del proveedor de la nube.
+CAUTION: Todos los discos y agregados deben crearse y eliminarse directamente desde la NetApp Console. No debe realizar estas acciones desde otra herramienta de administración. Hacerlo puede afectar la estabilidad del sistema, obstaculizar la capacidad de agregar discos en el futuro y potencialmente generar tarifas redundantes del proveedor de la nube.
 
 .Antes de empezar
 Si desea eliminar un agregado, primero debe haber eliminado los volúmenes del agregado.

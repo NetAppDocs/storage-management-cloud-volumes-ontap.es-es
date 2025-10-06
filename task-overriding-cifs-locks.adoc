@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-overriding-cifs-locks.html 
 keywords: CIFS locks, azure maintenance, maintenance events, cifs sessions, storage failover, storage giveback, giveback 
-summary: El administrador de la organización o de la cuenta puede habilitar una configuración en la consola de NetApp que evita problemas con la devolución de almacenamiento de Cloud Volumes ONTAP durante los eventos de mantenimiento de Azure.  Cuando habilita esta configuración, Cloud Volumes ONTAP veta los bloqueos CIFS y restablece las sesiones CIFS activas. 
+summary: El administrador de la organización o de la cuenta puede habilitar una configuración en la NetApp Console que evita problemas con la devolución de almacenamiento de Cloud Volumes ONTAP durante los eventos de mantenimiento de Azure.  Cuando habilita esta configuración, Cloud Volumes ONTAP veta los bloqueos CIFS y restablece las sesiones CIFS activas. 
 ---
 = Anular bloqueos CIFS para pares de alta disponibilidad de Cloud Volumes ONTAP en Azure
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: El administrador de la organización o de la cuenta puede habilitar una
 
 
 [role="lead"]
-El administrador de la organización o de la cuenta puede habilitar una configuración en la consola de NetApp que evita problemas con la devolución de almacenamiento de Cloud Volumes ONTAP durante los eventos de mantenimiento de Azure.  Cuando habilita esta configuración, Cloud Volumes ONTAP veta los bloqueos CIFS y restablece las sesiones CIFS activas.
+El administrador de la organización o de la cuenta puede habilitar una configuración en la NetApp Console que evita problemas con la devolución de almacenamiento de Cloud Volumes ONTAP durante los eventos de mantenimiento de Azure.  Cuando habilita esta configuración, Cloud Volumes ONTAP veta los bloqueos CIFS y restablece las sesiones CIFS activas.
 
 .Acerca de esta tarea
 Microsoft Azure programa eventos de mantenimiento periódicos en sus máquinas virtuales.  Cuando ocurre un evento de mantenimiento en un par HA de Cloud Volumes ONTAP , el par HA inicia la toma de control del almacenamiento.  Si hay sesiones CIFS activas durante este evento de mantenimiento, los bloqueos en los archivos CIFS pueden impedir la devolución del almacenamiento.

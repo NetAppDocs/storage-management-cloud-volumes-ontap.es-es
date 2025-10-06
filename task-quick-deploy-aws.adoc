@@ -17,7 +17,7 @@ summary: Puede implementar instancias de Cloud Volumes ONTAP en una configuraci�
 Puede implementar Cloud Volumes ONTAP en AWS utilizando un método de implementación rápida tanto para configuraciones de nodo único como de alta disponibilidad (HA).  Este proceso simplificado reduce los pasos de implementación en comparación con el método avanzado.  También ofrece más claridad en el flujo de trabajo al establecer automáticamente valores predeterminados en una sola página y minimizar la navegación.
 
 .Antes de empezar
-Necesita lo siguiente para agregar un sistema Cloud Volumes ONTAP en AWS desde la consola de NetApp .
+Necesita lo siguiente para agregar un sistema Cloud Volumes ONTAP en AWS desde la NetApp Console.
 
 [[licensing]]
 * Un agente de consola que está en funcionamiento.
@@ -41,7 +41,7 @@ Para más detalles, consultelink:reference-networking-aws.html["Requisitos de re
 
 
 .Acerca de esta tarea
-Inmediatamente después de crear el sistema Cloud Volumes ONTAP , la consola de NetApp inicia una instancia de prueba en la VPC especificada para verificar la conectividad.  Si tiene éxito, la consola finaliza inmediatamente la instancia y luego comienza a implementar el sistema.  Si la consola no puede verificar la conectividad, la creación del sistema falla.  La instancia de prueba es una `t2.nano` (para tenencia de VPC predeterminada) o una `m3.medium` (para tenencia de VPC dedicada).
+Inmediatamente después de crear el sistema Cloud Volumes ONTAP , la NetApp Console inicia una instancia de prueba en la VPC especificada para verificar la conectividad.  Si tiene éxito, la consola finaliza inmediatamente la instancia y luego comienza a implementar el sistema.  Si la consola no puede verificar la conectividad, la creación del sistema falla.  La instancia de prueba es una `t2.nano` (para tenencia de VPC predeterminada) o una `m3.medium` (para tenencia de VPC dedicada).
 
 .Pasos
 . Desde el menú de navegación de la izquierda, seleccione *Almacenamiento > Administración*.

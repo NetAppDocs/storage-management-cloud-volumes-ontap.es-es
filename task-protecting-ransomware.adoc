@@ -14,7 +14,7 @@ summary: Los ataques de ransomware pueden costarle a una empresa tiempo, recurso
 
 
 [role="lead"]
-Los ataques de ransomware pueden costarle a una empresa tiempo, recursos y reputación.  La consola de NetApp le permite implementar dos soluciones de NetApp contra ransomware: protección contra extensiones de archivos de ransomware comunes y protección autónoma contra ransomware (ARP).  Estas soluciones proporcionan herramientas eficaces para la visibilidad, la detección y la remediación.
+Los ataques de ransomware pueden costarle a una empresa tiempo, recursos y reputación.  La NetApp Console le permite implementar dos soluciones de NetApp contra ransomware: protección contra extensiones de archivos de ransomware comunes y protección autónoma contra ransomware (ARP).  Estas soluciones proporcionan herramientas eficaces para la visibilidad, la detección y la remediación.
 
 
 

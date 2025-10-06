@@ -24,7 +24,7 @@ link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-administer-ad
 
 Ahora, puede experimentar una gestión simplificada de las licencias de Cloud Volumes ONTAP mediante el uso de puntos de navegación mejorados dentro de la BlueXP digital wallet:
 
-* Acceda fácilmente a la información de su licencia de Cloud Volumes ONTAP a través de las pestañas *Administración > Licencias y suscripciones > Descripción general/Licencias directas*.
+* Acceda fácilmente a la información de su licencia de Cloud Volumes ONTAP a través de las pestañas *Administración > Licenses and subscriptions > Descripción general/Licencias directas*.
 * Haga clic en *Ver* en el panel Cloud Volume ONTAP en la pestaña *Descripción general* para obtener una comprensión integral de sus licencias basadas en capacidad.  Esta vista avanzada ofrece información detallada de sus licencias y suscripciones.
 * Si prefiere la interfaz anterior, puede hacer clic en el botón *Cambiar a vista heredada* para ver los detalles de la licencia por tipo y modificar los métodos de cobro de sus licencias.
 

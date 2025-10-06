@@ -17,7 +17,7 @@ summary: Comprender cómo Cloud Volumes ONTAP utiliza el almacenamiento en la nu
 Comprender cómo Cloud Volumes ONTAP utiliza el almacenamiento en la nube puede ayudarle a comprender sus costos de almacenamiento.
 
 
-CAUTION: Debe crear y eliminar todos los discos y agregados desde la consola de NetApp . No debe realizar estas acciones desde otra herramienta de administración. Hacerlo puede afectar la estabilidad del sistema, obstaculizar la capacidad de agregar discos en el futuro y potencialmente generar tarifas redundantes del proveedor de la nube.
+CAUTION: Debe crear y eliminar todos los discos y agregados desde la NetApp Console. No debe realizar estas acciones desde otra herramienta de administración. Hacerlo puede afectar la estabilidad del sistema, obstaculizar la capacidad de agregar discos en el futuro y potencialmente generar tarifas redundantes del proveedor de la nube.
 
 
 
@@ -88,7 +88,7 @@ Puede emparejar un disco administrado con Azure Blob Storage paralink:concept-da
 
 
 --
-Pares HA:: Los pares HA utilizan dos tipos de discos que brindan un alto rendimiento para cargas de trabajo intensivas en E/S a un costo mayor:
+Pares HA:: Los pares HA utilizan dos tipos de discos que brindan un alto rendimiento para cargas de trabajo intensivas en E/S a un mayor costo:
 +
 --
 * _Blobs de página premium_ con un tamaño de disco máximo de 8 TiB

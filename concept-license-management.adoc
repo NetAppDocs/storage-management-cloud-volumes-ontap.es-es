@@ -14,7 +14,7 @@ summary: Cada sistema Cloud Volumes ONTAP que tenga un BYOL basado en nodos debe
 
 
 [role="lead"]
-Cada sistema Cloud Volumes ONTAP que tenga una licencia BYOL basada en nodos debe tener una licencia de sistema instalada con una suscripción activa.  La consola de NetApp simplifica el proceso al administrar las licencias por usted y mostrar una advertencia antes de que caduquen.
+Cada sistema Cloud Volumes ONTAP que tenga una licencia BYOL basada en nodos debe tener una licencia de sistema instalada con una suscripción activa.  La NetApp Console simplifica el proceso al administrar las licencias por usted y mostrar una advertencia antes de que caduquen.
 
 
 NOTE: Una licencia basada en nodos es la licencia de la generación anterior para Cloud Volumes ONTAP. Esta licencia se puede adquirir a través de NetApp (BYOL) y está disponible para renovaciones de licencias, solo en casos específicos.

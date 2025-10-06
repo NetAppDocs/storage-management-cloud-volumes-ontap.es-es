@@ -44,7 +44,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azu
 
 == Comprender los límites de almacenamiento
 
-El límite de capacidad bruta para un sistema Cloud Volumes ONTAP está vinculado a la licencia.  Límites adicionales impactan el tamaño de los agregados y los volúmenes.  Debe tener en cuenta estos límites al planificar su configuración.
+El límite de capacidad bruta para un sistema Cloud Volumes ONTAP está vinculado a la licencia.  Límites adicionales impactan el tamaño de los agregados y volúmenes.  Debe tener en cuenta estos límites al planificar su configuración.
 
 https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-azure.html["Límites de almacenamiento para Cloud Volumes ONTAP en Azure"^]
 
@@ -80,7 +80,7 @@ Tipo de disco de Azure con pares de alta disponibilidad:: Los sistemas HA utiliz
 Tamaño del disco de Azure::
 +
 --
-Al iniciar instancias de Cloud Volumes ONTAP , debe elegir el tamaño de disco predeterminado para los agregados.  La consola de NetApp utiliza este tamaño de disco para el agregado inicial y para cualquier agregado adicional que cree cuando utilice la opción de aprovisionamiento simple.  Puede crear agregados que utilicen un tamaño de disco diferente del predeterminadolink:task-create-aggregates.html["utilizando la opción de asignación avanzada"] .
+Al iniciar instancias de Cloud Volumes ONTAP , debe elegir el tamaño de disco predeterminado para los agregados.  La NetApp Console utiliza este tamaño de disco para el agregado inicial y para cualquier agregado adicional que cree cuando utilice la opción de aprovisionamiento simple.  Puede crear agregados que utilicen un tamaño de disco diferente del predeterminadolink:task-create-aggregates.html["utilizando la opción de asignación avanzada"] .
 
 
 TIP: Todos los discos de un agregado deben tener el mismo tamaño.

@@ -42,7 +42,7 @@ Por ejemplo, puede comprar una sola licencia de 20 TiB, implementar cuatro siste
 La licencia basada en capacidad está disponible en forma de _paquete_. Cuando implementa un sistema Cloud Volumes ONTAP , puede elegir entre varios paquetes de licencias según las necesidades de su negocio.
 
 
-NOTE: Si bien el uso real y la medición de los productos y servicios administrados en la consola de NetApp siempre se calculan en GiB y TiB, los términos GB/GiB y TB/TiB se usan indistintamente.  Esto se refleja en los listados del mercado de la nube, en las cotizaciones de precios, en las descripciones de los listados y en otra documentación de respaldo.
+NOTE: Si bien el uso real y la medición de los productos y servicios administrados en la NetApp Console siempre se calculan en GiB y TiB, los términos GB/GiB y TB/TiB se usan indistintamente.  Esto se refleja en los listados del mercado de la nube, en las cotizaciones de precios, en las descripciones de los listados y en otra documentación de respaldo.
 
 
 

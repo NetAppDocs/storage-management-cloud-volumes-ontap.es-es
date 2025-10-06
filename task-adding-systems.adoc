@@ -4,7 +4,7 @@ permalink: task-adding-systems.html
 keywords: discover, discovering, add, adding, existing 
 summary: Puede descubrir y agregar sistemas Cloud Volumes ONTAP existentes a la consola.  Podrías hacer esto si implementaras un nuevo sistema. 
 ---
-= Agregue un sistema Cloud Volumes ONTAP existente a la consola de NetApp
+= Agregue un sistema Cloud Volumes ONTAP existente a la NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

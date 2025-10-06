@@ -14,7 +14,7 @@ summary: La compatibilidad con la función Amazon EBS Elastic Volumes con un agr
 
 
 [role="lead"]
-La compatibilidad con la función Amazon EBS Elastic Volumes con un agregado Cloud Volumes ONTAP proporciona un mejor rendimiento y capacidad adicional, al tiempo que permite que la consola de NetApp aumente automáticamente la capacidad del disco subyacente según sea necesario.
+La compatibilidad con la función Amazon EBS Elastic Volumes con un agregado Cloud Volumes ONTAP proporciona un mejor rendimiento y capacidad adicional, al tiempo que permite que la NetApp Console aumente automáticamente la capacidad del disco subyacente según sea necesario.
 
 
 

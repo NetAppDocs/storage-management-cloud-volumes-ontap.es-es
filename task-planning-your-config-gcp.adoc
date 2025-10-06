@@ -44,7 +44,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp
 
 == Comprender los límites de almacenamiento
 
-El límite de capacidad bruta para un sistema Cloud Volumes ONTAP está vinculado a la licencia.  Límites adicionales impactan el tamaño de los agregados y los volúmenes.  Debe tener en cuenta estos límites al planificar su configuración.
+El límite de capacidad bruta para un sistema Cloud Volumes ONTAP está vinculado a la licencia.  Límites adicionales impactan el tamaño de los agregados y volúmenes.  Debe tener en cuenta estos límites al planificar su configuración.
 
 https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-gcp.html["Límites de almacenamiento para Cloud Volumes ONTAP en GCP"^]
 
@@ -76,7 +76,7 @@ Para más detalles, consulte la https://cloud.google.com/compute/docs/disks/#pds
 
 
 --
-Tamaño del disco GCP:: Debe elegir un tamaño de disco inicial cuando implemente un sistema Cloud Volumes ONTAP .  Después de eso, puede dejar que la consola de NetApp administre la capacidad de un sistema por usted, pero si desea crear agregados usted mismo, tenga en cuenta lo siguiente:
+Tamaño del disco GCP:: Debe elegir un tamaño de disco inicial cuando implemente un sistema Cloud Volumes ONTAP .  Después de eso, puede dejar que la NetApp Console administre la capacidad de un sistema por usted, pero si desea crear agregados usted mismo, tenga en cuenta lo siguiente:
 +
 --
 * Todos los discos de un agregado deben tener el mismo tamaño.

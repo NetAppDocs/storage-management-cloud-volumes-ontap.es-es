@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-networking-aws.html 
 keywords: networking, network, requirements, connection, connections, vpc, security group, security groups, subnets, vpn, internet, nat, s3, dns, ad, active directory, az, availability zone, floating IP, floating, SVM, management LIF, route, route tables, proxy, HTTP, private, tier, s3 endpoint, proxy server, nat device, vpn, snapmanager, snapcenter, iscsi, nfs, cifs, nas, san, outbound, inbound, connections, autosupport, ha, ha pair, high availability 
-summary: La consola de NetApp maneja la configuración de componentes de red para Cloud Volumes ONTAP, como direcciones IP, máscaras de red y rutas.  Debe asegurarse de que el acceso a Internet saliente esté disponible, que haya suficientes direcciones IP privadas disponibles, que existan las conexiones correctas y más. 
+summary: La NetApp Console maneja la configuración de componentes de red para Cloud Volumes ONTAP, como direcciones IP, máscaras de red y rutas.  Debe asegurarse de que el acceso a Internet saliente esté disponible, que haya suficientes direcciones IP privadas disponibles, que existan las conexiones correctas y más. 
 ---
 = Configurar la red de AWS para Cloud Volumes ONTAP
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: La consola de NetApp maneja la configuración de componentes de red par
 
 
 [role="lead"]
-La consola de NetApp maneja la configuración de componentes de red para Cloud Volumes ONTAP, como direcciones IP, máscaras de red y rutas.  Debe asegurarse de que el acceso a Internet saliente esté disponible, que haya suficientes direcciones IP privadas disponibles, que existan las conexiones correctas y más.
+La NetApp Console maneja la configuración de componentes de red para Cloud Volumes ONTAP, como direcciones IP, máscaras de red y rutas.  Debe asegurarse de que el acceso a Internet saliente esté disponible, que haya suficientes direcciones IP privadas disponibles, que existan las conexiones correctas y más.
 
 
 
@@ -59,7 +59,7 @@ La autenticación del usuario falla y los siguientes servicios permanecen no dis
 | \ https://mysupport.netapp.com/aods/asupmessage \ https://mysupport.netapp.com/asupprod/post/1.0/postAsup | AutoSupport | Se utiliza para enviar datos de telemetría de AutoSupport al soporte de NetApp . | Modos estándar y restringido. | La información de AutoSupport sigue sin entregarse. 
 
 
-| El punto final comercial exacto para el servicio de AWS (con el sufijo `amazonaws.com` ) depende de la región de AWS que esté utilizando. Consulte la https://docs.aws.amazon.com/general/latest/gr/rande.html["Documentación de AWS para más detalles"^] .  a| 
+| El punto final comercial exacto para el servicio de AWS (con el sufijo `amazonaws.com` ) depende de la región de AWS que esté utilizando.  Consulte la https://docs.aws.amazon.com/general/latest/gr/rande.html["Documentación de AWS para más detalles"^] .  a| 
 * Formación de nubes
 * Nube de cómputo elástica (EC2)
 * Gestión de identidad y acceso (IAM)
@@ -90,9 +90,9 @@ La opción manual puede ser una puerta de enlace NAT o un punto final de VPC de 
 
 
 
-=== Configuración del proxy de red del agente de la consola de NetApp
+=== Configuración del proxy de red del agente de la NetApp Console
 
-Puede utilizar la configuración de servidores proxy del agente de la consola de NetApp para habilitar el acceso a Internet saliente desde Cloud Volumes ONTAP.  La consola admite dos tipos de proxies:
+Puede utilizar la configuración de servidores proxy del agente de la NetApp Console para habilitar el acceso a Internet saliente desde Cloud Volumes ONTAP.  La consola admite dos tipos de proxies:
 
 * *Proxy explícito*: el tráfico saliente de Cloud Volumes ONTAP utiliza la dirección HTTP del servidor proxy especificado durante la configuración del proxy del agente de la consola.  Es posible que el administrador también haya configurado credenciales de usuario y certificados CA raíz para autenticación adicional.  Si hay un certificado de CA raíz disponible para el proxy explícito, asegúrese de obtener y cargar el mismo certificado en su sistema Cloud Volumes ONTAP utilizando el https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["CLI de ONTAP : instalación del certificado de seguridad"^] dominio.
 * *Proxy transparente*: la red está configurada para enrutar automáticamente el tráfico saliente desde Cloud Volumes ONTAP a través del proxy del agente de la consola.  Al configurar un proxy transparente, el administrador solo debe proporcionar un certificado CA raíz para la conectividad desde Cloud Volumes ONTAP, no la dirección HTTP del servidor proxy.  Asegúrese de obtener y cargar el mismo certificado de CA raíz en su sistema Cloud Volumes ONTAP utilizando el https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["CLI de ONTAP : instalación del certificado de seguridad"^] dominio.

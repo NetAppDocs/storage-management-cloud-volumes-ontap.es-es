@@ -4,7 +4,7 @@ permalink: task-deleting-system.html
 keywords: terminate, delete, system, remove, terminate system, terminate instance, delete cloud volumes ontap, delete instance, delete system, delete backups, cloud backup, cloud data sense 
 summary: Siempre debe eliminar los sistemas Cloud Volumes ONTAP , en lugar de hacerlo desde la consola de su proveedor de nube.  Por ejemplo, si cancela una instancia de Cloud Volumes ONTAP con licencia de su proveedor de nube, no podrá usar la clave de licencia para otra instancia.  Debes eliminar el sistema para liberar la licencia. 
 ---
-= Eliminar un sistema Cloud Volumes ONTAP desde la consola de NetApp
+= Eliminar un sistema Cloud Volumes ONTAP desde la NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Siempre debe eliminar los sistemas Cloud Volumes ONTAP , en lugar de ha
 
 
 [role="lead"]
-Siempre debe eliminar los sistemas Cloud Volumes ONTAP desde la consola de NetApp , en lugar de desde la aplicación de su proveedor de nube.  Por ejemplo, si cancela una instancia de Cloud Volumes ONTAP con licencia de su proveedor de nube, no podrá usar la clave de licencia para otra instancia.  Debe eliminar el sistema Cloud Volumes ONTAP de la consola para liberar la licencia.
+Siempre debe eliminar los sistemas Cloud Volumes ONTAP desde la NetApp Console, en lugar de desde la aplicación de su proveedor de nube.  Por ejemplo, si cancela una instancia de Cloud Volumes ONTAP con licencia de su proveedor de nube, no podrá usar la clave de licencia para otra instancia.  Debe eliminar el sistema Cloud Volumes ONTAP de la consola para liberar la licencia.
 
 Cuando elimina un sistema, la consola finaliza las instancias de Cloud Volumes ONTAP y elimina los discos y las instantáneas.
 

@@ -91,7 +91,7 @@ image:https://raw.githubusercontent.com/NetAppDocs/bluexp-family/main/media/scre
 .Después de terminar
 Aparecerá una ventana emergente con su número de caso de soporte. Un especialista de soporte de NetApp revisará su caso y se comunicará con usted pronto.
 
-Para obtener un historial de sus casos de soporte, puede seleccionar *Configuración > Cronología* y buscar acciones llamadas "crear caso de soporte". Un botón en el extremo derecho le permite expandir la acción para ver detalles.
+Para obtener un historial de sus casos de soporte, puede seleccionar *Configuración > Cronología* y buscar acciones llamadas "crear caso de soporte". Un botón en el extremo derecho le permite ampliar la acción para ver detalles.
 
 Es posible que encuentres el siguiente mensaje de error al intentar crear un caso:
 

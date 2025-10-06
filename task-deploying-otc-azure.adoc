@@ -14,7 +14,7 @@ summary: Puede iniciar un solo sistema Cloud Volumes ONTAP en Azure creando un s
 
 
 [role="lead"]
-Puede iniciar un sistema de nodo único o un par de alta disponibilidad en Azure creando un sistema Cloud Volumes ONTAP en la consola de NetApp .
+Puede iniciar un sistema de nodo único o un par de alta disponibilidad en Azure creando un sistema Cloud Volumes ONTAP en NetApp Console.
 
 .Antes de empezar
 Necesitará lo siguiente antes de comenzar.
@@ -81,11 +81,11 @@ La siguiente tabla describe los campos para los que podría necesitar orientaci�
 |===
 . *Servicios*: habilite o deshabilite los servicios individuales que desea o no desea utilizar con Cloud Volumes ONTAP.
 +
-** https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Obtenga más información sobre la clasificación de datos de NetApp"^]
+** https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Obtenga más información sobre la NetApp Data Classification"^]
 ** https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["Obtenga más información sobre NetApp Backup and Recovery"^]
 +
 
-TIP: Si desea utilizar WORM y niveles de datos, debe deshabilitar la copia de seguridad y recuperación e implementar un sistema Cloud Volumes ONTAP con la versión 9.8 o superior.
+TIP: Si desea utilizar WORM y niveles de datos, debe deshabilitar la función de copia de seguridad y recuperación e implementar un sistema Cloud Volumes ONTAP con la versión 9.8 o superior.
 
 
 
@@ -165,7 +165,7 @@ link:concept-write-speed.html["Obtenga más información sobre la velocidad de e
 
 .. Active el almacenamiento de escritura única y lectura múltiple (WORM), si lo desea.
 +
-Esta opción sólo está disponible para determinados tipos de máquinas virtuales.  Para saber qué tipos de máquinas virtuales son compatibles, consultelink:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html#ha-pairs["Configuraciones admitidas por licencia para pares HA"^] .
+Esta opción sólo está disponible para ciertos tipos de máquinas virtuales.  Para saber qué tipos de máquinas virtuales son compatibles, consultelink:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html#ha-pairs["Configuraciones admitidas por licencia para pares HA"^] .
 
 +
 No se puede habilitar WORM si la clasificación de datos se habilitó para las versiones 9.7 y anteriores de Cloud Volumes ONTAP .  La reversión o degradación a Cloud Volumes ONTAP 9.8 está bloqueada después de habilitar WORM y la clasificación en niveles.
@@ -237,7 +237,7 @@ image:screenshot_cot_vol.gif["Captura de pantalla: muestra la página de Volumen
 | Dominio DNS | El dominio DNS para la máquina virtual de almacenamiento (SVM) de Cloud Volumes ONTAP .  En la mayoría de los casos, el dominio es el mismo que el dominio de AD. 
 
 
-| Servidor NTP | Seleccione *Usar dominio de Active Directory* para configurar un servidor NTP utilizando el DNS de Active Directory.  Si necesita configurar un servidor NTP utilizando una dirección diferente, debe utilizar la API. Consulte la https://docs.netapp.com/us-en/bluexp-automation/index.html["Documentación de automatización de la consola de NetApp"^] Para más detalles.  Tenga en cuenta que solo puede configurar un servidor NTP al crear un servidor CIFS.  No es configurable después de crear el servidor CIFS. 
+| Servidor NTP | Seleccione *Usar dominio de Active Directory* para configurar un servidor NTP utilizando el DNS de Active Directory.  Si necesita configurar un servidor NTP utilizando una dirección diferente, debe utilizar la API. Consulte la https://docs.netapp.com/us-en/bluexp-automation/index.html["Documentación de automatización de la NetApp Console"^] Para más detalles.  Tenga en cuenta que solo puede configurar un servidor NTP al crear un servidor CIFS.  No es configurable después de crear el servidor CIFS. 
 |===
 . *Perfil de uso, tipo de disco y política de niveles*: elija si desea habilitar las funciones de eficiencia de almacenamiento y cambiar la política de niveles de volumen, si es necesario.
 +
@@ -301,11 +301,11 @@ La siguiente tabla describe los campos para los que podría necesitar orientaci�
 |===
 . *Servicios*: habilite o deshabilite los servicios individuales según si desea usarlos con Cloud Volumes ONTAP.
 +
-** https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Obtenga más información sobre la clasificación de datos de NetApp"^]
+** https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Obtenga más información sobre la NetApp Data Classification"^]
 ** https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["Obtenga más información sobre NetApp Backup and Recovery"^]
 +
 
-TIP: Si desea utilizar WORM y niveles de datos, debe deshabilitar la copia de seguridad y recuperación e implementar un sistema Cloud Volumes ONTAP con la versión 9.8 o superior.
+TIP: Si desea utilizar WORM y niveles de datos, debe deshabilitar la función de copia de seguridad y recuperación e implementar un sistema Cloud Volumes ONTAP con la versión 9.8 o superior.
 
 
 
@@ -399,7 +399,7 @@ link:concept-write-speed.html["Obtenga más información sobre la velocidad de e
 
 .. Active el almacenamiento de escritura única y lectura múltiple (WORM), si lo desea.
 +
-Esta opción sólo está disponible para determinados tipos de máquinas virtuales.  Para saber qué tipos de máquinas virtuales son compatibles, consultelink:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html#ha-pairs["Configuraciones admitidas por licencia para pares HA"^] .
+Esta opción sólo está disponible para ciertos tipos de máquinas virtuales.  Para saber qué tipos de máquinas virtuales son compatibles, consultelink:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html#ha-pairs["Configuraciones admitidas por licencia para pares HA"^] .
 
 +
 No se puede habilitar WORM si la clasificación de datos se habilitó para las versiones 9.7 y anteriores de Cloud Volumes ONTAP .  La reversión o degradación a Cloud Volumes ONTAP 9.8 está bloqueada después de habilitar WORM y la clasificación en niveles.
@@ -484,7 +484,7 @@ image:screenshot_cot_vol.gif["Captura de pantalla: muestra la página de Volumen
 | Dominio DNS | El dominio DNS para la máquina virtual de almacenamiento (SVM) de Cloud Volumes ONTAP .  En la mayoría de los casos, el dominio es el mismo que el dominio de AD. 
 
 
-| Servidor NTP | Seleccione *Usar dominio de Active Directory* para configurar un servidor NTP utilizando el DNS de Active Directory.  Si necesita configurar un servidor NTP utilizando una dirección diferente, debe utilizar la API. Consulte la https://docs.netapp.com/us-en/bluexp-automation/index.html["Documentación de automatización de la consola de NetApp"^] Para más detalles.  Tenga en cuenta que solo puede configurar un servidor NTP al crear un servidor CIFS.  No es configurable después de crear el servidor CIFS. 
+| Servidor NTP | Seleccione *Usar dominio de Active Directory* para configurar un servidor NTP utilizando el DNS de Active Directory.  Si necesita configurar un servidor NTP utilizando una dirección diferente, debe utilizar la API. Consulte la https://docs.netapp.com/us-en/bluexp-automation/index.html["Documentación de automatización de la NetApp Console"^] Para más detalles.  Tenga en cuenta que solo puede configurar un servidor NTP al crear un servidor CIFS.  No es configurable después de crear el servidor CIFS. 
 |===
 . *Perfil de uso, tipo de disco y política de niveles*: elija si desea habilitar las funciones de eficiencia de almacenamiento y cambiar la política de niveles de volumen, si es necesario.
 +

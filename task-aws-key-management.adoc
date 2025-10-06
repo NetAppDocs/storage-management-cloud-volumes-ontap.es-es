@@ -22,7 +22,7 @@ Al utilizar el KMS, tenga en cuenta que, de forma predeterminada, se utiliza el 
 * Cloud Volumes ONTAP debe ejecutar la versión 9.12.0 o posterior
 * Debe tener instalada la licencia de Volume Encryption (VE) y
 * Debe tener instalada la licencia de Administración de claves de cifrado de múltiples inquilinos (MTEKM).
-* Debe ser administrador de clúster o SVM
+* Debe ser un administrador de clúster o SVM
 * Debe tener una suscripción activa a AWS
 
 

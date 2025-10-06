@@ -23,4 +23,4 @@ Puede modificar las tablas de rutas de AWS que incluyen rutas a las direcciones 
 
 
 .Resultado
-La consola de NetApp envía una solicitud de AWS para modificar las tablas de ruta.
+La NetApp Console envía una solicitud de AWS para modificar las tablas de ruta.

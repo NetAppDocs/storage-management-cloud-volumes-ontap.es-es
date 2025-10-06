@@ -14,7 +14,7 @@ summary: Puede crear agregados usted mismo o dejar que NetApp Console lo haga po
 
 
 [role="lead"]
-Puede crear agregados usted mismo o dejar que la consola de NetApp lo haga por usted cuando crea volúmenes.  La ventaja de crear agregados usted mismo es que puede elegir el tamaño del disco subyacente, lo que le permite dimensionar su agregado para la capacidad o el rendimiento que necesita.
+Puede crear agregados usted mismo o dejar que la NetApp Console lo haga por usted cuando crea volúmenes.  La ventaja de crear agregados usted mismo es que puede elegir el tamaño del disco subyacente, lo que le permite dimensionar su agregado para la capacidad o el rendimiento que necesita.
 
 
 CAUTION: Todos los discos y agregados deben crearse y eliminarse directamente desde la consola. No debe realizar estas acciones desde otra herramienta de administración. Hacerlo puede afectar la estabilidad del sistema, obstaculizar la capacidad de agregar discos en el futuro y potencialmente generar tarifas redundantes del proveedor de la nube.

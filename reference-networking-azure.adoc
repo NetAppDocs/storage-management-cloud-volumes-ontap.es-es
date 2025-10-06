@@ -14,7 +14,7 @@ summary: Configure su red de Azure para que los sistemas Cloud Volumes ONTAP pue
 
 
 [role="lead"]
-La consola de NetApp maneja la configuración de componentes de red para Cloud Volumes ONTAP, como direcciones IP, máscaras de red y rutas.  Debe asegurarse de que el acceso a Internet saliente esté disponible, que haya suficientes direcciones IP privadas disponibles, que existan las conexiones correctas y más.
+La NetApp Console maneja la configuración de componentes de red para Cloud Volumes ONTAP, como direcciones IP, máscaras de red y rutas.  Debe asegurarse de que el acceso a Internet saliente esté disponible, que haya suficientes direcciones IP privadas disponibles, que existan las conexiones correctas y más.
 
 
 
@@ -78,9 +78,9 @@ La autenticación del usuario falla y los siguientes servicios permanecen no dis
 |===
 
 
-=== Configuración del proxy de red del agente de la consola de NetApp
+=== Configuración del proxy de red del agente de la NetApp Console
 
-Puede utilizar la configuración de servidores proxy del agente de la consola de NetApp para habilitar el acceso a Internet saliente desde Cloud Volumes ONTAP.  La consola admite dos tipos de proxies:
+Puede utilizar la configuración de servidores proxy del agente de la NetApp Console para habilitar el acceso a Internet saliente desde Cloud Volumes ONTAP.  La consola admite dos tipos de proxies:
 
 * *Proxy explícito*: el tráfico saliente de Cloud Volumes ONTAP utiliza la dirección HTTP del servidor proxy especificado durante la configuración del proxy del agente de la consola.  Es posible que el administrador también haya configurado credenciales de usuario y certificados CA raíz para autenticación adicional.  Si hay un certificado de CA raíz disponible para el proxy explícito, asegúrese de obtener y cargar el mismo certificado en su sistema Cloud Volumes ONTAP utilizando el https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["CLI de ONTAP : instalación del certificado de seguridad"^] dominio.
 * *Proxy transparente*: la red está configurada para enrutar automáticamente el tráfico saliente desde Cloud Volumes ONTAP a través del proxy del agente de la consola.  Al configurar un proxy transparente, el administrador solo debe proporcionar un certificado CA raíz para la conectividad desde Cloud Volumes ONTAP, no la dirección HTTP del servidor proxy.  Asegúrese de obtener y cargar el mismo certificado de CA raíz en su sistema Cloud Volumes ONTAP utilizando el https://docs.netapp.com/us-en/ontap-cli/security-certificate-install.html["CLI de ONTAP : instalación del certificado de seguridad"^] dominio.
@@ -156,7 +156,7 @@ NOTE: NIC3 solo se aplica a implementaciones de alta disponibilidad que utilizan
 
 Las direcciones IP anteriores no migran en eventos de conmutación por error.
 
-Además, se configuran 4 IP frontend (FIP) para migrar en eventos de conmutación por error.  Estas IP frontend residen en el balanceador de carga.
+Además, se configuran 4 IP frontend (FIP) para migrar en eventos de conmutación por error.  Estas IP de interfaz residen en el balanceador de carga.
 
 * IP de gestión de clúster
 * IP de datos del Nodo A (NFS/CIFS)

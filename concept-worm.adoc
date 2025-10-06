@@ -40,7 +40,7 @@ A partir de Cloud Volumes ONTAP 9.10.1, tiene la opción de habilitar o deshabil
 
 Cuando agrega un sistema Cloud Volumes ONTAP , se le solicita que habilite o deshabilite el almacenamiento WORM:
 
-* Si habilita el almacenamiento WORM al agregar un sistema, cada volumen que cree desde la consola de NetApp tendrá WORM habilitado.  Pero puede utilizar el Administrador del sistema ONTAP o la CLI de ONTAP para crear volúmenes que tengan WORM deshabilitado.
+* Si habilita el almacenamiento WORM al agregar un sistema, cada volumen que cree desde la NetApp Console tendrá WORM habilitado.  Pero puede utilizar el Administrador del sistema ONTAP o la CLI de ONTAP para crear volúmenes que tengan WORM deshabilitado.
 * Si deshabilita el almacenamiento WORM al agregar un sistema, cada volumen que cree desde la Consola, el Administrador del sistema ONTAP o la CLI de ONTAP tendrá WORM deshabilitado.
 
 

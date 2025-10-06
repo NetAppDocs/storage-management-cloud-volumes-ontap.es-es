@@ -24,7 +24,7 @@ A continuación se presenta una descripción general del proceso de flujo de tra
 
 image::graphic_azure_check_signature.png[Firma de verificación gráfica azul]
 
-* Descargar la imagen de Azure desde el https://mysupport.netapp.com/site/["Sitio de soporte de NetApp"^] y extraer el archivo de resumen (.sig), el archivo de certificado de clave pública (.pem) y el archivo de certificado de cadena (.pem). Consulte link:task-azure-download-digest-file.html["Descargar el archivo de resumen de la imagen de Azure"] Para más información.
+* Descargar la imagen de Azure desde el https://mysupport.netapp.com/site/["Sitio de soporte de NetApp"^] y extraer el archivo de resumen (.sig), el archivo de certificado de clave pública (.pem) y el archivo de certificado de cadena (.pem). Consulte link:task-azure-download-digest-file.html["Descargar el archivo de resumen de imagen de Azure"] Para más información.
 * Verificación de la cadena de confianza.
 * Extraer la clave pública (.pub) del certificado de clave pública (.pem).
 * Descifrar el archivo de resumen utilizando la clave pública extraída.

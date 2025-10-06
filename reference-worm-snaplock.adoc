@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-worm-snaplock.html 
 keywords: WORM, SnapLock, Snapshot copies, 
-summary: 'Puede crear copias instantáneas a prueba de manipulaciones de archivos de una sola escritura y múltiples lecturas (WORM) en un sistema Cloud Volumes ONTAP y conservar las instantáneas sin modificaciones durante un período de retención específico.' 
+summary: 'Puede crear copias instantáneas a prueba de manipulaciones de archivos de escritura única y lectura múltiple (WORM) en un sistema Cloud Volumes ONTAP y conservar las instantáneas sin modificaciones durante un período de retención específico.' 
 ---
 = Cree copias instantáneas a prueba de manipulaciones de archivos WORM en Cloud Volumes ONTAP
 :hardbreaks:
@@ -24,7 +24,7 @@ Asegúrese de que el volumen que utiliza para crear copias instantáneas sea un 
 +
 Las copias instantáneas heredan las propiedades WORM del volumen, lo que las hace a prueba de manipulaciones.  La tecnología SnapLock subyacente garantiza que una instantánea permanezca protegida contra edición y eliminación hasta que transcurra el período de retención especificado.
 
-. Puede modificar el período de retención si es necesario editar estas instantáneas.  Para obtener información, consulte la https://docs.netapp.com/us-en/ontap/snaplock/set-retention-period-task.html#set-the-default-retention-period["Documentación de ONTAP : Establecer el tiempo de retención"^] .
+. Puede modificar el período de retención si es necesario editar estas instantáneas.  Para obtener más información, consulte la https://docs.netapp.com/us-en/ontap/snaplock/set-retention-period-task.html#set-the-default-retention-period["Documentación de ONTAP : Establecer el tiempo de retención"^] .
 
 
 

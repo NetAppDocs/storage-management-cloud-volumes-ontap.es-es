@@ -14,7 +14,7 @@ summary: Conozca las novedades en la administración de Cloud Volumes ONTAP en B
 
 
 [role="lead"]
-Conozca las novedades sobre la administración de Cloud Volumes ONTAP en la consola de NetApp .
+Conozca las novedades sobre la administración de Cloud Volumes ONTAP en la NetApp Console.
 
 Las mejoras descritas en esta página son específicas para la administración de Cloud Volumes ONTAP a través de la consola.  Para conocer las novedades del software Cloud Volumes ONTAP , https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Vaya a las notas de la versión de Cloud Volumes ONTAP"^] .
 
@@ -26,9 +26,9 @@ Las mejoras descritas en esta página son específicas para la administración d
 
 === BlueXP ahora es NetApp Console
 
-La consola NetApp , construida sobre la base BlueXP mejorada y reestructurada, proporciona una gestión centralizada del almacenamiento NetApp y de los servicios de datos NetApp en entornos locales y en la nube a nivel empresarial, brindando información en tiempo real, flujos de trabajo más rápidos y una administración simplificada, que es altamente segura y compatible.
+La NetApp Console, construida sobre la base BlueXP mejorada y reestructurada, proporciona una gestión centralizada del almacenamiento de NetApp y de los NetApp Data Services en entornos locales y en la nube a nivel empresarial, brindando información en tiempo real, flujos de trabajo más rápidos y una administración simplificada, que es altamente segura y compatible.
 
-Para obtener más detalles sobre lo que ha cambiado, consulte la https://docs.netapp.com/us-en/bluexp-relnotes/index.html["Notas de la versión de la consola de NetApp"^] .
+Para obtener más detalles sobre lo que ha cambiado, consulte la https://docs.netapp.com/us-en/bluexp-relnotes/index.html["Notas de la versión de la NetApp Console"^] .
 
 
 
@@ -163,7 +163,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-gcp.
 
 
 
-=== Compatibilidad con regiones de China para Cloud Volumes ONTAP 9.13.1 en AWS
+=== Compatibilidad con las regiones de China para Cloud Volumes ONTAP 9.13.1 en AWS
 
 Ahora puede implementar Cloud Volumes ONTAP 9.13.1 en AWS en las regiones de China. Esto incluye soporte para implementaciones tanto de nodo único como de alta disponibilidad (HA). Solo se admiten licencias compradas directamente a NetApp .
 
@@ -273,7 +273,7 @@ link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-administer-ad
 
 Ahora, puede experimentar una gestión simplificada de las licencias de Cloud Volumes ONTAP mediante el uso de puntos de navegación mejorados dentro de la BlueXP digital wallet:
 
-* Acceda fácilmente a la información de su licencia de Cloud Volumes ONTAP a través de las pestañas *Administración > Licencias y suscripciones > Descripción general/Licencias directas*.
+* Acceda fácilmente a la información de su licencia de Cloud Volumes ONTAP a través de las pestañas *Administración > Licenses and subscriptions > Descripción general/Licencias directas*.
 * Haga clic en *Ver* en el panel Cloud Volume ONTAP en la pestaña *Descripción general* para obtener una comprensión integral de sus licencias basadas en capacidad.  Esta vista avanzada ofrece información detallada de sus licencias y suscripciones.
 * Si prefiere la interfaz anterior, puede hacer clic en el botón *Cambiar a vista heredada* para ver los detalles de la licencia por tipo y modificar los métodos de cobro de sus licencias.
 
@@ -440,7 +440,7 @@ Los paquetes de licencias basados ​​en capacidad de Edge Cache ya no estará
 
 
 
-=== Compatibilidad de la versión mínima con Flash Cache en Azure
+=== Compatibilidad de la versión mínima para Flash Cache en Azure
 
 La versión mínima de Cloud Volumes ONTAP necesaria para configurar Flash Cache en Azure es 9.13.1 GA.  Solo puede usar ONTAP 9.13.1 GA y versiones posteriores para implementar Flash Cache en sistemas Cloud Volumes ONTAP en Azure.
 
@@ -729,7 +729,7 @@ El siguiente cambio se introdujo con la versión 3.9.33 del Conector.
 
 === Compatibilidad con máquinas virtuales de la serie Lsv3 en Azure
 
-Los tipos de instancia L48s_v3 y L64s_v3 ahora son compatibles con Cloud Volumes ONTAP en Azure para implementaciones de pares de alta disponibilidad y de nodo único con discos administrados compartidos en zonas de disponibilidad únicas y múltiples, a partir de la versión 9.13.1. Estos tipos de instancias admiten Flash Cache.
+Los tipos de instancia L48s_v3 y L64s_v3 ahora son compatibles con Cloud Volumes ONTAP en Azure para implementaciones de pares de alta disponibilidad y de nodo único con discos administrados compartidos en zonas de disponibilidad únicas y múltiples, a partir de la versión 9.13.1.  Estos tipos de instancias admiten Flash Cache.
 
 https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html["Ver configuraciones compatibles con Cloud Volumes ONTAP en Azure"^] https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-azure.html["Ver los límites de almacenamiento de Cloud Volumes ONTAP en Azure"^]
 
@@ -743,7 +743,7 @@ Los siguientes cambios se introdujeron con la versión 3.9.32 del Conector.
 
 === Compatibilidad con Flash Cache y alta velocidad de escritura en Google Cloud
 
-La caché flash y la alta velocidad de escritura se pueden habilitar por separado en Google Cloud para Cloud Volumes ONTAP 9.13.1 y versiones posteriores. La alta velocidad de escritura está disponible en todos los tipos de instancias compatibles. Flash Cache es compatible con los siguientes tipos de instancias:
+La caché flash y la alta velocidad de escritura se pueden habilitar por separado en Google Cloud para Cloud Volumes ONTAP 9.13.1 y versiones posteriores.  La alta velocidad de escritura está disponible en todos los tipos de instancias compatibles.  Flash Cache es compatible con los siguientes tipos de instancias:
 
 * n2-estándar-16
 * n2-estándar-32
@@ -759,7 +759,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html
 
 === Mejoras en los informes de uso
 
-Ahora están disponibles varias mejoras en la información mostrada dentro de los informes de uso. Las siguientes son mejoras en los informes de uso:
+Ahora están disponibles varias mejoras en la información mostrada dentro de los informes de uso.  Las siguientes son mejoras en los informes de uso:
 
 * La unidad TiB ahora está incluida en el nombre de las columnas.
 * Ahora se incluye un nuevo campo "nodo(s)" para números de serie.
@@ -863,7 +863,7 @@ La región Australia Este en Azure ahora admite implementaciones de zonas de dis
 
 === Desglose del uso de la carga
 
-Ahora puedes saber cuánto te cobran cuando estás suscrito a licencias basadas en capacidad. Los siguientes tipos de informes de uso están disponibles para descargar desde la billetera digital en BlueXP. Los informes de uso brindan detalles de la capacidad de sus suscripciones y le indican cómo se le cobra por los recursos en sus suscripciones de Cloud Volumes ONTAP . Los informes descargables se pueden compartir fácilmente con otros.
+Ahora puedes saber cuánto te cobran cuando estás suscrito a licencias basadas en capacidad.  Los siguientes tipos de informes de uso están disponibles para descargar desde la billetera digital en BlueXP.  Los informes de uso brindan detalles de la capacidad de sus suscripciones y le indican cómo se le cobra por los recursos en sus suscripciones de Cloud Volumes ONTAP .  Los informes descargables se pueden compartir fácilmente con otros.
 
 * Uso de paquetes de Cloud Volumes ONTAP
 * Uso de alto nivel
@@ -1215,7 +1215,7 @@ El único requisito es garantizar que el grupo de seguridad del conector permita
 
 === Cambiar el método de carga
 
-Ahora puede cambiar el método de cobro de un sistema Cloud Volumes ONTAP que utiliza licencias basadas en capacidad. Por ejemplo, si implementó un sistema Cloud Volumes ONTAP con el paquete Essentials, puede cambiarlo al paquete Professional si las necesidades de su negocio cambian. Esta función está disponible en la Billetera Digital.
+Ahora puede cambiar el método de cobro de un sistema Cloud Volumes ONTAP que utiliza licencias basadas en capacidad.  Por ejemplo, si implementó un sistema Cloud Volumes ONTAP con el paquete Essentials, puede cambiarlo al paquete Professional si las necesidades de su negocio cambian.  Esta función está disponible en la Billetera Digital.
 
 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-capacity-licenses.html["Aprenda a cambiar los métodos de carga"] .
 
@@ -1253,9 +1253,9 @@ Los siguientes cambios se introdujeron con la versión 3.9.20 del Conector.
 
 === Billetera digital
 
-La Billetera Digital ahora te muestra la capacidad total consumida en tu cuenta y la capacidad consumida por paquete de licencias. Esto puede ayudarle a comprender cómo se le está cobrando y si necesita comprar capacidad adicional.
+La Billetera Digital ahora te muestra la capacidad total consumida en tu cuenta y la capacidad consumida por paquete de licencias.  Esto puede ayudarle a comprender cómo se le está cobrando y si necesita comprar capacidad adicional.
 
-image:https://raw.githubusercontent.com/NetAppDocs/bluexp-cloud-volumes-ontap/main/media/screenshot-digital-wallet-summary.png["Una captura de pantalla que muestra la página de Billetera Digital para licencias basadas en capacidad. La página proporciona una descripción general de la capacidad consumida en su cuenta y luego desglosa la capacidad consumida por paquete de licencias."]
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-cloud-volumes-ontap/main/media/screenshot-digital-wallet-summary.png["Una captura de pantalla que muestra la página de Billetera Digital para licencias basadas en capacidad.  La página proporciona una descripción general de la capacidad consumida en su cuenta y luego desglosa la capacidad consumida por paquete de licencias."]
 
 
 
@@ -1817,7 +1817,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-tiering.html#chang
 
 
 
-=== Mejora de las políticas de exportación aduaneras
+=== Mejora de las políticas de exportación personalizadas
 
 Cuando crea un nuevo volumen NFS, BlueXP ahora muestra políticas de exportación personalizadas en orden ascendente, lo que le permite encontrar más fácilmente la política de exportación que necesita.
 
@@ -1825,7 +1825,7 @@ Cuando crea un nuevo volumen NFS, BlueXP ahora muestra políticas de exportació
 
 === Eliminación de antiguas instantáneas de la nube
 
-BlueXP ahora elimina instantáneas de nube más antiguas de discos de arranque y raíz que se crean cuando se implementa un sistema Cloud Volumes ONTAP y cada vez que se apaga.  Solo se conservan las dos instantáneas más recientes tanto para el volumen raíz como para el de arranque.
+BlueXP ahora elimina las instantáneas en la nube más antiguas de los discos raíz y de arranque que se crean cuando se implementa un sistema Cloud Volumes ONTAP y cada vez que se apaga.  Solo se conservan las dos instantáneas más recientes tanto para el volumen raíz como para el de arranque.
 
 Esta mejora ayuda a reducir los costos del proveedor de nube al eliminar instantáneas que ya no son necesarias.
 
@@ -1931,7 +1931,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-gc
 
 === Compatibilidad con VPC compartida en Google Cloud
 
-Cuando implementa un par de Cloud Volumes ONTAP HA en Google Cloud, ahora puede elegir VPC compartidas para VPC-1, VPC-2 y VPC-3.  Anteriormente, solo VPC-0 podía ser una VPC compartida.  Este cambio es compatible con Cloud Volumes ONTAP 9.8 y versiones posteriores.
+Al implementar un par de Cloud Volumes ONTAP HA en Google Cloud, ahora puede elegir VPC compartidas para VPC-1, VPC-2 y VPC-3.  Anteriormente, solo VPC-0 podía ser una VPC compartida.  Este cambio es compatible con Cloud Volumes ONTAP 9.8 y versiones posteriores.
 
 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-gcp.html["Obtenga más información sobre los requisitos de red de Google Cloud"] .
 
@@ -1943,7 +1943,7 @@ Los siguientes cambios se introdujeron con la versión 3.9.2 del Conector.
 
 
 
-=== Puestos avanzados de AWS
+=== Puestos de avanzada de AWS
 
 Hace unos meses, anunciamos que Cloud Volumes ONTAP había obtenido la designación Amazon Web Services (AWS) Outposts Ready.  Hoy, nos complace anunciar que hemos validado BlueXP y Cloud Volumes ONTAP con AWS Outposts.
 

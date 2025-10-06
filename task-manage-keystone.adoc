@@ -4,7 +4,7 @@ permalink: task-manage-keystone.html
 keywords: license, licensing, install, keystone, request capacity, link subscription, add keystone subscription, keystone subscription, digital wallet, keystone flex 
 summary: Administre sus suscripciones de Keystone habilitando suscripciones para usarlas con Cloud Volumes ONTAP y solicitando cambios en la capacidad comprometida para los niveles de servicio de su suscripción.  Solicitar capacidad adicional para un nivel de servicio proporciona más almacenamiento para los clústeres ONTAP locales o para los sistemas Cloud Volumes ONTAP . 
 ---
-= Administre las suscripciones de Keystone para Cloud Volumes ONTAP a través de la consola de NetApp
+= Administre las suscripciones de Keystone para Cloud Volumes ONTAP a través de la NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -43,7 +43,7 @@ image:screenshot-keystone-overview.png["Una captura de pantalla que muestra una 
 
 == Vincular una suscripción
 
-Una vez que NetApp autorice su cuenta, podrá vincular las suscripciones de Keystone para usarlas con Cloud Volumes ONTAP. Esta acción permite a los usuarios seleccionar la suscripción como método de cobro para los nuevos sistemas Cloud Volumes ONTAP .
+Una vez que NetApp autorice su cuenta, podrá vincular las suscripciones de Keystone para usarlas con Cloud Volumes ONTAP.  Esta acción permite a los usuarios seleccionar la suscripción como método de cobro para los nuevos sistemas Cloud Volumes ONTAP .
 
 .Pasos
 . Desde el menú de navegación de BlueXP , seleccione *Gobernanza > Billetera digital*.
@@ -89,7 +89,7 @@ https://docs.netapp.com/us-en/keystone-staas/integrations/aiq-keystone-details.h
 
 == Desvincular una suscripción
 
-Si ya no desea utilizar una suscripción de Keystone con BlueXP, puede desvincular la suscripción. Tenga en cuenta que solo puede desvincular una suscripción que no esté asociada a una suscripción existente de Cloud Volumes ONTAP .
+Si ya no desea utilizar una suscripción de Keystone con BlueXP, puede desvincular la suscripción.  Tenga en cuenta que solo puede desvincular una suscripción que no esté asociada a una suscripción existente de Cloud Volumes ONTAP .
 
 .Pasos
 . Desde el menú de navegación de BlueXP , seleccione *Gobernanza > Billetera digital*.

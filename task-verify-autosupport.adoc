@@ -30,7 +30,7 @@ Las políticas de enrutamiento y firewall deben permitir el tráfico HTTPS a los
 * \ https://mysupport.netapp.com/asupprod/post/1.0/postAsup
 
 
-Si no hay una conexión a Internet saliente disponible para enviar mensajes de AutoSupport , la consola de NetApp configura automáticamente sus sistemas Cloud Volumes ONTAP para usar el agente de la consola como servidor proxy.  El único requisito es garantizar que el grupo de seguridad del agente de la consola permita conexiones _entrantes_ a través del puerto 3128. Necesitará abrir este puerto después de implementar el agente de consola.
+Si no hay una conexión a Internet saliente disponible para enviar mensajes de AutoSupport , la NetApp Console configura automáticamente sus sistemas Cloud Volumes ONTAP para usar el agente de la consola como servidor proxy.  El único requisito es garantizar que el grupo de seguridad del agente de la consola permita conexiones _entrantes_ a través del puerto 3128. Necesitará abrir este puerto después de implementar el agente de consola.
 
 Si definió reglas de salida estrictas para Cloud Volumes ONTAP, también deberá asegurarse de que el grupo de seguridad de Cloud Volumes ONTAP permita conexiones _salientes_ a través del puerto 3128.
 

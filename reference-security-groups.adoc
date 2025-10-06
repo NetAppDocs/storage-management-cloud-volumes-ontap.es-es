@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-security-groups.html 
 keywords: security group, security groups, rules, ports, aws, inbound, outbound, rules 
-summary: La consola de NetApp crea grupos de seguridad de AWS que incluyen las reglas de entrada y salida que Cloud Volumes ONTAP necesita para funcionar correctamente.  Es posible que desees consultar los puertos para fines de prueba o si prefieres utilizar tus propios grupos de seguridad. 
+summary: La NetApp Console crea grupos de seguridad de AWS que incluyen las reglas de entrada y salida que Cloud Volumes ONTAP necesita para funcionar correctamente.  Es posible que desees consultar los puertos para fines de prueba o si prefieres utilizar tus propios grupos de seguridad. 
 ---
 = Reglas de entrada y salida del grupo de seguridad de AWS para Cloud Volumes ONTAP
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: La consola de NetApp crea grupos de seguridad de AWS que incluyen las r
 
 
 [role="lead"]
-La consola de NetApp crea grupos de seguridad de AWS que incluyen las reglas de entrada y salida que Cloud Volumes ONTAP necesita para funcionar correctamente.  Es posible que desees consultar los puertos para fines de prueba o si prefieres utilizar tus propios grupos de seguridad.
+La NetApp Console crea grupos de seguridad de AWS que incluyen las reglas de entrada y salida que Cloud Volumes ONTAP necesita para funcionar correctamente.  Es posible que desees consultar los puertos para fines de prueba o si prefieres utilizar tus propios grupos de seguridad.
 
 
 
@@ -305,7 +305,7 @@ El grupo de seguridad predefinido para el mediador de HA incluye las siguientes 
 
 ==== Reglas de salida avanzadas
 
-Si necesita reglas rígidas para el tráfico saliente, puede utilizar la siguiente información para abrir solo aquellos puertos que el mediador de HA requiere para la comunicación saliente.
+Si necesita reglas rígidas para el tráfico saliente, puede utilizar la siguiente información para abrir únicamente aquellos puertos que el mediador de HA requiere para la comunicación saliente.
 
 [cols="10,10,30,40"]
 |===

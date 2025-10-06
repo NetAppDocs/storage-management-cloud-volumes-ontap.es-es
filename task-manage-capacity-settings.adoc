@@ -19,7 +19,7 @@ Cada agente de consola tiene configuraciones que determinan cómo administra la 
 Estas configuraciones afectan a todos los sistemas Cloud Volumes ONTAP administrados por un agente de consola.  Si tiene otro agente de consola, se puede configurar de forma diferente.
 
 .Permisos necesarios
-Necesita los privilegios de administrador de cuenta o organización de la consola de NetApp para modificar la configuración de Cloud Volumes ONTAP .
+Necesita los privilegios de administrador de cuenta o organización de la NetApp Console para modificar la configuración de Cloud Volumes ONTAP .
 
 .Pasos
 . Desde el panel de navegación izquierdo, vaya a *Administración > Agentes*.

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-manage-capacity-licenses.html 
 keywords: license, licensing, capacity license, capacity based license, add license, install license, digital wallet 
-summary: Administre sus licencias basadas en capacidad desde la consola de NetApp para garantizar que su cuenta de NetApp tenga suficiente capacidad para sus sistemas Cloud Volumes ONTAP . 
+summary: Administre sus licencias basadas en capacidad desde la NetApp Console para garantizar que su cuenta de NetApp tenga suficiente capacidad para sus sistemas Cloud Volumes ONTAP . 
 ---
 = Administrar licencias basadas en capacidad para Cloud Volumes ONTAP
 :hardbreaks:
@@ -14,11 +14,11 @@ summary: Administre sus licencias basadas en capacidad desde la consola de NetAp
 
 
 [role="lead"]
-Administre sus licencias basadas en capacidad desde la consola de NetApp para garantizar que su cuenta de NetApp tenga suficiente capacidad para sus sistemas Cloud Volumes ONTAP .
+Administre sus licencias basadas en capacidad desde la NetApp Console para garantizar que su cuenta de NetApp tenga suficiente capacidad para sus sistemas Cloud Volumes ONTAP .
 
 Las _licencias basadas en capacidad_ le permiten pagar Cloud Volumes ONTAP por TiB de capacidad.
 
-Puede administrar licencias de Cloud Volumes ONTAP basadas en capacidad desde la consola de NetApp .
+Puede administrar licencias de Cloud Volumes ONTAP basadas en capacidad desde la NetApp Console.
 
 
 NOTE: Si bien el uso real y la medición de los productos y servicios administrados en la Consola siempre se calculan en GiB y TiB, los términos GB/GiB y TB/TiB se usan indistintamente.  Esto se refleja en los listados de Cloud Marketplace, cotizaciones de precios, descripciones de listados y en otra documentación de respaldo.
@@ -27,7 +27,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html[
 
 
 
-== Cómo se agregan licencias a la consola de NetApp
+== Cómo se agregan licencias a la NetApp Console
 
 Después de comprar una licencia a su representante de ventas de NetApp , NetApp le enviará un correo electrónico con el número de serie y detalles adicionales de la licencia.
 
@@ -39,10 +39,10 @@ Si la consola no puede agregar la licencia, deberá agregarla manualmente.  Por 
 
 == Ver la capacidad consumida en tu cuenta
 
-La consola le muestra la capacidad total consumida en su cuenta y la capacidad consumida por paquete de licencias. Esto puede ayudarle a comprender cómo se le está cobrando y si necesita comprar capacidad adicional.
+La consola le muestra la capacidad total consumida en su cuenta y la capacidad consumida por paquete de licencias.  Esto puede ayudarle a comprender cómo se le está cobrando y si necesita comprar capacidad adicional.
 
 .Pasos
-. Desde el panel de navegación izquierdo, seleccione *Administración > Licencias y suscripciones*.
+. Desde el panel de navegación izquierdo, seleccione *Administración > Licenses and subscriptions*.
 . En la pestaña *Descripción general*, el mosaico Cloud Volumes ONTAP muestra la capacidad actual aprovisionada para su cuenta.
 +
 image:screenshot_cvo_licensing_card.png["ancho=300 una captura de pantalla que muestra el resumen de capacidad de sus licencias y suscripciones de Cloud Volumes ONTAP ."]
@@ -62,9 +62,9 @@ Para comprender mejor las capacidades que se muestran para el paquete Essentials
 +
 Solo verás las suscripciones asociadas a la organización que estás viendo actualmente.
 
-. A medida que visualiza la información sobre sus suscripciones, puede interactuar con los detalles en la tabla. Expande una fila para ver más detalles.
+. A medida que visualiza la información sobre sus suscripciones, puede interactuar con los detalles en la tabla.  Expande una fila para ver más detalles.
 +
-** Seleccionarimage:icon-column-selector.png["el icono más al final del encabezado de la tabla"] para elegir qué columnas aparecen en la tabla. Tenga en cuenta que las columnas Plazo y Renovación automática no aparecen de forma predeterminada. La columna Renovación automática muestra información de renovación solo para contratos de Azure.
+** Seleccionarimage:icon-column-selector.png["el icono más al final del encabezado de la tabla"] para elegir qué columnas aparecen en la tabla.  Tenga en cuenta que las columnas Plazo y Renovación automática no aparecen de forma predeterminada.  La columna Renovación automática muestra información de renovación solo para contratos de Azure.
 
 
 
@@ -75,7 +75,7 @@ Solo verás las suscripciones asociadas a la organización que estás viendo act
 
 Puede ver detalles sobre la capacidad utilizada por paquete cambiando al modo heredado en la página Cloud Volumes ONTAP .
 
-. Desde el panel de navegación izquierdo, seleccione *Administración > Licencias y suscripciones*.
+. Desde el panel de navegación izquierdo, seleccione *Administración > Licenses and subscriptions*.
 . En la pestaña *Descripción general*, el mosaico Cloud Volumes ONTAP muestra la capacidad actual aprovisionada para su cuenta.
 . Seleccione *Ver* para ver la capacidad aprovisionada para cada uno de sus paquetes de licencias.
 . Seleccione *Cambiar a vista avanzada*.
@@ -105,7 +105,7 @@ La consola siempre intenta cargar una licencia primero.  Si no hay una licencia 
 
 
 .Pasos
-. Desde el panel de navegación izquierdo, seleccione *Administración > Licencias y suscripciones*.
+. Desde el panel de navegación izquierdo, seleccione *Administración > Licenses and subscriptions*.
 . Seleccione la pestaña *Descripción general*.
 . En el mosaico Cloud Volumes ONTAP , seleccione *Ver*.
 . Seleccione *Cambiar a vista avanzada*.
@@ -180,7 +180,7 @@ NOTE: Los volúmenes FlexClone no se incluyen en este informe porque este tipo d
 
 
 .Pasos
-. Desde el panel de navegación izquierdo, seleccione *Administración > Licencias y suscripciones*.
+. Desde el panel de navegación izquierdo, seleccione *Administración > Licenses and subscriptions*.
 . En la pestaña *Descripción general*, seleccione *Ver* en el mosaico Cloud Volumes ONTAP .
 . Seleccione *Informe de uso*.
 +

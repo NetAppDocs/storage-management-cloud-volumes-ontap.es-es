@@ -16,10 +16,10 @@ summary:
 [role="lead"]
 Puede utilizar la implementación directa de Azure Marketplace para implementar Cloud Volumes ONTAP de manera rápida y sencilla.  Desde el mercado de Azure, puede implementar rápidamente Cloud Volumes ONTAP con unos pocos clics y explorar sus características y capacidades principales en su entorno.
 
-Para obtener más información sobre esta oferta, consultelink:concept-azure-mktplace-direct.html["Obtenga más información sobre las ofertas de Cloud Volumes ONTAP en la consola de NetApp y el mercado."] .
+Para obtener más información sobre esta oferta, consultelink:concept-azure-mktplace-direct.html["Obtenga más información sobre las ofertas de Cloud Volumes ONTAP en la NetApp Console y el mercado."] .
 
 .Acerca de esta tarea
-El sistema Cloud Volumes ONTAP implementado mediante la implementación directa de Azure Marketplace tiene estas propiedades.  Tenga en cuenta que las características de una instancia independiente implementada a través de Azure Marketplace cambian cuando se detecta en la consola de NetApp .
+El sistema Cloud Volumes ONTAP implementado mediante la implementación directa de Azure Marketplace tiene estas propiedades.  Tenga en cuenta que las características de una instancia independiente implementada a través de Azure Marketplace cambian cuando se detecta en la NetApp Console.
 
 * La última versión de Cloud Volumes ONTAP (9.16.1 o posterior).
 * Una licencia gratuita para Cloud Volumes ONTAP que está limitada a 500 GiB de capacidad aprovisionada.  Esta licencia no incluye soporte de NetApp y no tiene fecha de vencimiento.
@@ -139,7 +139,7 @@ Asegúrese de que la implementación esté completa en Azure Marketplace.  El ag
 En la consola, siga el procedimiento estándar para descubrir sistemas existentes. Consulte link:task-adding-systems.html["Agregue un sistema Cloud Volumes ONTAP existente a la consola"] .
 
 .Después de terminar
-Una vez completado el descubrimiento, podrá ver los sistemas enumerados en la página *Sistemas* en la Consola.  Puede realizar diversas tareas de gestión, como:link:task-manage-aggregates.html["expandiendo el agregado"] ,link:task-create-volumes.html["adición de volúmenes"] ,link:task-managing-svms-azure.html["aprovisionamiento de máquinas virtuales de almacenamiento adicionales"] , ylink:task-change-azure-vm.html["cambiando los tipos de instancia"] .
+Una vez finalizado el descubrimiento, podrá ver los sistemas enumerados en la página *Sistemas* en la Consola.  Puede realizar diversas tareas de gestión, como:link:task-manage-aggregates.html["expandiendo el agregado"] ,link:task-create-volumes.html["adición de volúmenes"] ,link:task-managing-svms-azure.html["aprovisionamiento de máquinas virtuales de almacenamiento adicionales"] , ylink:task-change-azure-vm.html["cambiando los tipos de instancia"] .
 
 .Enlaces relacionados
 Consulte la documentación de ONTAP para obtener más información sobre la creación de almacenamiento:

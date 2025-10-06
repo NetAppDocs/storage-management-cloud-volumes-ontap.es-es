@@ -80,7 +80,7 @@ sidebar:
       - title: Obtenga información sobre las opciones de implementación de Cloud Volumes
           ONTAP en Azure
         url: "/concept-azure-mktplace-direct.html"
-      - title: Introducción a la consola de NetApp
+      - title: Introducción a la NetApp Console
         entries:
         - title: Inicio rápido
           url: "/task-getting-started-azure.html"

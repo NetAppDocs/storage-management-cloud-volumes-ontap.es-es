@@ -25,7 +25,7 @@ Los datos de Cloud Volumes ONTAP se cifran automáticamente en Azure mediante ht
 Si desea utilizar una clave administrada por el cliente con Cloud Volumes ONTAP, deberá completar los siguientes pasos:
 
 . Desde Azure, cree un almacén de claves y luego genere una clave en ese almacén.
-. Desde la consola de NetApp , use la API para crear un sistema Cloud Volumes ONTAP que use la clave.
+. Desde la NetApp Console, use la API para crear un sistema Cloud Volumes ONTAP que use la clave.
 
 
 

@@ -56,7 +56,7 @@ Sistema operativo:: Debian 11
 NOTE: Para Cloud Volumes ONTAP 9.10.0 y versiones anteriores, se instaló Debian 10 en el mediador.
 
 --
-Actualizaciones:: Cuando actualiza Cloud Volumes ONTAP, la consola de NetApp también actualiza la instancia del mediador según sea necesario.
+Actualizaciones:: Cuando actualiza Cloud Volumes ONTAP, la NetApp Console también actualiza la instancia del mediador según sea necesario.
 Acceso a la instancia:: Para Debian, el usuario de la nube predeterminado es `admin` .  Google Cloud crea y agrega un certificado para el `admin` usuario cuando se solicita acceso SSH a través de la consola de Google Cloud o la línea de comandos de gcloud.  Puedes especificar `sudo` para obtener privilegios de root.
 Agentes de terceros:: Los agentes de terceros o las extensiones de VM no son compatibles con la instancia del mediador.
 
@@ -79,7 +79,7 @@ Una configuración de alta disponibilidad mantiene una alta disponibilidad de su
 
 * El objetivo del punto de recuperación (RPO) es 0 segundos.
 +
-Sus datos son transaccionales consistentes sin pérdida de datos.
+Sus datos son transaccionales consistentes y no hay pérdida de datos.
 
 * El objetivo del tiempo de recuperación (RTO) es de 120 segundos.
 +
@@ -139,7 +139,7 @@ Para obtener más detalles sobre el rendimiento de Cloud Volumes ONTAP , consult
 Los clientes deben acceder a los volúmenes NFS y CIFS utilizando la dirección IP de datos del nodo en el que reside el volumen.  Si los clientes NAS acceden a un volumen utilizando la dirección IP del nodo asociado, el tráfico pasa entre ambos nodos, lo que reduce el rendimiento.
 
 
-TIP: Si mueve un volumen entre nodos en un par HA, debe volver a montar el volumen utilizando la dirección IP del otro nodo.  De lo contrario, puede experimentar una reducción en el rendimiento.  Si los clientes admiten referencias NFSv4 o redirección de carpetas para CIFS, puede habilitar esas funciones en los sistemas Cloud Volumes ONTAP para evitar volver a montar el volumen.  Para obtener más detalles, consulte la documentación de ONTAP .
+TIP: Si mueve un volumen entre nodos en un par de alta disponibilidad, debe volver a montar el volumen utilizando la dirección IP del otro nodo.  De lo contrario, puede experimentar una reducción en el rendimiento.  Si los clientes admiten referencias NFSv4 o redirección de carpetas para CIFS, puede habilitar esas funciones en los sistemas Cloud Volumes ONTAP para evitar volver a montar el volumen.  Para obtener más detalles, consulte la documentación de ONTAP .
 
 Puede localizar la dirección IP correcta desde la consola seleccionando el volumen y haciendo clic en *Comando de montaje*.
 

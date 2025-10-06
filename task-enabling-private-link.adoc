@@ -20,7 +20,7 @@ Cloud Volumes ONTAP utiliza un vínculo privado de Azure para las conexiones a s
 
 == Descripción general
 
-De forma predeterminada, la consola de NetApp habilita un vínculo privado de Azure para las conexiones entre Cloud Volumes ONTAP y sus cuentas de almacenamiento asociadas.  Un vínculo privado de Azure protege las conexiones entre puntos finales en Azure y proporciona beneficios de rendimiento.
+De forma predeterminada, la NetApp Console habilita un vínculo privado de Azure para las conexiones entre Cloud Volumes ONTAP y sus cuentas de almacenamiento asociadas.  Un vínculo privado de Azure protege las conexiones entre puntos finales en Azure y proporciona beneficios de rendimiento.
 
 Si es necesario, puede configurar Cloud Volumes ONTAP para usar puntos de conexión de servicio en lugar de un Azure Private Link.
 

@@ -14,7 +14,7 @@ summary: Si necesita realizar una gestión avanzada de Cloud Volumes ONTAP, pued
 
 
 [role="lead"]
-Las funciones avanzadas de gestión de almacenamiento en Cloud Volumes ONTAP están disponibles a través del Administrador del Sistema de ONTAP , una interfaz de gestión incluida con los sistemas ONTAP . Puede acceder a System Manager directamente desde la consola de NetApp .
+Las funciones avanzadas de gestión de almacenamiento en Cloud Volumes ONTAP están disponibles a través del Administrador del Sistema de ONTAP , una interfaz de gestión incluida con los sistemas ONTAP . Puede acceder a System Manager directamente desde la NetApp Console.
 
 
 
@@ -46,7 +46,7 @@ Puede realizar varias funciones de administración de almacenamiento utilizando 
 
 Algunas funciones que aparecen en la interfaz del Administrador del sistema no son compatibles con Cloud Volumes ONTAP:
 
-* Niveles de nube de NetApp : Cloud Volumes ONTAP no admite niveles de nube.  Debe configurar la clasificación de datos en el almacenamiento de objetos directamente desde la Vista estándar al crear volúmenes.
+* NetApp Cloud Tiering: Cloud Volumes ONTAP no admite niveles de nube.  Debe configurar la clasificación de datos en el almacenamiento de objetos directamente desde la Vista estándar al crear volúmenes.
 * Niveles: La gestión de agregados (incluidos los niveles locales y de nube) no es compatible con el Administrador del sistema. Debe administrar los agregados directamente desde la Vista Estándar.
 * Actualizaciones de firmware: Cloud Volumes ONTAP no admite actualizaciones de firmware automáticas desde la página *Clúster > Configuración* del Administrador del sistema.
 * Control de acceso basado en roles: no se admite el control de acceso basado en roles desde el Administrador del sistema.

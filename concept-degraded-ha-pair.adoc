@@ -17,7 +17,7 @@ summary: Cuando un nodo de un par de alta disponibilidad no está disponible, el
 Cuando un nodo de un par de alta disponibilidad no está disponible, el otro nodo envía datos a su socio para brindar un servicio de datos continuo.  Esto se llama _toma de control de almacenamiento_.  Varias acciones no están disponibles hasta que se complete la devolución del almacenamiento.
 
 
-TIP: Cuando un nodo de un par de alta disponibilidad no está disponible, el estado del sistema en la consola de NetApp es _Degradado_.
+TIP: Cuando un nodo de un par de alta disponibilidad no está disponible, el estado del sistema en la NetApp Console es _Degradado_.
 
 Las siguientes acciones no están disponibles desde la toma de control de almacenamiento:
 

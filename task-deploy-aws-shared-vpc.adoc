@@ -30,7 +30,7 @@ image:diagram-aws-vpc-sharing.png["Una imagen conceptual de una implementación 
 
 Como se describe en los pasos a continuación, deberá compartir las subredes con la cuenta del participante y luego crear la función de IAM y el grupo de seguridad en la cuenta del propietario de VPC.
 
-Cuando se crea el sistema Cloud Volumes ONTAP , la consola de NetApp crea y adjunta automáticamente una función de IAM al mediador.  Esta función asume la función de IAM que creó en la cuenta de propietario de VPC para realizar cambios en las tablas de rutas asociadas con el par HA.
+Cuando se crea el sistema Cloud Volumes ONTAP , la NetApp Console crea y adjunta automáticamente una función de IAM al mediador.  Esta función asume la función de IAM que creó en la cuenta del propietario de VPC para realizar cambios en las tablas de rutas asociadas con el par HA.
 
 .Pasos
 . Comparta las subredes en la cuenta del propietario de VPC con la cuenta del participante.

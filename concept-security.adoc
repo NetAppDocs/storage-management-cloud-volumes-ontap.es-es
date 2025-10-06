@@ -95,7 +95,7 @@ ifdef::aws[]
 
 === Servicio de administración de claves de AWS
 
-Cuando inicia un sistema Cloud Volumes ONTAP en AWS, puede habilitar el cifrado de datos mediante el http://docs.aws.amazon.com/kms/latest/developerguide/overview.html["Servicio de administración de claves de AWS (KMS)"^] .  La consola de NetApp solicita claves de datos mediante una clave maestra de cliente (CMK).
+Cuando inicia un sistema Cloud Volumes ONTAP en AWS, puede habilitar el cifrado de datos mediante el http://docs.aws.amazon.com/kms/latest/developerguide/overview.html["Servicio de administración de claves de AWS (KMS)"^] .  La NetApp Console solicita claves de datos mediante una clave maestra de cliente (CMK).
 
 
 TIP: No puede cambiar el método de cifrado de datos de AWS después de crear un sistema Cloud Volumes ONTAP .
