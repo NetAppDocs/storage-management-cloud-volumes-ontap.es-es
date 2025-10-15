@@ -260,6 +260,9 @@ Si experimenta algún problema al implementar el sistema Cloud Volumes ONTAP , r
 
 Para obtener ayuda adicional, visite https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/guideme-tab["Compatibilidad con NetApp Cloud Volumes ONTAP"^] .
 
+
+CAUTION: Una vez completado el proceso de implementación, no modifique las configuraciones de Cloud Volumes ONTAP generadas por el sistema en el portal de Azure, especialmente las etiquetas del sistema. Cualquier cambio realizado en estas configuraciones puede provocar un comportamiento inesperado o pérdida de datos.
+
 .Después de terminar
 * Si aprovisionó un recurso compartido CIFS, otorgue a los usuarios o grupos permisos para los archivos y carpetas y verifique que esos usuarios puedan acceder al recurso compartido y crear un archivo.
 * Si desea aplicar cuotas a los volúmenes, utilice el Administrador del sistema ONTAP o la CLI de ONTAP .
@@ -514,3 +517,9 @@ Para obtener ayuda adicional, visite https://mysupport.netapp.com/site/products/
 Las cuotas le permiten restringir o rastrear el espacio en disco y la cantidad de archivos utilizados por un usuario, grupo o qtree.
 
 
+
+
+CAUTION: Una vez completado el proceso de implementación, no modifique las configuraciones de Cloud Volumes ONTAP generadas por el sistema en el portal de Azure, especialmente las etiquetas del sistema. Cualquier cambio realizado en estas configuraciones puede provocar un comportamiento inesperado o pérdida de datos.
+
+.Enlaces relacionados
+*link:task-planning-your-config-azure.html["Planificación de la configuración de Cloud Volumes ONTAP en Azure"^] *link:task-deploy-cvo-azure-mktplc.html["Implementar Cloud Volumes ONTAP en Azure desde Azure Marketplace"^]

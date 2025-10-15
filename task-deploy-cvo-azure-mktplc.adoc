@@ -138,6 +138,9 @@ Asegúrese de que la implementación esté completa en Azure Marketplace.  El ag
 .Pasos
 En la consola, siga el procedimiento estándar para descubrir sistemas existentes. Consulte link:task-adding-systems.html["Agregue un sistema Cloud Volumes ONTAP existente a la consola"] .
 
+
+CAUTION: Durante el descubrimiento, es posible que veas mensajes de error, pero puedes ignorarlos hasta que se complete el proceso de descubrimiento. No modifique las configuraciones de Cloud Volumes ONTAP generadas por el sistema en el portal de Azure Marketplace durante la detección, especialmente las etiquetas del sistema. Cualquier cambio realizado en estas configuraciones puede provocar un comportamiento inesperado del sistema.
+
 .Después de terminar
 Una vez finalizado el descubrimiento, podrá ver los sistemas enumerados en la página *Sistemas* en la Consola.  Puede realizar diversas tareas de gestión, como:link:task-manage-aggregates.html["expandiendo el agregado"] ,link:task-create-volumes.html["adición de volúmenes"] ,link:task-managing-svms-azure.html["aprovisionamiento de máquinas virtuales de almacenamiento adicionales"] , ylink:task-change-azure-vm.html["cambiando los tipos de instancia"] .
 

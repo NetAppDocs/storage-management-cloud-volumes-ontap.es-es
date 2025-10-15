@@ -110,6 +110,9 @@ TIP: Si desea utilizar WORM y niveles de datos, debe deshabilitar la copia de se
 .Resumen
 Verifique o edite los detalles ingresados y luego haga clic en *Crear*.
 
+
+CAUTION: Una vez completado el proceso de implementación, no modifique las configuraciones de Cloud Volumes ONTAP generadas por el sistema en el portal de la nube de AWS, especialmente las etiquetas del sistema. Cualquier cambio realizado en estas configuraciones puede provocar un comportamiento inesperado o pérdida de datos.
+
 .Enlaces relacionados
 * link:task-planning-your-config.html["Planificación de la configuración de Cloud Volumes ONTAP"]
 * link:task-deploying-otc-aws.html["Implemente Cloud Volumes ONTAP en AWS mediante la implementación avanzada"]
