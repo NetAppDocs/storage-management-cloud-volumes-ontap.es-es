@@ -20,6 +20,22 @@ Las mejoras descritas en esta página son específicas para la administración d
 
 
 
+== 17 de octubre de 2025
+
+
+
+=== Cloud Volumes ONTAP en Azure ahora está limitado a las últimas versiones compatibles
+
+Las implementaciones y actualizaciones de Cloud Volumes ONTAP en Azure a través de la NetApp Console ahora están restringidas a las últimas versiones compatibles. Esto garantiza la compatibilidad con el hardware de última generación compatible con Microsoft y proporciona las funciones y mejoras de seguridad más nuevas. La consola le pedirá que actualice a las versiones compatibles.
+
+Para más detalles, consulte:
+
+* Despliegue: https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-versions.html#azure["Versiones de ONTAP compatibles con implementaciones de Cloud Volumes ONTAP"^]
+* Mejora: https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-updating-ontap-cloud.html#supported-upgrade-paths["Rutas de actualización compatibles con Azure"^]
+
+
+
+
 == 6 de octubre de 2025
 
 
