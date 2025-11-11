@@ -29,3 +29,8 @@ Las copias instantáneas heredan las propiedades WORM del volumen, lo que las ha
 
 
 NOTE: Si bien una copia Snapshot está protegida por un período de retención específico, el administrador del clúster puede eliminar el volumen de origen, ya que el almacenamiento WORM en Cloud Volumes ONTAP funciona bajo un modelo de "administrador de almacenamiento confiable".  Además, un administrador de nube confiable puede eliminar los datos WORM operando en los recursos de almacenamiento en la nube.
+
+.Enlaces relacionados
+* Para obtener más información sobre WORM, consultelink:concept-worm.html["Obtenga más información sobre el almacenamiento WORM en Cloud Volumes ONTAP"] .
+* Para obtener información sobre la carga de los volúmenes SnapLock , consultelink:concept-licensing-charging.html["Licencias y tarificación en Cloud Volumes ONTAP"] .
+

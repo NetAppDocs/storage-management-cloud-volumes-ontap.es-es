@@ -196,7 +196,8 @@ Si se leen mediante lecturas aleatorias, los bloques de datos fríos en el nivel
 Ninguno:: Mantiene los datos de un volumen en el nivel de rendimiento, evitando que se muevan al nivel de capacidad.
 
 
-Al replicar un volumen, puede elegir si desea organizar los datos en niveles de almacenamiento de objetos.  Si lo hace, la consola aplicará la política *Copia de seguridad* al volumen de protección de datos.  A partir de Cloud Volumes ONTAP 9.6, la política de niveles *Todos* reemplaza la política de respaldo.
+.Replicación
+Al replicar un volumen, puede elegir si desea organizar los datos en niveles de almacenamiento de objetos. Si lo hace, la consola aplicará la política *Copia de seguridad* al volumen de protección de datos. A partir de Cloud Volumes ONTAP 9.6, la política de niveles *Todos* reemplaza la política de respaldo. Cuando se elimina una relación de replicación, el volumen de destino conserva la política de niveles que estaba en vigor durante la replicación.
 
 
 

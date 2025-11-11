@@ -116,4 +116,5 @@ Debe comprender lo siguiente sobre cómo habilitar la clasificación de datos y 
 
 .Enlace relacionado
 * link:reference-worm-snaplock.html["Cree copias instantáneas a prueba de manipulaciones para el almacenamiento WORM"]
+* link:concept-licensing-charging.html["Licencias y tarificación en Cloud Volumes ONTAP"]
 
