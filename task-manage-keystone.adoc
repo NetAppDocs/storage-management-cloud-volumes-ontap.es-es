@@ -27,7 +27,7 @@ https://www.netapp.com/services/keystone/["Obtenga más información sobre Keyst
 Antes de poder usar y administrar las suscripciones de Keystone en la consola, debe comunicarse con NetApp para autorizar su cuenta de consola con sus suscripciones de Keystone .
 
 .Pasos
-. Desde el menú de la NetApp Console , seleccione *Gobernanza > Licenses and subscriptions*.
+. Desde el menú de la NetApp Console , seleccione *Administración > Licenses and subscriptions*.
 . Seleccione * Suscripciones Keystone *.
 . Si ve la página *Bienvenido a NetApp Keystone*, envíe un correo electrónico a la dirección que figura en la página.
 +
@@ -43,7 +43,7 @@ Un representante de NetApp procesará su solicitud autorizando su cuenta para ac
 Una vez que NetApp autorice su cuenta, podrá vincular las suscripciones de Keystone para usarlas con Cloud Volumes ONTAP.  Esta acción permite a los usuarios seleccionar la suscripción como método de cobro para los nuevos sistemas Cloud Volumes ONTAP .
 
 .Pasos
-. Desde el menú de la NetApp Console , seleccione *Gobernanza > Licenses and subscriptions*.
+. Desde el menú de la NetApp Console , seleccione *Administración > Licenses and subscriptions*.
 . Seleccione * Suscripciones Keystone *.
 . Para la suscripción que desea vincular, haga clic enimage:icon-action.png["Un icono que consta de tres puntos uno al lado del otro."] y seleccione *Enlace*.
 
@@ -58,7 +58,7 @@ La suscripción ahora está vinculada a su organización o cuenta de consola y e
 Si desea cambiar la capacidad comprometida para los niveles de servicio de su suscripción, puede enviar una solicitud a NetApp directamente desde la consola. Solicitar capacidad adicional para un nivel de servicio proporciona más almacenamiento para los sistemas Cloud Volumes ONTAP .
 
 .Pasos
-. Desde el menú de la NetApp Console , seleccione *Gobernanza > Licenses and subscriptions*.
+. Desde el menú de la NetApp Console , seleccione *Administración > Licenses and subscriptions*.
 . Seleccione * Suscripciones Keystone *.
 . Para la suscripción cuya capacidad desea ajustar, haga clic en image:icon-action.png["Un icono que consta de tres puntos uno al lado del otro."] y seleccione *Ver detalle y editar*.
 . Ingrese la capacidad comprometida solicitada para una o más suscripciones.
@@ -83,7 +83,7 @@ https://docs.netapp.com/us-en/keystone-staas/integrations/aiq-keystone-details.h
 Si ya no desea utilizar una suscripción de Keystone con la consola, puede desvincular la suscripción. Tenga en cuenta que solo puede desvincular una suscripción que no esté asociada a una suscripción existente de Cloud Volumes ONTAP .
 
 .Pasos
-. Desde el menú de la NetApp Console , seleccione *Gobernanza > Licenses and subscriptions*.
+. Desde el menú de la NetApp Console , seleccione *Administración > Licenses and subscriptions*.
 . Seleccione * Keystone*.
 . Para la suscripción que desea desvincular, haga clic enimage:icon-action.png["Un icono que consta de tres puntos uno al lado del otro."] y seleccione *Desvincular*.
 
