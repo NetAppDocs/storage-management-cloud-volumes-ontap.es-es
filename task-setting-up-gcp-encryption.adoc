@@ -19,7 +19,7 @@ Si bien Google Cloud Storage siempre cifra sus datos antes de escribirlos en el 
 .Pasos
 . Asegúrese de que la cuenta de servicio del agente de consola tenga los permisos correctos en el nivel del proyecto, en el proyecto donde está almacenada la clave.
 +
-Los permisos se proporcionan en el https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-gcp.html["Los permisos de la cuenta de servicio por defecto"^] , pero es posible que no se aplique si utiliza un proyecto alternativo para el Servicio de administración de claves en la nube.
+Los permisos se proporcionan en el https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html["Los permisos de la cuenta de servicio por defecto"^] , pero es posible que no se aplique si utiliza un proyecto alternativo para el Servicio de administración de claves en la nube.
 
 +
 Los permisos son los siguientes:

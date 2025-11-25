@@ -54,7 +54,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-gcp.
 
 Dimensionar su sistema Cloud Volumes ONTAP puede ayudarle a cumplir con los requisitos de rendimiento y capacidad.  Debe tener en cuenta algunos puntos clave al elegir un tipo de máquina, un tipo de disco y un tamaño de disco:
 
-Tipo de máquina:: Mire los tipos de máquinas compatibles en el http://docs.netapp.com/cloud-volumes-ontap/us-en/index.html["Notas de la versión de Cloud Volumes ONTAP"^] y luego revise los detalles de Google sobre cada tipo de máquina compatible.  Adapte los requisitos de su carga de trabajo a la cantidad de vCPU y memoria para el tipo de máquina.  Tenga en cuenta que cada núcleo de CPU aumenta el rendimiento de la red.
+Tipo de máquina:: Mire los tipos de máquinas compatibles en el https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html["Notas de la versión de Cloud Volumes ONTAP"^] y luego revise los detalles de Google sobre cada tipo de máquina compatible. Adapte los requisitos de su carga de trabajo a la cantidad de vCPU y memoria para el tipo de máquina. Tenga en cuenta que cada núcleo de CPU aumenta el rendimiento de la red.
 +
 --
 Consulte lo siguiente para obtener más detalles:
@@ -102,7 +102,7 @@ Consulte lo siguiente para obtener más detalles:
 Además del almacenamiento para los datos del usuario, la consola también compra almacenamiento en la nube para los datos del sistema Cloud Volumes ONTAP (datos de arranque, datos raíz, datos del núcleo y NVRAM).  Para fines de planificación, puede ser útil revisar estos detalles antes de implementar Cloud Volumes ONTAP.
 
 * link:reference-default-configs.html#google-cloud-single-node["Ver los discos predeterminados para los datos del sistema Cloud Volumes ONTAP en Google Cloud"] .
-* https://cloud.google.com/compute/quotas["Documentación de Google Cloud: Cuotas de recursos"^]
+* https://docs.cloud.google.com/docs/quotas/overview["Documentación de Google Cloud: Descripción general de las cuotas de nube"^]
 +
 Google Cloud Compute Engine aplica cuotas en el uso de recursos, por lo que debes asegurarte de no haber alcanzado el límite antes de implementar Cloud Volumes ONTAP.
 

@@ -129,7 +129,7 @@ La gestión automática de capacidad de la consola no se aplica a los LUN.  Cuan
 
 === Gestión manual de la capacidad
 
-Si el administrador de la organización o de la cuenta configura el modo de administración de capacidad en manual, la consola le informa que debe tomar las medidas adecuadas para tomar decisiones de capacidad.  Los mismos ejemplos descritos en el modo automático se aplican al modo manual, pero depende de usted aceptar las acciones.
+Si el administrador de la organización o de la cuenta configura el *Modo de administración de capacidad* en manual, la consola le informa que debe tomar las medidas adecuadas para tomar decisiones de capacidad. Los mismos ejemplos descritos en el modo automático se aplican al modo manual, pero depende de usted aceptar las acciones.
 
 
 

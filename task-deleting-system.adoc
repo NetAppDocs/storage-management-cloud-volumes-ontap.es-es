@@ -24,7 +24,7 @@ NOTE: Otros recursos, como las copias de seguridad administradas por NetApp Back
 Cuando la consola implementa Cloud Volumes ONTAP en su proveedor de nube, habilita la protección de terminación en las instancias.  Esta opción ayuda a prevenir la finalización accidental.
 
 .Pasos
-. Si habilitó Copia de seguridad y recuperación en el sistema, determine si los datos respaldados aún son necesarios y luego https://docs.netapp.com/us-en/bluexp-backup-recovery/task-manage-backups-ontap.html#deleting-backups["Eliminar las copias de seguridad, si es necesario"^] .
+. Si habilitó Copia de seguridad y recuperación en el sistema, determine si los datos respaldados aún son necesarios y luego https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-manage.html#delete-backups["Eliminar las copias de seguridad, si es necesario"^] .
 +
 La copia de seguridad y la recuperación son independientes de Cloud Volumes ONTAP por diseño.  Backup and Recovery no elimina automáticamente las copias de seguridad cuando se elimina un sistema Cloud Volumes ONTAP y no existe soporte actual en la interfaz de usuario para eliminar las copias de seguridad después de que se haya eliminado el sistema.
 

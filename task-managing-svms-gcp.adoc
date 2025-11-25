@@ -45,7 +45,7 @@ Cuando crea máquinas virtuales de almacenamiento mediante las API, además de c
 
 
 .Antes de empezar
-El agente de consola requiere permisos específicos para crear máquinas virtuales de almacenamiento para pares de Cloud Volumes ONTAP HA.  Los permisos necesarios están incluidos en https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-gcp.html["las políticas proporcionadas por NetApp"^] .
+El agente de consola requiere permisos específicos para crear máquinas virtuales de almacenamiento para pares de Cloud Volumes ONTAP HA. Los permisos necesarios están incluidos en https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html["las políticas proporcionadas por NetApp"^] .
 
 
 
@@ -86,7 +86,7 @@ Incluya los siguientes parámetros en el cuerpo de la solicitud:
 Al utilizar las API, puede cambiar el nombre y eliminar máquinas virtuales de almacenamiento tanto en configuraciones de nodo único como de alta disponibilidad.
 
 .Antes de empezar
-El agente de la consola requiere permisos específicos para administrar las máquinas virtuales de almacenamiento para los pares HA de Cloud Volumes ONTAP .  Los permisos necesarios están incluidos en https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-gcp.html["las políticas proporcionadas por NetApp"^] .
+El agente de la consola requiere permisos específicos para administrar las máquinas virtuales de almacenamiento para los pares HA de Cloud Volumes ONTAP . Los permisos necesarios están incluidos en https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html["las políticas proporcionadas por NetApp"^] .
 
 
 
