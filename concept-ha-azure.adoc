@@ -74,6 +74,11 @@ La implementación zonal utiliza discos administrados Premium SSD v2 cuando se c
 
 
 --
+
+
+
+NOTE: Si elige Discos administrados SSD Premium para un entorno que cumple con los criterios anteriores, la consola implementa automáticamente Discos administrados SSD Premium v2. No es posible cambiar a discos administrados SSD v1 Premium.
+
 Discos:: Los datos del cliente residen en discos administrados con almacenamiento redundante local (LRS).  Cada nodo tiene acceso al almacenamiento del otro nodo.  También se requiere almacenamiento adicional paralink:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["datos de arranque, raíz, raíz del socio, núcleo y NVRAM"^] .
 Cuentas de almacenamiento:: Las cuentas de almacenamiento se utilizan para implementaciones basadas en discos administrados para manejar registros de diagnóstico y niveles de almacenamiento de blobs.
 

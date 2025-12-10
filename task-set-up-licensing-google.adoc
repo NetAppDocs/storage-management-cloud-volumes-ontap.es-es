@@ -46,7 +46,7 @@ link:task-deploying-gcp.html["Vea las instrucciones paso a paso para iniciar Clo
 
 Las licencias basadas en capacidad le permiten pagar Cloud Volumes ONTAP por TiB de capacidad. La licencia basada en capacidad está disponible en forma de _paquete_: el paquete Essentials o Professional.
 
-Los paquetes Essentials y Professional están disponibles con los siguientes modelos de consumo:
+Los paquetes Essentials y Professional están disponibles con los siguientes modelos de consumo u opciones de compra:
 
 * Una licencia (traiga su propia licencia (BYOL)) comprada a NetApp
 * Una suscripción por hora, de pago por uso (PAYGO) de Google Cloud Marketplace
@@ -161,8 +161,20 @@ Una suscripción a Keystone es un servicio basado en suscripción de pago por us
 +
 image:screenshot-keystone.png["Una captura de pantalla de la opción de suscripción de Keystone al crear un sistema Cloud Volumes ONTAP ."]
 
-
-
-
-
++
 link:task-deploying-gcp.html["Vea las instrucciones paso a paso para iniciar Cloud Volumes ONTAP en Google Cloud"] .
+
+
+
+
+
+
+
+== Licencia basada en nodos
+
+Una licencia basada en nodos es la licencia de la generación anterior para Cloud Volumes ONTAP. Esta licencia se puede adquirir a través de NetApp (BYOL) y está disponible para renovaciones de licencias, solo en casos específicos. Para obtener información, consulte:
+
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html#end-of-availability-for-node-based-licenses["Fin de la disponibilidad de las licencias basadas en nodos"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html#end-of-availability-of-node-based-licenses["Fin de la disponibilidad de las licencias basadas en nodos"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-convert-node-capacity.html["Convertir una licencia basada en nodos a una licencia basada en capacidad"^]
+
