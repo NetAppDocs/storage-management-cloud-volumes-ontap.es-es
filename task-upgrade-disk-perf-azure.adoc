@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: task-upgrade-disk-perf-azure.html 
+keywords: azure, premium ssd v2, Premium SSDv2, performance parameters, cloud volumes ontap 
+summary: Configurar parámetros de rendimiento en discos SSD Premium v2 en Azure. 
+---
+= Cambiar el nivel de rendimiento de los discos SSD Premium en Cloud Volumes ONTAP en Azure
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede actualizar el nivel de rendimiento de los discos administrados SSD Premium en Cloud Volumes ONTAP en Azure mediante el portal de Azure. Este es un proceso manual que implica cambiar el nivel de disco de cada disco SSD Premium a un nivel de rendimiento superior. Cambiar el nivel de rendimiento de su disco NVRAM puede ayudar a aliviar los cuellos de botella de rendimiento y mejorar la eficiencia de su sistema Cloud Volumes ONTAP al proporcionar mayores IOPS y capacidades de rendimiento.
+
+.Acerca de esta tarea
+* De forma predeterminada, Cloud Volumes ONTAP en Azure implementa discos SSD Premium para NVRAM en el nivel P20. El nivel P20 proporciona un rendimiento equilibrado adecuado para la mayoría de las cargas de trabajo. Sin embargo, si su carga de trabajo exige un mayor rendimiento, puede actualizar el disco NVRAM a un nivel superior, como P30.
++
+
+TIP: Actualmente, puedes actualizar un disco NVRAM del nivel P20 al nivel P30 solo a través del portal de Azure.
+
+* No cambia el tamaño del disco. Sigue siendo 512 GB. Este procedimiento solo cambia el nivel de rendimiento del disco.
+
+
+.Antes de empezar
+* Su versión de Cloud Volumes ONTAP debe ser 9.11.1 o posterior. Para versiones inferiores, puede actualizar a 9.11.1 o posterior, o generar una solicitud de variación de política de funciones (FPVR) con soporte de NetApp .
+* Asegúrese de trabajar con el soporte de NetApp para determinar que el cuello de botella que experimenta en su entorno se debe al disco NVRAM y que actualizar el nivel resuelve el problema.
++
+
+NOTE: Actualizar el disco NVRAM a un nivel de rendimiento superior implica costos adicionales, por lo que es importante evaluar cuidadosamente la necesidad de este cambio.
+
+
+
+.Pasos
+Este escenario supone que hay dos nodos `node01` y `node02` en la implementación de alta disponibilidad (HA) de Cloud Volumes ONTAP . Utilice el portal de Azure para actualizar el nivel.
+
+. Ejecute este comando para hacer `node1` el nodo activo. Conmutación por error manual `node02`.
++
+`storage failover takeover -ofnode <Node02>`
+
+. Sign in en el portal de Azure.
+. Cuando se complete la adquisición, vaya a la instancia de VM para `node02`y haga clic en el botón *Detener* para apagarlo.
+. Navegue hasta el grupo de recursos para `node02` y de la lista de discos, seleccione el disco NVRAM para cambiar el nivel.
+. Seleccione *Tamaño + Rendimiento*.
+. En el menú desplegable *Nivel de rendimiento*, seleccione `P30 - 5000 IOPS, 200MB/s`.
+. Seleccione *Cambiar tamaño*.
+. Enciende el `node02` instancia.
+. Verifique la consola serie de Azure hasta que pueda ver el mensaje: `waiting for giveback`.
+. Ejecute este comando para devolver `node02`:
++
+`storage failover giveback -ofnode <Node02>`
+
+. Repita estos pasos en `node01` Para hacer `node02` tomar el control `node01`, para que pueda actualizar el nivel del disco NVRAM para `node01`.
+
+
+.Después de terminar
+Cuando haya encendido ambos nodos, verifique los parámetros modificados consultando los detalles del disco en el portal de Azure para su sistema Cloud Volumes ONTAP .
+
+.Información relacionada
+* Documentación de Azure: https://learn.microsoft.com/en-us/azure/virtual-machines/disks-performance-tiers?tabs=portal["Cambie su nivel de rendimiento sin tiempo de inactividad"^]
+* Base de conocimientos para el equipo de soporte: https://kb.netapp.com/Cloud/Azure_NetApp_Files/How_to_upgrade_performance_tier_of_NVRAM_disk_in_Azure_CVO["Cómo actualizar el nivel de rendimiento del disco NVRAM en Azure CVO"^]
+* link:task-updating-ontap-cloud.html["Actualizar las versiones del software Cloud Volumes ONTAP"]
+

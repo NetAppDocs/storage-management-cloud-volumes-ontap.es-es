@@ -951,6 +951,16 @@ Ahora se muestra una notificación cada vez que accedes a Cloud Volumes ONTAP en
 
 
 
+=== Se agregaron nuevos permisos a la política de AWS IAM para mediadores de HA
+
+Estos nuevos permisos de AWS se han agregado a la política de IAM para mediadores de alta disponibilidad en entornos de alta disponibilidad (HA) de Cloud Volumes ONTAP :
+
+* sts:Asumir rol
+* ec2:DescribeSubnets
+
+
+
+
 == 04 de abril de 2023
 
 
