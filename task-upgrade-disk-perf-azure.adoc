@@ -16,6 +16,9 @@ summary: Configurar parámetros de rendimiento en discos SSD Premium v2 en Azure
 [role="lead"]
 Puede actualizar el nivel de rendimiento de los discos administrados SSD Premium en Cloud Volumes ONTAP en Azure mediante el portal de Azure. Este es un proceso manual que implica cambiar el nivel de disco de cada disco SSD Premium a un nivel de rendimiento superior. Cambiar el nivel de rendimiento de su disco NVRAM puede ayudar a aliviar los cuellos de botella de rendimiento y mejorar la eficiencia de su sistema Cloud Volumes ONTAP al proporcionar mayores IOPS y capacidades de rendimiento.
 
+
+NOTE: Asegúrese de trabajar con el soporte de NetApp para determinar que el cuello de botella que experimenta en su entorno se debe al disco NVRAM y que actualizar el nivel resuelve el problema.
+
 .Acerca de esta tarea
 * De forma predeterminada, Cloud Volumes ONTAP en Azure implementa discos SSD Premium para NVRAM en el nivel P20. El nivel P20 proporciona un rendimiento equilibrado adecuado para la mayoría de las cargas de trabajo. Sin embargo, si su carga de trabajo exige un mayor rendimiento, puede actualizar el disco NVRAM a un nivel superior, como P30.
 +
@@ -26,12 +29,8 @@ TIP: Actualmente, puedes actualizar un disco NVRAM del nivel P20 al nivel P30 so
 
 
 .Antes de empezar
+* Evalúe cuidadosamente la necesidad de este cambio, porque actualizar el disco NVRAM a un nivel de rendimiento superior implica costos adicionales.
 * Su versión de Cloud Volumes ONTAP debe ser 9.11.1 o posterior. Para versiones inferiores, puede actualizar a 9.11.1 o posterior, o generar una solicitud de variación de política de funciones (FPVR) con soporte de NetApp .
-* Asegúrese de trabajar con el soporte de NetApp para determinar que el cuello de botella que experimenta en su entorno se debe al disco NVRAM y que actualizar el nivel resuelve el problema.
-+
-
-NOTE: Actualizar el disco NVRAM a un nivel de rendimiento superior implica costos adicionales, por lo que es importante evaluar cuidadosamente la necesidad de este cambio.
-
 
 
 .Pasos
