@@ -14,6 +14,21 @@ summary: Al especificar un servidor NTP se sincroniza la hora entre los sistemas
 
 
 [role="lead"]
-Al especificar un servidor NTP se sincroniza la hora entre los sistemas de su red, lo que puede ayudar a prevenir problemas debido a diferencias horarias.
+Para garantizar una sincronización horaria precisa, debe configurar un servidor de Protocolo de tiempo de red (NTP) para sus sistemas Cloud Volumes ONTAP . Asegúrese de configurar un servidor NTP para sus sistemas Cloud Volumes ONTAP en todos los proveedores de nube para mantener una sincronización horaria consistente dentro de su red.
 
-Especifique un servidor NTP utilizando el https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html["API de NetApp Console"^] o desde la interfaz de usuario cuandolink:task-create-volumes.html#create-a-volume["crear un servidor CIFS"] .
+
+NOTE: Si no configura un servidor NTP, podría experimentar interrupciones del servicio y una sincronización horaria incorrecta.
+
+Puede especificar un servidor NTP utilizando:
+
+* https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html["La API de la NetApp Console"^].
+* El comando CLI de ONTAP https://docs.netapp.com/us-en/ontap-cli//cluster-time-service-ntp-server-create.html["Creación de servidor NTP de servicio de tiempo de clúster"^].
+
+
+.Enlaces relacionados
+* Artículo de la base de conocimientos (KB): https://kb.netapp.com/Cloud/ncds/nds/cvo/cvo_kbs/How_does_a_CVO_cluster_use_NTP["¿Cómo utiliza NTP un clúster CVO?"]
+* https://docs.netapp.com/us-en/bluexp-automation/cm/prepare.html["Prepárese para usar la API"^]
+* https://docs.netapp.com/us-en/bluexp-automation/cm/workflow_processes.html#organization-of-cloud-volumes-ontap-workflows["Flujos de trabajo de Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html#get-the-connector-identifier["Obtener los identificadores requeridos"^]
+* https://docs.netapp.com/us-en/bluexp-automation/platform/use_rest_apis.html["Utilice las API REST para la NetApp Console"^]
+
