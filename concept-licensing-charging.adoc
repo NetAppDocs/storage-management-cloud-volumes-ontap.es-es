@@ -169,9 +169,15 @@ Para el paquete Essentials, el cargo de capacidad mínima de 4 TiB no se aplica 
 
 
 
-== Cómo se cobran los excedentes
+== Preferencias de facturación y excedentes
 
-Si excede su capacidad BYOL, se le cobrarán los excedentes a tarifas por hora según su suscripción al marketplace. Los excedentes se cobran a tarifas del marketplace, y se da preferencia al uso de la capacidad disponible de otras licencias. Si su licencia BYOL vence, deberá cambiar a un modelo de licencias basado en capacidad a través de marketplaces en la nube. Para obtener más información, consultelink:task-convert-node-capacity.html["Convertir una licencia basada en nodos de Cloud Volumes ONTAP a una licencia basada en capacidad"] .
+Podrás elegir cómo quieres que se te cobre en la sección * Licenses and subscriptions* de la Consola. Los excesos ocurren cuando su uso excede la capacidad especificada en su paquete de licencia o suscripción anual.
+
+* * Licencias de NetApp primero *: En este modelo, su uso se cobra primero según la capacidad de su paquete de licencias (BYOL). Si excede la capacidad de su licencia, se cobrarán excedentes según su suscripción anual al mercado o las tarifas por hora a pedido del mercado (PAYGO). Si su licencia BYOL vence, deberá realizar la transición a un modelo de licencia basado en capacidad a través de los mercados en la nube. Para obtener más información, consulte link:task-convert-node-capacity.html["Convertir una licencia basada en nodos de Cloud Volumes ONTAP a una licencia basada en capacidad"].
+* *Solo suscripciones al Marketplace*: En este modelo, su uso se carga primero a su suscripción anual al Marketplace. Cualquier uso adicional se cobra según las tarifas por hora bajo demanda del mercado (PAYGO). Cualquier capacidad de licencia no utilizada no se tiene en cuenta para la facturación.
+
+
+Para obtener más información sobre las preferencias de facturación, consulte https://docs.netapp.com/us-en/console-licenses-subscriptions/concept-billing-preferences.html["Obtenga información sobre las preferencias de facturación para licencias y suscripciones."^].
 
 
 

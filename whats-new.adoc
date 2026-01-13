@@ -20,6 +20,18 @@ Las mejoras descritas en esta página son específicas para la administración d
 
 
 
+== 12 de enero de 2026
+
+
+
+=== Opción de facturación preferida para Cloud Volumes ONTAP
+
+Ahora puede seleccionar una opción de facturación preferida para calcular su uso y excedentes de Cloud Volumes ONTAP . Desde la disponibilidad limitada del modelo de licencias Bring Your Own Licenses (BYOL) el 25 de junio de 2025, NetApp ha agregado métodos de cobro preferidos en la sección *Licencias y suscripciones* de la NetApp Console. Puede utilizar su suscripción anual al mercado para la facturación y los excedentes o el modelo BYOL existente como opción preferida. Esto le brinda la flexibilidad de elegir el método de cobro que mejor se adapte a la estrategia financiera y los patrones de uso de su organización.
+
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing-charging.html#billing-preferences-and-overages["Preferencias de facturación y excedentes"^].
+
+
+
 == 10 de diciembre de 2025
 
 
@@ -75,18 +87,6 @@ Para más detalles, consulte:
 * Despliegue: https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-versions.html#azure["Versiones de ONTAP compatibles con implementaciones de Cloud Volumes ONTAP"^]
 * Mejora: https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-updating-ontap-cloud.html#supported-upgrade-paths["Rutas de actualización compatibles con Azure"^]
 
-
-
-
-== 11 de noviembre de 2025
-
-
-
-=== Opción de facturación preferida para Cloud Volumes ONTAP
-
-Ahora puede elegir su opción de facturación preferida para calcular su uso y excesos.  Debido a la disponibilidad restringida de las licencias BYOL a partir del 25 de junio de 2025, NetApp ofrece métodos de cobro preferidos en la sección *Licencias y suscripciones* de la NetApp Console.  Puede utilizar su suscripción anual al mercado para la facturación y los excedentes, o el modelo de licencia existente (BYOL).  Esto le brinda la flexibilidad de elegir el método de cobro que mejor se adapte a la estrategia financiera y los patrones de uso de su organización.
-
-Para obtener más información, consulte https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing-charging.html#minimum-charge["Facturación y excedentes"^] .
 
 
 
