@@ -46,6 +46,10 @@ La versión de Cloud Volumes ONTAP a la que puede actualizar depende de la versi
 
 ifdef::aws[]
 
+
+
+==== Vías de actualización compatibles con AWS
+
 [cols="2*"]
 |===
 | Versión actual | Versiones a las que puedes actualizar directamente 
@@ -147,6 +151,10 @@ endif::aws[]
 
 ifdef::azure[]
 
+
+
+==== Rutas de actualización compatibles con Azure
+
 [cols="2*"]
 |===
 | Versión actual | Versiones a las que puedes actualizar directamente 
@@ -180,6 +188,10 @@ Si tiene una versión inferior de Cloud Volumes ONTAP en Azure, primero debe act
 endif::azure[]
 
 ifdef::gcp[]
+
+
+
+==== Vías de actualización compatibles con Google Cloud
 
 [cols="2*"]
 |===
