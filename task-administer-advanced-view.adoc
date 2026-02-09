@@ -29,7 +29,7 @@ Puede realizar varias funciones de administración de almacenamiento utilizando 
 * Eventos y trabajos: vea registros de eventos, alertas del sistema, trabajos y registros de auditoría.
 * Protección de datos avanzada: proteja máquinas virtuales de almacenamiento, LUN y grupos de consistencia.
 * Administración de host: configure grupos de iniciadores SAN y clientes NFS.
-* Administración de almacenamiento de objetos S3: las capacidades de administración de almacenamiento S3 en Cloud Volumes ONTAP solo están disponibles en el Administrador del sistema, y ​​no en la Consola.
+* Gestión del almacenamiento de objetos ONTAP S3: las capacidades de gestión del almacenamiento ONTAP S3 en Cloud Volumes ONTAP solo están disponibles en System Manager y no en NetApp Console.
 
 
 

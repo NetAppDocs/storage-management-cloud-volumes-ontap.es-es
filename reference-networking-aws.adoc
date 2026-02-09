@@ -65,7 +65,7 @@ La autenticación del usuario falla y los siguientes servicios permanecen no dis
 * Gestión de identidad y acceso (IAM)
 * Servicio de gestión de claves (KMS)
 * Servicio de token de seguridad (STS)
-* Servicio de almacenamiento simple (S3)
+* Amazon Simple Storage Service (S3)
 
 | Comunicación con los servicios de AWS. | Modos estándar y privado. | Cloud Volumes ONTAP no puede comunicarse con el servicio AWS para realizar operaciones específicas en AWS. 
 
@@ -222,7 +222,7 @@ TIP: ¿Buscas información sobre el agente de consola? https://docs.netapp.com/u
 
 === Conexión para la estratificación de datos
 
-Si desea utilizar EBS como nivel de rendimiento y AWS S3 como nivel de capacidad, debe asegurarse de que Cloud Volumes ONTAP tenga una conexión a S3.  La mejor forma de proporcionar esa conexión es creando un punto final de VPC para el servicio S3.  Para obtener instrucciones, consulte la https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-gateway.html#create-gateway-endpoint["Documentación de AWS: Creación de un punto final de puerta de enlace"^] .
+Si quieres usar EBS como capa de rendimiento y Amazon S3 como capa de capacidad, debes asegurarte de que Cloud Volumes ONTAP tiene una conexión a S3. La mejor manera de proporcionar esa conexión es creando un VPC Endpoint para el servicio S3. Para instrucciones, consulta https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpce-gateway.html#create-gateway-endpoint["Documentación de AWS: Creación de un punto final de puerta de enlace"^].
 
 Al crear el punto final de VPC, asegúrese de seleccionar la región, la VPC y la tabla de rutas que corresponden a la instancia de Cloud Volumes ONTAP .  También debe modificar el grupo de seguridad para agregar una regla HTTPS saliente que habilite el tráfico al punto final S3.  De lo contrario, Cloud Volumes ONTAP no podrá conectarse al servicio S3.
 

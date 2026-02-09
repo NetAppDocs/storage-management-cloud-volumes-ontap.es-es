@@ -46,7 +46,7 @@ Configure su red de AWS para que Cloud Volumes ONTAP pueda funcionar correctamen
 .Pasos
 . Elija la VPC y las subredes en las que desea iniciar la instancia del agente de consola y las instancias de Cloud Volumes ONTAP .
 . Asegúrese de que su VPC y sus subredes admitan la conectividad entre el agente de la consola y Cloud Volumes ONTAP.
-. Configure un punto final de VPC para el servicio S3.
+. Configura un punto final de VPC para el servicio Amazon Simple Storage Service (Amazon S3).
 +
 Se requiere un punto final de VPC si desea organizar en niveles datos fríos de Cloud Volumes ONTAP en un almacenamiento de objetos de bajo costo.
 

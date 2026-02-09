@@ -197,7 +197,7 @@ El único tipo de disco compatible es GP2.  Actualmente se admiten las siguiente
 
 
 
-NOTE: Cloud Volumes ONTAP solo admite estas configuraciones.  La selección de tipos de discos no compatibles o instancias no calificadas en la configuración de AWS Local Zone puede provocar un error en la implementación.  La organización de datos en niveles en AWS S3 no está disponible en las zonas locales de AWS debido a la falta de conectividad.
+NOTE: Cloud Volumes ONTAP solo es compatible con estas configuraciones. Seleccionar tipos de disco no compatibles o instancias no cualificadas en la configuración de AWS Local Zone puede provocar un fallo en la implementación. La organización en niveles de datos a Amazon Simple Storage Service (Amazon S3) no es compatible si tu sistema Cloud Volumes ONTAP está en una AWS Local Zone, porque acceder a los buckets de Amazon S3 fuera de la Local Zone implica mayor latencia y afecta las actividades de Cloud Volumes ONTAP.
 
 link:https://aws.amazon.com/about-aws/global-infrastructure/localzones/features/?nc=sn&loc=2["Documentación de AWS: Tipos de instancias EC2 en zonas locales"^] .
 

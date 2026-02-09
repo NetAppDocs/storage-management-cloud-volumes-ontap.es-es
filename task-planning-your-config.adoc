@@ -101,7 +101,7 @@ Tenga en cuenta que Cloud Volumes ONTAP admite la función Amazon EBS Elastic Vo
 * Los discos _HDD de rendimiento optimizado (st1)_ están destinados a cargas de trabajo a las que se accede con frecuencia y que requieren un rendimiento rápido y constante a un precio más bajo.
 +
 
-NOTE: La organización de datos en niveles en AWS S3 no está disponible en las zonas locales de AWS debido a la falta de conectividad.
+NOTE: La asignación de niveles de datos a Amazon Simple Storage Service (Amazon S3) no es compatible si tu sistema Cloud Volumes ONTAP está en una AWS Local Zone, porque acceder a los buckets de Amazon S3 fuera de la Local Zone implica mayor latencia y afecta las actividades de Cloud Volumes ONTAP.
 
 
 

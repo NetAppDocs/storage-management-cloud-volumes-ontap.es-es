@@ -38,7 +38,7 @@ Cloud Volumes ONTAP es compatible con la mayoría de las regiones de Google Clou
 
 Cloud Volumes ONTAP admite varios tipos de máquinas, según el tipo de licencia que elija.
 
-https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html["Configuraciones compatibles con Cloud Volumes ONTAP en GCP"^]
+https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html["Configuraciones compatibles para Cloud Volumes ONTAP en Google Cloud"^]
 
 
 
@@ -46,11 +46,11 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp
 
 El límite de capacidad bruta para un sistema Cloud Volumes ONTAP está vinculado a la licencia.  Límites adicionales impactan el tamaño de los agregados y volúmenes.  Debe tener en cuenta estos límites al planificar su configuración.
 
-https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-gcp.html["Límites de almacenamiento para Cloud Volumes ONTAP en GCP"^]
+https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-gcp.html["Límites de almacenamiento para Cloud Volumes ONTAP en Google Cloud"^]
 
 
 
-== Dimensione su sistema en GCP
+== Dimensiona tu sistema en Google Cloud
 
 Dimensionar su sistema Cloud Volumes ONTAP puede ayudarle a cumplir con los requisitos de rendimiento y capacidad.  Debe tener en cuenta algunos puntos clave al elegir un tipo de máquina, un tipo de disco y un tamaño de disco:
 
@@ -64,7 +64,7 @@ Consulte lo siguiente para obtener más detalles:
 
 
 --
-Tipo de disco GCP:: Cuando crea volúmenes para Cloud Volumes ONTAP, debe elegir el almacenamiento en la nube subyacente que Cloud Volumes ONTAP utiliza para un disco.  El tipo de disco puede ser cualquiera de los siguientes:
+Tipos de disco:: Cuando crea volúmenes para Cloud Volumes ONTAP, debe elegir el almacenamiento en la nube subyacente que Cloud Volumes ONTAP utiliza para un disco.  El tipo de disco puede ser cualquiera de los siguientes:
 +
 --
 * _Discos persistentes SSD zonales_: Los discos persistentes SSD son mejores para cargas de trabajo que requieren altas tasas de IOPS aleatorias.
@@ -76,7 +76,7 @@ Para más detalles, consulte la https://cloud.google.com/compute/docs/disks/#pds
 
 
 --
-Tamaño del disco GCP:: Debe elegir un tamaño de disco inicial cuando implemente un sistema Cloud Volumes ONTAP .  Después de eso, puede dejar que la NetApp Console administre la capacidad de un sistema por usted, pero si desea crear agregados usted mismo, tenga en cuenta lo siguiente:
+Tamaño del disco:: Debe elegir un tamaño de disco inicial cuando implemente un sistema Cloud Volumes ONTAP .  Después de eso, puede dejar que la NetApp Console administre la capacidad de un sistema por usted, pero si desea crear agregados usted mismo, tenga en cuenta lo siguiente:
 +
 --
 * Todos los discos de un agregado deben tener el mismo tamaño.
@@ -115,13 +115,13 @@ TIP: El agente de consola también requiere un disco de sistema. https://docs.ne
 
 == Recopilar información de redes
 
-Cuando implementa Cloud Volumes ONTAP en GCP, debe especificar detalles sobre su red virtual.  Puede utilizar una hoja de trabajo para recopilar la información de su administrador.
+Cuando despliegues Cloud Volumes ONTAP en Google Cloud, necesitas especificar detalles sobre tu red virtual. Puedes usar una hoja de trabajo para recopilar la información de tu administrador.
 
 *Información de red para un sistema de un solo nodo*
 
 [cols="30,70"]
 |===
-| Información de GCP | Tu valor 
+| Información de Google Cloud | Tu valor 
 
 
 | Región |  
@@ -142,7 +142,7 @@ Cuando implementa Cloud Volumes ONTAP en GCP, debe especificar detalles sobre su
 
 [cols="30,70"]
 |===
-| Información de GCP | Tu valor 
+| Información de Google Cloud | Tu valor 
 
 
 | Región |  
@@ -175,7 +175,7 @@ Cuando implementa Cloud Volumes ONTAP en GCP, debe especificar detalles sobre su
 
 [cols="30,70"]
 |===
-| Información de GCP | Tu valor 
+| Información de Google Cloud | Tu valor 
 
 
 | Región |  

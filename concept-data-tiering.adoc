@@ -26,7 +26,7 @@ ifdef::aws[]
 
 == Nivelación de datos en AWS
 
-Cuando habilita la organización en niveles de datos en AWS, Cloud Volumes ONTAP utiliza EBS como nivel de rendimiento para datos activos y AWS S3 como nivel de capacidad para datos inactivos.
+Cuando habilitas la organización de datos por niveles en AWS, Cloud Volumes ONTAP usa EBS como nivel de rendimiento para los datos activos y Amazon Simple Storage Service (Amazon S3) como nivel de capacidad para los datos inactivos.
 
 Nivel de rendimiento:: El nivel de rendimiento puede ser SSD de uso general (gp3 o gp2) o SSD de IOPS aprovisionados (io1).
 +

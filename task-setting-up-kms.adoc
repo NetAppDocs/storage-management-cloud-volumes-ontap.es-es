@@ -102,7 +102,7 @@ Para obtener detalles adicionales sobre este proceso, consulte la https://docs.a
 
 . Si está utilizando una CMK administrada por el cliente, modifique la política de claves para la CMK agregando el rol IAM de Cloud Volumes ONTAP como _usuario clave_.
 +
-Este paso es necesario si habilitó la clasificación de datos en Cloud Volumes ONTAP y desea cifrar los datos almacenados en el depósito S3.
+Este paso es necesario si habilitaste la organización en niveles de datos en Cloud Volumes ONTAP y quieres cifrar los datos almacenados en el bucket de Amazon Simple Storage Service (Amazon S3).
 
 
 

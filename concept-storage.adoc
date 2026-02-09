@@ -45,7 +45,7 @@ Almacenamiento EBS:: En AWS, un agregado puede contener hasta 6 discos, todos de
 --
 El tamaño máximo del disco es 16 TiB.
 
-El tipo de disco EBS subyacente puede ser SSD de propósito general (gp3 o gp2), SSD de IOPS aprovisionadas (io1) o HDD de rendimiento optimizado (st1).  Puede emparejar un disco EBS con Amazon S3 paralink:concept-data-tiering.html["almacenamiento de objetos de bajo costo"] .
+El tipo de disco EBS subyacente puede ser SSD de uso general (gp3 o gp2), SSD de IOPS provisionadas (io1) o HDD de rendimiento optimizado (st1). Puedes emparejar un disco EBS con Amazon Simple Storage Service (Amazon S3) para link:concept-data-tiering.html["almacenamiento de objetos de bajo costo"].
 
 
 NOTE: No se recomienda la organización de datos en niveles de almacenamiento de objetos cuando se utilizan discos duros optimizados para rendimiento (st1).

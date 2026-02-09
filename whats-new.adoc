@@ -20,6 +20,30 @@ Las mejoras descritas en esta página son específicas para la administración d
 
 
 
+== 9 de febrero de 2026
+
+
+
+=== Soporte para Google Cloud Infrastructure Manager
+
+Cloud Volumes ONTAP 9.16.1 y versiones posteriores ahora admiten https://docs.cloud.google.com/infrastructure-manager/docs/overview["Google Cloud Infrastructure Manager"^] (IM) en lugar de https://docs.cloud.google.com/deployment-manager/docs/deprecations["Cloud Deployment Manager"^] (DM) para nuevas implementaciones en Google Cloud. Google va a dejar de usar Deployment Manager como servicio de infraestructura en un futuro próximo para pasarse a Infrastructure Manager, que es más avanzado.
+
+Ahora, despliega automáticamente Cloud Volumes ONTAP para usar Infrastructure Manager o cambia tus implementaciones existentes en Deployment Manager a Infrastructure Manager ejecutando una herramienta de conversión. La conversión es un proceso único, después del cual tus sistemas empezarán a usar automáticamente Infrastructure Manager. Consulta https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-gcp-dm-im-conv.html["Configura las implementaciones existentes de Cloud Volumes ONTAP para Google Cloud Infrastructure Manager"^] para ver instrucciones sobre cómo ejecutar la herramienta de transición.
+
+Los sistemas Cloud Volumes ONTAP que utilizan Infrastructure Manager usan buckets de Google Cloud Storage para almacenar datos y registros en la zona del primer despliegue para guardar registros de despliegue, que se reutilizan para despliegues posteriores. Es posible que incurras en costes adicionales por estos buckets, pero no edites ni elimines los buckets ni su contenido:
+
+* `gs://netapp-cvo-infrastructure-manager-<project id>/dm-to-im-convert`: para almacenar archivos Terraform de Cloud Volumes ONTAP
+* `<gcp project number>-<region>-blueprint-config`: para almacenar artefactos de Google Cloud Terraform
+
+
+.Enlaces relacionados
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-getting-started-gcp.html["Primeros pasos con Cloud Volumes ONTAP en Google Cloud"^]
+* https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#console-agent-4-2-0["NetApp Console Agent 4.2.0 Notas de la versión"^]
+* https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#gcp-permissions-change-log["Permisos necesarios para Google Cloud Infrastructure Manager"^]
+
+
+
+
 == 12 de enero de 2026
 
 
@@ -1487,7 +1511,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html[
 
 === Recuperación instantánea del glaciar S3
 
-Ahora puede almacenar datos escalonados en la clase de almacenamiento Amazon S3 Glacier Instant Retrieval.
+Ahora puedes almacenar datos por niveles en la clase de almacenamiento Amazon Simple Storage Service (Amazon S3) Glacier Instant Retrieval.
 
 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-tiering.html#changing-the-storage-class-for-tiered-data["Aprenda a cambiar la clase de almacenamiento para datos en niveles"] .
 
@@ -1861,7 +1885,7 @@ El tipo de máquina custom-4-16384 ya no es compatible con los nuevos sistemas C
 
 Si tiene un sistema existente ejecutándose en este tipo de máquina, puede seguir usándolo, pero le recomendamos cambiar al tipo de máquina n2-standard-4.
 
-https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html["Ver configuraciones compatibles con Cloud Volumes ONTAP en GCP"^] .
+https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html["Ver configuraciones compatibles con Cloud Volumes ONTAP en Google Cloud"^].
 
 
 
@@ -2056,10 +2080,10 @@ image:screenshot_azure_az.gif["Una captura de pantalla de la lista desplegable Z
 
 === Discos más grandes en Google Cloud
 
-Cloud Volumes ONTAP ahora admite discos de 64 TB en GCP.
+Cloud Volumes ONTAP ahora admite discos de 64 TB en Google Cloud.
 
 
-NOTE: La capacidad máxima del sistema solo con discos se mantiene en 256 TB debido a los límites de GCP.
+NOTE: La capacidad máxima del sistema solo con discos sigue siendo de 256 TB debido a los límites de Google Cloud.
 
 
 

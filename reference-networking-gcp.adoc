@@ -236,7 +236,7 @@ La autenticación del usuario falla y los siguientes servicios permanecen no dis
 | \ https://mysupport.netapp.com/aods/asupmessage \ https://mysupport.netapp.com/asupprod/post/1.0/postAsup | AutoSupport | Se utiliza para enviar datos de telemetría de AutoSupport al soporte de NetApp . | Modos estándar y restringido. | La información de AutoSupport sigue sin entregarse. 
 
 
-| \ https://www.googleapis.com/compute/v1/projects/ \ https://cloudresourcemanager.googleapis.com/v1/projects \ https://www.googleapis.com/compute/beta \ https://storage.googleapis.com/storage/v1 \ https://www.googleapis.com/storage/v1 \ https://iam.googleapis.com/v1 \ https://cloudkms.googleapis.com/v1 \ https://www.googleapis.com/deploymentmanager/v2/projects \ https://compute.googleapis.com/compute/v1 | Google Cloud (uso comercial). | Comunicación con los servicios de Google Cloud. | Modos estándar, restringido y privado. | Cloud Volumes ONTAP no puede comunicarse con el servicio Google Cloud para realizar operaciones específicas para la consola en Google Cloud. 
+| https://cloudbuild.googleapis.com/v1 (solo para despliegues en modo privado) https://cloudkms.googleapis.com/v1 https://cloudresourcemanager.googleapis.com/v1/projects https://compute.googleapis.com/compute/v1 https://www.googleapis.com/compute/beta https://www.googleapis.com/compute/v1/projects/ https://www.googleapis.com/deploymentmanager/v2/projects https://www.googleapis.com/storage/v1 https://www.googleapis.com/upload/storage/v1 https://config.googleapis.com/v1 https://iam.googleapis.com/v1 https://storage.googleapis.com/storage/v1 | Google Cloud (uso comercial). | Comunicación con los servicios de Google Cloud. | Modos estándar, restringido y privado. | Cloud Volumes ONTAP no puede comunicarse con el servicio Google Cloud para realizar operaciones específicas para la consola en Google Cloud. 
 |===
 
 
@@ -526,7 +526,7 @@ Para obtener información sobre cómo configurar servidores proxy para el agente
 .Configurar etiquetas de red para Cloud Volumes ONTAP en Google Cloud
 Durante la configuración del proxy transparente del agente de la consola, el administrador agrega una etiqueta de red para Google Cloud.  Debe obtener y agregar manualmente la misma etiqueta de red para su configuración de Cloud Volumes ONTAP .  Esta etiqueta es necesaria para que el servidor proxy funcione correctamente.
 
-. En la consola de Google Cloud, ubique su sistema Cloud Volumes ONTAP .
+. En Google Cloud Console, localiza tu sistema Cloud Volumes ONTAP.
 . Vaya a *Detalles > Redes > Etiquetas de red*.
 . Agregue la etiqueta utilizada para el agente de consola y guarde la configuración.
 

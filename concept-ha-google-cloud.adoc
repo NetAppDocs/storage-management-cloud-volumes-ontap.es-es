@@ -57,7 +57,7 @@ NOTE: Para Cloud Volumes ONTAP 9.10.0 y versiones anteriores, se instaló Debian
 
 --
 Actualizaciones:: Cuando actualiza Cloud Volumes ONTAP, la NetApp Console también actualiza la instancia del mediador según sea necesario.
-Acceso a la instancia:: Para Debian, el usuario de la nube predeterminado es `admin` .  Google Cloud crea y agrega un certificado para el `admin` usuario cuando se solicita acceso SSH a través de la consola de Google Cloud o la línea de comandos de gcloud.  Puedes especificar `sudo` para obtener privilegios de root.
+Acceso a la instancia:: Para Debian, el usuario de nube por defecto es `admin`. Google Cloud crea y añade un certificado para el `admin` usuario cuando se solicita acceso SSH a través de Google Cloud Console o la línea de comandos gcloud. Puedes especificar `sudo` para obtener privilegios de root.
 Agentes de terceros:: Los agentes de terceros o las extensiones de VM no son compatibles con la instancia del mediador.
 
 

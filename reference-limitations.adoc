@@ -31,9 +31,9 @@ NOTE: La capacidad de crear volúmenes FlexGroup en la consola está prevista pa
 
 == La consola no es compatible con S3 con Cloud Volumes ONTAP
 
-Si bien Cloud Volumes ONTAP admite S3 como una opción para el almacenamiento escalable, la consola no proporciona ninguna capacidad de administración para esta función.  El uso de la CLI es la mejor práctica para configurar el acceso del cliente S3 desde Cloud Volumes ONTAP.  Para obtener más detalles, consulte la http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-s3-cg/home.html["Guía de configuración de energía de S3"^] .
+Aunque Cloud Volumes ONTAP admite S3 como opción para el almacenamiento de escalado horizontal, la Console no proporciona ninguna capacidad de gestión para esta función. Usar la CLI es la mejor práctica para configurar el acceso de cliente S3 desde Cloud Volumes ONTAP. Para detalles, consulta el http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-s3-cg/home.html["Guía de configuración de ONTAP S3"^].
 
-link:concept-client-protocols.html["Obtenga más información sobre la compatibilidad de Cloud Volumes ONTAP con S3 y otros protocolos de cliente"] .
+link:concept-client-protocols.html["Conoce más sobre la compatibilidad de Cloud Volumes ONTAP con ONTAP S3 y otros protocolos de cliente"].
 
 
 

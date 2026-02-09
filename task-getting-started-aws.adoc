@@ -34,7 +34,7 @@ La consola ofrece paquetes preconfigurados que se adaptan a los requisitos de su
 +
 Este paso no es necesario si está implementando Cloud Volumes ONTAP en una ubicación donde no hay acceso a Internet disponible.
 
-. Configure un punto final de VPC para el servicio S3.
+. Configura un punto final de VPC para el servicio Amazon Simple Storage Service (Amazon S3).
 +
 Se requiere un punto final de VPC si desea organizar en niveles datos fríos de Cloud Volumes ONTAP en un almacenamiento de objetos de bajo costo.
 

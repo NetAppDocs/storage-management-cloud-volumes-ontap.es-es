@@ -30,7 +30,7 @@ Según el estilo de implementación del agente de consola, es posible que se deb
 
 == Imágenes
 
-Tanto Cloud Volumes ONTAP como la consola utilizan imágenes de un proyecto dentro de GCP administrado por NetApp.  Esto puede afectar la implementación del agente de consola y Cloud Volumes ONTAP, si su organización tiene una política que bloquea el uso de imágenes que no están alojadas dentro de la organización.
+Tanto Cloud Volumes ONTAP como la Console utilizan imágenes de un proyecto dentro de Google Cloud que está gestionado por NetApp. Esto puede afectar el despliegue del agente de la Console y de Cloud Volumes ONTAP, si tu organización tiene una política que bloquea el uso de imágenes que no están alojadas dentro de la organización.
 
 Puede implementar un agente de consola manualmente mediante el método de instalación manual, pero Cloud Volumes ONTAP también necesitará extraer imágenes del proyecto de NetApp .  Debe proporcionar una lista permitida para implementar un agente de consola y Cloud Volumes ONTAP.
 
@@ -54,7 +54,7 @@ A continuación se definen ejemplos de las reglas necesarias para extraer estas 
 
 == Políticas perimetrales de controles de servicio de VPC
 
-Las políticas permiten excepciones a los conjuntos de reglas de controles de servicio de VPC.  Para obtener más información sobre las políticas, visite el https://cloud.google.com/vpc-service-controls/docs/ingress-egress-rules#policy-model["Documentación de la política de controles de servicio de GCP VPC"^] .
+Las políticas permiten excepciones a los conjuntos de reglas de VPC Service Controls. Para obtener más información sobre las políticas, por favor visita https://cloud.google.com/vpc-service-controls/docs/ingress-egress-rules#policy-model["Documentación de la política de Service Controls de Google Cloud VPC"^].
 
 Para configurar las políticas que requiere la consola, navegue al perímetro de controles de servicio de VPC dentro de su organización y agregue las siguientes políticas.  Los campos deben coincidir con las opciones proporcionadas en la página de políticas de Controles de servicio de VPC.  Tenga en cuenta también que *todas* las reglas son obligatorias y que los parámetros *OR* deben utilizarse en el conjunto de reglas.
 
