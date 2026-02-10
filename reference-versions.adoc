@@ -16,7 +16,9 @@ summary: La NetApp Console le permite elegir entre varias versiones diferentes d
 [role="lead"]
 La NetApp Console le permite elegir entre varias versiones diferentes de ONTAP cuando agrega un sistema Cloud Volumes ONTAP .
 
-Las versiones de Cloud Volumes ONTAP distintas a las que se enumeran aquí no están disponibles para nuevas implementaciones.  Para obtener información sobre la actualización, consultelink:task-updating-ontap-cloud.html#supported-upgrade-paths["Rutas de actualización admitidas"] .
+Las versiones de Cloud Volumes ONTAP distintas de las enumeradas aquí no están disponibles para nuevas implementaciones. El parche o la versión genérica (General Availability) en una versión aquí representa la versión base disponible para la implementación. Para detalles sobre los parches disponibles, consulta el  https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-new.html["notas de la versión con control de versiones"^] de cada versión.
+
+Para información sobre la actualización, consulta link:task-updating-ontap-cloud.html#supported-upgrade-paths["Rutas de actualización admitidas"].
 
 ifdef::aws[]
 
@@ -27,16 +29,17 @@ ifdef::aws[]
 Nodo único::
 +
 --
+* 9.18.1
 * 9.17.1 P1
-* 9.16.1 GA
-* 9.15.1 GA
+* 9.16.1
+* 9.15.1
 * 9.15.0 P1
-* 9.14.1 GA
-* 9.14.1 RC1
-* 9.14.0 GA
-* 9.13.1 GA
-* 9.12.1 GA
-* 9.12.1 RC1
+* 9.14.1
+* 9.14.1
+* 9.14.0
+* 9.13.1
+* 9.12.1
+* 9.12.1
 * 9.12.0 P1
 * 9.11.1 P3
 * 9.10.1
@@ -50,16 +53,17 @@ Nodo único::
 par HA::
 +
 --
+* 9.18.1
 * 9.17.1 P1
-* 9.16.1 GA
-* 9.15.1 GA
+* 9.16.1
+* 9.15.1
 * 9.15.0 P1
-* 9.14.1 GA
-* 9.14.1 RC1
-* 9.14.0 GA
-* 9.13.1 GA
-* 9.12.1 GA
-* 9.12.1 RC1
+* 9.14.1
+* 9.14.1
+* 9.14.0
+* 9.13.1
+* 9.12.1
+* 9.12.1
 * 9.12.0 P1
 * 9.11.1 P3
 * 9.10.1
@@ -83,7 +87,8 @@ ifdef::azure[]
 Nodo único::
 +
 --
-* 9.17.1 RC1
+* 9.18.1
+* 9.17.1 P1
 * 9.16.1 P3
 * 9.15.1 P10
 * 9.14.1 P13
@@ -95,7 +100,8 @@ Nodo único::
 par HA::
 +
 --
-* 9.17.1 RC1
+* 9.18.1
+* 9.17.1 P1
 * 9.16.1 P3
 * 9.15.1 P10
 * 9.14.1 P13
@@ -117,16 +123,16 @@ ifdef::gcp[]
 Nodo único::
 +
 --
-* 9.17.1 RC1
-* 9.16.1 GA
-* 9.15.1 GA
+* 9.17.1 P1
+* 9.16.1
+* 9.15.1
 * 9.15.0 P1
-* 9.14.1 GA
-* 9.14.1 RC1
-* 9.14.0 GA
-* 9.13.1 GA
-* 9.12.1 GA
-* 9.12.1 RC1
+* 9.14.1
+* 9.14.1
+* 9.14.0
+* 9.13.1
+* 9.12.1
+* 9.12.1
 * 9.12.0 P1
 * 9.11.1 P3
 * 9.10.1
@@ -139,16 +145,16 @@ Nodo único::
 par HA::
 +
 --
-* 9.17.1 RC1
-* 9.16.1 GA
-* 9.15.1 GA
+* 9.17.1 P1
+* 9.16.1
+* 9.15.1
 * 9.15.0 P1
-* 9.14.1 GA
-* 9.14.1 RC1
-* 9.14.0 GA
-* 9.13.1 GA
-* 9.12.1 GA
-* 9.12.1 RC1
+* 9.14.1
+* 9.14.1
+* 9.14.0
+* 9.13.1
+* 9.12.1
+* 9.12.1
 * 9.12.0 P1
 * 9.11.1 P3
 * 9.10.1
