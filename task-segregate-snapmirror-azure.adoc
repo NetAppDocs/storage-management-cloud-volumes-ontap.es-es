@@ -131,7 +131,7 @@ dest::> network ipspace create -ipspace <new_ipspace>
 ----
 dest::> network port show
 ----
-. Para los sistemas de nodo único, el puerto recién agregado es _e0b_.  Para las implementaciones de pares HA con discos administrados, el puerto recientemente agregado es _e0d_.  Para las implementaciones de pares HA con blobs de página, el puerto recientemente agregado es _e0e_.  Utilice el nombre del nodo, no el nombre de la máquina virtual.  Encuentre el nombre del nodo ejecutando `node show` .
+. Para los sistemas de nodo único, el puerto recién añadido es _e0b_. Para las implementaciones de HA-pair con discos gestionados, el puerto recién añadido es _e0d_. Para las implementaciones de HA-pair con page blobs, el puerto recién añadido es _e0e_. Usa el nombre de nodo, no el nombre de la VM. Encuentra el nombre de nodo ejecutando `node show`.
 +
 [source, cli]
 ----

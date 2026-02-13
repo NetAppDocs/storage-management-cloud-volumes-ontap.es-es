@@ -16,7 +16,7 @@ summary: La NetApp Console no ​​proporciona ningún tipo de soporte de confi
 [role="lead"]
 La NetApp Console no ​​ofrece soporte de configuración u orquestación para la recuperación ante desastres de máquinas virtuales de almacenamiento (SVM).  Para realizar estas tareas, utilice el Administrador del sistema ONTAP o la CLI de ONTAP .
 
-Si configura la replicación de SnapMirror SVM entre dos sistemas Cloud Volumes ONTAP , la replicación debe ser entre dos sistemas de pares de alta disponibilidad o dos sistemas de nodo único.  No se puede configurar la replicación SVM de SnapMirror entre un par de alta disponibilidad y un sistema de nodo único.
+Si configuras la replicación de SnapMirror SVM entre dos sistemas Cloud Volumes ONTAP, la replicación debe ser entre dos sistemas en pareja de alta disponibilidad o dos sistemas de un solo nodo. No puedes configurar la replicación de SnapMirror SVM entre una pareja de alta disponibilidad y un sistema de un solo nodo.
 
 Consulte los siguientes documentos para obtener las instrucciones de la CLI de ONTAP .
 

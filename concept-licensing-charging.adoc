@@ -49,7 +49,7 @@ Su licencia siempre se cobra primero, pero se le cobrará la tarifa por hora del
 
 
 * Si tiene un contrato anual de un mercado, _todos_ los sistemas Cloud Volumes ONTAP que implemente se cobrarán según ese contrato.  No es posible combinar un contrato de mercado anual con BYOL.
-* En las regiones de China, solo se admiten sistemas de un solo nodo con BYOL. Las implementaciones en China están exentas de las restricciones de licencias BYOL.
+* Sólo se admiten sistemas de nodo único con BYOL en las regiones de China. Las implementaciones en la región de China están exentas de las restricciones de licencia BYOL.
 
 
 
@@ -133,7 +133,7 @@ Para obtener información sobre los límites de capacidad de cada proveedor de n
 
 == Número máximo de sistemas
 
-Con el licenciamiento basado en capacidad, el número máximo de sistemas Cloud Volumes ONTAP está limitado a 24 por organización de NetApp Console . Un _sistema_ es un par de Cloud Volumes ONTAP HA, un sistema de nodo único de Cloud Volumes ONTAP o cualquier máquina virtual de almacenamiento adicional que usted cree. La VM de almacenamiento predeterminada no cuenta para el límite. Este límite se aplica a todos los modelos de licencia.
+Con las licencias basadas en capacidad, el número máximo de sistemas Cloud Volumes ONTAP está limitado a 24 por organización de NetApp Console. Un _sistema_ es un par Cloud Volumes ONTAP HA, un sistema Cloud Volumes ONTAP de un solo nodo o cualquier instancia de VM de almacenamiento adicional que crees. La instancia de VM de almacenamiento predeterminada no cuenta para el límite. Este límite se aplica a todos los modelos de licencia.
 
 Por ejemplo, digamos que tienes tres sistemas:
 
@@ -143,7 +143,7 @@ Este sistema cuenta como un sistema.
 
 * Un sistema Cloud Volumes ONTAP de un solo nodo con dos máquinas virtuales de almacenamiento (la máquina virtual de almacenamiento predeterminada, más una máquina virtual de almacenamiento adicional que usted creó)
 +
-Este sistema cuenta como dos sistemas: uno para el sistema de nodo único y otro para la máquina virtual de almacenamiento adicional.
+Este sistema cuenta como dos sistemas: uno para el sistema de nodo único y uno para la VM de almacenamiento adicional.
 
 * Un par de Cloud Volumes ONTAP HA con tres máquinas virtuales de almacenamiento (la máquina virtual de almacenamiento predeterminada, más dos máquinas virtuales de almacenamiento adicionales que usted creó)
 +

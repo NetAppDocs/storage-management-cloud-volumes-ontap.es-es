@@ -32,7 +32,7 @@ Todas las versiones de Cloud Volumes ONTAP anteriores a 9.9.0 admiten una máqui
 
 == Crear una máquina virtual de almacenamiento
 
-Según su configuración y tipo de licencia, puede crear varias máquinas virtuales de almacenamiento en un sistema de nodo único o en una configuración de alta disponibilidad (HA) mediante las API para la NetApp Console.
+En función de tu configuración y tipo de licencia, puedes crear varias máquinas virtuales de almacenamiento en un sistema de nodo único o en una configuración de alta disponibilidad (HA) usando las API para la NetApp Console.
 
 .Acerca de esta tarea
 Cuando crea máquinas virtuales de almacenamiento mediante las API, además de configurar las interfaces de red necesarias, la consola también modifica las `default-data-files` políticas en las máquinas virtuales de almacenamiento de datos eliminando los siguientes servicios del LIF de datos NAS y agregándolos al LIF de datos iSCSI que se utiliza para las conexiones de administración salientes:
@@ -49,9 +49,9 @@ El agente de consola requiere permisos específicos para crear máquinas virtual
 
 
 
-=== Sistema de nodo único
+=== sistema de un solo nodo
 
-Utilice la siguiente llamada API para crear una máquina virtual de almacenamiento en un sistema de un solo nodo.
+Usa la siguiente llamada a la API para crear una máquina virtual de almacenamiento en un sistema de nodo único.
 
 `POST /azure/vsa/working-environments/{workingEnvironmentId}/svm`
 
@@ -81,7 +81,7 @@ Incluya los siguientes parámetros en el cuerpo de la solicitud:
 ----
 
 
-== Administrar máquinas virtuales de almacenamiento en sistemas de un solo nodo y pares de alta disponibilidad
+== Administra máquinas virtuales de almacenamiento en sistemas de nodo único y pares de alta disponibilidad
 
 Al utilizar las API, puede cambiar el nombre y eliminar máquinas virtuales de almacenamiento tanto en configuraciones de nodo único como de alta disponibilidad.
 
@@ -95,7 +95,7 @@ El agente de consola requiere permisos específicos para administrar las máquin
 Para cambiar el nombre de una máquina virtual de almacenamiento, debe proporcionar los nombres de la máquina virtual de almacenamiento existente y de la nueva máquina virtual de almacenamiento como parámetros.
 
 .Pasos
-* Utilice la siguiente llamada API para cambiar el nombre de una máquina virtual de almacenamiento en un sistema de un solo nodo:
+* Usa la siguiente llamada a la API para cambiar el nombre de una máquina virtual de almacenamiento en un sistema de nodo único:
 +
 `PUT /azure/vsa/working-environments/{workingEnvironmentId}/svm`
 
@@ -134,7 +134,7 @@ Incluya los siguientes parámetros en el cuerpo de la solicitud:
 En una configuración de nodo único o HA, puede eliminar una máquina virtual de almacenamiento si no tiene ningún volumen activo.
 
 .Pasos
-* Utilice la siguiente llamada API para eliminar una máquina virtual de almacenamiento en un sistema de un solo nodo:
+* Usa la siguiente llamada a la API para eliminar una máquina virtual de almacenamiento en un sistema de nodo único:
 +
 `DELETE /azure/vsa/working-environments/{workingEnvironmentId}/svm/{svmName}`
 

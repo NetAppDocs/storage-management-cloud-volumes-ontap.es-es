@@ -70,9 +70,9 @@ ifdef::azure[]
 
 == Almacenamiento de Azure
 
-En Azure, un agregado puede contener hasta 12 discos, todos del mismo tamaño.  El tipo de disco y el tamaño máximo del disco dependen de si utiliza un sistema de nodo único o un par de alta disponibilidad:
+En Azure, un agregado puede contener hasta 12 discos que sean todos del mismo tamaño. El tipo de disco y el tamaño máximo de disco dependen de si usas un sistema de nodo único o un par de HA:
 
-Sistemas de nodo único:: Los sistemas de nodo único pueden usar estos tipos de discos administrados de Azure:
+Sistemas de nodo único:: Los sistemas de nodo único pueden usar estos tipos de Azure Managed Disks:
 +
 --
 * Los _discos administrados SSD Premium_ brindan un alto rendimiento para cargas de trabajo intensivas en E/S a un costo mayor.

@@ -62,10 +62,10 @@ Tipo de máquina virtual:: Mire los tipos de máquinas virtuales compatibles en 
 
 
 --
-Tipo de disco de Azure con sistemas de nodo único:: Cuando crea volúmenes para Cloud Volumes ONTAP, debe elegir el almacenamiento en la nube subyacente que Cloud Volumes ONTAP utiliza como disco.
+Tipo de disco Azure con sistemas de nodo único:: Cuando crea volúmenes para Cloud Volumes ONTAP, debe elegir el almacenamiento en la nube subyacente que Cloud Volumes ONTAP utiliza como disco.
 +
 --
-Los sistemas de nodo único pueden usar estos tipos de discos administrados de Azure:
+Los sistemas de nodo único pueden usar estos tipos de Azure Managed Disks:
 
 * Los _discos administrados SSD Premium_ brindan un alto rendimiento para cargas de trabajo intensivas en E/S a un costo mayor.
 * Los discos administrados SSD v2 Premium brindan un mayor rendimiento con menor latencia a un menor costo, en comparación con los discos administrados SSD Premium.

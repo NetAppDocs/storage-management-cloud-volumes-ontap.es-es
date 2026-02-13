@@ -62,7 +62,7 @@ endif::gcp[]
 
 ifdef::aws[]
 
-* Un LIF de gestión de SVM en sistemas de nodo único en AWS
+* Un LIF de gestión de SVM en sistemas de un solo nodo en AWS
 
 
 endif::aws[]

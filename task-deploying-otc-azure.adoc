@@ -14,7 +14,7 @@ summary: Puede iniciar un solo sistema Cloud Volumes ONTAP en Azure creando un s
 
 
 [role="lead"]
-Puede iniciar un sistema de nodo único o un par de alta disponibilidad en Azure creando un sistema Cloud Volumes ONTAP en NetApp Console.
+Puedes lanzar un sistema de nodo único o un par de alta disponibilidad en Azure creando un sistema Cloud Volumes ONTAP en NetApp Console.
 
 .Antes de empezar
 Necesitará lo siguiente antes de comenzar.
@@ -51,7 +51,7 @@ No se recomienda implementar Cloud Volumes ONTAP en un grupo de recursos compart
 
 == Lanzar un sistema Cloud Volumes ONTAP de un solo nodo en Azure
 
-Si desea iniciar un sistema Cloud Volumes ONTAP de un solo nodo en Azure, debe crear un sistema de un solo nodo en la consola.
+Si quieres lanzar un sistema Cloud Volumes ONTAP de un solo nodo en Azure, necesitas crear un sistema de un solo nodo en la NetApp Console.
 
 .Pasos
 . Desde el menú de navegación de la izquierda, seleccione *Almacenamiento > Administración*.

@@ -106,13 +106,13 @@ Para obtener información sobre cómo configurar servidores proxy, consulte la h
 
 La consola asigna automáticamente la cantidad necesaria de direcciones IP privadas a Cloud Volumes ONTAP.  Debe asegurarse de que su red tenga suficientes direcciones IP privadas disponibles.
 
-La cantidad de LIF que la consola asigna para Cloud Volumes ONTAP depende de si implementa un sistema de nodo único o un par de alta disponibilidad.  Una LIF es una dirección IP asociada a un puerto físico.
+El número de LIFs que la NetApp Console asigna para Cloud Volumes ONTAP depende de si despliegas un sistema de nodo único o un par HA. Un LIF es una dirección IP asociada con un puerto físico.
 
 
 
-==== Direcciones IP para un sistema de un solo nodo
+==== Direcciones IP para un sistema de nodo único
 
-La consola asigna 6 direcciones IP a un sistema de un solo nodo.
+NetApp Console asigna 6 direcciones IP a un sistema de nodo único.
 
 La siguiente tabla proporciona detalles sobre los LIF que están asociados con cada dirección IP privada.
 
@@ -142,7 +142,7 @@ La siguiente tabla proporciona detalles sobre los LIF que están asociados con c
 
 ==== Direcciones IP para pares HA
 
-Los pares HA requieren más direcciones IP que un sistema de un solo nodo.  Estas direcciones IP se distribuyen en diferentes interfaces Ethernet, como se muestra en la siguiente imagen:
+Las parejas de alta disponibilidad necesitan más direcciones IP que un sistema de un solo nodo. Estas direcciones IP están repartidas en diferentes interfaces ethernet, como se muestra en la siguiente imagen:
 
 image:diagram_cvo_aws_networking_ha.png["Un diagrama que muestra eth0, eth1, eth2 en una configuración de Cloud Volumes ONTAP HA en AWS."]
 

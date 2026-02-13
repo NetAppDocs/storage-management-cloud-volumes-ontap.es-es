@@ -153,7 +153,7 @@ Tenga en cuenta los siguientes requisitos para el almacén de claves:
 +
 *** *Eliminación suave* (esta opción está habilitada de manera predeterminada, pero no debe deshabilitarse)
 *** *Protección de purga*
-*** *Cifrado de disco de Azure para cifrado de volumen* (para sistemas de nodo único, pares de alta disponibilidad en múltiples zonas e implementaciones de alta disponibilidad de una sola zona)
+*** *Azure Disk Encryption para el cifrado de volúmenes* (para sistemas de nodo único, pares HA en varias zonas y implementaciones HA de una sola AZ)
 +
 
 NOTE: El uso de claves de cifrado administradas por el cliente de Azure depende de que el cifrado de disco de Azure esté habilitado para el almacén de claves.

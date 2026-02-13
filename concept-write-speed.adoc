@@ -68,7 +68,7 @@ ifdef::aws[]
 
 ==== AWS
 
-Si utiliza un sistema de nodo único, Cloud Volumes ONTAP admite alta velocidad de escritura con todos los tipos de instancias.
+Si usas un sistema de un solo nodo, Cloud Volumes ONTAP admite alta velocidad de escritura con todos los tipos de instancia.
 
 A partir de la versión 9.8, Cloud Volumes ONTAP admite una alta velocidad de escritura con pares HA cuando se utilizan casi todos los tipos de instancias EC2 compatibles, excepto m5.xlarge y r5.xlarge.
 
@@ -82,7 +82,7 @@ ifdef::azure[]
 
 ==== Azur
 
-Si utiliza un sistema de nodo único, Cloud Volumes ONTAP admite alta velocidad de escritura con todos los tipos de máquinas virtuales.
+Si usas un sistema de un solo nodo, Cloud Volumes ONTAP admite alta velocidad de escritura con todos los tipos de VM.
 
 Si usa un par HA, Cloud Volumes ONTAP admite alta velocidad de escritura con varios tipos de máquinas virtuales, a partir de la versión 9.8.  Ir a la https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html["Notas de la versión de Cloud Volumes ONTAP"^] para ver los tipos de máquinas virtuales que admiten alta velocidad de escritura.
 
@@ -94,7 +94,7 @@ ifdef::gcp[]
 
 ==== Google Cloud
 
-Si utiliza un sistema de nodo único, Cloud Volumes ONTAP admite alta velocidad de escritura con todos los tipos de máquinas.
+Si usas un sistema de un solo nodo, Cloud Volumes ONTAP admite alta velocidad de escritura con todos los tipos de máquinas.
 
 Si usa un par HA, Cloud Volumes ONTAP admite alta velocidad de escritura con varios tipos de máquinas virtuales, a partir de la versión 9.13.0.  Ir a la https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html#supported-configurations-by-license["Notas de la versión de Cloud Volumes ONTAP"^] para ver los tipos de máquinas virtuales que admiten alta velocidad de escritura.
 

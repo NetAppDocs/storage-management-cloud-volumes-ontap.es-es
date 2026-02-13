@@ -24,7 +24,7 @@ http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/GUID-3F50DE15-0D
 * Cambiar el tipo de instancia puede afectar los cargos por servicios de AWS.
 * La operación reinicia Cloud Volumes ONTAP.
 +
-En los sistemas de nodo único, la E/S se interrumpe.
+En los sistemas de nodo único, la I/O se interrumpe.
 
 +
 Para los pares HA, el cambio no es disruptivo.  Los pares HA continúan proporcionando datos.

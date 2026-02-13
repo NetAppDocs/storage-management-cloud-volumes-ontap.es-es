@@ -172,7 +172,7 @@ link:https://docs.netapp.com/us-en/keystone-staas/index.html["Obtenga más infor
 
 === Configuraciones compatibles
 
-Las suscripciones de Keystone son compatibles con pares HA.  Esta opción de licencia no es compatible con sistemas de nodo único en este momento.
+Las suscripciones Keystone se admiten con pares de HA. Esta opción de licencia no es compatible con sistemas de nodo único en este momento.
 
 
 

@@ -44,7 +44,7 @@ Cada instancia EC2 admite una cantidad máxima de direcciones IPv4 privadas por 
 
 Las direcciones IPv4 privadas deben asignarse al puerto e0a en AWS antes de crear LIF para la nueva VM de almacenamiento.
 
-Tenga en cuenta que un LIF de administración opcional para una máquina virtual de almacenamiento requiere una dirección IP privada en un sistema de nodo único y en un par de alta disponibilidad en una única zona de disponibilidad.  Este LIF de gestión proporciona una conexión a herramientas de gestión como SnapCenter.
+Ten en cuenta que una LIF de gestión opcional para una VM de almacenamiento requiere una dirección IP privada en un sistema de nodo único y en un par HA en una sola AZ. Esta LIF de gestión proporciona una conexión a herramientas de gestión como SnapCenter.
 
 .Pasos
 . Inicie sesión en AWS y abra el servicio EC2.
@@ -72,7 +72,7 @@ Si una dirección IP no está en uso, puede usarla con la nueva máquina virtual
 
 . De regreso en la consola de AWS, haga clic en *Asignar nueva dirección IP* para asignar direcciones IP adicionales según la cantidad que necesite para la nueva máquina virtual de almacenamiento.
 +
-** Sistema de nodo único: se requiere una IP privada secundaria no utilizada.
+** sistema de nodo único: se requiere una dirección IP privada secundaria sin usar.
 +
 Se requiere una IP privada secundaria opcional si desea crear un LIF de administración en la VM de almacenamiento.
 
@@ -90,9 +90,9 @@ Se requiere una IP privada secundaria opcional si desea crear un LIF de administ
 
 
 
-== Crear una máquina virtual de almacenamiento en un sistema de un solo nodo
+== Crea una máquina virtual de almacenamiento en un sistema de nodo único
 
-Estos pasos crean una nueva máquina virtual de almacenamiento en un sistema de nodo único.  Se requiere una dirección IP privada para crear un LIF NAS y se necesita otra dirección IP privada opcional si desea crear un LIF de administración.
+Estos pasos crean una nueva VM de almacenamiento en un sistema de nodo único. Se necesita una dirección IP privada para crear una LIF de NAS y otra dirección IP privada opcional si quieres crear una LIF de gestión.
 
 .Pasos
 . Cree la máquina virtual de almacenamiento y una ruta a la máquina virtual de almacenamiento.

@@ -741,7 +741,6 @@
   <block id="c6a56bb8eca094c529c75a2c22c92bcc" category="inline-link-macro">Obtenga más información sobre cómo administrar licencias basadas en nodos</block>
   <block id="af13749595f5960a363d1c58fc759656" category="paragraph"><block ref="4610c02b1fca3398eed82ad29d834f6a" category="inline-link-macro-rx"></block> .</block>
   <block id="fef06ca11f3dec6f0be51962fd93388c" category="section-title">Licencias del sistema BYOL</block>
-  <block id="13bc5b36f2853d26966d43f29d5709ae" category="paragraph">Las licencias basadas en nodos se pueden adquirir a través de NetApp. El número de licencias que se pueden adquirir para un sistema de un solo nodo o un par de alta disponibilidad es ilimitado.</block>
   <block id="4c8074825211e5f0b13a055b38d5253c" category="inline-link">Disponibilidad restringida de licencias BYOL para Cloud Volumes ONTAPP</block>
   <block id="1a601f71075caa78fa676a54aaa4509e" category="admonition">NetApp ha restringido la compra, extensión y renovación de licencias BYOL. Para más información, consulte <block ref="9772ad4d3eb9076586a06f6039d490f0" category="inline-link-rx"></block> .</block>
   <block id="0e0d96905201a406bbeb8592f92f311c" category="paragraph">Una licencia basada en nodos proporciona hasta 368 TiB de capacidad para un solo nodo o par de alta disponibilidad (HA). Es posible que haya adquirido varias licencias para un sistema BYOL de Cloud Volumes ONTAP para asignar más de 368 TiB de capacidad. Por ejemplo, podría tener dos licencias para asignar hasta 736 TiB de capacidad a Cloud Volumes ONTAP. O podría tener cuatro licencias para obtener hasta 1,4 TiB.</block>
@@ -779,7 +778,6 @@
   <block id="6246af80c9ea9c857c70d2c643fcb249" category="list-text">Si excede su capacidad autorizada</block>
   <block id="fdde7a7f3783aa0ce1e585f8be9c2def" category="list-text">Si el plazo de su licencia expira</block>
   <block id="36e4d5ff70cec517180ae18f1c34d2fd" category="list-text">Si tiene un contrato anual de un mercado, _todos_ los sistemas Cloud Volumes ONTAP que implemente se cobrarán según ese contrato.  No es posible combinar un contrato de mercado anual con BYOL.</block>
-  <block id="3492eb16df3715b7fba9675a44852d3e" category="list-text">En las regiones de China, solo se admiten sistemas de un solo nodo con BYOL. Las implementaciones en China están exentas de las restricciones de licencias BYOL.</block>
   <block id="5bdd4028830bea76f4939d67baa460ff" category="paragraph">Después de la implementación, puede cambiar el paquete para un sistema Cloud Volumes ONTAP que utilice licencias basadas en capacidad.  Por ejemplo, si implementó un sistema Cloud Volumes ONTAP con el paquete Essentials, puede cambiarlo al paquete Professional si las necesidades de su negocio cambian.</block>
   <block id="63b54c0d3b4fb8e35270bfdf7b2bdcbb" category="inline-link-macro">Aprenda a cambiar los métodos de carga</block>
   <block id="ec3e25d80cfc0e5561493729eadecef7" category="paragraph"><block ref="ea19fa0e06a6047bcaabb9af62b066c3" category="inline-link-macro-rx"></block> .</block>
@@ -810,7 +808,6 @@
   <block id="35851ad4214e2cb5358ee8d010fd31e9" category="list-text">Un sistema Cloud Volumes ONTAP de un solo nodo con una máquina virtual de almacenamiento (esta es la máquina virtual de almacenamiento predeterminada que se crea cuando se implementa Cloud Volumes ONTAP)</block>
   <block id="8cff626e0f3fb63bbf88dedb4fd98712" category="paragraph">Este sistema cuenta como un sistema.</block>
   <block id="9dcf3eb2c417aa53d6bc0d88eef77b49" category="list-text">Un sistema Cloud Volumes ONTAP de un solo nodo con dos máquinas virtuales de almacenamiento (la máquina virtual de almacenamiento predeterminada, más una máquina virtual de almacenamiento adicional que usted creó)</block>
-  <block id="f37d86fef13241720dc9ebcc64539e54" category="paragraph">Este sistema cuenta como dos sistemas: uno para el sistema de nodo único y otro para la máquina virtual de almacenamiento adicional.</block>
   <block id="4c41d499b08fed91769d6d2c3b51157a" category="list-text">Un par de Cloud Volumes ONTAP HA con tres máquinas virtuales de almacenamiento (la máquina virtual de almacenamiento predeterminada, más dos máquinas virtuales de almacenamiento adicionales que usted creó)</block>
   <block id="67850a8a97f903485494427b0d760819" category="paragraph">Este sistema cuenta como tres sistemas: uno para el par HA y dos para las máquinas virtuales de almacenamiento adicionales.</block>
   <block id="a0aa07133f0223d64ee6522e4e293e43" category="inline-link">Obtenga información sobre los límites de almacenamiento para AWS, Azure y Google Cloud</block>
@@ -895,7 +892,6 @@
   <block id="46b39bb522bc6ece1b6bf75e81db3cbf" category="paragraph">La capacidad aprovisionada para cada volumen se agrega y se compara periódicamente con la capacidad comprometida en su suscripción a Keystone , y cualquier exceso se cobra como ráfaga en su suscripción a Keystone .</block>
   <block id="d9b8cca0e5a3840c29a71a4c6f13a917" category="inline-link-macro">Obtenga más información sobre NetApp Keystone</block>
   <block id="9eecbfaf12c4b441b4b80b15e69b1763" category="paragraph"><block ref="861512b606f6337e516b8d3562c115c3" category="inline-link-macro-rx"></block> .</block>
-  <block id="73511701791994e2ed3cc40c68089746" category="paragraph">Las suscripciones de Keystone son compatibles con pares HA.  Esta opción de licencia no es compatible con sistemas de nodo único en este momento.</block>
   <block id="9a762a1c55d92068610f4f2bc3e42d91" category="paragraph">Descubra cómo comenzar con una suscripción a Keystone :</block>
   <block id="a2f6a3e98ea1849ed1ab07d821bf6a18" category="section-title">Licencias basadas en nodos</block>
   <block id="ea4ba4158f6b2b895b0418072f2ba06d" category="paragraph">La licencia basada en nodos es el modelo de licencia de la generación anterior que le permitía licenciar Cloud Volumes ONTAP por nodo.  Este modelo de licencia no está disponible para nuevos clientes.  La carga por nodo ha sido reemplazada por los métodos de carga por capacidad descritos anteriormente.</block>
@@ -1095,9 +1091,6 @@
   <block id="4cb081c6302f68531ee29c8a8f6984e5" category="inline-link">Revise las configuraciones compatibles con Cloud Volumes ONTAP en AWS</block>
   <block id="ff9c48728746d281c6db8cc1fcc3bbc0" category="list-text"><block ref="ff9c48728746d281c6db8cc1fcc3bbc0" category="inline-link-rx"></block></block>
   <block id="f590584761ef1824250681bcc6312099" category="section-title">Almacenamiento de Azure</block>
-  <block id="0ff787698f3679f43f5b00772fb3fe70" category="paragraph">En Azure, un agregado puede contener hasta 12 discos, todos del mismo tamaño.  El tipo de disco y el tamaño máximo del disco dependen de si utiliza un sistema de nodo único o un par de alta disponibilidad:</block>
-  <block id="078325cc35a9c8c9290e445f32bd1855" category="list-text">Sistemas de nodo único</block>
-  <block id="f9a29c4f12d918677aac4f08102edf1b" category="list-text">Los sistemas de nodo único pueden usar estos tipos de discos administrados de Azure:</block>
   <block id="81051201caf41e5e0650e52621884bfc" category="list-text">Los _discos administrados SSD Premium_ brindan un alto rendimiento para cargas de trabajo intensivas en E/S a un costo mayor.</block>
   <block id="747d4ec445455d90b072fa27bca4895a" category="list-text">Los discos administrados SSD v2 Premium brindan un mayor rendimiento con menor latencia a un menor costo tanto para pares de nodos únicos como para pares de alta disponibilidad, en comparación con los discos administrados SSD Premium.</block>
   <block id="cc9198979434b483c842956cafd0f2b9" category="list-text">Los _discos administrados SSD estándar_ brindan un rendimiento constante para cargas de trabajo que requieren IOPS bajos.</block>
@@ -1198,15 +1191,12 @@
   <block id="ffa0b3f1336c5af7f182a50049dd44e1" category="section-title">Configuraciones que admiten alta velocidad de escritura</block>
   <block id="45802e8e05d9f48b4caa135041dde30a" category="paragraph">No todas las configuraciones de Cloud Volumes ONTAP admiten alta velocidad de escritura.  Estas configuraciones utilizan la velocidad de escritura normal de forma predeterminada.</block>
   <block id="4847e034bb0a55fcbc8a3380d6a3ab80" category="section-title">AWS</block>
-  <block id="a8acc7de0893c2c2f8404c6e10839d65" category="paragraph">Si utiliza un sistema de nodo único, Cloud Volumes ONTAP admite alta velocidad de escritura con todos los tipos de instancias.</block>
   <block id="4d000cb814de0483d25aa949e7104787" category="paragraph">A partir de la versión 9.8, Cloud Volumes ONTAP admite una alta velocidad de escritura con pares HA cuando se utilizan casi todos los tipos de instancias EC2 compatibles, excepto m5.xlarge y r5.xlarge.</block>
   <block id="d483e21ce7d44495d45b5b10d0a92f33" category="inline-link">Obtenga más información sobre las instancias de Amazon EC2 que admite Cloud Volumes ONTAP</block>
   <block id="21793edfa155319a271d33a5dc984cb2" category="paragraph"><block ref="a158a044b7464112e4aeefe5eeacf9f9" category="inline-link-rx"></block> .</block>
   <block id="3a580f142203677f1f0bc30898f63f53" category="section-title">Azur</block>
-  <block id="89347e425902e735637e8fa0c5aaea49" category="paragraph">Si utiliza un sistema de nodo único, Cloud Volumes ONTAP admite alta velocidad de escritura con todos los tipos de máquinas virtuales.</block>
   <block id="19efe5a9cd2387e8587c05321062a095" category="paragraph">Si usa un par HA, Cloud Volumes ONTAP admite alta velocidad de escritura con varios tipos de máquinas virtuales, a partir de la versión 9.8.  Ir a la<block ref="2c91cb4d7bbd40d1a3efe8602ebb4273" category="inline-link-rx"></block> para ver los tipos de máquinas virtuales que admiten alta velocidad de escritura.</block>
   <block id="56ef2682280ac110060b881925a87b80" category="section-title">Google Cloud</block>
-  <block id="543bcb76d6487a8515a8a34178160fca" category="paragraph">Si utiliza un sistema de nodo único, Cloud Volumes ONTAP admite alta velocidad de escritura con todos los tipos de máquinas.</block>
   <block id="c616f204302ed58d4618e3ded77f1858" category="paragraph">Si usa un par HA, Cloud Volumes ONTAP admite alta velocidad de escritura con varios tipos de máquinas virtuales, a partir de la versión 9.13.0.  Ir a la<block ref="44033d1307c0997839bd6a3cb420c3fd" category="inline-link-rx"></block> para ver los tipos de máquinas virtuales que admiten alta velocidad de escritura.</block>
   <block id="e4e959caff2c6b1635b2a3bea64b35f7" category="inline-link">Obtenga más información sobre los tipos de máquinas de Google Cloud que admite Cloud Volumes ONTAP</block>
   <block id="f3e658b45576241d792ccaccc236fc48" category="paragraph"><block ref="a8ee7ccc97f8f155aa3297d287b2257a" category="inline-link-rx"></block> .</block>
@@ -1281,7 +1271,6 @@
   <block id="24b9f71baa2900d2012ac1aae73c5b0a" category="list-text">Un LIF entre clústeres</block>
   <block id="aa98b7df0a0a0f2af69cbff3dcbe620e" category="list-text">Un LIF de administración de SVM en sistemas de alta disponibilidad en Azure</block>
   <block id="97c3d7abfc75b002edd7cf58c0502788" category="list-text">Un LIF de gestión de SVM en sistemas HA en Google Cloud</block>
-  <block id="11ec0bb07b34b28693ac7788a1724c9a" category="list-text">Un LIF de gestión de SVM en sistemas de nodo único en AWS</block>
   <block id="381853e687018dffdeac4977fce24c2f" category="list-text">Un LIF de gestión de nodos</block>
   <block id="2095bd4fb8c9a4c7b89de9f25bf6d2eb" category="paragraph">+ En Google Cloud, este LIF se combina con el LIF entre clústeres.</block>
   <block id="a7bc162978ef4e3f1dc9043f2f3e0ae5" category="list-text">Un LIF de datos iSCSI</block>
@@ -1430,9 +1419,6 @@
   <block id="d7920d37aa6ff40b322ef50a40844b21" category="paragraph">La opción manual puede ser una puerta de enlace NAT o un punto final de VPC de interfaz desde la subred de destino al servicio AWS EC2.  Para obtener detalles sobre los puntos finales de VPC, consulte la<block ref="ba25197f61698aac8f5883c92983c6fe" category="inline-link-rx"></block> .</block>
   <block id="af5123aa908861af9755bea4400d279c" category="section-title">Direcciones IP privadas</block>
   <block id="da4158c89ba6931cb8b401a7789d7e4e" category="paragraph">La consola asigna automáticamente la cantidad necesaria de direcciones IP privadas a Cloud Volumes ONTAP.  Debe asegurarse de que su red tenga suficientes direcciones IP privadas disponibles.</block>
-  <block id="2fe7abe9b3034da37aaab57195253d35" category="paragraph">La cantidad de LIF que la consola asigna para Cloud Volumes ONTAP depende de si implementa un sistema de nodo único o un par de alta disponibilidad.  Una LIF es una dirección IP asociada a un puerto físico.</block>
-  <block id="80c103dec1da91d2850236e737249870" category="section-title">Direcciones IP para un sistema de un solo nodo</block>
-  <block id="b810b6cdd9a4a59e14a5dcf3b202b1c0" category="paragraph">La consola asigna 6 direcciones IP a un sistema de un solo nodo.</block>
   <block id="b4f6a6268e9ed79637c765266075ab8c" category="paragraph">La siguiente tabla proporciona detalles sobre los LIF que están asociados con cada dirección IP privada.</block>
   <block id="95416f2c916dabe21f738406546ebc53" category="cell">LIF</block>
   <block id="1eb5ae63609e68a11106494d272615bf" category="cell">Gestión de clústeres</block>
@@ -1448,7 +1434,6 @@
   <block id="c3c3a9cabe89fd2f00daf39d11c934e0" category="cell">Administración de máquinas virtuales de almacenamiento</block>
   <block id="f7fb4679628db57f6d5d8a1ad673e5d9" category="cell">Un LIF de administración de máquinas virtuales de almacenamiento se utiliza con herramientas de administración como SnapCenter.</block>
   <block id="754851680a34e87fae0aca5083f7dbfe" category="section-title">Direcciones IP para pares HA</block>
-  <block id="e438a6efe5f9ab56c9230159070485aa" category="paragraph">Los pares HA requieren más direcciones IP que un sistema de un solo nodo.  Estas direcciones IP se distribuyen en diferentes interfaces Ethernet, como se muestra en la siguiente imagen:</block>
   <block id="b1ffdf627a3899d601bec66c834754cf" category="inline-image-macro">Un diagrama que muestra eth0, eth1, eth2 en una configuración de Cloud Volumes ONTAP HA en AWS.</block>
   <block id="df47a11ce6c17c82716b888fb22a8fdc" category="paragraph"><block ref="df47a11ce6c17c82716b888fb22a8fdc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="311bb2a509cb1b719973430da8bab55f" category="paragraph">La cantidad de direcciones IP privadas necesarias para un par HA depende del modelo de implementación que elija.  Un par de alta disponibilidad implementado en una _única_ zona de disponibilidad de AWS (AZ) requiere 15 direcciones IP privadas, mientras que un par de alta disponibilidad implementado en _múltiples_ AZ requiere 13 direcciones IP privadas.</block>
@@ -1563,9 +1548,7 @@
   <block id="08c0a2896fee0160c8083277678851f6" category="cell">Regiones gubernamentales del Departamento de Defensa</block>
   <block id="1d9e509ddb93a176b7d369a91ad7deaf" category="section-title">Direcciones IP</block>
   <block id="981c07ec261beb1bf77f2be566734475" category="paragraph">La consola asigna automáticamente la cantidad necesaria de direcciones IP privadas a Cloud Volumes ONTAP en Azure.  Debe asegurarse de que su red tenga suficientes direcciones IP privadas disponibles.</block>
-  <block id="866336d6018a34316f8c805183535aeb" category="paragraph">La cantidad de LIF asignadas para Cloud Volumes ONTAP depende de si implementa un sistema de nodo único o un par de alta disponibilidad.  Una LIF es una dirección IP asociada a un puerto físico.  Se requiere un LIF de administración de SVM para herramientas de administración como SnapCenter.</block>
   <block id="99b06d2510cf563a2d5a3bb1e854c0be" category="admonition">Un LIF iSCSI proporciona acceso de cliente a través del protocolo iSCSI y el sistema lo utiliza para otros flujos de trabajo de red importantes.  Estos LIF son necesarios y no deben eliminarse.</block>
-  <block id="bb5a17a234c886af3a27b429eef480fb" category="paragraph">La consola asigna 5 o 6 direcciones IP a un sistema de un solo nodo:</block>
   <block id="40800f2ceb1fadf0fb67562c1b95ca89" category="list-text">IP de gestión de clúster</block>
   <block id="a3dd4b9ad2ee69945d1ea9864c0769d4" category="list-text">IP de gestión de nodos</block>
   <block id="863bdf16cb9d771a0a419b57d8c86dee" category="list-text">IP entre clústeres para SnapMirror</block>
@@ -1574,7 +1557,6 @@
   <block id="95c154df02c50293c8e187a13129c52e" category="admonition">La IP iSCSI proporciona acceso de cliente a través del protocolo iSCSI.  El sistema también lo utiliza para otros flujos de trabajo de red importantes.  Este LIF es obligatorio y no debe eliminarse.</block>
   <block id="d8d7417bbebf0251ff6676bd41195a47" category="list-text">Gestión de SVM (opcional, no configurada de forma predeterminada)</block>
   <block id="b21010bf815253d4c8f09044c40bdb63" category="paragraph">La consola asigna direcciones IP a 4 NIC (por nodo) durante la implementación.</block>
-  <block id="77092de052018a7f39cfca1d29511eb6" category="paragraph">Tenga en cuenta que la consola crea un LIF de administración de SVM en pares de alta disponibilidad, pero no en sistemas de nodo único en Azure.</block>
   <block id="7967db50e031806cc903e7667990fa6e" category="paragraph">*NIC0*</block>
   <block id="f78bf4ed8c0f2dd904a8bd30215d4b0d" category="list-text">IP entre clústeres</block>
   <block id="f667468015bc083421f7d4ce95ec9f32" category="paragraph">*NIC1*</block>
@@ -1608,7 +1590,6 @@
   <block id="cf7b729735d2cc35e0f6084427e869b5" category="paragraph">La consola crea grupos de seguridad de Azure que incluyen las reglas de entrada y salida para que Cloud Volumes ONTAP funcione correctamente.<block ref="ed3f4fc272c739bb0d2caf8df211a918" category="inline-link-rx"></block> .</block>
   <block id="72cb359256f1b923869ffe5643075163" category="paragraph">Los grupos de seguridad de Azure para Cloud Volumes ONTAP requieren que los puertos adecuados estén abiertos para la comunicación interna entre los nodos.<block ref="9235b6a724dccf5c41be51f4736123ae" category="inline-link-rx"></block> .</block>
   <block id="e3f7f3a3bb47d39a7fd58de8d5070b2b" category="paragraph">No recomendamos modificar los grupos de seguridad predefinidos ni utilizar grupos de seguridad personalizados.  Sin embargo, si debe hacerlo, tenga en cuenta que el proceso de implementación requiere que el sistema Cloud Volumes ONTAP tenga acceso completo dentro de su propia subred.  Una vez completada la implementación, si decide modificar el grupo de seguridad de red, asegúrese de mantener abiertos los puertos del clúster y los puertos de red HA.  Esto garantiza una comunicación fluida dentro del clúster Cloud Volumes ONTAP (comunicación de cualquier tipo entre los nodos).</block>
-  <block id="4d6ace52affbdd48b9198aac825d4a2c" category="section-title">Reglas de entrada para sistemas de nodo único</block>
   <block id="302d2301b273d2d6c222fdca1f337988" category="paragraph">Cuando agrega un sistema Cloud Volumes ONTAP y elige un grupo de seguridad predefinido, puede optar por permitir el tráfico dentro de uno de los siguientes:</block>
   <block id="3ed4080616d1d3c88deef90096108130" category="list-text">*Solo VNet seleccionado*: la fuente del tráfico entrante es el rango de subred de la VNet para el sistema Cloud Volumes ONTAP y el rango de subred de la VNet donde reside el agente de la consola.  Esta es la opción recomendada.</block>
   <block id="cd8b82367babbe39683e8fb9f0c22ed5" category="list-text">*Todas las redes virtuales*: la fuente del tráfico entrante es el rango de IP 0.0.0.0/0.</block>
@@ -1685,7 +1666,6 @@
   <block id="f13dc81ff6686c567bc9cd81f1705a01" category="cell">65500 DenyAllInBound</block>
   <block id="23d79435900ea920cd046b66b4a82ad6" category="cell">Bloquear todo el resto del tráfico entrante</block>
   <block id="65c62bad4ba63ac91ba2e85d37c31509" category="section-title">Reglas de entrada para sistemas HA</block>
-  <block id="26bcfda25a06a4967c61d9fe062eb2f4" category="admonition">Los sistemas HA tienen menos reglas de entrada que los sistemas de nodo único porque el tráfico de datos entrantes pasa por Azure Standard Load Balancer.  Debido a esto, el tráfico del Load Balancer debe estar abierto, como se muestra en la regla "AllowAzureLoadBalancerInBound".</block>
   <block id="005253b174acff63249a92d1bafe61b6" category="cell">100 entrantes_443</block>
   <block id="ef6d98134446f807883c2235ef5a8ae6" category="cell">443 Cualquier protocolo</block>
   <block id="853bf4038002c3f535649db948ff5e60" category="cell">101 entrante_111_tcp</block>
@@ -1790,11 +1770,7 @@
   <block id="589257f6242e3a6232a5f72f7867c4b6" category="inline-link-macro">Descubra cómo funcionan los pares HA en Google Cloud</block>
   <block id="c8e39b92d04aae2c3a6d3e6f428d480e" category="paragraph">Si desea implementar un par HA, debe<block ref="135d51832239d75e9eff2c1e7574765f" category="inline-link-macro-rx"></block> .</block>
   <block id="26cc43b1e094bf317e2d9013491cb9af" category="paragraph">Se deben cumplir los siguientes requisitos en Google Cloud.</block>
-  <block id="cd28e0a76ff845ef2e9e5eeced367a01" category="section-title">Requisitos específicos de los sistemas de nodo único</block>
-  <block id="d9358a4b713f2c5cc37fadb9fef3c574" category="paragraph">Si desea implementar un sistema de nodo único, asegúrese de que su red cumpla con los siguientes requisitos.</block>
   <block id="1ec1df3337524963212c8e27b42ab3cc" category="section-title">Una VPC</block>
-  <block id="5bd17b13142e93319e9f09e96063763a" category="paragraph">Se requiere una nube privada virtual (VPC) para un sistema de un solo nodo.</block>
-  <block id="aa03aa54374eb89768ecb4c4f7b40df6" category="paragraph">Para un sistema de un solo nodo en Google Cloud, la consola asigna direcciones IP privadas a lo siguiente:</block>
   <block id="249694a485fc5d3289c38986b4f8e887" category="list-text">Grupo</block>
   <block id="541b6c1ab6b503c34fc7cd5ed7105896" category="list-text">Máquina virtual de almacenamiento</block>
   <block id="d73a4e3f4b2f5ab8664e4921cf616d56" category="list-text">LIF de NAS de datos</block>
@@ -1818,7 +1794,6 @@
   <block id="158bfb217f00205e8445c28dcf0fc857" category="paragraph">Si coloca el agente de consola en VPC-0, deberá habilitar el acceso privado de Google en la subred para acceder a las API y habilitar la clasificación de datos.</block>
   <block id="879d9e5531b71e6c91d2bb1771c06d40" category="paragraph">Las subredes en estas VPC deben tener rangos CIDR distintos.  No pueden tener rangos CIDR superpuestos.</block>
   <block id="fe3eb5178f8af6d17269d6d49ad32edb" category="paragraph">La consola asigna automáticamente la cantidad necesaria de direcciones IP privadas a Cloud Volumes ONTAP en Google Cloud.  Debe asegurarse de que su red tenga suficientes direcciones privadas disponibles.</block>
-  <block id="e57aed3ea4b400bd581ab695d196aff8" category="list-text">*Nodo único* La consola asigna 4 direcciones IP a un sistema de un solo nodo:</block>
   <block id="15a4d902a9e2eeb56724bdb94f9d1977" category="list-text">Gestión de clústeres LIF</block>
   <block id="e837515a89200e7cd1bddfc96747979e" category="list-text">LIF de datos iSCSI</block>
   <block id="a28292fa77dc234022cd48bc08becd01" category="list-text">NAS LIF</block>
@@ -1845,7 +1820,6 @@
   <block id="83d4ff33554cb62b1f10057bae8d85ce" category="paragraph">Aunque el acceso global está deshabilitado de forma predeterminada, se admite su habilitación después de la implementación.  Lo desactivamos porque el tráfico entre regiones tendrá latencias significativamente más altas.  Queríamos asegurarnos de que no tuvieras una experiencia negativa debido a montajes accidentales entre regiones.  Habilitar esta opción depende de las necesidades específicas de su negocio.</block>
   <block id="b9ea9f76a11191d80f8fe1abc9437eb6" category="section-title">VPC compartidas</block>
   <block id="c241e752f74b4f0a49d3bef9094a54c4" category="paragraph">Cloud Volumes ONTAP y el agente de consola son compatibles con una VPC compartida de Google Cloud y también con VPC independientes.</block>
-  <block id="d3a2a7fdaa8373f4a0dca1f16e49c9c1" category="paragraph">Para un sistema de un solo nodo, la VPC puede ser una VPC compartida o una VPC independiente.</block>
   <block id="dedaa6a395c33cf8c6b506c83163ed74" category="paragraph">Para un par HA, se requieren cuatro VPC.  Cada una de esas VPC puede ser compartida o independiente.  Por ejemplo, VPC-0 podría ser una VPC compartida, mientras que VPC-1, VPC-2 y VPC-3 podrían ser VPC independientes.</block>
   <block id="300d87b8001da3a5be5d54eb19fb6ea4" category="paragraph">Una VPC compartida le permite configurar y administrar de forma centralizada redes virtuales en múltiples proyectos.  Puede configurar redes VPC compartidas en el _proyecto de host_ e implementar el agente de consola y las instancias de máquina virtual de Cloud Volumes ONTAP en un _proyecto de servicio_.</block>
   <block id="e7654a639cfe016ac3f5047f52f87c75" category="inline-link">Documentación de Google Cloud: Descripción general de VPC compartida</block>
@@ -2316,7 +2290,6 @@
   <block id="55c1a5d402853088f42720624bfb58bb" category="paragraph"><block ref="55c1a5d402853088f42720624bfb58bb" category="inline-link-rx"></block></block>
   <block id="9f257b11a56fb0990bae90687da210c7" category="list-text">Cambiar el tipo de máquina virtual puede afectar los cargos por servicio de Microsoft Azure.</block>
   <block id="c8d8c076494c2c4a46c774a2f999d907" category="list-text">La operación reinicia Cloud Volumes ONTAP.</block>
-  <block id="e8fafc5515dbe922c9cd7f7101d3a661" category="paragraph">En los sistemas de nodo único, la E/S se interrumpe.</block>
   <block id="0da5cbb23a0a7d13b0f40ce06d29d3b4" category="paragraph">Para los pares HA, el cambio no es disruptivo.  Los pares HA continúan proporcionando datos.</block>
   <block id="3fd4713360582ecef88ecfa8f1c8a05b" category="admonition">La NetApp Console cambia un nodo a la vez iniciando la toma de control y esperando la devolución.  El equipo de control de calidad de NetApp probó tanto la escritura como la lectura de archivos durante este proceso y no detectó ningún problema en el lado del cliente.  A medida que cambiaban las conexiones, se observaron algunos reintentos en el nivel de E/S, pero la capa de aplicación superó el recableado de las conexiones NFS/CIFS.</block>
   <block id="fe73ef8c13b3b61938fc7d9aa96fec5f" category="list-text">En la página *Sistemas*, seleccione el sistema.</block>
@@ -2975,7 +2948,6 @@
   <block id="6390591b27e881b05ba32426d12f2b17" category="list-text"><block ref="6390591b27e881b05ba32426d12f2b17" category="inline-link-macro-rx"></block></block>
   <block id="0f703b696e22955e2930127e854c1e29" category="summary">Puede iniciar un solo sistema Cloud Volumes ONTAP en Azure creando un sistema Cloud Volumes ONTAP en NetApp Console.</block>
   <block id="70c84621a7336f391b4b7df86b5f1396" category="doc">Lanzamiento de Cloud Volumes ONTAP en Azure</block>
-  <block id="52f40df3897ad7ddce812ff274006d4d" category="paragraph">Puede iniciar un sistema de nodo único o un par de alta disponibilidad en Azure creando un sistema Cloud Volumes ONTAP en NetApp Console.</block>
   <block id="0473d750e2a3daca568511b768f19dad" category="list-text">Deberías tener una<block ref="21b9e54d07d93b52dd801e203dadcd2a" category="inline-link-rx"></block> .</block>
   <block id="1942ca6a74b110784dab141845e32ec9" category="paragraph">Debe tener una configuración planificada y los detalles de red de Azure necesarios de su administrador. Para obtener más información, consulte <block ref="342e106d00de7bc2efc5fca274754fe1" category="inline-link-macro-rx"></block> .</block>
   <block id="4a990655560c303b19831e9bf63722cf" category="paragraph"><block ref="a19594f8ac35f50a09725bf53aa8cda6" category="inline-link-macro-rx"></block> .</block>
@@ -2984,7 +2956,6 @@
   <block id="72cd91c0deb59fc4b814e6cafc8ff514" category="paragraph">La mejor práctica es utilizar un nuevo grupo de recursos dedicado para cada sistema Cloud Volumes ONTAP .</block>
   <block id="334025c832b730a2d652f0f65a7d50ef" category="paragraph">No se recomienda implementar Cloud Volumes ONTAP en un grupo de recursos compartido existente debido al riesgo de pérdida de datos.  Si bien la consola puede eliminar recursos de Cloud Volumes ONTAP de un grupo de recursos compartidos en caso de una falla o eliminación en la implementación, un usuario de Azure podría eliminar accidentalmente recursos de Cloud Volumes ONTAP de un grupo de recursos compartidos.</block>
   <block id="253f14f70b008cf9e9d1e6143593db65" category="section-title">Lanzar un sistema Cloud Volumes ONTAP de un solo nodo en Azure</block>
-  <block id="43078bef4570bbcb7b76e9c51a5c935b" category="paragraph">Si desea iniciar un sistema Cloud Volumes ONTAP de un solo nodo en Azure, debe crear un sistema de un solo nodo en la consola.</block>
   <block id="5e65ccaa7b0cffc728e485801bdd8092" category="list-text">*Elija una ubicación*: seleccione *Microsoft Azure* y * Cloud Volumes ONTAP Single Node*.</block>
   <block id="3d5c594aecd40a1f5184970be0e65330" category="list-text">Si se le solicita,<block ref="3467f3015b64964d3499f1d2348876b6" category="inline-link-rx"></block> .</block>
   <block id="ceca015ffa0918205a91a8cc0268611c" category="list-text">*Detalles y credenciales*: Opcionalmente, cambie las credenciales y la suscripción de Azure, especifique un nombre de clúster, agregue etiquetas si es necesario y luego especifique las credenciales.</block>
@@ -3619,7 +3590,6 @@
   <block id="825a0cb9a8312e85f3aa745487c0dbe9" category="paragraph">La consola actualiza la licencia en el sistema Cloud Volumes ONTAP .</block>
   <block id="2c2e7695734e076306fc8ba50ca70c1b" category="section-title">Administrar licencias de capacidad adicional</block>
   <block id="d452bdec5cf94a61fe23690b513f4a71" category="paragraph">Puede comprar licencias de capacidad adicionales para un sistema BYOL de Cloud Volumes ONTAP para asignar más de los 368 TiB de capacidad que se proporcionan con una licencia de sistema BYOL.  Por ejemplo, puede comprar una capacidad de licencia adicional para asignar hasta 736 TiB de capacidad a Cloud Volumes ONTAP.  O puede comprar tres licencias de capacidad adicional para obtener hasta 1,4 PiB.</block>
-  <block id="5e26587c8f074cc4f0455ff005cb744c" category="paragraph">El número de licencias que se pueden adquirir para un sistema de un solo nodo o un par de alta disponibilidad es ilimitado.</block>
   <block id="6e869ff6c9fd5eb76baa394c52e2ef18" category="section-title">Agregar licencias de capacidad</block>
   <block id="41a0a4fe38c3f00a9fae3056955c9f80" category="paragraph">Compre una licencia de capacidad adicional contactándonos a través del ícono de chat en la parte inferior derecha de la Consola.  Después de comprar la licencia, puede aplicarla a un sistema Cloud Volumes ONTAP .</block>
   <block id="423cdc57679399d47229e2f74dfc102b" category="list-text">Haga clic en *Agregar licencia de capacidad*.</block>
@@ -3645,7 +3615,6 @@
   <block id="bd0ed9183db9306d8ce58c50abb4a96b" category="summary">La NetApp Console no ​​proporciona ningún tipo de soporte de configuración u orquestación para la recuperación ante desastres de máquinas virtuales de almacenamiento.  Debe utilizar el Administrador del sistema o la CLI.</block>
   <block id="76872305ddb703eedd7fbe3e66263d83" category="doc">Configurar la recuperación ante desastres de la máquina virtual de almacenamiento para Cloud Volumes ONTAP</block>
   <block id="d25bf5fb042a0cc652d82492e5410fb6" category="paragraph">La NetApp Console no ​​ofrece soporte de configuración u orquestación para la recuperación ante desastres de máquinas virtuales de almacenamiento (SVM).  Para realizar estas tareas, utilice el Administrador del sistema ONTAP o la CLI de ONTAP .</block>
-  <block id="f01867033c75f2410ea82d8cbf4634d7" category="paragraph">Si configura la replicación de SnapMirror SVM entre dos sistemas Cloud Volumes ONTAP , la replicación debe ser entre dos sistemas de pares de alta disponibilidad o dos sistemas de nodo único.  No se puede configurar la replicación SVM de SnapMirror entre un par de alta disponibilidad y un sistema de nodo único.</block>
   <block id="5b5068830882d3d6b54d331cdd743e62" category="paragraph">Consulte los siguientes documentos para obtener las instrucciones de la CLI de ONTAP .</block>
   <block id="412af2a2404a4e920b18be59197204b0" category="inline-link">Guía rápida de preparación para la recuperación ante desastres de SVM</block>
   <block id="c15bb50c43eaf0ceb1bc0ce3d7503ebd" category="list-text"><block ref="c15bb50c43eaf0ceb1bc0ce3d7503ebd" category="inline-link-rx"></block></block>
@@ -3838,7 +3807,6 @@
   <block id="8dd4560f4596618815de91dd18e711e1" category="list-text">Tome nota de este número porque lo necesitará en la siguiente sección cuando asigne direcciones IP en AWS.</block>
   <block id="935712c749bf1c78e33ff9015ecebf46" category="section-title">Asignar direcciones IP en AWS</block>
   <block id="87be313262150c685084e6e44ac07990" category="paragraph">Las direcciones IPv4 privadas deben asignarse al puerto e0a en AWS antes de crear LIF para la nueva VM de almacenamiento.</block>
-  <block id="9929ecc2c86c1ad1e4c78d1244d3554d" category="paragraph">Tenga en cuenta que un LIF de administración opcional para una máquina virtual de almacenamiento requiere una dirección IP privada en un sistema de nodo único y en un par de alta disponibilidad en una única zona de disponibilidad.  Este LIF de gestión proporciona una conexión a herramientas de gestión como SnapCenter.</block>
   <block id="6ae090a4433735cf598985f60d5a68ff" category="list-text">Inicie sesión en AWS y abra el servicio EC2.</block>
   <block id="da3a869e3a7837d5ff3412e6315aca73" category="list-text">Seleccione la instancia de Cloud Volumes ONTAP y haga clic en *Redes*.</block>
   <block id="6d5c5ef8a89ed4f5a6c4ad9cae9e8460" category="paragraph">Si está creando una máquina virtual de almacenamiento en un par de alta disponibilidad, seleccione el nodo 1.</block>
@@ -3853,14 +3821,11 @@
   <block id="704ce057086edc7f390e72f33febfb03" category="list-text">Opcional: vaya a la CLI de ONTAP para Cloud Volumes ONTAP y ejecute *network interface show* para confirmar que cada una de estas direcciones IP esté en uso.</block>
   <block id="8a57c7cace7bf01166e984c4aeffc68f" category="paragraph">Si una dirección IP no está en uso, puede usarla con la nueva máquina virtual de almacenamiento.</block>
   <block id="ed97acbe270bb0841ef8a242f58309f6" category="list-text">De regreso en la consola de AWS, haga clic en *Asignar nueva dirección IP* para asignar direcciones IP adicionales según la cantidad que necesite para la nueva máquina virtual de almacenamiento.</block>
-  <block id="c853bdf1bd2777df35bc3b5d4af6b9ea" category="list-text">Sistema de nodo único: se requiere una IP privada secundaria no utilizada.</block>
   <block id="5e50d00d975ec8703bc22324c7265b66" category="paragraph">Se requiere una IP privada secundaria opcional si desea crear un LIF de administración en la VM de almacenamiento.</block>
   <block id="82c4266b10c1848bb195ebfd317a081b" category="list-text">Par HA en una sola AZ: se requiere una IP privada secundaria no utilizada en el nodo 1.</block>
   <block id="34cd8238b52f27b1bb4e98ded05d02b2" category="list-text">Par HA en múltiples AZ: se requiere una IP privada secundaria no utilizada en cada nodo.</block>
   <block id="cc16cfddda9904c2894330364425d501" category="list-text">Si está asignando la dirección IP en un par HA en una sola AZ, habilite *Permitir reasignar direcciones IPv4 privadas secundarias*.</block>
   <block id="f9b48f58c3e703111f23614cc791b0e9" category="list-text">Si tiene un par HA en varias AZ, deberá repetir estos pasos para el nodo 2.</block>
-  <block id="6ea52a1fa173ce5420e093b9e27ec284" category="section-title">Crear una máquina virtual de almacenamiento en un sistema de un solo nodo</block>
-  <block id="cc0a30537e715f13eb8e645bc570985a" category="paragraph">Estos pasos crean una nueva máquina virtual de almacenamiento en un sistema de nodo único.  Se requiere una dirección IP privada para crear un LIF NAS y se necesita otra dirección IP privada opcional si desea crear un LIF de administración.</block>
   <block id="9b08db40ecf3304d34c7dadb34a6d2c2" category="list-text">Cree la máquina virtual de almacenamiento y una ruta a la máquina virtual de almacenamiento.</block>
   <block id="efc1b32fd1eda24b66896348ad6fd78d" category="list-text">Crear un LIF NAS.</block>
   <block id="933829c2bc0d5e884fc83d159a503169" category="paragraph">Donde _private_ip_x_ es una IP privada secundaria no utilizada en e0a.</block>
@@ -3896,7 +3861,6 @@
   <block id="7147a143d2af533e058f535a19e1223d" category="paragraph">A partir de Cloud Volumes ONTAP 9.9.0, según su licencia, se admiten varias máquinas virtuales de almacenamiento con configuraciones específicas.  Consulte la<block ref="17601f6b0c4702ab7b2568d76b48bf40" category="inline-link-rx"></block> para verificar la cantidad de máquinas virtuales de almacenamiento admitidas para su versión de Cloud Volumes ONTAP.</block>
   <block id="c0bc1a321126780ce6dd98fe7445b54b" category="paragraph">Todas las versiones de Cloud Volumes ONTAP anteriores a 9.9.0 admiten una máquina virtual de almacenamiento de servicio de datos y una máquina virtual de almacenamiento de destino utilizada para la recuperación ante desastres.  Puede activar la máquina virtual de almacenamiento de destino para acceder a los datos si hay una interrupción en la máquina virtual de almacenamiento de origen.</block>
   <block id="8272f5b23e79d0ee33bd5151dcddc454" category="section-title">Crear una máquina virtual de almacenamiento</block>
-  <block id="aba0a98a938b046da2d941095cf90aca" category="paragraph">Según su configuración y tipo de licencia, puede crear varias máquinas virtuales de almacenamiento en un sistema de nodo único o en una configuración de alta disponibilidad (HA) mediante las API para la NetApp Console.</block>
   <block id="ac403fbb0bdfb5870f7ea56d934efde6" category="paragraph">Cuando crea máquinas virtuales de almacenamiento mediante las API, además de configurar las interfaces de red necesarias, la consola también modifica las<block ref="891e111023ee3cccd4407be6ddd24c21" prefix=" " category="inline-code"></block> políticas en las máquinas virtuales de almacenamiento de datos eliminando los siguientes servicios del LIF de datos NAS y agregándolos al LIF de datos iSCSI que se utiliza para las conexiones de administración salientes:</block>
   <block id="e522a238c22a673b40cfb6b6b240f37b" category="list-text"><block ref="2548ff9e63092532a81a79e1ceebe91e" prefix="" category="inline-code"></block></block>
   <block id="9c3ffe3e739ef0b406e2216de2c403b7" category="list-text"><block ref="c33d2f2401cef76503005b2317a0870d" prefix="" category="inline-code"></block></block>
@@ -3904,24 +3868,19 @@
   <block id="58a7b8379178f95002ceeceb82feb029" category="list-text"><block ref="0d409a8ed03d0fa3e161460f3f21e0b4" prefix="" category="inline-code"></block></block>
   <block id="3c1cec80e048088b9c829a18b7d5111b" category="list-text"><block ref="8e6e205a8b8f4f22cf306f9b85bd6c2c" prefix="" category="inline-code"></block></block>
   <block id="5609a622328efe9876da2be3ff181ffa" category="paragraph">El agente de consola requiere permisos específicos para crear máquinas virtuales de almacenamiento para Cloud Volumes ONTAP.  Los permisos necesarios están incluidos en<block ref="7dc648b1297c419be8c55b589146f4e1" category="inline-link-rx"></block> .</block>
-  <block id="0ecbfe2cb5b1df888639e1751cec905a" category="section-title">Sistema de nodo único</block>
-  <block id="8706f6ead181f6948eb97f37a1eb2445" category="paragraph">Utilice la siguiente llamada API para crear una máquina virtual de almacenamiento en un sistema de un solo nodo.</block>
   <block id="3fdacbfd71cad923423d9367166e8e10" category="paragraph"><block ref="c9cca6b9ba2558d529f121eb1e013395" prefix="" category="inline-code"></block></block>
   <block id="e3c9171d657ac0e66f63823d74cfbcf2" category="paragraph">Incluya los siguientes parámetros en el cuerpo de la solicitud:</block>
   <block id="063ae5e353016345999dc0a39f9aa45a" category="paragraph">Utilice la siguiente llamada API para crear una máquina virtual de almacenamiento en un par de alta disponibilidad:</block>
   <block id="ffed8e594be63a1704331cda026451ec" category="paragraph"><block ref="332a159c5eb24709f786ad048b2b2fc8" prefix="" category="inline-code"></block></block>
-  <block id="546e719c658c5e1549c21e8288af2461" category="section-title">Administrar máquinas virtuales de almacenamiento en sistemas de un solo nodo y pares de alta disponibilidad</block>
   <block id="41459d7c36118b05a54bceb8e26ba523" category="paragraph">Al utilizar las API, puede cambiar el nombre y eliminar máquinas virtuales de almacenamiento tanto en configuraciones de nodo único como de alta disponibilidad.</block>
   <block id="8d45e131d35caf69fb22ef97f4efcd27" category="paragraph">El agente de consola requiere permisos específicos para administrar las máquinas virtuales de almacenamiento para Cloud Volumes ONTAP.  Los permisos necesarios están incluidos en<block ref="7dc648b1297c419be8c55b589146f4e1" category="inline-link-rx"></block> .</block>
   <block id="c97c5ffc330239a3245482bb4881877a" category="section-title">Cambiar el nombre de una máquina virtual de almacenamiento</block>
   <block id="d8e62504370dd392011aab69bc975d8d" category="paragraph">Para cambiar el nombre de una máquina virtual de almacenamiento, debe proporcionar los nombres de la máquina virtual de almacenamiento existente y de la nueva máquina virtual de almacenamiento como parámetros.</block>
-  <block id="e313c8cca3b79dbc79cbcfe63c3d6efb" category="list-text">Utilice la siguiente llamada API para cambiar el nombre de una máquina virtual de almacenamiento en un sistema de un solo nodo:</block>
   <block id="163713240b16088767c6e8dd70caefde" category="paragraph"><block ref="d3fe545ac501d33a61917e447e4f0069" prefix="" category="inline-code"></block></block>
   <block id="ee677feb3cbaca080cdf86bc9ba32d6c" category="list-text">Utilice la siguiente llamada API para cambiar el nombre de una máquina virtual de almacenamiento en un par de alta disponibilidad:</block>
   <block id="f80f88eb929c0d4cd5386633be23cf21" category="paragraph"><block ref="d138335618e0186622605f96b9b3b0d1" prefix="" category="inline-code"></block></block>
   <block id="ce9c0fa786ae9e9debeb029c1c0a4c92" category="section-title">Eliminar una máquina virtual de almacenamiento</block>
   <block id="c92f0160e249d6660e4b4262409aea6c" category="paragraph">En una configuración de nodo único o HA, puede eliminar una máquina virtual de almacenamiento si no tiene ningún volumen activo.</block>
-  <block id="a3590d03d962ac5b789854576b314e57" category="list-text">Utilice la siguiente llamada API para eliminar una máquina virtual de almacenamiento en un sistema de un solo nodo:</block>
   <block id="eba2f559f6f185c3ecb4fd32a7acf4c8" category="paragraph"><block ref="f72e53a28ab0632263c72933e322d2a6" prefix="" category="inline-code"></block></block>
   <block id="e3105c7c013656277a67973d1d384642" category="list-text">Utilice la siguiente llamada API para eliminar una máquina virtual de almacenamiento en un par de alta disponibilidad:</block>
   <block id="ab5ee533b7c08abc987c74ffd54477b9" category="paragraph"><block ref="4bd28f76ace2927734ae3d3abcca1009" prefix="" category="inline-code"></block></block>
@@ -3937,7 +3896,6 @@
   <block id="015cca4b60c0784eec4fd7f9e6e5f8d1" category="paragraph">Para crear y administrar máquinas virtuales de almacenamiento de servicio de datos adicionales en Google Cloud, debes usar las API.  Esto se debe a que las API automatizan el proceso de creación de las máquinas virtuales de almacenamiento y la configuración de las interfaces de red necesarias.  Al crear las máquinas virtuales de almacenamiento, la NetApp Console configura los servicios LIF necesarios, así como un LIF iSCSI necesario para las comunicaciones SMB/CIFS salientes desde la máquina virtual de almacenamiento.</block>
   <block id="a0d106b3df91a5c40e846d04e0e0b072" category="paragraph">A partir de Cloud Volumes ONTAP 9.11.1, según su licencia, se admiten varias máquinas virtuales de almacenamiento con configuraciones específicas.  Consulte la<block ref="7a96f232274f5a7cebcb1f6a52cc095f" category="inline-link-rx"></block> para verificar la cantidad de máquinas virtuales de almacenamiento admitidas para su versión de Cloud Volumes ONTAP.</block>
   <block id="ff1d242daadf495829811b6d2313264b" category="paragraph">Todas las versiones de Cloud Volumes ONTAP anteriores a 9.11.1 admiten una máquina virtual de almacenamiento de servicio de datos y una máquina virtual de almacenamiento de destino utilizada para la recuperación ante desastres.  Puede activar la máquina virtual de almacenamiento de destino para acceder a los datos si hay una interrupción en la máquina virtual de almacenamiento de origen.</block>
-  <block id="9fb17f61d770951d327021f3fa633d3a" category="paragraph">Según su configuración y tipo de licencia, puede crear varias máquinas virtuales de almacenamiento en un sistema de un solo nodo o en una configuración de alta disponibilidad (HA) mediante las API.</block>
   <block id="e977b05b15a8ef8166d6f1b02e35c6b2" category="paragraph"><block ref="6e37cda7be8f481fee7b895bd6ef924b" prefix="" category="inline-code"></block></block>
   <block id="3fab6f26ccc1354a7fda62c947fe176d" category="paragraph"><block ref="4ae3965c67ec8b00b8c07c6aa50d0d55" prefix="" category="inline-code"></block></block>
   <block id="2ee20619a771993544eaaa7e388816d1" category="section-title">Administrar máquinas virtuales de almacenamiento</block>
@@ -3962,7 +3920,6 @@
   <block id="8ec18a80b08142a9ee538b8ce4350b54" category="summary">Es posible que necesite cambiar la configuración de los sistemas Cloud Volumes ONTAP a medida que cambien sus necesidades de almacenamiento.  Por ejemplo, puede cambiar entre configuraciones de pago por uso, cambiar la instancia o el tipo de VM, y más.</block>
   <block id="c2c088d1045cc3d76d132b248c4445c1" category="doc">Modificar la velocidad de escritura del sistema</block>
   <block id="1d73ea704b43bd681b98458f046b25a9" category="paragraph">Puede elegir una velocidad de escritura normal o alta para Cloud Volumes ONTAP en la NetApp Console.  La velocidad de escritura predeterminada es normal.  Puede cambiar a alta velocidad de escritura si su carga de trabajo requiere un rendimiento de escritura rápido.</block>
-  <block id="2bae3f4058e112cc703c4dc74dc72501" category="paragraph">La alta velocidad de escritura es compatible con todos los tipos de sistemas de nodo único y algunas configuraciones de par HA.  Ver configuraciones admitidas en el<block ref="d080347ff89205e9b3e508b1fee0c025" category="inline-link-rx"></block></block>
   <block id="8334ca2b5f457a41a987d1633cb5c214" category="inline-link-macro">Comprender las diferencias entre la configuración normal y la alta</block>
   <block id="69e28a1ba6bc5233cc60dd248c362636" category="paragraph">Antes de cambiar la velocidad de escritura, debe<block ref="eb987e41d6a04bba64a9af2bb235fccb" category="inline-link-macro-rx"></block> .</block>
   <block id="d9072539538ac46d98e04043ff27fe64" category="list-text">Asegúrese de que operaciones como la creación de volumen o agregados no estén en curso.</block>
@@ -4015,7 +3972,6 @@
   <block id="03cd53d9a632404d9be539683276c7a2" category="list-text"><block ref="03cd53d9a632404d9be539683276c7a2" category="inline-link-rx"></block></block>
   <block id="6fd456d71c345eb38fe1c0337056dc63" category="inline-link">Documentación de Azure: Tamaños de máquinas virtuales optimizados para memoria</block>
   <block id="05bb9e686e11b905d394fe43829e10b1" category="list-text"><block ref="05bb9e686e11b905d394fe43829e10b1" category="inline-link-rx"></block></block>
-  <block id="26107ad7eb2db3c2d4b832701061add4" category="list-text">Tipo de disco de Azure con sistemas de nodo único</block>
   <block id="4a9c0738bb69f1a7ecfd0fa8da86cc4a" category="list-text">Cuando crea volúmenes para Cloud Volumes ONTAP, debe elegir el almacenamiento en la nube subyacente que Cloud Volumes ONTAP utiliza como disco.</block>
   <block id="876b7b2bfe7f51f31d3ade24031d8d87" category="list-text">Los discos administrados SSD v2 Premium brindan un mayor rendimiento con menor latencia a un menor costo, en comparación con los discos administrados SSD Premium.</block>
   <block id="f75e49a7eddde4f8a0eff68169f61019" category="inline-link">Documentación de Microsoft Azure: ¿Qué tipos de discos están disponibles en Azure?</block>
@@ -4304,7 +4260,6 @@
   <block id="bf5db4b0d890ae0f47f0666b4786c11e" category="paragraph">Utilice la CLI de ONTAP para los siguientes pasos.</block>
   <block id="5caa556e7511fbc031e556f35273b4b5" category="list-text">Crea el nuevo espacio IP (new_ipspace).</block>
   <block id="c3e846d4c68310f0bbaebfe81b1b016c" category="list-text">Cree un dominio de transmisión en el nuevo espacio IP (new_ipspace) y agregue el puerto nic-new.</block>
-  <block id="ec7cd635bbff7496ce854419fbac424d" category="list-text">Para los sistemas de nodo único, el puerto recién agregado es _e0b_.  Para las implementaciones de pares HA con discos administrados, el puerto recientemente agregado es _e0d_.  Para las implementaciones de pares HA con blobs de página, el puerto recientemente agregado es _e0e_.  Utilice el nombre del nodo, no el nombre de la máquina virtual.  Encuentre el nombre del nodo ejecutando<block ref="9cd5e832790132a87592f2958fc2b1a6" prefix=" " category="inline-code"></block> .</block>
   <block id="9defaa4e7d0a35e22135ad0e2f58e852" category="list-text">Cree un LIF entre clústeres en el nuevo dominio de transmisión (new_bd) y en la nueva NIC (nic-new).</block>
   <block id="be0a702fb4057bb2e91bdd1cc96da2e4" category="list-text">Verificar la creación del nuevo LIF entre clústeres.</block>
   <block id="2aea6959bcbac1fa4b42120415127f49" category="section-title">Paso 3: Verificar el peering del clúster entre los sistemas de origen y destino</block>
@@ -4383,7 +4338,6 @@
   <block id="1be48617ce5825c4bd54ef885eef8a65" category="list-text">Se deben habilitar las siguientes opciones:</block>
   <block id="ba6db2df53167b0fe62e3b5c762cbbf1" category="list-text">*Eliminación suave* (esta opción está habilitada de manera predeterminada, pero no debe deshabilitarse)</block>
   <block id="fd08f80d1ec5aa4440248321eace716f" category="list-text">*Protección de purga*</block>
-  <block id="312fcba055a7ab6b8314cb541c1f1b4f" category="list-text">*Cifrado de disco de Azure para cifrado de volumen* (para sistemas de nodo único, pares de alta disponibilidad en múltiples zonas e implementaciones de alta disponibilidad de una sola zona)</block>
   <block id="4b63d3239df3134d1faedabb0e8eb859" category="admonition">El uso de claves de cifrado administradas por el cliente de Azure depende de que el cifrado de disco de Azure esté habilitado para el almacén de claves.</block>
   <block id="4fe37dc4f545dffb56459397b5344d4c" category="list-text">La siguiente opción debe estar habilitada si creó una identidad administrada asignada por el usuario:</block>
   <block id="7761893631ec0e57ca5b1847392a89d1" category="list-text">*Política de acceso a la bóveda*</block>
@@ -4425,7 +4379,6 @@
   <block id="0b026614551113ad09fa76895c5dd5ce" category="paragraph">El cuerpo de la solicitud debe incluir los siguientes campos:</block>
   <block id="1f8370f663ec71e8fac7dc386794543c" category="admonition">Incluir el<block ref="d740baa07e4af19d0de1f45650cf4bc0" prefix=" " category="inline-code"></block> campo si creó este recurso para usarlo para el cifrado de la cuenta de almacenamiento.</block>
   <block id="2ffa17dd74caa90edaf33636b3e374b1" category="paragraph"><block ref="792ba555e1629fb9b0b5e00711256a74" category="inline-link-rx"></block> .</block>
-  <block id="777cd3d610cae6ea63c19c799e3b0b51" category="list-text">Para un sistema de un solo nodo:</block>
   <block id="6507ffa8d8b9388092f62e253e32e85d" category="paragraph"><block ref="d1a53319a230158b10e72e4bd96c5bbc" prefix="" category="inline-code"></block></block>
   <block id="7881621c3d4c91216ebe58ee1cdc87e0" category="paragraph"><block ref="52c47b6a301b0fb242044f1b14c5f663" category="inline-link-rx"></block> .</block>
   <block id="c9a9b22c97e2474e63fdb09a6f5f4a75" category="paragraph">Tiene un nuevo sistema Cloud Volumes ONTAP que está configurado para usar su clave administrada por el cliente para el cifrado de datos.</block>
@@ -4723,7 +4676,6 @@
   <block id="0baa9fabb663d0426d677bdef48cab76" category="list-text">Los datos inactivos se agrupan en depósitos de Amazon S3.  No se admite la combinación con otros proveedores.</block>
   <block id="049a56718afb4bc754cebf8a5567c3c8" category="section-title">Soporte en Azure</block>
   <block id="f16872b2bf28c8dcda252e8197cc1a5e" category="list-text">En Azure se admite la organización de datos en niveles de la siguiente manera:</block>
-  <block id="c7f6ec5d95cafd0132e2322cbdca7f47" category="list-text">Versión 9.4 en sistemas de nodo único</block>
   <block id="146aae59b5e422bc518402fc01301883" category="list-text">Versión 9.6 con pares HA</block>
   <block id="c22e6c8e140bb405c574c67bff9bd946" category="list-text">El nivel de rendimiento puede ser discos administrados SSD Premium, discos administrados SSD estándar o discos administrados HDD estándar.</block>
   <block id="9d04d4aae5bc77b320eddf498e3e1a4c" category="list-text">Los datos inactivos se agrupan en Microsoft Azure Blob.  No se admite la combinación con otros proveedores.</block>
@@ -5192,7 +5144,6 @@
   <block id="5cc1493ad28334fdb28f7ed57f0e1d41" category="paragraph">Ahora se muestra una notificación cada vez que accedes a Cloud Volumes ONTAP en BlueXP sin una suscripción al Marketplace.  La notificación indica que "se requiere una suscripción de mercado para este entorno de trabajo para cumplir con los términos y condiciones de Cloud Volumes ONTAP ".</block>
   <block id="7e05b6b897bc796c472e8ff108657518" category="section-title">Compatibilidad con regiones de China para AWS</block>
   <block id="ebef32c1ba0aec7a39eb2ce8370a97d5" category="paragraph">A partir de Cloud Volumes ONTAP 9.12.1 GA, las regiones de China ahora son compatibles con AWS de la siguiente manera.</block>
-  <block id="fcf30aaa0348521d4d4752992c9db378" category="list-text">Se admiten sistemas de nodo único.</block>
   <block id="80a79e3e92d4834ae8746d205e83c105" category="list-text">Se admiten licencias compradas directamente a NetApp .</block>
   <block id="13615a82d1149a992b363c411914d3b8" category="inline-link">Mapas de regiones globales para Cloud Volumes ONTAP</block>
   <block id="cec47fe41efdc9b07523c56da6796d2e" category="paragraph">Para conocer la disponibilidad regional, consulte la<block ref="7511e65336251f569b4c4f44ab1468f7" category="inline-link-rx"></block> .</block>
@@ -5376,7 +5327,6 @@
   <block id="aace3e8a265fffb87e8d7fbd81d6adb9" category="section-title">Compatibilidad para crear máquinas virtuales de almacenamiento en Google Cloud</block>
   <block id="f161f6edfaf6d911de2566d694781369" category="paragraph">A partir de la versión 9.11.1, Cloud Volumes ONTAP ahora admite varias máquinas virtuales de almacenamiento en Google Cloud.  A partir de esta versión del Conector, BlueXP le permite crear máquinas virtuales de almacenamiento en pares de Cloud Volumes ONTAP HA en Google Cloud mediante la API.</block>
   <block id="33fdc8eb46b228d804c2bf216d7ab788" category="paragraph">La compatibilidad con la creación de máquinas virtuales de almacenamiento requiere nuevos permisos de Google Cloud para el conector:</block>
-  <block id="1639fb8b97b722c837cf68d599ffe1c4" category="paragraph">Tenga en cuenta que debe utilizar la CLI de ONTAP o el Administrador del sistema para crear una VM de almacenamiento en un sistema de nodo único.</block>
   <block id="ab9d588372f30d162e50dbbed45980eb" category="inline-link">Obtenga más información sobre los límites de almacenamiento de las máquinas virtuales en Google Cloud</block>
   <block id="7859fc06f13ff8714740aa72213f86e7" category="list-text"><block ref="7859fc06f13ff8714740aa72213f86e7" category="inline-link-rx"></block></block>
   <block id="3a7eebf972f838daafe4ea7948002b3d" category="inline-link">Aprenda a crear máquinas virtuales de almacenamiento que brindan servicio de datos para Cloud Volumes ONTAP en Google Cloud</block>
@@ -5413,7 +5363,6 @@
   <block id="291a5c22c8cb78fe8ec363d61830f63e" category="section-title">Mejoras en las políticas de firewall de Google Cloud</block>
   <block id="1fcd17a990e75722697d64df5dd2ffde" category="list-text">Cuando crea un par Cloud Volumes ONTAP HA en Google Cloud, BlueXP ahora mostrará todas las políticas de firewall existentes en una VPC.</block>
   <block id="46fc311e1b8dc6670926551c44511f90" category="paragraph">Anteriormente, BlueXP no mostraba ninguna política en VPC-1, VPC-2 o VPC-3 que no tuviera una etiqueta de destino.</block>
-  <block id="880f67f103405f29628ff848182ca330" category="list-text">Al crear un sistema de nodo único de Cloud Volumes ONTAP en Google Cloud, ahora puede elegir si desea que la política de firewall predefinida permita el tráfico solo dentro de la VPC seleccionada (recomendado) o en todas las VPC.</block>
   <block id="5c4a95a56d4b5bfef734aeab388618c0" category="section-title">Mejora de las cuentas de servicio de Google Cloud</block>
   <block id="31c37a13f49d295537e1ac22f321633d" category="paragraph">Cuando selecciona la cuenta de servicio de Google Cloud para usar con Cloud Volumes ONTAP, BlueXP ahora muestra la dirección de correo electrónico asociada con cada cuenta de servicio.  Ver la dirección de correo electrónico puede facilitar la distinción entre cuentas de servicio que comparten el mismo nombre.</block>
   <block id="898d465c80c6b6783418f6fa71db0946" category="inline-image-macro">Una captura de pantalla del campo de cuenta de servicio</block>
@@ -5493,7 +5442,6 @@
   <block id="a83e9f7623076b623810b57914d36eed" category="section-title">Compatibilidad con nuevas regiones de AWS</block>
   <block id="3e5209edda1f6ec8458a9fe55feb2ee1" category="paragraph">Cloud Volumes ONTAP ahora es compatible con la región Asia Pacífico (Osaka) de AWS (ap-northeast-3).</block>
   <block id="81e5e1bf62f444795eff3721d2872fb5" category="section-title">Reducción de puerto</block>
-  <block id="0cc520b9133a409c63dec80a3107fdda" category="paragraph">Los puertos 8023 y 49000 ya no están abiertos en los sistemas Cloud Volumes ONTAP en Azure, tanto para sistemas de nodo único como para pares de alta disponibilidad.</block>
   <block id="524d299ea985e3a42c95b0980478eba1" category="paragraph">Este cambio se aplica a los _nuevos_ sistemas Cloud Volumes ONTAP a partir de la versión 3.9.13 del Conector.</block>
   <block id="190323ddb2d35098aa0adb62b3b4fb4c" category="paragraph">Los siguientes cambios se introdujeron con la versión 3.9.11 del Conector.</block>
   <block id="1217a2d42a5d039798ff2ec7be351708" category="section-title">Cloud Volumes ONTAP 9.10.0</block>
@@ -5607,7 +5555,6 @@
   <block id="996af92ade7f6e5af3be3c265f31fd2c" category="paragraph">Si tiene un AWS Outpost, puede implementar Cloud Volumes ONTAP en ese Outpost seleccionando la VPC de Outpost en el asistente de entorno de trabajo. La experiencia es la misma que la de cualquier otra VPC que resida en AWS. Tenga en cuenta que primero deberá implementar un conector en su AWS Outpost.</block>
   <block id="e2d2ccc5b8f9228c27b5cfc63167746e" category="section-title">Ultra SSD VNVRAM en regiones de Azure compatibles</block>
   <block id="f8a42568c2b4bf9c5b298939c3d3871b" category="inline-link">en cualquier región de Azure compatible</block>
-  <block id="8bbfb89818fc2c99ca40fa43dabf7e4e" category="paragraph">Cloud Volumes ONTAP ahora puede usar un SSD Ultra como VNVRAM cuando usa el tipo de VM E32s_v3 con un sistema de nodo único<block ref="6f5d8baab146de724d052d505bbe4745" category="inline-link-rx"></block> .</block>
   <block id="2753e515b9dcd4f5f0c9d76d668e69c8" category="paragraph">VNVRAM proporciona un mejor rendimiento de escritura.</block>
   <block id="e2961711376db6240fe174274a4c49ac" category="section-title">Elija una zona de disponibilidad en Azure</block>
   <block id="bada065bfea7e34e9203e33edc44d46a" category="paragraph">Ahora puede elegir la zona de disponibilidad en la que desea implementar un sistema Cloud Volumes ONTAP de un solo nodo.  Si no selecciona una AZ, BlueXP seleccionará una para usted.</block>
@@ -5898,7 +5845,6 @@
   <block id="8c340dc334134096f68b880b42a8692c" category="paragraph-title">Replicación</block>
   <block id="6c6851f26dd089ac8e2cd4699f9f3ceb" category="paragraph">Al replicar un volumen, puede elegir si desea organizar los datos en niveles de almacenamiento de objetos. Si lo hace, la consola aplicará la política *Copia de seguridad* al volumen de protección de datos. A partir de Cloud Volumes ONTAP 9.6, la política de niveles *Todos* reemplaza la política de respaldo. Cuando se elimina una relación de replicación, el volumen de destino conserva la política de niveles que estaba en vigor durante la replicación.</block>
   <block id="42c1e1bd55f7468cc1c1f67bd3b2e55e" category="paragraph">La tarificación en Cloud Volumes ONTAP se basa en una serie de factores, como los paquetes y los tipos de volumen. Los paquetes de licencias basados ​​en capacidad están disponibles con Cloud Volumes ONTAP 9.7 y versiones posteriores.</block>
-  <block id="d52f05c9c9a1d28edf0a8c353fa4005c" category="paragraph">Con el licenciamiento basado en capacidad, el número máximo de sistemas Cloud Volumes ONTAP está limitado a 24 por organización de NetApp Console . Un _sistema_ es un par de Cloud Volumes ONTAP HA, un sistema de nodo único de Cloud Volumes ONTAP o cualquier máquina virtual de almacenamiento adicional que usted cree. La VM de almacenamiento predeterminada no cuenta para el límite. Este límite se aplica a todos los modelos de licencia.</block>
   <block id="f06bb25c94e6b1aa8710c80dd3586a02" category="paragraph">En total son seis sistemas. De esta forma, dispondría de espacio para 14 sistemas adicionales en su organización.</block>
   <block id="39f86900550d222b0169a7f96cfef9a1" category="paragraph">Si tiene una implementación grande que requiere más de 24 sistemas, póngase en contacto con su representante de cuentas o con el equipo de ventas.</block>
   <block id="84bd415e73410ff40bbdb14fc761f16b" category="paragraph">Si crea o utiliza un volumen de escritura (lectura/escritura), se considera un volumen primario y se le cobra por la capacidad aprovisionada según el cargo mínimo por máquina virtual de almacenamiento (SVM).  Entre los ejemplos se incluyen volúmenes de lectura/escritura FlexVol , volúmenes de auditoría SnapLock y volúmenes de auditoría CIFS/NFS.  Todos los volúmenes de datos creados por el usuario se cobran según su suscripción y tipo de paquete.  Los volúmenes internos de ONTAP que se crean automáticamente y no pueden almacenar datos, como los volúmenes raíz de SVM, no se cobran.</block>
@@ -6223,4 +6169,65 @@
   <block id="58495bede215f014e8621e607e5c54a8" category="list-text">Siguiendo las notificaciones de actualización que aparecen en el sistema</block>
   <block id="228fd8db6dfd431af5b0174c34940d4a" category="paragraph">La versión de Cloud Volumes ONTAP a la que puedes actualizar depende de la versión que estás usando actualmente. Cada versión genérica o parche en una versión de las siguientes tablas representa la versión base disponible para actualizar. Para detalles sobre los parches disponibles, consulta el <block ref="673899d074c44dd34154296773a3ae8d" category="inline-link-rx"></block> de cada versión.</block>
   <block id="a08e77bc6002bfa158787d93c342bf4b" category="section-title">10 de febrero de 2026</block>
+  <block id="dbf7cd788b00dca3348b80d3d3473bf6" category="doc">Soporte para Ebdsv5 y E104ids_v5 VMs en Azure</block>
+  <block id="4324be09b704ac1f5d63ff496d7ef1f4" category="paragraph">A partir de Cloud Volumes ONTAP 9.18.1, puedes implementar las VMs Ebdsv5 y E104ids_v5 para implementaciones y actualizaciones de nodo único y de alta disponibilidad (HA).</block>
+  <block id="9aa187942e09002cf25de4088980c393" category="paragraph">Las máquinas virtuales Ebdsv5 dentro de la familia Eb de máquinas virtuales de Azure están optimizadas para un mayor rendimiento del almacenamiento remoto. Puedes usar estas máquinas virtuales para cargas de trabajo empresariales que requieren mucha memoria y son intensivas en E/S, como bases de datos relacionales, análisis en memoria y otras aplicaciones empresariales críticas y exigentes.</block>
+  <block id="3be6e88b099667951f102a7e72ef6b7e" category="paragraph">E104ids_v5 es una instancia de VM aislada que te ayuda a manejar mejor las ventanas de mantenimiento programadas. En comparación con E80ids_v4, ofrece un rendimiento de disco y IOPS mucho mayores, junto con un mejor rendimiento general de la red.</block>
+  <block id="12c608fc3ddf39360237ef081ed21d2f" category="inline-link">Documentación de Azure: series de tamaños Edsv5</block>
+  <block id="2751c20dbb46ac4854ad2a690d71db85" category="paragraph"><block ref="2751c20dbb46ac4854ad2a690d71db85" category="inline-link-rx"></block></block>
+  <block id="067b1794b9314bbe65909dcac0733c38" category="paragraph">Las licencias basadas en nodos pueden adquirirse de NetApp. El número de licencias que puedes comprar para un sistema de nodo único o un par de HA es ilimitado.</block>
+  <block id="5874c47f3a74b4281eee8d6ac23a91e6" category="list-text">Sólo se admiten sistemas de nodo único con BYOL en las regiones de China. Las implementaciones en la región de China están exentas de las restricciones de licencia BYOL.</block>
+  <block id="7c0bb4ee3cc998a0131e28f7fcd50e94" category="paragraph">Con las licencias basadas en capacidad, el número máximo de sistemas Cloud Volumes ONTAP está limitado a 24 por organización de NetApp Console. Un _sistema_ es un par Cloud Volumes ONTAP HA, un sistema Cloud Volumes ONTAP de un solo nodo o cualquier instancia de VM de almacenamiento adicional que crees. La instancia de VM de almacenamiento predeterminada no cuenta para el límite. Este límite se aplica a todos los modelos de licencia.</block>
+  <block id="5e25fc232292638c853b01bb2cc446ba" category="paragraph">Este sistema cuenta como dos sistemas: uno para el sistema de nodo único y uno para la VM de almacenamiento adicional.</block>
+  <block id="bb26250bc478ebfa47a8a3fcf9c9bb06" category="paragraph">Las suscripciones Keystone se admiten con pares de HA. Esta opción de licencia no es compatible con sistemas de nodo único en este momento.</block>
+  <block id="37fdf37599add201cacc01f65bd7205e" category="paragraph">En Azure, un agregado puede contener hasta 12 discos que sean todos del mismo tamaño. El tipo de disco y el tamaño máximo de disco dependen de si usas un sistema de nodo único o un par de HA:</block>
+  <block id="1df33292a2fca2da6ee337f54fc40930" category="list-text">Sistemas de nodo único</block>
+  <block id="81474a3dec093d198c9c6ba07e1a3a61" category="list-text">Los sistemas de nodo único pueden usar estos tipos de Azure Managed Disks:</block>
+  <block id="07780be0f84fd8b1ddc76cbd33c02957" category="paragraph">Si usas un sistema de un solo nodo, Cloud Volumes ONTAP admite alta velocidad de escritura con todos los tipos de instancia.</block>
+  <block id="fd2ef223e01ef83558ae5990e639290b" category="paragraph">Si usas un sistema de un solo nodo, Cloud Volumes ONTAP admite alta velocidad de escritura con todos los tipos de VM.</block>
+  <block id="4ecfc70d8abe31fa7f4a0dcfd7a81ade" category="paragraph">Si usas un sistema de un solo nodo, Cloud Volumes ONTAP admite alta velocidad de escritura con todos los tipos de máquinas.</block>
+  <block id="ae800a6585d99ea0c81403d0e0051f48" category="list-text">Un LIF de gestión de SVM en sistemas de un solo nodo en AWS</block>
+  <block id="0b494b4ded41116b8121a50e073e5a03" category="paragraph">El número de LIFs que la NetApp Console asigna para Cloud Volumes ONTAP depende de si despliegas un sistema de nodo único o un par HA. Un LIF es una dirección IP asociada con un puerto físico.</block>
+  <block id="e14638a5078e85478a656075abcd5d1a" category="section-title">Direcciones IP para un sistema de nodo único</block>
+  <block id="36e301bb2b13887fb360986278f4fd09" category="paragraph">NetApp Console asigna 6 direcciones IP a un sistema de nodo único.</block>
+  <block id="c32f65e0370b4206c865cea23bda1d6f" category="paragraph">Las parejas de alta disponibilidad necesitan más direcciones IP que un sistema de un solo nodo. Estas direcciones IP están repartidas en diferentes interfaces ethernet, como se muestra en la siguiente imagen:</block>
+  <block id="b5a7a2502a538994268f262add340d21" category="paragraph">El número de LIF asignados para Cloud Volumes ONTAP depende de si despliegas un sistema de nodo único o un par HA. Un LIF es una dirección IP asociada con un puerto físico. Se requiere un LIF de gestión de SVM para herramientas de gestión como SnapCenter.</block>
+  <block id="8190ede349be7eeb41ccc962c3a97ec8" category="paragraph">La NetApp Console asigna 5 o 6 direcciones IP a un sistema de nodo único:</block>
+  <block id="c3b48f7a8c917989634bdf6884dad884" category="paragraph">Ten en cuenta que la Console crea un LIF de gestión de SVM en pares HA, pero no en sistemas de nodo único en Azure.</block>
+  <block id="ce43fec7e95155bf53e826e9f351d6a1" category="section-title">Reglas de entrada para sistemas de nodo único</block>
+  <block id="f57bcdbcce023af53bd4b2400c32f7db" category="admonition">Los sistemas de HA tienen menos reglas de entrada que los sistemas de nodo único porque el tráfico de datos de entrada pasa por el Azure Standard Load Balancer. Por esto, el tráfico del Load Balancer debe estar abierto, como se muestra en la regla "AllowAzureLoadBalancerInBound".</block>
+  <block id="aad5753ed1e0a3b14b5f172f430603c9" category="section-title">Requisitos específicos de los sistemas de nodo único</block>
+  <block id="9fc5e0be02a739b4e76e634a05f94c52" category="paragraph">Si quieres implementar un sistema de un solo nodo, asegúrate de que tu red cumpla con los siguientes requisitos.</block>
+  <block id="90d1495ccf5fa8d76fc3b868d16d1113" category="paragraph">Se requiere una Virtual Private Cloud (VPC) para un sistema de un solo nodo.</block>
+  <block id="2cd1cc54f14638df4da02dde0f9b82c0" category="paragraph">Para un sistema de nodo único en Google Cloud, la NetApp Console asigna direcciones IP privadas a lo siguiente:</block>
+  <block id="c133063cd75dd6ca5183749735982997" category="list-text">*Nodo único* NetApp Console asigna 4 direcciones IP a un sistema de nodo único:</block>
+  <block id="755afbf924e866a67b306682c4deb200" category="paragraph">Para un sistema de nodo único, la VPC puede ser una VPC compartida o una VPC independiente.</block>
+  <block id="4bd0b8ab4e553e751aa93406b40d5560" category="paragraph">En los sistemas de nodo único, la I/O se interrumpe.</block>
+  <block id="62fac2021144c76cdcd096ecd3c82eb4" category="paragraph">Puedes lanzar un sistema de nodo único o un par de alta disponibilidad en Azure creando un sistema Cloud Volumes ONTAP en NetApp Console.</block>
+  <block id="3b8ca986ea730316924e61b984071d11" category="paragraph">Si quieres lanzar un sistema Cloud Volumes ONTAP de un solo nodo en Azure, necesitas crear un sistema de un solo nodo en la NetApp Console.</block>
+  <block id="691e9010d46bcb06693d90df5c955334" category="paragraph">El número de licencias que puedes adquirir para un sistema de nodo único o un par de alta disponibilidad es ilimitado.</block>
+  <block id="cdd566a2953665ed7135ca03058a8014" category="paragraph">Si configuras la replicación de SnapMirror SVM entre dos sistemas Cloud Volumes ONTAP, la replicación debe ser entre dos sistemas en pareja de alta disponibilidad o dos sistemas de un solo nodo. No puedes configurar la replicación de SnapMirror SVM entre una pareja de alta disponibilidad y un sistema de un solo nodo.</block>
+  <block id="0af39724f1af28211a653a39e57d0598" category="paragraph">Ten en cuenta que una LIF de gestión opcional para una VM de almacenamiento requiere una dirección IP privada en un sistema de nodo único y en un par HA en una sola AZ. Esta LIF de gestión proporciona una conexión a herramientas de gestión como SnapCenter.</block>
+  <block id="2ec479bb11cd13a599380572acb1c0ce" category="list-text">sistema de nodo único: se requiere una dirección IP privada secundaria sin usar.</block>
+  <block id="1eee4678eb4e1cadd4e212ce0bba084d" category="section-title">Crea una máquina virtual de almacenamiento en un sistema de nodo único</block>
+  <block id="a547059e96288e55a3cd3b932e2c4157" category="paragraph">Estos pasos crean una nueva VM de almacenamiento en un sistema de nodo único. Se necesita una dirección IP privada para crear una LIF de NAS y otra dirección IP privada opcional si quieres crear una LIF de gestión.</block>
+  <block id="cc7c35c7684e4d7f8bffed328fc1b629" category="paragraph">En función de tu configuración y tipo de licencia, puedes crear varias máquinas virtuales de almacenamiento en un sistema de nodo único o en una configuración de alta disponibilidad (HA) usando las API para la NetApp Console.</block>
+  <block id="9f0e6a06ff24050ef4f1a71b2eb1d838" category="section-title">sistema de un solo nodo</block>
+  <block id="070c7339120bbab9748136420da7e629" category="paragraph">Usa la siguiente llamada a la API para crear una máquina virtual de almacenamiento en un sistema de nodo único.</block>
+  <block id="dda2b753a17e4e4abcca100288667de4" category="section-title">Administra máquinas virtuales de almacenamiento en sistemas de nodo único y pares de alta disponibilidad</block>
+  <block id="d05761c1dc243186f9c42f463199d5a9" category="list-text">Usa la siguiente llamada a la API para cambiar el nombre de una máquina virtual de almacenamiento en un sistema de nodo único:</block>
+  <block id="9a765f7d9f40e906e523b804f34c34e6" category="list-text">Usa la siguiente llamada a la API para eliminar una máquina virtual de almacenamiento en un sistema de nodo único:</block>
+  <block id="4c0ca543d73dce2195a43dfc56c6ee3a" category="paragraph">En función de tu configuración y tipo de licencia, puedes crear varias máquinas virtuales de almacenamiento en un sistema de nodo único o en una configuración de alta disponibilidad (HA) usando las API.</block>
+  <block id="feb863b6f836fe3885d50e26e80e6469" category="paragraph">La alta velocidad de escritura es compatible con todos los tipos de sistemas de un solo nodo y con algunas configuraciones de parejas de alta disponibilidad. Consulta las configuraciones compatibles en la <block ref="d080347ff89205e9b3e508b1fee0c025" category="inline-link-rx"></block></block>
+  <block id="f3d300c94dc8da268fd71f595a4b1c36" category="list-text">Tipo de disco Azure con sistemas de nodo único</block>
+  <block id="3c283478e1082153da1a28f6cae2070a" category="list-text">Para los sistemas de nodo único, el puerto recién añadido es _e0b_. Para las implementaciones de HA-pair con discos gestionados, el puerto recién añadido es _e0d_. Para las implementaciones de HA-pair con page blobs, el puerto recién añadido es _e0e_. Usa el nombre de nodo, no el nombre de la VM. Encuentra el nombre de nodo ejecutando<block ref="9cd5e832790132a87592f2958fc2b1a6" prefix=" " category="inline-code"></block>.</block>
+  <block id="e22a8b8a02dd778a344b734bd97fdc83" category="list-text">*Azure Disk Encryption para el cifrado de volúmenes* (para sistemas de nodo único, pares HA en varias zonas y implementaciones HA de una sola AZ)</block>
+  <block id="41fc554ff7fbcb7b9ef31dbfe008e047" category="list-text">Para un sistema de un solo nodo:</block>
+  <block id="929a94de085a28985069e5a8fe181ffa" category="list-text">Versión 9.4 en sistemas de un solo nodo</block>
+  <block id="70d92c1e2419b7500249e84f56bfda5d" category="section-title">12 febrero 2026</block>
+  <block id="4da572800ccc44d02dab68a24d7ba671" category="list-text">Se admiten sistemas de un solo nodo.</block>
+  <block id="147c1afd96a4841032c424a232a89df1" category="paragraph">Ten en cuenta que debes usar la CLI de ONTAP o System Manager para crear una máquina virtual de almacenamiento en un sistema de nodo único.</block>
+  <block id="11fea9e356efb178182b5bba66bbe697" category="list-text">Cuando creas un sistema de nodo único Cloud Volumes ONTAP en Google Cloud, ahora puedes elegir si quieres que la política de firewall predefinida permita el tráfico solo dentro de la VPC seleccionada (recomendado) o en todas las VPC.</block>
+  <block id="44b22df2c7850da4e8deb57e1d017983" category="paragraph">Los puertos 8023 y 49000 ya no están abiertos en los sistemas Cloud Volumes ONTAP en Azure tanto para sistemas de nodo único como para pares de HA.</block>
+  <block id="d245f28751732b176b91cfbee0179905" category="paragraph">Cloud Volumes ONTAP ahora puede usar un Ultra SSD como VNVRAM cuando usas el tipo de VM E32s_v3 con un sistema de nodo único<block ref="6f5d8baab146de724d052d505bbe4745" category="inline-link-rx"></block>.</block>
 </blocks>

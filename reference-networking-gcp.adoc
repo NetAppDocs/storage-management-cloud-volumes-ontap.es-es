@@ -28,19 +28,19 @@ Se deben cumplir los siguientes requisitos en Google Cloud.
 
 === Requisitos específicos de los sistemas de nodo único
 
-Si desea implementar un sistema de nodo único, asegúrese de que su red cumpla con los siguientes requisitos.
+Si quieres implementar un sistema de un solo nodo, asegúrate de que tu red cumpla con los siguientes requisitos.
 
 
 
 ==== Una VPC
 
-Se requiere una nube privada virtual (VPC) para un sistema de un solo nodo.
+Se requiere una Virtual Private Cloud (VPC) para un sistema de un solo nodo.
 
 
 
 ==== Direcciones IP privadas
 
-Para un sistema de un solo nodo en Google Cloud, la consola asigna direcciones IP privadas a lo siguiente:
+Para un sistema de nodo único en Google Cloud, la NetApp Console asigna direcciones IP privadas a lo siguiente:
 
 * Node
 * Grupo
@@ -111,9 +111,9 @@ Las subredes en estas VPC deben tener rangos CIDR distintos.  No pueden tener ra
 
 La consola asigna automáticamente la cantidad necesaria de direcciones IP privadas a Cloud Volumes ONTAP en Google Cloud.  Debe asegurarse de que su red tenga suficientes direcciones privadas disponibles.
 
-La cantidad de LIF asignadas para Cloud Volumes ONTAP depende de si implementa un sistema de nodo único o un par de alta disponibilidad.  Una LIF es una dirección IP asociada a un puerto físico.  Se requiere un LIF de administración de SVM para herramientas de administración como SnapCenter.
+El número de LIF asignados para Cloud Volumes ONTAP depende de si despliegas un sistema de nodo único o un par HA. Un LIF es una dirección IP asociada con un puerto físico. Se requiere un LIF de gestión de SVM para herramientas de gestión como SnapCenter.
 
-* *Nodo único* La consola asigna 4 direcciones IP a un sistema de un solo nodo:
+* *Nodo único* NetApp Console asigna 4 direcciones IP a un sistema de nodo único:
 +
 ** LIF de gestión de nodos
 ** Gestión de clústeres LIF
@@ -185,7 +185,7 @@ Aunque el acceso global está deshabilitado de forma predeterminada, se admite s
 
 Cloud Volumes ONTAP y el agente de consola son compatibles con una VPC compartida de Google Cloud y también con VPC independientes.
 
-Para un sistema de un solo nodo, la VPC puede ser una VPC compartida o una VPC independiente.
+Para un sistema de nodo único, la VPC puede ser una VPC compartida o una VPC independiente.
 
 Para un par HA, se requieren cuatro VPC.  Cada una de esas VPC puede ser compartida o independiente.  Por ejemplo, VPC-0 podría ser una VPC compartida, mientras que VPC-1, VPC-2 y VPC-3 podrían ser VPC independientes.
 

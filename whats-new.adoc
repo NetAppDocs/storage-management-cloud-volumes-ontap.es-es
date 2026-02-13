@@ -20,6 +20,24 @@ Las mejoras descritas en esta página son específicas para la administración d
 
 
 
+== 12 febrero 2026
+
+
+
+== Soporte para Ebdsv5 y E104ids_v5 VMs en Azure
+
+A partir de Cloud Volumes ONTAP 9.18.1, puedes implementar las VMs Ebdsv5 y E104ids_v5 para implementaciones y actualizaciones de nodo único y de alta disponibilidad (HA).
+
+Las máquinas virtuales Ebdsv5 dentro de la familia Eb de máquinas virtuales de Azure están optimizadas para un mayor rendimiento del almacenamiento remoto. Puedes usar estas máquinas virtuales para cargas de trabajo empresariales que requieren mucha memoria y son intensivas en E/S, como bases de datos relacionales, análisis en memoria y otras aplicaciones empresariales críticas y exigentes.
+
+E104ids_v5 es una instancia de VM aislada que te ayuda a manejar mejor las ventanas de mantenimiento programadas. En comparación con E80ids_v4, ofrece un rendimiento de disco y IOPS mucho mayores, junto con un mejor rendimiento general de la red.
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html["Configuraciones compatibles con Cloud Volumes ONTAP en Azure"^]
+
+https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/memory-optimized/edsv5-series?tabs=sizebasic["Documentación de Azure: series de tamaños Edsv5"^]
+
+
+
 == 10 de febrero de 2026
 
 
@@ -1005,7 +1023,7 @@ Estos nuevos permisos de AWS se han agregado a la política de IAM para mediador
 
 A partir de Cloud Volumes ONTAP 9.12.1 GA, las regiones de China ahora son compatibles con AWS de la siguiente manera.
 
-* Se admiten sistemas de nodo único.
+* Se admiten sistemas de un solo nodo.
 * Se admiten licencias compradas directamente a NetApp .
 
 
@@ -1477,7 +1495,7 @@ La compatibilidad con la creación de máquinas virtuales de almacenamiento requ
 - compute.instanceGroups.get
 - compute.addresses.get
 ----
-Tenga en cuenta que debe utilizar la CLI de ONTAP o el Administrador del sistema para crear una VM de almacenamiento en un sistema de nodo único.
+Ten en cuenta que debes usar la CLI de ONTAP o System Manager para crear una máquina virtual de almacenamiento en un sistema de nodo único.
 
 * https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-gcp.html#storage-vm-limits["Obtenga más información sobre los límites de almacenamiento de las máquinas virtuales en Google Cloud"^]
 * https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-gcp.html["Aprenda a crear máquinas virtuales de almacenamiento que brindan servicio de datos para Cloud Volumes ONTAP en Google Cloud"]
@@ -1572,7 +1590,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp
 +
 Anteriormente, BlueXP no mostraba ninguna política en VPC-1, VPC-2 o VPC-3 que no tuviera una etiqueta de destino.
 
-* Al crear un sistema de nodo único de Cloud Volumes ONTAP en Google Cloud, ahora puede elegir si desea que la política de firewall predefinida permita el tráfico solo dentro de la VPC seleccionada (recomendado) o en todas las VPC.
+* Cuando creas un sistema de nodo único Cloud Volumes ONTAP en Google Cloud, ahora puedes elegir si quieres que la política de firewall predefinida permita el tráfico solo dentro de la VPC seleccionada (recomendado) o en todas las VPC.
 
 
 
@@ -1767,7 +1785,7 @@ Cloud Volumes ONTAP ahora es compatible con la región Asia Pacífico (Osaka) de
 
 === Reducción de puerto
 
-Los puertos 8023 y 49000 ya no están abiertos en los sistemas Cloud Volumes ONTAP en Azure, tanto para sistemas de nodo único como para pares de alta disponibilidad.
+Los puertos 8023 y 49000 ya no están abiertos en los sistemas Cloud Volumes ONTAP en Azure tanto para sistemas de nodo único como para pares de HA.
 
 Este cambio se aplica a los _nuevos_ sistemas Cloud Volumes ONTAP a partir de la versión 3.9.13 del Conector.
 
@@ -2076,7 +2094,7 @@ Hay algunas limitaciones que conviene señalar:
 
 === Ultra SSD VNVRAM en regiones de Azure compatibles
 
-Cloud Volumes ONTAP ahora puede usar un SSD Ultra como VNVRAM cuando usa el tipo de VM E32s_v3 con un sistema de nodo único https://docs.microsoft.com/en-us/azure/virtual-machines/disks-enable-ultra-ssd["en cualquier región de Azure compatible"^] .
+Cloud Volumes ONTAP ahora puede usar un Ultra SSD como VNVRAM cuando usas el tipo de VM E32s_v3 con un sistema de nodo único https://docs.microsoft.com/en-us/azure/virtual-machines/disks-enable-ultra-ssd["en cualquier región de Azure compatible"^].
 
 VNVRAM proporciona un mejor rendimiento de escritura.
 

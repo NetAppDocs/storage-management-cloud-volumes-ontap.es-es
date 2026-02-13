@@ -101,7 +101,7 @@ ifdef::azure[]
 
 * En Azure se admite la organización de datos en niveles de la siguiente manera:
 +
-** Versión 9.4 en sistemas de nodo único
+** Versión 9.4 en sistemas de un solo nodo
 ** Versión 9.6 con pares HA
 
 
