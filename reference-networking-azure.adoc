@@ -178,6 +178,16 @@ link:task-enabling-private-link.html["Obtenga más información sobre el uso de 
 
 
 
+=== Redes para el cifrado de Azure VNet
+
+Cloud Volumes ONTAP soporta https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-encryption-overview["Cifrado de Azure Virtual Network (VNet)"^] para cifrar el tráfico VM-to-VM dentro de una VNet o entre VNets conectadas por emparejamiento. Esta función se configura en la capa VNet de Azure y es independiente de la topología de Cloud Volumes ONTAP (nodo único o HA).
+
+Sólo tienes que asegurarte de que Accelerated Networking está habilitado en las NIC de la máquina virtual y revisar los requisitos y limitaciones de cifrado de Azure VNet antes de habilitar la función. No deberías modificar los objetos de equilibrador de carga gestionados por NetApp.
+
+https://learn.microsoft.com/en-us/azure/virtual-network/accelerated-networking-overview?tabs=NetworkManager["Documentación de Azure: encriptación VNet y Accelerated Networking"^].
+
+
+
 === Conexiones con otros sistemas ONTAP
 
 Para replicar datos entre un sistema Cloud Volumes ONTAP en Azure y sistemas ONTAP en otras redes, debe tener una conexión VPN entre la red virtual de Azure y la otra red (por ejemplo, su red corporativa).
