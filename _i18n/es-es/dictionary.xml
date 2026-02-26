@@ -2814,7 +2814,6 @@
   <block id="f05ea9e0c9ccffc58a546b5b7a0d8608" category="inline-link">Copia de seguridad y recuperación</block>
   <block id="35abd03d33619ce4669db81554e2c6f4" category="cell">Si planea utilizar el<block ref="cb60f169b2f5c9214a2b89c79d285191" category="inline-link-macro-rx"></block> o<block ref="44267bb69e0507dfc0e4ac670835a65c" category="inline-link-rx"></block> servicios, debe habilitar el interruptor *Cuenta de servicio* y luego seleccionar la Cuenta de servicio que tenga el rol de Administrador de almacenamiento predefinido.</block>
   <block id="50c8825a081a6324d106fb453c29e690" category="cell">Las etiquetas son metadatos para sus recursos de Google Cloud.  La consola agrega las etiquetas al sistema Cloud Volumes ONTAP y a los recursos de Google Cloud asociados con el sistema.  Puede agregar hasta cuatro etiquetas desde la interfaz de usuario al crear un sistema y luego puede agregar más una vez creado.  Tenga en cuenta que la API no lo limita a cuatro etiquetas al crear un sistema.  Para obtener información sobre las etiquetas, consulte<block ref="fa397f5b6985fa16ac695ba7d4f7a5a5" category="inline-link-rx"></block> .</block>
-  <block id="7abaa657d7581473fa6d07195eefca45" category="paragraph">Seleccione el proyecto donde desea que resida Cloud Volumes ONTAP .  El proyecto predeterminado es el proyecto de la Consola.</block>
   <block id="0f1a2ace875803b14883046cfdd65e11" category="paragraph">Para crear un sistema Cloud Volumes ONTAP de pago por uso, debe seleccionar un proyecto de Google Cloud que esté asociado con una suscripción a Cloud Volumes ONTAP desde Google Cloud Marketplace. Referirse a<block ref="26858d2411615dac691c2981d5338917" category="inline-link-rx"></block> .</block>
   <block id="6d233fc45c5eb7c0016f5de64af78ac2" category="list-text">*Servicios*: Seleccione los servicios que desea utilizar en este sistema.  Para seleccionar Copia de seguridad y recuperación, o para utilizar NetApp Cloud Tiering, debe haber especificado la cuenta de servicio en el paso 3.</block>
   <block id="96c883d1fa1e7ebdc724bb5cec521bbd" category="inline-link-macro">Obtenga más información sobre los modelos de implementación de HA</block>
@@ -3353,8 +3352,6 @@
   <block id="ce307cd0ec17360c89f4cee135813d3a" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block>Configurar una cuenta de servicio</block>
   <block id="5337ecb9fc5a808e9812ea4cd428ebfe" category="paragraph"><block ref="55d152079aa637ec597e09245025de50" category="inline-link-macro-rx"></block> .</block>
   <block id="91f5721735e87c3888022376ff4ee935" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block>Habilitar las API de Google Cloud</block>
-  <block id="e478bf49f8034f2197e96520fa338da6" category="inline-link">Habilite las siguientes API de Google Cloud en su proyecto</block>
-  <block id="5236955cb529e7ce9ead7785420019e3" category="paragraph"><block ref="dc5737502524148f78bf03ba18318700" category="inline-link-rx"></block> . Estas API son necesarias para implementar el agente de consola y Cloud Volumes ONTAP.</block>
   <block id="e6fbc0b9673f8c86726688d7607fc8f5" category="inline-image-macro">Seis</block>
   <block id="f8494ad8ab0b53f5b10e615479658440" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block>Inicie Cloud Volumes ONTAP mediante la consola</block>
   <block id="7da2790af32ce3a63a33070eb62bb34c" category="paragraph">Haga clic en *Agregar sistema*, seleccione el tipo de sistema que desea implementar y complete los pasos del asistente. <block ref="e7b659d6e9cf4401150cabbf78e23874" category="inline-link-macro-rx"></block> .</block>
@@ -6005,10 +6002,7 @@
   <block id="221dc7db98837c8091cba0d42f55b28d" category="inline-link">Cloud Deployment Manager</block>
   <block id="055d81bf5e86c650f524ba8578595b0e" category="paragraph">Cloud Volumes ONTAP 9.16.1 y versiones posteriores ahora admiten<block ref="d6072c82cbcda01fbac85ce6d2b2ba66" category="inline-link-rx"></block> (IM) en lugar de<block ref="15f2e159f639573aa2393f20aa6d5e11" category="inline-link-rx"></block> (DM) para nuevas implementaciones en Google Cloud. Google va a dejar de usar Deployment Manager como servicio de infraestructura en un futuro próximo para pasarse a Infrastructure Manager, que es más avanzado.</block>
   <block id="66243a4b72870642e35fa6b52e50a63b" category="inline-link">Configura las implementaciones existentes de Cloud Volumes ONTAP para Google Cloud Infrastructure Manager</block>
-  <block id="aa51ff66cac4f14d899d7f563f8f476a" category="paragraph">Ahora, despliega automáticamente Cloud Volumes ONTAP para usar Infrastructure Manager o cambia tus implementaciones existentes en Deployment Manager a Infrastructure Manager ejecutando una herramienta de conversión. La conversión es un proceso único, después del cual tus sistemas empezarán a usar automáticamente Infrastructure Manager. Consulta<block ref="5621b7ac255bff00b9e8610ec0606935" category="inline-link-rx"></block> para ver instrucciones sobre cómo ejecutar la herramienta de transición.</block>
   <block id="492eb9196f4c5211832a66df9ce6230b" category="paragraph">Los sistemas Cloud Volumes ONTAP que utilizan Infrastructure Manager usan buckets de Google Cloud Storage para almacenar datos y registros en la zona del primer despliegue para guardar registros de despliegue, que se reutilizan para despliegues posteriores. Es posible que incurras en costes adicionales por estos buckets, pero no edites ni elimines los buckets ni su contenido:</block>
-  <block id="c63b3118890326f42e936277c83db3b6" category="list-text"><block ref="9d4c46381bcc7ebe4bf02a7fd0ac5b6f" prefix="" category="inline-code"></block>: para almacenar archivos Terraform de Cloud Volumes ONTAP</block>
-  <block id="aaa460fe2e0e39c5d509b26ad876baf8" category="list-text"><block ref="6ec9e5b046607d57923aee80f990225d" prefix="" category="inline-code"></block>: para almacenar artefactos de Google Cloud Terraform</block>
   <block id="73c696c58c9e62731e855a0bf47853e1" category="inline-link">Primeros pasos con Cloud Volumes ONTAP en Google Cloud</block>
   <block id="f80ae1b8de03cd56e51dbe8e44bf284f" category="list-text"><block ref="f80ae1b8de03cd56e51dbe8e44bf284f" category="inline-link-rx"></block></block>
   <block id="ccc8cedaac96382fa4e8c01b8e53646d" category="inline-link">NetApp Console Agent 4.2.0 Notas de la versión</block>
@@ -6043,11 +6037,9 @@
   <block id="31bd3ca8f6cd8f37f69e226cb1afe75b" category="list-text"><block ref="31bd3ca8f6cd8f37f69e226cb1afe75b" category="inline-link-rx"></block></block>
   <block id="233af50e7ac5078d6cabb58ab95095b9" category="summary">Para tus implementaciones existentes en Google Cloud, necesitas actualizar tus sistemas a Cloud Volumes ONTAP 9.16.1 o una versión posterior y luego ejecutar manualmente una herramienta de transición para convertir de Google Cloud Deployment Manager a Cloud Infrastructure Manager.</block>
   <block id="b9e5aa43ec2007eccaf097117438e531" category="doc">Convierte las implementaciones existentes de Cloud Volumes ONTAP a Infrastructure Manager</block>
-  <block id="4f199c7ad20d0a908dda3d1603ff73d7" category="paragraph">A partir del 12 de enero de 2026, las nuevas implementaciones de Cloud Volumes ONTAP en Google Cloud pueden usar Google Cloud Infrastructure Manager. Google está a punto de dejar de usar Google Cloud Deployment Manager y pasará a Infrastructure Manager. Por eso, necesitas ejecutar manualmente una herramienta de transición para convertir tus implementaciones existentes de Cloud Volumes ONTAP de Deployment Manager a Infrastructure Manager. Este es un proceso único, después del cual tus sistemas empezarán a usar Infrastructure Manager automáticamente.</block>
   <block id="8c41baf1ca98e1184f48c4721d44d431" category="inline-link">Sitio de soporte de NetApp</block>
   <block id="416146100ffb7fc54fb8a24ca7b63ae8" category="paragraph">La herramienta de transición está disponible en<block ref="33e3c3ba324846178fad333329821dd2" category="inline-link-rx"></block> y crea los siguientes artefactos:</block>
   <block id="fe91a45b95e89e219ea69631edff8521" category="list-text">Artefactos de Terraform, guardados en<block ref="b1042b7d7203a022c297b13679f7d1f8" prefix=" " category="inline-code"></block>.</block>
-  <block id="47a96ec9ac683fac8aa8ebbddbfb79ff" category="list-text">Resumen de la conversión, guardado en<block ref="8f66602548a59e22c821de29517d7dff" prefix=" " category="inline-code"></block>.</block>
   <block id="787ab3bb526ace3e3d9f5b857facafbf" category="list-text">Registros de depuración, guardados en el <block ref="abecaca0429ea0c44adcba537eb94f89" prefix=" " category="inline-code"></block> directorio. Necesitas estos registros para solucionar problemas. El <block ref="6ec9e5b046607d57923aee80f990225d" prefix=" " category="inline-code"></block> bucket almacena los registros de Terraform.</block>
   <block id="07f770dff2ab3ed070b0fafe70eae22a" category="paragraph">Los sistemas Cloud Volumes ONTAP que utilizan Infrastructure Manager almacenan datos y registros en buckets de Google Cloud Storage. Es posible que incurras en costes adicionales por estos buckets, pero no edites ni elimines los buckets ni su contenido:</block>
   <block id="adf9ac4ef674ca575662deb880fc460c" category="list-text">Asegúrate de que tu sistema Cloud Volumes ONTAP es 9.16.1 o posterior.</block>
@@ -6085,7 +6077,6 @@
   <block id="fb4479839b891ed9122fdadf7bbfe16a" category="cell">metadata.google.internal</block>
   <block id="afbf0897a5a83fdd873dfb032ec695d3" category="cell">Interno</block>
   <block id="964a9f95d3fda0f78f13dd7cd49fe137" category="cell">Metadatos de VM y tokens de autenticación</block>
-  <block id="2ebcfc415db0f53ee976c65188ec85ef" category="paragraph">Sigue estos pasos para pasar de Deployment Manager a Infrastructure Manager y ejecutar la herramienta para las implementaciones de Cloud Volumes ONTAP existentes.</block>
   <block id="cc8a2ca4c8f7a6693635c0db1616e216" category="list-text">Crea un rol y asígnalo a una cuenta de servicio:</block>
   <block id="960ea426544a50e48bbb44091a8b5e5a" category="list-text">Crea un archivo YAML con los siguientes permisos:</block>
   <block id="1d18879deca373fd3c960377615e653b" category="inline-link">Creación y gestión de roles personalizados</block>
@@ -6095,7 +6086,6 @@
   <block id="4249c331d2620d2cd9780ca6679f30af" category="list-text">Agrega el rol <block ref="27a953ce0cbb51d4876b439aee2cbec1" prefix=" " category="inline-code"></block> a esta cuenta de servicio. Consulta <block ref="88a1fe1ad7367a70a7d6fa5c7d98a110" category="inline-link-rx"></block>.</block>
   <block id="809402001bcefea16f2b81f207ddb62e" category="list-text">[[create-vm]]Crea una VM con las siguientes configuraciones. Vas a ejecutar la herramienta en esta VM.</block>
   <block id="bfe0b77c61bbcf5b827b09fb810318bd" category="list-text">Tipo de máquina: Google Compute Engine machine type e2-medium</block>
-  <block id="80dc4d9bb42c64d10e1e74253c1379ed" category="list-text">OS: Ubuntu 25.10 AMD64 Minimal (imagen: ubuntu-minimal-2510-amd64)</block>
   <block id="96a6ec9a15c7eb577293b9d570bbae05" category="list-text">Redes: cortafuegos que permite HTTP y HTTPs</block>
   <block id="7dbcc5c811addb725c58af9582fb0b39" category="list-text">Tamaño del disco: 20GB</block>
   <block id="c9edc2d9baf5e2843ff19a9486021651" category="list-text">Seguridad: cuentas de servicio: la cuenta de servicio que creaste</block>
@@ -6109,8 +6099,6 @@
   <block id="d0f860b4876ce7d6519dd4fd5cdc1aca" category="list-text">Control de servicio: activado (default)</block>
   <block id="72371168b81dc49ed84ccc2826b33285" category="list-text">Google Cloud Trace (antes Stackdriver Trace): solo escritura (por defecto)</block>
   <block id="771d5634625da9bdf9383284e6876fe8" category="list-text">Conéctate a la máquina virtual recién creada usando SSH:<block ref="d66edda9356fa84b13bc561b5cdc06d2" prefix=" " category="inline-code"></block></block>
-  <block id="ca3b8cdca327664a13e57f221634b9cd" category="list-text">Descarga la herramienta de conversión desde<block ref="33e3c3ba324846178fad333329821dd2" category="inline-link-rx"></block> usando tus credenciales NSS:<block ref="351cb02cba717c786694e4b04b17a03c" prefix=" " category="inline-code"></block></block>
-  <block id="f3f4a9f0374e3aaf79b22eaa6f11e24b" category="list-text">Extrae el archivo TAR descargado:<block ref="80c87050897af12083ff007ec59b29ae" prefix=" " category="inline-code"></block></block>
   <block id="893f19f5842942626647ba8f53e27731" category="list-text">Descarga e instala estos paquetes de requisitos previos:</block>
   <block id="3195b86062bb29c6228b3987373aba5c" category="list-text">Docker: 28.2.2 build 28.2.2-0ubuntu1 o posterior</block>
   <block id="83bedc7f0caf9a0b296313249895e235" category="list-text">Terraform: 1.14.1 o posterior</block>
@@ -6122,8 +6110,6 @@
   <block id="4253cd62d3506adae113f0c0ed35a026" category="list-text">Ingresa al entorno donde está instalada la herramienta:<block ref="c7fe96d8e92d9922385f327806aa5ef6" prefix=" " category="inline-code"></block></block>
   <block id="b6645c19cd405763183f19c38c1f7cad" category="inline-link">permisos necesarios para Google Cloud Infrastructure Manager</block>
   <block id="82fc86d16c204fd1047896be7797f7b4" category="list-text">Ejecuta la herramienta de conversión como usuario de<block ref="3a2e7e59491b74e35b36d9d724fd0584" prefix=" " category="inline-code"></block>. Asegúrate de que usas la misma cuenta de servicio que la cuenta de servicio del agente de la Console, y que la cuenta de servicio tiene todos los<block ref="5d3ef0c339df1f2a110bf7d6a45b4e45" category="inline-link-rx"></block>.</block>
-  <block id="cacad0cdf4b0fdce4156938c4ed3c9e5" category="paragraph">La herramienta muestra una lista de todos los sistemas Cloud Volumes ONTAP y los detalles de SVM. Cuando termina de ejecutarse, puedes ver los estados de todos los sistemas convertidos. Cada sistema convertido aparece en la Google Console bajo Infrastructure Manager en un formato _&lt;converted system name-imdeploy&gt;_, lo que indica que la Console ahora usa las APIs de Infrastructure Manager para gestionar ese sistema Cloud Volumes ONTAP.</block>
-  <block id="9da6711274c63c22ce751c1ffdb9517c" category="admonition">Después de la conversión, no elimines el objeto de despliegue para Deployment Manager en la consola de Google Cloud. Este objeto de despliegue contiene metadatos que Infrastructure Manager usa para gestionar los sistemas Cloud Volumes ONTAP.</block>
   <block id="d6c5cad15e9fe911e15bbd9f138172e5" category="paragraph">Si necesitas revertir la conversión, debes usar la misma VM. Si has convertido todos los sistemas y no necesitas revertir a Deployment Manager, puedes eliminar la VM.</block>
   <block id="c77014ed2ed0c6a090666526f334c0b4" category="section-title">Anular la conversión</block>
   <block id="9e24a1a0370c9ae26c8cda42c2031983" category="paragraph">Si no quieres seguir con la conversión, puedes volver a Deployment Manager siguiendo estos pasos:</block>
@@ -6256,4 +6242,117 @@
   <block id="24b287efb87a1453e16ea920079d5795" category="paragraph">Cuando trabajes con registros de sistemas, asegúrate de que todas las acciones se realicen dentro de la misma organización y cuenta donde se incorporaron originalmente los sistemas. Por ejemplo, puedes mover un sistema Cloud Volumes ONTAP a un nuevo agente de Console cuando la migración se mantiene dentro de la misma organización.</block>
   <block id="64d9da3b00c4fef3501584e739a33d23" category="admonition">No puedes descubrir, ver o gestionar sistemas que están registrados con una cuenta u organización diferente.</block>
   <block id="29759b568048f604f84457c1e384b4a3" category="section-title">19 febrero 2026</block>
+  <block id="d370e8740a6b64fd386955e0e780b888" category="paragraph">A partir del 09 de febrero de 2026, Cloud Volumes ONTAP utiliza Infrastructure Manager para las implementaciones nuevas y existentes. Esta tabla te explica algunos flujos de trabajo:</block>
+  <block id="54861efdd06fc309e1c9a420feff98eb" category="cell">Escenario</block>
+  <block id="7227af91d597be9f306654b7f9570871" category="cell">Nuevas APIs para el agente</block>
+  <block id="060f2406e35d76018851fe48ca94d582" category="cell">Nuevos permisos para el agente</block>
+  <block id="7fcf37c89982b3db8f710c7c0a78df3f" category="cell">Nuevas API de Google Cloud para Cloud Volumes ONTAP</block>
+  <block id="12f8aec1aacb26c22265d9eeef4f1a7a" category="cell">Recursos de documentación</block>
+  <block id="ffcce4c7137f38bc7e8f7abd968a2416" category="cell">Agente existente y Cloud Volumes ONTAP ya desplegado</block>
+  <block id="8ca4609018726707802acec01ea088c8" category="cell">Agrega nuevas API y permisos al agente existente y convierte el sistema Cloud Volumes ONTAP existente.</block>
+  <block id="15b890fd729e8bd42b01f29b115cdada" category="list-text">API de Cloud Infrastructure Manager</block>
+  <block id="a4c710688b0bce1852460a0da5685192" category="list-text">API de Cloud Quotas</block>
+  <block id="6ecd6a8715f3b8584b0a166952141ee0" category="paragraph">Todos los permisos listados para la versión de la NetApp Console en:</block>
+  <block id="a578c7a2817a7adad288f8984659cad5" category="inline-link">8 de diciembre de 2025</block>
+  <block id="d3fe1173fb4a2d7b6cb7fc5d5e93b435" category="list-text"><block ref="d3fe1173fb4a2d7b6cb7fc5d5e93b435" category="inline-link-rx"></block></block>
+  <block id="c9d872b23d54864ab58551a55106a3db" category="inline-link">09 febrero 2026</block>
+  <block id="e9239b2f6f0e207f03cce4b6a5a9d9bf" category="list-text"><block ref="e9239b2f6f0e207f03cce4b6a5a9d9bf" category="inline-link-rx"></block></block>
+  <block id="d0afacc44f5837356184459eb1b8fb68" category="cell">\https://www.googleapis.com/upload/storage/v1 \https://config.googleapis.com/v1</block>
+  <block id="78b63d509629d2b46ecd06bdf9d90717" category="paragraph"><block ref="78b63d509629d2b46ecd06bdf9d90717" category="inline-link-rx"></block></block>
+  <block id="32524c76b6297a63bd4c44a66fb638cb" category="cell">Agente existente y nueva implementación de Cloud Volumes ONTAP</block>
+  <block id="cd116d29376c1e626e005f853f310ae1" category="cell">Agrega nuevas API y permisos al agente existente y despliega un nuevo sistema Cloud Volumes ONTAP.</block>
+  <block id="599a622e9d52b5b54a2b589d25b12d7f" category="cell">Todos los pasos para una nueva implementación</block>
+  <block id="af766153ec7c24e4d448b02bfd0e1ec3" category="cell">Nuevo agente y nuevo despliegue</block>
+  <block id="252390de9c128281e1354046c39015db" category="cell">Crea un nuevo agente y despliega un nuevo sistema Cloud Volumes ONTAP.</block>
+  <block id="133f87cfee7691c59e4aceff51289761" category="inline-link">Crea un agente de NetApp Console desde Google Cloud</block>
+  <block id="cfdaf06139b734f8230b05e534421bc4" category="list-text"><block ref="cfdaf06139b734f8230b05e534421bc4" category="inline-link-rx"></block></block>
+  <block id="dfa41bd12b34b1bd351e47cb755d553f" category="paragraph">Ahora, despliega Cloud Volumes ONTAP para usar automáticamente Infrastructure Manager o cambia tus implementaciones existentes en Deployment Manager a Infrastructure Manager ejecutando una herramienta de conversión. La conversión es un proceso único, después del cual tus sistemas empezarán a usar Infrastructure Manager. Consulta<block ref="5621b7ac255bff00b9e8610ec0606935" category="inline-link-rx"></block> para ver instrucciones sobre cómo ejecutar la herramienta de conversión.</block>
+  <block id="0841cdab6957a4878161d52555ce3f69" category="list-text"><block ref="459888dc95116b3e1800e611d3502102" prefix="" category="inline-code"></block>: para las versiones de ONTAP y las plantillas Terraform de SVM usadas para nuevos despliegues de Cloud Volumes ONTAP. Dentro de esto, el bucket<block ref="141f3ccee25f2d3a39df4d9471e4bb21" prefix=" " category="inline-code"></block> contiene los archivos Terraform de Cloud Volumes ONTAP.</block>
+  <block id="a11251d028e85bf55e217f7b75894bca" category="list-text"><block ref="6ec9e5b046607d57923aee80f990225d" prefix="" category="inline-code"></block>: para almacenar artefactos de Google Cloud Terraform.</block>
+  <block id="eefb06bb963974fa756fd69b5da77f3d" category="doc">Compatibilidad con Google Infrastructure Manager para implementaciones en modo privado</block>
+  <block id="8a1d72441a291104845776a8cb5ca0b8" category="paragraph">Cloud Volumes ONTAP 9.16.1 y versiones posteriores ahora admiten<block ref="d6072c82cbcda01fbac85ce6d2b2ba66" category="inline-link-rx"></block> (IM) en lugar de<block ref="15f2e159f639573aa2393f20aa6d5e11" category="inline-link-rx"></block> (DM) para nuevas implementaciones en modo privado en Google Cloud. Google va a dejar de usar Deployment Manager como servicio de infraestructura en un futuro cercano para dar paso a Infrastructure Manager, que es más avanzado.</block>
+  <block id="ec39823b2cb6731c93e31551324e6ed7" category="paragraph">A partir del 25 de febrero de 2026, Cloud Volumes ONTAP utiliza Infrastructure Manager para los despliegues en modo privado nuevos y existentes. Esta tabla te explica los flujos de trabajo básicos:</block>
+  <block id="d8848c7dd607d8a63767f8dcc10bcfc7" category="cell">Agente existente y despliegue existente en modo privado</block>
+  <block id="be72cda1fd0978b223bf1c72cd3470fe" category="cell">Actualiza a la última versión del agente de NetApp Console descargando el instalador desde el NetApp Support Site y luego instala manualmente el agente en tu host, para que pueda usar las APIs de Infrastructure Manager. Después, convierte los sistemas Cloud Volumes ONTAP existentes para que usen Infrastructure Manager.</block>
+  <block id="1b4969e94a4b9494c07d1a3d15d990de" category="list-text">API de Cloud Build</block>
+  <block id="b366c1901726ed94faabaca293b342ab" category="list-text">cloudbuild.workerpools.get</block>
+  <block id="a1594604ead4ac9e883fb7f2565b2dff" category="list-text">\https://cloudbuild.googleapis.com/v1</block>
+  <block id="255359407033996c52ff32fb9e9dedfd" category="list-text">\https://www.googleapis.com/upload/storage/v1</block>
+  <block id="f2be3a212e6f5bb332096881441fa881" category="list-text">\https://config.googleapis.com/v1</block>
+  <block id="887fafea4cfb163759637ed2efcec691" category="cell">Crea un nuevo agente y despliega un nuevo sistema Cloud Volumes ONTAP en modo privado.</block>
+  <block id="2977507bb7188d1e96246a14057a3902" category="inline-link">Inicio rápido para implementaciones en modo privado</block>
+  <block id="2d0e6ad25589f8f4affb38c55f4f325f" category="list-text"><block ref="2d0e6ad25589f8f4affb38c55f4f325f" category="inline-link-rx"></block></block>
+  <block id="4caab03d94f5f056dee76ac3abd4066d" category="inline-link">Configuración de Infrastructure Manager para implementaciones en modo privado</block>
+  <block id="d79d7aeb01a8087d8ac3417a9437a457" category="paragraph">En los despliegues en modo privado, necesitas hacer algunos cambios de configuración para que Cloud Volumes ONTAP empiece a usar Infrastructure Manager. Consulta<block ref="a3ca45cd087005e24df23da60619241b" category="inline-link-rx"></block>.</block>
+  <block id="72f140aadeef542ffaaccb8f92bb751b" category="paragraph">Si quieres implementar Cloud Volumes ONTAP 9.16.1 o una versión posterior en modo privado, necesitas hacer algunos cambios en la configuración para que Cloud Volumes ONTAP pueda usar Google Cloud Infrastructure Manager como servicio de implementación en vez de Deployment Manager, que Google eventualmente dejará obsoleto.</block>
+  <block id="d8ded2f209878a774abc9ec32f535df0" category="list-text">Asegúrate de que tu sistema Cloud Volumes ONTAP sea 9.16.1 o posterior. Si no es así, actualiza tu sistema. Consulta<block ref="2bd5b2c5d36e72902dcf55c00d490964" category="inline-link-rx"></block> para ver las instrucciones.</block>
+  <block id="d65cea469279b26fd96aefa9946737d3" category="list-text">Asegúrate de que las API de Google Cloud estén habilitadas. Consulta<block ref="284597b9b55c9d9b3851ec2830376fdc" category="inline-link-rx"></block>.</block>
+  <block id="c1a7d01779c80df928434b55a0985909" category="inline-link">Habilita la API Cloud Build aquí</block>
+  <block id="b1e7119f70e00ffd9c8e1fa9fda7970c" category="list-text">Asegúrate de que la API Cloud Build está activada. Consulta<block ref="fa797d3d1c2c6a35d496e72e95485a1f" category="inline-link-rx"></block>.</block>
+  <block id="b62c03b308f3e880573f89ca750ec806" category="list-text">Verifica que la cuenta de servicio del agente de la Console tenga todos los permisos estándar. Además, asegúrate de que la cuenta de servicio tenga los permisos<block ref="b366c1901726ed94faabaca293b342ab" prefix=" " category="inline-code"></block> y<block ref="a5bb5562c6a74b17ab2426705833048f" prefix=" " category="inline-code"></block>. Consulta<block ref="818358be64a80b49936bc9250a957044" category="inline-link-rx"></block>.</block>
+  <block id="fb5afcb60feed225e2eddbcec73f8baa" category="inline-link">Documentación de Google Cloud: crear y gestionar pools privados</block>
+  <block id="ca543bcb74bbda4033559b744191de30" category="inline-link">Precios de Google Cloud Build</block>
+  <block id="9f3ba99a8a6610d877d41cfd0712da8e" category="list-text">Crea un grupo de trabajadores privado con esta configuración en la misma región que los despliegues de Cloud Volumes ONTAP. Para información sobre cómo crear un grupo de trabajadores privado, consulta <block ref="24f6f9425e53d4871201c692b03c2576" category="inline-link-rx"></block> y <block ref="0b65d90cf6452a6f3a215b5f548b34fc" category="inline-link-rx"></block>.</block>
+  <block id="f1a0dd5f9c1e3a35d2ceaa55d5ddc7a0" category="paragraph">El pool de trabajadores debe tener la siguiente configuración:</block>
+  <block id="b5785ebe961e54037c8e88333d89cdfb" category="list-text">Tipo de máquina: e2-medium</block>
+  <block id="81886430867de94e8c64a4d6ee03885f" category="list-text">Tamaño del disco: 100 GB</block>
+  <block id="4f78751a4c59d02232a84cf0f75f106b" category="list-text">Asignar IP externa: False</block>
+  <block id="1ce82e3f1abec4157983f159c2519b6e" category="list-text">Red: por defecto o una privada.</block>
+  <block id="f6ab2d5d47935ec62410c5a522057350" category="inline-link">APIs de Google</block>
+  <block id="31ee5d7a195dd642f2dd5c5892f66a66" category="list-text">La subred configurada para acceder a<block ref="3a79aa9a9ac20e9b7507d4a67f3c5626" category="inline-link-rx"></block>. Realiza estos pasos para asegurarte de que la subred puede acceder a Google APIs:</block>
+  <block id="4e778f784bb81e3fa2540f16b2e516f1" category="list-text">Asegúrate de que "Private Google Access" está activado para la subred.</block>
+  <block id="3ddc338aacbdc94d99095f1bc9dc5e9f" category="list-text">Ve a *VPC Network level &gt; Private Service Access Tab &gt; Allocated IP ranges for services*.</block>
+  <block id="d67cbfbd26657ae0f146b4f91df6172e" category="list-text">Selecciona *Allocate IP range* y asigna el rango IP interno para la conexión privada con Google Compute Service.</block>
+  <block id="a886bf060d000589a384bbf702d2d46c" category="list-text">En *Conexión privada a servicios*, selecciona *Crear conexión*.</block>
+  <block id="bb03b10924dadb99652bb9ecfd1e8ce1" category="list-text">Selecciona *Connected service producer = Google Cloud Platform*.</block>
+  <block id="a4f8cf180bd6d1216c603260377fab0b" category="list-text">Asigna la asignación para el rango IP de la conexión privada que creaste en el paso anterior.</block>
+  <block id="2fc774da70207cbd9c3f7f4cb2b882ce" category="list-text">Despliega este worker pool y mantenlo en ejecución para la gestión de Cloud Volumes ONTAP. Google Cloud utiliza este worker pool para ejecutar todas las operaciones de Terraform en un entorno aislado.</block>
+  <block id="e76afdbea65b310b371ae0744e22156a" category="list-text">Cuando despliegues Cloud Volumes ONTAP en modo privado, selecciona el nombre de este worker pool en el campo *GCP Worker Pool*. Consulta <block ref="06a62ff106957757a2928a7c710d7365" category="inline-link-macro-rx"></block> para instrucciones.</block>
+  <block id="5aee1781451135693253ccb12d7c445b" category="paragraph">Selecciona el proyecto donde quieres que Cloud Volumes ONTAP resida.</block>
+  <block id="29c10f28e9441020f79943c2c89621d8" category="paragraph">A partir del 9 de febrero de 2026, las nuevas implementaciones de Cloud Volumes ONTAP en Google Cloud pueden usar Google Cloud Infrastructure Manager. Google está a punto de dejar de usar Google Cloud Deployment Manager y pasará a Infrastructure Manager. Por eso, necesitas ejecutar manualmente una herramienta de transición para convertir tus implementaciones existentes de Cloud Volumes ONTAP de Deployment Manager a Infrastructure Manager. Este es un proceso único, después del cual tus sistemas empezarán a usar Infrastructure Manager automáticamente.</block>
+  <block id="5e2a323cd6d7faff6d94fff36d28f7aa" category="list-text">Resumen de la conversión, guardado en<block ref="f80ad7d1c557c653b7c3e1f9d76587b2" prefix=" " category="inline-code"></block></block>
+  <block id="a55abb3f1f891995d70f70a7d8476b90" category="example-title">Para las implementaciones en modo privado, asegúrate de que se cumplen estos requisitos adicionales:</block>
+  <block id="043abbc7d82ea8f85b4eb2cfc1ed8c1a" category="list-text">Asegúrate de que tienes la última versión del agente de la Console. Descarga el instalador del producto desde el NetApp Support Site y luego instala manualmente el agente en tu host para que el agente pueda usar las APIs de Infrastructure Manager.</block>
+  <block id="25dde09ff44d3749c7c30e9d6de5ea84" category="list-text">Si estás ejecutando la herramienta en modo privado, asegúrate de que, junto con las demás API, tienes habilitada la Cloud Build API.<block ref="284597b9b55c9d9b3851ec2830376fdc" category="inline-link-rx"></block>.</block>
+  <block id="61396513f8cad4235cc6230c5b5bd890" category="list-text">Asegúrate de haber completado las configuraciones de red y creado el grupo de trabajadores para las implementaciones en modo privado. Consulta <block ref="394ae5ca2623ff2541a3ab80e68c7904" category="inline-link-macro-rx"></block>.</block>
+  <block id="cee17a2118e2f87df1ef45ab60919d83" category="cell">cloudbuild.googleapis.com</block>
+  <block id="e61855b4554dd4f867078342b0fe3ed9" category="cell">Las operaciones de construcción solo son necesarias para el modo privado</block>
+  <block id="77ef2eaf8c2a9596bf70daf2be42abe2" category="cell">pypi.org</block>
+  <block id="0a837cd57db3481995c1d0997aae27ae" category="cell">Índice de paquetes de Python</block>
+  <block id="6594103004c2bc59c4fb5a91392b8465" category="cell">files.pythonhosted.org</block>
+  <block id="d1c13320cf2e8da01f31926ba2086b3f" category="cell">Descargas de paquetes de Python</block>
+  <block id="7815013af3602cfeabf604b40b0243ab" category="cell">checkpoint-api.hashicorp.com</block>
+  <block id="06aadd241c0be8803fdac80e00020154" category="cell">Comprobación de la versión de Terraform</block>
+  <block id="00977613eb3121985c5ef92a3b047a2f" category="cell">download.docker.com</block>
+  <block id="519d41a4bf864a38b5c2c30d0b7ee9e2" category="cell">Repositorio APT de Docker</block>
+  <block id="97561d366538d5b777d32fdea196c4f1" category="cell">security.ubuntu.com</block>
+  <block id="c59814c5745505a7a040fa82a314dad7" category="cell">80/443</block>
+  <block id="119c09112d85866a566eabcb7d844fb1" category="cell">Actualizaciones de seguridad de Ubuntu</block>
+  <block id="6649579c086a0b87b5608e9e15a9eba0" category="cell">*.gce.archive.ubuntu.com</block>
+  <block id="8204b6d5cc30339f744f46d8037d7fdd" category="cell">Espejo de paquetes de Ubuntu</block>
+  <block id="23475ffaa5c62a61c9fd9936da1b2d17" category="section-title">Prepara el entorno para ejecutar la herramienta</block>
+  <block id="235ad64d4d44f422462a6f13a9ebdb24" category="paragraph">Realiza estos pasos antes de ejecutar la herramienta.</block>
+  <block id="4bee4ab4be906bd67870e2d76cbe2d72" category="example-title">Incluir permisos adicionales para las implementaciones en modo privado</block>
+  <block id="95b7e315a27c85fa86a577df97656d5b" category="paragraph">Si estás ejecutando la herramienta en modo privado, añade el permiso<block ref="b366c1901726ed94faabaca293b342ab" prefix=" " category="inline-code"></block> también al archivo YAML.</block>
+  <block id="25099748affaf06175b1716317124072" category="list-text">OS: según lo que necesites, selecciona cualquiera de estas imágenes:</block>
+  <block id="c4815cf0c0f871d5ff5c1ad7c1270c4d" category="list-text">Ubuntu 25.10 AMD64 Minimal (imagen: ubuntu-minimal-2510-amd64)</block>
+  <block id="53b4fb6fd5c954dbf179dba99b662501" category="list-text">SUSE Linux Enterprise Server 15 SP7 x86_64</block>
+  <block id="6b71f098730cc9eb4a17b15f0fde4f4f" category="list-text">Descarga la herramienta de conversión desde<block ref="2b34f2fd14a473003c4bec1d639c99ed" category="inline-link-rx"></block> usando tus credenciales NSS:<block ref="351cb02cba717c786694e4b04b17a03c" prefix=" " category="inline-code"></block></block>
+  <block id="c4c52ae6b59db725eb370608587a87ac" category="list-text">Extrae el archivo TAR descargado:<block ref="555b90a4c7bdb6bc696ca4ddf5851d9d" prefix=" " category="inline-code"></block></block>
+  <block id="3d945423f8e9496c429a5d8c65b4604f" category="list-title">Ubuntu</block>
+  <block id="4ae0b3e9c82d7212e106b8d937d888f9" category="list-title">SUSE Linux Enterprise Server</block>
+  <block id="60deaa50ef5cb5075b022cf8b7e2aa9b" category="list-text">Configura Python:<block ref="cf4dfc540c38d1d6ba007027e57f8ad9" prefix=" " category="inline-code"></block></block>
+  <block id="65cd321eaaee0b3388777984c4c6eee5" category="list-text">Instala pip3 para instalar el paquete:<block ref="7e0697d280b7e6ee823c16cf6063e8a1" prefix=" " category="inline-code"></block></block>
+  <block id="322703fda01f6eb40f244f64f885a8e7" category="list-text">Instala Terraform:</block>
+  <block id="e1a2af96135fd402f4eeb590d1d083f4" category="list-text">Instala Google Cloud SDK (gcloud)</block>
+  <block id="56fe813ce089ce40cf0ddd7a34baa41d" category="section-title">Ejecuta la herramienta de conversión</block>
+  <block id="127f0169d9159483efb1bf11269a83d6" category="paragraph">Estos pasos son para Ubuntu y SUSE Linux Enterprise Server para ejecutar la herramienta de conversión.</block>
+  <block id="582f01440b1fe8b3b54fbaaa3e0ae2a5" category="example-title">Ejecuta la herramienta en despliegues en modo privado</block>
+  <block id="e3e9593585f6673afa2b7fc51d4207a1" category="paragraph">Especifica el parámetro<block ref="8fc12ad6381abbb87712055c7f5e50f1" prefix=" " category="inline-code"></block> para ejecutar la herramienta en despliegues en modo privado. Para la configuración del worker pool, consulta <block ref="394ae5ca2623ff2541a3ab80e68c7904" category="inline-link-macro-rx"></block>.</block>
+  <block id="c6e9d79a05da6fd3036f2ce45e30d798" category="paragraph">La herramienta muestra una lista de todos los sistemas Cloud Volumes ONTAP y los detalles de SVM. Cuando termina de ejecutarse, puedes ver los estados de todos los sistemas convertidos. Cada sistema convertido aparece en la Google Console bajo Infrastructure Manager en un formato _&lt;system-name-imdeploy&gt;_, lo que indica que la Console ahora usa las Infrastructure Manager APIs para administrar ese sistema Cloud Volumes ONTAP.</block>
+  <block id="73f8b632600f6bf7d4edd2fb31ec35be" category="admonition">Después de la conversión, no elimines el objeto de deployment para Deployment Manager en la Google Cloud Console. Este objeto de deployment contiene información que podrías necesitar para revertir el sistema convertido.</block>
+  <block id="7e5509f4bf6f560ecb7a52d0a6083b0c" category="inline-link">Habilita las API de Google Cloud en tu proyecto</block>
+  <block id="fbf12f5b0c848baad453322be1474e53" category="inline-link">Estas APIs</block>
+  <block id="d6c639979f19e4b6ee894da109e92143" category="paragraph"><block ref="72d9b6cdd2035c34510a674b3e79e7cf" category="inline-link-rx"></block>.<block ref="274a8d4ce254fa7ad9c059c75fad96a6" category="inline-link-rx"></block>, que puede que ya hayas habilitado como parte de crear el agente de la Console, son necesarios para implementar Cloud Volumes ONTAP en Google Cloud.</block>
+  <block id="56a5c925d77740ea69d50272863f3f75" category="section-title">26 febrero 2026</block>
 </blocks>
