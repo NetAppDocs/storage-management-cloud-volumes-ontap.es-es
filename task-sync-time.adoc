@@ -4,7 +4,7 @@ permalink: task-sync-time.html
 keywords: set up, setting up, ntp, time, synch 
 summary: Al especificar un servidor NTP se sincroniza la hora entre los sistemas de su red, lo que puede ayudar a prevenir problemas debido a diferencias horarias. 
 ---
-= Sincronizar la hora del sistema Cloud Volumes ONTAP mediante el servidor NTP
+= Sincroniza la hora del sistema Cloud Volumes ONTAP usando servidores NTP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,16 +14,16 @@ summary: Al especificar un servidor NTP se sincroniza la hora entre los sistemas
 
 
 [role="lead"]
-Para garantizar una sincronización horaria precisa, debe configurar un servidor de Protocolo de tiempo de red (NTP) para sus sistemas Cloud Volumes ONTAP . Asegúrese de configurar un servidor NTP para sus sistemas Cloud Volumes ONTAP en todos los proveedores de nube para mantener una sincronización horaria consistente dentro de su red.
-
-
-NOTE: Si no configura un servidor NTP, podría experimentar interrupciones del servicio y una sincronización horaria incorrecta.
+Configurar servidores Network Time Protocol (NTP) para tus clústeres Cloud Volumes ONTAP asegura una sincronización precisa de la hora de tu clúster con otros sistemas en tu red y servidores externos. Sincronizar la hora de tu clúster con servidores NTP externos ayuda a mantener la coherencia en toda tu infraestructura. NetApp configura servidores NTP por defecto para nuevas implementaciones de Cloud Volumes ONTAP. Pero si no están configurados para tus clústeres Cloud Volumes ONTAP existentes, debes configurar servidores NTP para una sincronización precisa de la hora dentro y fuera de tu red.
 
 Puede especificar un servidor NTP utilizando:
 
 * https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html["La API de la NetApp Console"^].
 * El comando CLI de ONTAP https://docs.netapp.com/us-en/ontap-cli//cluster-time-service-ntp-server-create.html["Creación de servidor NTP de servicio de tiempo de clúster"^].
 
+
+
+NOTE: Si no configura un servidor NTP, podría experimentar interrupciones del servicio y una sincronización horaria incorrecta.
 
 .Enlaces relacionados
 * Artículo de la base de conocimientos (KB): https://kb.netapp.com/Cloud/ncds/nds/cvo/cvo_kbs/How_does_a_CVO_cluster_use_NTP["¿Cómo utiliza NTP un clúster CVO?"]
