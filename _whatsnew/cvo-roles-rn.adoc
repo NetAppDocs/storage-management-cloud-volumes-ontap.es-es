@@ -1,0 +1,105 @@
+= Actividades que no puedes realizar, por pestaña
+:allow-uri-read: 
+
+
+
+
+=== Actividades que no puedes realizar, por pestaña
+
+La siguiente tabla resume las actividades restringidas por pestaña.
+
+[cols="1,4"]
+|===
+| Pestaña | Actividades que no puedes realizar 
+
+
+| Descripción general  a| 
+* Agrega un volumen
+* Agrega un agregado
+* Abrir System Manager
+* Usa el botón de encendido/apagado
+* Establece una contraseña
+* Actualiza la versión de ONTAP
+* Quita el sistema del espacio de trabajo
+* Eliminar el sistema
+* Usa *Upgrade now*
+* Edita *etiquetas del sistema* desde el menú del lápiz de todas las funciones
+* Edita *Tiempo de inactividad programado* desde el menú de lápiz de todas las funciones
+* Edita *clases de almacenamiento* desde el menú del lápiz de todas las funciones
+* Edita *Instance type* desde el menú del lápiz de todas las funciones
+* Edita *Método de carga* desde el menú de lápiz de todas las funciones
+* Edita *License type* desde el menú del lápiz de todas las funciones
+* Edita *Velocidad de escritura* desde el menú del lápiz de todas las funciones
+* Edita *Ransomware protection* desde el menú del lápiz de todas las funciones
+* Edita *Support registration* desde el menú del lápiz de todas las funciones
+* Edita *WORM* desde el menú del lápiz de todas las funciones
+* Edita *Data tiering* desde el menú del lápiz de todas las funciones
+* Edita *CIFS setup* desde el menú del lápiz de todas las funciones
+* Edita *Route tables* desde el menú del lápiz de todas las funciones
+
+
+
+
+| Volúmenes  a| 
+En esta pestaña no se permiten actualizaciones de volúmenes y no puedes añadir volúmenes.
+
+* Clonar un volumen
+* Editar la configuración de volumen
+* Eliminar un volumen
+* Crear una copia snapshot
+* Restaurar desde una copia instantánea
+* Cambiar el tipo de disco (opción avanzada)
+* Cambiar la política de tiering (opción avanzada)
+
+
+
+
+| Agregados  a| 
+* Agrega un agregado
+* Agrega un volumen
+* Aumenta la capacidad
+* Eliminar un agregado
+
+
+
+
+| Replicación  a| 
+* Interrumpir la replicación
+* Resincronizar la replicación
+* Replicación de resincronización inversa
+* Edita el calendario
+* Edita la tasa de transferencia máxima
+* Actualizar replicación
+* Eliminar replicación
+
+
+
+
+| Lienzo principal  a| 
+* Agregar un sistema
+* Descubre un sistema (para todos los operadores)
+* Utiliza arrastrar y soltar para *Copy and sync*
+* Utiliza arrastrar y soltar para *Volume caching*
+* Usa arrastrar y soltar para *Replication*
+* Agrega un volumen
+* Accede a *coste y rendimiento optimizados*
+* Abrir System Manager
+* Usa *Replicación* para Cloud Volumes ONTAP solo cuando tengas el permiso CVO necesario (no aplicable a FSx para ONTAP o sistemas locales)
+* Usa *Volume caching* para Cloud Volumes ONTAP solo cuando el permiso CVO requerido esté disponible (no aplicable a FSx para ONTAP o sistemas locales)
+* Ingresa un sistema
+* Usa el botón de gestión AVS
+
+
+
+
+| Sin roles  a| 
+Cuando no se asigna ningún rol, todas las acciones están deshabilitadas.
+
+* Accede al entorno de trabajo
+* Replicación de acceso
+* Usa el asistente de creación de Cloud Volumes ONTAP
+* Usa el asistente de creación de réplicas
+* Descubre Cloud Volumes ONTAP
+
+
+|===

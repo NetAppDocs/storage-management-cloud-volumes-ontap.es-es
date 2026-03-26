@@ -54,7 +54,7 @@ Puede activar el almacenamiento WORM en un sistema Cloud Volumes ONTAP cuando ag
 
 == Confirmando archivos en WORM
 
-Puede utilizar una aplicación para confirmar archivos en WORM a través de NFS o CIFS, o utilizar la CLI de ONTAP para confirmar archivos en WORM automáticamente.  También puede utilizar un archivo anexable WORM para conservar datos que se escriben de forma incremental, como información de registro.
+Puedes usar una aplicación para enviar archivos a WORM por NFS o CIFS, o usar la CLI de ONTAP para enviar archivos a WORM automáticamente. También puedes usar un archivo WORM appendable para retener datos que se escriben de forma incremental, como información de registro. Para más información, consulta https://docs.netapp.com/us-en/ontap/snaplock/commit-files-worm-state-manual-task.html#commit-files-to-worm-manually["Confirma archivos en WORM usando ONTAP SnapLock"^].
 
 Después de activar el almacenamiento WORM en un sistema Cloud Volumes ONTAP , debe usar la CLI de ONTAP para toda la administración del almacenamiento WORM.  Para obtener instrucciones, consulte la http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-arch-con/home.html["Documentación de ONTAP sobre SnapLock"^] .
 
