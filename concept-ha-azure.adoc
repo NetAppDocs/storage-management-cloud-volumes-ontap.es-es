@@ -129,3 +129,9 @@ La toma de control del almacenamiento, la resincronización y la devolución son
 == Configuraciones de almacenamiento
 
 Puede utilizar un par HA como una configuración activa-activa, en la que ambos nodos sirven datos a los clientes, o como una configuración activa-pasiva, en la que el nodo pasivo responde a las solicitudes de datos solo si ha asumido el almacenamiento del nodo activo.
+
+
+NOTE: Cloud Volumes ONTAP utiliza balanceadores de carga en modo activo-pasivo para las sondas. En Azure, solo el nodo activo responde a una sonda. El nodo pasivo puede aparecer como inactivo con una marca X. Esto es un comportamiento esperado y no es motivo de preocupación.
+
+.Enlace relacionado
+link:task-azure-high-availability-mode.html["Habilitar el modo de alta disponibilidad para Cloud Volumes ONTAP en Azure"^]

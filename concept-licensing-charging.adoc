@@ -48,7 +48,7 @@ Su licencia siempre se cobra primero, pero se le cobrará la tarifa por hora del
 ** Si el plazo de su licencia expira
 
 
-* Si tiene un contrato anual de un mercado, _todos_ los sistemas Cloud Volumes ONTAP que implemente se cobrarán según ese contrato.  No es posible combinar un contrato de mercado anual con BYOL.
+* Si tienes una licencia BYOL y un contrato anual de un marketplace, tu consumo y los excedentes se cobran según la preferencia de facturación que hayas establecido. Para entender cómo se te cobra, consulta link:concept-licensing-charging.html#concept-licensing-charging.html#billing-preferences-and-overages["Preferencias de facturación y excedentes"].
 * Sólo se admiten sistemas de nodo único con BYOL en las regiones de China. Las implementaciones en la región de China están exentas de las restricciones de licencia BYOL.
 
 
