@@ -45,7 +45,7 @@ Una vez que NetApp autorice su cuenta, podrá vincular las suscripciones de Keys
 .Pasos
 . Desde el menú de la NetApp Console , seleccione *Administración > Licenses and subscriptions*.
 . Seleccione * Suscripciones Keystone *.
-. Para la suscripción que desea vincular, haga clic enimage:icon-action.png["Un icono que consta de tres puntos uno al lado del otro."] y seleccione *Enlace*.
+. Para la suscripción que quieres vincular, selecciona image:icon-action.png["Un icono que consta de tres puntos uno al lado del otro."] y selecciona *Enlazar*.
 
 
 .Resultado
@@ -60,9 +60,9 @@ Si desea cambiar la capacidad comprometida para los niveles de servicio de su su
 .Pasos
 . Desde el menú de la NetApp Console , seleccione *Administración > Licenses and subscriptions*.
 . Seleccione * Suscripciones Keystone *.
-. Para la suscripción cuya capacidad desea ajustar, haga clic en image:icon-action.png["Un icono que consta de tres puntos uno al lado del otro."] y seleccione *Ver detalle y editar*.
+. Para la suscripción cuya capacidad quieras ajustar, selecciona image:icon-action.png["Un icono que consta de tres puntos uno al lado del otro."] y selecciona *Ver detalles y editar*.
 . Ingrese la capacidad comprometida solicitada para una o más suscripciones.
-. Desplácese hacia abajo, ingrese cualquier detalle adicional para la solicitud y luego haga clic en *Enviar*.
+. Desplázate hacia abajo, introduce cualquier detalle adicional para la solicitud y luego selecciona *Enviar*.
 
 
 .Resultado
@@ -85,7 +85,7 @@ Si ya no desea utilizar una suscripción de Keystone con la consola, puede desvi
 .Pasos
 . Desde el menú de la NetApp Console , seleccione *Administración > Licenses and subscriptions*.
 . Seleccione * Keystone*.
-. Para la suscripción que desea desvincular, haga clic enimage:icon-action.png["Un icono que consta de tres puntos uno al lado del otro."] y seleccione *Desvincular*.
+. Para la suscripción que quieres desvincular, selecciona image:icon-action.png["Un icono que consta de tres puntos uno al lado del otro."] y selecciona *Desvincular*.
 
 
 .Resultado

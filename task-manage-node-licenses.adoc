@@ -227,4 +227,6 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deleting-system.ht
 
 
 .Enlaces relacionados
-enlace:link:concept-licensing.html#end-of-availability-of-node-based-licenses["Fin de la disponibilidad de las licencias basadas en nodos"] link:task-convert-node-capacity.html["Convertir licencias basadas en nodos a licencias basadas en capacidad"]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html#end-of-availability-of-node-based-licenses["Fin de la disponibilidad de las licencias basadas en nodos"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-convert-node-capacity.html["Convertir licencias basadas en nodos a licencias basadas en capacidad"^]
+

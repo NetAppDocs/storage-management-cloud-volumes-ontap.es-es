@@ -3518,17 +3518,14 @@
   <block id="06f358c39bc3b4633cefd78beb67e671" category="section-title">Vincular una suscripción</block>
   <block id="8afaab6946e4a914b70539d7502e26ac" category="paragraph">Una vez que NetApp autorice su cuenta, podrá vincular las suscripciones de Keystone para usarlas con Cloud Volumes ONTAP.  Esta acción permite a los usuarios seleccionar la suscripción como método de cobro para los nuevos sistemas Cloud Volumes ONTAP .</block>
   <block id="b0afff19aa3343a6f86619d833dbd316" category="inline-image-macro">Un icono que consta de tres puntos uno al lado del otro.</block>
-  <block id="fc6ada65ff8f08c80e7d6167f68c89c2" category="list-text">Para la suscripción que desea vincular, haga clic en<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block> y seleccione *Enlace*.</block>
   <block id="1b02ed65c5ea56c85fffa6b88378d762" category="section-title">Solicitar más o menos capacidad comprometida</block>
   <block id="56ecf988dec174f4d23028e78eeed82c" category="list-text">Ingrese la capacidad comprometida solicitada para una o más suscripciones.</block>
-  <block id="dbae9df22f08344d5508b91cb73c6d15" category="list-text">Desplácese hacia abajo, ingrese cualquier detalle adicional para la solicitud y luego haga clic en *Enviar*.</block>
   <block id="8f140d9c4d508c36e3d4c57102f117eb" category="paragraph">Su solicitud crea un ticket en el sistema de NetApp para su procesamiento.</block>
   <block id="ec6e0d1bd46f010ced65478c609b1636" category="section-title">Monitorizar el uso</block>
   <block id="20ea4c62f4c9e4254314fe7fbbef0319" category="inline-link">Obtenga más información sobre cómo monitorear el uso de las suscripciones</block>
   <block id="d7105dd212dc96a8b292b6b48f84916f" category="paragraph"><block ref="d7105dd212dc96a8b292b6b48f84916f" category="inline-link-rx"></block></block>
   <block id="0c0401d1e9169d6dd38462b1e0d04126" category="section-title">Desvincular una suscripción</block>
   <block id="492847bcbc9ec0bd3075b612aa43e4a7" category="list-text">Seleccione * Keystone*.</block>
-  <block id="a666a430e484ea214384aefaa30da852" category="list-text">Para la suscripción que desea desvincular, haga clic en<block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block> y seleccione *Desvincular*.</block>
   <block id="6e1a9790b199742bec95dea2070e2f3f" category="summary">Administre sus licencias basadas en nodos en la NetApp Console para garantizar que cada sistema Cloud Volumes ONTAP tenga una licencia válida con la capacidad requerida.</block>
   <block id="160221c1e99e53b72af8a65c2440852b" category="doc">Administrar licencias basadas en nodos para Cloud Volumes ONTAP</block>
   <block id="63e5ea33dc9b9a10458ac73abae91075" category="paragraph">Administre licencias basadas en nodos en la NetApp Console para garantizar que cada sistema Cloud Volumes ONTAP tenga una licencia válida con la capacidad requerida.</block>
@@ -3600,7 +3597,6 @@
   <block id="f979ec1d84a4416797fae20cc61f839b" category="inline-link">Aprenda a eliminar un sistema Cloud Volumes ONTAP</block>
   <block id="0d0947c9b1ebe3ee650df057f8192855" category="paragraph"><block ref="87175a08736eca79154ad91c69792fcd" category="inline-link-rx"></block> .</block>
   <block id="342dcce6bda294bb4b60fc9333bcafbe" category="inline-link-macro">Convertir licencias basadas en nodos a licencias basadas en capacidad</block>
-  <block id="cb90b48918ed9cd8ea355c04c171177b" category="paragraph">enlace:<block ref="7f9a8649ca2d86db235ba56502d14f92" category="inline-link-macro-rx"></block> <block ref="431f655d5a9ac309b561fc62a4c619ea" category="inline-link-macro-rx"></block></block>
   <block id="bd0ed9183db9306d8ce58c50abb4a96b" category="summary">La NetApp Console no ​​proporciona ningún tipo de soporte de configuración u orquestación para la recuperación ante desastres de máquinas virtuales de almacenamiento.  Debe utilizar el Administrador del sistema o la CLI.</block>
   <block id="76872305ddb703eedd7fbe3e66263d83" category="doc">Configurar la recuperación ante desastres de la máquina virtual de almacenamiento para Cloud Volumes ONTAP</block>
   <block id="d25bf5fb042a0cc652d82492e5410fb6" category="paragraph">La NetApp Console no ​​ofrece soporte de configuración u orquestación para la recuperación ante desastres de máquinas virtuales de almacenamiento (SVM).  Para realizar estas tareas, utilice el Administrador del sistema ONTAP o la CLI de ONTAP .</block>
@@ -5731,7 +5727,6 @@
   <block id="a53c428d90f592127da49a8d5a558130" category="paragraph">Un representante de NetApp procesará su solicitud autorizando su cuenta para acceder a las suscripciones.</block>
   <block id="9c2f6d6e4376237ad065b1baa0ad822d" category="paragraph">La suscripción ahora está vinculada a su organización o cuenta de consola y está disponible para seleccionar al crear un entorno de trabajo de Cloud Volumes ONTAP .</block>
   <block id="10d2905ee5dfcb309d64e3633fb774c1" category="paragraph">Si desea cambiar la capacidad comprometida para los niveles de servicio de su suscripción, puede enviar una solicitud a NetApp directamente desde la consola. Solicitar capacidad adicional para un nivel de servicio proporciona más almacenamiento para los sistemas Cloud Volumes ONTAP .</block>
-  <block id="e45b542fbde799582edd5059bc1991a9" category="list-text">Para la suscripción cuya capacidad desea ajustar, haga clic en <block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block> y seleccione *Ver detalle y editar*.</block>
   <block id="a3a13a09504a7f25eb72dede89db4f24" category="paragraph">El panel de Digital Advisor le permite supervisar el uso de la suscripción de Keystone y generar informes.</block>
   <block id="e29343f0ee1c0051a367e02b49c1c5ff" category="paragraph">Si ya no desea utilizar una suscripción de Keystone con la consola, puede desvincular la suscripción. Tenga en cuenta que solo puede desvincular una suscripción que no esté asociada a una suscripción existente de Cloud Volumes ONTAP .</block>
   <block id="0e1096776546966fb22c4752766d55a9" category="paragraph">La suscripción se desvincula de su organización o cuenta de la consola y ya no está disponible para seleccionar al crear un entorno de trabajo de Cloud Volumes ONTAP .</block>
@@ -6438,4 +6433,9 @@
   <block id="fe4b627e339ef56fd051464a11d7b4aa" category="paragraph"><block ref="fe4b627e339ef56fd051464a11d7b4aa" category="inline-link-macro-rx"></block></block>
   <block id="9472db468c3c681023f3ca03b59df38b" category="list-text">Si tienes una licencia BYOL y un contrato anual de un marketplace, tu consumo y los excedentes se cobran según la preferencia de facturación que hayas establecido. Para entender cómo se te cobra, consulta <block ref="0b707007d6575618559747cfb2737b16" category="inline-link-macro-rx"></block>.</block>
   <block id="403f4a170e2d1c03d329e0f0dd8d1b84" category="section-title">13 abril 2026</block>
+  <block id="b3590df4b69c4ddf7017e6977baebe49" category="list-text">Para la suscripción que quieres vincular, selecciona <block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block> y selecciona *Enlazar*.</block>
+  <block id="665103db45058514d7e3b032c990783d" category="list-text">Para la suscripción cuya capacidad quieras ajustar, selecciona <block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block> y selecciona *Ver detalles y editar*.</block>
+  <block id="f638b98047aa1e2c9642d2de1bcdd0d0" category="list-text">Desplázate hacia abajo, introduce cualquier detalle adicional para la solicitud y luego selecciona *Enviar*.</block>
+  <block id="dc96e19fba7ac18b79e69398a4792825" category="list-text">Para la suscripción que quieres desvincular, selecciona <block ref="c9c50c6d591d91ccce1ee232fa490fb4" category="inline-image-macro-rx" type="image"></block> y selecciona *Desvincular*.</block>
+  <block id="5e5b6fbbd6a3b4edf3913541e4fecf17" category="list-text"><block ref="5e5b6fbbd6a3b4edf3913541e4fecf17" category="inline-link-rx"></block></block>
 </blocks>
