@@ -20,6 +20,54 @@ Las mejoras descritas en esta página son específicas para la administración d
 
 
 
+== 12 de mayo de 2026
+
+
+
+=== Facturación flexible para Cloud Volumes ONTAP y servicios de datos en AWS
+
+NetApp ofrece opciones de facturación mejoradas para tus suscripciones a Cloud Volumes ONTAP en AWS, dándote más control sobre cómo pagas la capacidad de Cloud Volumes ONTAP y los servicios de datos de NetApp, como BlueXP backup and recovery. Antes, todo el uso de Cloud Volumes ONTAP y los servicios de datos se facturaba junto a través del listado NetApp Intelligent Services (NIS) en el AWS marketplace.
+
+Debido a los cambios en AWS Enterprise Discount Program (EDP), NetApp ha introducido una suscripción independiente a Cloud Volumes ONTAP en el marketplace de AWS que te permite separar la facturación de la capacidad de Cloud Volumes ONTAP de los servicios de datos. Esta separación te da más flexibilidad para gestionar tus créditos y costos de EDP. NetApp recomienda usar la suscripción independiente para una mejor gestión de los costos de tu uso de Cloud Volumes ONTAP, mientras sigues usando la suscripción NIS para la facturación de los servicios de datos después del 31 de julio de 2026, cuando entren en vigor los requisitos de EDP.
+
+La suscripción independiente a Cloud Volumes ONTAP en AWS solo admite paquetes de licencia Essentials o Freemium basados en capacidad válidos. No se admite el paquete Professional. Puedes seleccionar el método de facturación que mejor se adapte a tus necesidades:
+
+* *Suscripción independiente a Cloud Volumes ONTAP (recomendada)*: Paga el uso de Cloud Volumes ONTAP a través de la suscripción independiente en el marketplace de AWS, mientras sigues facturando los servicios de datos a través de la suscripción NIS. Esta es la opción recomendada para la mayoría de los clientes que tienen tanto suscripciones independientes como NIS asociadas a su cuenta de AWS en la NetApp Console.
+* *Suscripción NIS combinada*: Paga tanto Cloud Volumes ONTAP como los servicios de datos juntos a través del listado NIS existente. El enfoque combinado será válido para los clientes existentes que solo tengan suscripciones NIS asociadas a su cuenta de AWS en la NetApp Console. Sin embargo, NetApp recomienda que configures tu preferencia de facturación para tu uso de Cloud Volumes ONTAP y cambies a la suscripción independiente para una mejor gestión de costos.
+
+
+Dependiendo de tu tipo de suscripción, obtienes estos escenarios:
+
+.Sólo suscripción independiente (nuevos clientes)
+Si solo tienes una suscripción independiente de AWS asociada a tu cuenta de AWS en la NetApp Console y no tienes suscripciones de NIS, solo puedes seleccionar el paquete de licencias Essentials durante la implementación. La opción de servicios de datos *Backup and Recovery* no está disponible para ti.
+
+.Tanto las suscripciones independientes como las de NIS (clientes actuales)
+Si tienes suscripciones NIS y autónomas asociadas a tu cuenta de AWS, y no has establecido una preferencia de facturación a través de la pestaña *Preferencias de facturación* en la NetApp Console, el uso de Cloud Volumes ONTAP sigue facturándose a través de NIS de forma predeterminada. Esta también es la opción predeterminada para cualquier instancia de Cloud Volumes ONTAP que ejecute el paquete Professional, porque el listado autónomo no admite Professional. Puedes establecer una preferencia de facturación y elegir cómo facturar cada servicio:
+
+* Establece la suscripción independiente como la cuenta de facturación preferida para Cloud Volumes ONTAP (con el paquete Essentials). Si solo tienes el paquete Professional, puedes convertirlo en un paquete Essentials y cobrar tu uso de Cloud Volumes ONTAP configurando la preferencia de facturación. Te recomendamos este enfoque porque te ayuda a gestionar tus créditos EDP de Cloud Volumes ONTAP de manera más eficaz.
+* Utiliza la suscripción NIS para facturar los servicios de datos o el uso de Cloud Volumes ONTAP a través del paquete Professional. Durante el despliegue, activa el servicio de datos *Backup and Recovery* y selecciona el paquete de licencia Professional para facturar los servicios de datos a través de la suscripción NIS.
+
+
+.Sólo suscripción a NIS (clientes actuales)
+Esto es aplicable si eres un cliente existente con suscripciones NIS asociadas a la cuenta de AWS. Puedes seguir facturando tanto Cloud Volumes ONTAP como los servicios de datos juntos, tal como lo haces ahora. Sin embargo, NetApp recomienda cambiar al enfoque de suscripción independiente para una mejor gestión de los costes de tu uso de Cloud Volumes ONTAP:
+
+* Suscríbete a un nuevo listado independiente en el portal de AWS.
+* Vincula la suscripción independiente a tu cuenta de AWS.
+* Establece tu preferencia de facturación en la suscripción independiente para el uso de Cloud Volumes ONTAP con el paquete Essentials.
+* (Si procede) Convierte tu paquete Professional en un paquete Essentials y establece la preferencia de facturación.
+* Continúa facturando servicios de datos a través de tu suscripción NIS.
+
+
+
+NOTE: No se duplica la medición cuando usas varios tipos de suscripción o migras entre listados.
+
+.Enlace relacionado
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-set-up-licensing-aws.html["Configurar licencias para Cloud Volumes ONTAP en AWS"^]
+* https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-capacity-licenses.html#change-charging-methods["Cambiar los métodos de cobro de las licencias de capacidad"^]
+
+
+
+
 == 13 abril 2026
 
 
