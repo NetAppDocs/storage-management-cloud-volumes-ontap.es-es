@@ -2832,7 +2832,6 @@
   <block id="92ac6875448afadccc706b220d2412c3" category="cell">Seleccione *Usar dominio de Active Directory* para configurar un servidor NTP utilizando el DNS de Active Directory.  Si necesita configurar un servidor NTP utilizando una dirección diferente, debe utilizar la API. Consulte la<block ref="ad561d482c49648a0d36f6a86e379ff3" category="inline-link-rx"></block> Para más detalles.  Tenga en cuenta que solo puede configurar un servidor NTP al crear un servidor CIFS.  No es configurable después de crear el servidor CIFS.</block>
   <block id="a9a68a4c2a3e1d9ea3aa0198251e51b3" category="paragraph">Para obtener más información, consulte<block ref="449d1f3dba62fd34c10497ac720687ce" category="inline-link-macro-rx"></block> ,<block ref="1e62300500e1ad0802bb2b24113c7036" category="inline-link-macro-rx"></block> , y<block ref="9af56c326a803ff09c4af3da1cdbc4e2" category="inline-link-rx"></block></block>
   <block id="b5fc4208e494804d1484996e111220af" category="summary">Puede iniciar instancias de Cloud Volumes ONTAP en una configuración de sistema único o como un par de alta disponibilidad en AWS.</block>
-  <block id="a3272fd5c4bd1903de9b1b2f5e1665a8" category="doc">Lanzamiento de Cloud Volumes ONTAP en AWS</block>
   <block id="9390f8a96c7c5355d756fc44464e1732" category="paragraph">Puede iniciar Cloud Volumes ONTAP en una configuración de sistema único o como un par de alta disponibilidad en AWS.  Este método proporciona una experiencia de implementación avanzada que ofrece más opciones de configuración y flexibilidad que el método de implementación rápida.</block>
   <block id="e59e28c3414f799d5603536ada649276" category="list-text">Deberías tener una<block ref="3b4cd71362cf3504bd6ec81f00bd2e64" category="inline-link-rx"></block> .</block>
   <block id="a868fdec3895d3124b3057eb37731062" category="paragraph">Debería haberse preparado eligiendo una configuración y obteniendo información de red de AWS de su administrador. Para más detalles, consulte<block ref="b2852d75c9a2b653b1ca3941854c33b3" category="inline-link-macro-rx"></block> .</block>
@@ -2938,7 +2937,6 @@
   <block id="221e8f6e98d75a4db804bf88879345c0" category="list-text"><block ref="221e8f6e98d75a4db804bf88879345c0" category="inline-link-macro-rx"></block></block>
   <block id="6390591b27e881b05ba32426d12f2b17" category="list-text"><block ref="6390591b27e881b05ba32426d12f2b17" category="inline-link-macro-rx"></block></block>
   <block id="0f703b696e22955e2930127e854c1e29" category="summary">Puede iniciar un solo sistema Cloud Volumes ONTAP en Azure creando un sistema Cloud Volumes ONTAP en NetApp Console.</block>
-  <block id="70c84621a7336f391b4b7df86b5f1396" category="doc">Lanzamiento de Cloud Volumes ONTAP en Azure</block>
   <block id="0473d750e2a3daca568511b768f19dad" category="list-text">Deberías tener una<block ref="21b9e54d07d93b52dd801e203dadcd2a" category="inline-link-rx"></block> .</block>
   <block id="1942ca6a74b110784dab141845e32ec9" category="paragraph">Debe tener una configuración planificada y los detalles de red de Azure necesarios de su administrador. Para obtener más información, consulte <block ref="342e106d00de7bc2efc5fca274754fe1" category="inline-link-macro-rx"></block> .</block>
   <block id="4a990655560c303b19831e9bf63722cf" category="paragraph"><block ref="a19594f8ac35f50a09725bf53aa8cda6" category="inline-link-macro-rx"></block> .</block>
@@ -4135,28 +4133,8 @@
   <block id="f508651fe98cc3415eb1f58ed2bed8a0" category="paragraph">Para obtener más información sobre cómo habilitar ARP con ONTAP System Manager y la CLI de ONTAP , consulte<block ref="b15a4c9c991d002f8e900421f382aab3" category="inline-link-rx"></block> .</block>
   <block id="a35eb7b32c61adf984cdcc0cc1594b1c" category="image-alt">La captura de pantalla muestra la licencia complementaria para Autonomous Ransomware Protection.</block>
   <block id="2fde968374b314fab80910a4b4b46fd5" category="summary">Puede implementar instancias de Cloud Volumes ONTAP en una configuración de sistema único o como un par de alta disponibilidad en AWS rápidamente.</block>
-  <block id="df21da50f7b519faae186f1e43c17239" category="paragraph">Puede implementar Cloud Volumes ONTAP en AWS utilizando un método de implementación rápida tanto para configuraciones de nodo único como de alta disponibilidad (HA).  Este proceso simplificado reduce los pasos de implementación en comparación con el método avanzado.  También ofrece más claridad en el flujo de trabajo al establecer automáticamente valores predeterminados en una sola página y minimizar la navegación.</block>
-  <block id="f4d9251cb6baf7aaf8aacb13b64583f3" category="paragraph">Necesita lo siguiente para agregar un sistema Cloud Volumes ONTAP en AWS desde la NetApp Console.</block>
-  <block id="23308548687959b344a096c6b0bae802" category="inline-link">Agente de consola asociado con su proyecto o espacio de trabajo</block>
-  <block id="53bb40073556c6e0c2d5a2300b5cdf2f" category="list-text">Deberías tener una<block ref="204252e86f6f1e5199f82785452591cf" category="inline-link-rx"></block> .</block>
-  <block id="31fd3917028d3e963193a4c795d8230a" category="paragraph">Inmediatamente después de crear el sistema Cloud Volumes ONTAP , la NetApp Console inicia una instancia de prueba en la VPC especificada para verificar la conectividad.  Si tiene éxito, la consola finaliza inmediatamente la instancia y luego comienza a implementar el sistema.  Si la consola no puede verificar la conectividad, la creación del sistema falla.  La instancia de prueba es una<block ref="5ef1a68e904a3597d2b907cd2782dc2a" prefix=" " category="inline-code"></block> (para tenencia de VPC predeterminada) o una<block ref="80d12d97ae3fdbfc793b03ba2263193e" prefix=" " category="inline-code"></block> (para tenencia de VPC dedicada).</block>
   <block id="7610912a02afeabe582d133e3aacaeb1" category="list-text">[[suscribirse]]En la página Canvas, haga clic en *Agregar sistema* y siga las instrucciones.</block>
-  <block id="0213ba83da4728f61c50e9f003561727" category="list-text">Seleccione *Amazon Web Services* &gt; * Cloud Volumes ONTAP* &gt; *Agregar nuevo*.  La opción *Creación rápida* está seleccionada de forma predeterminada.</block>
-  <block id="7678631716f127507640973c04d4d7f2" category="inline-image-macro">ancho=800,alt="Creación rápida de AWS"</block>
-  <block id="e027f4c7cbd5869ce59e9268db3155b7" category="paragraph"><block ref="e027f4c7cbd5869ce59e9268db3155b7" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9aea8161bcc752fa6d3dda6fa4f6ef80" category="list-title">detalles del sistema</block>
-  <block id="711c73ff7306ce769fe8d1365ad843b6" category="list-text">*Cuenta de proveedor de la nube*: los detalles de la cuenta se completan automáticamente en función del agente de consola seleccionado.  Si tiene varias cuentas, seleccione la que desea utilizar.  Si un agente de consola no está disponible, se le solicitará que<block ref="1594e6ec88af22ac86c24dc97d8aa3e8" category="inline-link-rx"></block> .</block>
-  <block id="6215b333e4bac48e04b82d9b5c656d16" category="list-text">*Nombre*: El nombre del sistema.  La consola usa el nombre del sistema (clúster) para nombrar el sistema Cloud Volumes ONTAP y la instancia de Amazon EC2.  También utiliza el nombre como prefijo para el grupo de seguridad predefinido, si selecciona esa opción.</block>
-  <block id="be488f7879d6d4643df8df156e845288" category="list-text">* Credenciales de ONTAP * Estas son las credenciales para la cuenta de administrador del clúster Cloud Volumes ONTAP .  Puede usar estas credenciales para conectarse a Cloud Volumes ONTAP a través de ONTAP System Manager o la CLI de ONTAP .  Puede conservar el nombre de usuario predeterminado _admin_ o cambiarlo por un nombre de usuario personalizado.</block>
-  <block id="174bb344f9ccc0d461077d3a3fab95e6" category="list-text">*Etiquetas* Las etiquetas de AWS son metadatos para sus recursos de AWS.  La consola agrega las etiquetas a la instancia de Cloud Volumes ONTAP y a cada recurso de AWS asociado con la instancia.  Puede agregar hasta 15 etiquetas desde la interfaz de usuario al crear un sistema Cloud Volumes ONTAP y luego puede agregar más después de su creación.  Tenga en cuenta que la API no lo limita a cuatro etiquetas al crear un sistema.  Para obtener información sobre las etiquetas, consulte<block ref="9bd250e03cdf80384a24635f16673602" category="inline-link-rx"></block> .</block>
   <block id="ed38874183f73e374cbbb3c0f4153523" category="list-title">Implementación y configuración</block>
-  <block id="84c26349068a8d379294086769b1dbf4" category="list-text">*Tipo de implementación*: seleccione el tipo de implementación que desea utilizar: nodo único, alta disponibilidad (HA) en una sola zona de disponibilidad (AZ) o HA en varias AZ.</block>
-  <block id="10998bd4fd45e438e0a5d473fa026ec2" category="list-text">*Configuración de red*: Ingrese la información de red que registró en el<block ref="fd0086af96971a0360fa581d84484686" category="inline-link-rx"></block> .</block>
-  <block id="a691a19e1be7950cdfda17bc54add849" category="list-text">*Región de AWS*: de forma predeterminada, se selecciona la región de la cuenta en la nube asociada que tiene VPC con recursos de subred.</block>
-  <block id="5870f7a0eec344fcf6fbcf6886836fae" category="list-text">*VPC*: Ingrese una VPC para la región de AWS con una subred.  Si no hay subredes, se selecciona el valor predeterminado para la VPC.</block>
-  <block id="3850f164243211371486f6a7386e3702" category="list-text">*Subred*: puede seleccionar una subred para la VPC solo para una implementación de un solo nodo o una implementación de HA en una sola AZ.</block>
-  <block id="520b661a272c9e6f55f469cc9c24193d" category="paragraph-title">Alta disponibilidad</block>
-  <block id="94ca6ef273c7d6d636dc97bac5bd754d" category="paragraph">Si ha seleccionado la configuración HA, ingrese la siguiente información:</block>
   <block id="72cff6c2263a7acacd2038a8bbecd8b9" category="open-title">HA en una sola AZ</block>
   <block id="effa98e6d1daf04a4234aa9381503058" category="list-text">*Acceso del mediador*: especifique la información de acceso del mediador.  El mediador es una instancia separada que supervisa la salud del par HA y proporciona quórum en caso de falla.  Proporcione el nombre del par de claves para permitir que la instancia del mediador se conecte al servicio AWS EC2 y seleccione el método de conexión.</block>
   <block id="5675099bca3e8dda76b7414befffa02a" category="open-title">HA en múltiples AZ</block>
@@ -4164,16 +4142,12 @@
   <block id="7a52df4a87715b07e27b6566530f7aae" category="list-text">*IP flotantes*: si elige varias AZ, especifique las direcciones IP flotantes para los servicios NFS y CIFS y la administración de clústeres y SVM.  Las direcciones IP deben estar fuera del bloque CIDR para todas las VPC de la región.  Para obtener más detalles, consulte<block ref="e677af9e7ca6c446fefd39f21658da89" category="inline-link-macro-rx"></block> .</block>
   <block id="8dce48b3257ef975d0a5d55cefad5b71" category="list-text">*Tablas de rutas*: si eligió varias AZ, seleccione las tablas de rutas que incluyan rutas a las direcciones IP flotantes.  Si tiene más de una tabla de rutas, es importante seleccionar las tablas de rutas correctas.  De lo contrario, es posible que algunos clientes no tengan acceso al par Cloud Volumes ONTAP HA.  Para obtener más información sobre las tablas de rutas, consulte la<block ref="8ed06851f50fcdbded65cb78f986bfa5" category="inline-link-rx"></block> .</block>
   <block id="e8b12e750d764758dbe212c4aa89ee5b" category="list-title">Carga y servicios</block>
-  <block id="9e394512026e5b57a6bccc1315b99546" category="list-text">*Suscripción al mercado*: seleccione la suscripción al mercado de AWS que desea utilizar con este sistema Cloud Volumes ONTAP .</block>
   <block id="a15c8cbe9fed78c41f8d32443cf6e36b" category="inline-link-macro">Obtenga más información sobre las licencias de Cloud Volumes ONTAP</block>
-  <block id="9f57f81f79c5b841235e1a2dc081a0cb" category="list-text">*Licencia*: Seleccione el tipo de licencia que desea utilizar con este sistema Cloud Volumes ONTAP .  Puede elegir entre licencias Profesional, Esencial y Premium.  Para obtener información sobre las diferentes licencias, consulte<block ref="827c6d1762aff7ea0827cad65bbc8690" category="inline-link-macro-rx"></block> .</block>
   <block id="e06fe5b3c12a682f694b5afcf91d7c10" category="list-text">*Servicios y funciones de datos*: Mantenga los servicios habilitados o deshabilite los servicios que no desea utilizar con Cloud Volumes ONTAP.</block>
   <block id="e2962533860a405596c6c379003ecdfa" category="inline-link">Obtenga más información sobre la clasificación de NetApp</block>
-  <block id="5673dbdc94710739494b2b4fcd07c07f" category="list-text"><block ref="5673dbdc94710739494b2b4fcd07c07f" category="inline-link-rx"></block></block>
   <block id="ff3d1f58a19f3b8e0bab491b41acecc3" category="list-text"><block ref="ff3d1f58a19f3b8e0bab491b41acecc3" category="inline-link-macro-rx"></block></block>
   <block id="b9c874d376943147dbadbc9046fb82f0" category="admonition">Si desea utilizar WORM y niveles de datos, debe deshabilitar la copia de seguridad y recuperación e implementar un sistema Cloud Volumes ONTAP con la versión 9.8 o superior.</block>
   <block id="30e7f6b5f6dce304885b4864823eb15f" category="list-text">*Cuenta del sitio de soporte de NetApp *: si tiene varias cuentas, seleccione la que desee utilizar.</block>
-  <block id="290612199861c31d1036b185b4e69b75" category="paragraph-title">Resumen</block>
   <block id="7fc9f222a523c4e64609fc3932b07a00" category="paragraph">Verifique o edite los detalles ingresados y luego haga clic en *Crear*.</block>
   <block id="9ced3f212444ec92ce068e43e3a313c4" category="inline-link-macro">Implemente Cloud Volumes ONTAP en AWS mediante la implementación avanzada</block>
   <block id="4870541f85a6bd6c624b90dbfb2301d9" category="list-text"><block ref="4870541f85a6bd6c624b90dbfb2301d9" category="inline-link-macro-rx"></block></block>
@@ -5536,7 +5510,6 @@
   <block id="57831ce128ea817f6507e4e9d32b2371" category="paragraph"><block ref="57831ce128ea817f6507e4e9d32b2371" category="inline-image-macro-rx" type="image"></block></block>
   <block id="089dd3c79ae56f1da7a6b2c50edab075" category="section-title">Discos más grandes en Google Cloud</block>
   <block id="cbddd29e855faaf713258fb82116edf0" category="section-title">Nuevos tipos de máquinas en Google Cloud</block>
-  <block id="cc43ac2c3e66d6d0b58d982ca8a50a38" category="paragraph">Cloud Volumes ONTAP ahora admite los siguientes tipos de máquinas:</block>
   <block id="1ac4c5bf1cc05cf3d4aa859843ec87b4" category="list-text">n2-standard-4 con la licencia Explore y con BYOL</block>
   <block id="e73d4d7c476b6b18ed15adb41d3ea1b2" category="list-text">n2-standard-8 con la licencia Standard y con BYOL</block>
   <block id="08ce51aefda2c98505d3ef29ab430caf" category="list-text">n2-standard-32 con licencia Premium y con BYOL</block>
@@ -5587,8 +5560,6 @@
   <block id="0178b985155f8038a3bb894fe24ece79" category="sidebar">Configurar AWS KMS</block>
   <block id="e26c5d07fc30848902a99c95897441b4" category="sidebar">Configurar roles de IAM</block>
   <block id="e907b41f5f3d7332bee5a43fbbf78a08" category="sidebar">Configurar licencias</block>
-  <block id="79a0f341badc43467674384b63131dab" category="sidebar">Utilice el método de implementación rápida para Cloud Volumes ONTAP en AWS</block>
-  <block id="b8228ea9776a5a74592df84aacf3832f" category="sidebar">Utilice el método de implementación avanzado para Cloud Volumes ONTAP en AWS</block>
   <block id="275e611a605380e34988066f6fa53eae" category="sidebar">Implementar Cloud Volumes ONTAP en regiones secretas de AWS</block>
   <block id="1649f10406b5e0e0054f2cb76197f63a" category="sidebar">Introducción a Microsoft Azure</block>
   <block id="6cd0e178ea21e9518654ab6a94374db4" category="sidebar">Introducción a la NetApp Console</block>
@@ -6373,7 +6344,6 @@
   <block id="b6806817250ca74e0d889e8170e85823" category="list-text">Edita *CIFS setup* desde el menú del lápiz de todas las funciones</block>
   <block id="c534251be3cf8755eaf972b5450db181" category="list-text">Edita *Route tables* desde el menú del lápiz de todas las funciones</block>
   <block id="c6f01c78bfe0a0a495cb5d3ed77824a9" category="cell">Volúmenes</block>
-  <block id="add65f7075db5dde27f485e9f855601b" category="paragraph">En esta pestaña no se permiten actualizaciones de volúmenes y no puedes añadir volúmenes.</block>
   <block id="9e32a435d22aa5cbc195e861b5fe629f" category="list-text">Editar la configuración de volumen</block>
   <block id="5b5eeee4d1e6b7007829d66c8b144064" category="list-text">Crear una copia snapshot</block>
   <block id="ff1652826450f50c76cdfdda64d94e2f" category="list-text">Restaurar desde una copia instantánea</block>
@@ -6401,7 +6371,6 @@
   <block id="68508a9dfe7d188ddfacdf20bf897e7f" category="list-text">Ingresa un sistema</block>
   <block id="f58a02a69585ec6ceb21ad1ac5eda505" category="list-text">Usa el botón de gestión AVS</block>
   <block id="1f4c7e61bb42651b1fed2a31454fa7b2" category="cell">Sin roles</block>
-  <block id="cbc38e338398c30ad05441fc2f224550" category="paragraph">Cuando no se asigna ningún rol, todas las acciones están deshabilitadas.</block>
   <block id="ba289c943721589929b1aa882cf8868b" category="list-text">Accede al entorno de trabajo</block>
   <block id="c81a3e43374dd535dae333a1add5d041" category="list-text">Replicación de acceso</block>
   <block id="bb499c548cf9f80e030b1ead19cf6245" category="list-text">Usa el asistente de creación de Cloud Volumes ONTAP</block>
@@ -6480,4 +6449,79 @@
   <block id="69bad18c1431b72e27676656dcb02294" category="list-text">Al desplegar un nuevo sistema Cloud Volumes ONTAP, selecciona el paquete Essentials para facturar a través de la suscripción independiente. Para obtener más información, consulta<block ref="3bd26a21bb4b5b57e3e4e28150d4f309" category="inline-link-rx"></block>.</block>
   <block id="a731966b7a272e5b052ef9a7b9ea958e" category="paragraph">Repite los mismos pasos para la suscripción NIS en la pestaña *Servicios de datos* para usar la suscripción NIS para tus servicios de datos. Al implementar un nuevo sistema Cloud Volumes ONTAP, selecciona el paquete Professional para facturar a través de la suscripción NIS.</block>
   <block id="55a36fface9a3342eae20532f4dd2f82" category="section-title">12 de mayo de 2026</block>
+  <block id="a0183314c2ab3e36d7dc149d1630d662" category="paragraph">Puedes implementar Cloud Volumes ONTAP en Amazon Web Services (AWS) y Microsoft Azure usando<block ref="956eaa6186169471a13345860cad0757" prefix=" " category="inline-code"></block> para un despliegue más rápido tanto en configuraciones de nodo único como de alta disponibilidad (HA). Este proceso simplificado reduce los pasos de implementación en comparación con el método avanzado al configurar automáticamente los valores predeterminados en una sola página y minimizar la navegación.</block>
+  <block id="fe315d7471968d18b362c1b1144a20b0" category="paragraph">Antes de empezar, asegúrate de tener lo siguiente:</block>
+  <block id="e1698d0f79b1f839d16516155d0a01c6" category="list-text">Un agente de la Console en funcionamiento y asociado a tu proyecto o espacio de trabajo. Ten en cuenta que el agente de la Console debe ejecutarse en todo momento. Para información, consulta:</block>
+  <block id="53101ed6c57b4f1b9f3eb58eb938c2b1" category="inline-link">Conoce los agentes de la consola NetApp</block>
+  <block id="79b9be0ac010d5490772bdb3188d576d" category="list-text"><block ref="79b9be0ac010d5490772bdb3188d576d" category="inline-link-rx"></block></block>
+  <block id="9db458bccb025b8de9d4cfd46a4d1578" category="inline-link">Elige un método de despliegue del agente de la consola</block>
+  <block id="21b44c8a4c386ac4ac342bec49229b4b" category="list-text"><block ref="21b44c8a4c386ac4ac342bec49229b4b" category="inline-link-rx"></block></block>
+  <block id="6bad41fe3567c2d39d19367d752e1c5e" category="list-text">Una comprensión de la configuración que quieres usar. Antes de empezar, elige una configuración y obtén información de red de tu administrador. Para información, consulta:</block>
+  <block id="099d77fc11d7ea7fec2d2c87952f8b4a" category="inline-link-macro">Planificación de la configuración en AWS</block>
+  <block id="94531787ea8a868597a2894b983d3997" category="paragraph"><block ref="94531787ea8a868597a2894b983d3997" category="inline-link-macro-rx"></block></block>
+  <block id="4e296cbc4b3d694916a73a8bccc2618a" category="inline-link-macro">Planificación de tu configuración en Azure</block>
+  <block id="50919a3648d500b5cae93df54bad1660" category="paragraph"><block ref="50919a3648d500b5cae93df54bad1660" category="inline-link-macro-rx"></block></block>
+  <block id="a376066b1c9ac3588b98de51d7bbc4bf" category="list-text">Conocimiento de los requisitos de licencia de Cloud Volumes ONTAP. Para más información, consulta:</block>
+  <block id="9aa23690f6c27d4c58c0535af311d9fb" category="inline-link-macro">Configura las licencias en AWS</block>
+  <block id="7735a57d0da8542c857a04e291065b2b" category="paragraph"><block ref="7735a57d0da8542c857a04e291065b2b" category="inline-link-macro-rx"></block></block>
+  <block id="6c4c5ba58ef9ea44b4eb3ab36a6bd2a1" category="inline-link-macro">Configura las licencias en Azure</block>
+  <block id="0288547ecbb8c53c47e0944833e74a36" category="paragraph"><block ref="0288547ecbb8c53c47e0944833e74a36" category="inline-link-macro-rx"></block></block>
+  <block id="de0793340005b3646591da3edbd5904e" category="list-text">DNS y Active Directory para configuraciones CIFS. Para más información, consulta:</block>
+  <block id="1c3a425a6ee31be89702420f83144b0c" category="inline-link-macro">Requisitos de red en AWS</block>
+  <block id="698986dc4292e89123e221e515a0d74b" category="paragraph"><block ref="698986dc4292e89123e221e515a0d74b" category="inline-link-macro-rx"></block></block>
+  <block id="c0cf3ac9b58bf7128b0edea2d7f775eb" category="inline-link-macro">Requisitos de red en Azure</block>
+  <block id="67b834b1ef658ae3f312e7de4ba6af6c" category="paragraph"><block ref="67b834b1ef658ae3f312e7de4ba6af6c" category="inline-link-macro-rx"></block></block>
+  <block id="ec7684f8f216cf1ecdb9a9b62758a4a6" category="list-text">Selecciona tu proveedor de cloud (*Amazon Web Services* o *Microsoft Azure*) &gt; *Cloud Volumes ONTAP/Cloud Volumes ONTAP HA* &gt; *Add new*. La opción *Quick create* está seleccionada por defecto.</block>
+  <block id="ce69e2301391e8a099e5f4ffad83e207" category="example-title">Ejemplos de capturas de pantalla de la opción Quick create</block>
+  <block id="886e58b8c16a5f0b3dea467125601a3f" category="inline-image-macro">width=500,alt="AWS Quick Create"</block>
+  <block id="05fbaa940416f58a5e46a739d2f4c7fc" category="paragraph"><block ref="05fbaa940416f58a5e46a739d2f4c7fc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ca20e4c4a1178db5332b6e4d1fec5e3f" category="inline-image-macro">width=500,alt="Azure Quick Create"</block>
+  <block id="1e8cbffa0dad5ef3f32fd257d35128c8" category="paragraph"><block ref="1e8cbffa0dad5ef3f32fd257d35128c8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5b98d59e0e7d352cc2eba9b98c195920" category="list-title">Detalles del sistema</block>
+  <block id="0703e60c8ce9c50b32557a493769fc66" category="list-text">*Cuenta/credenciales del proveedor de la nube*: Los detalles de la cuenta y la suscripción se rellenan automáticamente en función de tu agente de la Console. Si tienes varias cuentas o suscripciones, selecciona la que quieres usar. Si un agente de la Console no está disponible, se te pedirá que<block ref="689b13c9a5c20aa1149b467cd9e2d99d" category="inline-link-rx"></block>.</block>
+  <block id="df29b7782e1e52af5c3787266b32e641" category="list-text">*Nombre*: Introduce un nombre para tu sistema Cloud Volumes ONTAP (también llamado nombre del clúster). La NetApp Console usa el nombre del sistema (clúster) para nombrar el sistema Cloud Volumes ONTAP y la instancia de VM. También usa el nombre como prefijo para el grupo de seguridad predefinido, si eliges esa opción.</block>
+  <block id="493afb06da102ef4f588b9ee9f70eccc" category="list-text">*Credenciales de ONTAP*: Estas son las credenciales de la cuenta del administrador del clúster Cloud Volumes ONTAP. Puedes usar estas credenciales para conectarte a Cloud Volumes ONTAP a través de ONTAP System Manager o la CLI de ONTAP. Puedes mantener el nombre de usuario _admin_ predeterminado o cambiarlo por un nombre de usuario personalizado.</block>
+  <block id="ed359bcb0198329923d6f27a3212b199" category="list-text">*Etiquetas*: Las etiquetas son los metadatos de tus recursos de AWS o Azure. La Console añade las etiquetas a la instancia de Cloud Volumes ONTAP y a cada recurso asociado a la instancia. Puedes añadir hasta 15 etiquetas desde la interfaz de usuario al crear un sistema Cloud Volumes ONTAP, y luego puedes añadir más después de que se haya creado. Para más información, consulta:</block>
+  <block id="a16435cab7ba0f508c1af2b05a09518f" category="paragraph"><block ref="9b64f9d4e4f17e41dd8f7e0bd2ac90d8" category="inline-link-rx"></block>.</block>
+  <block id="194c4ba8c0f429994571ad7132771038" category="inline-link">Documentación de Azure: Etiquetar recursos</block>
+  <block id="293180eda7fdbd2f72c67b87bef17b82" category="paragraph"><block ref="7958b061e6b74f8d105bdf1dc2f21002" category="inline-link-rx"></block>.</block>
+  <block id="6a83697d05182d9c2179c652101b9141" category="list-text">*Tipo de despliegue/topología*: Selecciona el tipo de despliegue que quieres usar: nodo único, alta disponibilidad (HA) en una sola zona de disponibilidad (AZ) o HA en varias AZ.</block>
+  <block id="93b02b826b8b0ee6968fee7191f8ba74" category="list-text">*Configuración de la red*: Ingresa la información de red que registraste en la hoja de trabajo de planificación para regiones, VNets y subredes.</block>
+  <block id="4b0247d45dc33f090b8c6022fd0ec5b3" category="list-text">*Región*: Por defecto, se selecciona la región de la cuenta de cloud asociada con los recursos.</block>
+  <block id="ff833a169e227e2cc350fcca7164aee7" category="list-text">*Zona de disponibilidad*: Puedes seleccionar la zona de disponibilidad según el tipo de despliegue que elijas y si la región seleccionada admite la zona de disponibilidad.</block>
+  <block id="fb39fa266aef6376da5693e7f07daf4f" category="list-text">*Subred*: Selecciona una subred para la región.</block>
+  <block id="801f4bb28be5a6f5408b765580d77054" category="open-title">Para AWS</block>
+  <block id="7134d99cb386a398472ce390ec6cde1e" category="paragraph">*VPC*: Para AWS, introduce una VPC para la región con una subred según tu planificación</block>
+  <block id="9a648a165c10a9b39e904785f2c76d90" category="paragraph-title">Alta disponibilidad de AWS</block>
+  <block id="3d6749f5155069d11e17402eb45411c4" category="paragraph">Si seleccionaste una configuración de HA, introduce la siguiente información:</block>
+  <block id="c90b3762df86fca042965f850d0dd3a9" category="paragraph">*Suscripción a Marketplace*: en AWS, selecciona la suscripción de AWS Marketplace que quieres usar con este sistema Cloud Volumes ONTAP.</block>
+  <block id="5e69c1ba6e88231ba98e5b867048d898" category="open-title">Para Azure</block>
+  <block id="e1d2077933857aa679ffd3a25a805a92" category="paragraph">*VNET*: para Azure, selecciona la VNET requerida.</block>
+  <block id="5c1db3b64150a669729713d1441519fb" category="list-text">*Licencia*: Selecciona el tipo de licencia que quieres usar con este sistema Cloud Volumes ONTAP. Puedes elegir entre las licencias Professional, Essentials y Freemium. Para información sobre las diferentes licencias, consulta <block ref="827c6d1762aff7ea0827cad65bbc8690" category="inline-link-macro-rx"></block>.</block>
+  <block id="180f6ba8b7bb3ff016c53f089f146fab" category="list-text"><block ref="180f6ba8b7bb3ff016c53f089f146fab" category="inline-link-rx"></block></block>
+  <block id="77bb73ceddf23085496529ef175197ec" category="list-text"><block ref="77bb73ceddf23085496529ef175197ec" category="inline-link-rx"></block></block>
+  <block id="2b859e73b5f5458c61f5f161cbe275c4" category="paragraph">En _Azure_, la sección *Overview* muestra los recursos que se asignarán cuando finalice el proceso de despliegue.</block>
+  <block id="63d192276eafa7b25df1a392b878676d" category="paragraph">En _AWS_, inmediatamente después de crear el sistema Cloud Volumes ONTAP, la NetApp Console lanza una instancia de prueba en la VPC especificada para verificar la conectividad. Si tiene éxito, la Console finaliza inmediatamente la instancia y luego comienza a desplegar el sistema. Si la Console no puede verificar la conectividad, la creación del sistema falla. La instancia de prueba es<block ref="5ef1a68e904a3597d2b907cd2782dc2a" prefix=" " category="inline-code"></block> (para tenencia de VPC predeterminada) o<block ref="80d12d97ae3fdbfc793b03ba2263193e" prefix=" " category="inline-code"></block> (para tenencia de VPC dedicada).</block>
+  <block id="3efb304bc88bbdc4d58653e95875c0e1" category="paragraph">Si experimentas algún problema al desplegar el sistema Cloud Volumes ONTAP, revisa el mensaje de error. También puedes seleccionar *Re-crear entorno* en el sistema para continuar con el despliegue usando el asistente de modo<block ref="9b6545e4cea9b4ad4979d41bb9170e2b" prefix=" " category="inline-code"></block>.</block>
+  <block id="edbf603043ea71af5a3f46821ad9d4a3" category="admonition">Una vez finalizado el proceso de despliegue, no modifiques las configuraciones de Cloud Volumes ONTAP generadas por el sistema en el portal de la nube de AWS o Azure, especialmente las etiquetas del sistema. Cualquier cambio realizado en estas configuraciones puede provocar un comportamiento inesperado o pérdida de datos.</block>
+  <block id="a4ad56ab8baa8582d6dba6091a9bd877" category="doc">Implementación simplificada de Cloud Volumes ONTAP en Azure</block>
+  <block id="8bfd035a33aa401829a9de89b5e0c246" category="paragraph">Ahora puedes usar Quick create para implementar Cloud Volumes ONTAP en Azure tanto para configuraciones de nodo único como de alta disponibilidad (HA). Este proceso optimizado reduce el número de pasos en comparación con el método avanzado, establece automáticamente los valores predeterminados en una sola página y minimiza la navegación, lo que hace que la implementación sea más rápida y sencilla.</block>
+  <block id="22f179b38b6aab375d21adc5216a57da" category="admonition">Si usas Creación rápida para desplegar un nuevo sistema Cloud Volumes ONTAP en Azure, la consola NetApp selecciona las credenciales de Azure por defecto. Puedes desplegar todos tus sistemas Cloud Volumes ONTAP usando las credenciales iniciales de Azure. Si quieres usar otra suscripción y/o credenciales, necesitas cambiar al despliegue en modo avanzado. Esta limitación se solucionará en una versión futura.</block>
+  <block id="da7aee176a6e0989fc4edf2b02e0af34" category="inline-link">Implementa Cloud Volumes ONTAP en Azure con Quick create</block>
+  <block id="8928e512cc17b6dd2c97fcb7dff5a06a" category="list-text"><block ref="8928e512cc17b6dd2c97fcb7dff5a06a" category="inline-link-rx"></block></block>
+  <block id="6d1c2cdb212ea73452146a3edb82fe12" category="inline-link">Implementa Cloud Volumes ONTAP usando opciones avanzadas en Azure</block>
+  <block id="3cf666a1e5ff2ecf85c4a0bcf868d65f" category="list-text"><block ref="3cf666a1e5ff2ecf85c4a0bcf868d65f" category="inline-link-rx"></block></block>
+  <block id="36988e8f47cb48af40dd817b7f6b4d72" category="paragraph">No puedes realizar las siguientes operaciones de volumen:</block>
+  <block id="bf0e55251fc2d98ac6842f182450e467" category="paragraph">Cuando no se asigna ningún rol, no puedes realizar ninguna acción, incluyendo:</block>
+  <block id="94b7b54556632ab5a087eae13f0e0af9" category="doc">Implementa Cloud Volumes ONTAP usando opciones avanzadas en AWS</block>
+  <block id="1b26e39c9aec7d9422f257c07a5dbb5d" category="list-text"><block ref="221e8f6e98d75a4db804bf88879345c0" category="inline-link-macro-rx"></block> *</block>
+  <block id="fab04a1941385806648057c8597be7c4" category="list-text"><block ref="fab04a1941385806648057c8597be7c4" category="inline-link-macro-rx"></block></block>
+  <block id="c92ac4b81ff77c3da7bc410dc79cb66b" category="inline-link-macro">Implementa Cloud Volumes ONTAP en Azure usando el método avanzado de implementación</block>
+  <block id="cc5e18929848d96ede4034c97f00652a" category="list-text"><block ref="cc5e18929848d96ede4034c97f00652a" category="inline-link-macro-rx"></block></block>
+  <block id="3bfca6a430fa87d8630a8459fe8a4aa1" category="section-title">18 de mayo de 2026</block>
+  <block id="e6720d527b65636c528e1236740bb883" category="paragraph">Cloud Volumes ONTAP ahora admite los siguientes tipos de máquinas con estas licencias PAYGO en Google Cloud:</block>
+  <block id="4efc5a6487a0b2b074b6549924edcf20" category="sidebar">Implementa Cloud Volumes ONTAP con valores predeterminados en AWS</block>
+  <block id="690f86e0be68ddfe1eb22f837c53e53c" category="sidebar">Implementa Cloud Volumes ONTAP con opciones avanzadas en AWS</block>
+  <block id="7fa0d9a7585aaeb29c655dac03f5e3d6" category="sidebar">Implementa Cloud Volumes ONTAP con valores predeterminados en Azure</block>
+  <block id="75903a04d1a65d3e18c839c67b54316d" category="sidebar">Implementa Cloud Volumes ONTAP con opciones avanzadas en Azure</block>
 </blocks>

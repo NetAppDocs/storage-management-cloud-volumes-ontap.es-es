@@ -4,7 +4,7 @@ permalink: task-deploying-otc-aws.html
 keywords: Cloud Volumes ONTAP, deploying, launching, creating, deploy, launch, create, aws, serial number, license key, byol, test instance, aws tags, tags, location, vpc, encryption, security group, aws-managed encryption, disk size, disk type, write speed, licensing, IAM role, preconfigured package, access control, volume protection, usage profile, register, CIFS share, quota, qtree, HA, high-availability, subscription, cloud data sense, cloud backup 
 summary: Puede iniciar instancias de Cloud Volumes ONTAP en una configuración de sistema único o como un par de alta disponibilidad en AWS. 
 ---
-= Lanzamiento de Cloud Volumes ONTAP en AWS
+= Implementa Cloud Volumes ONTAP usando opciones avanzadas en AWS
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -523,8 +523,6 @@ Para obtener más información, consultelink:https://docs.netapp.com/us-en/bluex
 La consola lanza el par Cloud Volumes ONTAP HA.  Puede seguir el progreso en la página *Auditoría*.
 
 Si experimenta algún problema al iniciar el par HA, revise el mensaje de error.  También puede seleccionar el sistema y hacer clic en Recrear entorno.
-
-Para obtener ayuda adicional, visite https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/guideme-tab["Compatibilidad con NetApp Cloud Volumes ONTAP"^] .
 
 .Después de terminar
 * Si aprovisionó un recurso compartido CIFS, otorgue a los usuarios o grupos permisos para los archivos y carpetas y verifique que esos usuarios puedan acceder al recurso compartido y crear un archivo.

@@ -20,6 +20,24 @@ Las mejoras descritas en esta página son específicas para la administración d
 
 
 
+== 18 de mayo de 2026
+
+
+
+=== Implementación simplificada de Cloud Volumes ONTAP en Azure
+
+Ahora puedes usar Quick create para implementar Cloud Volumes ONTAP en Azure tanto para configuraciones de nodo único como de alta disponibilidad (HA). Este proceso optimizado reduce el número de pasos en comparación con el método avanzado, establece automáticamente los valores predeterminados en una sola página y minimiza la navegación, lo que hace que la implementación sea más rápida y sencilla.
+
+
+NOTE: Si usas Creación rápida para desplegar un nuevo sistema Cloud Volumes ONTAP en Azure, la consola NetApp selecciona las credenciales de Azure por defecto. Puedes desplegar todos tus sistemas Cloud Volumes ONTAP usando las credenciales iniciales de Azure. Si quieres usar otra suscripción y/o credenciales, necesitas cambiar al despliegue en modo avanzado. Esta limitación se solucionará en una versión futura.
+
+.Enlaces relacionados
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-quick-deploy-azure.html["Implementa Cloud Volumes ONTAP en Azure con Quick create"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-otc-azure.html["Implementa Cloud Volumes ONTAP usando opciones avanzadas en Azure"^]
+
+
+
+
 == 12 de mayo de 2026
 
 
@@ -2356,7 +2374,7 @@ NOTE: La capacidad máxima del sistema solo con discos sigue siendo de 256 TB de
 
 === Nuevos tipos de máquinas en Google Cloud
 
-Cloud Volumes ONTAP ahora admite los siguientes tipos de máquinas:
+Cloud Volumes ONTAP ahora admite los siguientes tipos de máquinas con estas licencias PAYGO en Google Cloud:
 
 * n2-standard-4 con la licencia Explore y con BYOL
 * n2-standard-8 con la licencia Standard y con BYOL

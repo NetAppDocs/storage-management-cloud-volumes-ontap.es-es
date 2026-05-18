@@ -41,8 +41,9 @@ La siguiente tabla resume las actividades restringidas por pestaña.
 
 
 | Volúmenes  a| 
-En esta pestaña no se permiten actualizaciones de volúmenes y no puedes añadir volúmenes.
+No puedes realizar las siguientes operaciones de volumen:
 
+* Agrega un volumen
 * Clonar un volumen
 * Editar la configuración de volumen
 * Eliminar un volumen
@@ -93,7 +94,7 @@ En esta pestaña no se permiten actualizaciones de volúmenes y no puedes añadi
 
 
 | Sin roles  a| 
-Cuando no se asigna ningún rol, todas las acciones están deshabilitadas.
+Cuando no se asigna ningún rol, no puedes realizar ninguna acción, incluyendo:
 
 * Accede al entorno de trabajo
 * Replicación de acceso
