@@ -254,7 +254,7 @@ network interface create -vserver svm_2 -service-policy default-data-iscsi -home
 ----
 +
 ** Este LIF iSCSI es necesario para admitir la migración LIF de las IP flotantes en la máquina virtual de almacenamiento.  No tiene que ser un LIF iSCSI, pero no se puede configurar para migrar entre nodos.
-** `-service-policy default-data-block`Indica que una dirección IP no migra entre nodos.
+** `-service-policy default-data-iscsi` indica que una dirección IP no migra entre nodos.
 ** _private_ip_ es una dirección IP privada secundaria no utilizada en eth0 (e0a) de cvo_node1.
 
 
@@ -266,7 +266,7 @@ network interface create -vserver svm_2 -service-policy default-data-iscsi -home
 ----
 +
 ** Este LIF iSCSI es necesario para admitir la migración LIF de las IP flotantes en la máquina virtual de almacenamiento.  No tiene que ser un LIF iSCSI, pero no se puede configurar para migrar entre nodos.
-** `-service-policy default-data-block`Indica que una dirección IP no migra entre nodos.
+** `-service-policy default-data-iscsi` indica que una dirección IP no migra entre nodos.
 ** _private_ip_ es una dirección IP privada secundaria no utilizada en eth0 (e0a) de cvo_node2.
 
 
