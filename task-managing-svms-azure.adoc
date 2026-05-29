@@ -49,7 +49,7 @@ El agente de consola requiere permisos específicos para crear máquinas virtual
 
 
 
-=== sistema de un solo nodo
+=== Sistema de nodo único
 
 Usa la siguiente llamada a la API para crear una máquina virtual de almacenamiento en un sistema de nodo único.
 
