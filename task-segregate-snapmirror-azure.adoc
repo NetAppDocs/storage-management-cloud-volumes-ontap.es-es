@@ -85,7 +85,7 @@ az network vnet subnet show -g <src_vnet-rg> -n <src_subnet> --vnet-name <vnet> 
 ----
 az network nic create -g <dest_node-rg> -n <dest_node-vm-nic-new> --subnet <id_from_prev_command> --accelerated-networking true
 ----
-.. Guarde la dirección IP privada.  Esta dirección IP, <new_added_nic_primary_addr>, se utiliza para crear un LIF entre clústeres en<<Step 2: Create a new IPspace,Dominio de difusión, LIF entre clústeres para la nueva NIC>> .
+.. Guarda la dirección IP privada. Esta dirección IP, <new_added_nic_primary_addr>, se utiliza para crear un LIF intercluster en <<step-second,dominio de difusión y LIF intercluster para la nueva NIC>>.
 
 
 . Conecte la nueva NIC a la máquina virtual.
@@ -112,7 +112,7 @@ Para las implementaciones de pares HA, repita los pasos para el nodo asociado.
 
 
 
-== Paso 2: Cree un nuevo espacio IP, dominio de difusión y LIF entre clústeres para la nueva NIC
+== [[paso-segundo]]Paso 2: crear un nuevo espacio IP, dominio de difusión y LIF intercluster para la nueva NIC
 
 Un espacio IP separado para LIF entre clústeres proporciona una separación lógica entre la funcionalidad de red para la replicación entre clústeres.
 

@@ -228,7 +228,7 @@ https://docs.cloud.google.com/compute/docs/general-purpose-machines#c3_series["G
 
 Cloud Volumes ONTAP 9.18.1 y las implementaciones posteriores en zonas de disponibilidad única y múltiple de Azure admiten el cifrado de Azure Virtual Network (VNet) como parte de su estrategia de seguridad por capas para proteger los datos en tránsito. Cloud Volumes ONTAP aprovecha el protocolo nativo Datagram Transport Layer Security (DTLS) de Azure para proteger la comunicación entre los nodos ONTAP, las interfaces de gestión y otros servicios de Azure, evitando la interceptación y el acceso no autorizado. Este cifrado a nivel de red complementa las protecciones integradas de almacenamiento y datos en reposo de ONTAP para ofrecer seguridad de extremo a extremo a tus datos.
 
-https://review.docs.netapp.com/us-en/storage-management-cloud-volumes-ontap_gcp-sn-c3-support/reference-networking-azure.html#networking-for-azure-vnet-encryption["Redes para el cifrado de Azure VNet"^]
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-azure.html#networking-for-azure-vnet-encryption["Redes para el cifrado de Azure VNet"]
 
 
 

@@ -524,7 +524,7 @@ El pool de trabajadores debe tener la siguiente configuración:
 ** Tamaño del disco: 100 GB
 ** Asignar IP externa: False
 ** Red: por defecto o una privada.
-** La subred configurada para acceder a http://googleapis.com/["APIs de Google"]. Realiza estos pasos para asegurarte de que la subred puede acceder a Google APIs:
+** La subred configurada para acceder a https://cloud.google.com/apis["APIs de Google Cloud"^]. Realiza estos pasos para asegurarte de que la subred puede acceder a Google APIs:
 +
 ... Asegúrate de que "Private Google Access" está activado para la subred.
 ... Ve a *VPC Network level > Private Service Access Tab > Allocated IP ranges for services*.
