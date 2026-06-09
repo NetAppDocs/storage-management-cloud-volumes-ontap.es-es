@@ -1,10 +1,10 @@
-= Nuevas instancias EC2 soportadas para Cloud Volumes ONTAP en AWS
+= Soporte para nuevas instancias EC2 para Cloud Volumes ONTAP en AWS
 :allow-uri-read: 
 
 
 
 
-=== Nuevas instancias EC2 soportadas para Cloud Volumes ONTAP en AWS
+=== Soporte para nuevas instancias EC2 para Cloud Volumes ONTAP en AWS
 
 Cloud Volumes ONTAP 9.16.1 y versiones posteriores son compatibles con las familias de instancias EC2 M6id y M6idn tanto para despliegues de nodo único como de alta disponibilidad (HA) nuevos y existentes en AWS. Estas instancias de 6ª generación ofrecen una potencia de procesamiento más rápida, mayores capacidades de red y un rendimiento superior en comparación con los sistemas de propósito general de 5ª generación.
 
