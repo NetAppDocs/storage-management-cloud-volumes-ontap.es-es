@@ -118,7 +118,7 @@ ifdef::gcp[]
 
 == Nivelación de datos en Google Cloud
 
-Cuando habilita la organización en niveles de datos en Google Cloud, Cloud Volumes ONTAP utiliza discos persistentes como nivel de rendimiento para datos activos y un depósito de Google Cloud Storage como nivel de capacidad para datos inactivos.
+Al habilitar la organización por niveles de datos en Google Cloud, Cloud Volumes ONTAP utiliza discos persistentes como nivel de rendimiento para los datos activos y un depósito de Google Cloud Storage como nivel de almacenamiento para los datos inactivos. Puedes seleccionar un nivel de almacenamiento al crear un sistema y cambiarlo en cualquier momento después. Para obtener información sobre cómo cambiar la clase de almacenamiento, consulta link:task-tiering.html["Agrupar datos inactivos en almacenamiento de objetos de bajo costo"].
 
 Nivel de rendimiento:: El nivel de rendimiento puede ser discos persistentes SSD, discos persistentes equilibrados o discos persistentes estándar.
 Nivel de capacidad:: Un sistema Cloud Volumes ONTAP agrupa los datos inactivos en un único depósito de Google Cloud Storage.
@@ -137,16 +137,9 @@ Cuando la consola crea el depósito, utiliza la siguiente configuración predete
 
 
 --
-Clases de almacenamiento:: La clase de almacenamiento predeterminada para datos en niveles es la clase _Almacenamiento estándar_.  Si se accede con poca frecuencia a los datos, puede reducir los costos de almacenamiento cambiando a _Nearline Storage_ o _Coldline Storage_.  Cuando cambia la clase de almacenamiento, los datos inactivos posteriores se mueven directamente a la clase que seleccionó.
+Clases de almacenamiento:: Google Cloud utiliza https://cloud.google.com/storage/docs/storage-classes["clases de almacenamiento"^] para gestionar los costes y la disponibilidad de los datos. Te recomendamos que selecciones una clase de almacenamiento en función de la frecuencia de acceso a los datos que preveas, ya que el acceso a los datos conlleva unos costes más elevados. La clase de almacenamiento predeterminada para los datos por niveles es _Standard Storage_. A menos que se modifique manualmente, todos los datos inactivos conservan la clase de almacenamiento predeterminada. Para cambiar la clase de almacenamiento de los datos inactivos, consulta https://docs.cloud.google.com/storage/docs/managing-lifecycles["Documentación de Google Cloud: gestión del ciclo de vida de los objetos"^].
 +
 --
-
-NOTE: Cualquier dato inactivo existente mantendrá la clase de almacenamiento predeterminada cuando cambie la clase de almacenamiento.  Para cambiar la clase de almacenamiento de datos inactivos existentes, debe realizar la designación manualmente.
-
-Los costos de acceso son más altos si accedes a los datos, así que tenlo en cuenta antes de cambiar la clase de almacenamiento.  Para obtener más información, consulte la https://cloud.google.com/storage/docs/storage-classes["Documentación de Google Cloud: Clases de almacenamiento"^] .
-
-Puede seleccionar un nivel de almacenamiento cuando crea el sistema y puede cambiarlo en cualquier momento posteriormente.  Para obtener detalles sobre cómo cambiar la clase de almacenamiento, consultelink:task-tiering.html["Agrupar datos inactivos en almacenamiento de objetos de bajo costo"] .
-
 La clase de almacenamiento para la clasificación de datos es para todo el sistema, no por volumen.
 
 --
