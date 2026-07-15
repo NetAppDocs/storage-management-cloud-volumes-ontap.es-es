@@ -20,6 +20,7 @@ Para crear máquinas virtuales de almacenamiento que brinden servicio de datos a
 
 
 
+[[supported-number-of-storage-vms]]
 == Número de máquinas virtuales de almacenamiento admitidas
 
 Se admiten varias máquinas virtuales de almacenamiento con configuraciones específicas de Cloud Volumes ONTAP a partir de la versión 9.7.  Ir a la https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Notas de la versión de Cloud Volumes ONTAP"^] para verificar la cantidad de máquinas virtuales de almacenamiento admitidas para su versión de Cloud Volumes ONTAP.
@@ -28,6 +29,7 @@ Todas las demás configuraciones de Cloud Volumes ONTAP admiten una máquina vir
 
 
 
+[[verify-limits-for-your-configuration]]
 == Verifique los límites para su configuración
 
 Cada instancia EC2 admite una cantidad máxima de direcciones IPv4 privadas por interfaz de red.  Debe verificar el límite antes de asignar direcciones IP en AWS para la nueva máquina virtual de almacenamiento.
@@ -40,6 +42,7 @@ Cada instancia EC2 admite una cantidad máxima de direcciones IPv4 privadas por 
 
 
 
+[[allocate-ip-addresses-in-aws]]
 == Asignar direcciones IP en AWS
 
 Las direcciones IPv4 privadas deben asignarse al puerto e0a en AWS antes de crear LIF para la nueva VM de almacenamiento.
@@ -90,6 +93,7 @@ Se requiere una IP privada secundaria opcional si desea crear un LIF de administ
 
 
 
+[[create-a-storage-vm-on-a-single-node-system]]
 == Crea una máquina virtual de almacenamiento en un sistema de nodo único
 
 Estos pasos crean una nueva VM de almacenamiento en un sistema de nodo único. Se necesita una dirección IP privada para crear una LIF de NAS y otra dirección IP privada opcional si quieres crear una LIF de gestión.
@@ -137,6 +141,7 @@ Este paso es necesario porque la nueva VM de almacenamiento necesita acceso a al
 
 
 
+[[create-a-storage-vm-on-an-ha-pair-in-a-single-az]]
 == Cree una máquina virtual de almacenamiento en un par de alta disponibilidad en una única zona de disponibilidad
 
 Estos pasos crean una nueva VM de almacenamiento en un par de alta disponibilidad en una única zona de disponibilidad.  Se requiere una dirección IP privada para crear un LIF NAS y se necesita otra dirección IP privada opcional si desea crear un LIF de administración.
@@ -209,6 +214,7 @@ network interface service-policy add-service -vserver <svm-name> -policy default
 
 
 
+[[create-a-storage-vm-on-an-ha-pair-in-multiple-azs]]
 == Cree una máquina virtual de almacenamiento en un par de alta disponibilidad en varias zonas de disponibilidad
 
 Estos pasos crean una nueva VM de almacenamiento en un par de alta disponibilidad en varias zonas de disponibilidad.

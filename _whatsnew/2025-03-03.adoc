@@ -4,6 +4,7 @@
 
 
 
+[[support-for-new-zealand-north-region-in-azure]]
 === Compatibilidad con la región norte de Nueva Zelanda en Azure
 
 La región Norte de Nueva Zelanda ahora es compatible con Azure para configuraciones de nodo único y alta disponibilidad (HA) de Cloud Volumes ONTAP 9.12.1 GA y versiones posteriores.  Tenga en cuenta que el tipo de instancia Lsv3 no es compatible en esta región.

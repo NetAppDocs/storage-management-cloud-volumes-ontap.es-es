@@ -1,5 +1,16 @@
-= 
+---
+sidebar: sidebar 
+permalink: task-quick-deploy-gcp.html 
+keywords: google cloud quick deploy, quick deploy, GCP, single screen deployment Google Cloud, SAZ, MAZ, single node, HA pair 
+summary: 'Puedes implementar instancias de Cloud Volumes ONTAP en una configuración de un solo sistema o como un par de alta disponibilidad (HA) en Google Cloud rápidamente.' 
+---
+= Implementa Cloud Volumes ONTAP con Quick create
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -107,24 +118,8 @@ image:screenshot-quick-start-gcp.png["width=500,alt=\"creación rápida de Googl
 
 .Detalles del sistema
 . *Cuenta del proveedor de servicios en la nube/credenciales/proyecto de Google Cloud*: Los datos de la cuenta y la suscripción se rellenan automáticamente en función de tu agente de la Consola. Si tienes varias cuentas o suscripciones, selecciona la que quieras utilizar. Si no hay ningún agente de la Consola disponible, se te pedirá que https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html["crear un agente de consola"^].
-
-
-ifdef::gcp[]
-
-Para _Google Cloud_, necesitas seleccionar una suscripción de Marketplace con el nombre del proyecto.
-
-endif::gcp[]
-
 . *Nombre*: Introduce un nombre para tu sistema Cloud Volumes ONTAP (también llamado nombre del clúster). La NetApp Console usa el nombre del sistema (clúster) para nombrar el sistema Cloud Volumes ONTAP y la instancia de VM. También usa el nombre como prefijo para el grupo de seguridad predefinido, si eliges esa opción.
 . *Credenciales de ONTAP*: Estas son las credenciales de la cuenta del administrador del clúster Cloud Volumes ONTAP. Puedes usar estas credenciales para conectarte a Cloud Volumes ONTAP a través de ONTAP System Manager o la CLI de ONTAP. Puedes mantener el nombre de usuario _admin_ predeterminado o cambiarlo por un nombre de usuario personalizado.
-
-
-ifdef::gcp[]
-
-Para _Google Cloud_, si planeas usar link:concept-data-tiering.html["niveles de datos"] o https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["NetApp Backup and Recovery"^] con Cloud Volumes ONTAP, entonces necesitas habilitar la *Service Account* y seleccionar una cuenta de servicio que tenga el rol predefinido Storage Admin. link:task-creating-gcp-service-account.html["Aprenda a crear una cuenta de servicio"^]. La cuenta de servicio asociada con el agente de la Console https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html["debe tener los permisos requeridos"^].
-
-endif::gcp[]
-
 . *Etiquetas*: Las etiquetas son los metadatos de tus recursos de AWS o Azure. La consola añade las etiquetas a la instancia de Cloud Volumes ONTAP y a cada recurso asociado a la instancia. Puedes añadir hasta 15 etiquetas desde la interfaz de usuario al crear un sistema Cloud Volumes ONTAP, y luego puedes añadir más después de que se haya creado. Para más información, consulta:
 +
 [role="tabbed-block"]
@@ -203,39 +198,19 @@ NOTE: Cloud Volumes ONTAP 9.19.1 y versiones posteriores son compatibles con lin
 .Carga y servicios
 . *Licencia*: Selecciona el tipo de licencia que quieres usar con este sistema Cloud Volumes ONTAP. Puedes elegir entre las licencias Professional, Essentials y Freemium. Para información sobre las diferentes licencias, consulta link:concept-licensing.html["Obtenga más información sobre las licencias de Cloud Volumes ONTAP"^].
 . *Servicios y funciones de datos*: Mantenga los servicios habilitados o deshabilite los servicios que no desea utilizar con Cloud Volumes ONTAP.
-
-
-ifdef::gcp[]
-
-En _Google Cloud_, para seleccionar Copia de seguridad y recuperación o para usar NetApp Cloud Tiering, debes haber especificado la cuenta de servicio.
-
-endif::gcp[]
-
-* https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["Obtenga más información sobre la clasificación de NetApp"^]
-* https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["Obtenga más información sobre NetApp Backup and Recovery"^]
-* link:concept-worm.html["Obtenga más información sobre el almacenamiento WORM en Cloud Volumes ONTAP"]
++
+** https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["Obtenga más información sobre la clasificación de NetApp"^]
+** https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["Obtenga más información sobre NetApp Backup and Recovery"^]
+** link:concept-worm.html["Obtenga más información sobre el almacenamiento WORM en Cloud Volumes ONTAP"]
 +
 
 TIP: Si desea utilizar WORM y niveles de datos, debe deshabilitar la copia de seguridad y recuperación e implementar un sistema Cloud Volumes ONTAP con la versión 9.8 o superior.
 
-+
-.. *Cuenta del sitio de soporte de NetApp *: si tiene varias cuentas, seleccione la que desee utilizar.
-.. Verifique o edite los detalles ingresados y luego haga clic en *Crear*.
 
 
+. *Cuenta del sitio de soporte de NetApp *: si tiene varias cuentas, seleccione la que desee utilizar.
+. Verifique o edite los detalles ingresados y luego haga clic en *Crear*.
 
-
-ifdef::azure[]
-
-En _Azure_, la sección *Overview* muestra los recursos que se asignarán cuando finalice el proceso de despliegue.
-
-endif::azure[]
-
-ifdef::aws[]
-
-En _AWS_, inmediatamente después de crear el sistema Cloud Volumes ONTAP, la NetApp Console lanza una instancia de prueba en la VPC especificada para verificar la conectividad. Si tiene éxito, la Console finaliza inmediatamente la instancia y luego comienza a desplegar el sistema. Si la Console no puede verificar la conectividad, la creación del sistema falla. La instancia de prueba es `t2.nano` (para tenencia de VPC predeterminada) o `m3.medium` (para tenencia de VPC dedicada).
-
-endif::aws[]
 
 .Después de terminar
 La consola implementa el sistema Cloud Volumes ONTAP .  Puede seguir el progreso en la página Auditoría.
@@ -244,3 +219,8 @@ Si experimentas algún problema al desplegar el sistema Cloud Volumes ONTAP, rev
 
 
 CAUTION: Una vez finalizado el proceso de despliegue, no modifiques las configuraciones de Cloud Volumes ONTAP generadas por el sistema en el portal de la nube de AWS o Azure, especialmente las etiquetas del sistema. Cualquier cambio realizado en estas configuraciones puede provocar un comportamiento inesperado o pérdida de datos.
+
+.Enlaces relacionados
+* link:task-planning-your-config-gcp.html["Planificación de la configuración de Cloud Volumes ONTAP"]
+* link:task-deploying-gcp.html["Implementa Cloud Volumes ONTAP en Google Cloud usando la implementación avanzada"]
+

@@ -18,6 +18,7 @@ Puede revisar los resultados de rendimiento para ayudarlo a decidir qué cargas 
 
 
 
+[[performance-technical-reports]]
 == Informes técnicos de rendimiento
 
 ifdef::aws[]
@@ -52,6 +53,7 @@ endif::gcp[]
 
 
 
+[[cpu-performance]]
 == Rendimiento de la CPU
 
 Los nodos de Cloud Volumes ONTAP se muestran como altamente utilizados (más del 90 %) según las herramientas de monitoreo de su proveedor de nube.  Esto se debe a que ONTAP reserva todas las vCPU presentadas a la máquina virtual para que estén disponibles cuando sea necesario.

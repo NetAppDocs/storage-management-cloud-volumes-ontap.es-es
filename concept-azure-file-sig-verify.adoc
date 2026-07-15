@@ -18,6 +18,7 @@ El proceso de verificación de imágenes de Azure genera un archivo de resumen a
 
 
 
+[[file-signature-verification-workflow-summary]]
 == Resumen del flujo de trabajo de verificación de firmas de archivos
 
 A continuación se presenta una descripción general del proceso de flujo de trabajo de verificación de firma de archivo.

@@ -4,6 +4,7 @@
 
 
 
+[[ability-to-enhance-performance-of-premium-ssd-v2-disks-in-azure]]
 === Capacidad para mejorar el rendimiento de los discos SSD Premium v2 en Azure
 
 Ahora puede mejorar el rendimiento de los discos administrados SSD Premium v2 en Azure modificando los parámetros de IOPS y rendimiento.  Al utilizar esta capacidad, puede optimizar el rendimiento de almacenamiento de sus sistemas en función de los requisitos de su carga de trabajo.
@@ -12,6 +13,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-perf-params
 
 
 
+[[overage-charging-for-essentials-licenses-simplified]]
 === Cobro por exceso de licencias Essentials simplificado
 
 Para los contratos anuales/ofertas privadas del mercado Cloud Volumes ONTAP , los cálculos de excedente para las licencias Essentials ahora están alineados con los paquetes Bring Your Own License (BYOL).  Anteriormente, los excedentes se facturaban a tarifas de mercado por hora para el paquete Essentials exacto.  Ahora bien, si su contrato anual de Marketplace incluye varios paquetes Essentials, la NetApp Console cobra los excedentes de un paquete Essentials contra la capacidad disponible de un paquete Essentials de mayor precio en su suscripción.  Esto simplifica los cálculos de excedente para los paquetes Essentials y garantiza una transición sin problemas de la licencia BYOL a un modelo basado en suscripción.
@@ -20,6 +22,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-lic
 
 
 
+[[support-for-azure-edsv6-sizes-series]]
 === Compatibilidad con la serie de tamaños de Azure Edsv6
 
 A partir de Cloud Volumes ONTAP 9.17.1, puede implementar máquinas virtuales de la serie Azure Edsv6 a través de la NetApp Console para nuevas instancias de Cloud Volumes ONTAP .  Cloud Volumes ONTAP 9.17.1 y versiones posteriores solo admitirán máquinas virtuales de segunda generación para nuevas implementaciones.  Estas máquinas de segunda generación son compatibles con las últimas tecnologías, como la Interfaz de firmware extensible unificada (UEFI), los sistemas Azure Boost y NVMe.  Son ideales para sistemas y aplicaciones que hacen un uso intensivo de la memoria y que necesitan almacenamiento local rápido, como servidores de bases de datos y motores de análisis.

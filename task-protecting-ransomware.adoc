@@ -18,6 +18,7 @@ Los ataques de ransomware pueden costarle a una empresa tiempo, recursos y reput
 
 
 
+[[protection-from-common-ransomware-file-extensions]]
 == Protección contra extensiones de archivos de ransomware comunes
 
 Disponible en la consola, la configuración de protección contra ransomware le permite utilizar la funcionalidad ONTAP FPolicy para protegerse contra los tipos de extensiones de archivos de ransomware más comunes.
@@ -57,6 +58,7 @@ image:screenshot_ransomware_protection.gif["Una captura de pantalla que muestra 
 
 
 
+[[autonomous-ransomware-protection]]
 == Protección autónoma contra ransomware
 
 Cloud Volumes ONTAP admite la función de protección autónoma contra ransomware (ARP), que realiza análisis en las cargas de trabajo para detectar y advertir de forma proactiva sobre actividades anormales que podrían indicar un ataque de ransomware.

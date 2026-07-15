@@ -18,13 +18,14 @@ Una configuración de alta disponibilidad (HA) de Cloud Volumes ONTAP proporcion
 
 
 
+[[ha-components]]
 == Componentes de HA
 
 Las configuraciones de Cloud Volumes ONTAP HA en Google Cloud incluyen los siguientes componentes:
 
 * Dos nodos de Cloud Volumes ONTAP cuyos datos se reflejan de forma sincrónica entre sí.
 * Una instancia de mediador que proporciona un canal de comunicación entre los nodos para ayudar en los procesos de adquisición y devolución de almacenamiento.
-* Una zona o tres zonas (recomendado).
+* Una sola zona de disponibilidad (AZ) o varias zonas de disponibilidad/tres zonas (recomendado).
 +
 Si elige tres zonas, los dos nodos y el mediador estarán en zonas de Google Cloud separadas.
 
@@ -43,7 +44,10 @@ image:diagram_gcp_ha.png["Una imagen conceptual de un par Cloud Volumes ONTAP HA
 
 
 
+[[mediator]]
 === Mediador
+
+Tradicionalmente, las configuraciones de alta disponibilidad (HA) de Cloud Volumes ONTAP en Google Cloud utilizan un modelo no compartido, donde se usa una instancia mediadora para gestionar las operaciones de conmutación por error o supervisar el estado de los nodos. Esto requiere crear una máquina virtual adicional en Google Cloud y dos conjuntos de discos para cada nodo.
 
 Aquí hay algunos detalles clave sobre la instancia del mediador en Google Cloud:
 
@@ -63,6 +67,14 @@ Agentes de terceros:: Los agentes de terceros o las extensiones de VM no son com
 
 
 
+[[shared-disks-for-single-az-ha-configurations]]
+=== Discos compartidos para configuraciones de alta disponibilidad (HA) en una única AZ
+
+Cloud Volumes ONTAP 9.19.1 y versiones posteriores admiten la configuración de HA compartida para una sola AZ. En la arquitectura de HA compartida, ambos nodos pueden compartir un disco, por lo que cambia el método de creación de agregados. En lugar de crear dos discos para dos máquinas virtuales, se crea un solo disco y se conecta a las máquinas virtuales. La HA compartida no necesita el disco espejo.
+
+
+
+[[storage-takeover-and-giveback]]
 == Adquisición y devolución de almacenamiento
 
 Si un nodo deja de funcionar, el otro nodo puede servir datos a su socio para brindar un servicio de datos continuo.  Los clientes pueden acceder a los mismos datos desde el nodo asociado porque los datos se reflejaron de manera sincrónica en el asociado.
@@ -73,6 +85,7 @@ La toma de control del almacenamiento, la resincronización y la devolución son
 
 
 
+[[rpo-and-rto]]
 == RPO y RTO
 
 Una configuración de alta disponibilidad mantiene una alta disponibilidad de sus datos de la siguiente manera:
@@ -89,39 +102,41 @@ En caso de una interrupción, los datos deberían estar disponibles en 120 segun
 
 
 
+[[ha-deployment-models]]
 == Modelos de implementación de alta disponibilidad
 
 Puede garantizar la alta disponibilidad de sus datos implementando una configuración de alta disponibilidad en varias zonas o en una sola zona.
 
-Varias zonas (recomendado):: La implementación de una configuración de alta disponibilidad en tres zonas garantiza la disponibilidad continua de los datos si ocurre una falla dentro de una zona.  Tenga en cuenta que el rendimiento de escritura es ligeramente inferior en comparación con el uso de una sola zona, pero es mínimo.
-Zona única:: Cuando se implementa en una sola zona, una configuración de Cloud Volumes ONTAP HA utiliza una política de ubicación distribuida.  Esta política garantiza que una configuración de HA esté protegida contra un único punto de falla dentro de la zona, sin tener que usar zonas separadas para lograr el aislamiento de fallas.
+Varias zonas de disponibilidad (recomendado):: La implementación de una configuración de alta disponibilidad en tres zonas garantiza la disponibilidad continua de los datos si ocurre una falla dentro de una zona.  Tenga en cuenta que el rendimiento de escritura es ligeramente inferior en comparación con el uso de una sola zona, pero es mínimo.
+Zona de disponibilidad única:: Cuando se implementa en una única zona de disponibilidad (AZ), una configuración HA de Cloud Volumes ONTAP utiliza una política de distribución dispersa. Esta política garantiza que una configuración HA esté protegida frente a un punto único de fallo dentro de la zona, sin necesidad de utilizar zonas independientes para lograr el aislamiento de fallos.
 +
 --
 Este modelo de implementación reduce sus costos porque no hay cargos por salida de datos entre zonas.
 
+== Cómo funciona el almacenamiento en un par de alta disponibilidad (HA)
+
 --
 
-
-
-
-== Cómo funciona el almacenamiento en un par HA
 
 A diferencia de un clúster ONTAP , el almacenamiento en un par Cloud Volumes ONTAP HA en GCP no se comparte entre nodos.  En lugar de ello, los datos se reflejan de forma sincrónica entre los nodos para que estén disponibles en caso de fallo.
 
 
 
+[[storage-allocation]]
 === Asignación de almacenamiento
 
 Cuando se crea un nuevo volumen y se requieren discos adicionales, la consola asigna la misma cantidad de discos a ambos nodos, crea un agregado reflejado y luego crea el nuevo volumen.  Por ejemplo, si se requieren dos discos para el volumen, la consola asigna dos discos por nodo para un total de cuatro discos.
 
 
 
+[[storage-configurations]]
 === Configuraciones de almacenamiento
 
 Puede utilizar un par HA como una configuración activo-activo, en la que ambos nodos sirven datos a los clientes, o como una configuración activo-pasivo, en la que el nodo pasivo responde a las solicitudes de datos solo si ha asumido el almacenamiento del nodo activo.
 
 
 
+[[performance-expectations-for-an-ha-configuration]]
 === Expectativas de rendimiento para una configuración de alta disponibilidad
 
 Una configuración de Cloud Volumes ONTAP HA replica datos de forma sincrónica entre nodos, lo que consume ancho de banda de red.  Como resultado, puede esperar el siguiente rendimiento en comparación con una configuración de Cloud Volumes ONTAP de un solo nodo:
@@ -134,6 +149,7 @@ Para obtener más detalles sobre el rendimiento de Cloud Volumes ONTAP , consult
 
 
 
+[[client-access-to-storage]]
 === Acceso del cliente al almacenamiento
 
 Los clientes deben acceder a los volúmenes NFS y CIFS utilizando la dirección IP de datos del nodo en el que reside el volumen.  Si los clientes NAS acceden a un volumen utilizando la dirección IP del nodo asociado, el tráfico pasa entre ambos nodos, lo que reduce el rendimiento.
@@ -147,6 +163,7 @@ image::screenshot_mount_option.png[400]
 
 
 
+[[related-links]]
 === Enlaces relacionados
 
 * link:reference-networking-gcp.html["Obtenga más información sobre los requisitos de red"]

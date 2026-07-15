@@ -18,6 +18,7 @@ Cloud Volumes ONTAP admite el cifrado de datos y brinda protección contra virus
 
 
 
+[[encryption-of-data-at-rest]]
 == Cifrado de datos en reposo
 
 Cloud Volumes ONTAP admite las siguientes tecnologías de cifrado:
@@ -50,6 +51,7 @@ Puede utilizar soluciones de cifrado de NetApp con cifrado nativo de su proveedo
 
 
 
+[[netapp-encryption-solutions-nve-and-nae]]
 === Soluciones de cifrado de NetApp (NVE y NAE)
 
 Cloud Volumes ONTAP https://www.netapp.com/pdf.html?item=/media/17070-ds-3899.pdf["Cifrado de volumen de NetApp (NVE) y cifrado agregado de NetApp (NAE)"^] .  NVE y NAE son soluciones basadas en software que permiten el cifrado de datos en reposo de volúmenes conforme a FIPS 140-2.  Tanto NVE como NAE utilizan cifrado AES de 256 bits.
@@ -93,6 +95,7 @@ ifdef::aws[]
 
 
 
+[[aws-key-management-service]]
 === Servicio de administración de claves de AWS
 
 Cuando inicia un sistema Cloud Volumes ONTAP en AWS, puede habilitar el cifrado de datos mediante el http://docs.aws.amazon.com/kms/latest/developerguide/overview.html["Servicio de administración de claves de AWS (KMS)"^] .  La NetApp Console solicita claves de datos mediante una clave maestra de cliente (CMK).
@@ -108,6 +111,7 @@ ifdef::azure[]
 
 
 
+[[azure-storage-service-encryption]]
 === Cifrado del servicio de almacenamiento de Azure
 
 Los datos se cifran automáticamente en Cloud Volumes ONTAP en Azure mediante https://learn.microsoft.com/en-us/azure/security/fundamentals/encryption-overview["Cifrado del servicio de almacenamiento de Azure"^] con una clave administrada por Microsoft.
@@ -120,6 +124,7 @@ ifdef::gcp[]
 
 
 
+[[google-cloud-platform-default-encryption]]
 === Cifrado predeterminado de Google Cloud Platform
 
 https://cloud.google.com/security/encryption-at-rest/["Cifrado de datos en reposo de Google Cloud Platform"^]Está habilitado de forma predeterminada para Cloud Volumes ONTAP.  No se requiere configuración
@@ -130,6 +135,7 @@ endif::gcp[]
 
 
 
+[[ontap-virus-scanning]]
 == Análisis de virus ONTAP
 
 Puede utilizar la funcionalidad antivirus integrada en los sistemas ONTAP para proteger los datos y evitar que se vean comprometidos por virus u otros códigos maliciosos.
@@ -142,6 +148,7 @@ Para obtener información sobre cómo configurar y administrar la funcionalidad 
 
 
 
+[[ransomware-protection]]
 == Protección contra ransomware
 
 Los ataques de ransomware pueden costarle a una empresa tiempo, recursos y reputación.  La consola le permite implementar la solución NetApp para ransomware, que proporciona herramientas efectivas para la visibilidad, detección y remediación.

@@ -20,12 +20,14 @@ Si desea implementar un par HA, debelink:concept-ha-google-cloud.html["Descubra 
 
 
 
+[[requirements-for-cloud-volumes-ontap]]
 == Requisitos para Cloud Volumes ONTAP
 
 Se deben cumplir los siguientes requisitos en Google Cloud.
 
 
 
+[[requirements-specific-to-single-node-systems]]
 === Requisitos específicos de los sistemas de nodo único
 
 Si quieres implementar un sistema de un solo nodo, asegúrate de que tu red cumpla con los siguientes requisitos.
@@ -58,6 +60,7 @@ NOTE: Una LIF es una dirección IP asociada a un puerto físico.  Se requiere un
 
 
 
+[[requirements-specific-to-ha-pairs]]
 === Requisitos específicos para pares HA
 
 Si desea implementar un par HA, asegúrese de que su red cumpla con los siguientes requisitos.
@@ -181,6 +184,7 @@ Aunque el acceso global está deshabilitado de forma predeterminada, se admite s
 
 
 
+[[shared-vpcs]]
 === VPC compartidas
 
 Cloud Volumes ONTAP y el agente de consola son compatibles con una VPC compartida de Google Cloud y también con VPC independientes.
@@ -197,12 +201,14 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-goog
 
 
 
+[[packet-mirroring-in-vpcs]]
 === Duplicación de paquetes en VPC
 
 https://cloud.google.com/vpc/docs/packet-mirroring["Duplicación de paquetes"^]debe estar deshabilitado en la subred de Google Cloud en la que implementa Cloud Volumes ONTAP.
 
 
 
+[[outbound-internet-access]]
 === Acceso a Internet de salida
 
 Los sistemas Cloud Volumes ONTAP requieren acceso a Internet saliente para acceder a puntos finales externos para diversas funciones.  Cloud Volumes ONTAP no puede funcionar correctamente si estos puntos finales están bloqueados en entornos con requisitos de seguridad estrictos.
@@ -240,6 +246,7 @@ La autenticación del usuario falla y los siguientes servicios permanecen no dis
 |===
 
 
+[[connections-to-ontap-systems-in-other-networks]]
 === Conexiones a sistemas ONTAP en otras redes
 
 Para replicar datos entre un sistema Cloud Volumes ONTAP en Google Cloud y sistemas ONTAP en otras redes, debe tener una conexión VPN entre la VPC y la otra red (por ejemplo, su red corporativa).
@@ -248,6 +255,7 @@ https://cloud.google.com/vpn/docs/concepts/overview["Documentación de Google Cl
 
 
 
+[[firewall-rules]]
 === Reglas del firewall
 
 La consola crea reglas de firewall de Google Cloud que incluyen las reglas de entrada y salida que Cloud Volumes ONTAP necesita para funcionar correctamente.  Es posible que desees consultar los puertos para fines de prueba o si prefieres utilizar tus propias reglas de firewall.
@@ -490,6 +498,7 @@ NOTE: La fuente es la interfaz (dirección IP) del sistema Cloud Volumes ONTAP .
 |===
 
 
+[[rules-for-vpc]]
 ==== Reglas para VPC-1, VPC-2 y VPC-3
 
 En Google Cloud, una configuración de alta disponibilidad se implementa en cuatro VPC.  Las reglas de firewall necesarias para la configuración de HA en VPC-0 son<<Reglas del firewall,enumerados anteriormente para Cloud Volumes ONTAP>> .
@@ -503,6 +512,7 @@ NOTE: Para permitir una alta velocidad de escritura para las nuevas implementaci
 
 
 
+[[infrastructure-manager-configuration-for-private-mode-deployments]]
 === Configuración de Infrastructure Manager para implementaciones en modo privado
 
 Si quieres implementar Cloud Volumes ONTAP 9.16.1 o una versión posterior en modo privado, necesitas hacer algunos cambios en la configuración para que Cloud Volumes ONTAP pueda usar Google Cloud Infrastructure Manager como servicio de implementación en vez de Deployment Manager, que Google eventualmente dejará obsoleto.
@@ -542,6 +552,7 @@ El pool de trabajadores debe tener la siguiente configuración:
 
 
 
+[[requirements-for-the-console-agent]]
 == Requisitos para el agente de consola
 
 Si aún no ha creado un agente de consola, debe revisar los requisitos de red.
@@ -552,6 +563,7 @@ Si aún no ha creado un agente de consola, debe revisar los requisitos de red.
 
 
 
+[[network-configurations-to-support-console-agent-proxy]]
 === Configuraciones de red para soportar el proxy del agente de consola
 
 Puede utilizar los servidores proxy configurados para el agente de la consola para habilitar el acceso a Internet saliente desde Cloud Volumes ONTAP.  La consola admite dos tipos de proxies:

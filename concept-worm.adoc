@@ -20,6 +20,7 @@ La función WORM está disponible para su uso con su propia licencia (BYOL) y su
 
 
 
+[[how-worm-storage-works]]
 == Cómo funciona el almacenamiento WORM
 
 Una vez que un archivo se ha enviado al almacenamiento WORM, no se puede modificar, incluso después de que haya expirado el período de retención.  Un reloj a prueba de manipulaciones determina cuándo ha transcurrido el período de retención de un archivo WORM.
@@ -28,12 +29,14 @@ Una vez transcurrido el período de retención, usted es responsable de eliminar
 
 
 
+[[activating-worm-storage]]
 == Activación del almacenamiento WORM
 
 La forma de activar el almacenamiento WORM depende de la versión de Cloud Volumes ONTAP que esté utilizando.
 
 
 
+[[version-9-10-1-and-later]]
 === Versión 9.10.1 y posteriores
 
 A partir de Cloud Volumes ONTAP 9.10.1, tiene la opción de habilitar o deshabilitar WORM en el nivel de volumen.
@@ -46,12 +49,14 @@ Cuando agrega un sistema Cloud Volumes ONTAP , se le solicita que habilite o des
 
 
 
+[[version-9-10-0-and-earlier]]
 === Versión 9.10.0 y anteriores
 
 Puede activar el almacenamiento WORM en un sistema Cloud Volumes ONTAP cuando agrega un nuevo sistema.  Cada volumen que cree desde la consola tiene WORM habilitado.  No se puede deshabilitar el almacenamiento WORM en volúmenes individuales.
 
 
 
+[[committing-files-to-worm]]
 == Confirmando archivos en WORM
 
 Puedes usar una aplicación para enviar archivos a WORM por NFS o CIFS, o usar la CLI de ONTAP para enviar archivos a WORM automáticamente. También puedes usar un archivo WORM appendable para retener datos que se escriben de forma incremental, como información de registro. Para más información, consulta https://docs.netapp.com/us-en/ontap/snaplock/commit-files-worm-state-manual-task.html#commit-files-to-worm-manually["Confirma archivos en WORM usando ONTAP SnapLock"^].
@@ -60,6 +65,7 @@ Después de activar el almacenamiento WORM en un sistema Cloud Volumes ONTAP , d
 
 
 
+[[enabling-worm-on-a-cloud-volumes-ontap-system]]
 == Habilitación de WORM en un sistema Cloud Volumes ONTAP
 
 Puede habilitar el almacenamiento WORM al crear un sistema Cloud Volumes ONTAP en la consola.  También puede habilitar WORM en un sistema si WORM no está habilitado en él durante la creación.  Después de habilitarlo, no podrás deshabilitar WORM.
@@ -87,6 +93,7 @@ Puede verificar el estado de *WORM* en el panel Características.  Una vez habil
 
 
 
+[[deleting-worm-files]]
 == Eliminar archivos WORM
 
 Puede eliminar archivos WORM durante el período de retención utilizando la función de eliminación privilegiada.
@@ -95,6 +102,7 @@ Para obtener instrucciones, consulte la https://docs.netapp.com/us-en/ontap/snap
 
 
 
+[[worm-and-data-tiering]]
 == WORM y estratificación de datos
 
 Cuando crea un nuevo sistema Cloud Volumes ONTAP 9.8 o posterior, puede habilitar tanto la organización en niveles de datos como el almacenamiento WORM juntos.  Al habilitar la organización en niveles de datos con almacenamiento WORM, podrá organizar los datos en niveles en un almacén de objetos en la nube.
@@ -108,6 +116,7 @@ Debe comprender lo siguiente sobre cómo habilitar la clasificación de datos y 
 
 
 
+[[limitations]]
 == Limitaciones
 
 * El almacenamiento WORM en Cloud Volumes ONTAP opera bajo un modelo de "administrador de almacenamiento confiable".  Si bien los archivos WORM están protegidos contra alteraciones o modificaciones, un administrador de clúster puede eliminar los volúmenes incluso si esos volúmenes contienen datos WORM no vencidos.

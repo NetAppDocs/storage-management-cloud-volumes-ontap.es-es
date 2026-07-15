@@ -36,6 +36,7 @@ Al utilizar AKV, tenga en cuenta que, de forma predeterminada, se utiliza un LIF
 
 
 
+[[configuration-process]]
 == Proceso de configuración
 
 Los pasos descritos capturan cómo registrar su configuración de Cloud Volumes ONTAP con Azure y cómo crear un Azure Key Vault y claves.  Si ya ha completado estos pasos, asegúrese de tener la configuración correcta, especialmente en<<create-akv>> , y luego proceder a<<ontap>> .

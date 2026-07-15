@@ -25,6 +25,7 @@ Tienes varias formas de crear un nuevo volumen:
 
 
 
+[[before-you-begin]]
 == Antes de empezar
 
 Algunas notas sobre el aprovisionamiento de volumen:
@@ -43,6 +44,7 @@ endif::aws[]
 
 
 
+[[create-a-volume]]
 == Crear un volumen
 
 La forma más común de crear un volumen es especificar el tipo de volumen que necesita y luego dejar que la consola se encargue de la asignación del disco por usted.  Pero también tienes la opción de elegir el agregado específico sobre el que quieres crear el volumen.
@@ -219,6 +221,8 @@ La consola crea el volumen en el sistema Cloud Volumes ONTAP .
 
 
 
+[[create-a-volume-on-the-second-node-in-an-ha-configuration]]
+[[create-volume-second-node]]
 == Cree un volumen en el segundo nodo en una configuración de alta disponibilidad
 
 De forma predeterminada, la consola crea volúmenes en el primer nodo en una configuración de alta disponibilidad.  Si necesita una configuración activa-activa, en la que ambos nodos brindan datos a los clientes, debe crear agregados y volúmenes en el segundo nodo.
@@ -247,6 +251,7 @@ endif::aws[]
 
 
 
+[[after-you-create-a-volume]]
 == Después de crear un volumen
 
 Si aprovisionó un recurso compartido CIFS, otorgue a los usuarios o grupos permisos para los archivos y carpetas y verifique que esos usuarios puedan acceder al recurso compartido y crear un archivo.

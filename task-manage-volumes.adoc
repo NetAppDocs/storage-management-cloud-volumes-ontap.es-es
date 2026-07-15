@@ -20,6 +20,7 @@ Puede administrar volúmenes en la Vista estándar de la NetApp Console o a trav
 
 
 
+[[manage-volumes]]
 == Administrar volúmenes
 
 Al utilizar la vista estándar de la consola, puede administrar volúmenes según sus necesidades de almacenamiento.  Puede ver, editar, clonar, restaurar y eliminar volúmenes.
@@ -122,6 +123,7 @@ NOTE: La consola mueve el volumen a un agregado existente que utiliza el tipo de
 
 
 
+[[resize-a-volume]]
 == Cambiar el tamaño de un volumen
 
 De forma predeterminada, un volumen crece automáticamente hasta alcanzar un tamaño máximo cuando se queda sin espacio.  El valor predeterminado es 1000, lo que significa que el volumen puede crecer hasta 11 veces su tamaño.  Este valor se puede configurar en la configuración del agente de la consola.
@@ -144,6 +146,7 @@ Asegúrese de tener en cuenta los límites de capacidad de su sistema al cambiar
 
 
 
+[[modify-the-cifs-server]]
 == Modificar el servidor CIFS
 
 Si cambia sus servidores DNS o su dominio de Active Directory, deberá modificar el servidor CIFS en Cloud Volumes ONTAP para que pueda continuar brindando almacenamiento a los clientes.
@@ -209,6 +212,7 @@ Cloud Volumes ONTAP actualiza el servidor CIFS con los cambios.
 
 
 
+[[move-a-volume]]
 == Mover un volumen
 
 Mueva volúmenes para aprovechar la capacidad, mejorar el rendimiento y satisfacer los acuerdos de nivel de servicio.
@@ -227,6 +231,7 @@ Para obtener instrucciones, consulte lalink:http://docs.netapp.com/ontap-9/topic
 
 
 
+[[move-a-volume-when-console-displays-an-action-required-message]]
 == Mover un volumen cuando la consola muestra un mensaje de Acción requerida
 
 Es posible que la consola muestre un mensaje de Acción requerida que indica que es necesario mover un volumen para evitar problemas de capacidad, pero que debe corregir el problema usted mismo.  Si esto sucede, debe identificar cómo corregir el problema y luego mover uno o más volúmenes.
@@ -246,6 +251,7 @@ TIP: La consola muestra estos mensajes de Acción requerida cuando un agregado h
 
 
 
+[[identify-how-to-correct-capacity-issues]]
 === Identificar cómo corregir problemas de capacidad
 
 Si la consola no puede proporcionar recomendaciones para mover un volumen para evitar problemas de capacidad, debe identificar los volúmenes que necesita mover y si debe moverlos a otro agregado en el mismo sistema o a otro sistema.
@@ -289,6 +295,7 @@ Para obtener más información, consulte<<move-volumes-aggregate-capacity,Mueva 
 
 
 
+[[move-volumes-to-another-system-to-avoid-capacity-issues]]
 === Mueva volúmenes a otro sistema para evitar problemas de capacidad
 
 Puede mover uno o más volúmenes a otro sistema Cloud Volumes ONTAP para evitar problemas de capacidad.  Es posible que necesites hacer esto si el sistema alcanzó su límite de disco.
@@ -323,6 +330,8 @@ Para obtener más información, consultelink:task-manage-volumes.html#manage-vol
 
 
 
+[[move-volumes-to-another-aggregate-to-avoid-capacity-issues]]
+[[move-volumes-aggregate-capacity]]
 === Mueva volúmenes a otro agregado para evitar problemas de capacidad
 
 Puede mover uno o más volúmenes a otro agregado para evitar problemas de capacidad.
@@ -364,6 +373,7 @@ Para obtener instrucciones, consulte lalink:http://docs.netapp.com/ontap-9/topic
 
 
 
+[[reasons-why-a-volume-move-might-perform-slowly]]
 == Razones por las que un movimiento de volumen podría tener un rendimiento lento
 
 Mover un volumen puede tardar más de lo esperado si se cumple alguna de las siguientes condiciones para Cloud Volumes ONTAP:
@@ -382,6 +392,7 @@ Se utiliza un esquema de nombres más antiguo si se habilitó la clasificación 
 
 
 
+[[view-flexgroup-volumes]]
 == Ver volúmenes de FlexGroup
 
 Puede ver los volúmenes FlexGroup creados a través del Administrador del sistema ONTAP o la CLI de ONTAP directamente a través de la pestaña Volúmenes en la Consola.  Puede ver información detallada de los volúmenes de FleGroup a través de un mosaico dedicado *Volúmenes*, donde puede identificar cada grupo de volúmenes de FlexGroup a través del texto flotante del ícono.  Además, puede identificar y ordenar los volúmenes FlexGroup en la vista de lista de volúmenes a través de la columna Estilo de volumen.

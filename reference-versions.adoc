@@ -24,6 +24,7 @@ ifdef::aws[]
 
 
 
+[[aws]]
 == AWS
 
 Nodo único::
@@ -82,6 +83,7 @@ ifdef::azure[]
 
 
 
+[[azure]]
 == Azur
 
 Nodo único::
@@ -118,11 +120,13 @@ ifdef::gcp[]
 
 
 
+[[google-cloud]]
 == Google Cloud
 
 Nodo único::
 +
 --
+* 9.19.1 RC
 * 9.18.1
 * 9.17.1 P1
 * 9.16.1
@@ -146,6 +150,7 @@ Nodo único::
 par HA::
 +
 --
+* 9.19.1 RC
 * 9.18.1
 * 9.17.1 P1
 * 9.16.1

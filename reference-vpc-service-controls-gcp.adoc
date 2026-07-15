@@ -20,6 +20,7 @@ Los controles de servicio de VPC le permiten controlar el acceso a los servicios
 
 
 
+[[how-netapp-services-communicate-with-vpc-service-controls]]
 == Cómo se comunican los servicios de NetApp con los controles de servicio de VPC
 
 La consola se comunica directamente con las API de Google Cloud.  Esto se activa desde una dirección IP externa fuera de Google Cloud (por ejemplo, desde api.services.cloud.netapp.com) o dentro de Google Cloud desde una dirección interna asignada al agente de la consola.
@@ -28,6 +29,7 @@ Según el estilo de implementación del agente de consola, es posible que se deb
 
 
 
+[[images]]
 == Imágenes
 
 Tanto Cloud Volumes ONTAP como la Console utilizan imágenes de un proyecto dentro de Google Cloud que está gestionado por NetApp. Esto puede afectar el despliegue del agente de la Console y de Cloud Volumes ONTAP, si tu organización tiene una política que bloquea el uso de imágenes que no están alojadas dentro de la organización.
@@ -36,12 +38,14 @@ Puede implementar un agente de consola manualmente mediante el método de instal
 
 
 
+[[deploying-a-console-agent]]
 === Implementación de un agente de consola
 
 El usuario que implementa un agente de consola debe poder hacer referencia a una imagen alojada en el proyecto _netapp-cloudmanager_ y el número de proyecto _14190056516_.
 
 
 
+[[deploying-cloud-volumes-ontap]]
 === Implementación de Cloud Volumes ONTAP
 
 * La cuenta de servicio de la consola debe hacer referencia a una imagen alojada en el proyecto _netapp-cloudmanager_ y al número de proyecto _14190056516_ del proyecto de servicio.
@@ -52,6 +56,7 @@ A continuación se definen ejemplos de las reglas necesarias para extraer estas 
 
 
 
+[[vpc-service-controls-perimeter-policies]]
 == Políticas perimetrales de controles de servicio de VPC
 
 Las políticas permiten excepciones a los conjuntos de reglas de VPC Service Controls. Para obtener más información sobre las políticas, por favor visita https://cloud.google.com/vpc-service-controls/docs/ingress-egress-rules#policy-model["Documentación de la política de Service Controls de Google Cloud VPC"^].
@@ -60,6 +65,7 @@ Para configurar las políticas que requiere la consola, navegue al perímetro de
 
 
 
+[[ingress-rules]]
 === Reglas de ingreso
 
 ....
@@ -107,6 +113,7 @@ To:
 ....
 
 
+[[egress-rules]]
 === Reglas de salida
 
 ....

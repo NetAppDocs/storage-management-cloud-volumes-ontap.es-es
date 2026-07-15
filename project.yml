@@ -136,7 +136,11 @@ sidebar:
         url: "/task-setting-up-gcp-encryption.html"
       - title: Configurar licencias
         url: "/task-set-up-licensing-google.html"
-      - title: Lanzamiento de Cloud Volumes ONTAP en Google Cloud
+      - title: Implementa Cloud Volumes ONTAP con los valores predeterminados en Google
+          Cloud
+        url: "/task-quick-deploy-gcp.html"
+      - title: Implementa Cloud Volumes ONTAP usando las opciones avanzadas en Google
+          Cloud
         url: "/task-deploying-gcp.html"
       - title: Verificación de imágenes de Google Cloud Platform
         entries:

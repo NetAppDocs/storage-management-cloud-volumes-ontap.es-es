@@ -14,7 +14,7 @@ summary: Puede implementar instancias de Cloud Volumes ONTAP en una configuraci�
 
 
 [role="lead"]
-Puedes implementar Cloud Volumes ONTAP en Amazon Web Services (AWS) y Microsoft Azure usando `Quick create` para un despliegue más rápido tanto en configuraciones de nodo único como de alta disponibilidad (HA). Este proceso simplificado reduce los pasos de implementación en comparación con el método avanzado al configurar automáticamente los valores predeterminados en una sola página y minimizar la navegación.
+Puedes implementar Cloud Volumes ONTAP en Amazon Web Services (AWS), Microsoft Azure y Google Cloud usando `Quick create` para acelerar la implementación tanto en configuraciones de un solo nodo como de alta disponibilidad (HA). Este proceso simplificado reduce los pasos de implementación en comparación con el método avanzado al establecer automáticamente los valores predeterminados en una sola página y minimizar la navegación.
 
 .Antes de empezar
 Antes de empezar, asegúrate de tener lo siguiente:
@@ -39,6 +39,11 @@ link:task-planning-your-config.html["Planificación de la configuración en AWS"
 link:task-planning-your-config-azure.html["Planificación de tu configuración en Azure"]
 
 --
+.Google Cloud
+--
+link:task-planning-your-config-gcp.html["Planificación de la configuración en Google Cloud"]
+
+--
 ====
 . Conocimiento de los requisitos de licencia de Cloud Volumes ONTAP. Para más información, consulta:
 +
@@ -52,6 +57,11 @@ link:task-set-up-licensing-aws.html["Configura las licencias en AWS"]
 .Azur
 --
 link:task-set-up-licensing-azure.html["Configura las licencias en Azure"]
+
+--
+.Google Cloud
+--
+link:task-planning-your-config-gcp.html["Planificación de la configuración en Google Cloud"]
 
 --
 ====
@@ -69,13 +79,18 @@ link:reference-networking-aws.html["Requisitos de red en AWS"]
 link:reference-networking-azure.html["Requisitos de red en Azure"]
 
 --
+.Google Cloud
+--
+link:reference-networking-gcp.html["Requisitos de red en Google Cloud"]
+
+--
 ====
 
 
 .Pasos
 . Desde el menú de navegación de la izquierda, seleccione *Almacenamiento > Administración*.
 . [[suscribirse]]En la página Canvas, haga clic en *Agregar sistema* y siga las instrucciones.
-. Selecciona tu proveedor de cloud (*Amazon Web Services* o *Microsoft Azure*) > *Cloud Volumes ONTAP/Cloud Volumes ONTAP HA* > *Add new*. La opción *Quick create* está seleccionada por defecto.
+. Selecciona tu proveedor de servicios en la nube (*Amazon Web Services*, *Microsoft Azure* o *Google Cloud*) > *Cloud Volumes ONTAP/Cloud Volumes ONTAP HA* > *Añadir nuevo*. La opción *Creación rápida* está seleccionada por defecto.
 +
 .Ejemplos de capturas de pantalla de la opción Quick create
 [%collapsible]
@@ -92,15 +107,20 @@ image:screenshot-aws-quick-create.png["width=500,alt=\"AWS Quick Create\""]
 image:screenshot-azure-quick-create.png["width=500,alt=\"Azure Quick Create\""]
 
 --
+.Google Cloud
+--
+image:screenshot-quick-start-gcp.png["width=500,alt=\"creación rápida de Google Cloud\""]
+
+--
 =====
 ====
 
 
 .Detalles del sistema
-. *Cuenta/credenciales del proveedor de la nube*: Los detalles de la cuenta y la suscripción se rellenan automáticamente en función de tu agente de la Console. Si tienes varias cuentas o suscripciones, selecciona la que quieres usar. Si un agente de la Console no está disponible, se te pedirá que https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html["crear un agente de consola"^].
+. *Cuenta del proveedor de servicios en la nube/credenciales/proyecto de Google Cloud*: Los datos de la cuenta y la suscripción se rellenan automáticamente en función de tu agente de la Consola. Si tienes varias cuentas o suscripciones, selecciona la que quieras utilizar. Si no hay ningún agente de la Consola disponible, se te pedirá que https://docs.netapp.com/us-en/console-setup-admin/concept-agent-install-options.html["crear un agente de consola"^].
 . *Nombre*: Introduce un nombre para tu sistema Cloud Volumes ONTAP (también llamado nombre del clúster). La NetApp Console usa el nombre del sistema (clúster) para nombrar el sistema Cloud Volumes ONTAP y la instancia de VM. También usa el nombre como prefijo para el grupo de seguridad predefinido, si eliges esa opción.
 . *Credenciales de ONTAP*: Estas son las credenciales de la cuenta del administrador del clúster Cloud Volumes ONTAP. Puedes usar estas credenciales para conectarte a Cloud Volumes ONTAP a través de ONTAP System Manager o la CLI de ONTAP. Puedes mantener el nombre de usuario _admin_ predeterminado o cambiarlo por un nombre de usuario personalizado.
-. *Etiquetas*: Las etiquetas son los metadatos de tus recursos de AWS o Azure. La Console añade las etiquetas a la instancia de Cloud Volumes ONTAP y a cada recurso asociado a la instancia. Puedes añadir hasta 15 etiquetas desde la interfaz de usuario al crear un sistema Cloud Volumes ONTAP, y luego puedes añadir más después de que se haya creado. Para más información, consulta:
+. *Etiquetas*: Las etiquetas son los metadatos de tus recursos de AWS o Azure. La consola añade las etiquetas a la instancia de Cloud Volumes ONTAP y a cada recurso asociado a la instancia. Puedes añadir hasta 15 etiquetas desde la interfaz de usuario al crear un sistema Cloud Volumes ONTAP, y luego puedes añadir más después de que se haya creado. Para más información, consulta:
 +
 [role="tabbed-block"]
 ====
@@ -112,6 +132,11 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html["Documentaci
 .Azur
 --
 https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json["Documentación de Azure: Etiquetar recursos"^].
+
+--
+.Google Cloud
+--
+https://docs.cloud.google.com/storage/docs/tags-and-labels["Documentación de Google Cloud: etiquetas y etiquetas de clasificación"^].
 
 --
 ====
@@ -129,7 +154,7 @@ https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-res
 ====
 .Para AWS
 --
-*VPC*: Para AWS, introduce una VPC para la región con una subred según tu planificación
+*VPC*: En el caso de AWS, introduce una red de Amazon Virtual Private Cloud (VPC) para la región con una subred acorde con tu implementación prevista.
 
 .Alta disponibilidad de AWS
 Si seleccionaste una configuración de HA, introduce la siguiente información:
@@ -151,7 +176,18 @@ Si seleccionaste una configuración de HA, introduce la siguiente información:
 --
 .Para Azure
 --
-*VNET*: para Azure, selecciona la VNET requerida.
+*VNET*: Selecciona la red virtual de Azure (VNet) que necesites. Para obtener información sobre los requisitos de VNet, consulta link:reference-networking-azure.html#networking-for-azure-vnet-encryption["Redes para el cifrado de Azure VNet"].
+
+--
+.Para Google Cloud
+--
+*VPC y subred*: Para Google Cloud, introduce una red de Google Virtual Private Cloud (VPC) para la región y una subred según tu implementación planificada.
+
+.HA en una sola zona de disponibilidad (AZ) o en varias zonas de disponibilidad (AZ)
+Si has seleccionado una configuración de alta disponibilidad (HA), introduce la siguiente información: *Zona para los nodos 1 y 2, y el mediador*: Añade las zonas para los dos nodos y el mediador. *Conectividad* Selecciona cuatro VPC diferentes para la configuración de alta disponibilidad y una subred en cada VPC. Para más información sobre VPC-1, VPC-2 y VPC-3, consulta link:reference-networking-gcp.html#requirements-specific-to-single-node-systems["Reglas para VPC-1, VPC-2 y VPC-3"].
+
+
+NOTE: Cloud Volumes ONTAP 9.19.1 y versiones posteriores son compatibles con link:concept-ha-google-cloud.html["Discos compartidos para configuraciones de HA de una sola AZ"], lo que hace que la instancia del mediador sea opcional o redundante. En esta configuración, no necesitas una zona de mediador, una VPC ni una subred para la replicación de datos.
 
 --
 ====
@@ -185,6 +221,6 @@ Si experimentas algún problema al desplegar el sistema Cloud Volumes ONTAP, rev
 CAUTION: Una vez finalizado el proceso de despliegue, no modifiques las configuraciones de Cloud Volumes ONTAP generadas por el sistema en el portal de la nube de AWS o Azure, especialmente las etiquetas del sistema. Cualquier cambio realizado en estas configuraciones puede provocar un comportamiento inesperado o pérdida de datos.
 
 .Enlaces relacionados
-* link:task-planning-your-config.html["Planificación de la configuración de Cloud Volumes ONTAP"] *
+* link:task-planning-your-config.html["Planificación de la configuración de Cloud Volumes ONTAP"]
 * link:task-deploying-otc-aws.html["Implemente Cloud Volumes ONTAP en AWS mediante la implementación avanzada"]
 

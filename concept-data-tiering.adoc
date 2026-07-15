@@ -24,6 +24,7 @@ ifdef::aws[]
 
 
 
+[[data-tiering-in-aws]]
 == Nivelación de datos en AWS
 
 Cuando habilitas la organización de datos por niveles en AWS, Cloud Volumes ONTAP usa EBS como nivel de rendimiento para los datos activos y Amazon Simple Storage Service (Amazon S3) como nivel de capacidad para los datos inactivos.
@@ -70,6 +71,7 @@ ifdef::azure[]
 
 
 
+[[data-tiering-in-azure]]
 == Organización de datos en niveles en Azure
 
 Cuando habilita la organización en niveles de datos en Azure, Cloud Volumes ONTAP usa discos administrados de Azure como un nivel de rendimiento para datos activos y Azure Blob Storage como un nivel de capacidad para datos inactivos.
@@ -116,6 +118,7 @@ ifdef::gcp[]
 
 
 
+[[data-tiering-in-google-cloud]]
 == Nivelación de datos en Google Cloud
 
 Al habilitar la organización por niveles de datos en Google Cloud, Cloud Volumes ONTAP utiliza discos persistentes como nivel de rendimiento para los datos activos y un depósito de Google Cloud Storage como nivel de almacenamiento para los datos inactivos. Puedes seleccionar un nivel de almacenamiento al crear un sistema y cambiarlo en cualquier momento después. Para obtener información sobre cómo cambiar la clase de almacenamiento, consulta link:task-tiering.html["Agrupar datos inactivos en almacenamiento de objetos de bajo costo"].
@@ -149,12 +152,14 @@ endif::gcp[]
 
 
 
+[[data-tiering-and-capacity-limits]]
 == Niveles de datos y límites de capacidad
 
 Si habilita la clasificación de datos, el límite de capacidad de un sistema permanece igual.  El límite se distribuye entre el nivel de rendimiento y el nivel de capacidad.
 
 
 
+[[volume-tiering-policies]]
 == Políticas de niveles de volumen
 
 Para habilitar la organización en niveles de datos, debe seleccionar una política de organización en niveles de volumen al crear, modificar o replicar un volumen.  Puede seleccionar una política diferente para cada volumen.
@@ -194,6 +199,7 @@ Al replicar un volumen, puede elegir si desea organizar los datos en niveles de 
 
 
 
+[[turning-off-cloud-volumes-ontap-impacts-the-cooling-period]]
 === Desactivar Cloud Volumes ONTAP afecta el período de enfriamiento
 
 Los bloques de datos se enfrían mediante escaneos de enfriamiento.  Durante este proceso, los bloques que no se han utilizado tienen su temperatura movida (enfriada) al siguiente valor más bajo.  El tiempo de enfriamiento predeterminado depende de la política de niveles de volumen:
@@ -209,6 +215,7 @@ TIP: Cuando Cloud Volumes ONTAP está desactivado, la temperatura de cada bloque
 
 
 
+[[setting-up-data-tiering]]
 == Configuración de niveles de datos
 
 Para obtener instrucciones y una lista de configuraciones compatibles, consultelink:task-tiering.html["Agrupar datos inactivos en almacenamiento de objetos de bajo costo"] .

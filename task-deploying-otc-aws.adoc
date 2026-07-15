@@ -18,6 +18,7 @@ Puede iniciar Cloud Volumes ONTAP en una configuración de sistema único o como
 
 
 
+[[before-you-begin]]
 == Antes de empezar
 
 Necesitará lo siguiente antes de comenzar.
@@ -45,6 +46,7 @@ Para más detalles, consultelink:reference-networking-aws.html["Requisitos de re
 
 
 
+[[launch-a-single-node-cloud-volumes-ontap-system-in-aws]]
 == Lanzar un sistema Cloud Volumes ONTAP de un solo nodo en AWS
 
 Si desea iniciar Cloud Volumes ONTAP en AWS, debe crear un nuevo sistema en la NetApp Console.
@@ -282,6 +284,7 @@ Las cuotas le permiten restringir o rastrear el espacio en disco y la cantidad d
 
 
 
+[[launch-a-cloud-volumes-ontap-ha-pair-in-aws]]
 == Lanzar un par de Cloud Volumes ONTAP HA en AWS
 
 Si desea iniciar un par de HA de Cloud Volumes ONTAP en AWS, debe crear un sistema de HA en la consola.

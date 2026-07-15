@@ -31,6 +31,7 @@ NOTE: Sólo se pueden configurar claves para un SVM de datos.
 
 
 
+[[configuration]]
 == Configuración
 
 .AWS

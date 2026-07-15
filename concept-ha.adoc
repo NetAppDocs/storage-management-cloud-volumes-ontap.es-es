@@ -18,6 +18,7 @@ Una configuración de alta disponibilidad (HA) de Cloud Volumes ONTAP proporcion
 
 
 
+[[ha-components]]
 == Componentes de HA
 
 En AWS, las configuraciones de Cloud Volumes ONTAP HA incluyen los siguientes componentes:
@@ -28,6 +29,7 @@ En AWS, las configuraciones de Cloud Volumes ONTAP HA incluyen los siguientes co
 
 
 
+[[mediator]]
 === Mediador
 
 A continuación se muestran algunos detalles clave sobre la instancia del mediador en AWS:
@@ -48,6 +50,7 @@ Agentes de terceros:: Los agentes de terceros o las extensiones de VM no son com
 
 
 
+[[storage-takeover-and-giveback]]
 == Adquisición y devolución de almacenamiento
 
 Si un nodo deja de funcionar, el otro nodo puede servir datos a su socio para brindar un servicio de datos continuo.  Los clientes pueden acceder a los mismos datos desde el nodo asociado porque los datos se reflejaron de manera sincrónica en el asociado.
@@ -58,6 +61,7 @@ La toma de control del almacenamiento, la resincronización y la devolución son
 
 
 
+[[rpo-and-rto]]
 == RPO y RTO
 
 Una configuración de alta disponibilidad mantiene la alta disponibilidad de sus datos de la siguiente manera:
@@ -68,12 +72,14 @@ Una configuración de alta disponibilidad mantiene la alta disponibilidad de sus
 
 
 
+[[ha-deployment-models]]
 == Modelos de implementación de alta disponibilidad
 
 Puede garantizar la alta disponibilidad de sus datos implementando una configuración de alta disponibilidad en múltiples zonas de disponibilidad (AZ) o en una sola zona de disponibilidad (AZ).  Debes revisar más detalles sobre cada configuración para elegir la que mejor se adapte a tus necesidades.
 
 
 
+[[multiple-availability-zones]]
 === Múltiples zonas de disponibilidad
 
 La implementación de una configuración de alta disponibilidad en múltiples zonas de disponibilidad (AZ) garantiza una alta disponibilidad de sus datos si ocurre una falla con una AZ o una instancia que ejecuta un nodo de Cloud Volumes ONTAP .  Debe comprender cómo las direcciones IP del NAS afectan el acceso a los datos y la conmutación por error del almacenamiento.
@@ -121,6 +127,7 @@ Puede localizar la dirección IP correcta desde la consola seleccionando el volu
 
 
 
+[[single-availability-zone]]
 === Zona de disponibilidad única
 
 Implementar una configuración de alta disponibilidad en una única zona de disponibilidad (AZ) puede garantizar una alta disponibilidad de sus datos si falla una instancia que ejecuta un nodo de Cloud Volumes ONTAP .  Todos los datos son accesibles de forma nativa desde fuera de la VPC.
@@ -151,6 +158,7 @@ Para las configuraciones NAS, las direcciones IP de datos pueden migrar entre no
 
 
 
+[[aws-local-zones]]
 === Zonas locales de AWS
 
 Las zonas locales de AWS son una implementación de infraestructura donde el almacenamiento, el cómputo, la base de datos y otros servicios seleccionados de AWS se ubican cerca de grandes ciudades y áreas industriales.  Con AWS Local Zones, puede acercar los servicios de AWS a usted, lo que mejora la latencia de sus cargas de trabajo y mantiene las bases de datos localmente.  En Cloud Volumes ONTAP,
@@ -203,18 +211,21 @@ link:https://aws.amazon.com/about-aws/global-infrastructure/localzones/features/
 
 
 
+[[how-storage-works-in-an-ha-pair]]
 == Cómo funciona el almacenamiento en un par HA
 
 A diferencia de un clúster ONTAP , el almacenamiento en un par Cloud Volumes ONTAP HA no se comparte entre nodos.  En lugar de ello, los datos se reflejan de forma sincrónica entre los nodos para que estén disponibles en caso de fallo.
 
 
 
+[[storage-allocation]]
 === Asignación de almacenamiento
 
 Cuando se crea un nuevo volumen y se requieren discos adicionales, la consola asigna la misma cantidad de discos a ambos nodos, crea un agregado reflejado y luego crea el nuevo volumen.  Por ejemplo, si se requieren dos discos para el volumen, la consola asigna dos discos por nodo para un total de cuatro discos.
 
 
 
+[[storage-configurations]]
 === Configuraciones de almacenamiento
 
 Puede utilizar un par HA como una configuración activo-activo, en la que ambos nodos sirven datos a los clientes, o como una configuración activo-pasivo, en la que el nodo pasivo responde a las solicitudes de datos solo si ha asumido el almacenamiento del nodo activo.
@@ -224,6 +235,7 @@ NOTE: Puede configurar una configuración activa-activa solo cuando utilice la C
 
 
 
+[[performance-expectations]]
 === Expectativas de desempeño
 
 Una configuración de Cloud Volumes ONTAP HA replica datos de forma sincrónica entre nodos, lo que consume ancho de banda de red.  Como resultado, puede esperar el siguiente rendimiento en comparación con una configuración de Cloud Volumes ONTAP de un solo nodo:
@@ -236,6 +248,7 @@ Para obtener más detalles sobre el rendimiento de Cloud Volumes ONTAP , consult
 
 
 
+[[client-access-to-storage]]
 === Acceso del cliente al almacenamiento
 
 Los clientes deben acceder a los volúmenes NFS y CIFS utilizando la dirección IP de datos del nodo en el que reside el volumen.  Si los clientes NAS acceden a un volumen utilizando la dirección IP del nodo asociado, el tráfico pasa entre ambos nodos, lo que reduce el rendimiento.

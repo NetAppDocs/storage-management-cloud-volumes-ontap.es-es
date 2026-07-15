@@ -20,6 +20,7 @@ Estas limitaciones son específicas de la administración de Cloud Volumes ONTAP
 
 
 
+[[console-doesnt-support-flexgroup-volumes-creation]]
 == La consola no admite la creación de volúmenes FlexGroup
 
 Si bien Cloud Volumes ONTAP admite volúmenes FlexGroup , la consola actualmente no admite la creación de volúmenes FlexGroup .  Si crea un volumen FlexGroup desde ONTAP System Manager o la CLI de ONTAP , debe configurar el modo de Administración de capacidad en la Consola en `Manual` . `Automatic` Es posible que el modo no funcione correctamente con volúmenes FlexGroup .
@@ -29,6 +30,7 @@ NOTE: La capacidad de crear volúmenes FlexGroup en la consola está prevista pa
 
 
 
+[[console-doesnt-support-s3-with-cloud-volumes-ontap]]
 == La consola no es compatible con S3 con Cloud Volumes ONTAP
 
 Aunque Cloud Volumes ONTAP admite S3 como opción para el almacenamiento de escalado horizontal, la Console no proporciona ninguna capacidad de gestión para esta función. Usar la CLI es la mejor práctica para configurar el acceso de cliente S3 desde Cloud Volumes ONTAP. Para detalles, consulta el http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-s3-cg/home.html["Guía de configuración de ONTAP S3"^].
@@ -37,6 +39,7 @@ link:concept-client-protocols.html["Conoce más sobre la compatibilidad de Cloud
 
 
 
+[[console-doesnt-support-disaster-recovery-for-storage-vms]]
 == La consola no admite la recuperación ante desastres para máquinas virtuales de almacenamiento
 
 La consola no proporciona ningún tipo de configuración ni soporte de orquestación para la recuperación ante desastres de máquinas virtuales de almacenamiento (SVM).  Debe utilizar el Administrador del sistema ONTAP o la CLI de ONTAP .

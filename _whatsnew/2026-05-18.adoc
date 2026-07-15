@@ -4,6 +4,7 @@
 
 
 
+[[simplified-cloud-volumes-ontap-deployment-in-azure]]
 === Implementación simplificada de Cloud Volumes ONTAP en Azure
 
 Ahora puedes usar Quick create para implementar Cloud Volumes ONTAP en Azure tanto para configuraciones de nodo único como de alta disponibilidad (HA). Este proceso optimizado reduce el número de pasos en comparación con el método avanzado, establece automáticamente los valores predeterminados en una sola página y minimiza la navegación, lo que hace que la implementación sea más rápida y sencilla.

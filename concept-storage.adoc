@@ -21,6 +21,7 @@ CAUTION: Debe crear y eliminar todos los discos y agregados desde la NetApp Cons
 
 
 
+[[overview]]
 == Descripción general
 
 Cloud Volumes ONTAP utiliza el almacenamiento del proveedor de nube como discos y los agrupa en uno o más agregados.  Los agregados proporcionan almacenamiento a uno o más volúmenes.
@@ -36,6 +37,7 @@ ifdef::aws[]
 
 
 
+[[aws-storage]]
 == Almacenamiento AWS
 
 En AWS, Cloud Volumes ONTAP utiliza almacenamiento EBS para datos de usuario y almacenamiento NVMe local como Flash Cache en algunos tipos de instancias EC2.
@@ -68,6 +70,7 @@ ifdef::azure[]
 
 
 
+[[azure-storage]]
 == Almacenamiento de Azure
 
 En Azure, un agregado puede contener hasta 12 discos que sean todos del mismo tamaño. El tipo de disco y el tamaño máximo de disco dependen de si usas un sistema de nodo único o un par de HA:
@@ -113,11 +116,14 @@ ifdef::gcp[]
 
 
 
+[[google-cloud-storage]]
 == Almacenamiento en la nube de Google
 
 En Google Cloud, un agregado puede contener hasta 6 discos, todos del mismo tamaño.  El tamaño máximo del disco es 64 TiB.
 
 El tipo de disco puede ser _discos persistentes SSD zonales_, _discos persistentes zonales equilibrados_ o _discos persistentes zonales estándar_.  Puede emparejar discos persistentes con un depósito de Google Storage paralink:concept-data-tiering.html["almacenamiento de objetos de bajo costo"] .
+
+Cloud Volumes ONTAP es compatible con los discos Hyperdisk Balanced para implementaciones de un solo nodo a partir de la versión 9.18.1 y para configuraciones de alta disponibilidad (HA) en zonas de disponibilidad (AZ) únicas a partir de la versión 9.19.1 y versiones posteriores.
 
 *Enlaces relacionados*
 
@@ -129,12 +135,14 @@ endif::gcp[]
 
 
 
+[[raid-type]]
 == Tipo de RAID
 
 El tipo de RAID para cada agregado de Cloud Volumes ONTAP es RAID0 (distribución en franjas).  Cloud Volumes ONTAP depende del proveedor de la nube para la disponibilidad y durabilidad del disco.  No se admiten otros tipos de RAID.
 
 
 
+[[hot-spares]]
 === Repuestos en caliente
 
 RAID0 no admite el uso de repuestos activos para redundancia.

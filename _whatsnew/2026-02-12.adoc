@@ -4,6 +4,7 @@
 
 
 
+[[support-for-ebdsv5-and-e104idsv5-vms-in-azure]]
 === Soporte para Ebdsv5 y E104ids_v5 VMs en Azure
 
 A partir de Cloud Volumes ONTAP 9.18.1, puedes implementar las VMs Ebdsv5 y E104ids_v5 para implementaciones y actualizaciones de nodo único y de alta disponibilidad (HA).

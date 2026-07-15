@@ -18,10 +18,12 @@ Un par de alta disponibilidad (HA) de Cloud Volumes ONTAP proporciona confiabili
 
 
 
+[[ha-components]]
 == Componentes de HA
 
 
 
+[[ha-single-availability-zone-configuration-with-page-blobs]]
 === Configuración de zona de disponibilidad única de alta disponibilidad con blobs de página
 
 Una configuración de blob de página de Cloud Volumes ONTAP HA en Azure incluye los siguientes componentes:
@@ -54,6 +56,7 @@ NOTE: A partir de Cloud Volumes ONTAP 9.15.0P1, los blobs en páginas de Azure y
 
 
 
+[[ha-single-availability-zone-configuration-with-shared-managed-disks]]
 === Configuración de zona de disponibilidad única de HA con discos administrados compartidos
 
 Una configuración de zona de disponibilidad única de Cloud Volumes ONTAP HA que se ejecuta sobre un disco administrado compartido incluye los siguientes componentes:
@@ -85,6 +88,7 @@ Cuentas de almacenamiento:: Las cuentas de almacenamiento se utilizan para imple
 
 
 
+[[ha-multiple-availability-zone-configuration]]
 === Configuración de zonas de disponibilidad múltiple de HA
 
 Una configuración de zona de disponibilidad múltiple de Cloud Volumes ONTAP HA en Azure incluye los siguientes componentes:
@@ -101,6 +105,7 @@ Cuentas de almacenamiento:: Las cuentas de almacenamiento se utilizan para imple
 
 
 
+[[rpo-and-rto]]
 == RPO y RTO
 
 Una configuración de alta disponibilidad mantiene una alta disponibilidad de sus datos de la siguiente manera:
@@ -111,6 +116,7 @@ Una configuración de alta disponibilidad mantiene una alta disponibilidad de su
 
 
 
+[[storage-takeover-and-giveback]]
 == Adquisición y devolución de almacenamiento
 
 De manera similar a un clúster ONTAP físico, el almacenamiento en un par de Azure HA se comparte entre nodos.  Las conexiones al almacenamiento del socio permiten que cada nodo acceda al almacenamiento del otro en caso de una _toma de control_.  Los mecanismos de conmutación por error de la ruta de red garantizan que los clientes y los hosts continúen comunicándose con el nodo superviviente.  El socio _devuelve_ almacenamiento cuando el nodo vuelve a estar en línea.
@@ -126,6 +132,7 @@ La toma de control del almacenamiento, la resincronización y la devolución son
 
 
 
+[[storage-configurations]]
 == Configuraciones de almacenamiento
 
 Puede utilizar un par HA como una configuración activa-activa, en la que ambos nodos sirven datos a los clientes, o como una configuración activa-pasiva, en la que el nodo pasivo responde a las solicitudes de datos solo si ha asumido el almacenamiento del nodo activo.

@@ -18,6 +18,7 @@ Cloud Volumes ONTAP utiliza un vínculo privado de Azure para las conexiones a s
 
 
 
+[[overview]]
 == Descripción general
 
 De forma predeterminada, la NetApp Console habilita un vínculo privado de Azure para las conexiones entre Cloud Volumes ONTAP y sus cuentas de almacenamiento asociadas.  Un vínculo privado de Azure protege las conexiones entre puntos finales en Azure y proporciona beneficios de rendimiento.
@@ -28,6 +29,7 @@ Con cualquiera de las configuraciones, la consola siempre limita el acceso a la 
 
 
 
+[[disable-azure-private-links-and-use-service-endpoints-instead]]
 == Deshabilite Azure Private Links y utilice puntos de conexión de servicio en su lugar
 
 Si su negocio lo requiere, puede cambiar una configuración en la consola para que configure Cloud Volumes ONTAP para usar puntos de conexión de servicio en lugar de un Azure Private Link.  Cambiar esta configuración se aplica a los nuevos sistemas Cloud Volumes ONTAP que usted cree.  Los puntos finales de servicio solo se admiten enlink:https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Pares de regiones de Azure"^] entre el agente de consola y las redes virtuales de Cloud Volumes ONTAP .
@@ -53,18 +55,21 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html#ena
 
 
 
+[[work-with-azure-private-links]]
 == Trabajar con vínculos privados de Azure
 
 En la mayoría de los casos, no es necesario hacer nada para configurar vínculos privados de Azure con Cloud Volumes ONTAP.  La consola administra los vínculos privados de Azure por usted.  Pero si usa una zona DNS privada de Azure existente, necesitará editar un archivo de configuración.
 
 
 
+[[requirement-for-custom-dns]]
 === Requisito de DNS personalizado
 
 De manera opcional, si trabaja con DNS personalizado, deberá crear un reenvío condicional a la zona DNS privada de Azure desde sus servidores DNS personalizados. Para obtener más información, consultelink:https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-dns#on-premises-workloads-using-a-dns-forwarder["Documentación de Azure sobre el uso de un reenvío de DNS"^] .
 
 
 
+[[how-private-link-connections-work]]
 === Cómo funcionan las conexiones de Private Link
 
 Cuando la consola implementa Cloud Volumes ONTAP en Azure, crea un punto final privado en el grupo de recursos.  El punto final privado está asociado con cuentas de almacenamiento para Cloud Volumes ONTAP.  Como resultado, el acceso al almacenamiento de Cloud Volumes ONTAP viaja a través de la red troncal de Microsoft.
@@ -80,6 +85,7 @@ NOTE: Si el agente de la consola y los sistemas Cloud Volumes ONTAP están imple
 
 
 
+[[provide-details-about-your-azure-private-dns]]
 === Proporcione detalles sobre su DNS privado de Azure
 
 Si utilizas https://docs.microsoft.com/en-us/azure/dns/private-dns-overview["DNS privado de Azure"^] , entonces necesitará modificar un archivo de configuración en cada agente de consola.  De lo contrario, la consola no puede establecer la conexión de Azure Private Link entre Cloud Volumes ONTAP y sus cuentas de almacenamiento asociadas.
@@ -111,6 +117,7 @@ No es necesario reiniciar.
 
 
 
+[[enable-rollback-on-failures]]
 === Habilitar reversión en caso de fallos
 
 Si la consola no logra crear un Azure Private Link como parte de acciones específicas, completa la acción sin la conexión de Azure Private Link.  Esto puede suceder al crear un nuevo sistema (nodo único o par HA) o cuando ocurren las siguientes acciones en un par HA: crear un nuevo agregado, agregar discos a un agregado existente o crear una nueva cuenta de almacenamiento al superar los 32 TiB.

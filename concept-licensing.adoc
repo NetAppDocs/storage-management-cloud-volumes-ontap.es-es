@@ -18,6 +18,7 @@ Hay varias opciones de licencia disponibles para Cloud Volumes ONTAP. Cada opci�
 
 
 
+[[licensing-overview]]
 == Descripción general de la licencia
 
 Las siguientes opciones de licencia están disponibles para nuevos clientes.
@@ -33,6 +34,7 @@ NOTE: No hay soporte disponible para el uso de funciones con licencia sin una li
 
 
 
+[[capacity-based-licensing]]
 == Licencias basadas en capacidad
 
 Los paquetes de licencias basados ​​en capacidad le permiten pagar Cloud Volumes ONTAP por TiB de capacidad. La licencia está asociada a su cuenta de NetApp y le permite cargar varios sistemas con la licencia, siempre que haya suficiente capacidad disponible a través de la licencia.
@@ -46,6 +48,7 @@ NOTE: Si bien el uso real y la medición de los productos y servicios administra
 
 
 
+[[packages]]
 === Paquetes
 
 Los siguientes paquetes basados ​​en capacidad están disponibles para Cloud Volumes ONTAP.  Para obtener más información sobre los paquetes de licencias basados ​​en capacidad, consultelink:concept-licensing-charging.html["Obtenga más información sobre las licencias basadas en capacidad"] .
@@ -120,6 +123,7 @@ NOTE: Se requiere una suscripción de pago por uso (PAYGO) para Copia de segurid
 
 
 
+[[availability-of-capacity-based-licenses]]
 === Disponibilidad de licencias basadas en capacidad
 
 La disponibilidad de las licencias PAYGO y BYOL para los sistemas Cloud Volumes ONTAP requiere que el agente de consola esté en funcionamiento.
@@ -131,6 +135,7 @@ NOTE: NetApp ha restringido la compra, extensión y renovación de licencias BYO
 
 
 
+[[how-to-get-started]]
 === Cómo empezar
 
 Descubra cómo comenzar a utilizar licencias basadas en capacidad:
@@ -158,6 +163,7 @@ endif::gcp[]
 
 
 
+[[keystone-subscription]]
 == Suscripción a Keystone
 
 Un servicio basado en suscripción de pago por crecimiento que brinda una experiencia de nube híbrida perfecta para aquellos que prefieren modelos de consumo de OpEx a CapEx inicial o arrendamiento.
@@ -170,12 +176,14 @@ link:https://docs.netapp.com/us-en/keystone-staas/index.html["Obtenga más infor
 
 
 
+[[supported-configurations]]
 === Configuraciones compatibles
 
 Las suscripciones Keystone se admiten con pares de HA. Esta opción de licencia no es compatible con sistemas de nodo único en este momento.
 
 
 
+[[capacity-limit]]
 === Límite de capacidad
 
 En el modelo de licencias basado en capacidad, cada sistema Cloud Volumes ONTAP admite la organización en niveles del almacenamiento de objetos, y la capacidad total en niveles puede escalar hasta el límite de contenedores del proveedor de la nube. Aunque la licencia no impone restricciones de capacidad, siga las https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Mejores prácticas de FabricPool"^] para garantizar un rendimiento óptimo, confiabilidad y rentabilidad al configurar y administrar la organización en niveles.
@@ -189,6 +197,7 @@ Para obtener información sobre los límites de capacidad de cada proveedor de n
 
 
 
+[[how-to-get-started]]
 === Cómo empezar
 
 Descubra cómo comenzar con una suscripción a Keystone :
@@ -216,6 +225,7 @@ endif::gcp[]
 
 
 
+[[node-based-licensing]]
 == Licencias basadas en nodos
 
 La licencia basada en nodos es el modelo de licencia de la generación anterior que le permitía licenciar Cloud Volumes ONTAP por nodo.  Este modelo de licencia no está disponible para nuevos clientes.  La carga por nodo ha sido reemplazada por los métodos de carga por capacidad descritos anteriormente.
@@ -226,6 +236,7 @@ Para obtener más información, consulte https://mysupport.netapp.com/info/commu
 
 
 
+[[end-of-availability-of-node-based-licenses]]
 === Fin de la disponibilidad de las licencias basadas en nodos
 
 A partir del 11 de noviembre de 2024, se finalizará la disponibilidad limitada de licencias basadas en nodos. El soporte para licencias basadas en nodos finaliza el 31 de diciembre de 2024.
@@ -274,6 +285,7 @@ NOTE: Incluso en estos escenarios, las nuevas licencias basadas en nodos y las r
 
 
 
+[[license-conversion]]
 == Conversión de licencia
 
 La consola permite una conversión perfecta de licencias basadas en nodos a licencias basadas en capacidad a través de la herramienta de conversión de licencias.  Para obtener información sobre el fin de la licencia basada en nodos, consultelink:concept-licensing.html#end-of-availability-of-node-based-licenses["Fin de la disponibilidad de las licencias basadas en nodos"] .

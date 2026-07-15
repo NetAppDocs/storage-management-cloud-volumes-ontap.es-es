@@ -4,6 +4,7 @@
 
 
 
+[[new-regions-supported-for-multiple-availability-zone-deployments-in-azure]]
 === Nuevas regiones compatibles con implementaciones de múltiples zonas de disponibilidad en Azure
 
 Las siguientes regiones ahora admiten implementaciones de zonas de disponibilidad múltiples de alta disponibilidad en Azure para Cloud Volumes ONTAP 9.12.1 GA y versiones posteriores:

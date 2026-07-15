@@ -18,6 +18,7 @@ Puede detener e iniciar Cloud Volumes ONTAP desde la NetApp Console para adminis
 
 
 
+[[scheduling-automatic-shutdowns-of-cloud-volumes-ontap]]
 == Programación de apagados automáticos de Cloud Volumes ONTAP
 
 Es posible que desee apagar Cloud Volumes ONTAP durante intervalos de tiempo específicos para reducir sus costos de procesamiento.  En lugar de hacerlo manualmente, puede configurar la consola para que apague y reinicie automáticamente los sistemas en momentos específicos.
@@ -63,6 +64,7 @@ El horario está guardado.  La línea de ítem correspondiente de Tiempo de Inac
 
 
 
+[[stopping-cloud-volumes-ontap]]
 == Detener Cloud Volumes ONTAP
 
 Al detener Cloud Volumes ONTAP, evita acumular costos de procesamiento y crea instantáneas de los discos raíz y de arranque, lo que puede resultar útil para solucionar problemas.

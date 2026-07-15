@@ -4,6 +4,7 @@
 
 
 
+[[restricted-availability-of-byol-licensing-for-cloud-volumes-ontap]]
 === Disponibilidad restringida de licencias BYOL para Cloud Volumes ONTAP
 
 A partir del 25 de junio de 2025, NetApp ha restringido el modelo de licencias BYOL (traiga su propia licencia) para Cloud Volumes ONTAP. Esta restricción se aplica a todos los clientes e implementaciones de Cloud Volumes ONTAP en AWS, Azure y Google Cloud. Las únicas excepciones son los clientes del sector público estadounidense y las implementaciones en la región de China.

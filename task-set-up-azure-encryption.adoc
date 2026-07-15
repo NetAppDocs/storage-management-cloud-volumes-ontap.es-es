@@ -18,6 +18,7 @@ Los datos se cifran automáticamente en Cloud Volumes ONTAP en Azure mediante Az
 
 
 
+[[data-encryption-overview]]
 == Descripción general del cifrado de datos
 
 Los datos de Cloud Volumes ONTAP se cifran automáticamente en Azure mediante https://learn.microsoft.com/en-us/azure/security/fundamentals/encryption-overview["Cifrado del servicio de almacenamiento de Azure"^] .  La implementación predeterminada utiliza una clave administrada por Microsoft.  No se requiere configuración
@@ -30,6 +31,7 @@ Si desea utilizar una clave administrada por el cliente con Cloud Volumes ONTAP,
 
 
 
+[[how-data-is-encrypted]]
 === Cómo se cifran los datos
 
 La consola utiliza un conjunto de cifrado de disco, que permite la administración de claves de cifrado con discos administrados, no con blobs de página.  Cualquier disco de datos nuevo también utiliza el mismo conjunto de cifrado de disco.  Las versiones inferiores utilizarán la clave administrada por Microsoft, en lugar de la clave administrada por el cliente.
@@ -98,6 +100,7 @@ Todas las cuentas de almacenamiento de Azure para Cloud Volumes ONTAP están cif
 
 
 
+[[key-rotation-in-cloud-volumes-ontap]]
 == Rotación de claves en Cloud Volumes ONTAP
 
 Al configurar sus claves de cifrado, debe usar el portal de Azure para configurar y habilitar la rotación automática de claves.  La creación y habilitación de una nueva versión de claves de cifrado garantiza que Cloud Volumes ONTAP pueda detectar y usar automáticamente la última versión de clave para el cifrado, lo que garantiza que sus datos permanezcan seguros sin necesidad de intervención manual.
@@ -113,6 +116,7 @@ NOTE: Después de configurar las claves, asegúrese de haber seleccionado https:
 
 
 
+[[create-a-user-assigned-managed-identity]]
 == Crear una identidad administrada asignada por el usuario
 
 Tiene la opción de crear un recurso llamado identidad administrada asignada por el usuario.  Al hacerlo, podrá cifrar sus cuentas de almacenamiento cuando cree un sistema Cloud Volumes ONTAP .  Recomendamos crear este recurso antes de crear un almacén de claves y generar una clave.
@@ -136,6 +140,7 @@ El recurso tiene el siguiente ID: `userassignedidentity` .
 
 
 
+[[create-a-key-vault-and-generate-a-key]]
 == Crear un almacén de claves y generar una clave
 
 El almacén de claves debe residir en la misma suscripción y región de Azure en la que planea crear el sistema Cloud Volumes ONTAP .
@@ -198,6 +203,7 @@ Tenga en cuenta los siguientes requisitos para la clave:
 
 
 
+[[create-a-system-that-uses-the-encryption-key]]
 == Crear un sistema que utilice la clave de cifrado
 
 Después de crear el almacén de claves y generar una clave de cifrado, puede crear un nuevo sistema Cloud Volumes ONTAP que esté configurado para usar la clave.  Estos pasos se respaldan mediante el uso de la API.

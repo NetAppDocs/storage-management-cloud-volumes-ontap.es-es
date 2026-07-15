@@ -18,6 +18,7 @@ Después de decidir qué opción de licencia desea utilizar con Cloud Volumes ON
 
 
 
+[[freemium]]
 == Freemium
 
 Seleccione la oferta Freemium para utilizar Cloud Volumes ONTAP de forma gratuita con hasta 500 GiB de capacidad aprovisionada. link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#packages["Obtenga más información sobre la oferta Freemium"^] .
@@ -45,6 +46,7 @@ link:task-deploying-otc-azure.html["Vea las instrucciones paso a paso para inici
 
 
 
+[[capacity-based-license]]
 == Licencia basada en capacidad
 
 Las licencias basadas en capacidad le permiten pagar Cloud Volumes ONTAP por TiB de capacidad. La licencia basada en capacidad está disponible en forma de _paquete_: el paquete Essentials o el paquete Professional.
@@ -62,6 +64,7 @@ Las siguientes secciones describen cómo comenzar a utilizar cada uno de estos m
 
 
 
+[[byol]]
 === Trae tu propia bebida
 
 Pague por adelantado comprando una licencia (BYOL) de NetApp para implementar sistemas Cloud Volumes ONTAP en cualquier proveedor de nube.
@@ -99,6 +102,7 @@ link:task-deploying-otc-azure.html["Vea las instrucciones paso a paso para inici
 
 
 
+[[paygo-subscription]]
 === Suscripción PAYGO
 
 Pague por hora suscribiéndose a la oferta del mercado de su proveedor de nube.
@@ -128,6 +132,7 @@ TIP: Puede administrar las suscripciones de Azure Marketplace asociadas a sus cu
 
 
 
+[[annual-contract]]
 === Contrato anual
 
 Pague Cloud Volumes ONTAP anualmente comprando un contrato anual.
@@ -156,6 +161,7 @@ link:task-deploying-otc-azure.html["Vea las instrucciones paso a paso para inici
 
 
 
+[[keystone-subscription]]
 == Suscripción a Keystone
 
 Una suscripción a Keystone es un servicio basado en suscripción de pago por uso. link:concept-licensing.html#keystone-subscription["Obtenga más información sobre las suscripciones de NetApp Keystone"] .
@@ -178,6 +184,7 @@ link:task-deploying-otc-azure.html["Vea las instrucciones paso a paso para inici
 
 
 
+[[node-based-license]]
 == Licencia basada en nodos
 
 Una licencia basada en nodos es la licencia de la generación anterior para Cloud Volumes ONTAP. Esta licencia se puede adquirir a través de NetApp (BYOL) y está disponible para renovaciones de licencias, solo en casos específicos. Para obtener información, consulte:

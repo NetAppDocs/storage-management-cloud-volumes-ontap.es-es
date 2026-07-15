@@ -4,6 +4,7 @@
 
 
 
+[[support-for-china-regions-for-cloud-volumes-ontap-9-13-1-in-aws]]
 === Compatibilidad con las regiones de China para Cloud Volumes ONTAP 9.13.1 en AWS
 
 Ahora puede implementar Cloud Volumes ONTAP 9.13.1 en AWS en las regiones de China. Esto incluye soporte para implementaciones tanto de nodo único como de alta disponibilidad (HA). Solo se admiten licencias compradas directamente a NetApp .

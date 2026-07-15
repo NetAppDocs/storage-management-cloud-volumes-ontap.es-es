@@ -18,6 +18,7 @@ La imagen que se utiliza para implementar nuevas instancias, actualizaciones o q
 
 
 
+[[why-is-this-step-needed]]
 == ¿Por qué es necesario este paso?
 
 Las imágenes de Google Cloud no se pueden descargar directamente.  Para verificar la imagen con el resumen firmado y los certificados, necesita tener un mecanismo para comparar los dos archivos y descargar la imagen.  Para ello, debes exportar/convertir la imagen a un formato disk.raw y guardar los resultados en un depósito de almacenamiento en Google Cloud.  El archivo disk.raw se procesa en formato tar y gzip durante el proceso.
@@ -35,6 +36,7 @@ Para verificar la imagen, debe convertirse a formato disk.raw y luego descargars
 
 
 
+[[use-google-cloud-command-line-to-export-google-cloud-image]]
 == Utilice la línea de comandos de Google Cloud para exportar una imagen de Google Cloud
 
 La forma preferida de exportar una imagen a Cloud Storage es usar el https://cloud.google.com/sdk/gcloud/reference/compute/images/export["Comando de exportación de imágenes de gcloud compute"^] .  Este comando toma la imagen proporcionada y la convierte en un archivo disk.raw que se comprime y se empaqueta en gzip.  El archivo generado se guarda en la URL de destino y luego se puede descargar para su verificación.

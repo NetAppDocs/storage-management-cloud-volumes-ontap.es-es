@@ -18,6 +18,7 @@ Para verificar la imagen firmada de Google Cloud exportada, debe descargar el ar
 
 
 
+[[signed-image-verification-workflow-summary]]
 == Resumen del flujo de trabajo de verificación de imágenes firmadas
 
 A continuación, se muestra una descripción general del proceso de flujo de trabajo de verificación de imágenes firmadas de Google Cloud.

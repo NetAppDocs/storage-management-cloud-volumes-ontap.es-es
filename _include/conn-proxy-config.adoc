@@ -4,6 +4,7 @@
 
 
 
+[[network-proxy-configuration-of-netapp-console-agent]]
 === Configuración del proxy de red del agente de la NetApp Console
 
 Puede utilizar la configuración de servidores proxy del agente de la NetApp Console para habilitar el acceso a Internet saliente desde Cloud Volumes ONTAP.  La consola admite dos tipos de proxies:

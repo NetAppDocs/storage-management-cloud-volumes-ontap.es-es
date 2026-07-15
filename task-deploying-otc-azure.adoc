@@ -49,6 +49,7 @@ No se recomienda implementar Cloud Volumes ONTAP en un grupo de recursos compart
 ====
 
 
+[[launch-a-single-node-cloud-volumes-ontap-system-in-azure]]
 == Lanzar un sistema Cloud Volumes ONTAP de un solo nodo en Azure
 
 Si quieres lanzar un sistema Cloud Volumes ONTAP de un solo nodo en Azure, necesitas crear un sistema de un solo nodo en la NetApp Console.
@@ -273,6 +274,7 @@ Las cuotas le permiten restringir o rastrear el espacio en disco y la cantidad d
 
 
 
+[[launch-a-cloud-volumes-ontap-ha-pair-in-azure]]
 == Lanzar un par de Cloud Volumes ONTAP HA en Azure
 
 Si desea iniciar un par de HA de Cloud Volumes ONTAP en Azure, debe crear un sistema de HA en la consola.
