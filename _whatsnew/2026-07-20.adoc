@@ -1,0 +1,46 @@
+= Presentamos la incorporación simplificada de Cloud Volumes ONTAP desde AWS Marketplace
+:allow-uri-read: 
+
+
+
+
+[[introducing-simplified-onboarding-of-cloud-volumes-ontap-from-aws-marketplace]]
+=== Presentamos la incorporación simplificada de Cloud Volumes ONTAP desde AWS Marketplace
+
+NetApp introduce un proceso de puesta en marcha simplificado para Cloud Volumes ONTAP desde AWS Marketplace, reduciendo los pasos manuales y la fricción en la puesta en marcha.
+
+Anteriormente, para implementar Cloud Volumes ONTAP desde AWS Marketplace era necesario pasar por varias pantallas y configurar manualmente los roles, las políticas y las credenciales. Esto hacía que la puesta en marcha fuera lenta y propensa a errores.
+
+El nuevo proceso de incorporación simplifica tu transición de una suscripción en el marketplace a un entorno de Cloud Volumes ONTAP totalmente operativo con las siguientes características:
+
+. Suscripción a la ficha específica de Cloud Volumes ONTAP en AWS Marketplace: te suscribes a la ficha independiente de Cloud Volumes ONTAP en AWS Marketplace, compras una suscripción y configuras tu cuenta de AWS (si aún no tienes una).
+. Ruta guiada en la NetApp Console: Configuras tu cuenta en la NetApp Console y la Console te incorpora automáticamente al recorrido de implementación, mostrando la ruta guiada en el lado derecho. Si necesitas salir de la Console, puedes reanudar el recorrido guiado más adelante.
+. Asociar tu suscripción: Puedes asociar automáticamente tu suscripción con la Consola, evitando los pasos manuales de vincularla tú mismo.
+. Implementación del agente de la consola con configuración de credenciales de AWS: puedes crear automáticamente los roles de AWS necesarios. El proceso implementa una pila de AWS CloudFormation en tu cuenta de AWS con los roles y políticas necesarios para que los revises, luego los asocia con la NetApp Console, eliminando la configuración manual de IAM. Luego continúas con la configuración del agente, la red y los ajustes del grupo de seguridad para comenzar la implementación del agente.
+. Implementa un nuevo sistema Cloud Volumes ONTAP en AWS: navega directamente al asistente  `Quick create` para una implementación más rápida y sencilla de Cloud Volumes ONTAP.
+
+
+.Enlaces relacionados
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-quick-deploy-aws.html["Implementa Cloud Volumes ONTAP con Quick create"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html#flexible-billing-for-cloud-volumes-ontap-and-data-services-in-aws["Facturación flexible para Cloud Volumes ONTAP y servicios de datos en AWS"^]
+
+
+
+
+[[well-architected-configuration-analysis-for-cloud-volumes-ontap-in-azure]]
+=== Análisis de configuración well-architected para Cloud Volumes ONTAP en Azure
+
+La NetApp Console ya admite el análisis de configuración well-architected para los sistemas Cloud Volumes ONTAP que se ejecutan en Microsoft Azure. La NetApp Console analiza tus implementaciones diariamente y proporciona un estado well-architected, información detallada y recomendaciones para ayudarte a mantener sistemas que se ajusten a las prácticas recomendadas de NetApp y al marco well-architected.
+
+El panel de control bien estructurado muestra el número total de sistemas analizados y clasifica sus recursos por configuración y nivel de gravedad. Si eres administrador del sistema, puedes ver recomendaciones sobre cualquier problema de configuración dentro de tu organización directamente desde el panel de control de la Console y descargar un informe CSV con todas las recomendaciones. Las configuraciones se clasifican según:
+
+* *Fiabilidad*: Garantiza que las cargas de trabajo funcionen de forma correcta y constante, incluso en caso de interrupciones.
+* *Seguridad*: Protege los datos, los sistemas y los activos mediante evaluaciones de riesgos y mitigación.
+* *Excelencia operativa*: Optimiza la arquitectura para maximizar el valor empresarial.
+* *Optimización de costes*: Reduce y optimiza los costes para generar un mayor valor empresarial.
+
+
+.Enlaces relacionados
+* https://docs.netapp.com/us-en/console-well-architected/cvo/configuration-analysis-cvo.html["Análisis de la configuración de Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/console-well-architected/improve-configurations-cvo.html["Implementar configuraciones de sistemas bien diseñadas"^]
+
