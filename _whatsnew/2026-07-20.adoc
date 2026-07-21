@@ -42,5 +42,5 @@ El panel de control bien estructurado muestra el número total de sistemas anali
 
 .Enlaces relacionados
 * https://docs.netapp.com/us-en/console-well-architected/cvo/configuration-analysis-cvo.html["Análisis de la configuración de Cloud Volumes ONTAP"^]
-* https://docs.netapp.com/us-en/console-well-architected/improve-configurations-cvo.html["Implementar configuraciones de sistemas bien diseñadas"^]
+* https://docs.netapp.com/us-en/console-well-architected/cvo/improve-configurations-cvo.html["Implementa configuraciones de sistema Cloud Volumes ONTAP bien diseñadas"^]
 
