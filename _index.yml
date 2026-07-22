@@ -7,76 +7,109 @@ indexpage:
   tiles:
   - title: Empezar
     links:
-    - title: Obtenga más información sobre Cloud Volumes ONTAP
+    - title: Qué hay de nuevo
+      url: whats-new.html
+    - title: "¿Qué es Cloud Volumes ONTAP?"
       url: concept-overview-cvo.html
-    - title: Inicio rápido para AWS
-      url: task-getting-started-aws.html
-    - title: Inicio rápido para regiones de nube secreta/top secret de AWS
-      url: task-getting-started-aws-c2s.html
-      flavor: aws
-    - title: Inicio rápido para Azure
-      url: task-getting-started-azure.html
-      flavor: azure
-    - title: Inicio rápido para Google Cloud
-      url: task-getting-started-gcp.html
-      flavor: gcp
-  - title: Licencias
+    - title: Seguridad y cumplimiento normativo
+      url: concept-security.html
+    - title: Versiones compatibles
+      url: reference-versions.html
+    - title: Ruta de actualización compatible
+      url: task-updating-ontap-cloud.html#supported-upgrade-paths
+    - title: Configuraciones predeterminadas
+      url: reference-default-configs.html
+  - title: Obtenga más información sobre Cloud Volumes ONTAP
     links:
-    - title: Descripción general de la licencia
+    - title: Licencias
       url: concept-licensing.html
-    - title: Administrar licencias basadas en capacidad
+    - title: Seguridad
+      url: concept-security.html
+    - title: Conoce el cifrado
+      url: concept-security.html
+    - title: Gestión de almacenamiento
+      url: concept-storage-management.html
+    - title: Discos y agregados utilizados para clústeres de Cloud Volumes ONTAP
+      url: reference-default-configs.html
+    - title: Supervisión del rendimiento de las cargas de trabajo de Cloud Volumes
+        ONTAP
+      url: concept-performance.html
+  - title: AWS
+    links:
+    - title: Configuración compatible
+      url: reference-configs-aws.html
+    - title: Obtenga más información sobre los pares de alta disponibilidad de Cloud
+        Volumes ONTAP en AWS
+      url: concept-ha.html
+    - title: Requisitos de red y de seguridad en AWS
+      url: reference-networking-aws.html
+    - title: Implementación rápida
+      url: task-quick-deploy-aws.html
+    - title: Implementar AWS en una nube secreta
+      url: task-getting-started-aws-c2s.html
+    - title: Gestiona claves de cifrado con AWS Key Management Service
+      url: task-aws-key-management.html
+  - title: Azur
+    links:
+    - title: Configuración compatible
+      url: reference-configs-azure.html
+    - title: Obtenga información sobre los pares de alta disponibilidad de Cloud Volumes
+        ONTAP en Azure
+      url: concept-ha-azure.html
+    - title: Requisitos de red y de seguridad en Azure
+      url: reference-networking-azure.html
+    - title: Implementación rápida
+      url: task-quick-deploy-azure.html
+    - title: Lanzar en el marketplace
+      url: task-deploy-cvo-azure-mktplc.html
+    - title: Gestiona claves de cifrado con Azure Key Vault
+      url: task-azure-key-vault.html
+  - title: Google Cloud
+    links:
+    - title: Configuración compatible
+      url: reference-configs-gcp.html
+    - title: Obtenga información sobre los pares de alta disponibilidad de Cloud Volumes
+        ONTAP en Google Cloud
+      url: concept-ha-google-cloud.html
+    - title: Requisitos de red y de seguridad en Google Cloud
+      url: reference-networking-gcp.html
+    - title: Implementación rápida
+      url: task-getting-started-gcp.html
+    - title: Gestiona claves de cifrado con Google Cloud KMS
+      url: task-google-key-manager.html
+  - title: Administración de sistemas y almacenamiento
+    links:
+    - title: Gestionar licencias basadas en capacidad
       url: task-manage-capacity-licenses.html
-    - title: Intercambiar licencias basadas en nodos no asignados
-      url: task-manage-node-licenses.html#exchange-unassigned-node-based-licenses
-    - title: Administrar suscripciones de Keystone
-      url: task-manage-keystone.html
-  - title: Gestión de almacenamiento
-    links:
-    - title: Crear volúmenes
+    - title: Convertir una licencia basada en nodos a una basada en capacidad
+      url: task-convert-node-capacity.html
+    - title: Crea un volumen FlexVol en un sistema
       url: task-create-volumes.html
-    - title: Agrupar datos inactivos en el almacenamiento de objetos
+    - title: Datos inactivos de nivel
       url: task-tiering.html
-    - title: Acelere el acceso a los datos con FlexCache
-      url: task-accelerate-data-access.html
-    - title: Configuración del host SAN de ONTAP
-      url: https://docs.netapp.com/us-en/ontap-sanhost
-  - title: Administración del sistema
-    links:
-    - title: Actualizar Cloud Volumes ONTAP
-      url: task-updating-ontap-cloud.html
-    - title: Detener e iniciar Cloud Volumes ONTAP
-      url: task-managing-state.html
-  - title: Seguridad
-    links:
-    - title: Cifrar volúmenes con el cifrado de NetApp
+    - title: Administrar máquinas virtuales de almacenamiento
+      url: task-managing-svms.html
+    - title: Cifrar volúmenes en Cloud Volumes ONTAP
       url: task-encrypting-volumes.html
-    - title: Mejorar la protección contra ransomware
-      url: task-protecting-ransomware.html
-  - title: API
+  - title: Referencia de la API (NetApp Console Automation)
     links:
-    - title: Descripción general de la API de Cloud Volumes ONTAP
-      url: https://docs.netapp.com/us-en/bluexp-automation/cm/overview.html
-    - title: Prepárese para usar la API
-      url: https://docs.netapp.com/us-en/bluexp-automation/cm/prepare.html
     - title: Referencia de API
-      url: https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html
-  - title: Solución de problemas
+      url: https://docs.netapp.com/us-en/console-automation/cm/overview.html
+    - title: Descripción general de la API de Cloud Volumes ONTAP
+      url: https://docs.netapp.com/us-en/console-automation/cm/prepare.html
+    - title: Prepárese para usar la API
+      url: https://docs.netapp.com/us-en/console-automation/cm/prepare.html
+  - title: Más recursos
     links:
-    - title: Base de conocimientos de NetApp
+    - title: Solución de problemas
       url: https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Volumes_ONTAP_(CVO)
-  - title: Referencia
-    links:
-    - title: Configuraciones compatibles
-      url: https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html
+    - title: Interfaces de usuario de ONTAP
+      url: https://docs.netapp.com/us-en/ontap/concepts/introducing-ontap-interfaces-concept.html
+    - title: Usa la CLI de ONTAP para Cloud Volumes ONTAP
+      url: https://docs.netapp.com/us-en/ontap-cli/index.html
     - title: Regiones de nube compatibles
       url: https://bluexp.netapp.com/cloud-volumes-global-regions
     - title: Calculadoras
       url: https://www.netapp.com/ontap-cloud/pricing/
-  - title: Blogs y comunidad
-    links:
-    - title: NetApp Console
-      url: https://www.netapp.com/console
-    - title: NetApp Data Services
-      url: https://www.netapp.com/data-services/
     - title: Comunidad de NetApp
       url: https://community.netapp.com/

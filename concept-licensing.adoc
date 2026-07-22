@@ -57,14 +57,14 @@ Para obtener una lista de los tipos de máquinas virtuales compatibles con los s
 
 ifdef::azure[]
 
-* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html["Configuraciones admitidas en Azure"^]
+* link:link:reference-configs-azure.html["Configuraciones admitidas en Azure"]
 
 
 endif::azure[]
 
 ifdef::gcp[]
 
-* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html["Configuraciones compatibles en Google Cloud"^]
+* link:link:reference-configs-gcp.html["Configuraciones compatibles en Google Cloud"^]
 
 
 endif::gcp[]
@@ -296,3 +296,11 @@ Para saber cómo puedes realizar esta conversión, consultalink:task-convert-nod
 
 
 NOTE: No se admite la conversión de un sistema de licencias basadas en capacidad a licencias basadas en nodos.
+
+.Enlaces relacionados
+* link:concept-licensing-charging.html["Obtenga más información sobre las licencias basadas en capacidad"]
+* link:task-manage-capacity-licenses.html["Administrar licencias basadas en capacidad para Cloud Volumes ONTAP"]
+* link:task-manage-node-licenses.html["Gestiona las licencias por nodo"]
+* link:task-convert-node-capacity.html["Convertir una licencia basada en nodos a una licencia basada en capacidad"]
+* link:task-manage-keystone.html["Administrar suscripciones de Keystone"]
+

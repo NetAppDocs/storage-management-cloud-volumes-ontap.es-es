@@ -41,7 +41,7 @@ Cloud Volumes ONTAP es compatible con la mayoría de las regiones de Google Clou
 
 Cloud Volumes ONTAP admite varios tipos de máquinas, según el tipo de licencia que elija.
 
-https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html["Configuraciones compatibles para Cloud Volumes ONTAP en Google Cloud"^]
+link:reference-configs-gcp.html["Configuraciones compatibles para Cloud Volumes ONTAP en Google Cloud"]
 
 
 
@@ -59,7 +59,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-gcp.
 
 Dimensionar su sistema Cloud Volumes ONTAP puede ayudarle a cumplir con los requisitos de rendimiento y capacidad.  Debe tener en cuenta algunos puntos clave al elegir un tipo de máquina, un tipo de disco y un tamaño de disco:
 
-Tipo de máquina:: Mire los tipos de máquinas compatibles en el https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html["Notas de la versión de Cloud Volumes ONTAP"^] y luego revise los detalles de Google sobre cada tipo de máquina compatible. Adapte los requisitos de su carga de trabajo a la cantidad de vCPU y memoria para el tipo de máquina. Tenga en cuenta que cada núcleo de CPU aumenta el rendimiento de la red.
+Tipo de máquina:: Consulta los tipos de máquina compatibles en link:reference-configs-gcp.html["Notas de la versión de Cloud Volumes ONTAP"^] y luego revisa los detalles de Google sobre cada tipo de máquina compatible. Adapta los requisitos de tu carga de trabajo al número de vCPU y memoria del tipo de máquina. Ten en cuenta que cada núcleo de CPU aumenta el rendimiento de red.
 +
 --
 Consulte lo siguiente para obtener más detalles:

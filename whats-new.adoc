@@ -1060,7 +1060,50 @@ Para obtener una lista de todas las regiones, consulte la https://bluexp.netapp.
 
 BlueXP ahora puede implementar y administrar la versión de disponibilidad general de Cloud Volumes ONTAP 9.15.1 en AWS, Azure y Google Cloud.
 
-https://docs.netapp.com/us-en/cloud-volumes-ontap-9151-relnotes/["Conozca las nuevas funciones incluidas en esta versión de Cloud Volumes ONTAP"^] .
+Esta versión incluye las siguientes funciones y mejoras para Azure. Sigue leyendo para obtener más información sobre las configuraciones específicas compatibles con estas nuevas funciones.
+
+
+
+[[support-for-premium-ssd-v2-managed-disks-in-azure]]
+=== Soporte para Premium SSD v2 Managed Disks en Azure
+
+Los discos gestionados Premium SSD v2 ya son compatibles con los sistemas Cloud Volumes ONTAP en Azure. Estos discos premium ofrecen un mayor rendimiento con menor latencia y a un coste más bajo, tanto para nodos individuales como para parejas de alta disponibilidad (HA), en comparación con los discos gestionados Premium SSD. Al igual que otros discos gestionados, el tamaño máximo del disco es de 32 TiB. El rendimiento (capacidad, ancho de banda e IOPS) de un disco gestionado Premium SSD v2 se puede configurar, lo que permite que las cargas de trabajo sean rentables y se adapten a las necesidades cambiantes de rendimiento.
+
+
+
+[[deploy-ha-pairs-in-single-availability-zones-in-azure]]
+=== Implementa pares de HA en zonas de disponibilidad únicas en Azure
+
+A partir de Cloud Volumes ONTAP 9.15.1, puedes implementar instancias de máquinas virtuales (VM) en modo HA en zonas de disponibilidad (AZ) únicas en Azure. A diferencia de las implementaciones anteriores sin zonas, Cloud Volumes ONTAP 9.15.1 utiliza Microsoft Virtual Machines Scale Sets en modo de orquestación flexible para implementar todos los recursos, incluidos dominios de fallo independientes dentro de la misma AZ, garantizando una disponibilidad óptima. Este modo de implementación, por defecto, utiliza discos gestionados Premium SSD v2 cuando se cumplen las siguientes condiciones:
+
+* La versión de Cloud Volumes ONTAP es 9.15.1 o posterior.
+* La región y la zona seleccionadas son compatibles con los discos gestionados SSD Premium v2. Para obtener información sobre las regiones compatibles, consulta  https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/["Sitio web de Microsoft Azure: Productos disponibles por región"^]. Para saber cómo añadirlos, consulta https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html#launching-a-cloud-volumes-ontap-ha-pair-in-azure["Puesta en marcha de un par de Cloud Volumes ONTAP HA en Azure"^].
+* La suscripción está registrada para la función de Microsoft `Microsoft.Compute/VMOrchestratorZonalMultiFD`. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-saz-feature.html["Descubre cómo habilitar VMOrchestratorZonalMultiFD para zonas de disponibilidad únicas"^].
+
+
+Si no se cumple alguno de estos criterios, el modo de implementación no zonal anterior para el almacenamiento con redundancia local (LRS) entra en vigor.
+
+
+
+[[support-for-virtual-machines-scale-sets-to-unify-all-azure-ha-types]]
+=== Compatibilidad con los conjuntos de escalado de máquinas virtuales para unificar todos los tipos de alta disponibilidad (HA) de Azure
+
+Cloud Volumes ONTAP 9.15.1 aprovecha Virtual Machines Scale Sets en modo de orquestación flexible en Azure para implementar instancias de máquinas virtuales (VM) en zonas de disponibilidad únicas para pares de alta disponibilidad (HA). Cubre todas las variantes del modo HA: blob de página, LRS, almacenamiento con redundancia de zona (ZRS) o multizonal, y LRS zonal (una sola zona de disponibilidad).
+
+* https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/["Documentación de Microsoft Azure: documentación sobre conjuntos de escalado de máquinas virtuales"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha-azure.html["Conoce los pares de alta disponibilidad en Azure"^].
+
+
+
+
+[[support-for-flexcache-write-back]]
+=== Compatibilidad con la escritura diferida de FlexCache
+
+A partir de Cloud Volumes ONTAP 9.15.1, la escritura diferida de FlexCache es compatible como un modo alternativo de funcionamiento para escribir en la caché.
+
+Para obtener más información sobre esta función, consulta la documentación de ONTAP https://docs.netapp.com/us-en/ontap/flexcache-writeback/flexcache-write-back-overview.html["FlexCache descripción general de la escritura diferida"^].
+
+Para obtener información sobre cómo BlueXP gestiona los volúmenes de FlexCache, consulta la  https://docs.netapp.com/us-en/console-volume-caching/index.html["Documentos sobre el almacenamiento en caché de volúmenes de BlueXP"^].
 
 
 

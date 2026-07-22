@@ -4,7 +4,7 @@ permalink: task-managing-svms.html
 keywords: storage virtual machine, vserver, svm, storage vm, supported number, number supported 
 summary: Una VM de almacenamiento es una máquina virtual que se ejecuta dentro de ONTAP y que proporciona servicios de almacenamiento y datos a sus clientes.  Quizás lo conozcas como SVM o vserver.  Cloud Volumes ONTAP está configurado con una máquina virtual de almacenamiento de manera predeterminada, pero algunas configuraciones admiten máquinas virtuales de almacenamiento adicionales. 
 ---
-= Administrar máquinas virtuales de almacenamiento para Cloud Volumes ONTAP
+= Máquinas virtuales de almacenamiento Cloud Volumes ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Una VM de almacenamiento es una máquina virtual que se ejecuta dentro 
 
 
 [role="lead"]
-Una VM de almacenamiento es una máquina virtual que se ejecuta dentro de ONTAP y que proporciona servicios de almacenamiento y datos a sus clientes.  Quizás lo conozcas como _SVM_ o _vserver_.  Cloud Volumes ONTAP está configurado con una máquina virtual de almacenamiento de manera predeterminada, pero algunas configuraciones admiten máquinas virtuales de almacenamiento adicionales.
+Una máquina virtual de almacenamiento (SVM) es una máquina virtual que se ejecuta dentro de ONTAP y que proporciona servicios de almacenamiento y datos a tus clientes. Quizá la conozcas como _SVM_ o _vserver_. Cloud Volumes ONTAP está configurado con una máquina virtual de almacenamiento por defecto, pero algunas configuraciones admiten máquinas virtuales de almacenamiento adicionales.
 
 
 

@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: reference-limitations-azure.html 
+keywords: limitations, ha, azure, pay-as-you-go, paygo, cloud solution provider, vm, flash cache; limitations in HA deployment in MAZ, SAZ, multiple availability xone, single availability zone Azure CVO, PSSDv2, premium SSD v2 limitation in CVO, flash cache limitation in CVO 
+summary: Estas limitaciones conocidas son específicas de Cloud Volumes ONTAP en Microsoft Azure. 
+---
+= Limitaciones conocidas para Cloud Volumes ONTAP en Azure
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Las siguientes limitaciones conocidas son específicas de Cloud Volumes ONTAP en Microsoft Azure. Asegúrate de revisar también link:reference-limitations.html["Limitaciones para Cloud Volumes ONTAP en todos los proveedores de nube"].
+
+
+
+[[limitations-with-using-azure-vm-extensions]]
+== Limitaciones al usar las extensiones de Azure VM
+
+Cloud Volumes ONTAP no admite extensiones de máquinas virtuales (VM) de Azure porque afectan las operaciones de gestión en la NetApp Console. Durante la implementación, la NetApp Console impide la instalación de cualquier extensión en tus VM. Si ya tienes extensiones instaladas en tus VM de Cloud Volumes ONTAP existentes, ponte en contacto con Microsoft Azure Support para eliminarlas. Para orientación, consulta el artículo de la knowledge base (KB) https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/Can_Azure_VM_Management_Extensions_be_installed_into_Cloud_Volume_ONTAP["¿Se pueden instalar extensiones de administración de máquinas virtuales de Azure en Cloud Volumes ONTAP?"^]
+
+A partir del 14 de julio de 2025, NetApp enviará correos electrónicos y te notificará en la Console si se detectan extensiones de VM en tus VM de Cloud Volumes ONTAP.
+
+
+
+[[premium-ssd-v2-disks-limitations-for-ha-configurations]]
+== Limitaciones de los discos Premium SSD v2 para configuraciones de HA
+
+Los discos gestionados Premium SSD v2 tienen las siguientes limitaciones para implementaciones de alta disponibilidad (HA) en Azure:
+
+* No es compatible en implementaciones de HA en regiones no zonales.
+* No se admite en implementaciones de HA en varias zonas de disponibilidad.
+* Solo se admite en configuraciones de HA desplegadas dentro de zonas de disponibilidad únicas.
+
+
+Para usar Premium SSD v2 Managed Disks con configuraciones de Cloud Volumes ONTAP HA, asegúrate de que se cumplan los siguientes requisitos:
+
+* La versión de Cloud Volumes ONTAP es 9.15.1 o posterior.
+* La implementación de HA está en una sola zona de disponibilidad de Azure.
+* Las regiones y zonas seleccionadas admiten discos gestionados Premium SSD v2. Para obtener información sobre las regiones admitidas, consulta https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/["Sitio web de Microsoft Azure: Productos disponibles por región"^].
+
+
+Para más información, consulta https://docs.netapp.com/us-en/cloud-volumes-ontap-9151-relnotes/reference-new.html#support-for-premium-ssd-v2-managed-disks-in-azure["Soporte para Premium SSD v2 Managed Disks en Azure"^].
+
+
+
+[[limitations-with-ha-deployments-in-single-availability-zones]]
+== Limitaciones con las implementaciones de HA en zonas de disponibilidad únicas
+
+A partir de Cloud Volumes ONTAP 9.15.1, puedes implementar instancias de máquina virtual (VM) en modo HA en zonas de disponibilidad (AZ) únicas en Azure. Para información sobre los criterios que admiten esta función, consulta https://docs.netapp.com/us-en/cloud-volumes-ontap-9151-relnotes/reference-new.html#deploy-ha-pairs-in-single-availability-zones-in-azure["Implementa pares de HA en zonas de disponibilidad únicas en Azure"^].
+
+Si la versión de Cloud Volumes ONTAP es anterior a 9.15.1 o si no se cumple alguna de estas condiciones, el modelo de implementación anterior que utiliza availability sets entra en vigor. Esto aplica solo a configuraciones HA.
+
+
+
+[[flash-cache-limitations]]
+== Limitaciones de Flash Cache
+
+Cloud Volumes ONTAP utiliza el almacenamiento local NVMe en algunos tipos de VM como _Flash Cache_. Ten en cuenta esta limitación:
+
+* No se admite el recalentamiento de la caché después de un reinicio.
+
+
+
+
+[[limitations-with-ha-deployments]]
+== Limitaciones con las implementaciones en HA
+
+Los pares HA no son compatibles en algunas regiones.
+
+https://bluexp.netapp.com/cloud-volumes-global-regions["Ver la lista de regiones de Azure compatibles"^].

@@ -1,0 +1,5 @@
+= 
+:allow-uri-read: 
+
+
+Con las licencias basadas en la capacidad, cada sistema Cloud Volumes ONTAP admite el almacenamiento por niveles en el almacenamiento de objetos. La capacidad total por niveles puede escalar hasta el límite de bucket del proveedor de la nube. Aunque la licencia no impone restricciones de capacidad, deberías seguir las  https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Mejores prácticas de FabricPool"^] para asegurar un rendimiento, fiabilidad y rentabilidad óptimos al configurar y gestionar el almacenamiento por niveles.

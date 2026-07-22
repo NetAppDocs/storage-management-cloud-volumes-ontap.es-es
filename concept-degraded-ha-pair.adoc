@@ -1,19 +1,52 @@
 ---
 sidebar: sidebar 
 permalink: concept-degraded-ha-pair.html 
-keywords: storage takeover, storage giveback, degraded, degraded status, degraded state, ha pair, ha takeover, takeover, giveback 
-summary: Cuando un nodo de un par de alta disponibilidad no está disponible, el otro nodo envía datos a su socio para brindar un servicio de datos continuo.  Esto se llama toma de control de almacenamiento.  Varias acciones no están disponibles hasta que se complete la devolución del almacenamiento. 
+keywords: 'high-availability (HA) configuration in Cloud Volumes ONTAP, CVO HA, storage takeover, storage giveback, degraded, degraded status, ha takeover, takeover, giveback, disaster recovery, svm disaster recovery, storage vm dr' 
+summary: 'Una configuración de alta disponibilidad (HA) en Cloud Volumes ONTAP garantiza la continuidad del negocio y la tolerancia a fallos para el almacenamiento de tu empresa.' 
 ---
-= Operaciones no disponibles cuando un nodo en el par Cloud Volumes ONTAP HA está fuera de línea
-:hardbreaks:
+= Configuración de Cloud Volumes ONTAP HA
 :allow-uri-read: 
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]
+Una configuración de alta disponibilidad (HA) en Cloud Volumes ONTAP garantiza la continuidad del negocio y la tolerancia a fallos para el almacenamiento de tu empresa. Al implementar dos nodos ONTAP en dominios de fallo independientes, el sistema ofrece operaciones sin interrupciones (NDO) y una conmutación por error fluida en caso de fallos de hardware, cortes de red o mantenimiento rutinario.
+
+Implementa un par de alta disponibilidad cuando tu arquitectura lo requiera:
+
+* *Cargas de trabajo críticas para la misión*: bases de datos y aplicaciones empresariales que no pueden tolerar tiempo de inactividad.
+* *Actualizaciones sin interrupciones*: Actualizaciones a versiones de ONTAP o cambios en las instancias de computación en la nube subyacentes sin desconectar el almacenamiento.
+* *Resiliencia multizona*: Protección frente a fallos aislados en zonas de disponibilidad dentro de una región en la nube.
+
+
+
+
+[[how-ha-pairs-work]]
+== Cómo funcionan los pares de HA
+
+Desde el punto de vista de la gestión, la configuración de HA funciona como un clúster activo-activo, mientras que los agregados de datos individuales son propiedad de un nodo específico.
+
+* *Replicación síncrona*: Los datos que se escriben en la NVRAM del nodo principal se replican de forma síncrona en la NVRAM del nodo asociado antes de confirmar la escritura al cliente.
+* *Compatibilidad con instancias de mediador*: Una instancia de mediador de terceros supervisa el estado de ambos nodos. Si el nodo principal deja de responder, el mediador coordina una toma de control del almacenamiento.
+* *Toma de control del almacenamiento*: El nodo superviviente asume la propiedad de los agregados de almacenamiento y las interfaces de red del nodo asociado, reanudando el servicio de datos en cuestión de segundos.
+
+
+
+
+[[ha-configuration-requirements-and-limitations]]
+== Requisitos y limitaciones de la configuración de HA
+
+Al implementar un par de alta disponibilidad (HA) en Cloud Volumes ONTAP, ten en cuenta los siguientes requisitos y limitaciones:
+
+* *Dimensionamiento de la capacidad de cálculo*: ambos nodos de un par de alta disponibilidad deben usar exactamente el mismo tipo de instancia de cálculo en la nube o la misma configuración de máquina.
+* *Compatibilidad con protocolos*: Se admite la disponibilidad continua (CA) de SMB/CIFS para cargas de trabajo de Hyper-V y SQL Server, pero requiere indicadores de configuración específicos de ONTAP.
+* *Tiempo de conmutación por error*: Aunque la toma de control del almacenamiento suele medirse en segundos, es necesario configurar correctamente los parámetros de tiempo de espera del lado del cliente (como los tiempos de espera del iniciador iSCSI) para evitar interrupciones en el funcionamiento de las aplicaciones.
+
+
+
+
+[[operations-unavailable-when-a-node-in-an-ha-pair-is-offline]]
+== Operaciones no disponibles cuando un nodo de un par de alta disponibilidad está desconectado
+
 Cuando un nodo de un par de alta disponibilidad no está disponible, el otro nodo envía datos a su socio para brindar un servicio de datos continuo.  Esto se llama _toma de control de almacenamiento_.  Varias acciones no están disponibles hasta que se complete la devolución del almacenamiento.
 
 
@@ -32,3 +65,24 @@ Las siguientes acciones no están disponibles desde la toma de control de almace
 
 
 Estas acciones estarán disponibles nuevamente después de que se complete la devolución de almacenamiento y el estado del sistema vuelva a la normalidad.
+
+
+
+[[storage-vm-disaster-recovery-for-cloud-volumes-ontap]]
+== Recuperación ante desastres de Storage VM para Cloud Volumes ONTAP
+
+La NetApp Console no ofrece soporte para la configuración ni la orquestación de la recuperación ante desastres (DR) de storage VM (SVM). Para configurar DR para Cloud Volumes ONTAP, tienes que usar ONTAP System Manager o la ONTAP CLI para configurar la replicación SVM de SnapMirror.
+
+Si configuras la replicación de SnapMirror SVM entre dos sistemas Cloud Volumes ONTAP, la replicación debe ser entre dos sistemas en pareja de alta disponibilidad o dos sistemas de un solo nodo. No puedes configurar la replicación de SnapMirror SVM entre una pareja de alta disponibilidad y un sistema de un solo nodo.
+
+Consulte los siguientes documentos para obtener las instrucciones de la CLI de ONTAP .
+
+* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856["Guía rápida de preparación para la recuperación ante desastres de SVM"^]
+* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857["Guía rápida de recuperación ante desastres de SVM"^]
+
+
+.Enlaces relacionados
+* link:concept-ha.html["Obtenga más información sobre los pares de alta disponibilidad de Cloud Volumes ONTAP en AWS"]
+* link:concept-ha-azure.html["Obtenga información sobre los pares de alta disponibilidad de Cloud Volumes ONTAP en Azure"]
+* link:concept-ha-google-cloud.html["Conoce los pares de alta disponibilidad (HA) de Cloud Volumes ONTAP en GCP"]
+

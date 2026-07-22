@@ -582,7 +582,7 @@ Durante la configuración del proxy transparente del agente de la consola, el ad
 . Agregue la etiqueta utilizada para el agente de consola y guarde la configuración.
 
 
-.Temas relacionados
+.Enlace relacionado
 * link:task-verify-autosupport.html["Verificar la configuración de AutoSupport para Cloud Volumes ONTAP"]
 * https://docs.netapp.com/us-en/ontap/networking/ontap_internal_ports.html["Obtenga más información sobre los puertos internos de ONTAP"^] .
 

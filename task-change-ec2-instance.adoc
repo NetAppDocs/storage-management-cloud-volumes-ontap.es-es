@@ -36,7 +36,7 @@ TIP: La NetApp Console cambia un nodo a la vez iniciando la toma de control y es
 
 
 .Referencia
-Para obtener una lista de los tipos de instancias compatibles en AWS, consultelink:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-aws.html#supported-ec2-compute["Instancias EC2 compatibles"^] .
+Para consultar la lista de tipos de instancias compatibles en AWS, visita link:reference-configs-aws.html#supported-ec2-compute["Instancias EC2 compatibles"].
 
 Si no puede cambiar el tipo de instancia de las instancias c4, m4 o r4, consulte el artículo de Knowledge Baselink:https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/Converting_an_AWS_Xen_CVO_instance_to_Nitro_(KVM)["Conversión de una instancia de AWS Xen CVO a Nitro (KVM)"^] .
 

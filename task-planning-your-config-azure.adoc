@@ -41,7 +41,7 @@ Cloud Volumes ONTAP es compatible con la mayoría de las regiones de Microsoft A
 
 Cloud Volumes ONTAP admite varios tipos de máquinas virtuales, según el tipo de licencia que elija.
 
-https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html["Configuraciones compatibles con Cloud Volumes ONTAP en Azure"^]
+link:reference-configs-azure.html["Configuraciones compatibles con Cloud Volumes ONTAP en Azure"]
 
 
 

@@ -221,3 +221,11 @@ He aquí otro ejemplo.  Digamos que tiene las siguientes licencias para el paque
 Se aprovisionan otros 100 TiB en un par HA con volúmenes primarios.  La licencia que compró no tiene capacidad comprometida _Essentials Primary HA_.  La licencia _Essentials Primary HA_ tiene un precio más alto que las licencias _Essentials Primary Single Node_ y _Essentials Secondary HA_.
 
 En este ejemplo, la consola cobra el excedente a la tarifa del mercado por los 100 TiB adicionales.  Los cargos por exceso aparecerán en su factura mensual.
+
+.Enlaces relacionados
+* link:concept-licensing.html["Licencias para Cloud Volumes ONTAP"]
+* link:task-manage-capacity-licenses.html["Administrar licencias basadas en capacidad para Cloud Volumes ONTAP"]
+* link:task-manage-node-licenses.html["Gestiona las licencias por nodo"]
+* link:task-convert-node-capacity.html["Convertir una licencia basada en nodos a una licencia basada en capacidad"]
+* link:task-manage-keystone.html["Administrar suscripciones de Keystone"]
+

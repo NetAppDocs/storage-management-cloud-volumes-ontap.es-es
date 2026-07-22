@@ -4,7 +4,7 @@ permalink: concept-license-management.html
 keywords: byol, bring your own license, expiration, warning, node-based byol, node license, capacity 
 summary: Cada sistema Cloud Volumes ONTAP que tenga un BYOL basado en nodos debe tener una licencia de sistema instalada con una suscripción activa.  La consola simplifica el proceso administrando las licencias por usted y mostrando una advertencia antes de que expiren. 
 ---
-= Gestión de licencias para BYOL basado en nodos
+= Conoce Cloud Volumes ONTAP con el modelo BYOL basado en nodos
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -19,7 +19,7 @@ Cada sistema Cloud Volumes ONTAP que tenga una licencia BYOL basada en nodos deb
 
 NOTE: Una licencia basada en nodos es la licencia de la generación anterior para Cloud Volumes ONTAP. Esta licencia se puede adquirir a través de NetApp (BYOL) y está disponible para renovaciones de licencias, solo en casos específicos.
 
-link:concept-licensing.html["Obtenga más información sobre las opciones de licencia de Cloud Volumes ONTAP"] .
+link:concept-licensing.html["Obtenga más información sobre las licencias de Cloud Volumes ONTAP"].
 
 link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Obtenga más información sobre cómo administrar licencias basadas en nodos"^] .
 
@@ -82,3 +82,12 @@ Una licencia BYOL basada en nodos es transferible entre sistemas Cloud Volumes O
 Por ejemplo, es posible que desee eliminar un sistema con licencia existente y luego usar la licencia con un nuevo sistema BYOL en un VPC/VNet o proveedor de nube diferente.  Tenga en cuenta que solo los números de serie _agnósticos a la nube_ funcionan en cualquier proveedor de nube.  Los números de serie independientes de la nube comienzan con el prefijo _908xxxx_.
 
 Es importante tener en cuenta que su licencia BYOL está vinculada a su empresa y a un conjunto específico de credenciales del sitio de soporte de NetApp .
+
+.Enlaces relacionados
+* link:concept-licensing.html["Licencias para Cloud Volumes ONTAP"^]
+* link:concept-licensing-charging.html["Obtenga más información sobre las licencias basadas en capacidad"^]
+* link:task-manage-capacity-licenses.html["Administrar licencias basadas en capacidad para Cloud Volumes ONTAP"^]
+* link:task-manage-node-licenses.html["Gestiona las licencias por nodo"^]
+* link:task-convert-node-capacity.html["Convertir una licencia basada en nodos a una licencia basada en capacidad"^]
+* link:task-manage-keystone.html["Administrar suscripciones de Keystone"^]
+

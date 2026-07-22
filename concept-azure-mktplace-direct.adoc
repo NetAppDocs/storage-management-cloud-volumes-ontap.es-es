@@ -32,7 +32,7 @@ Aquí está la comparación de características entre las dos opciones.  Tenga e
 
 | *Tipos de máquinas virtuales (VM) compatibles*  a| 
 Tipos de instancia Eds_v5 y Ls_v3
-| Gama completa de tipos de máquinas virtuales.https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html["Configuraciones admitidas en Azure"^] 
+| Amplia gama de tipos de máquinas virtuales. link:reference-configs-azure.html["Configuraciones admitidas en Azure"] 
 
 
 | *Licencia* | Licencia libre | Cualquier licencia basada en capacidad.link:concept-licensing.html["Licencias de Cloud Volumes ONTAP"] 
@@ -47,7 +47,7 @@ Tipos de instancia Eds_v5 y Ls_v3
 | *Modelo de implementación* | Implementación en modo de alta disponibilidad (HA) en una única zona de disponibilidad (AZ) | Todas las configuraciones compatibles, incluidos los modos de nodo único y alta disponibilidad, implementaciones de zona de disponibilidad única y múltiple 
 
 
-| *Tipo de disco compatible* | Discos administrados SSD v2 Premium | Apoyo más amplio.link:concept-storage.html#azure-storage["Configuración predeterminada para Cloud Volumes ONTAP"] 
+| *Tipo de disco compatible* | Discos administrados SSD v2 Premium | Un soporte más amplio. link:reference-configs-azure.html#azure-storage-for-user-data["Tipos de disco compatibles en Azure"] 
 
 
 | *Velocidad de escritura (modo de escritura rápida)* | No compatible | Compatible, según su configuración. link:concept-write-speed.html["Obtenga información sobre las velocidades de escritura en Cloud Volumes ONTAP"] . 

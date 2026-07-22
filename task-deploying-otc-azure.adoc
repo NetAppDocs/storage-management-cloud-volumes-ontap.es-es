@@ -166,7 +166,7 @@ link:concept-write-speed.html["Obtenga más información sobre la velocidad de e
 
 .. Active el almacenamiento de escritura única y lectura múltiple (WORM), si lo desea.
 +
-Esta opción sólo está disponible para ciertos tipos de máquinas virtuales.  Para saber qué tipos de máquinas virtuales son compatibles, consultelink:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html#ha-pairs["Configuraciones admitidas por licencia para pares HA"^] .
+Esta opción solo está disponible para determinados tipos de máquinas virtuales. Para saber qué tipos de máquinas virtuales son compatibles, consulta link:link:reference-configs-azure.html#ha-pairs["Configuraciones admitidas por licencia para pares HA"].
 
 +
 No se puede habilitar WORM si la clasificación de datos se habilitó para las versiones 9.7 y anteriores de Cloud Volumes ONTAP .  La reversión o degradación a Cloud Volumes ONTAP 9.8 está bloqueada después de habilitar WORM y la clasificación en niveles.
@@ -392,7 +392,7 @@ link:concept-data-tiering.html["Obtenga más información sobre la clasificació
 
 ** A partir de Cloud Volumes ONTAP 9.15.0P1, los blobs en páginas de Azure ya no son compatibles con las nuevas implementaciones de pares de alta disponibilidad.  Si actualmente usa blobs de páginas de Azure en implementaciones de pares de alta disponibilidad existentes, puede migrar a tipos de instancias de VM más nuevos en las VM de las series Edsv4 y Edsv5.
 +
-link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html#ha-pairs["Obtenga más información sobre las configuraciones compatibles en Azure"^] .
+link:link:reference-configs-azure.html#ha-pairs["Obtenga más información sobre las configuraciones compatibles en Azure"^].
 
 
 
@@ -404,7 +404,7 @@ link:concept-write-speed.html["Obtenga más información sobre la velocidad de e
 
 .. Active el almacenamiento de escritura única y lectura múltiple (WORM), si lo desea.
 +
-Esta opción sólo está disponible para ciertos tipos de máquinas virtuales.  Para saber qué tipos de máquinas virtuales son compatibles, consultelink:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html#ha-pairs["Configuraciones admitidas por licencia para pares HA"^] .
+Esta opción solo está disponible para determinados tipos de máquinas virtuales. Para saber qué tipos de máquinas virtuales son compatibles, consulta link:link:reference-configs-azure.html#ha-pairs["Configuraciones admitidas por licencia para pares HA"^].
 
 +
 No se puede habilitar WORM si la clasificación de datos se habilitó para las versiones 9.7 y anteriores de Cloud Volumes ONTAP .  La reversión o degradación a Cloud Volumes ONTAP 9.8 está bloqueada después de habilitar WORM y la clasificación en niveles.
