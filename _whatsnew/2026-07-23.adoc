@@ -1,0 +1,17 @@
+= Compatibilidad con la región de Chile Central en Azure
+:allow-uri-read: 
+
+
+
+
+[[support-for-chile-central-region-in-azure]]
+=== Compatibilidad con la región de Chile Central en Azure
+
+Ya puedes implementar Cloud Volumes ONTAP 9.12.1 GA y versiones posteriores en la región Chile Central (chilecentral) en Azure. Se admiten los siguientes tipos de implementación:
+
+* Clúster de un solo nodo
+* HA en una única zona de disponibilidad usando almacenamiento con redundancia local (LRS)
+* HA en varias zonas de disponibilidad mediante almacenamiento con redundancia por zona (ZRS)
+
+
+Para obtener una lista de todas las regiones admitidas, consulte la https://bluexp.netapp.com/cloud-volumes-global-regions["Mapa de regiones globales en Azure"^] .
