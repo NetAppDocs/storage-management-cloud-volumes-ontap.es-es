@@ -24,7 +24,7 @@ Las capacidades clave incluyen:
 * De la información a la acción
 
 
-Directiva sin resolver en https://raw.githubusercontent.com/NetAppDocs/console-well-architected/main/cvo/configuration-analysis-cvo.adoc[] - include::well-architected-workloads.adoc[]
+Directiva sin resolver en https://raw.githubusercontent.com/NetAppDocs/console-well-architected/main/cvo/configuration-analysis-cvo.adoc[] - include::_include/well-architected-workloads.adoc[]
 
 
 
