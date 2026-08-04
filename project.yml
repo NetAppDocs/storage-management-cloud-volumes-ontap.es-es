@@ -321,9 +321,9 @@ sidebar:
     entries:
     - title: Integraciones de proveedores de la nube
       url: "/reference-provider-integrations.html"
-    - title: Administración desde el Administrador del Sistema
+    - title: Administración desde ONTAP System Manager
       url: "/task-administer-advanced-view.html"
-    - title: Administración desde la CLI
+    - title: Administración mediante la interfaz de línea de comandos (CLI) de ONTAP
       url: "/task-connecting-to-otc.html"
     - title: Flash Cache y Cloud Volumes ONTAP
       url: "/concept-flash-cache.html"
@@ -331,11 +331,11 @@ sidebar:
       url: "/concept-active-iq.html"
     - title: Verificar la configuración de AutoSupport
       url: "/task-verify-autosupport.html"
-    - title: Administrar suscripciones de Keystone
+    - title: Cloud Volumes ONTAP y Keystone
       url: "/task-manage-keystone.html"
     - title: Cloud Volumes ONTAP y Microsoft OneLake
       url: "/task-azure-onelake.html"
-    - title: Cloud Volumes ONTAP y el panel Well-architected
+    - title: Cloud Volumes ONTAP y el panel de control well-architected
       url: "/configuration-analysis-cvo.html"
   - title: Conocimiento y apoyo
     entries:
