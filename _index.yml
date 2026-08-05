@@ -23,17 +23,16 @@ indexpage:
     links:
     - title: Licencias
       url: concept-licensing.html
-    - title: Seguridad
-      url: concept-security.html
+    - title: Convertir licencias basadas en nodos
+      url: "/task-convert-node-capacity.html"
+    - title: Máquinas virtuales de almacenamiento Cloud Volumes ONTAP
+      url: task-managing-svms.html
     - title: Conoce el cifrado
       url: concept-security.html
     - title: Gestión de almacenamiento
       url: concept-storage-management.html
     - title: Discos y agregados utilizados para clústeres de Cloud Volumes ONTAP
       url: reference-default-configs.html
-    - title: Supervisión del rendimiento de las cargas de trabajo de Cloud Volumes
-        ONTAP
-      url: concept-performance.html
   - title: AWS
     links:
     - title: Configuración compatible
@@ -99,6 +98,18 @@ indexpage:
       url: https://docs.netapp.com/us-en/console-automation/cm/prepare.html
     - title: Prepárese para usar la API
       url: https://docs.netapp.com/us-en/console-automation/cm/prepare.html
+  - title: Cloud Volumes ONTAP y otros productos de NetApp
+    links:
+    - title: Cloud Volumes ONTAP y Flash Cache
+      url: "/concept-flash-cache.html"
+    - title: Cloud Volumes ONTAP y AutoSupport-Digital Advisor
+      url: "/concept-active-iq.html"
+    - title: Cloud Volumes ONTAP y Microsoft OneLake
+      url: "/task-azure-onelake.html"
+    - title: Cloud Volumes ONTAP y el panel de control well-architected
+      url: "/configuration-analysis-cvo.html"
+    - title: Cloud Volumes ONTAP y Keystone
+      url: "/task-manage-keystone.html"
   - title: Más recursos
     links:
     - title: Solución de problemas

@@ -24,7 +24,25 @@ Las capacidades clave incluyen:
 * De la información a la acción
 
 
-Directiva sin resolver en https://raw.githubusercontent.com/NetAppDocs/console-well-architected/main/cvo/configuration-analysis-cvo.adoc[] - include::_include/well-architected-workloads.adoc[]
+
+
+[[how-it-works]]
+== Cómo funciona
+
+Workload Factory analiza a diario las cargas de trabajo que se ejecutan en las implementaciones de sistemas de almacenamiento en la nube compatibles. El análisis proporciona el estado bien arquitectado, información y recomendaciones.
+
+Una vez finalizado el análisis diario, las configuraciones aparecen como "optimizadas" o "no optimizadas" en el panel de Well-architected para la implementación. Encontrarás los problemas de configuración por categoría y una lista de problemas de configuración y recomendaciones. Puedes revisar las recomendaciones para los problemas de configuración. Algunos problemas pueden solucionarse automáticamente con Workload Factory, mientras que otros requieren intervención manual. En este caso, Workload Factory te da instrucciones detalladas para ayudarte a implementar los cambios recomendados.
+
+Puedes descartar el análisis de las configuraciones que no se aplican a tus entornos. Así evitas alertas innecesarias y resultados de optimización inexactos.
+
+También puedes crear reglas personalizadas en lenguaje sencillo para validar tus entornos según las normas de tu organización y las mejores prácticas de NetApp. Prueba las reglas con una simulación y luego programa que se ejecuten en todos tus entornos. link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html["Obtén más información sobre las reglas personalizadas"^].
+
+
+
+[[why-it-matters]]
+== Por qué es importante
+
+Workload Factory aplica las mejores prácticas a entornos de almacenamiento a gran escala, bases de datos y VMware, combinando una evaluación continua con recomendaciones y medidas correctivas. Las correcciones automatizadas que se aplican en la NetApp Console reducen los errores humanos, garantizan una gestión uniforme y mantienen el rendimiento y la fiabilidad en todas tus infraestructuras de cargas de trabajo.
 
 
 
