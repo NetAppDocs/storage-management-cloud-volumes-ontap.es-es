@@ -26,7 +26,7 @@ Los paquetes de licencias basados en capacidad están disponibles con los siguie
 * *BYOL*: Traiga su propia licencia (BYOL).  Una licencia adquirida a NetApp que se puede utilizar para implementar Cloud Volumes ONTAP en cualquier proveedor de nube.
 +
 
-NOTE: NetApp ha restringido la compra, extensión y renovación de licencias BYOL. Para más información, consulte  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidad restringida de licencias BYOL para Cloud Volumes ONTAP"^] .
+NOTE: NetApp ha restringido la compra, la ampliación y la renovación de las licencias BYOL, y ha limitado su disponibilidad en casos específicos, como en las implementaciones en modo privado. Para más información, consulta https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidad restringida de licencias BYOL para Cloud Volumes ONTAP"^].
 
 
 
@@ -35,7 +35,7 @@ ifdef::azure[]
 endif::azure[]
 
 * *PAYGO*: Una suscripción de pago por uso (PAYGO) es una suscripción por hora del mercado de su proveedor de nube.
-* *Anual*: Un contrato anual del mercado de su proveedor de nube.
+* *Suscripciones del Marketplace/contrato anual*: Un contrato anual del Marketplace de tu proveedor de servicios en la nube. Las implementaciones en modo privado no admiten suscripciones del Marketplace.
 
 
 Tenga en cuenta lo siguiente:

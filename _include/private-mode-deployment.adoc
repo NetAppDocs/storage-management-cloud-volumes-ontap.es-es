@@ -1,0 +1,20 @@
+= Implementa Cloud Volumes ONTAP en modo privado
+:allow-uri-read: 
+
+
+
+
+[[deploy-cloud-volumes-ontap-in-private-mode]]
+== Implementa Cloud Volumes ONTAP en modo privado
+
+Puedes implementar Cloud Volumes ONTAP en modo privado siguiendo un proceso de conversión documentado y paso a paso directamente dentro de tu entorno actual. En la implementación en modo privado, el sistema Cloud Volumes ONTAP se implementa en tu propia nube privada virtual (VPC) o red virtual (VNet) y no está conectado a internet pública. Puedes usar la implementación en modo privado para cumplir con los requisitos de seguridad y cumplimiento de tu organización.
+
+Las implementaciones en modo privado utilizaban anteriormente únicamente licencias por nodo que podías adquirir de NetApp. La licencia por nodo es la licencia de la generación anterior para Cloud Volumes ONTAP. NetApp había restringido la compra, ampliación y renovación de licencias por nodo salvo excepciones desde https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["25 de junio de 2025"]. A partir del 31 de julio de 2026, las licencias por nodo dejarán de estar disponibles (EOA) para estos casos excepcionales, como United States Public Sector (USPS) y otras implementaciones en modo privado.
+
+Si tienes una implementación privada con una licencia basada en nodos, después de esto, tú:
+
+* Ya no puedes adquirir ni renovar tu licencia basada en nodos.
+* No puedes acceder a las nuevas funciones y mejoras.
+* Sigue presentando una mayor rigidez operativa debido a las restricciones basadas en nodos.
+* Será necesario pasar a una licencia de modo privado basada en la capacidad una vez que caduque la licencia basada en nodos. Para obtener instrucciones, consulta https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-convert-node-capacity.html["Convierte licencias por nodo en licencias por capacidad"^].
+
