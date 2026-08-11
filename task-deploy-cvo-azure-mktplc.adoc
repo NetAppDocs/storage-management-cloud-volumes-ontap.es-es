@@ -22,7 +22,7 @@ Para obtener más información sobre esta oferta, consultelink:concept-azure-mkt
 El sistema Cloud Volumes ONTAP implementado mediante la implementación directa de Azure Marketplace presenta estas características. Ten en cuenta que las características de una instancia independiente implementada a través de Azure Marketplace cambian cuando se detecta en la NetApp Console.
 
 * La última versión de Cloud Volumes ONTAP (9.16.1 o posterior).
-* Se ofrece una licencia gratuita de Cloud Volumes ONTAP para una capacidad aprovisionada de hasta 500 GiB, sin soporte de NetApp y sin fecha de caducidad. La capacidad superior a 500 GiB requiere un derecho de licencia válido y puede conllevar cargos. Para acceder a la experiencia completa de Cloud Volumes ONTAP y a las capacidades avanzadas de gestión, conecta tu sistema Cloud Volumes ONTAP a NetApp Console. El descubrimiento y la gestión a través de NetApp Console requieren una suscripción válida de Azure Marketplace asociada a tu cuenta de NetApp Console.
+* Se ofrece una licencia gratuita de Cloud Volumes ONTAP para una capacidad aprovisionada de hasta 500 GiB, sin soporte de NetApp y sin fecha de caducidad. La capacidad que supere los 500 GiB requiere una licencia válida y puede conllevar cargos. Para acceder a la experiencia completa de Cloud Volumes ONTAP y a las capacidades avanzadas de gestión, conecta tu sistema Cloud Volumes ONTAP a la consola. La detección y gestión a través de la consola requieren una suscripción válida de Azure Marketplace asociada a tu cuenta de la consola.
 * Dos nodos configurados en modo de alta disponibilidad (HA) en una única zona de disponibilidad (AZ), aprovisionados con números de serie predeterminados.  Las máquinas virtuales de almacenamiento (VM de almacenamiento) se implementan en unlink:concept-ha-azure.html#ha-single-availability-zone-configuration-with-shared-managed-disks["modo de orquestación flexible"] .
 * Un agregado para la instancia creada de forma predeterminada.
 * Un disco administrado SSD v2 Premium con capacidad aprovisionada de 500 GiB, un disco raíz y un disco de datos.
@@ -39,7 +39,7 @@ El sistema Cloud Volumes ONTAP implementado mediante la implementación directa 
 
 
 .Antes de empezar
-* Si tienes previsto detectar y gestionar el sistema implementado en NetApp Console, asegúrate de que la cuenta de NetApp Console esté asociada a una suscripción válida de Azure Marketplace. La detección del sistema en NetApp Console requiere una suscripción válida.
+* Si tienes previsto detectar y gestionar el sistema implementado en la Console, asegúrate de que la cuenta de la Console esté asociada a una suscripción válida de Azure Marketplace. La detección del sistema en la Console requiere una suscripción válida.
 * Asegúrese de cumplir con los requisitos de red para unlink:concept-ha-azure.html#ha-single-availability-zone-configuration-with-shared-managed-disks["Implementación de alta disponibilidad en una única zona de disponibilidad"] en Azure. Consulte link:reference-networking-azure.html["Configurar la red de Azure para Cloud Volumes ONTAP"] .
 * Se le debe asignar uno de estos roles de Azure para implementar Cloud Volumes ONTAP:
 +
