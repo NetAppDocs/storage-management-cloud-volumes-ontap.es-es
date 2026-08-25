@@ -21,6 +21,7 @@ El nuevo proceso de incorporación simplifica tu transición de una suscripción
 
 
 .Enlaces relacionados
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-onboard-cvo-aws-marketplace.html["Incorpora Cloud Volumes ONTAP desde AWS Marketplace"^]
 * https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-quick-deploy-aws.html["Implementa Cloud Volumes ONTAP con Quick create"^]
 * https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html#flexible-billing-for-cloud-volumes-ontap-and-data-services-in-aws["Facturación flexible para Cloud Volumes ONTAP y servicios de datos en AWS"^]
 

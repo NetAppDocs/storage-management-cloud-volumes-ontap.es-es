@@ -106,6 +106,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html[
 La consola siempre intenta cargar primero los costes a una licencia. Si no hay una licencia disponible, los carga a una suscripción del marketplace. No tienes que convertir una suscripción BYOL en una suscripción del marketplace ni al revés.
 
 * Si dispones de una oferta privada o un contrato a través del marketplace de tu proveedor de servicios en la nube, cambiar a un método de cobro que no esté incluido en tu contrato hará que se te cobre según BYOL (si compraste una licencia de NetApp) o PAYGO.
+* Si tienes previsto facturar la capacidad de Cloud Volumes ONTAP a través de la suscripción independiente de Cloud Volumes ONTAP en AWS marketplace, el sistema Cloud Volumes ONTAP debe usar un paquete compatible basado en capacidad (Essentials o Freemium). El paquete Professional no es compatible con la oferta independiente y sigue facturándose a través de la suscripción NIS. Después de seleccionar el paquete que quieres, usa *Preferencias de facturación* en NetApp Console para elegir la suscripción de marketplace que se usará para la facturación de Cloud Volumes ONTAP.
 
 
 .Pasos

@@ -16,6 +16,8 @@ summary: Comprueba que has cumplido todos los requisitos previos para implementa
 [role="lead"]
 Para implementar Cloud Volumes ONTAP, primero debes conocer los detalles de tu suscripción a AWS y las licencias de Cloud Volumes ONTAP. También debes comprobar que tienes un agente de la consola de NetApp creado para tu cuenta de AWS. Gran parte de la información de este tema debe llevarse a cabo como parte de la configuración de la consola antes incluso de comenzar a implementar Cloud Volumes ONTAP.
 
+Puedes integrar Cloud Volumes ONTAP en AWS utilizando AWS Marketplace o la NetApp Console. La siguiente tabla ofrece a grandes rasgos las tareas que debes realizar para implementar Cloud Volumes ONTAP en AWS. La integración desde AWS Marketplace es un proceso simplificado que automatiza la implementación del agente de la Console y la asociación de la suscripción. Para obtener información sobre la incorporación desde AWS Marketplace, consulta link:task-onboard-cvo-aws-marketplace.html["Incorpora Cloud Volumes ONTAP en AWS Marketplace"].
+
 [cols="20,35,25,25"]
 |===
 | Tarea | Descripción | Referencia | Notas para implementaciones en modo privado 

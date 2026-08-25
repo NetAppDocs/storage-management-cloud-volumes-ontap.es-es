@@ -1,0 +1,269 @@
+---
+sidebar: sidebar 
+permalink: task-onboard-cvo-aws-marketplace.html 
+keywords: aws marketplace, cloud volumes ontap, onboarding, subscribe, deploy agent, setup guide, organization, subscription association 
+summary: Suscríbete a Cloud Volumes ONTAP en AWS Marketplace y completa la configuración en NetApp Console, incluyendo la creación de la organización, la asociación de la suscripción, la implementación del agente y la creación del primer sistema. 
+---
+= Suscríbete e implementa Cloud Volumes ONTAP desde AWS Marketplace
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Suscríbete a Cloud Volumes ONTAP desde AWS Marketplace y deja que NetApp Console te guíe a lo largo del proceso de incorporación. Con un camino sencillo desde la suscripción hasta la implementación, puedes poner en marcha Cloud Volumes ONTAP rápidamente. La experiencia guiada simplifica el proceso desde la suscripción en AWS Marketplace hasta la implementación, ayudándote a implementar Cloud Volumes ONTAP sin que necesites tener amplios conocimientos sobre la nube o ONTAP.
+
+La suscripción y la implementación de Cloud Volumes ONTAP desde AWS Marketplace incluyen estos pasos:
+
+* Suscripción a Cloud Volumes ONTAP en AWS Marketplace.
+* Regístrate en la NetApp Console.
+* Crear tu organización (si es necesario) y asociar la suscripción del marketplace.
+* Implementación de un agente de Console en AWS.
+* Añadiendo tu primer sistema Cloud Volumes ONTAP.
+
+
+La incorporación simplificada ofrece una implementación automatizada de agentes con una intervención mínima por tu parte para la asociación de suscripciones, la configuración de roles de IAM, el aprovisionamiento de agentes y la inicialización del sistema. La orquestación de backend se encarga automáticamente de la creación de la pila de CloudFormation, la validación de la conectividad VPC y las dependencias de recursos. Esto reduce los pasos de configuración manual y las transiciones entre pantallas, así puedes implementar Cloud Volumes ONTAP más rápido, con menos errores de configuración e interrupciones. A medida que avanzas en la implementación, puedes seguir tu progreso en el panel de la derecha.
+
+.Antes de empezar
+Revisa estos requisitos previos antes de iniciar el proceso de incorporación.
+
+* Necesitas una cuenta de AWS con permisos para suscribirte en AWS Marketplace. Para utilizar la configuración automática de IAM, debes ser administrador de AWS o tener los permisos que se muestran abajo.
++
+[source, json]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "CloudFormationStack",
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:CreateStack",
+        "cloudformation:DeleteStack",
+        "cloudformation:DescribeStacks",
+        "cloudformation:DescribeStackEvents",
+        "cloudformation:GetTemplateSummary",
+        "iam:CreateRole",
+        "iam:DeleteRole",
+        "iam:GetRole",
+        "iam:PutRolePolicy",
+        "iam:DeleteRolePolicy",
+        "iam:GetRolePolicy",
+        "iam:PassRole",
+        "lambda:CreateFunction",
+        "lambda:DeleteFunction",
+        "lambda:GetFunction",
+        "lambda:InvokeFunction"
+  ]
+}
+----
+* Puedes crear o utilizar roles de IAM en AWS para la implementación de agentes.
+* Puedes iniciar sesión o crear una cuenta en la NetApp Console.
+
+
+Para conocer todos los requisitos previos para la implementación del agente de AWS, consulta link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-aws-marketplace.html["Despliega un agente de NetApp Console desde el AWS Marketplace"^].
+
+
+
+[[subscribe-in-aws-marketplace]]
+== Suscríbete en AWS Marketplace
+
+Comienza el proceso de incorporación buscando la oferta de Cloud Volumes ONTAP en AWS Marketplace.
+
+.Pasos
+. Ve a AWS Marketplace usando tu cuenta de AWS.
+. Busca la oferta de NetApp Cloud Volumes ONTAP. Hay dos ofertas de Cloud Volumes ONTAP en AWS Marketplace:
++
+** La oferta independiente para las suscripciones anuales a Cloud Volumes ONTAP
+** La oferta combinada NetApp Intelligent Service (NIS) para los servicios de datos de NetApp y las suscripciones a Cloud Volumes ONTAP. Elige la oferta _independiente_ para este flujo de trabajo de incorporación.
+
+
+. Revisa los detalles del anuncio y las condiciones de precio.
+. Suscríbete y finaliza el proceso de compra.
+. Después de suscribirte, AWS te redirige a la página de registro o inicio de sesión de la Consola.
+
+
+
+
+[[sign-up-or-sign-in-to-netapp-console]]
+== Regístrate o inicia sesión en NetApp Console
+
+Accede a la consola para continuar con la configuración una vez que hayas completado la suscripción al marketplace.
+
+.Pasos
+. En la página Console, selecciona una:
++
+** *Regístrate* si eres un usuario nuevo.
+** *Inicia sesión en NetApp Console* si ya tienes una cuenta.
+
+
+. Si has seleccionado *Sign up*, sigue estos pasos:
++
+.. Rellena los campos obligatorios:
++
+*** Correo electrónico
+*** Password
+*** Nombre completo
+*** Empresa
+*** País
+
+
+.. Selecciona *Siguiente*.
+.. Opcional: introduce tus datos de contacto, como la dirección, la ciudad, la provincia, el código postal y el número de teléfono.
+.. Selecciona *Sign up*.
+.. Acepta los términos de la licencia.
+.. Verifica tu dirección de correo electrónico usando el mensaje de service@console.netapp.com.
+
+
+. Inicia sesión en la Console y completa la autenticación.
+
+
+
+
+[[create-your-organization]]
+== Crea tu organización
+
+Realiza este paso solo si eres un usuario nuevo o si aún no formas parte de una organización de NetApp Console.
+
+Si ya formas parte de una organización, omite esta sección y continúa en <<Vincula tu suscripción>>.
+
+Crea una organización para gestionar usuarios, roles, permisos, licencias y sistemas.
+
+.Pasos
+. Introduce el nombre de una organización.
+. Opcional: vincula una cuenta de NetApp Support Site (NSS).
+. Selecciona *Crear*.
+
+
+
+
+[[associate-your-subscription]]
+== Vincula tu suscripción
+
+Después de que creas tu organización, la Console intenta automáticamente vincular tu suscripción del marketplace a la organización.
+
+Si la asociación automática falla, asocia manualmente tu suscripción. link:https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-subscriptions.html["Aprende a gestionar las suscripciones"^].
+
+
+
+[[deploy-a-console-agent-in-aws]]
+== Implementa un agente de Console en AWS
+
+Después de asociar la suscripción, la consola abre automáticamente el flujo de implementación del agente para gestionar tus recursos de AWS y sistemas Cloud Volumes ONTAP.
+
+Para obtener más información sobre los permisos que se utilizan durante la implementación del agente, consulta link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-aws.html["Referencia de permisos de AWS"^].
+
+.Pasos
+. Puedes seguir los pasos indicados en la página de introducción para obtener los permisos mínimos necesarios para implementar un agente, o bien continuar para crear automáticamente un rol para la implementación del agente.
+. En la página *Credenciales de AWS*, selecciona una de las siguientes opciones para proporcionar credenciales para la implementación del agente:
++
+[role="tabbed-block"]
+====
+.Crea un rol para mí (recomendado)
+--
+Al seleccionar esta opción, se abre un flujo de creación rápida de AWS CloudFormation para crear el rol de implementación del agente. Si eres un usuario con privilegios de administrador, puedes usar esta opción para emplear automáticamente una pila de CloudFormation para crear la política, el rol y autenticar al usuario para crear el agente.
+
+.. Agrega el ID de la cuenta de AWS y, si lo deseas, el ID externo. La Console establece un nombre de rol por defecto.
+.. Acepta las condiciones y selecciona *Crear stack*.
++
+image:screenshot-stack-creation.png["width=50% Captura de pantalla de la página de creación de la pila de AWS CloudFormation donde introduces el ID de la cuenta de AWS y, opcionalmente, el ID externo para el rol de implementación del agente."]
+
+.. Cuando se haya configurado el rol de IAM en AWS y se haya generado el ARN, confirma y guarda el rol.
+
+
+--
+.Asumir rol
+--
+Esto forma parte del flujo de trabajo de asignación manual de roles. Introduce el ARN de un rol de IAM ya existente. Para obtener información sobre cómo editar este rol, consulta https://docs.netapp.com/us-en/console-setup-admin/task-adding-aws-accounts.html#associate-an-existing-subscription-with-your-organization["Administra las credenciales de AWS y las suscripciones de Marketplace para NetApp Console"^].
+
+--
+.Claves AWS
+--
+Esto forma parte del flujo de trabajo de asignación manual de roles. Introduce una clave de acceso y una clave secreta de AWS. Para obtener más información, consulta https://docs.netapp.com/us-en/console-setup-admin/task-adding-aws-accounts.html#add-the-credentials-to-an-existing-agent["Administra las credenciales de AWS y las suscripciones de Marketplace para NetApp Console"^].
+
+--
+====
+. Instala el agente de AWS:
++
+.. En la página *Detalles del agente de AWS*, configura o confirma el nombre de la instancia del agente y el rol del agente.
+.. En la página *Red*, selecciona VPC, subred, par de claves, comportamiento de IP pública y configuración de proxy.
+.. Configura el *grupo de seguridad*. Permite el tráfico entrante por HTTP (80), HTTPS (443) y SSH (22) para facilitar el acceso a la máquina virtual del agente con fines de resolución de problemas.
+
+
+. Revisa los resúmenes de las secciones y selecciona *Add* para desplegar.
++
+Para conocer todos los requisitos de red y permisos, consulta:
+
++
+** https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-aws-marketplace.html#step-1-set-up-networking["Configura la red para la implementación de AWS Marketplace"^]
+** https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-aws-marketplace.html#step-2-set-up-aws-permissions["Configura los permisos de AWS"^]
+** https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-aws.html["Referencia de permisos de AWS"^]
+
+
+. Sigue el cuadro de diálogo de progreso de la implementación hasta que finalice. Puedes expandir los registros de eventos para revisar la actividad detallada.
+
+
+.Después de terminar
+Una vez finalizada la implementación, puedes crear tu primer sistema Cloud Volumes ONTAP o quedarte en la página de Sistemas para añadir un sistema más adelante.
+
+
+
+[[add-your-first-cloud-volumes-ontap-system]]
+== Añade tu primer sistema Cloud Volumes ONTAP
+
+Una vez que el agente esté listo, crea tu primer sistema Cloud Volumes ONTAP en AWS.
+
+.Pasos
+. En la pantalla que aparece tras la instalación, selecciona *Add system*.
+. Inicia el flujo de trabajo de creación del sistema Cloud Volumes ONTAP.
+. Finaliza la configuración del sistema.
+
+
+Para obtener instrucciones detalladas sobre la implementación del sistema, consulta https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-quick-deploy-aws.html["Implementa Cloud Volumes ONTAP con Quick create"^].
+
+
+
+[[troubleshooting-and-recovery]]
+== Solución de problemas y recuperación
+
+Utiliza esta sección si abandonas el proceso de incorporación antes de completarlo o si falla la implementación del agente. Estos pasos te ayudan a retomar donde lo dejaste o a recuperarte e intentar de nuevo la implementación.
+
+
+
+[[resume-setup]]
+=== Reanudar configuración
+
+Si sales antes de finalizar, puedes reanudar la configuración desde el último paso completado.
+
+.Pasos
+. Ve a la página de inicio de NetApp Console.
+. Selecciona *Reanudar la configuración* para continuar con el proceso de incorporación.
+
+
+
+
+[[recover-from-deployment-failure]]
+=== Recupera de un fallo en la implementación
+
+Si falla la implementación:
+
+.Pasos
+. Descarga el informe de implementación.
+. Revisa tu configuración y los registros.
+. Selecciona *Empezar de nuevo* para volver a intentar la implementación.
++
+link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["Aprende a solucionar problemas relacionados con los agentes"^].
+
+
+
+.Enlaces relacionados
+Utiliza estos recursos para las tareas de configuración relacionadas y la resolución de problemas.
+
+* link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-aws-marketplace.html["Despliega un agente de NetApp Console desde el AWS Marketplace"^]
+* link:https://docs.netapp.com/us-en/console-setup-admin/task-adding-aws-accounts.html#subscribe["Configura una suscripción a AWS"^]
+* link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["Soluciona los problemas del agente de NetApp Console"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/["Documentación de Cloud Volumes ONTAP"^]
+

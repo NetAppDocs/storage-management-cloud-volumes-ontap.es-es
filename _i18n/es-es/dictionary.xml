@@ -7722,4 +7722,125 @@
   <block id="6663a337c6a8024d02aa9f2785f0f713" category="section-title">Habilita Azure AI Search</block>
   <block id="3a39d92162680621c6913009ec265358" category="list-text">Se ofrece una licencia gratuita de Cloud Volumes ONTAP para una capacidad aprovisionada de hasta 500 GiB, sin soporte de NetApp y sin fecha de caducidad. La capacidad que supere los 500 GiB requiere una licencia válida y puede conllevar cargos. Para acceder a la experiencia completa de Cloud Volumes ONTAP y a las capacidades avanzadas de gestión, conecta tu sistema Cloud Volumes ONTAP a la consola. La detección y gestión a través de la consola requieren una suscripción válida de Azure Marketplace asociada a tu cuenta de la consola.</block>
   <block id="6199597ffe2b56ead0cc4e51afe97353" category="list-text">Si tienes previsto detectar y gestionar el sistema implementado en la Console, asegúrate de que la cuenta de la Console esté asociada a una suscripción válida de Azure Marketplace. La detección del sistema en la Console requiere una suscripción válida.</block>
+  <block id="03646431a428b1129a0642a9e9a930d6" category="inline-link">Incorpora Cloud Volumes ONTAP desde AWS Marketplace</block>
+  <block id="22b14536778a26fb341e73c9dfc20414" category="list-text"><block ref="22b14536778a26fb341e73c9dfc20414" category="inline-link-rx"></block></block>
+  <block id="9a707d77cf426a13d6626ab2d67f565d" category="doc">Compatibilidad con las regiones Austria East y Belgium Central en Azure</block>
+  <block id="44e833213a99257d69192896111996f4" category="paragraph">Ya puedes implementar Cloud Volumes ONTAP 9.12.1 GA y versiones posteriores en las regiones Austria East (austriaeast) y Belgium Central (belgiumcentral) en Azure. Se admiten los siguientes tipos de implementación:</block>
+  <block id="1ee2856eba991f06fff41aa25f053f64" category="paragraph">También debes establecer la conectividad de salida hacia los siguientes puntos finales:</block>
+  <block id="0eda8bbe61d2248f5418aba76b8dc5b1" category="list-text">\https://api.workloads.netapp.com</block>
+  <block id="9f45fe3cd2af64a1afc3f4b7f81bdae6" category="list-text">\https://ws.workloads.bluexp.netapp.com</block>
+  <block id="69fad001104806c7d3df4d9a347564cb" category="inline-link-macro">Incorpora Cloud Volumes ONTAP en AWS Marketplace</block>
+  <block id="96b530e768c1d37cb28e1a93deb3f72b" category="paragraph">Puedes integrar Cloud Volumes ONTAP en AWS utilizando AWS Marketplace o la NetApp Console. La siguiente tabla ofrece a grandes rasgos las tareas que debes realizar para implementar Cloud Volumes ONTAP en AWS. La integración desde AWS Marketplace es un proceso simplificado que automatiza la implementación del agente de la Console y la asociación de la suscripción. Para obtener información sobre la incorporación desde AWS Marketplace, consulta <block ref="837547e59085e904a77e7f4e64639022" category="inline-link-macro-rx"></block>.</block>
+  <block id="dbf314f960a580dec77c3328f5a7dcfe" category="list-text">Si tienes previsto facturar la capacidad de Cloud Volumes ONTAP a través de la suscripción independiente de Cloud Volumes ONTAP en AWS marketplace, el sistema Cloud Volumes ONTAP debe usar un paquete compatible basado en capacidad (Essentials o Freemium). El paquete Professional no es compatible con la oferta independiente y sigue facturándose a través de la suscripción NIS. Después de seleccionar el paquete que quieres, usa *Preferencias de facturación* en NetApp Console para elegir la suscripción de marketplace que se usará para la facturación de Cloud Volumes ONTAP.</block>
+  <block id="a21deb009c8ff7309664108fdf426e10" category="summary">Suscríbete a Cloud Volumes ONTAP en AWS Marketplace y completa la configuración en NetApp Console, incluyendo la creación de la organización, la asociación de la suscripción, la implementación del agente y la creación del primer sistema.</block>
+  <block id="ce95e653013e10f07ac1b69529baf3bb" category="doc">Suscríbete e implementa Cloud Volumes ONTAP desde AWS Marketplace</block>
+  <block id="a56d9a462f5d920c9293b0c67186d9e1" category="paragraph">Suscríbete a Cloud Volumes ONTAP desde AWS Marketplace y deja que NetApp Console te guíe a lo largo del proceso de incorporación. Con un camino sencillo desde la suscripción hasta la implementación, puedes poner en marcha Cloud Volumes ONTAP rápidamente. La experiencia guiada simplifica el proceso desde la suscripción en AWS Marketplace hasta la implementación, ayudándote a implementar Cloud Volumes ONTAP sin que necesites tener amplios conocimientos sobre la nube o ONTAP.</block>
+  <block id="6a38f577211073eeb02102781c7a7724" category="paragraph">La suscripción y la implementación de Cloud Volumes ONTAP desde AWS Marketplace incluyen estos pasos:</block>
+  <block id="9d45170ac0ac56a9ff0cb7cc857e63f0" category="list-text">Suscripción a Cloud Volumes ONTAP en AWS Marketplace.</block>
+  <block id="02ab25857b97c370d093230f750bedf8" category="list-text">Regístrate en la NetApp Console.</block>
+  <block id="07fed0f9fcd003852926ec161d68a5ed" category="list-text">Crear tu organización (si es necesario) y asociar la suscripción del marketplace.</block>
+  <block id="a5dea32886a7e080be6f9329f1fb446a" category="list-text">Implementación de un agente de Console en AWS.</block>
+  <block id="aff1b02ecbb84d53a7ea17d4cd323753" category="list-text">Añadiendo tu primer sistema Cloud Volumes ONTAP.</block>
+  <block id="1216ca4f430de5c3a0d9702bcbabaa02" category="paragraph">La incorporación simplificada ofrece una implementación automatizada de agentes con una intervención mínima por tu parte para la asociación de suscripciones, la configuración de roles de IAM, el aprovisionamiento de agentes y la inicialización del sistema. La orquestación de backend se encarga automáticamente de la creación de la pila de CloudFormation, la validación de la conectividad VPC y las dependencias de recursos. Esto reduce los pasos de configuración manual y las transiciones entre pantallas, así puedes implementar Cloud Volumes ONTAP más rápido, con menos errores de configuración e interrupciones. A medida que avanzas en la implementación, puedes seguir tu progreso en el panel de la derecha.</block>
+  <block id="d102ad960823e2e5bdf818a47be9d5b3" category="paragraph">Revisa estos requisitos previos antes de iniciar el proceso de incorporación.</block>
+  <block id="172b7630d3591caad16d4e53bb8caa5b" category="list-text">Necesitas una cuenta de AWS con permisos para suscribirte en AWS Marketplace. Para utilizar la configuración automática de IAM, debes ser administrador de AWS o tener los permisos que se muestran abajo.</block>
+  <block id="6a5a62604841f01985bd66ce12b68800" category="list-text">Puedes crear o utilizar roles de IAM en AWS para la implementación de agentes.</block>
+  <block id="48a51e79fb6a62108e71ba7e037a9b37" category="list-text">Puedes iniciar sesión o crear una cuenta en la NetApp Console.</block>
+  <block id="09f8a40b3c8ade5b73c631a145579e8d" category="inline-link-macro">Despliega un agente de NetApp Console desde el AWS Marketplace</block>
+  <block id="2884c4b8debb63cfcef54c15dde97b1f" category="paragraph">Para conocer todos los requisitos previos para la implementación del agente de AWS, consulta <block ref="d87c3906dbbd3aa004bc4ac3ab4610c2" category="inline-link-macro-rx"></block>.</block>
+  <block id="f444f7c358bbe34ac520595600b8b22c" category="section-title">Suscríbete en AWS Marketplace</block>
+  <block id="c8a45b103b3411fa57280389e905876d" category="paragraph">Comienza el proceso de incorporación buscando la oferta de Cloud Volumes ONTAP en AWS Marketplace.</block>
+  <block id="d30611ae1c4aa386020b8e622fda43df" category="list-text">Ve a AWS Marketplace usando tu cuenta de AWS.</block>
+  <block id="65a60fa3ef358594aeb5c3013a500873" category="list-text">Busca la oferta de NetApp Cloud Volumes ONTAP. Hay dos ofertas de Cloud Volumes ONTAP en AWS Marketplace:</block>
+  <block id="6bf9cb27d1125662310a04223e3dedcf" category="list-text">La oferta independiente para las suscripciones anuales a Cloud Volumes ONTAP</block>
+  <block id="fdfb3edef005048dd4efa8424b37cd80" category="list-text">La oferta combinada NetApp Intelligent Service (NIS) para los servicios de datos de NetApp y las suscripciones a Cloud Volumes ONTAP. Elige la oferta _independiente_ para este flujo de trabajo de incorporación.</block>
+  <block id="a4cede66de2477ac18bbdee0f03c3b4b" category="list-text">Revisa los detalles del anuncio y las condiciones de precio.</block>
+  <block id="885d2379a584c302d318353e375f294c" category="list-text">Suscríbete y finaliza el proceso de compra.</block>
+  <block id="f1b64129ed9863a99f0398b63b8a21eb" category="list-text">Después de suscribirte, AWS te redirige a la página de registro o inicio de sesión de la Consola.</block>
+  <block id="af9938b36ef2a60606b45bb8ffe35344" category="section-title">Regístrate o inicia sesión en NetApp Console</block>
+  <block id="96b3a57bf37c129501b50b711ec35358" category="paragraph">Accede a la consola para continuar con la configuración una vez que hayas completado la suscripción al marketplace.</block>
+  <block id="e7d1b65dd28597571fba7d964af5a41c" category="list-text">En la página Console, selecciona una:</block>
+  <block id="df754221abc49063bd0903d180e996c6" category="list-text">*Regístrate* si eres un usuario nuevo.</block>
+  <block id="7056635c8b9f8d28fc7e21996cb93294" category="list-text">*Inicia sesión en NetApp Console* si ya tienes una cuenta.</block>
+  <block id="115e2aa74ec72f678a8f9c0ff8a23d84" category="list-text">Si has seleccionado *Sign up*, sigue estos pasos:</block>
+  <block id="0ed642aae1713d162a22c10261227792" category="list-text">Rellena los campos obligatorios:</block>
+  <block id="ce8ae9da5b7cd6c3df2929543a9af92d" category="list-text">Correo electrónico</block>
+  <block id="dc647eb65e6711e155375218212b3964" category="list-text">Password</block>
+  <block id="f11b368cddfe37c47af9b9d91c6ba4f0" category="list-text">Nombre completo</block>
+  <block id="1c76cbfe21c6f44c1d1e59d54f3e4420" category="list-text">Empresa</block>
+  <block id="59716c97497eb9694541f7c3d37b1a4d" category="list-text">País</block>
+  <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">Selecciona *Siguiente*.</block>
+  <block id="39f666f68e0b42f2f9f878864293d3b0" category="list-text">Opcional: introduce tus datos de contacto, como la dirección, la ciudad, la provincia, el código postal y el número de teléfono.</block>
+  <block id="7408a50737fd936622eeec54bbeb439c" category="list-text">Selecciona *Sign up*.</block>
+  <block id="84f2c0f29bde8033b3d6707753db6bc8" category="list-text">Acepta los términos de la licencia.</block>
+  <block id="606b520330e1b3dd8468aa4c696f320b" category="list-text">Verifica tu dirección de correo electrónico usando el mensaje de service@console.netapp.com.</block>
+  <block id="e01bdff1ce4770f66f1a74a9b5892c8b" category="list-text">Inicia sesión en la Console y completa la autenticación.</block>
+  <block id="ac9188736d7d24740d106bad6d2f1a24" category="section-title">Crea tu organización</block>
+  <block id="db32d51e7a32c3835f9ca7138ba5e779" category="paragraph">Realiza este paso solo si eres un usuario nuevo o si aún no formas parte de una organización de NetApp Console.</block>
+  <block id="dfa6580bc43676ec0428470c4226197e" category="paragraph">Si ya formas parte de una organización, omite esta sección y continúa en <block ref="5a5b9f60942f56579652f4a550dadca9" category="inline-xref-macro-rx"></block>.</block>
+  <block id="b60fce2f30234b8c655d26812f8d684c" category="paragraph">Crea una organización para gestionar usuarios, roles, permisos, licencias y sistemas.</block>
+  <block id="4c27c7ddbdd91ad9f40d0e69913d02f8" category="list-text">Introduce el nombre de una organización.</block>
+  <block id="340e0bcb7d46eb5bd14fee5c751d3175" category="list-text">Opcional: vincula una cuenta de NetApp Support Site (NSS).</block>
+  <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">Selecciona *Crear*.</block>
+  <block id="34c93ad83166c6e80fe3fea1d5eaa0df" category="section-title">Vincula tu suscripción</block>
+  <block id="e7044d37a1ed84ca9f7caa2b9d24ef7f" category="paragraph">Después de que creas tu organización, la Console intenta automáticamente vincular tu suscripción del marketplace a la organización.</block>
+  <block id="3bdc84428bee979e77f1781f40304f42" category="inline-link-macro">Aprende a gestionar las suscripciones</block>
+  <block id="6038ef325e8557cc84b0ef6c053a062d" category="paragraph">Si la asociación automática falla, asocia manualmente tu suscripción. <block ref="31ece82e919075b6d4fa8e64ff8627ac" category="inline-link-macro-rx"></block>.</block>
+  <block id="999c350fcbd9f270e794eb9f39020947" category="section-title">Implementa un agente de Console en AWS</block>
+  <block id="5cb502f88565459be3dfd091651deb1b" category="paragraph">Después de asociar la suscripción, la consola abre automáticamente el flujo de implementación del agente para gestionar tus recursos de AWS y sistemas Cloud Volumes ONTAP.</block>
+  <block id="0e5a6ed81e42dfb7b8082abc4bd85af9" category="inline-link-macro">Referencia de permisos de AWS</block>
+  <block id="57a69cea62fbfee2c988421746b5ec77" category="paragraph">Para obtener más información sobre los permisos que se utilizan durante la implementación del agente, consulta <block ref="8640373d61143a22452f799c5e012ff9" category="inline-link-macro-rx"></block>.</block>
+  <block id="b11b04338f764b72f59f7c3db188b3ad" category="list-text">Puedes seguir los pasos indicados en la página de introducción para obtener los permisos mínimos necesarios para implementar un agente, o bien continuar para crear automáticamente un rol para la implementación del agente.</block>
+  <block id="701ad266790171c293af9ebdab49b1dd" category="list-text">En la página *Credenciales de AWS*, selecciona una de las siguientes opciones para proporcionar credenciales para la implementación del agente:</block>
+  <block id="f6775e307e0e96c3d2d2aa4261c2dc06" category="open-title">Crea un rol para mí (recomendado)</block>
+  <block id="7d1dd887a48c9c23271325fc57dc9b7d" category="paragraph">Al seleccionar esta opción, se abre un flujo de creación rápida de AWS CloudFormation para crear el rol de implementación del agente. Si eres un usuario con privilegios de administrador, puedes usar esta opción para emplear automáticamente una pila de CloudFormation para crear la política, el rol y autenticar al usuario para crear el agente.</block>
+  <block id="947040282161ce63e6c467b9272f0987" category="list-text">Agrega el ID de la cuenta de AWS y, si lo deseas, el ID externo. La Console establece un nombre de rol por defecto.</block>
+  <block id="058984dad8b35b2edf4e90cc0d99e422" category="list-text">Acepta las condiciones y selecciona *Crear stack*.</block>
+  <block id="dd9b75b6f9c28d257df9b082c4cd3f22" category="inline-image-macro">width=50% Captura de pantalla de la página de creación de la pila de AWS CloudFormation donde introduces el ID de la cuenta de AWS y, opcionalmente, el ID externo para el rol de implementación del agente.</block>
+  <block id="cb8aa7095d78f4373b1a7bc44eb8ccc3" category="paragraph"><block ref="cb8aa7095d78f4373b1a7bc44eb8ccc3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1a8675104d64ecc19112dddcea8c45b8" category="list-text">Cuando se haya configurado el rol de IAM en AWS y se haya generado el ARN, confirma y guarda el rol.</block>
+  <block id="c922cc18eca71598d4a86b7707d7eba0" category="open-title">Asumir rol</block>
+  <block id="6a2a0f10cb2f085ebdbde5eebef49a3e" category="paragraph">Esto forma parte del flujo de trabajo de asignación manual de roles. Introduce el ARN de un rol de IAM ya existente. Para obtener información sobre cómo editar este rol, consulta<block ref="4d74176964b79f9dc8cf6e9b4edd3262" category="inline-link-rx"></block>.</block>
+  <block id="e656cb1ebc2e559e3bcc2002585434ed" category="open-title">Claves AWS</block>
+  <block id="dfb7a0fc5277c45a86764545309957ce" category="paragraph">Esto forma parte del flujo de trabajo de asignación manual de roles. Introduce una clave de acceso y una clave secreta de AWS. Para obtener más información, consulta<block ref="075c8733f05483e5267d384d7c0db32a" category="inline-link-rx"></block>.</block>
+  <block id="68ff9a106c651bd2460baf0343787e09" category="list-text">Instala el agente de AWS:</block>
+  <block id="bb65b2f90c49dcd84ae767d9f986f148" category="list-text">En la página *Detalles del agente de AWS*, configura o confirma el nombre de la instancia del agente y el rol del agente.</block>
+  <block id="4d3d862d7ac1ef0cd306cce2d43b61c6" category="list-text">En la página *Red*, selecciona VPC, subred, par de claves, comportamiento de IP pública y configuración de proxy.</block>
+  <block id="0cb0d7dbb504e41f0b9980e3f106ae8e" category="list-text">Configura el *grupo de seguridad*. Permite el tráfico entrante por HTTP (80), HTTPS (443) y SSH (22) para facilitar el acceso a la máquina virtual del agente con fines de resolución de problemas.</block>
+  <block id="e60a9f11dba1e6072ec9503cca905c92" category="list-text">Revisa los resúmenes de las secciones y selecciona *Add* para desplegar.</block>
+  <block id="3ed9f44843bea0baa9e9721e607d24c2" category="paragraph">Para conocer todos los requisitos de red y permisos, consulta:</block>
+  <block id="ef9fe436c6881c3aeb226ecf309827f0" category="inline-link">Configura la red para la implementación de AWS Marketplace</block>
+  <block id="13ccd8cfe31fc2437285f8fa41bb39d0" category="list-text"><block ref="13ccd8cfe31fc2437285f8fa41bb39d0" category="inline-link-rx"></block></block>
+  <block id="2d3fc94cd0898448a15e6e05f4098b6f" category="inline-link">Configura los permisos de AWS</block>
+  <block id="57d5f449d9cc74edd78470cc9873c16e" category="list-text"><block ref="57d5f449d9cc74edd78470cc9873c16e" category="inline-link-rx"></block></block>
+  <block id="43663d02f9f2280fb62656e0e2171f96" category="list-text"><block ref="43663d02f9f2280fb62656e0e2171f96" category="inline-link-rx"></block></block>
+  <block id="7ac3658f7b2ea40441a46f7d503df9d6" category="list-text">Sigue el cuadro de diálogo de progreso de la implementación hasta que finalice. Puedes expandir los registros de eventos para revisar la actividad detallada.</block>
+  <block id="40b1bbcf1d63550b5ee1a9ca612f354d" category="paragraph">Una vez finalizada la implementación, puedes crear tu primer sistema Cloud Volumes ONTAP o quedarte en la página de Sistemas para añadir un sistema más adelante.</block>
+  <block id="63919d343a2d06159ee93f9535a4ca2e" category="section-title">Añade tu primer sistema Cloud Volumes ONTAP</block>
+  <block id="e1373b355aa6da2aad7bba187ff4e9f2" category="paragraph">Una vez que el agente esté listo, crea tu primer sistema Cloud Volumes ONTAP en AWS.</block>
+  <block id="b0845b98104086e018330dff1f994b3a" category="list-text">En la pantalla que aparece tras la instalación, selecciona *Add system*.</block>
+  <block id="beec7c8b8f52f7e44dec39ce075d3abb" category="list-text">Inicia el flujo de trabajo de creación del sistema Cloud Volumes ONTAP.</block>
+  <block id="e4998cdb09fc1ae76d7c7b0f97a04fd9" category="list-text">Finaliza la configuración del sistema.</block>
+  <block id="8dbb4c9a73791ff9189a74648db065ad" category="paragraph">Para obtener instrucciones detalladas sobre la implementación del sistema, consulta<block ref="3bd26a21bb4b5b57e3e4e28150d4f309" category="inline-link-rx"></block>.</block>
+  <block id="72d7b93cee23363a2907b2be8b237290" category="section-title">Solución de problemas y recuperación</block>
+  <block id="cb1bc5edf506394ee9927cb447901c17" category="paragraph">Utiliza esta sección si abandonas el proceso de incorporación antes de completarlo o si falla la implementación del agente. Estos pasos te ayudan a retomar donde lo dejaste o a recuperarte e intentar de nuevo la implementación.</block>
+  <block id="90a521d73cad15b4a353df47ccdc06d8" category="section-title">Reanudar configuración</block>
+  <block id="e933831d8f6e421c7eea9aa2e2c76bb9" category="paragraph">Si sales antes de finalizar, puedes reanudar la configuración desde el último paso completado.</block>
+  <block id="e440edd270e603c687695db87b77144a" category="list-text">Ve a la página de inicio de NetApp Console.</block>
+  <block id="733fbe662fa606d61fff360b4b1246b5" category="list-text">Selecciona *Reanudar la configuración* para continuar con el proceso de incorporación.</block>
+  <block id="2a208a77ab0c5ca79397c57987de1a1a" category="section-title">Recupera de un fallo en la implementación</block>
+  <block id="628f962201a560f694204274ce3d88ec" category="paragraph">Si falla la implementación:</block>
+  <block id="1b523bb53ad2000e3344ff316e869855" category="list-text">Descarga el informe de implementación.</block>
+  <block id="07be83ce12a3bf78ef715d65c6c54020" category="list-text">Revisa tu configuración y los registros.</block>
+  <block id="160e5aa077c7539416162287f02990f8" category="list-text">Selecciona *Empezar de nuevo* para volver a intentar la implementación.</block>
+  <block id="d2cfcb99c2e8baa996b4db2415ca247d" category="inline-link-macro">Aprende a solucionar problemas relacionados con los agentes</block>
+  <block id="69adeb1c49bb37715a017c9a902b7d1d" category="paragraph"><block ref="61813908742cfb0bf968ca5176776caa" category="inline-link-macro-rx"></block>.</block>
+  <block id="8c157a27a72f45bb42efe091d45115ef" category="paragraph">Utiliza estos recursos para las tareas de configuración relacionadas y la resolución de problemas.</block>
+  <block id="d87c3906dbbd3aa004bc4ac3ab4610c2" category="list-text"><block ref="d87c3906dbbd3aa004bc4ac3ab4610c2" category="inline-link-macro-rx"></block></block>
+  <block id="ff462988ef2bf728297fe5ed85ddc08d" category="inline-link-macro">Configura una suscripción a AWS</block>
+  <block id="187e653c7125a081fc8f4c8454b7978a" category="list-text"><block ref="187e653c7125a081fc8f4c8454b7978a" category="inline-link-macro-rx"></block></block>
+  <block id="2639be1d095a58dd96a72a823ff1b61b" category="inline-link-macro">Soluciona los problemas del agente de NetApp Console</block>
+  <block id="a610575fc8363bddd388bfee0dc0a7ee" category="list-text"><block ref="a610575fc8363bddd388bfee0dc0a7ee" category="inline-link-macro-rx"></block></block>
+  <block id="43026f5cdef9b8d7671a52ecabf5bea0" category="list-text"><block ref="43026f5cdef9b8d7671a52ecabf5bea0" category="inline-link-rx"></block></block>
+  <block id="f6bbe5efd3f2141104f822ac01ed3102" category="section-title">25 de agosto de 2026</block>
 </blocks>

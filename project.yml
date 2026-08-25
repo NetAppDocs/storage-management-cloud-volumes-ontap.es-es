@@ -61,6 +61,8 @@ sidebar:
     - title: Implementar en Amazon Web Services
       flavor: aws
       entries:
+      - title: Incorpora Cloud Volumes ONTAP desde AWS Marketplace
+        url: "/task-onboard-cvo-aws-marketplace.html"
       - title: Resumen de la implementación
         url: "/task-getting-started-aws.html"
       - title: Planifique su configuración
