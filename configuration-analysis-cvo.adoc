@@ -81,6 +81,10 @@ Programa instantáneas locales para realizar copias de seguridad eficaces y rest
 +
 El uso de la capacidad del nivel de almacenamiento SSD no debe superar el 80 %. Esto podría afectar las lecturas y escrituras de datos en tu nivel de almacenamiento de grupo de capacidad y afectar la capacidad de rendimiento de tu sistema. Cuando se agota la capacidad, los volúmenes de datos pasan a ser de solo lectura. Los servicios que intentan escribir nuevos datos también fallan.
 
+* *Replicación de datos remota*
++
+Protege tus datos de Cloud Volumes ONTAP mediante la replicación remota. La replicación de datos remota ofrece capacidades de recuperación ante desastres al mantener copias sincronizadas de tus datos en diferentes ubicaciones, lo que garantiza la continuidad del negocio en caso de fallos del sistema o desastres.
+
 
 
 
