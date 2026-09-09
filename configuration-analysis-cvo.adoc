@@ -14,7 +14,7 @@ summary: El panel de control bien diseñado en la NetApp Console analiza periód
 
 
 [role="lead"]
-El panel de control bien diseñado en la NetApp Console analiza periódicamente las configuraciones de los sistemas de almacenamiento para determinar si hay problemas de configuración en tus sistemas Cloud Volumes ONTAP. Cuando se encuentran problemas, el panel te muestra cuáles son y te explica qué necesitas cambiar para asegurar que tus sistemas de almacenamiento logren el máximo rendimiento, eficiencia de costos y cumplimiento con las mejores prácticas.
+Workload Factory analiza periódicamente las configuraciones de los sistemas de almacenamiento para determinar si hay problemas de configuración en tus sistemas Cloud Volumes ONTAP. Cuando se detectan problemas, el panel de control well-architected muestra cuáles son y te da recomendaciones sobre lo que necesitas cambiar para asegurarte de que tus sistemas de almacenamiento logren el máximo rendimiento, sean rentables y cumplan con las mejores prácticas.
 
 Las capacidades clave incluyen:
 
