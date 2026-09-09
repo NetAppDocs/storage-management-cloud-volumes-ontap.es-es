@@ -65,7 +65,7 @@ Seleccione la pestaña Volúmenes y haga clic en *Agregar volumen*.image:screens
 --
 .Agregado específico
 --
-.. En la pestaña *Agregados*, vaya al agregado requerido y haga clic en elimage:icon-action.png[""] icono.
+.. En la pestaña *Agregados*, ve al agregado que necesites y haz clic en el icono image:icon-action.png["Un icono que muestra tres puntos horizontales para acciones adicionales"].
 .. Seleccione *Agregar volumen*.image:screenshot_add_volume_button_agg.png["Una captura de pantalla del botón Agregar volumen en la pestaña Agregados."]
 
 

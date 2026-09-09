@@ -71,7 +71,7 @@ Debe tener asignados privilegios de administrador de cuenta o organización para
 
 .Pasos
 . Desde el panel de navegación izquierdo, vaya a *Administración > Agentes*.
-. Haga clic en elimage:icon-action.png[""] icono del agente de consola requerido y seleccione *Editar agente de consola*.
+. Haz clic en el icono image:icon-action.png["Un icono que muestra tres puntos horizontales para acciones adicionales"] del agente de consola que necesites y selecciona *Editar agente de consola*.
 . En *Forzar credenciales de usuario*, seleccione la casilla de verificación *Habilitar/Deshabilitar*.  De forma predeterminada, la autenticación está deshabilitada.
 +
 

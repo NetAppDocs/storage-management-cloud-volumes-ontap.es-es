@@ -1988,7 +1988,6 @@
   <block id="5ad10cfb674234136c181d096cb59522" category="paragraph-title">Permisos necesarios</block>
   <block id="99bdfb197101bf876ef3b087827beaa4" category="paragraph">Debe tener asignados privilegios de administrador de cuenta o organización para modificar la configuración del agente de la consola para la autenticación de usuarios de Cloud Volumes ONTAP .</block>
   <block id="aa2199cb1bb818eb2b3b90d201502840" category="list-text">Desde el panel de navegación izquierdo, vaya a *Administración &gt; Agentes*.</block>
-  <block id="e9c35a16cf306867e850f1a072befe88" category="list-text">Haga clic en el<block ref="6b6d595755b48ff08cea04127d7784c8" category="inline-image-macro-rx" type="image"></block> icono del agente de consola requerido y seleccione *Editar agente de consola*.</block>
   <block id="ef46255365b3e47560b36ea8589d2d00" category="list-text">En *Forzar credenciales de usuario*, seleccione la casilla de verificación *Habilitar/Deshabilitar*.  De forma predeterminada, la autenticación está deshabilitada.</block>
   <block id="1c969f0ef9143d2554b1ddaa0d92382f" category="admonition">Si establece este valor en *Habilitar*, se restablece la autenticación y debe modificar los flujos de trabajo existentes para adaptarlos a este cambio.</block>
   <block id="4cc186df234138a57b2e8c5d8e5f7f8d" category="list-text">Haga clic en *Guardar*.</block>
@@ -2258,7 +2257,6 @@
   <block id="c33283e89e8cd329189a883e4e8f4053" category="list-text">Debe contener al menos una letra y un dígito en inglés.</block>
   <block id="c2ffca846e9e6726f5fcc838afa7cba5" category="list-text">No debe contener estos caracteres especiales:<block ref="4981b6e6dc1b6d6cbf5e189886588934" prefix=" " category="inline-code"></block></block>
   <block id="a42cd27291aedcf9964de9d89624ec1e" category="list-text">En la página *Sistemas*, haga doble clic en el nombre del sistema Cloud Volumes ONTAP .</block>
-  <block id="7cf6d09f6c35b61322fde4c0dd11570b" category="list-text">En la parte superior derecha de la consola, haga clic en el icono<block ref="6b6d595755b48ff08cea04127d7784c8" category="inline-image-macro-rx" type="image"></block> icono y seleccione *Establecer contraseña*.</block>
   <block id="cde648cfec6a9f1a0f5bbf7f5083336a" category="inline-image-macro">Una captura de pantalla que muestra el menú disponible en el sistema que contiene la acción Establecer contraseña.</block>
   <block id="d1c167c796401c671e613bfcd1fbf5bb" category="paragraph"><block ref="d1c167c796401c671e613bfcd1fbf5bb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4760896a3351a42c072a61eb664108e5" category="summary">Puede modificar las tablas de rutas de AWS que incluyen rutas a las direcciones IP flotantes para un par de alta disponibilidad implementado en varias zonas de disponibilidad de AWS.  Puede hacer esto si los nuevos clientes NFS o CIFS necesitan acceder a un par HA en AWS.</block>
@@ -2384,7 +2382,6 @@
   <block id="e6441a36027812e99b99675afebb1ad3" category="inline-image-macro">Una captura de pantalla del botón Agregar volumen en la pestaña Descripción general.</block>
   <block id="57558e515c4178f1c27c4fe21e349c6e" category="paragraph">Seleccione la pestaña Volúmenes y haga clic en *Agregar volumen*.<block ref="d66b0ca71189f0ddd53cd4b3e65bbf57" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8f16078272611a0f4398b213c95246b5" category="open-title">Agregado específico</block>
-  <block id="885da3b95c056e70931f65a33ea17088" category="list-text">En la pestaña *Agregados*, vaya al agregado requerido y haga clic en el<block ref="6b6d595755b48ff08cea04127d7784c8" category="inline-image-macro-rx" type="image"></block> icono.</block>
   <block id="d67d87305db3f29260c81473dd44e3f1" category="inline-image-macro">Una captura de pantalla del botón Agregar volumen en la pestaña Agregados.</block>
   <block id="5ff758746d0b8603d8e7cc0736b6b8d3" category="list-text">Seleccione *Agregar volumen*.<block ref="90511a2a61b219fe659f6c6204d0e9f4" category="inline-image-macro-rx" type="image"></block></block>
   <block id="108a74a6cbb575c986177039e07dc411" category="list-text">Siga los pasos del asistente para crear el volumen.</block>
@@ -2498,7 +2495,6 @@
   <block id="488113528f5ee1e3b5937164669d88a3" category="paragraph"><block ref="f7cdf513db892a96f724bb06e033cc0c" category="inline-link-rx"></block> .</block>
   <block id="6c40837b72d70ae6b7038522183754a0" category="list-text">Eliminar el sistema Cloud Volumes ONTAP .</block>
   <block id="3b90b5540ed00f0b6c6dc889f298934c" category="list-text">En la página *Sistemas*, haga doble clic en el nombre del sistema Cloud Volumes ONTAP que desea eliminar.</block>
-  <block id="393fcf44f13dc33611e68af462aa0b09" category="list-text">En la parte superior derecha de la consola, haga clic en el icono<block ref="6b6d595755b48ff08cea04127d7784c8" category="inline-image-macro-rx" type="image"></block> icono y seleccione *Eliminar*.</block>
   <block id="efeb08d04d298bc5a7cab7297e3e33d3" category="list-text">Escriba el nombre del sistema que desea eliminar y luego haga clic en *Eliminar*.  Eliminar un sistema puede tardar hasta cinco minutos.</block>
   <block id="3264c8e5645849e735efbc7fb5a89023" category="admonition">La copia de seguridad y la recuperación son gratuitas solo para las licencias profesionales de Cloud Volumes ONTAP . Este beneficio gratuito no se aplica a entornos eliminados.  Si se conservan copias de seguridad del entorno de Cloud Volumes ONTAP en una instancia de Backup and Recovery, se le cobrará por las copias de seguridad hasta que se eliminen.</block>
   <block id="956ed8c59362d82aacc7c1ccc24ee128" category="doc">Implementar pares de Cloud Volumes ONTAP HA en una subred compartida de AWS</block>
@@ -2922,7 +2918,6 @@
   <block id="c49bf5e025cb6e60256e27b50c1e1d7c" category="paragraph">Si su negocio lo requiere, puede cambiar una configuración en la consola para que configure Cloud Volumes ONTAP para usar puntos de conexión de servicio en lugar de un Azure Private Link.  Cambiar esta configuración se aplica a los nuevos sistemas Cloud Volumes ONTAP que usted cree.  Los puntos finales de servicio solo se admiten en<block ref="143d2b52aa05d0c2b5e02a98661c9a57" category="inline-link-macro-rx"></block> entre el agente de consola y las redes virtuales de Cloud Volumes ONTAP .</block>
   <block id="573514d5de621ecfe56c91e7c665d73d" category="inline-link">Par de regiones de Azure</block>
   <block id="1f370e761acf121f11e5a9650fea6600" category="paragraph">El agente de consola debe implementarse en la misma región de Azure que los sistemas Cloud Volumes ONTAP que administra, o en la<block ref="71e0e9a7366955554f0600c5ea8cfc7f" category="inline-link-rx"></block> para los sistemas Cloud Volumes ONTAP .</block>
-  <block id="33059c41e16db33fd5a113bc9f3f1cde" category="list-text">Haga clic en el<block ref="6b6d595755b48ff08cea04127d7784c8" category="inline-image-macro-rx" type="image"></block> Icono del agente de consola que administra su sistema Cloud Volumes ONTAP .</block>
   <block id="945a3e63731f2e910aa6dad34b34ef5c" category="list-text">Seleccione *Configuración de Cloud Volumes ONTAP *.</block>
   <block id="13cdcbf94ff7381b25ca5784f874a9b6" category="image-alt">Una captura de pantalla de la opción Configuración de Cloud Volumes ONTAP en el ícono Configuración.</block>
   <block id="6c00fef2e24946332c58419df6198320" category="list-text">En *Azure*, haga clic en *Usar vínculo privado de Azure*.</block>
@@ -3260,13 +3255,10 @@
   <block id="a760d335f1fa2810727ed37789f5c213" category="paragraph">Si un agregado se está quedando sin espacio, puede mover volúmenes a otro agregado mediante ONTAP System Manager.</block>
   <block id="b796592de2543966990a29ebd9095cc4" category="list-text">En la página *Sistemas*, haga doble clic en el sistema Cloud Volumes ONTAP en el que desea administrar los agregados.</block>
   <block id="79636f7c0017220661389c2b9ab4bf56" category="list-text">Desde los detalles del sistema, haga clic en la pestaña *Agregados*.</block>
-  <block id="8aea04863be513559539bc0ead95e239" category="list-text">Para el agregado requerido, haga clic en el<block ref="6b6d595755b48ff08cea04127d7784c8" category="inline-image-macro-rx" type="image"></block> Icono para las acciones de gestión.</block>
   <block id="4940ff7a33940e4ec33b7d78f146648a" category="inline-image-macro">Una captura de pantalla de las opciones del menú Agregados.</block>
   <block id="65c989c474db774160c441e94f03ddfc" category="paragraph"><block ref="65c989c474db774160c441e94f03ddfc" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ec57ef43a7af45349f5933a166eab707" category="list-text">Gestiona tus agregados desde las opciones disponibles en el<block ref="6b6d595755b48ff08cea04127d7784c8" category="inline-image-macro-rx" type="image"></block> menú.</block>
   <block id="e83630b8e6273107e391f5f81a2bb56e" category="admonition">Para agregar discos a un agregado, todos los discos del agregado deben ser del mismo tamaño.</block>
   <block id="1fa9cab08589734f915412a3b0a337b1" category="paragraph">Para AWS, puede aumentar la capacidad de un agregado que admita volúmenes elásticos de Amazon EBS.</block>
-  <block id="151a2b996e176a433417676f36db61d2" category="list-text">Bajo el<block ref="6b6d595755b48ff08cea04127d7784c8" category="inline-image-macro-rx" type="image"></block> Menú, haga clic en *Aumentar capacidad*.</block>
   <block id="cacd62863a1aec474ea14c7ba39b9f28" category="list-text">Ingrese la capacidad adicional que desea agregar y luego haga clic en *Aumentar*.</block>
   <block id="f21c1bc5bcee9dae9d5eb025e4c6d884" category="paragraph">Tenga en cuenta que debe aumentar la capacidad del agregado en un mínimo de 256 GiB o el 10 % del tamaño del agregado.  Por ejemplo, si tiene un agregado de 1,77 TiB, el 10 % es 181 GiB.  Esto es inferior a 256 GiB, por lo que el tamaño del agregado debe incrementarse al mínimo de 256 GiB.</block>
   <block id="2eb14dc3edd9fb392b8095df85f2f222" category="summary">Administre sus licencias basadas en capacidad desde la NetApp Console para garantizar que su cuenta de NetApp tenga suficiente capacidad para sus sistemas Cloud Volumes ONTAP .</block>
@@ -3408,7 +3400,6 @@
   <block id="34b14acb1a2ab9863c3c5dad4fd43a16" category="paragraph">Por ejemplo, la información avanzada debería decir algo similar a lo siguiente: El agregado aggr1 ha alcanzado su límite de capacidad.</block>
   <block id="d741de259d45adde48602bde8af2fa1e" category="list-text">Identifique uno o más volúmenes para sacar del agregado:</block>
   <block id="917f77e19bd3db27edc6b2340ea3a7d9" category="list-text">En el sistema Cloud Volumes ONTAP , haga clic en la pestaña *Agregados*.</block>
-  <block id="a69fa2e48e8044b3b57c3421102c3175" category="list-text">En el mosaico agregado, haga clic en el<block ref="6b6d595755b48ff08cea04127d7784c8" category="inline-image-macro-rx" type="image"></block> icono y luego haga clic en *Ver detalles agregados*.</block>
   <block id="6d2e07ae8aec14e8c7f5862f9a6a5ade" category="list-text">En la pestaña *Descripción general* de la pantalla *Detalles agregados*, revise el tamaño de cada volumen y elija uno o más volúmenes para sacar del agregado.</block>
   <block id="1ac63b40afca7dec0b6be58237e990c5" category="paragraph">Debe elegir volúmenes que sean lo suficientemente grandes como para liberar espacio en conjunto y así evitar problemas de capacidad adicionales en el futuro.</block>
   <block id="a996d75e91b5144977f6dd124cd75572" category="image-alt">Descripción general del volumen de agregación de captura de pantalla</block>
@@ -3439,10 +3430,8 @@
   <block id="a0147f320461b84bd766277daa455d28" category="paragraph">Es necesario mover dos o más volúmenes para evitar problemas de capacidad; sin embargo, la consola no puede realizar esta acción por usted.</block>
   <block id="b9caee734c459ea1d440e0f169eb1723" category="list-text">Verifique si un agregado existente tiene capacidad disponible para los volúmenes que necesita mover:</block>
   <block id="9b7369571b345d669d0e974c6d79076e" category="list-text">En el sistema Cloud Volumes ONTAP , haga clic en la *pestaña Agregados*.</block>
-  <block id="e43e4bac47c138747571cc56cc7c9284" category="list-text">En el mosaico agregado requerido, haga clic en el<block ref="6b6d595755b48ff08cea04127d7784c8" category="inline-image-macro-rx" type="image"></block> icono y luego *Ver detalles agregados* para ver la capacidad disponible (tamaño aprovisionado menos capacidad agregada utilizada).</block>
   <block id="e40eb63a3506950ad93ba909dcf25c90" category="image-alt">capacidad agregada de captura de pantalla</block>
   <block id="b8bd018e0e8deb966bda4a09610591ac" category="list-text">Si es necesario, agregue discos a un agregado existente:</block>
-  <block id="421d1b5c36149f9bc417af02cf7c2124" category="list-text">Seleccione el agregado y luego haga clic en el<block ref="6b6d595755b48ff08cea04127d7784c8" category="inline-image-macro-rx" type="image"></block> icono &gt; *Agregar discos*.</block>
   <block id="3425dbe0168b60aed62d54b2290baad1" category="list-text">Seleccione la cantidad de discos que desea agregar y luego haga clic en *Agregar*.</block>
   <block id="e272fdd11a7aa99158a093a41c65fdd9" category="list-text">Si ningún agregado tiene capacidad disponible, cree un nuevo agregado.</block>
   <block id="0e725e4f9ac82ce0408528d6e38105f1" category="inline-link-macro">Creando agregados</block>
@@ -3878,7 +3867,6 @@
   <block id="7f28e24a7c8929b9ea02725ffac8ea67" category="doc">Eliminar un sistema Cloud Volumes ONTAP de la NetApp Console</block>
   <block id="bf74416051ebd23aa12ffa560fdd35ad" category="paragraph">Al eliminar un sistema Cloud Volumes ONTAP, se elimina de la NetApp Console.  No elimina el sistema Cloud Volumes ONTAP .  Podrás redescubrir el sistema más tarde si lo necesitas.</block>
   <block id="f6982d54fc10b8dff73549c0a04dda7c" category="list-text">En la página *Sistemas*, haga doble clic en el sistema que desea eliminar.</block>
-  <block id="31745001313aa79cdad6c8f6ab911c90" category="list-text">En la parte superior derecha de la consola, haga clic en el icono<block ref="6b6d595755b48ff08cea04127d7784c8" category="inline-image-macro-rx" type="image"></block> icono y seleccione *Eliminar del espacio de trabajo*.</block>
   <block id="ab8587ffcd52404950c043ccf36aaf8c" category="list-text">En la ventana *Quitar del espacio de trabajo*, haga clic en *Quitar*.</block>
   <block id="1cdcde2746fca932e1f6783d36cde77e" category="paragraph">La consola elimina el sistema.  Los usuarios pueden redescubrir el sistema eliminado desde la página *Sistemas* en cualquier momento.</block>
   <block id="acdfc619ad459d4ab0532bb87b6d7fca" category="summary">Habilite esta característica de Microsoft Azure para implementar HA en SAZ.</block>
@@ -4484,7 +4472,6 @@
   <block id="58f03f4aa156a72c372951a943f6b4d3" category="section-title">Verificar que los agregados estén en línea</block>
   <block id="8934d548c1104122f0b1a27daeb92ffa" category="paragraph">Los agregados para Cloud Volumes ONTAP deben estar en línea antes de actualizar el software.  Los agregados deben estar en línea en la mayoría de las configuraciones, pero si no lo están, entonces debe ponerlos en línea.</block>
   <block id="99d9b45657c4a8690b30f3b0f450d10a" category="list-text">En el sistema Cloud Volumes ONTAP , haga clic en la pestaña *Agregados*.</block>
-  <block id="ae94a52c4296ae374ee6be8e682957a0" category="list-text">En el mosaico agregado requerido, haga clic en el<block ref="6b6d595755b48ff08cea04127d7784c8" category="inline-image-macro-rx" type="image"></block> icono y luego seleccione *Ver detalles agregados*.</block>
   <block id="8a58bd2f86c7acb1b532ae3d8d8ffea5" category="inline-image-macro">Captura de pantalla: muestra el campo Estado cuando visualiza información de un agregado.</block>
   <block id="46804cb5ec7cb836d1b3ea87af016b42" category="paragraph"><block ref="46804cb5ec7cb836d1b3ea87af016b42" category="inline-image-macro-rx" type="image"></block></block>
   <block id="af85ea64dfacf7faf161184211d438c9" category="list-text">Si el agregado está fuera de línea, utilice ONTAP System Manager para ponerlo en línea:</block>
@@ -4537,7 +4524,6 @@
   <block id="367ad91722e49365699290156d04506b" category="paragraph">Hay dos caminos disponibles.  La ruta correcta depende de la versión del agente de consola.</block>
   <block id="1b19ae48e0693419e1e905991459c290" category="list-text"><block ref="b31c7138696aef9cf55dc226ffd11bfa" prefix="" category="inline-code"></block></block>
   <block id="93f9a2aa0331918bf3f1a44fb42f791e" category="list-text"><block ref="d42052aef7da6deaffc65522893f95f6" prefix="" category="inline-code"></block></block>
-  <block id="179ef4c35afe7df9fca82dc7c1fd5143" category="list-text">En el sistema, haga clic en el<block ref="6b6d595755b48ff08cea04127d7784c8" category="inline-image-macro-rx" type="image"></block> icono y, a continuación, haga clic en *Actualizar Cloud Volumes ONTAP*.</block>
   <block id="31a578b8e294d03f4be50639f79e8160" category="list-text">En la página Actualizar versión de Cloud Volumes ONTAP , ingrese la URL y luego haga clic en *Cambiar imagen*.</block>
   <block id="3ad650f1a041bdd6c72340558a4aa4d0" category="paragraph">Si copió la imagen del software al agente de la consola en la ruta que se muestra arriba, deberá ingresar la siguiente URL:</block>
   <block id="1b7efa2b5fdb1436a1d0b4c37a1997e2" category="paragraph">\http://&lt;dirección IP privada del agente de consola&gt;/ontap/images/&lt;nombre del archivo de imagen&gt;</block>
@@ -7856,4 +7842,19 @@
   <block id="b03b92c4dfcafd9226ecc9026f960e01" category="paragraph">Protege tus datos de Cloud Volumes ONTAP mediante la replicación remota. La replicación de datos remota ofrece capacidades de recuperación ante desastres al mantener copias sincronizadas de tus datos en diferentes ubicaciones, lo que garantiza la continuidad del negocio en caso de fallos del sistema o desastres.</block>
   <block id="5e6b403f3ce4af919738fd94fe35d2d0" category="section-title">02 de septiembre de 2026</block>
   <block id="ee3e9d951c79faa2be7ec2e79fdaf3dd" category="paragraph">Workload Factory analiza periódicamente las configuraciones de los sistemas de almacenamiento para determinar si hay problemas de configuración en tus sistemas Cloud Volumes ONTAP. Cuando se detectan problemas, el panel de control well-architected muestra cuáles son y te da recomendaciones sobre lo que necesitas cambiar para asegurarte de que tus sistemas de almacenamiento logren el máximo rendimiento, sean rentables y cumplan con las mejores prácticas.</block>
+  <block id="e7f639747125ba0ea26f45843967eecd" category="inline-image-macro">Un icono que muestra tres puntos horizontales para acciones adicionales</block>
+  <block id="3f516fbf049ebb05c463c753eb67b9a4" category="list-text">Haz clic en el icono <block ref="21d1ea15f76c8e0170375dc9a7026afb" category="inline-image-macro-rx" type="image"></block> del agente de consola que necesites y selecciona *Editar agente de consola*.</block>
+  <block id="60ebb6e9c8e7bd00664ff0182834bbbc" category="list-text">En la parte superior derecha de la consola, haz clic en el icono <block ref="21d1ea15f76c8e0170375dc9a7026afb" category="inline-image-macro-rx" type="image"></block> y selecciona *Establecer contraseña*.</block>
+  <block id="9c1e8a93062f9e08c18b7ff18d4c581f" category="list-text">En la pestaña *Agregados*, ve al agregado que necesites y haz clic en el icono <block ref="21d1ea15f76c8e0170375dc9a7026afb" category="inline-image-macro-rx" type="image"></block>.</block>
+  <block id="0de3101fcf1da466c94cae4391b9e8a2" category="list-text">En la parte superior derecha de la consola, haz clic en el icono <block ref="21d1ea15f76c8e0170375dc9a7026afb" category="inline-image-macro-rx" type="image"></block> y selecciona *Eliminar*.</block>
+  <block id="3e932f868737e21b9ed5bda835757c87" category="list-text">Haz clic en el icono <block ref="21d1ea15f76c8e0170375dc9a7026afb" category="inline-image-macro-rx" type="image"></block> del agente de Console que gestiona tu sistema Cloud Volumes ONTAP.</block>
+  <block id="6a1e4ec541e571fac83e1c9ca6c9764f" category="list-text">Para el agregado requerido, haz clic en el icono <block ref="21d1ea15f76c8e0170375dc9a7026afb" category="inline-image-macro-rx" type="image"></block> para las acciones de gestión.</block>
+  <block id="c6f3be6f5fd2a7a00e040c02adef2a44" category="list-text">Gestiona tus agregados desde las opciones disponibles en el menú <block ref="21d1ea15f76c8e0170375dc9a7026afb" category="inline-image-macro-rx" type="image"></block>.</block>
+  <block id="8ce65cfa7ee0582b8e471eae7579ed00" category="list-text">En el menú <block ref="21d1ea15f76c8e0170375dc9a7026afb" category="inline-image-macro-rx" type="image"></block>, haz clic en *Aumentar capacidad*.</block>
+  <block id="72e8de0716c9783610815fe31a38c5cc" category="list-text">En la ficha de agregado, haz clic en el icono <block ref="21d1ea15f76c8e0170375dc9a7026afb" category="inline-image-macro-rx" type="image"></block> y luego haz clic en *Ver detalles del agregado*.</block>
+  <block id="a016ea4bcb3e06f27b724ec30052c7d0" category="list-text">En el bloque correspondiente, haz clic en el icono <block ref="21d1ea15f76c8e0170375dc9a7026afb" category="inline-image-macro-rx" type="image"></block> y luego en *Ver detalles del bloque* para consultar la capacidad disponible (tamaño asignado menos la capacidad utilizada del bloque).</block>
+  <block id="47e9ea2515e7bd4f510f7771337ace7c" category="list-text">Selecciona el agregado, luego haz clic en el icono <block ref="21d1ea15f76c8e0170375dc9a7026afb" category="inline-image-macro-rx" type="image"></block> &gt; *Add Disks*.</block>
+  <block id="6cff1893b505d7554422f471b99af689" category="list-text">En la parte superior derecha de la consola, haz clic en el icono <block ref="21d1ea15f76c8e0170375dc9a7026afb" category="inline-image-macro-rx" type="image"></block> y selecciona *Eliminar del espacio de trabajo*.</block>
+  <block id="249693747a2015307738625ff22160d7" category="list-text">En la ficha de agregados correspondiente, haz clic en el icono <block ref="21d1ea15f76c8e0170375dc9a7026afb" category="inline-image-macro-rx" type="image"></block> y luego selecciona *Ver detalles del agregado*.</block>
+  <block id="1d9ce53bf771f416c253fb83a5e69679" category="list-text">En el sistema, haz clic en el icono <block ref="21d1ea15f76c8e0170375dc9a7026afb" category="inline-image-macro-rx" type="image"></block> y luego haz clic en *Update Cloud Volumes ONTAP*.</block>
 </blocks>

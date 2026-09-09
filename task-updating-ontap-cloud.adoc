@@ -457,7 +457,7 @@ Estos pasos describen cómo utilizar ONTAP System Manager para la versión 9.3 y
 
 .Pasos
 . En el sistema Cloud Volumes ONTAP , haga clic en la pestaña *Agregados*.
-. En el mosaico agregado requerido, haga clic en elimage:icon-action.png[""] icono y luego seleccione *Ver detalles agregados*.
+. En la ficha de agregados correspondiente, haz clic en el icono image:icon-action.png["Un icono que muestra tres puntos horizontales para acciones adicionales"] y luego selecciona *Ver detalles del agregado*.
 +
 image:screenshots_aggregate_details_state.png["Captura de pantalla: muestra el campo Estado cuando visualiza información de un agregado."]
 
@@ -574,7 +574,7 @@ Hay dos caminos disponibles.  La ruta correcta depende de la versión del agente
 ** `/opt/application/netapp/cloudmanager/ontap/images/`
 
 
-. En el sistema, haga clic en elimage:icon-action.png[""] icono y, a continuación, haga clic en *Actualizar Cloud Volumes ONTAP*.
+. En el sistema, haz clic en el icono image:icon-action.png["Un icono que muestra tres puntos horizontales para acciones adicionales"] y luego haz clic en *Update Cloud Volumes ONTAP*.
 . En la página Actualizar versión de Cloud Volumes ONTAP , ingrese la URL y luego haga clic en *Cambiar imagen*.
 +
 Si copió la imagen del software al agente de la consola en la ruta que se muestra arriba, deberá ingresar la siguiente URL:

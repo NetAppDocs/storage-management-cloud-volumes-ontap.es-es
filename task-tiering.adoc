@@ -337,7 +337,7 @@ La relación es importante para los escenarios de recuperación ante desastres p
 
 .Pasos
 . Desde el panel de navegación izquierdo, vaya a *Administración > Agentes*.
-. Haga clic en elimage:icon-action.png[""] Icono del agente de consola que administra su sistema Cloud Volumes ONTAP .
+. Haz clic en el icono image:icon-action.png["Un icono que muestra tres puntos horizontales para acciones adicionales"] del agente de Console que gestiona tu sistema Cloud Volumes ONTAP.
 . Seleccione *Configuración de Cloud Volumes ONTAP *.
 +
 image::screenshot-settings-cloud-volumes-ontap.png[Una captura de pantalla de la opción Configuración de Cloud Volumes ONTAP en el ícono Configuración.]

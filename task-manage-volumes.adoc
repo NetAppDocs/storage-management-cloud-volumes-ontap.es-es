@@ -264,7 +264,7 @@ Por ejemplo, la información avanzada debería decir algo similar a lo siguiente
 . Identifique uno o más volúmenes para sacar del agregado:
 +
 .. En el sistema Cloud Volumes ONTAP , haga clic en la pestaña *Agregados*.
-.. En el mosaico agregado, haga clic en elimage:icon-action.png[""] icono y luego haga clic en *Ver detalles agregados*.
+.. En la ficha de agregado, haz clic en el icono image:icon-action.png["Un icono que muestra tres puntos horizontales para acciones adicionales"] y luego haz clic en *Ver detalles del agregado*.
 .. En la pestaña *Descripción general* de la pantalla *Detalles agregados*, revise el tamaño de cada volumen y elija uno o más volúmenes para sacar del agregado.
 +
 Debe elegir volúmenes que sean lo suficientemente grandes como para liberar espacio en conjunto y así evitar problemas de capacidad adicionales en el futuro.
@@ -348,7 +348,7 @@ Es necesario mover dos o más volúmenes para evitar problemas de capacidad; sin
 . Verifique si un agregado existente tiene capacidad disponible para los volúmenes que necesita mover:
 +
 .. En el sistema Cloud Volumes ONTAP , haga clic en la *pestaña Agregados*.
-.. En el mosaico agregado requerido, haga clic en elimage:icon-action.png[""] icono y luego *Ver detalles agregados* para ver la capacidad disponible (tamaño aprovisionado menos capacidad agregada utilizada).
+.. En el bloque correspondiente, haz clic en el icono image:icon-action.png["Un icono que muestra tres puntos horizontales para acciones adicionales"] y luego en *Ver detalles del bloque* para consultar la capacidad disponible (tamaño asignado menos la capacidad utilizada del bloque).
 +
 image::screenshot_aggr_capacity.png[capacidad agregada de captura de pantalla]
 
@@ -356,7 +356,7 @@ image::screenshot_aggr_capacity.png[capacidad agregada de captura de pantalla]
 
 . Si es necesario, agregue discos a un agregado existente:
 +
-.. Seleccione el agregado y luego haga clic en elimage:icon-action.png[""] icono > *Agregar discos*.
+.. Selecciona el agregado, luego haz clic en el icono image:icon-action.png["Un icono que muestra tres puntos horizontales para acciones adicionales"] > *Add Disks*.
 .. Seleccione la cantidad de discos que desea agregar y luego haga clic en *Agregar*.
 
 
