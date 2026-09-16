@@ -25,7 +25,7 @@ La capacidad máxima del sistema para un sistema Cloud Volumes ONTAP está deter
 
 NetApp no admite superar el límite de capacidad del sistema. Si alcanzas el límite de capacidad autorizada, la NetApp Console muestra un mensaje de acción requerida y ya no te permite añadir discos adicionales.
 
-Para algunas configuraciones, los límites de disco te impiden alcanzar el límite de capacidad usando solo discos. Puedes alcanzar el límite de capacidad mediante https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["Agrupación de datos inactivos en niveles de almacenamiento de objetos"^]. Consulta los límites de disco a continuación para más detalles.
+Para algunas configuraciones, los límites de disco te impiden alcanzar el límite de capacidad usando solo discos. Puedes alcanzar el límite de capacidad mediante https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-data-tiering.html["Agrupación de datos inactivos en niveles de almacenamiento de objetos"^]. Consulta los límites de disco a continuación para más detalles.
 
 [[cap-license-gcp]]
 .Límite de capacidad para licencias basadas en capacidad
@@ -131,7 +131,7 @@ Algunas configuraciones te permiten crear VMs de almacenamiento adicionales (SVM
 
 Estos son los límites probados. Configurar más máquinas virtuales de almacenamiento no es compatible.
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-gcp.html["Aprende cómo crear máquinas virtuales de almacenamiento adicionales"^].
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-managing-svms-gcp.html["Aprende cómo crear máquinas virtuales de almacenamiento adicionales"^].
 
 [cols="2*"]
 |===
@@ -259,4 +259,4 @@ Las máquinas virtuales de almacenamiento que configuras para la recuperación a
 
 Después de que un nodo se reinicia, el partner debe sincronizar los datos antes de poder devolver el almacenamiento. El tiempo que tarda en resincronizar los datos depende de la cantidad de datos escritos por los clientes mientras el nodo estaba inactivo y de la velocidad de escritura de datos durante el tiempo de devolución.
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha-google-cloud.html["Aprende cómo funciona el almacenamiento en un sistema de parejas de alta disponibilidad Cloud Volumes ONTAP que se ejecuta en Google Cloud"^].
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-ha-google-cloud.html["Aprende cómo funciona el almacenamiento en un sistema de parejas de alta disponibilidad Cloud Volumes ONTAP que se ejecuta en Google Cloud"^].

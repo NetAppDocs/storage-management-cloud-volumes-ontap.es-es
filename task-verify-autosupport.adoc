@@ -110,7 +110,7 @@ Si el estado de la categoría http-https es `OK` significa que AutoSupport está
 . Si el estado sigue siendo fallido, valide que haya conectividad entre Cloud Volumes ONTAP y el agente de la consola a través del puerto `3128`.
 . Si el estado sigue siendo fallido después de la verificación, acceda por SSH al agente de la consola.
 +
-https://docs.netapp.com/us-en/bluexp-setup-admin/task-maintain-connectors.html#connect-to-the-linux-vm["Obtenga más información sobre cómo conectarse a la máquina virtual Linux para el agente de consola"^]
+https://docs.netapp.com/us-en/console-setup-admin/task-maintain-connectors.html#connect-to-the-linux-vm["Obtenga más información sobre cómo conectarse a la máquina virtual Linux para el agente de consola"^]
 
 . Ir a `/opt/application/netapp/cloudmanager/docker_occm/data/`.
 . Abra el archivo de configuración del proxy `squid.conf`. Esta es la estructura del archivo:

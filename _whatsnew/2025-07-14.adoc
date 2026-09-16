@@ -11,9 +11,9 @@ BlueXP ahora admite servidores proxy transparentes además de las conexiones pro
 
 Para obtener más información sobre el uso de servidores proxy en Cloud Volumes ONTAP, consulte:
 
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-aws.html#network-configurations-to-support-connector-proxy-servers["Configuraciones de red para soportar el proxy del conector en AWS"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/azure/reference-networking-azure.html#network-configurations-to-support-connector["Configuraciones de red para admitir el proxy del conector en Azure"^]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-gcp.html#network-configurations-to-support-connector-proxy["Configuraciones de red para admitir el proxy del conector en Google Cloud"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#network-configurations-to-support-connector-proxy-servers["Configuraciones de red para soportar el proxy del conector en AWS"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/azure/reference-networking-azure.html#network-configurations-to-support-connector["Configuraciones de red para admitir el proxy del conector en Azure"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#network-configurations-to-support-connector-proxy["Configuraciones de red para admitir el proxy del conector en Google Cloud"^]
 
 
 

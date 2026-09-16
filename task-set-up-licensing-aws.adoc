@@ -68,16 +68,16 @@ Las siguientes secciones describen cómo comenzar a utilizar cada uno de estos m
 
 Pague por adelantado comprando una licencia (BYOL) de NetApp para implementar sistemas Cloud Volumes ONTAP en cualquier proveedor de nube.
 
-NetApp ha restringido la compra, extensión y renovación de licencias BYOL. Para más información, consulte  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidad restringida de licencias BYOL para Cloud Volumes ONTAP"^] .
+NetApp ha restringido la compra, ampliación y renovación de las licencias BYOL. Para más información, consulta https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidad restringida de licencias BYOL para Cloud Volumes ONTAP"^].
 
 .Pasos
 . https://www.netapp.com/forms/sales-contact["Comuníquese con el departamento de ventas de NetApp para obtener una licencia"^]
-. https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html#add-an-nss-account["Agregue su cuenta del sitio de soporte de NetApp a la consola"^]
+. https://docs.netapp.com/us-en/console-setup-admin/task-adding-nss-accounts.html#add-an-nss-account["Agregue su cuenta del sitio de soporte de NetApp a la consola"^]
 +
 La consola consulta automáticamente el servicio de licencias de NetApp para obtener detalles sobre las licencias asociadas a su cuenta del sitio de soporte de NetApp .  Si no hay errores, la Consola agrega automáticamente las licencias a la Consola.
 
 +
-Su licencia debe estar disponible en la consola antes de poder usarla con Cloud Volumes ONTAP.  Si es necesario, puedeslink:task-manage-capacity-licenses.html#add-purchased-licenses-to-your-account["agregar manualmente la licencia a la consola"] .
+Para poder utilizar tu licencia con Cloud Volumes ONTAP, esta debe estar disponible en la consola. Si es necesario, puedes link:https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html#add-a-license["agregar manualmente la licencia a la consola"^].
 
 . En la página *Sistemas* de la Consola, haga clic en *Agregar sistema* y siga los pasos.
 +
@@ -126,7 +126,7 @@ image:screenshot-professional.png["Una captura de pantalla de la opción Profesi
 link:task-deploying-otc-aws.html["Vea las instrucciones paso a paso para iniciar Cloud Volumes ONTAP en AWS"] .
 
 
-TIP: Puede administrar las suscripciones de AWS Marketplace asociadas con sus cuentas de AWS desde la página Configuración > Credenciales. https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-aws-accounts.html["Aprenda a administrar sus cuentas y suscripciones de AWS"^]
+TIP: Puedes gestionar las suscripciones de AWS Marketplace asociadas a tus cuentas de AWS desde la página Configuración > Credenciales. https://docs.netapp.com/us-en/console-setup-admin/task-adding-aws-accounts.html["Aprenda a administrar sus cuentas y suscripciones de AWS"^]
 
 
 
@@ -159,7 +159,7 @@ link:task-deploying-otc-aws.html["Vea las instrucciones paso a paso para iniciar
 [[freemium]]
 == Freemium
 
-Seleccione la oferta Freemium para utilizar Cloud Volumes ONTAP de forma gratuita con hasta 500 GiB de capacidad aprovisionada. link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#free-trials["Obtenga más información sobre la oferta Freemium"^] .
+Selecciona la oferta Freemium para utilizar Cloud Volumes ONTAP de forma gratuita con hasta 500 GiB de capacidad asignada. link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html#free-trials["Obtenga más información sobre la oferta Freemium"^].
 
 .Pasos
 . Desde el menú de navegación izquierdo de la NetApp Console, seleccione *Almacenamiento > Administración*.
@@ -167,7 +167,7 @@ Seleccione la oferta Freemium para utilizar Cloud Volumes ONTAP de forma gratuit
 +
 .. En la página *Detalles y credenciales*, haga clic en *Editar credenciales > Agregar suscripción* y luego siga las instrucciones para suscribirse a la oferta de pago por uso en AWS Marketplace.
 +
-No se le cobrará a través de la suscripción del mercado a menos que exceda los 500 GiB de capacidad aprovisionada, momento en el cual el sistema se convierte automáticamente allink:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#packages["Paquete esencial"^] .
+No se te cobrará a través de la suscripción del marketplace a menos que superes los 500 GiB de capacidad asignada, momento en el que el sistema se convierte automáticamente en el link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html#packages["Paquete esencial"^].
 
 +
 image:screenshot-aws-paygo-subscription.png["Una captura de pantalla de la opción de suscripción PAYGO al crear un sistema Cloud Volumes ONTAP ."]

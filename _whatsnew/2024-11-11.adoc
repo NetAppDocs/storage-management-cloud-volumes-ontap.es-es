@@ -11,7 +11,7 @@ NetApp ha planificado el fin de la disponibilidad (EOA) y el fin del soporte (EO
 
 Para compromisos anuales o de largo plazo, NetApp recomienda que se comunique con su representante de NetApp antes de la fecha de EOA o la fecha de vencimiento de la licencia para asegurarse de que se cumplan los requisitos previos para la transición.  Si no tiene un contrato a largo plazo para un nodo de Cloud Volumes ONTAP y ejecuta su sistema con una suscripción de pago por uso (PAYGO) a pedido, es importante planificar su conversión antes de la fecha de finalización del servicio.  Tanto para contratos a largo plazo como para suscripciones PAYGO, puede utilizar la herramienta de conversión de licencias de BlueXP para una conversión sin problemas.
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#end-of-availability-of-node-based-licenses["Fin de la disponibilidad de las licencias basadas en nodos"^] https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-convert-node-capacity.html["Convertir una licencia basada en nodos de Cloud Volumes ONTAP a una licencia basada en capacidad"^]
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html#end-of-availability-of-node-based-licenses["Fin de la disponibilidad de las licencias basadas en nodos"^] https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-convert-node-capacity.html["Convertir una licencia basada en nodos de Cloud Volumes ONTAP a una licencia basada en capacidad"^]
 
 
 
@@ -28,7 +28,7 @@ NetApp reconoce los siguientes requisitos de licencia únicos en cumplimiento co
 * Si tiene un by-node válido y no vencido, traiga su propia licencia (licencia BYOL)
 
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#end-of-availability-of-node-based-licenses["Fin de la disponibilidad de las licencias basadas en nodos"^]
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html#end-of-availability-of-node-based-licenses["Fin de la disponibilidad de las licencias basadas en nodos"^]
 
 
 
@@ -37,7 +37,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html#
 
 BlueXP ahora le permite seleccionar un nivel frío para almacenar los datos del nivel de capacidad inactivo en el almacenamiento de blobs de Azure.  Agregar el nivel frío a los niveles frío y caliente existentes le brinda una opción de almacenamiento más asequible y una mejor eficiencia de costos.
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html#data-tiering-in-azure["Organización de datos en niveles en Azure"^]
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-data-tiering.html#data-tiering-in-azure["Organización de datos en niveles en Azure"^]
 
 
 
@@ -46,7 +46,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.ht
 
 Ahora tiene la opción de restringir el acceso público a su cuenta de almacenamiento para los sistemas Cloud Volumes ONTAP en Azure.  Al deshabilitar el acceso, puede proteger su dirección IP privada contra exposición incluso dentro de la misma VNet, en caso de que sea necesario cumplir con las políticas de seguridad de su organización.  Esta opción también deshabilita la clasificación de datos para sus sistemas Cloud Volumes ONTAP y es aplicable tanto a pares de nodos únicos como a pares de alta disponibilidad.
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-azure.html#security-group-rules["Reglas del grupo de seguridad"^] .
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-azure.html#security-group-rules["Reglas del grupo de seguridad"^].
 
 
 
@@ -55,4 +55,4 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-networking-az
 
 Ahora tiene la posibilidad de activar el almacenamiento de escritura única y lectura múltiple (WORM) en un sistema Cloud Volumes ONTAP existente usando BlueXP.  Esta funcionalidad le proporciona la flexibilidad de habilitar WORM en un entorno de trabajo, incluso si WORM no estaba habilitado en él durante su creación.  Una vez habilitado, no podrás deshabilitar WORM.
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-worm.html#enabling-worm-on-a-cloud-volumes-ontap-working-environment["Habilitación de WORM en un entorno de trabajo de Cloud Volumes ONTAP"^]
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-worm.html#enabling-worm-on-a-cloud-volumes-ontap-working-environment["Habilitación de WORM en un entorno de trabajo de Cloud Volumes ONTAP"^]

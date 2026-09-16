@@ -137,10 +137,10 @@ Como se indicó anteriormente, la elección de un tamaño de disco no es compati
 
 Además del almacenamiento para los datos del usuario, la consola también compra almacenamiento en la nube para los datos del sistema Cloud Volumes ONTAP (datos de arranque, datos raíz, datos del núcleo y NVRAM).  Para fines de planificación, puede ser útil revisar estos detalles antes de implementar Cloud Volumes ONTAP.
 
-link:reference-default-configs.html#aws["Ver los discos predeterminados para los datos del sistema Cloud Volumes ONTAP en AWS"] .
+link:reference-configs-aws.html#aws["Ver los discos predeterminados para los datos del sistema Cloud Volumes ONTAP en AWS"].
 
 
-TIP: El agente de consola también requiere un disco de sistema. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-default-config.html["Ver detalles sobre la configuración predeterminada del agente de la consola"^] .
+TIP: El agente Console también necesita un disco del sistema. https://docs.netapp.com/us-en/console-setup-admin/reference-connector-default-config.html["Ver detalles sobre la configuración predeterminada del agente de la consola"^].
 
 
 

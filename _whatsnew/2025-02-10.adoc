@@ -9,7 +9,7 @@
 
 Como administrador de BlueXP , ahora puede activar la autenticación para los usuarios de ONTAP que acceden a ONTAP System Manager desde BlueXP.  Puede habilitar esta opción editando la configuración del conector BlueXP .  Esta opción está disponible para los modos estándar y privado.
 
-link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-administer-advanced-view.html["Administrar Cloud Volumes ONTAP mediante el Administrador del sistema"^] .
+link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-administer-advanced-view.html["Administrar Cloud Volumes ONTAP mediante el Administrador del sistema"^].
 
 
 
@@ -18,7 +18,7 @@ link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-administer-ad
 
 La opción para la gestión avanzada de Cloud Volumes ONTAP desde BlueXP a través de ONTAP System Manager ha cambiado de nombre de *Vista avanzada* a *Administrador del sistema*.
 
-link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-administer-advanced-view.html["Administrar Cloud Volumes ONTAP mediante el Administrador del sistema"^] .
+link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-administer-advanced-view.html["Administrar Cloud Volumes ONTAP mediante el Administrador del sistema"^].
 
 
 
@@ -32,4 +32,4 @@ Ahora, puede experimentar una gestión simplificada de las licencias de Cloud Vo
 * Si prefiere la interfaz anterior, puede hacer clic en el botón *Cambiar a vista heredada* para ver los detalles de la licencia por tipo y modificar los métodos de cobro de sus licencias.
 
 
-link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-capacity-licenses.html["Administrar licencias basadas en capacidad"^] .
+link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-capacity-licenses.html["Administrar licencias basadas en capacidad"^].

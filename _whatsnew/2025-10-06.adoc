@@ -18,4 +18,4 @@ Para obtener más detalles sobre lo que ha cambiado, consulte la https://docs.ne
 
 Ahora puede implementar Cloud Volumes ONTAP en AWS utilizando un método de implementación rápida para configuraciones de nodo único y de alta disponibilidad (HA).  Este proceso optimizado reduce la cantidad de pasos en comparación con el método avanzado, establece automáticamente valores predeterminados en una sola página y minimiza la navegación, lo que hace que la implementación sea más rápida y sencilla.
 
-Para más información, consulte  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-quick-deploy-aws.html["Implemente Cloud Volumes ONTAP en AWS mediante una implementación rápida"^] .
+Para más información, consulta https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-quick-deploy-aws.html["Implemente Cloud Volumes ONTAP en AWS mediante una implementación rápida"^].

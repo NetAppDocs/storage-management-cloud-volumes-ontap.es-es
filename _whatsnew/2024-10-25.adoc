@@ -21,4 +21,4 @@ BlueXP ahora admite zonas locales de AWS para implementaciones de alta disponibi
 
 NOTE: Las zonas locales de AWS no son compatibles cuando se utiliza BlueXP en modo restringido.
 
-Para obtener más información sobre las zonas locales de AWS con implementaciones de alta disponibilidad, consultelink:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha.html#aws-local-zones["Zonas locales de AWS"^] .
+Para obtener más información sobre AWS Local Zones con implementaciones de alta disponibilidad (HA), consulta link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-ha.html#aws-local-zones["Zonas locales de AWS"^].

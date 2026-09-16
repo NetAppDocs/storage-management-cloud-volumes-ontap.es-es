@@ -26,6 +26,7 @@ Además del almacenamiento para los datos de usuario, NetApp también adquiere a
 
 
 [[internal-disks-for-system-data]]
+[[aws]]
 === Discos internos para datos del sistema
 
 En AWS se utilizan los siguientes discos internos para los datos del sistema:
@@ -84,7 +85,7 @@ Almacenamiento NVMe local:: Algunos tipos de instancias EC2 incluyen almacenamie
 [[supported-disk-sizes]]
 === Tamaños de disco compatibles
 
-En AWS, un agregado puede contener hasta 6 discos que son todos del mismo tamaño. Pero si tienes una configuración que soporta la función Amazon EBS Elastic Volumes, entonces un agregado puede contener hasta 8 discos. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-aws-elastic-volumes.html["Obtenga más información sobre la compatibilidad con Elastic Volumes"^]
+En AWS, un agregado puede contener hasta 6 discos que son todos del mismo tamaño. Pero si tienes una configuración que soporta la función Amazon EBS Elastic Volumes, entonces un agregado puede contener hasta 8 discos. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-aws-elastic-volumes.html["Obtenga más información sobre la compatibilidad con Elastic Volumes"^]
 
 [cols="3*"]
 |===
@@ -335,7 +336,7 @@ Apoyado
 
 |===
 . Para un par de HA, el límite de capacidad es para todo el par de HA. No es por nodo. Por ejemplo, si usas la licencia PAYGO Premium, puedes tener hasta 368 TiB de capacidad entre ambos nodos.
-. Para algunas configuraciones, los límites de disco te impiden alcanzar el límite de capacidad usando solo discos. En esos casos, puedes alcanzar el límite de capacidad mediante https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["Agrupación de datos inactivos en niveles de almacenamiento de objetos"^]. Para obtener información sobre los límites de disco, consulta link:reference-limits-aws.html["límites de almacenamiento"].
+. Para algunas configuraciones, los límites de disco te impiden alcanzar el límite de capacidad usando solo discos. En esos casos, puedes alcanzar el límite de capacidad mediante https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-data-tiering.html["Agrupación de datos inactivos en niveles de almacenamiento de objetos"^]. Para obtener información sobre los límites de disco, consulta link:reference-limits-aws.html["límites de almacenamiento"].
 +
 Con las licencias basadas en la capacidad, cada sistema Cloud Volumes ONTAP admite el almacenamiento por niveles en el almacenamiento de objetos. La capacidad total por niveles puede escalar hasta el límite de bucket del proveedor de la nube. Aunque la licencia no impone restricciones de capacidad, deberías seguir las  https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Mejores prácticas de FabricPool"^] para asegurar un rendimiento, fiabilidad y rentabilidad óptimos al configurar y gestionar el almacenamiento por niveles.
 
@@ -654,7 +655,7 @@ La alta velocidad de escritura no es compatible con estos tipos de instancia en 
 | Asignación de datos en frío a S3 | No compatible 3+| Apoyado 
 |===
 . Para un par de HA, el límite de capacidad es para todo el par de HA. No es por nodo. Por ejemplo, si usas la licencia PAYGO Premium, puedes tener hasta 368 TiB de capacidad entre ambos nodos.
-. Para algunas configuraciones, los límites de disco te impiden alcanzar el límite de capacidad usando solo discos. En esos casos, puedes alcanzar el límite de capacidad mediante https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["Agrupación de datos inactivos en niveles de almacenamiento de objetos"^]. Para obtener información sobre los límites de disco, consulta link:reference-limits-aws.html["límites de almacenamiento"].
+. Para algunas configuraciones, los límites de disco te impiden alcanzar el límite de capacidad usando solo discos. En esos casos, puedes alcanzar el límite de capacidad mediante https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-data-tiering.html["Agrupación de datos inactivos en niveles de almacenamiento de objetos"^]. Para obtener información sobre los límites de disco, consulta link:reference-limits-aws.html["límites de almacenamiento"].
 +
 Con las licencias basadas en la capacidad, cada sistema Cloud Volumes ONTAP admite el almacenamiento por niveles en el almacenamiento de objetos. La capacidad total por niveles puede escalar hasta el límite de bucket del proveedor de la nube. Aunque la licencia no impone restricciones de capacidad, deberías seguir las  https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Mejores prácticas de FabricPool"^] para asegurar un rendimiento, fiabilidad y rentabilidad óptimos al configurar y gestionar el almacenamiento por niveles.
 
@@ -681,7 +682,7 @@ Cloud Volumes ONTAP ya no es compatible con los tipos de instancia c4, m4 y r4 d
 
 Si tu sistema funciona con una instancia c4, m4 o r4, cámbiala a una instancia c5, m5 o r5 antes de actualizar a esta versión.
 
-link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-change-ec2-instance.html["Aprende cómo cambiar el tipo de instancia EC2 para Cloud Volumes ONTAP"^].
+link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-change-ec2-instance.html["Aprende cómo cambiar el tipo de instancia EC2 para Cloud Volumes ONTAP"^].
 
 Para más información, consulta los siguientes recursos:
 
@@ -816,8 +817,8 @@ pass:[*] Flash Cache es compatible con m6id.xlarge, m6id.2xlarge, m6idn.xlarge y
 
 Las siguientes notas proporcionan una guía general sobre el comportamiento de las instancias soportadas y las opciones de despliegue.
 
-* Algunos tipos de instancia incluyen almacenamiento NVMe local, que Cloud Volumes ONTAP utiliza como Flash Cache. Flash Cache acelera el acceso a los datos mediante el almacenamiento en caché inteligente en tiempo real de los datos de usuario leídos recientemente y de los metadatos de NetApp. Es eficaz para cargas de trabajo de lectura intensiva aleatoria, como bases de datos, correo electrónico y servicios de archivos. La compresión debe estar desactivada en todos los volúmenes para aprovechar las mejoras de rendimiento de Flash Cache. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["Conoce más sobre Flash Cache"^].
-* Cloud Volumes ONTAP admite alta velocidad de escritura con todos los tipos de instancia compatibles cuando usas un sistema de nodo único. Cuando usas un par de HA, la alta velocidad de escritura solo se admite con los tipos de instancia compatibles. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["Más información sobre cómo elegir una velocidad de escritura"^].
+* Algunos tipos de instancia incluyen almacenamiento NVMe local, que Cloud Volumes ONTAP utiliza como Flash Cache. Flash Cache acelera el acceso a los datos mediante el almacenamiento en caché inteligente en tiempo real de los datos de usuario leídos recientemente y de los metadatos de NetApp. Es eficaz para cargas de trabajo de lectura intensiva aleatoria, como bases de datos, correo electrónico y servicios de archivos. La compresión debe estar desactivada en todos los volúmenes para aprovechar las mejoras de rendimiento de Flash Cache. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-flash-cache.html["Conoce más sobre Flash Cache"^].
+* Cloud Volumes ONTAP admite alta velocidad de escritura con todos los tipos de instancia compatibles cuando usas un sistema de nodo único. Cuando usas un par de HA, la alta velocidad de escritura solo se admite con los tipos de instancia compatibles. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-write-speed.html["Más información sobre cómo elegir una velocidad de escritura"^].
 * Cuando eliges un tipo de instancia EC2, puedes especificar si es una instancia compartida o dedicada.
 
 

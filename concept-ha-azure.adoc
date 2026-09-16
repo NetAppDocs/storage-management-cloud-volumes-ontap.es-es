@@ -34,7 +34,7 @@ Tenga en cuenta lo siguiente acerca de los componentes de Azure que la NetApp Co
 
 Equilibrador de carga estándar de Azure:: El equilibrador de carga administra el tráfico entrante al par Cloud Volumes ONTAP HA.
 Máquinas virtuales en zonas de disponibilidad única:: A partir de Cloud Volumes ONTAP 9.15.1, puede crear y administrar máquinas virtuales (VM) heterogéneas en una única zona de disponibilidad (AZ).  Puede implementar nodos de alta disponibilidad (HA) en dominios de falla separados dentro de la misma AZ, lo que garantiza una disponibilidad óptima.  Para obtener más información sobre el modo de orquestación flexible que habilita esta capacidad, consulte https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/["Documentación de Microsoft Azure: Conjuntos de escalado de máquinas virtuales"^] .
-Discos:: Los datos del cliente residen en los blobs de páginas de almacenamiento premium.  Cada nodo tiene acceso al almacenamiento del otro nodo.  También se requiere almacenamiento adicional paralink:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["datos de arranque, raíz y núcleo"^] .
+Discos:: Los datos de los clientes residen en blobs de página de Premium Storage. Cada nodo tiene acceso al almacenamiento del otro nodo. También se necesita almacenamiento adicional para link:reference-configs-azure.html#azure-ha-pair["datos de arranque, raíz y núcleo"].
 Cuentas de almacenamiento::
 +
 --
@@ -52,7 +52,7 @@ https://docs.microsoft.com/en-us/azure/storage/common/storage-scalability-target
 
 
 
-NOTE: A partir de Cloud Volumes ONTAP 9.15.0P1, los blobs de página de Azure ya no son compatibles con las nuevas implementaciones de pares de alta disponibilidad. Si actualmente usas blobs de página de Azure en implementaciones existentes de pares de alta disponibilidad, puedes migrar a tipos de instancia de VM más recientes en las VM de la serie Edsv4 y Edsv5. link:link:reference-configs-azure.html#ha-pairs["Obtenga más información sobre las configuraciones compatibles en Azure"].
+NOTE: A partir de Cloud Volumes ONTAP 9.15.0P1, los blobs de página de Azure ya no son compatibles con las nuevas implementaciones de pares de alta disponibilidad. Si actualmente usas blobs de página de Azure en implementaciones existentes de pares de alta disponibilidad, puedes migrar a tipos de instancia de VM más recientes en las VM de la serie Edsv4 y Edsv5. link:reference-configs-azure.html#ha-pairs["Obtenga más información sobre las configuraciones compatibles en Azure"].
 
 
 
@@ -82,7 +82,7 @@ La implementación zonal utiliza discos administrados Premium SSD v2 cuando se c
 
 NOTE: Si elige Discos administrados SSD Premium para un entorno que cumple con los criterios anteriores, la consola implementa automáticamente Discos administrados SSD Premium v2. No es posible cambiar a discos administrados SSD v1 Premium.
 
-Discos:: Los datos del cliente residen en discos administrados con almacenamiento redundante local (LRS).  Cada nodo tiene acceso al almacenamiento del otro nodo.  También se requiere almacenamiento adicional paralink:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["datos de arranque, raíz, raíz del socio, núcleo y NVRAM"^] .
+Discos:: Los datos de los clientes residen en discos gestionados con almacenamiento localmente redundante (LRS). Cada nodo tiene acceso al almacenamiento del otro nodo. También se requiere almacenamiento adicional para link:reference-configs-azure.html#azure-ha-pair["datos de arranque, raíz, raíz del socio, núcleo y NVRAM"].
 Cuentas de almacenamiento:: Las cuentas de almacenamiento se utilizan para implementaciones basadas en discos administrados para manejar registros de diagnóstico y niveles de almacenamiento de blobs.
 
 
@@ -99,7 +99,7 @@ Tenga en cuenta lo siguiente acerca de los componentes de Azure que la consola i
 
 Equilibrador de carga estándar de Azure:: El equilibrador de carga administra el tráfico entrante al par Cloud Volumes ONTAP HA.
 Zonas de disponibilidad:: La configuración de zonas de disponibilidad múltiples de HA utiliza un modelo de implementación donde dos nodos de Cloud Volumes ONTAP se implementan en diferentes zonas de disponibilidad, lo que garantiza que los nodos estén en diferentes dominios de falla para brindar redundancia y disponibilidad.  Para obtener información sobre cómo los conjuntos de escalado de máquinas virtuales en el modo de orquestación flexible pueden usar zonas de disponibilidad en Azure, consulte https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-use-availability-zones?tabs=cli-1%2Cportal-2["Documentación de Microsoft Azure: Crear un conjunto de escalado de máquinas virtuales que utilice zonas de disponibilidad"^] .
-Discos:: Los datos del cliente residen en discos administrados con almacenamiento con redundancia de zona (ZRS).  Cada nodo tiene acceso al almacenamiento del otro nodo.  También se requiere almacenamiento adicional paralink:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["arranque, raíz, raíz del socio y datos del núcleo"^] .
+Discos:: Los datos de los clientes se almacenan en discos gestionados con almacenamiento redundante por zona (ZRS). Cada nodo tiene acceso al almacenamiento del otro nodo. También se requiere almacenamiento adicional para link:reference-configs-azure.html#azure-ha-pair["arranque, raíz, raíz del socio y datos del núcleo"].
 Cuentas de almacenamiento:: Las cuentas de almacenamiento se utilizan para implementaciones basadas en discos administrados para manejar registros de diagnóstico y niveles de almacenamiento de blobs.
 
 

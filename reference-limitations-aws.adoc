@@ -58,4 +58,4 @@ Cloud Volumes ONTAP no libera CPU cuando está inactivo, así que https://aws.am
 
 Después de que un nodo se reinicia, el partner debe sincronizar los datos antes de poder devolver el almacenamiento. El tiempo que tarda en resincronizar los datos depende de la cantidad de datos escritos por los clientes mientras el nodo estaba inactivo y de la velocidad de escritura de datos durante el tiempo de devolución.
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha.html["Aprende cómo funciona el almacenamiento en un par Cloud Volumes ONTAP HA que se ejecuta en AWS"^].
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-ha.html["Aprende cómo funciona el almacenamiento en un par Cloud Volumes ONTAP HA que se ejecuta en AWS"^].

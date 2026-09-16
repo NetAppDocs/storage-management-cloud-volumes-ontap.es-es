@@ -28,7 +28,7 @@ Si aún no tienes un agente de consola, crea uno antes de implementar Cloud Volu
  a| 
 Consulta la guía de configuración de la consola: https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-google-gcloud.html["Crear un agente de Console en Google Cloud"^]
  a| 
-Si la implementación se realiza en una subred sin acceso a internet, instala manualmente el agente de la consola y accede a la interfaz de usuario de la consola de NetApp que se ejecuta en ese agente de consola. Consulta la guía de configuración de la consola: https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Instala manualmente el agente de la consola sin conexión a internet"^]
+Si la implementación se realiza en una subred sin acceso a internet, instala manualmente el agente de la consola y accede a la interfaz de usuario de la consola de NetApp que se ejecuta en ese agente de consola. Consulta la guía de configuración de la consola: https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-private-mode.html["Instala manualmente el agente de la consola sin conexión a internet"^]
 
 
 
@@ -70,7 +70,7 @@ Cloud Volumes ONTAP requiere una cuenta de servicio de Google Cloud para habilit
  a| 
 * link:task-creating-gcp-service-account.html["Configura una cuenta de servicio"]
 * link:concept-data-tiering.html["Conoce la organización por niveles de datos"]
-* Consulta la https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["NetApp Backup and Recovery documentos"^]
+* Consulta la https://docs.netapp.com/us-en/data-services-backup-recovery/concept-backup-to-cloud.html["NetApp Backup and Recovery documentos"^]
 
  a| 
 No hay consideraciones adicionales para las implementaciones en modo privado.
@@ -109,7 +109,7 @@ Antes de iniciar la implementación, asegúrate de haber adquirido una licencia 
 
 |===
 .Enlaces relacionados
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["Creación de un agente de consola"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["Instalación del software del agente de consola en un host Linux"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Creación de un agente de consola"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["Instalación del software del agente de consola en un host Linux"^]
 * https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html["Permisos de Google Cloud para el agente de la consola"^]
 

@@ -30,7 +30,7 @@ La copia de seguridad y la recuperación son independientes de Cloud Volumes ONT
 
 . Si habilitó la Clasificación de datos en este sistema y ningún otro sistema utiliza este servicio, entonces deberá eliminar la instancia del servicio.
 +
-https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html#the-cloud-data-sense-instance["Obtenga más información sobre la instancia de Clasificación de datos"^] .
+https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html#the-cloud-data-sense-instance["Obtenga más información sobre la instancia de Clasificación de datos"^].
 
 . Eliminar el sistema Cloud Volumes ONTAP .
 +

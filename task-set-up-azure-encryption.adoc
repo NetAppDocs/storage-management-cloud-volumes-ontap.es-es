@@ -221,7 +221,7 @@ Si desea utilizar una clave administrada por el cliente con un sistema Cloud Vol
 "Microsoft.KeyVault/vaults/accessPolicies/write",
 "Microsoft.ManagedIdentity/userAssignedIdentities/assign/action"
 ----
-https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["Ver la lista más reciente de permisos"^]
+https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.html["Ver la lista más reciente de permisos"^]
 
 .Pasos
 . Obtén la lista de almacenes de claves en tu suscripción a Azure usando las siguientes llamadas a la API.
@@ -293,5 +293,5 @@ Tiene un nuevo sistema Cloud Volumes ONTAP que está configurado para usar su cl
 
 .Enlaces relacionados
 * https://docs.netapp.com/us-en/console-automation/cm/wf_cvo_before.html["Prepárate para usar los flujos de trabajo de la API Cloud Volumes ONTAP"^].
-* https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html#azure-haworking-environments["Conoce las API REST de gestión de ONTAP"^].
+* https://docs.netapp.com/us-en/console-automation/cm/api_ref_resources.html#azure-haworking-environments["Conoce las API REST de gestión de ONTAP"^].
 

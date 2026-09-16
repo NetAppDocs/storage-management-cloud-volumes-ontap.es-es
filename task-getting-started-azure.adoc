@@ -26,9 +26,9 @@ Crear un agente de Console
  a| 
 Si aún no tienes un agente de Console, créalo antes de implementar Cloud Volumes ONTAP.
  a| 
-Consulta la guía de configuración de la consola: https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Crear un agente de Console en Azure"^]
+Consulta la guía de configuración de la consola: https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Crear un agente de Console en Azure"^]
  a| 
-Si la implementación se realiza en una subred sin acceso a internet, instala manualmente el agente de la consola y accede a la interfaz de usuario de la consola de NetApp que se ejecuta en ese agente de consola. Consulta la guía de configuración de la consola: https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Instala manualmente el agente de la consola sin conexión a internet"^]
+Si la implementación se realiza en una subred sin acceso a internet, instala manualmente el agente de la consola y accede a la interfaz de usuario de la consola de NetApp que se ejecuta en ese agente de consola. Consulta la guía de configuración de la consola: https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-private-mode.html["Instala manualmente el agente de la consola sin conexión a internet"^]
 
 
 
@@ -77,8 +77,8 @@ Antes de iniciar la implementación, asegúrate de haber adquirido una licencia 
 
 |===
 .Enlaces relacionados
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Creación de un agente de consola desde la consola"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-azure-marketplace.html["Creación de un agente de consola desde Azure Marketplace"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["Instalación del software del agente de consola en un host Linux"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["Qué hace la consola con los permisos"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Creación de un agente de consola desde la consola"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-azure-marketplace.html["Creación de un agente de consola desde Azure Marketplace"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["Instalación del software del agente de consola en un host Linux"^]
+* https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.html["Qué hace la consola con los permisos"^]
 

@@ -9,7 +9,7 @@
 
 Ahora puede mejorar el rendimiento de los discos administrados SSD Premium v2 en Azure modificando los parámetros de IOPS y rendimiento.  Al utilizar esta capacidad, puede optimizar el rendimiento de almacenamiento de sus sistemas en función de los requisitos de su carga de trabajo.
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-perf-params-azure.html["Administrar el rendimiento de los discos SSD v2 Premium para Cloud Volumes ONTAP en Azure"^].
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-perf-params-azure.html["Administrar el rendimiento de los discos SSD v2 Premium para Cloud Volumes ONTAP en Azure"^].
 
 
 

@@ -67,5 +67,5 @@ Tipos de instancia Eds_v5 y Ls_v3
 .Enlaces relacionados
 * Implementación directa de Azure Marketplace:link:task-deploy-cvo-azure-mktplc.html["Implementar Cloud Volumes ONTAP desde Azure Marketplace"]
 * Implementación a través de la consola:link:task-getting-started-azure.html["Inicio rápido de Cloud Volumes ONTAP en Azure"]
-* https://docs.netapp.com/us-en/bluexp-family/index.html["Documentación de la NetApp Console"^]
+* link:https://docs.netapp.com/us-en/console-family/index.html["Documentación de la NetApp Console"^]
 

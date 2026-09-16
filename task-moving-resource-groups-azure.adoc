@@ -19,7 +19,7 @@ Cloud Volumes ONTAP admite movimientos de grupos de recursos de Azure, pero el f
 Puede mover un sistema Cloud Volumes ONTAP de un grupo de recursos a otro en Azure dentro de la misma suscripción de Azure.  No se admite mover grupos de recursos entre diferentes suscripciones de Azure.
 
 .Pasos
-. Eliminar el sistema Cloud Volumes ONTAP . Consulte link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-removing.html["Eliminación de sistemas Cloud Volumes ONTAP"] .
+. Elimina el sistema Cloud Volumes ONTAP. Consulta link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-removing.html["Eliminación de sistemas Cloud Volumes ONTAP"].
 . Ejecute el movimiento del grupo de recursos en la consola de Azure.
 +
 Para completar el movimiento, consultelink:https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/move-resource-group-and-subscription["Mover recursos a un nuevo grupo de recursos o suscripción en la documentación de Microsoft Azure"^] .

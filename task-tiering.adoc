@@ -173,7 +173,7 @@ No es necesario configurar una conexión entre el nivel de rendimiento y el nive
 "Microsoft.Network/virtualNetworks/subnets/write",
 "Microsoft.Network/routeTables/join/action",
 ----
-El rol personalizado incluye los permisos por defecto. https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["Ver el permiso de Azure para el agente de consola"^]
+El rol personalizado incluye los permisos de forma predeterminada. https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.html["Ver el permiso de Azure para el agente de consola"^]
 
 endif::azure[]
 
@@ -301,7 +301,7 @@ Cloud Volumes ONTAP puede organizar datos desde un volumen de protección de dat
 image:screenshot_replication_tiering.gif["Captura de pantalla que muestra la opción de niveles S3 al replicar un volumen."]
 
 +
-Para obtener ayuda con la replicación de datos, consulte https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html["Replicación de datos hacia y desde la nube"^] .
+Si necesitas ayuda para replicar datos, consulta https://docs.netapp.com/us-en/data-services-replication/task-replicating-data.html["Replicación de datos hacia y desde la nube"^].
 
 
 

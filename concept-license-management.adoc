@@ -21,7 +21,7 @@ NOTE: Una licencia basada en nodos es la licencia de la generación anterior par
 
 link:concept-licensing.html["Obtenga más información sobre las licencias de Cloud Volumes ONTAP"].
 
-link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Obtenga más información sobre cómo administrar licencias basadas en nodos"^] .
+link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html["Obtenga más información sobre cómo administrar licencias basadas en nodos"^].
 
 
 
@@ -31,7 +31,7 @@ link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-l
 Las licencias basadas en nodos pueden adquirirse de NetApp. El número de licencias que puedes comprar para un sistema de nodo único o un par de HA es ilimitado.
 
 
-NOTE: NetApp ha restringido la compra, extensión y renovación de licencias BYOL. Para más información, consulte  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidad restringida de licencias BYOL para Cloud Volumes ONTAPP"^] .
+NOTE: NetApp ha restringido la adquisición, la ampliación y la renovación de las licencias BYOL. Para obtener más información, consulta https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidad restringida de licencias BYOL para Cloud Volumes ONTAPP"^].
 
 Una licencia basada en nodos proporciona hasta 368 TiB de capacidad para un solo nodo o par de alta disponibilidad (HA). Es posible que haya adquirido varias licencias para un sistema BYOL de Cloud Volumes ONTAP para asignar más de 368 TiB de capacidad. Por ejemplo, podría tener dos licencias para asignar hasta 736 TiB de capacidad a Cloud Volumes ONTAP. O podría tener cuatro licencias para obtener hasta 1,4 TiB.
 
@@ -44,7 +44,7 @@ Tenga en cuenta que los límites de disco pueden impedirle alcanzar el límite d
 
 Cuando crea un sistema BYOL basado en nodos, la consola le solicita el número de serie de su licencia y su cuenta del sitio de soporte de NetApp .  La consola utiliza la cuenta para descargar el archivo de licencia de NetApp e instalarlo en el sistema Cloud Volumes ONTAP .
 
-https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-nss-accounts.html["Aprenda a agregar cuentas del sitio de soporte de NetApp a la consola"^] .
+https://docs.netapp.com/us-en/console-setup-admin/task-adding-nss-accounts.html["Aprenda a agregar cuentas del sitio de soporte de NetApp a la consola"^].
 
 Si la consola no puede acceder al archivo de licencia a través de la conexión segura a Internet, puedelink:task-manage-node-licenses.html["Obtenga el archivo usted mismo y luego cárguelo manualmente a la consola"] .
 
