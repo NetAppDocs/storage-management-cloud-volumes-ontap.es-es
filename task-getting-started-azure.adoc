@@ -63,7 +63,7 @@ Una vez que hayas cumplido todos los requisitos previos, podrás seguir los paso
  a| 
 Consulta:
 
-* link:task-quick-deploy-azure.html["Implementa Cloud Volumes ONTAP con Quick create"]
+* link:task-quick-deploy-azure.html["Implementa Cloud Volumes ONTAP con Quick create en Azure"]
 * link:task-deploying-otc-azure.html["Implementa Cloud Volumes ONTAP usando opciones avanzadas"]
 
  a| 
@@ -71,7 +71,6 @@ Antes de iniciar la implementación, asegúrate de haber adquirido una licencia 
 
 * link:concept-license-management.html["Gestión de licencias para BYOL basado en nodos"]
 * link:task-manage-node-licenses.html["Gestiona licencias BYOL basadas en nodos"]
-* link:task-quick-deploy-azure.html["Implementa Cloud Volumes ONTAP con Quick create"]
 * link:task-deploying-otc-azure.html["Implementa Cloud Volumes ONTAP usando opciones avanzadas"]
 
 

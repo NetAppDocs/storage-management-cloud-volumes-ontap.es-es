@@ -95,7 +95,7 @@ Cuando hayas realizado todos los requisitos previos, puedes completar los pasos 
  a| 
 Consulta:
 
-* link:task-quick-deploy-gcp.html["Implementa Cloud Volumes ONTAP con Quick create"]
+* link:task-quick-deploy-gcp.html["Implementa Cloud Volumes ONTAP con Quick create en Google Cloud"]
 * link:task-deploying-gcp.html["Implementa Cloud Volumes ONTAP usando opciones avanzadas"]
 
  a| 
@@ -103,7 +103,6 @@ Antes de iniciar la implementación, asegúrate de haber adquirido una licencia 
 
 * link:concept-license-management.html["Gestión de licencias para BYOL basado en nodos"]
 * link:task-manage-node-licenses.html["Gestiona licencias BYOL basadas en nodos"]
-* link:task-quick-deploy-gcp.html["Implementa Cloud Volumes ONTAP con Quick create"]
 * link:task-deploying-gcp.html["Implementa Cloud Volumes ONTAP usando opciones avanzadas"]
 
 
