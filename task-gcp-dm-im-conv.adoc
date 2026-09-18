@@ -44,7 +44,7 @@ Los sistemas Cloud Volumes ONTAP que utilizan Infrastructure Manager almacenan d
 ====
 ** Asegúrate de que tienes la última versión del agente de la Console. Descarga el instalador del producto desde el NetApp Support Site y luego instala manualmente el agente en tu host para que el agente pueda usar las APIs de Infrastructure Manager.
 ** Si estás ejecutando la herramienta en modo privado, asegúrate de que, junto con las demás API, tienes habilitada la Cloud Build API. https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-google-gcloud.html#step-5-enable-google-cloud-apis["Habilita las API de Google Cloud"^].
-** Asegúrate de haber completado las configuraciones de red y creado el grupo de trabajadores para las implementaciones en modo privado. Consulta link:reference-networking-gcp.html#infrastructure-manager-configuration-for-private-mode-deployments["Configuración de Infrastructure Manager para implementaciones en modo privado"].
+** Asegúrate de haber completado las configuraciones de red y creado el grupo de trabajadores para las implementaciones en modo privado. Consulta link:reference-networking-gcp.html#infrastructure-manager-configuration-in-private-mode-or-protected-environments["Configuración de Infrastructure Manager para implementaciones en modo privado"].
 
 
 ====
@@ -293,7 +293,7 @@ dmconvert \
 .Ejecuta la herramienta en despliegues en modo privado
 [%collapsible]
 ====
-Especifica el parámetro `--worker-pool` para ejecutar la herramienta en despliegues en modo privado. Para la configuración del worker pool, consulta link:reference-networking-gcp.html#infrastructure-manager-configuration-for-private-mode-deployments["Configuración de Infrastructure Manager para implementaciones en modo privado"].
+Especifica el parámetro `--worker-pool` para ejecutar la herramienta en despliegues en modo privado. Para la configuración del worker pool, consulta link:reference-networking-gcp.html#infrastructure-manager-configuration-in-private-mode-or-protected-environments["Configuración de Infrastructure Manager para implementaciones en modo privado"].
 
 [source, cli]
 ----
