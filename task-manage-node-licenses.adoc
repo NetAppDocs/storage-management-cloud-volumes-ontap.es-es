@@ -14,36 +14,27 @@ summary: Administre sus licencias basadas en nodos en la NetApp Console para gar
 
 
 [role="lead lead"]
-Gestiona las licencias por nodo en la NetApp Console para asegurarte de que cada sistema Cloud Volumes ONTAP tenga una licencia válida con la capacidad necesaria.
+Bring-Your-Own License (BYOL) es un modelo de facturación en Cloud Volumes ONTAP, en el que pagas por el consumo de capacidad mediante una licencia que compras directamente a NetApp en vez de a través de suscripciones del marketplace. Gestiona tus licencias BYOL en la NetApp Console para asegurarte de que tus sistemas Cloud Volumes ONTAP tengan licencias válidas con la capacidad requerida. Para más información, consulta https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html["Licencias para Cloud Volumes ONTAP"^].
 
-_Las licencias por nodo_ son el modelo de licencia de la generación anterior (y no están disponibles para nuevos clientes):
-
-* Licencias «Bring your own license» (BYOL) adquiridas de NetApp
-* Suscripciones por horas con pago por uso (PAYGO) del marketplace de tu proveedor de servicios en la nube
+NetApp recomienda el modelo de licencia basado en la capacidad para todas las nuevas implementaciones. Si tienes una licencia existente que usa el modelo basado en nodos de la generación anterior, debes convertirla al modelo de licencia basado en la capacidad. Para obtener instrucciones, consulta https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-convert-node-capacity.html["Convertir una licencia basada en nodos de Cloud Volumes ONTAP a una licencia basada en capacidad"^].
 
 
-Puedes gestionar las licencias de Cloud Volumes ONTAP basadas en nodos desde la NetApp Console.
+NOTE: Las suscripciones PAYGO (pago por uso) del marketplace de tu proveedor de servicios en la nube no están disponibles para implementaciones en modo privado. En modo privado, NetApp proporciona licencias BYOL directamente. Las licencias por nodo solo están disponibles para implementaciones existentes en modo privado y no se pueden implementar de nuevo. NetApp ha restringido la compra, extensión y renovación de licencias por nodo en modo privado desde el 25 de junio de 2025. Si tienes una licencia por nodo existente, debes convertirla a una licencia basada en capacidad.
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Más información sobre las licencias de Cloud Volumes ONTAP"^].
+Para las nuevas implementaciones en modo privado, usa en su lugar las licencias basadas en la capacidad. Consulta https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap_capacity-license-darkmode/task-deploying-otc-aws.html#deploy-cloud-volumes-ontap-in-private-mode["Implementa Cloud Volumes ONTAP en modo privado"^].
 
 
 
-[[manage-paygo-licenses]]
-== Gestiona licencias PAYGO
+[[manage-paygo-subscriptions]]
+== Gestiona suscripciones PAYGO
 
-El menú «Licenses and subscriptions» te permite consultar los detalles de cada uno de tus sistemas PAYGO Cloud Volumes ONTAP, incluidos el número de serie y el tipo de licencia PAYGO.
+El menú Licenses and subscriptions te permite consultar los detalles de cada uno de tus sistemas PAYGO Cloud Volumes ONTAP, incluidos el número de serie y el tipo de suscripción PAYGO. Las suscripciones PAYGO del marketplace de tu proveedor de servicios en la nube solo están disponibles para licencias basadas en capacidad.
 
 .Pasos
 . En el panel de navegación de la izquierda, selecciona *Administración > Licenses and subscriptions*.
 . Selecciona la pestaña *Vista general*.
 . En el mosaico de Cloud Volumes ONTAP, selecciona *Ver*.
-. Selecciona *Licencias basadas en nodos* en el menú desplegable.
-. Haz clic en *PAYGO*.
-. Consulta en la tabla los detalles de cada una de tus licencias PAYGO.
-+
-image:screenshot_paygo_licenses.png["Una captura de pantalla que muestra una tabla en la página Licenses and subscriptions con tres licencias de pago por uso. Cada fila muestra el nombre, el tipo de sistema, el número de serie, el paquete y un enlace para gestionar la licencia."]
-
-. Si es necesario, haz clic en *Gestionar licencia PAYGO* para cambiar la licencia PAYGO o para cambiar el tipo de instancia.
+. En la pestaña *Suscripciones*, consulta en la tabla los detalles de cada una de tus suscripciones PAYGO.
 
 
 
@@ -56,18 +47,24 @@ Gestiona las licencias que compraste directamente de NetApp añadiendo y elimina
 
 NOTE: NetApp ha restringido la compra, extensión y renovación de licencias BYOL. Para más información, consulte  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["Disponibilidad restringida de licencias BYOL para Cloud Volumes ONTAP"^] .
 
+Las licencias BYOL para Cloud Volumes ONTAP ahora incluyen tanto licencias por nodo como licencias por capacidad adquiridas directamente de NetApp.
+
+En el caso de las *licencias BYOL basadas en capacidad*, la licencia está asociada a tu cuenta de Console, en lugar de a un único sistema Cloud Volumes ONTAP. Cada sistema recibe su propio número de serie, pero varios sistemas de la misma cuenta utilizan el mismo fondo común de capacidad y pueden compartir la licencia subyacente.
+
+En el caso de las *licencias BYOL basadas en nodos*, esta agrupación no se aplica. Cada sistema Cloud Volumes ONTAP requiere su propia licencia de sistema dedicada, y las licencias no se comparten entre sistemas. Sin embargo, si eliminas un sistema, puedes transferirla a un sistema nuevo. Para más información, consulta https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-license-management.html["Conoce Cloud Volumes ONTAP con el modelo BYOL basado en nodos"^].
+
 
 
 [[add-unassigned-licenses]]
 === Agregar licencias sin asignar
 
-Añade una licencia basada en nodos a la Console para que puedas seleccionarla cuando crees un nuevo sistema Cloud Volumes ONTAP. La Console identifica estas licencias como _sin asignar_.
+Añade una licencia BYOL a la Console para que puedas seleccionarla cuando crees un nuevo sistema Cloud Volumes ONTAP. La Console identifica estas licencias como _sin asignar_.
 
 .Pasos
 . En el panel de navegación de la izquierda, selecciona *Administración > Licenses and subscriptions*.
 . Selecciona la pestaña *Vista general*.
 . En el mosaico de Cloud Volumes ONTAP, selecciona *Ver*.
-. Selecciona *Licencias basadas en nodos* en el menú desplegable.
+. Selecciona la pestaña *Licenses*.
 . Haga clic en *Sin asignar*.
 . Haga clic en *Agregar licencias no asignadas*.
 . Ingrese el número de serie de la licencia o cargue el archivo de licencia.
@@ -82,10 +79,10 @@ La consola añade la licencia. La licencia aparecerá como sin asignar hasta que
 
 
 
-[[exchange-unassigned-node-based-licenses]]
-=== Intercambiar licencias basadas en nodos sin asignar
+[[exchange-an-unassigned-license]]
+=== Cambiar una licencia no asignada
 
-Si tienes una licencia basada en nodos sin asignar para Cloud Volumes ONTAP que no hayas usado, puedes canjear la licencia convirtiéndola en una licencia de NetApp Backup and Recovery, una licencia de NetApp Data Classification o una licencia de NetApp Cloud Tiering.
+Si tienes una licencia sin asignar para Cloud Volumes ONTAP que no hayas usado, puedes canjearla convirtiéndola en una licencia de NetApp Backup and Recovery, una licencia de NetApp Data Classification o una licencia de NetApp Cloud Tiering.
 
 Al cambiar la licencia, se revoca la licencia de Cloud Volumes ONTAP y se crea una licencia equivalente en dólares para el servicio:
 
@@ -95,13 +92,13 @@ Al cambiar la licencia, se revoca la licencia de Cloud Volumes ONTAP y se crea u
 
 La licencia convertida tiene la misma fecha de caducidad que la licencia de Cloud Volumes ONTAP.
 
-link:https://mydemo.netapp.com/player/?demoId=c96ef113-c338-4e44-9bda-81a8d252de63&showGuide=true&showGuidesToolbar=true&showHotspots=true&source=app["Consulta la guía paso a paso sobre cómo intercambiar licencias basadas en nodos."^]
+link:https://mydemo.netapp.com/player/?demoId=c96ef113-c338-4e44-9bda-81a8d252de63&showGuide=true&showGuidesToolbar=true&showHotspots=true&source=app["Consulta la guía paso a paso sobre cómo intercambiar licencias no asignadas."^]
 
 .Pasos
 . En el panel de navegación de la izquierda, selecciona *Administración > Licenses and subscriptions*.
 . Selecciona la pestaña *Vista general*.
 . En el mosaico de Cloud Volumes ONTAP, selecciona *Ver*.
-. Selecciona *Licencias basadas en nodos* en el menú desplegable.
+. Selecciona la pestaña *Licenses*.
 . Haga clic en *Sin asignar*.
 . Haz clic en *Exchange License*.
 +
@@ -145,7 +142,7 @@ Cuando renuevas una suscripción BYOL poniéndote en contacto con un representan
 . En el panel de navegación de la izquierda, selecciona *Administración > Licenses and subscriptions*.
 . Selecciona la pestaña *Vista general*.
 . En el mosaico de Cloud Volumes ONTAP, selecciona *Ver*.
-. Selecciona *Licencias basadas en nodos* en el menú desplegable.
+. Selecciona la pestaña *Licenses*.
 . En la pestaña *BYOL*, despliega los detalles de un sistema Cloud Volumes ONTAP.
 . Haz clic en el menú de acciones junto a la licencia del sistema y selecciona *Actualizar licencia*.
 . Sube el archivo de licencia (o los archivos si tienes un par de alta disponibilidad).
@@ -157,10 +154,12 @@ La consola actualiza la licencia en el sistema Cloud Volumes ONTAP.
 
 
 
-[[manage-extra-capacity-licenses]]
-=== Gestiona las licencias de capacidad adicional
+[[manage-extra-capacity-licenses-node-based-licenses-only]]
+=== Gestiona licencias de capacidad adicional (solo licencias por nodo)
 
-Puedes adquirir licencias de capacidad adicional para un sistema Cloud Volumes ONTAP BYOL para asignar más de los 368 TiB de capacidad que se incluyen con una licencia del sistema BYOL. Por ejemplo, podrías adquirir una licencia de capacidad adicional para asignar hasta 736 TiB de capacidad a Cloud Volumes ONTAP. O podrías adquirir tres licencias de capacidad adicionales para obtener hasta 1.4 PiB.
+Este procedimiento se aplica únicamente a las licencias basadas en nodos. Las licencias basadas en capacidad se nutren de un fondo común de capacidad y no requieren licencias adicionales de capacidad.
+
+Puedes adquirir licencias de capacidad adicional para un sistema BYOL basado en nodos de Cloud Volumes ONTAP para asignar más de los 368 TiB de capacidad que se incluyen con una licencia del sistema. Por ejemplo, podrías adquirir una licencia adicional para asignar hasta 736 TiB de capacidad a Cloud Volumes ONTAP. O podrías adquirir tres licencias de capacidad adicionales para obtener hasta 1,4 PiB.
 
 El número de licencias que puedes adquirir para un sistema de nodo único o un par de alta disponibilidad es ilimitado.
 
@@ -168,13 +167,13 @@ El número de licencias que puedes adquirir para un sistema de nodo único o un 
 
 ==== Agregar licencias de capacidad
 
-Adquiere una licencia de capacidad adicional poniéndote en contacto con nosotros a través del icono de chat en la esquina inferior derecha de la consola. Después de comprar la licencia, puedes aplicarla a un sistema Cloud Volumes ONTAP.
+Ponte en contacto con tu representante de NetApp para adquirir una licencia de capacidad adicional. Después de comprar la licencia, puedes aplicarla a un sistema Cloud Volumes ONTAP.
 
 .Pasos
 . En el panel de navegación de la izquierda, selecciona *Administración > Licenses and subscriptions*.
 . Selecciona la pestaña *Vista general*.
 . En el mosaico de Cloud Volumes ONTAP, selecciona *Ver*.
-. Selecciona *Licencias basadas en nodos* en el menú desplegable.
+. Selecciona la pestaña *Licenses*.
 . En la pestaña *BYOL*, despliega los detalles de un sistema Cloud Volumes ONTAP.
 . Haz clic en *Add Capacity License*.
 . Introduce el número de serie o sube el archivo de licencia (o los archivos si tienes un par de alta disponibilidad).
@@ -191,7 +190,7 @@ Si has ampliado la vigencia de una licencia de capacidad adicional, tendrás que
 . En el panel de navegación de la izquierda, selecciona *Administración > Licenses and subscriptions*.
 . Selecciona la pestaña *Vista general*.
 . En el mosaico de Cloud Volumes ONTAP, selecciona *Ver*.
-. Selecciona *Licencias basadas en nodos* en el menú desplegable.
+. Selecciona la pestaña *Licenses*.
 . En la pestaña *BYOL*, despliega los detalles de un sistema Cloud Volumes ONTAP.
 . Haz clic en el menú de acciones situado junto a la licencia de capacidad y selecciona *Actualizar licencia*.
 . Sube el archivo de licencia (o los archivos si tienes un par de alta disponibilidad).
@@ -208,7 +207,7 @@ Si una licencia de capacidad adicional ha caducado y ya no se utiliza, puedes el
 . En el panel de navegación de la izquierda, selecciona *Administración > Licenses and subscriptions*.
 . Selecciona la pestaña *Vista general*.
 . En el mosaico de Cloud Volumes ONTAP, selecciona *Ver*.
-. Selecciona *Licencias basadas en nodos* en el menú desplegable.
+. Selecciona la pestaña *Licenses*.
 . En la pestaña *BYOL*, despliega los detalles de un sistema Cloud Volumes ONTAP.
 . Haz clic en el menú de acciones situado junto a la licencia de capacidad y selecciona *Eliminar licencia*.
 . Haz clic en *Eliminar*.
@@ -219,7 +218,10 @@ Si una licencia de capacidad adicional ha caducado y ya no se utiliza, puedes el
 [[change-between-paygo-and-byol]]
 == Cambiar entre PAYGO y BYOL
 
-No se admite la conversión de un sistema de licencias PAYGO por nodo a licencias BYOL por nodo (y viceversa). Si quieres cambiar entre una suscripción de pago por uso y una suscripción BYOL, necesitas implementar un sistema nuevo y replicar datos del sistema existente al nuevo.
+
+NOTE: Esto se aplica únicamente a las implementaciones en modo estándar, ya que PAYGO no está disponible en modo privado.
+
+No se admite la conversión de un sistema de la licencia PAYGO a la licencia BYOL (y viceversa). Si quieres cambiar entre una suscripción PAYGO y una suscripción BYOL, necesitas implementar un sistema nuevo y replicar los datos del sistema existente al nuevo.
 
 .Pasos
 . Crea un nuevo sistema Cloud Volumes ONTAP.

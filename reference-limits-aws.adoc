@@ -105,7 +105,7 @@ Notas:
 
 Los límites de capacidad varían en función de la familia de tipos de instancia EC2 que usas y de si usas un sistema de nodo único o un par de HA.
 
-Las siguientes notas te dan detalles sobre los números que verás en las tablas de abajo:
+Las siguientes notas ofrecen información detallada sobre los números que verás en las tablas a continuación:
 
 * Los límites de los discos son específicos de los discos que contienen datos de usuario.
 +

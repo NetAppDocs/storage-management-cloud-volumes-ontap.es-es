@@ -348,7 +348,7 @@ No se admite la reversión o degradación de Cloud Volumes ONTAP a una versión 
 [[support-registration]]
 === Registro de soporte
 
-Cloud Volumes ONTAP debe estar registrado en el soporte de NetApp para poder actualizar el software mediante cualquiera de los métodos descritos en esta página.  Esto se aplica tanto al pago por uso (PAYGO) como al uso de su propia licencia (BYOL).  Necesitaráslink:task-registering.html["Registrar manualmente los sistemas PAYGO"] , mientras que los sistemas BYOL están registrados de forma predeterminada.
+Cloud Volumes ONTAP debe estar registrado con NetApp Support para poder actualizar el software mediante cualquiera de los métodos descritos en esta página. Esto se aplica tanto al modelo de pago por uso (PAYGO) como al de Bring-Your-Own License (BYOL). Necesitarás link:task-registering.html["Registrar manualmente los sistemas PAYGO"], mientras que los sistemas BYOL ya están registrados por defecto.
 
 
 TIP: Un sistema que no esté registrado para recibir soporte seguirá recibiendo las notificaciones de actualización de software que aparecen en la Consola cuando hay una nueva versión disponible.  Pero necesitará registrar el sistema antes de poder actualizar el software.

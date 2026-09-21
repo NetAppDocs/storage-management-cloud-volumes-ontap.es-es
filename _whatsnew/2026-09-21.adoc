@@ -1,0 +1,21 @@
+= Compatibilidad con licencias basadas en la capacidad en implementaciones en modo privado
+:allow-uri-read: 
+
+
+
+
+[[support-for-capacity-based-licenses-in-private-mode-deployments]]
+=== Compatibilidad con licencias basadas en la capacidad en implementaciones en modo privado
+
+Ahora puedes implementar sistemas Cloud Volumes ONTAP en modo privado con licencias basadas en capacidad en AWS, Azure y Google Cloud.
+
+NetApp solo admite el paquete Essentials para el modelo de licencia basado en capacidad en modo privado. Compra un paquete Essentials de Bring-Your-Own License (BYOL) basado en capacidad de NetApp y asígnalo a tu sistema durante la implementación. Los primeros 500 GiB de capacidad consumida no cuentan para los cargos de tu licencia. Puedes comprar paquetes adicionales a medida que crecen los requisitos de tu carga de trabajo.
+
+NetApp recomienda el modelo de licencia basado en capacidad para todas las implementaciones de Cloud Volumes ONTAP en modo privado. Si ya tienes implementaciones en modo privado con licencias por nodo, puedes convertirlas a licencias basadas en capacidad adquiriendo un paquete Essentials de NetApp. Esta nueva capacidad de implementación, combinada con la opción de conversión, respalda el plan de NetApp de abandonar gradualmente las licencias por nodo para pasar a las licencias basadas en capacidad.
+
+.Enlaces relacionados
+* https://review.docs.netapp.com/us-en/storage-management-cloud-volumes-ontap_capacity-license-darkmode/concept-licensing.html["Licencias de Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-license-management.html["Conoce Cloud Volumes ONTAP BYOL"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-licensing.html#end-of-availability-of-node-based-licenses["Fin de la disponibilidad de las licencias basadas en nodos"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html["Gestiona licencias por nodo para Cloud Volumes ONTAP"^]
+

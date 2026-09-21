@@ -7,9 +7,9 @@
 [[support-for-google-infrastructure-manager-for-private-mode-deployments]]
 === Compatibilidad con Google Infrastructure Manager para implementaciones en modo privado
 
-Cloud Volumes ONTAP 9.16.1 y versiones posteriores ahora admiten https://docs.cloud.google.com/infrastructure-manager/docs/overview["Google Cloud Infrastructure Manager"^] (IM) en lugar de https://docs.cloud.google.com/deployment-manager/docs/deprecations["Cloud Deployment Manager"^] (DM) para nuevas implementaciones en modo privado en Google Cloud. Google va a dejar de usar Deployment Manager como servicio de infraestructura en un futuro cercano para dar paso a Infrastructure Manager, que es más avanzado.
+Cloud Volumes ONTAP 9.16.1 y versiones posteriores ahora admiten  https://docs.cloud.google.com/infrastructure-manager/docs/overview["Google Cloud Infrastructure Manager"^] (IM) en lugar de  https://docs.cloud.google.com/deployment-manager/docs/deprecations["Cloud Deployment Manager"^] (DM) para nuevas implementaciones en modo privado en Google Cloud. Google dejará de ofrecer Deployment Manager como servicio de infraestructura en un futuro próximo para dar paso a Infrastructure Manager, que es más avanzado.
 
-A partir del 25 de febrero de 2026, Cloud Volumes ONTAP utiliza Infrastructure Manager para los despliegues en modo privado nuevos y existentes. Esta tabla te explica los flujos de trabajo básicos:
+A partir del 25 de febrero de 2026, Cloud Volumes ONTAP utiliza Infrastructure Manager para las implementaciones en modo privado, tanto nuevas como existentes. Esta tabla te explica los flujos de trabajo básicos:
 
 [cols="1,4,1,1,1,1"]
 |===
@@ -39,11 +39,11 @@ Todos los permisos listados para la versión de la NetApp Console en:
 
 | Nuevo agente y nuevo despliegue | Crea un nuevo agente y despliega un nuevo sistema Cloud Volumes ONTAP en modo privado. |  |  |   a| 
 * https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-google-gcloud.html["Crea un agente de NetApp Console desde Google Cloud"^]
-* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-private-mode.html["Inicio rápido para implementaciones en modo privado"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-private-mode.html["Guía de inicio rápido para implementaciones en modo privado"^]
 
 
 |===
-En los despliegues en modo privado, necesitas hacer algunos cambios de configuración para que Cloud Volumes ONTAP empiece a usar Infrastructure Manager. Consulta https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#infrastructure-manager-configuration-in-private-mode-or-protected-environments["Configuración de Infrastructure Manager para implementaciones en modo privado"^].
+En las implementaciones en modo privado, necesitas hacer algunos cambios en la configuración de Cloud Volumes ONTAP para empezar a usar Infrastructure Manager. Consulta https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#infrastructure-manager-configuration-for-private-mode-deployments["Configuración de Infrastructure Manager para implementaciones en modo privado"^].
 
 .Enlaces relacionados
 * https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#console-agent-4-2-0["NetApp Console Agent 4.2.0 Notas de la versión"^]

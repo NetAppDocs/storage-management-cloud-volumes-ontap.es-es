@@ -24,6 +24,17 @@ Puedes integrar Cloud Volumes ONTAP en AWS utilizando AWS Marketplace o la NetAp
 
 
  a| 
+Verifica los roles de NetApp Console
+ a| 
+Antes de poder crear un agente de consola y realizar otras tareas de implementación para Cloud Volumes ONTAP, debes comprobar que los roles y permisos de IAM necesarios estén en su lugar.
+ a| 
+Consulta la guía de configuración de la consola: https://docs.netapp.com/us-en/console-setup-admin/reference-iam-cvo-roles.html["Roles de acceso de Cloud Volumes ONTAP en NetApp Console"^] https://docs.netapp.com/us-en/console-setup-admin/task-cvo-rbac-setup.html["Configura el acceso basado en roles para Cloud Volumes ONTAP"^]
+ a| 
+Comprueba que los roles estén configurados correctamente.
+
+
+
+ a| 
 Crear un agente de Console
  a| 
 Si aún no tienes un agente de consola, crea uno antes de implementar Cloud Volumes ONTAP. Si implementas en una subred sin acceso a internet, instala manualmente el agente de consola y accede a la consola de NetApp que se ejecuta en ese agente.
@@ -79,10 +90,10 @@ Una vez que hayas cumplido todos los requisitos previos, podrás seguir los paso
 * link:task-deploying-otc-aws.html["Implementa Cloud Volumes ONTAP usando opciones avanzadas"]
 
  a| 
-Antes de iniciar la implementación, asegúrate de haber adquirido una licencia de Cloud Volumes ONTAP en NetApp. Las implementaciones en modo privado requieren licencias BYOL basadas en nodos. Las suscripciones de Marketplace no son compatibles para la facturación del uso de Cloud Volumes ONTAP. Obtén el archivo de licencia en NetApp y súbelo durante la implementación. Consulta:
+El modo privado solo es compatible con la implementación avanzada. Antes de comenzar la implementación, asegúrate de haber adquirido una licencia de Cloud Volumes ONTAP de NetApp. Las implementaciones en modo privado se basan en licencias BYOL. Las suscripciones de Marketplace no son compatibles para cobrar el uso de Cloud Volumes ONTAP. Obtén el archivo de licencia de NetApp y súbelo durante la implementación. Consulta:
 
-* link:concept-license-management.html["Gestión de licencias para BYOL basado en nodos"]
-* link:task-manage-node-licenses.html["Gestiona licencias BYOL basadas en nodos"]
+* link:concept-license-management.html["Gestión de licencias"]
+* link:task-manage-node-licenses.html["Gestiona licencias BYOL"]
 * link:task-deploying-otc-aws.html["Implementa Cloud Volumes ONTAP usando opciones avanzadas"]
 
 

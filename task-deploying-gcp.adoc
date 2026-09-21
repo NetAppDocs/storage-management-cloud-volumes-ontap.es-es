@@ -509,6 +509,20 @@ Las cuotas le permiten restringir o rastrear el espacio en disco y la cantidad d
 
 CAUTION: Después de que se complete el proceso de despliegue, no modifiques las configuraciones de Cloud Volumes ONTAP generadas por el sistema en el portal de Google Cloud, como las etiquetas del sistema y las etiquetas establecidas en los recursos de Google Cloud. Cualquier cambio hecho en estas configuraciones puede causar un comportamiento inesperado o pérdida de datos.
 
+
+
+[[deploy-cloud-volumes-ontap-in-private-mode]]
+== Implementa Cloud Volumes ONTAP en modo privado
+
+Las opciones de implementación en modo privado te ayudan a cumplir los requisitos de seguridad y cumplimiento de tu organización. Una implementación en modo privado sigue el mismo procedimiento que una implementación en modo estándar. Funciona en tu propia nube privada virtual (VPC) o red virtual (VNet) sin conexión a internet pública.
+
+En el modo privado, debes adquirir una licencia Bring-Your-Own License (BYOL) basada en la capacidad o un paquete link:concept-license-management.html["Trae tu propia bebida"] _Essentials_ de NetApp y asignarla a tu sistema durante la implementación. Los primeros 500 GiB de capacidad consumida no cuentan para los cargos de tu licencia. Compra paquetes Essentials adicionales a medida que crezcan los requisitos de tu carga de trabajo. Después de la implementación, puedes ver el número de serie de la licencia en la consola.
+
+Para obtener información sobre cómo cargar un archivo de licencia en tu implementación en modo privado, consulta https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html["Gestiona licencias por nodo para Cloud Volumes ONTAP"].
+
+.Restricciones para el modelo de licencia por nodo
+Las implementaciones en modo privado utilizaban anteriormente solo licencias por nodo. NetApp ha restringido la compra, extensión y renovación de estas licencias de generación anterior, salvo en casos limitados, desde https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#restricted-availability-of-byol-licensing-for-cloud-volumes-ontap["25 de junio de 2025"]. Si tienes implementaciones existentes en modo privado con licencias por nodo, debes convertirlas a licencias por capacidad. Para ver las instrucciones, consulta https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-convert-node-capacity.html["Convierte licencias por nodo en licencias por capacidad"^].
+
 .Enlaces relacionados
 * link:task-planning-your-config-gcp.html["Planificación de la configuración de Cloud Volumes ONTAP en Google Cloud"]
 

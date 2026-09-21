@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-getting-started-gcp.html 
 keywords: google cloud platform, gcp, cloud manager, deploy the Console, launch the Console, create the Console, getting started, networking, gcp networking, service account, tiering, data tiering, bucket, fabricpool, cloud backup, storage access key, gcp role, role, iam role, permissions, gcp permissions, cloud backup, the Console 
-summary: Comience a utilizar Cloud Volumes ONTAP para Google Cloud en unos pocos pasos. 
+summary: Empieza a utilizar Cloud Volumes ONTAP en Google Cloud en unos pocos pasos. 
 ---
 = Descripción general de la implementación de Cloud Volumes ONTAP en Google Cloud
 :hardbreaks:
@@ -19,6 +19,17 @@ Para implementar Cloud Volumes ONTAP, primero necesitas conocer tu suscripción 
 [cols="20,35,25,25"]
 |===
 | Tarea | Descripción | Referencia | Notas para implementaciones en modo privado 
+
+
+ a| 
+Verifica los roles de NetApp Console
+ a| 
+Antes de poder crear un agente de consola y realizar otras tareas de implementación para Cloud Volumes ONTAP, debes comprobar que los roles y permisos de IAM necesarios estén en su lugar.
+ a| 
+Consulta la guía de configuración de la consola: https://docs.netapp.com/us-en/console-setup-admin/reference-iam-cvo-roles.html["Roles de acceso de Cloud Volumes ONTAP en NetApp Console"^] https://docs.netapp.com/us-en/console-setup-admin/task-cvo-rbac-setup.html["Configura el acceso basado en roles para Cloud Volumes ONTAP"^]
+ a| 
+Comprueba que los roles estén configurados correctamente.
+
 
 
  a| 
@@ -99,10 +110,10 @@ Consulta:
 * link:task-deploying-gcp.html["Implementa Cloud Volumes ONTAP usando opciones avanzadas"]
 
  a| 
-Antes de iniciar la implementación, asegúrate de haber adquirido una licencia de Cloud Volumes ONTAP en NetApp. Las implementaciones en modo privado requieren licencias BYOL basadas en nodos. Las suscripciones de Marketplace no son compatibles para la facturación del uso de Cloud Volumes ONTAP. Obtén el archivo de licencia en NetApp y súbelo durante la implementación. Consulta:
+El modo privado solo es compatible con la implementación avanzada. Antes de comenzar la implementación, asegúrate de haber adquirido una licencia de Cloud Volumes ONTAP de NetApp. Las implementaciones en modo privado se basan en licencias BYOL. Las suscripciones de Marketplace no son compatibles para cobrar el uso de Cloud Volumes ONTAP. Obtén el archivo de licencia de NetApp y súbelo durante la implementación. Consulta:
 
-* link:concept-license-management.html["Gestión de licencias para BYOL basado en nodos"]
-* link:task-manage-node-licenses.html["Gestiona licencias BYOL basadas en nodos"]
+* link:concept-license-management.html["Gestión de licencias"]
+* link:task-manage-node-licenses.html["Gestiona licencias BYOL"]
 * link:task-deploying-gcp.html["Implementa Cloud Volumes ONTAP usando opciones avanzadas"]
 
 

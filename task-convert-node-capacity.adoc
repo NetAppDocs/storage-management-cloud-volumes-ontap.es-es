@@ -38,7 +38,7 @@ Si tienes una implementación en modo estándar, puedes convertir tu licencia ba
 ** Los recursos de la nube subyacentes no se ven afectados después de la conversión.
 
 
-* La herramienta de conversión de licencias admite todos los tipos de implementación, como nodo único, alta disponibilidad (HA) en una sola zona de disponibilidad (AZ), HA en varias AZ, traiga su propia licencia (BYOL) y PAYGO.
+* La herramienta de conversión de licencias es compatible con todos los tipos de implementación, como nodo único, alta disponibilidad (HA) en una sola zona de disponibilidad (AZ), HA en varias AZ, Bring-Your-Own License (BYOL) y pago por uso (PAYGO).
 * En el modo estándar, la herramienta admite todas las licencias basadas en nodos como origen y todas las licencias basadas en capacidad como destino. Por ejemplo, si tienes una licencia BYOL basada en nodos, puedes convertirla en cualquier licencia basada en capacidad adquirida de NetApp.
 * Tras la conversión, el número de serie de la licencia basada en nodos se sustituye por un formato basado en la capacidad. Esto se lleva a cabo como parte de la conversión y queda reflejado en tu cuenta del sitio de soporte de NetApp (NSS).
 * Cuando realiza la transición al modelo basado en capacidad, sus datos continúan reteniéndose en la misma ubicación que la licencia basada en nodos.  Este enfoque garantiza que no haya interrupciones en la ubicación de los datos y defiende los principios de soberanía de datos durante toda la transición.
@@ -103,7 +103,7 @@ Consulta el nuevo número de serie de la licencia y comprueba los cambios en el 
 
 Si tienes una implementación en modo privado, puedes convertir tu licencia basada en nodos en una licencia basada en capacidad usando la herramienta de conversión de licencias en la NetApp Console. La conversión es compatible con todos los proveedores de nube, AWS, Azure y Google Cloud.
 
-Dado que las suscripciones de marketplace no son compatibles con el modo privado, necesitas adquirir un paquete Essentials (bring your own license (BYOL)) de NetApp. Esto te permite mantener los beneficios de las licencias basadas en la capacidad dentro del modelo BYOL sin requerir suscripciones de marketplace.
+Dado que las suscripciones de marketplace no son compatibles con el modo privado, necesitas comprar una licencia Essentials Bring-Your-Own License o un paquete BYOL de NetApp. Esto te permite mantener los beneficios de las licencias basadas en capacidad dentro del modelo BYOL sin requerir suscripciones de marketplace.
 
 
 NOTE: En el modo privado no se admite la conversión de licencias por nodo a ninguna licencia basada en capacidad que no sea Essentials.

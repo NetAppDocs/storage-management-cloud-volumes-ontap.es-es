@@ -32,7 +32,7 @@ La generación de informes de espacio lógico está habilitada en la máquina vi
 ** FlexClone
 ** iSCSI
 ** Administración de claves de cifrado multiinquilino (MTEKM), a partir de Cloud Volumes ONTAP 9.12.1 GA
-** Cifrado de volumen de NetApp (solo para sistemas BYOL (trae tu propia licencia) o sistemas de pago por uso registrados (PAYGO))
+** NetApp Volume Encryption (solo para sistemas Bring-Your-Own License (BYOL) o sistemas registrados de pago por uso (PAYGO))
 ** NFS ifdef::aws[] endif::aws[] ifdef::azure[] endif::azure[]
 ** SnapMirror
 ** SnapRestore

@@ -73,8 +73,8 @@ Solo verás las suscripciones asociadas a la organización que estás viendo en 
 
 
 
-[[viewing-package-details]]
-== Ver los detalles del paquete
+[[view-package-details]]
+== Ver detalles del paquete
 
 Puedes consultar los detalles sobre la capacidad utilizada por cada paquete activando el modo heredado en la página de Cloud Volumes ONTAP.
 

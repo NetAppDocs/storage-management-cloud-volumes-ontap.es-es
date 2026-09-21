@@ -53,7 +53,7 @@ Las licencias basadas en capacidad le permiten pagar Cloud Volumes ONTAP por TiB
 
 Los paquetes Essentials y Professional están disponibles con los siguientes modelos de consumo u opciones de compra:
 
-* Una licencia (traiga su propia licencia (BYOL)) comprada a NetApp
+* Una licencia adquirida de NetApp (Bring-Your-Own License o BYOL)
 * Una suscripción por hora, de pago por uso (PAYGO) desde Azure Marketplace
 * Un contrato anual
 

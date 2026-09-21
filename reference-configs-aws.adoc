@@ -827,7 +827,7 @@ Las siguientes notas proporcionan una guía general sobre el comportamiento de l
 [[supported-regions]]
 === Regiones compatibles
 
-Para soporte de la región de AWS, consulta https://bluexp.netapp.com/cloud-volumes-global-regions["Cloud Volumes regiones globales"^].
+Para obtener información sobre las regiones compatibles con AWS, consulta https://bluexp.netapp.com/cloud-volumes-global-regions["Cloud Volumes regiones globales"^].
 
 .Información relacionada
 * https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html["Tipos de instancia de Amazon EC2"^]
