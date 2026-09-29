@@ -24,26 +24,10 @@ Se admiten la mayoría de las configuraciones.  Si tiene un sistema Cloud Volume
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"]Garantizar la conectividad entre Cloud Volumes ONTAP y el almacenamiento de objetos
 [role="quick-margin-list"]
-ifdef::aws[]
-
-* Para AWS, necesitarás un VPC Endpoint para Amazon Simple Storage Service (Amazon S3). <<Requirements to tier cold data to AWS S3,Más información>>.
-
-
-endif::aws[]
-
-ifdef::azure[]
-
+* En el caso de AWS, necesitas un punto de conexión de VPC a Amazon Simple Storage Service (Amazon S3). <<Requirements to tier cold data to AWS S3,Más información>>.
 * Para Azure, no necesitará hacer nada siempre que la NetApp Console tenga los permisos necesarios. <<Requisitos para organizar en niveles datos inactivos en el almacenamiento de blobs de Azure,Más información>> .
-
-
-endif::azure[]
-
-ifdef::gcp[]
-
 * Para Google Cloud, debe configurar la subred para el acceso privado de Google y configurar una cuenta de servicio. <<Requisitos para agrupar datos fríos en un depósito de Google Cloud Storage,Más información>> .
 
-
-endif::gcp[]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"]Asegúrese de tener un agregado con niveles habilitados
 [role="quick-margin-para"]
@@ -77,8 +61,6 @@ La consola crea un almacén de objetos para datos fríos cuando crea el sistema,
 
 Puede habilitar la clasificación de datos al utilizar configuraciones y funciones específicas.
 
-ifdef::aws[]
-
 
 
 [[support-in-aws]]
@@ -92,10 +74,6 @@ NOTE: No recomendamos organizar los datos en niveles de almacenamiento de objeto
 
 * Los datos inactivos se agrupan en depósitos de Amazon S3.  No se admite la combinación con otros proveedores.
 
-
-endif::aws[]
-
-ifdef::azure[]
 
 
 
@@ -112,10 +90,6 @@ ifdef::azure[]
 * Los datos inactivos se agrupan en Microsoft Azure Blob.  No se admite la combinación con otros proveedores.
 
 
-endif::azure[]
-
-ifdef::gcp[]
-
 
 
 [[support-in-google-cloud]]
@@ -125,8 +99,6 @@ ifdef::gcp[]
 * El nivel de rendimiento puede ser discos persistentes SSD, discos persistentes equilibrados o discos persistentes estándar.
 * Los datos inactivos se almacenan en Google Cloud Storage.  No se admite la combinación con otros proveedores.
 
-
-endif::gcp[]
 
 
 
@@ -144,8 +116,6 @@ endif::gcp[]
 
 Según su proveedor de nube, se deben configurar ciertas conexiones y permisos para que Cloud Volumes ONTAP pueda organizar en niveles los datos fríos en el almacenamiento de objetos.
 
-ifdef::aws[]
-
 
 
 [[requirements-to-tier-cold-data-to-amazon-s3]]
@@ -156,10 +126,6 @@ Asegúrate de que Cloud Volumes ONTAP tiene una conexión a Amazon S3. La mejor 
 Al crear el punto final de VPC, asegúrese de seleccionar la región, la VPC y la tabla de rutas que corresponden a la instancia de Cloud Volumes ONTAP .  También debe modificar el grupo de seguridad para agregar una regla HTTPS saliente que habilite el tráfico al punto final S3.  De lo contrario, Cloud Volumes ONTAP no podrá conectarse al servicio S3.
 
 Si experimenta algún problema, consulte https://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint/["Centro de conocimiento de soporte de AWS: ¿Por qué no puedo conectarme a un bucket S3 mediante un punto final de VPC de puerta de enlace?"^] .
-
-endif::aws[]
-
-ifdef::azure[]
 
 
 
@@ -174,10 +140,6 @@ No es necesario configurar una conexión entre el nivel de rendimiento y el nive
 "Microsoft.Network/routeTables/join/action",
 ----
 El rol personalizado incluye los permisos de forma predeterminada. https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-azure.html["Ver el permiso de Azure para el agente de consola"^]
-
-endif::azure[]
-
-ifdef::gcp[]
 
 
 
@@ -200,8 +162,6 @@ Si no seleccionas una cuenta de servicio durante el despliegue, tendrás que apa
 link:task-setting-up-gcp-encryption.html["Aprenda a usar claves de cifrado administradas por el cliente con Cloud Volumes ONTAP"] .
 
 
-
-endif::gcp[]
 
 
 
@@ -240,9 +200,9 @@ image:screenshot_aggregate_tiering_enabled.png["Una captura de pantalla que mues
 
 
 .Pasos para habilitar la estratificación en un agregado
-. En el Administrador del sistema ONTAP , haga clic en *Almacenamiento > Niveles*.
-. Haga clic en el menú de acciones para el agregado y seleccione *Adjuntar niveles de nube*.
-. Seleccione el nivel de nube que desea adjuntar y haga clic en *Guardar*.
+. En ONTAP System Manager, selecciona *Storage > Tiers*.
+. Selecciona el menú de acciones del agregado y elige *Attach Cloud Tiers*.
+. Selecciona el nivel de la nube que deseas asociar y pulsa *Guardar*.
 
 
 .¿Que sigue?
@@ -263,10 +223,10 @@ Cloud Volumes ONTAP puede organizar en niveles los datos inactivos en volúmenes
 | Tarea | Acción 
 
 
-| Crear un nuevo volumen | Haga clic en *Agregar nuevo volumen*. 
+| Crear un nuevo volumen | Selecciona *Add New Volume*. 
 
 
-| Modificar un volumen existente | Seleccione el mosaico de volumen deseado, haga clic en *Administrar volumen* para acceder al panel derecho Administrar volúmenes y luego haga clic en *Acciones avanzadas* y *Cambiar política de niveles* debajo del panel derecho. 
+| Modificar un volumen existente | Selecciona el bloque de volumen deseado, selecciona *Manage volume* para acceder al panel lateral derecho Manage Volumes y luego selecciona *Advanced actions* y *Change tiering policy* en el panel derecho. 
 |===
 . Seleccione una política de niveles.
 +
@@ -317,8 +277,8 @@ La clase de almacenamiento para datos en niveles es para todo el sistema, no por
 Para obtener información sobre las clases de almacenamiento admitidas, consultelink:concept-data-tiering.html["Descripción general de la clasificación de datos"] .
 
 .Pasos
-. En el sistema Cloud Volumes ONTAP , haga clic en el ícono de menú y luego en *Clases de almacenamiento* o *Niveles de almacenamiento de blobs*.
-. Seleccione una clase de almacenamiento y luego haga clic en *Guardar*.
+. En el sistema Cloud Volumes ONTAP, selecciona el icono de menú y luego selecciona *Clases de almacenamiento* o *Blob Storage Tiering*.
+. Elige una clase de almacenamiento y luego selecciona *Guardar*.
 
 
 
@@ -337,16 +297,16 @@ La relación es importante para los escenarios de recuperación ante desastres p
 
 .Pasos
 . Desde el panel de navegación izquierdo, vaya a *Administración > Agentes*.
-. Haz clic en el icono image:icon-action.png["Un icono que muestra tres puntos horizontales para acciones adicionales"] del agente de Console que gestiona tu sistema Cloud Volumes ONTAP.
+. Selecciona el icono image:icon-action.png["Un icono que muestra tres puntos horizontales para acciones adicionales"] del agente de Console que gestiona tu sistema Cloud Volumes ONTAP.
 . Seleccione *Configuración de Cloud Volumes ONTAP *.
 +
 image::screenshot-settings-cloud-volumes-ontap.png[Una captura de pantalla de la opción Configuración de Cloud Volumes ONTAP en el ícono Configuración.]
 
-. En *Capacidad*, haga clic en *Umbrales de capacidad agregada - Relación de espacio libre para niveles de datos*.
+. En *Capacidad*, selecciona *Umbrales de capacidad agregada: proporción de espacio libre para la organización en niveles de datos*.
 +
 image:screenshot-cvo-settings-page.png["Una descripción general de la configuración de capacidad de Cloud Volumes ONTAP."]
 
-. Cambie la proporción de espacio libre según sus requisitos y haga clic en *Guardar*.
+. Modifica el porcentaje de espacio libre según tus necesidades y selecciona *Guardar*.
 
 
 

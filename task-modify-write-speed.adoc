@@ -27,7 +27,7 @@ Antes de cambiar la velocidad de escritura, debelink:concept-write-speed.html["C
 
 .Pasos
 . En la página *Sistemas*, haga doble clic en el nombre del sistema que configura para la velocidad de escritura.
-. En la pestaña Descripción general, haga clic en el panel Características y luego haga clic en el ícono de lápiz junto a *Velocidad de escritura*.
+. En la pestaña «Descripción general», selecciona el panel «Características» y, a continuación, selecciona el icono del lápiz junto a *Write Speed*.
 . Seleccione *Normal* o *Alto*.
 +
 Si elige Alto, deberá leer la declaración "Entiendo..." y confirmar marcando la casilla.
@@ -36,5 +36,5 @@ Si elige Alto, deberá leer la declaración "Entiendo..." y confirmar marcando l
 
 NOTE: La opción de velocidad de escritura *Alta* es compatible con pares Cloud Volumes ONTAP HA en Google Cloud a partir de la versión 9.13.0.
 
-. Haga clic en *Guardar*, revise el mensaje de confirmación y luego haga clic en *Aprobar*.
+. Selecciona *Guardar*, revisa el mensaje de confirmación y, a continuación, selecciona *Aprobar*.
 

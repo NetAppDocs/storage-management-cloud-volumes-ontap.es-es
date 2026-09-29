@@ -32,10 +32,10 @@ Los siguientes pasos ilustran cómo establecer una configuración similar.
 . https://docs.aws.amazon.com/vpc/latest/tgw/tgw-getting-started.html["Cree una puerta de enlace de tránsito y adjunte las VPC a la puerta de enlace"^] .
 . Asocie las VPC con la tabla de rutas de la puerta de enlace de tránsito.
 +
-.. En el servicio *VPC*, haga clic en *Tablas de rutas de puerta de enlace de tránsito*.
+.. En el servicio *VPC*, selecciona *Transit Gateway Route Tables*.
 .. Seleccione la tabla de rutas.
-.. Haga clic en *Asociaciones* y luego seleccione *Crear asociación*.
-.. Seleccione los archivos adjuntos (las VPC) que desea asociar y luego haga clic en *Crear asociación*.
+.. Selecciona *Asociaciones* y, a continuación, selecciona *Crear asociación*.
+.. Elige los elementos adjuntos (las VPC) que quieres asociar y luego selecciona *Crear asociación*.
 
 
 . Cree rutas en la tabla de rutas de la puerta de enlace de tránsito especificando las direcciones IP flotantes del par HA.
@@ -75,13 +75,13 @@ image:screenshot_transit_gateway3.png["Una captura de pantalla de la consola de 
 
 . Actualice la configuración de los grupos de seguridad a Todo el tráfico para la VPC.
 +
-.. En Nube privada virtual, haga clic en *Subredes*.
-.. Haga clic en la pestaña *Tabla de rutas* y seleccione el entorno deseado para una de las direcciones IP flotantes para un par HA.
-.. Haga clic en *Grupos de seguridad*.
+.. En «Virtual Private Cloud», selecciona *Subnets*.
+.. Selecciona la pestaña *Tabla de enrutamiento* y elige el entorno que quieras para una de las direcciones IP flotantes de un par de alta disponibilidad.
+.. Selecciona *Security groups*.
 .. Seleccione *Editar reglas de entrada*.
-.. Haga clic en *Agregar regla*.
+.. Selecciona *Add rule*.
 .. En Tipo, seleccione *Todo el tráfico* y, a continuación, seleccione la dirección IP de VPC.
-.. Haga clic en *Guardar reglas* para aplicar los cambios.
+.. Selecciona *Save Rules* para aplicar los cambios.
 
 
 . Montar volúmenes en clientes utilizando la dirección IP flotante.

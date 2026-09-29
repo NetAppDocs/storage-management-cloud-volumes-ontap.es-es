@@ -37,7 +37,7 @@ Las instantáneas se crean automáticamente solo cuando se realiza un apagado ma
 
 .Pasos
 . En la página *Sistemas*, haga doble clic en el sistema Cloud Volumes ONTAP .
-. En la pestaña Descripción general, haga clic en el panel Características y luego haga clic en el ícono de lápiz junto a *Tiempo de inactividad programado*.
+. En la pestaña «Resumen», selecciona el panel «Funciones» y, a continuación, selecciona el icono del lápiz situado junto a *Tiempo de inactividad programado*.
 +
 image::screenshot_schedule_downtime.png[400]
 
@@ -56,7 +56,7 @@ image:screenshot_schedule_downtime_window.png["Captura de pantalla: muestra la p
 
 
 
-. Haga clic en *Guardar*.
+. Selecciona *Guardar*.
 
 
 .Resultado
@@ -76,12 +76,12 @@ NOTE: Para reducir costos, la consola elimina periódicamente instantáneas anti
 Cuando se detiene un par HA, la consola apaga ambos nodos.
 
 .Pasos
-. Desde el sistema, haga clic en el ícono *Apagar*.
+. En el sistema, selecciona el icono *Turn off*.
 +
 image:screenshot_turn_off_redesign.png["Captura de pantalla: muestra el ícono para apagar un sistema Cloud Volumes ONTAP ."]
 
 . Mantenga habilitada la opción para crear instantáneas porque las instantáneas pueden habilitar la recuperación del sistema.
-. Haga clic en *Desactivar*.
+. Selecciona *Desactivar*.
 +
 Puede tomar hasta algunos minutos detener el sistema.  Puede reiniciar los sistemas más tarde desde la página *Sistemas*.
 

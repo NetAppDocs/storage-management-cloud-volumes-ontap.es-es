@@ -37,7 +37,7 @@ TIP: La NetApp Console cambia un nodo a la vez iniciando la toma de control y es
 
 .Pasos
 . En la página *Sistemas*, seleccione el sistema.
-. En la pestaña Descripción general, haga clic en el panel Características y luego haga clic en el ícono de lápiz junto a *Tipo de máquina*.
+. En la pestaña «Descripción general», selecciona el panel «Características» y, a continuación, selecciona el icono del lápiz situado junto a *Tipo de máquina*.
 +
 image:screenshot_features_machine_type.png["Una captura de pantalla que muestra la configuración del tipo de máquina en el panel Características disponible en la parte superior derecha de la página Descripción general al visualizar un sistema."]
 
@@ -45,7 +45,7 @@ image:screenshot_features_machine_type.png["Una captura de pantalla que muestra 
 
 Si está utilizando una licencia de pago por uso (PAYGO) basada en nodos, puede elegir opcionalmente una licencia y un tipo de máquina diferentes haciendo clic en el ícono de lápiz junto a *Tipo de licencia*.
 
-. Seleccione un tipo de máquina, seleccione la casilla de verificación para confirmar que comprende las implicaciones del cambio y luego haga clic en *Cambiar*.
+. Elige un tipo de máquina, marca la casilla de comprobación para confirmar que comprendes las implicaciones del cambio y, a continuación, selecciona *Cambiar*.
 
 
 .Resultado

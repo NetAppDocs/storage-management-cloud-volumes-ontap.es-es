@@ -20,7 +20,7 @@ El archivo _tar.gz_ contiene los archivos necesarios para la verificación de la
 
 .Pasos
 . Ir a la https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/guideme-tab["Página del producto Cloud Volumes ONTAP en el sitio de soporte de NetApp"^] y descargue la versión de software requerida desde la sección *Descargas*.
-. En la página de descarga de Cloud Volumes ONTAP , haga clic en el archivo descargable de la imagen de Azure y descargue el archivo _tar.gz_.
+. En la página de descargas de Cloud Volumes ONTAP, selecciona el archivo descargable de la imagen de Azure y descarga el archivo _tar.gz_.
 +
 image::screenshot_cloud_volumes_ontap_tar.gz.png[Captura de pantalla de volúmenes en la nube ontap tar.gz]
 

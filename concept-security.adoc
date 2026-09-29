@@ -24,28 +24,10 @@ Cloud Volumes ONTAP admite el cifrado de datos y brinda protección contra virus
 Cloud Volumes ONTAP admite las siguientes tecnologías de cifrado:
 
 * Soluciones de cifrado de NetApp (NVE y NAE)
-
-
-ifdef::aws[]
-
 * Servicio de administración de claves de AWS
-
-
-endif::aws[]
-
-ifdef::azure[]
-
 * Cifrado del servicio de almacenamiento de Azure
-
-
-endif::azure[]
-
-ifdef::gcp[]
-
 * Cifrado predeterminado de Google Cloud Platform
 
-
-endif::gcp[]
 
 Puede utilizar soluciones de cifrado de NetApp con cifrado nativo de su proveedor de nube, que cifra los datos a nivel de hipervisor.  De esta manera se obtendría un doble cifrado, algo que podría ser deseable para datos muy sensibles.  Cuando se accede a los datos cifrados, se descifran dos veces: una vez en el nivel de hipervisor (utilizando claves del proveedor de la nube) y otra vez utilizando soluciones de cifrado de NetApp (utilizando claves de un administrador de claves externo).
 
@@ -66,32 +48,14 @@ Cloud Volumes ONTAP utiliza los servicios del Protocolo de interoperabilidad de 
 
 Si usa NVE, tiene la opción de usar el almacén de claves de su proveedor de nube para proteger las claves de cifrado de ONTAP :
 
-ifdef::aws[]
-
 * Servicio de administración de claves de AWS (KMS)
-
-
-endif::aws[]
-
-ifdef::azure[]
-
 * Almacén de claves de Azure (AKV)
-
-
-endif::azure[]
-
-ifdef::gcp[]
-
 * Servicio de administración de claves de Google Cloud
 
-
-endif::gcp[]
 
 Los nuevos agregados tienen NetApp Aggregate Encryption (NAE) habilitado de manera predeterminada después de configurar un administrador de claves externo.  Los volúmenes nuevos que no forman parte de un agregado NAE tienen NVE habilitado de manera predeterminada (por ejemplo, si tiene agregados existentes que se crearon antes de configurar un administrador de claves externo).
 
 Configurar un administrador de claves compatible es el único paso necesario.  Para obtener instrucciones de configuración, consultelink:task-encrypting-volumes.html["Cifre volúmenes con soluciones de cifrado de NetApp"] .
-
-ifdef::aws[]
 
 
 
@@ -105,10 +69,6 @@ TIP: No puede cambiar el método de cifrado de datos de AWS después de crear un
 
 Si desea utilizar esta opción de cifrado, debe asegurarse de que AWS KMS esté configurado correctamente.  Para obtener más información, consultelink:task-setting-up-kms.html["Configuración de AWS KMS"] .
 
-endif::aws[]
-
-ifdef::azure[]
-
 
 
 [[azure-storage-service-encryption]]
@@ -118,10 +78,6 @@ Los datos se cifran automáticamente en Cloud Volumes ONTAP en Azure mediante ht
 
 Puede utilizar sus propias claves de cifrado si lo prefiere. link:task-set-up-azure-encryption.html["Aprenda a configurar Cloud Volumes ONTAP para usar una clave administrada por el cliente en Azure"] .
 
-endif::azure[]
-
-ifdef::gcp[]
-
 
 
 [[google-cloud-platform-default-encryption]]
@@ -130,8 +86,6 @@ ifdef::gcp[]
 https://cloud.google.com/security/encryption-at-rest/["Cifrado de datos en reposo de Google Cloud Platform"^]Está habilitado de forma predeterminada para Cloud Volumes ONTAP.  No se requiere configuración
 
 Si bien Google Cloud Storage siempre cifra sus datos antes de escribirlos en el disco, puede usar las API de la consola para crear un sistema Cloud Volumes ONTAP que use _claves de cifrado administradas por el cliente_.  Se trata de claves que usted genera y administra en GCP mediante el Servicio de administración de claves en la nube. link:task-setting-up-gcp-encryption.html["Más información"] .
-
-endif::gcp[]
 
 
 

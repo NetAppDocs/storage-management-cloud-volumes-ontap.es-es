@@ -51,15 +51,15 @@ Ten en cuenta que una LIF de gestión opcional para una VM de almacenamiento req
 
 .Pasos
 . Inicie sesión en AWS y abra el servicio EC2.
-. Seleccione la instancia de Cloud Volumes ONTAP y haga clic en *Redes*.
+. Selecciona la instancia de Cloud Volumes ONTAP y selecciona *Networking*.
 +
 Si está creando una máquina virtual de almacenamiento en un par de alta disponibilidad, seleccione el nodo 1.
 
-. Desplácese hacia abajo hasta *Interfaces de red* y haga clic en *ID de interfaz* para el puerto e0a.
+. Desplázate hacia abajo hasta *Interfaces de red* y selecciona el *ID de la interfaz* del puerto e0a.
 +
 image:screenshot_aws_e0a.gif["Una captura de pantalla de la consola de AWS que muestra el puerto e0a en una interfaz de red."]
 
-. Seleccione la interfaz de red y haga clic en *Acciones > Administrar direcciones IP*.
+. Selecciona la interfaz de red y selecciona *Acciones > Gestionar direcciones IP*.
 . Ampliar la lista de direcciones IP para e0a.
 . Verificar las direcciones IP:
 +
@@ -73,7 +73,7 @@ Si una dirección IP no está en uso, puede usarla con la nueva máquina virtual
 
 
 
-. De regreso en la consola de AWS, haga clic en *Asignar nueva dirección IP* para asignar direcciones IP adicionales según la cantidad que necesite para la nueva máquina virtual de almacenamiento.
+. De vuelta en la consola de AWS, selecciona *Asignar nueva dirección IP* para asignar direcciones IP adicionales según la cantidad que necesites para la nueva máquina virtual de almacenamiento.
 +
 ** sistema de nodo único: se requiere una dirección IP privada secundaria sin usar.
 +
@@ -87,7 +87,7 @@ Se requiere una IP privada secundaria opcional si desea crear un LIF de administ
 
 
 . Si está asignando la dirección IP en un par HA en una sola AZ, habilite *Permitir reasignar direcciones IPv4 privadas secundarias*.
-. Haga clic en *Guardar*.
+. Selecciona *Guardar*.
 . Si tiene un par HA en varias AZ, deberá repetir estos pasos para el nodo 2.
 
 

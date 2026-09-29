@@ -71,12 +71,12 @@ Si tienes una implementación en modo estándar, puedes convertir tu licencia ba
 
 
 
-NOTE: Si no se cumple alguno de estos requisitos, la conversión de la licencia no se produce.  En casos específicos, la licencia se puede convertir, pero no se puede utilizar.  Haga clic en el icono de información para identificar los problemas y tomar medidas correctivas.
+NOTE: Si no se cumple alguno de estos requisitos, la conversión de la licencia no se lleva a cabo. En casos concretos, es posible que la licencia se convierta, pero no se pueda utilizar. Selecciona el icono de información para identificar los problemas y tomar las medidas correctivas.
 
 .Pasos
 . Desde el menú de navegación de la izquierda, seleccione *Almacenamiento > Administración*.
 . En la página *Sistemas*, haga doble clic en el nombre del sistema para el cual desea modificar el tipo de licencia.
-. En la pestaña *Resumen*, haz clic en el panel *Funciones*.
+. En la pestaña *Overview*, selecciona el panel *Features*.
 . Verifique el ícono del lápiz al lado de *Método de carga*.  Si el método de carga de su sistema es `Node Based` , puedes convertirlo en carga por capacidad.
 +
 
@@ -90,7 +90,7 @@ TIP: El ícono está deshabilitado si su sistema Cloud Volumes ONTAP ya está co
 
 
 . Si tiene una licencia BYOL, puede seleccionar la casilla de verificación para eliminar la licencia basada en nodo de la Consola una vez que se complete la conversión.  Si la conversión aún está en curso, seleccionar esta casilla de verificación no eliminará la licencia de la Consola.  Esta opción no está disponible para las suscripciones del mercado.
-. Seleccione la casilla de verificación para confirmar que comprende las implicaciones del cambio y luego haga clic en *Continuar*.
+. Marca la casilla de comprobación para confirmar que entiendes las implicaciones del cambio y, a continuación, selecciona *Continuar*.
 
 
 .Después de terminar
@@ -132,7 +132,7 @@ NOTE: En el modo privado no se admite la conversión de licencias por nodo a nin
 .Pasos
 . Desde el menú de navegación de la izquierda, seleccione *Almacenamiento > Administración*.
 . En la página *Sistemas*, haga doble clic en el nombre del sistema para el cual desea modificar el tipo de licencia.
-. En la pestaña *Resumen*, haz clic en el panel *Funciones*.
+. En la pestaña *Overview*, selecciona el panel *Features*.
 . Marca el icono del lápiz situado junto a *Método de facturación*. Si el método de facturación de tu sistema es  `Node Based`, puedes cambiarlo a una licencia basada en la capacidad.
 +
 
@@ -141,7 +141,7 @@ TIP: El ícono está deshabilitado si su sistema Cloud Volumes ONTAP ya está co
 . En la pantalla *Convertir licencias basadas en nodos a licencias basadas en capacidad*, verifique el nombre del sistema y los detalles de la licencia de origen.
 . Selecciona Essentials como paquete de destino para convertir la licencia actual:
 . Puedes marcar la casilla de verificación para eliminar la licencia basada en nodos de la Consola una vez que la conversión haya terminado. Si la conversión aún está en curso, marcar esta casilla no eliminará la licencia de la Consola.
-. Seleccione la casilla de verificación para confirmar que comprende las implicaciones del cambio y luego haga clic en *Continuar*.
+. Marca la casilla de comprobación para confirmar que entiendes las implicaciones del cambio y, a continuación, selecciona *Continuar*.
 
 
 .Después de terminar

@@ -56,7 +56,7 @@ Si quieres lanzar un sistema Cloud Volumes ONTAP de un solo nodo en Azure, neces
 
 .Pasos
 . Desde el menú de navegación de la izquierda, seleccione *Almacenamiento > Administración*.
-. [[suscribirse]]En la página *Sistemas*, haga clic en *Agregar sistema* y siga las instrucciones.
+. [[suscribirse]]En la página *Systems*, selecciona *Add System* y sigue las instrucciones.
 . *Elija una ubicación*: seleccione *Microsoft Azure* y * Cloud Volumes ONTAP Single Node*.
 . Si se te solicita, https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["crear un agente de consola"^].
 . *Detalles y credenciales*: Opcionalmente, cambie las credenciales y la suscripción de Azure, especifique un nombre de clúster, agregue etiquetas si es necesario y luego especifique las credenciales.
@@ -130,7 +130,7 @@ Si deja que la consola genere el grupo de seguridad por usted, deberá elegir c�
 ** link:task-set-up-licensing-azure.html["Aprenda a configurar las licencias"^] .
 
 
-. *Paquetes preconfigurados*: seleccione uno de los paquetes para implementar rápidamente un sistema Cloud Volumes ONTAP o haga clic en *Crear mi propia configuración*.
+. *Paquetes preconfigurados*: selecciona uno de los paquetes para implementar rápidamente un sistema Cloud Volumes ONTAP, o selecciona *Crear mi propia configuración*.
 +
 Si elige uno de los paquetes, solo necesita especificar un volumen y luego revisar y aprobar la configuración.
 
@@ -177,7 +177,7 @@ link:concept-worm.html["Obtenga más información sobre el almacenamiento WORM"^
 .. Si activa el almacenamiento WORM, seleccione el período de retención.
 
 
-. *Crear volumen*: Ingrese detalles para el nuevo volumen o haga clic en *Omitir*.
+. *Crear volumen*: introduce los datos del nuevo volumen o selecciona *Omitir*.
 +
 link:concept-client-protocols.html["Obtenga información sobre los protocolos y versiones de cliente compatibles"^] .
 
@@ -247,9 +247,9 @@ Para más información, consulta link:https://docs.netapp.com/us-en/storage-mana
 . *Revisar y aprobar*: revise y confirme sus selecciones.
 +
 .. Revise los detalles sobre la configuración.
-.. Haga clic en *Más información* para revisar los detalles sobre el soporte y los recursos de Azure que comprará la consola.
+.. Selecciona *More information* para consultar los detalles sobre el soporte y los recursos de Azure que adquirirá la Console.
 .. Seleccione la casilla de verificación *Entiendo...*.
-.. Haga clic en *Ir*.
+.. Selecciona *Ir*.
 
 
 
@@ -257,7 +257,7 @@ Para más información, consulta link:https://docs.netapp.com/us-en/storage-mana
 .Resultado
 La consola implementa el sistema Cloud Volumes ONTAP .  Puede seguir el progreso en la página Auditoría.
 
-Si experimenta algún problema al implementar el sistema Cloud Volumes ONTAP , revise el mensaje de error.  También puede seleccionar el sistema y hacer clic en *Recrear entorno*.
+Si tienes algún problema al implementar el sistema Cloud Volumes ONTAP, revisa el mensaje de error. También puedes seleccionar el sistema y seleccionar *Re-create environment*.
 
 Para obtener ayuda adicional, visite https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/guideme-tab["Compatibilidad con NetApp Cloud Volumes ONTAP"^] .
 
@@ -281,7 +281,7 @@ Si desea iniciar un par de HA de Cloud Volumes ONTAP en Azure, debe crear un sis
 
 .Pasos
 . Desde el menú de navegación de la izquierda, seleccione *Almacenamiento > Administración*.
-. [[suscribirse]]En la página *Sistemas*, haga clic en *Agregar sistema* y siga las instrucciones.
+. [[suscribirse]]En la página *Systems*, selecciona *Add System* y sigue las instrucciones.
 . Si se te solicita, https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["crear un agente de consola"^].
 . *Detalles y credenciales*: Opcionalmente, cambie las credenciales y la suscripción de Azure, especifique un nombre de clúster, agregue etiquetas si es necesario y luego especifique las credenciales.
 +
@@ -365,7 +365,7 @@ Si deja que la consola genere el grupo de seguridad por usted, deberá elegir c�
 ** link:task-set-up-licensing-azure.html["Aprenda a configurar las licencias"^] .
 
 
-. *Paquetes preconfigurados*: seleccione uno de los paquetes para implementar rápidamente un sistema Cloud Volumes ONTAP o haga clic en *Cambiar configuración*.
+. *Paquetes preconfigurados*: selecciona uno de los paquetes para implementar rápidamente un sistema Cloud Volumes ONTAP o selecciona *Cambiar configuración*.
 +
 Si elige uno de los paquetes, solo necesita especificar un volumen y luego revisar y aprobar la configuración.
 
@@ -428,7 +428,7 @@ No se puede habilitar WORM si se habilitó la clasificación de datos.
 +
 link:concept-worm.html["Obtenga más información sobre el almacenamiento WORM"^] .
 
-. *Crear volumen*: Ingrese detalles para el nuevo volumen o haga clic en *Omitir*.
+. *Crear volumen*: introduce los datos del nuevo volumen o selecciona *Omitir*.
 +
 link:concept-client-protocols.html["Obtenga información sobre los protocolos y versiones de cliente compatibles"^] .
 
@@ -498,9 +498,9 @@ Para obtener más información, consulta link:https://docs.netapp.com/us-en/stor
 . *Revisar y aprobar*: revise y confirme sus selecciones.
 +
 .. Revise los detalles sobre la configuración.
-.. Haga clic en *Más información* para revisar los detalles sobre el soporte y los recursos de Azure que comprará la consola.
+.. Selecciona *More information* para consultar los detalles sobre el soporte y los recursos de Azure que adquirirá la Console.
 .. Seleccione la casilla de verificación *Entiendo...*.
-.. Haga clic en *Ir*.
+.. Selecciona *Ir*.
 
 
 
@@ -508,7 +508,7 @@ Para obtener más información, consulta link:https://docs.netapp.com/us-en/stor
 .Resultado
 La consola implementa el sistema Cloud Volumes ONTAP .  Puede seguir el progreso en la página Auditoría.
 
-Si experimenta algún problema al implementar el sistema Cloud Volumes ONTAP , revise el mensaje de error.  También puede seleccionar el sistema y hacer clic en *Recrear entorno*.
+Si tienes algún problema al implementar el sistema Cloud Volumes ONTAP, revisa el mensaje de error. También puedes seleccionar el sistema y seleccionar *Re-create environment*.
 
 .Después de terminar
 * Si aprovisionó un recurso compartido CIFS, otorgue a los usuarios o grupos permisos para los archivos y carpetas y verifique que esos usuarios puedan acceder al recurso compartido y crear un archivo.

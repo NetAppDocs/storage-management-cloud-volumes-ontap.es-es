@@ -20,8 +20,6 @@ image:diagram_data_tiering.png["Esta es una imagen conceptual que muestra datos 
 
 La clasificación de datos está impulsada por la tecnología FabricPool .  Cloud Volumes ONTAP proporciona niveles de datos para todos los clústeres de Cloud Volumes ONTAP sin una licencia adicional.  Cuando habilita la organización en niveles de datos, los datos organizados en niveles en el almacenamiento de objetos generan cargos.  Consulte la documentación de su proveedor de nube para obtener detalles sobre los costos de almacenamiento de objetos.
 
-ifdef::aws[]
-
 
 
 [[data-tiering-in-aws]]
@@ -64,10 +62,6 @@ La clase de almacenamiento para la clasificación de datos es para todo el siste
 
 --
 
-
-endif::aws[]
-
-ifdef::azure[]
 
 
 
@@ -112,10 +106,6 @@ El nivel de acceso al almacenamiento para la clasificación de datos se aplica a
 --
 
 
-endif::azure[]
-
-ifdef::gcp[]
-
 
 
 [[data-tiering-in-google-cloud]]
@@ -147,8 +137,6 @@ La clase de almacenamiento para la clasificación de datos es para todo el siste
 
 --
 
-
-endif::gcp[]
 
 
 

@@ -25,9 +25,9 @@ Seleccione la oferta Freemium para utilizar Cloud Volumes ONTAP de forma gratuit
 
 .Pasos
 . Desde el menú de navegación de la izquierda, seleccione *Almacenamiento > Administración*.
-. En la página *Sistemas*, haga clic en *Agregar sistema* y siga los pasos en la NetApp Console.
+. En la página *Sistemas*, selecciona *Add System* y sigue los pasos en la NetApp Console.
 +
-.. En la página *Detalles y credenciales*, haga clic en *Editar credenciales > Agregar suscripción* y luego siga las instrucciones para suscribirse a la oferta de pago por uso en Google Cloud Marketplace.
+.. En la página *Detalles y credenciales*, selecciona *Editar credenciales > Añadir suscripción* y luego sigue las indicaciones para suscribirte a la oferta de pago por uso en Google Cloud Marketplace.
 +
 No se le cobrará a través de la suscripción del mercado a menos que exceda los 500 GiB de capacidad aprovisionada, momento en el cual el sistema se convierte automáticamente allink:concept-licensing.html#packages["Paquete esencial"] .
 
@@ -78,9 +78,9 @@ La consola consulta automáticamente el servicio de licencias de NetApp para obt
 +
 Tu licencia debe estar disponible en la consola antes de que puedas usarla con Cloud Volumes ONTAP. Si es necesario, puedes link:https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html#add-a-license["agregar manualmente la licencia a la consola"].
 
-. En la página *Sistemas*, haga clic en *Agregar sistema* y siga los pasos.
+. En la página *Systems*, selecciona *Add System* y sigue los pasos.
 +
-.. En la página *Detalles y credenciales*, haga clic en *Editar credenciales > Agregar suscripción* y luego siga las instrucciones para suscribirse a la oferta de pago por uso en Google Cloud Marketplace.
+.. En la página *Detalles y credenciales*, selecciona *Editar credenciales > Añadir suscripción* y luego sigue las indicaciones para suscribirte a la oferta de pago por uso en Google Cloud Marketplace.
 +
 La licencia que usted compró de NetApp siempre se cobra primero, pero se le cobrará la tarifa por hora del mercado si excede su capacidad de licencia o si vence el plazo de su licencia.
 
@@ -105,9 +105,9 @@ Cuando crea un sistema Cloud Volumes ONTAP , la consola le solicita que se suscr
 
 .Pasos
 . Desde el menú de navegación de la izquierda, seleccione *Almacenamiento > Administración*.
-. En la página *Sistemas*, haga clic en *Agregar sistema* y siga los pasos.
+. En la página *Systems*, selecciona *Add System* y sigue los pasos.
 +
-.. En la página *Detalles y credenciales*, haga clic en *Editar credenciales > Agregar suscripción* y luego siga las instrucciones para suscribirse a la oferta de pago por uso en Google Cloud Marketplace.
+.. En la página *Detalles y credenciales*, selecciona *Editar credenciales > Añadir suscripción* y luego sigue las indicaciones para suscribirte a la oferta de pago por uso en Google Cloud Marketplace.
 .. Después de regresar a la consola, seleccione un paquete basado en capacidad cuando llegue a la página de métodos de carga.
 +
 image:screenshot-professional.png["Una captura de pantalla de la opción Profesional al crear un sistema Cloud Volumes ONTAP ."]
@@ -136,10 +136,10 @@ El contrato está disponible como una oferta _privada_ en Google Cloud Marketpla
 +
 Después de que NetApp comparta contigo la oferta privada, podrás seleccionar el plan anual cuando te suscribas desde Google Cloud Marketplace durante la creación del sistema.
 
-. En la página *Sistemas*, haga clic en *Agregar sistema* y siga los pasos.
+. En la página *Systems*, selecciona *Add System* y sigue los pasos.
 +
-.. En la página *Detalles y credenciales*, haga clic en *Editar credenciales > Agregar suscripción* y luego siga las instrucciones para suscribirse al plan anual en Google Cloud Marketplace.
-.. En Google Cloud, seleccione el plan anual que se compartió con su cuenta y luego haga clic en *Suscribirse*.
+.. En la página *Detalles y credenciales*, selecciona *Editar credenciales > Add Subscription* y, a continuación, sigue las instrucciones para suscribirte al plan anual en Google Cloud Marketplace.
+.. En Google Cloud, selecciona el plan anual que se compartió con tu cuenta y luego selecciona *Subscribe*.
 .. Después de regresar a la consola, seleccione un paquete basado en capacidad cuando llegue a la página de métodos de carga.
 +
 image:screenshot-professional.png["Una captura de pantalla de la opción Profesional al crear un sistema Cloud Volumes ONTAP ."]
@@ -161,7 +161,7 @@ Una suscripción a Keystone es un servicio basado en suscripción de pago por us
 . Si aún no tienes una suscripción, https://www.netapp.com/forms/keystone-sales-contact/["Contactar con NetApp"^]
 . mailto:ng-keystone-success@netapp.com[Contacto NetApp] para autorizar su cuenta de usuario de la consola con una o más suscripciones de Keystone .
 . Después de que NetApp autorice su cuenta,link:task-manage-keystone.html#link-a-subscription["Vincula tus suscripciones para usarlas con Cloud Volumes ONTAP"] .
-. En la página *Sistemas*, haga clic en *Agregar sistema* y siga los pasos.
+. En la página *Systems*, selecciona *Add System* y sigue los pasos.
 +
 .. Seleccione el método de cobro de suscripción de Keystone cuando se le solicite que elija un método de cobro.
 +

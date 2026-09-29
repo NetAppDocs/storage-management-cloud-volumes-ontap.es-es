@@ -46,67 +46,46 @@ La alta velocidad de escritura es una buena opción si se requiere un rendimient
 [[recommendations-when-using-high-write-speed]]
 === Recomendaciones al utilizar alta velocidad de escritura
 
-Si habilita la alta velocidad de escritura, debe garantizar la protección contra escritura en la capa de aplicación o que las aplicaciones puedan tolerar la pérdida de datos, si ocurre.
-
-ifdef::aws[]
+Si activas la alta velocidad de escritura, debes garantizar la protección de escritura en la capa de aplicación, o que las aplicaciones puedan tolerar la pérdida de datos, si se produce. No todas las configuraciones de Cloud Volumes ONTAP admiten la alta velocidad de escritura. Esas configuraciones utilizan la velocidad de escritura normal de forma predeterminada.
 
 
 
-[[high-write-speed-with-an-ha-pair-in-aws]]
-=== Alta velocidad de escritura con un par HA en AWS
+[[high-write-speed-in-aws]]
+=== Alta velocidad de escritura en AWS
 
-Si planea habilitar una alta velocidad de escritura en un par de alta disponibilidad en AWS, debe comprender la diferencia en los niveles de protección entre una implementación de múltiples zonas de disponibilidad (AZ) y una implementación de una sola AZ.  La implementación de un par HA en múltiples AZ proporciona mayor resiliencia y puede ayudar a mitigar la posibilidad de pérdida de datos.
+Sistemas de nodo único:: Si usas un sistema de un solo nodo, Cloud Volumes ONTAP admite alta velocidad de escritura con todos los tipos de instancia.
+Pares HA:: A partir de la versión 9.8, Cloud Volumes ONTAP admite una alta velocidad de escritura con pares HA cuando se utilizan casi todos los tipos de instancias EC2 compatibles, excepto m5.xlarge y r5.xlarge.
++
+--
+link:reference-configs-aws.html["Obtenga más información sobre las instancias de Amazon EC2 que admite Cloud Volumes ONTAP"]. Si tienes previsto habilitar una alta velocidad de escritura en un par de alta disponibilidad (HA) en AWS, debes comprender la diferencia entre los niveles de protección de una implementación en varias zonas de disponibilidad (AZ) y una implementación en una sola AZ. La implementación de un par de alta disponibilidad (HA) en varias zonas de disponibilidad (AZ) ofrece una mayor resiliencia y puede ayudar a mitigar el riesgo de pérdida de datos.
 
 link:concept-ha.html["Obtenga más información sobre los pares HA en AWS"] .
 
-endif::aws[]
+--
 
 
 
-[[configurations-that-support-high-write-speed]]
-=== Configuraciones que admiten alta velocidad de escritura
 
-No todas las configuraciones de Cloud Volumes ONTAP admiten alta velocidad de escritura.  Estas configuraciones utilizan la velocidad de escritura normal de forma predeterminada.
+[[high-write-speed-in-azure]]
+=== Alta velocidad de escritura en Azure
 
-ifdef::aws[]
-
-
-
-==== AWS
-
-Si usas un sistema de un solo nodo, Cloud Volumes ONTAP admite alta velocidad de escritura con todos los tipos de instancia.
-
-A partir de la versión 9.8, Cloud Volumes ONTAP admite una alta velocidad de escritura con pares HA cuando se utilizan casi todos los tipos de instancias EC2 compatibles, excepto m5.xlarge y r5.xlarge.
-
-link:reference-configs-aws.html["Obtenga más información sobre las instancias de Amazon EC2 que admite Cloud Volumes ONTAP"].
-
-endif::aws[]
-
-ifdef::azure[]
+Sistemas de nodo único:: Si usas un sistema de un solo nodo, Cloud Volumes ONTAP admite alta velocidad de escritura con todos los tipos de VM.
+Pares HA:: Si utilizas un par HA, Cloud Volumes ONTAP admite alta velocidad de escritura con varios tipos de VM, empezando desde la versión 9.8. Ve a la link:reference-configs-azure.html["Notas de la versión de Cloud Volumes ONTAP"] para ver los tipos de VM que admiten alta velocidad de escritura.
 
 
 
-==== Azur
 
-Si usas un sistema de un solo nodo, Cloud Volumes ONTAP admite alta velocidad de escritura con todos los tipos de VM.
+[[high-write-speed-in-google-cloud]]
+=== Alta velocidad de escritura en Google Cloud
 
-Si utilizas un par HA, Cloud Volumes ONTAP admite alta velocidad de escritura con varios tipos de VM, empezando desde la versión 9.8. Ve a la link:reference-configs-azure.html["Notas de la versión de Cloud Volumes ONTAP"] para ver los tipos de VM que admiten alta velocidad de escritura.
-
-endif::azure[]
-
-ifdef::gcp[]
-
-
-
-==== Google Cloud
-
-Si usas un sistema de un solo nodo, Cloud Volumes ONTAP admite alta velocidad de escritura con todos los tipos de máquinas.
-
-Si utilizas un par de alta disponibilidad (HA), Cloud Volumes ONTAP admite alta velocidad de escritura con varios tipos de instancias de VM, a partir de la versión 9.13.0. Ve a link:reference-configs-gcp.html#supported-configurations-by-license["Notas de la versión de Cloud Volumes ONTAP"^] para ver los tipos de instancias de VM que admiten alta velocidad de escritura.
-
+Sistemas de nodo único:: Si usas un sistema de un solo nodo, Cloud Volumes ONTAP admite alta velocidad de escritura con todos los tipos de máquinas.
+Pares HA:: Si utilizas un par de alta disponibilidad (HA), Cloud Volumes ONTAP admite alta velocidad de escritura con varios tipos de instancias de VM, a partir de la versión 9.13.0. Ve a link:reference-configs-gcp.html#supported-configurations-by-license["Notas de la versión de Cloud Volumes ONTAP"^] para ver los tipos de instancias de VM que admiten alta velocidad de escritura.
++
+--
 link:reference-configs-gcp.html["Obtenga más información sobre los tipos de máquinas de Google Cloud que admite Cloud Volumes ONTAP"^].
 
-endif::gcp[]
+--
+
 
 
 
@@ -142,7 +121,7 @@ Cuando esto sucede, Cloud Volumes ONTAP debería poder iniciarse y continuar bri
 
 
 [[how-to-stop-data-access-if-data-loss-occurs]]
-== Cómo detener el acceso a los datos si se produce una pérdida de datos
+=== Cómo detener el acceso a los datos si se produce una pérdida de datos
 
 Si le preocupa la pérdida de datos, desea que las aplicaciones dejen de ejecutarse en caso de pérdida de datos y que el acceso a los datos se reanude después de que se solucione adecuadamente el problema de pérdida de datos, puede usar la opción NVFAIL de la CLI para lograr ese objetivo.
 

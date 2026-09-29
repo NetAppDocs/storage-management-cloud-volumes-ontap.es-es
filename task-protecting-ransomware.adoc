@@ -25,17 +25,17 @@ Disponible en la consola, la configuración de protección contra ransomware le 
 
 .Pasos
 . En la página *Sistemas*, haga doble clic en el nombre del sistema Cloud Volumes ONTAP que configure para usar protección contra ransomware.
-. En la pestaña Descripción general, haga clic en el panel Características y luego haga clic en el ícono de lápiz junto a *Protección contra ransomware*.
+. En la pestaña «Descripción general», selecciona el panel «Funciones» y, a continuación, selecciona el icono del lápiz situado junto a *Ransomware Protection*.
 +
 image::screenshot_features_support_registration_2.png[Una captura de pantalla que muestra la configuración de Protección contra ransomware en el panel Características disponible en la parte superior derecha de la página Descripción general al ver un sistema.]
 
 . Implementar la solución NetApp para ransomware:
 +
-.. Haga clic en *Activar política de instantáneas*, si tiene volúmenes que no tienen una política de instantáneas habilitada.
+.. Selecciona *Activar política de SnapVault* si tienes volúmenes que no tienen habilitada una política de SnapVault.
 +
 La tecnología Snapshot de NetApp proporciona la mejor solución de la industria para la remediación de ransomware.  La clave para una recuperación exitosa es restaurar desde copias de seguridad no infectadas.  Las copias instantáneas son de solo lectura, lo que evita la corrupción por ransomware.  También pueden proporcionar la granularidad necesaria para crear imágenes de una única copia de archivo o una solución completa de recuperación ante desastres.
 
-.. Haga clic en *Activar FPolicy* para habilitar la solución FPolicy de ONTAP, que puede bloquear operaciones de archivos según la extensión del archivo.
+.. Selecciona *Activar FPolicy* para habilitar la solución FPolicy de ONTAP, que puede bloquear operaciones de archivos en función de la extensión de un archivo.
 +
 Esta solución preventiva mejora la protección contra ataques de ransomware al bloquear los tipos de archivos de ransomware más comunes.
 

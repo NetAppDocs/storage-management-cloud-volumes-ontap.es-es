@@ -37,11 +37,11 @@ TIP: La NetApp Console cambia un nodo a la vez iniciando la toma de control y es
 
 .Pasos
 . En la página *Sistemas*, seleccione el sistema.
-. En la pestaña Descripción general, haga clic en el panel Características y luego haga clic en el ícono de lápiz junto a *Tipo de VM*.
+. En la pestaña «Descripción general», selecciona el panel «Características» y, a continuación, selecciona el icono del lápiz situado junto a *tipo de VM*.
 +
 Si está utilizando una licencia de pago por uso (PAYGO) basada en nodos, puede elegir opcionalmente una licencia y un tipo de VM diferentes haciendo clic en el ícono de lápiz junto a *Tipo de licencia*.
 
-. Seleccione un tipo de VM, seleccione la casilla de verificación para confirmar que comprende las implicaciones del cambio y luego haga clic en *Cambiar*.
+. Selecciona un tipo de máquina virtual, marca la casilla de comprobación para confirmar que comprendes las implicaciones del cambio y, a continuación, selecciona *Change*.
 
 
 .Resultado

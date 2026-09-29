@@ -18,8 +18,8 @@ Puede modificar las tablas de rutas de AWS que incluyen rutas a las direcciones 
 
 .Pasos
 . En la página *Sistemas*, seleccione el sistema.
-. En la pestaña Descripción general, haga clic en el panel Características y luego haga clic en el ícono de lápiz junto a *Tablas de rutas*.
-. Modifique la lista de tablas de rutas seleccionadas y luego haga clic en *Guardar*.
+. En la pestaña «Descripción general», selecciona el panel «Funciones» y, a continuación, selecciona el icono de lápiz situado junto a *Route tables*.
+. Modifica la lista de tablas de rutas seleccionadas y luego selecciona *Guardar*.
 
 
 .Resultado

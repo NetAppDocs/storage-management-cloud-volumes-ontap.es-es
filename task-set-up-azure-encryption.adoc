@@ -125,7 +125,7 @@ El recurso tiene el siguiente ID: `userassignedidentity` .
 
 .Pasos
 . En Azure, vaya a Servicios de Azure y seleccione *Identidades administradas*.
-. Haga clic en *Crear*.
+. Selecciona *Crear*.
 . Proporcione los siguientes detalles:
 +
 ** *Suscripción*: Elige una suscripción.  Recomendamos elegir la misma suscripción que la suscripción del agente de consola.
@@ -135,7 +135,7 @@ El recurso tiene el siguiente ID: `userassignedidentity` .
 
 
 . Opcionalmente, agregue etiquetas.
-. Haga clic en *Crear*.
+. Selecciona *Crear*.
 
 
 
@@ -172,7 +172,7 @@ NOTE: El uso de claves de cifrado administradas por el cliente de Azure depende 
 
 
 
-. Si seleccionó la Política de acceso a la bóveda, haga clic en Crear para crear una política de acceso para la bóveda de claves.  En caso contrario, salte al paso 3.
+. Si has seleccionado «Política de acceso a Vault», selecciona «Crear» para crear una política de acceso para el almacén de claves. Si no, pasa al paso 3.
 +
 .. Seleccione los siguientes permisos:
 +

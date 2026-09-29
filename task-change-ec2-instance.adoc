@@ -42,14 +42,14 @@ Si no puede cambiar el tipo de instancia de las instancias c4, m4 o r4, consulte
 
 .Pasos
 . En la página *Sistemas*, seleccione el sistema.
-. En la pestaña Descripción general, haga clic en el panel Características y luego haga clic en el ícono de lápiz junto a *Tipo de instancia*.
+. En la pestaña «Descripción general», selecciona el panel «Funciones» y, a continuación, selecciona el icono del lápiz situado junto a *Tipo de instancia*.
 +
 image::screenshot_features_instance_type.png[400]
 
 +
 Si está utilizando una licencia de pago por uso (PAYGO) basada en nodos, puede elegir opcionalmente una licencia y un tipo de instancia diferentes haciendo clic en el ícono de lápiz junto a *Tipo de licencia*.
 
-. Seleccione un tipo de instancia, seleccione la casilla de verificación para confirmar que comprende las implicaciones del cambio y luego haga clic en *Cambiar*.
+. Elige un tipo de instancia, marca la casilla de comprobación para confirmar que comprendes las implicaciones del cambio y, a continuación, selecciona *Cambiar*.
 
 
 .Resultado

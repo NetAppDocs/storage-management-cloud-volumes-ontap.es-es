@@ -29,11 +29,11 @@ Debes crear un agente de Console antes de poder modificar la configuración de C
 
 .Pasos
 . Desde el panel de navegación izquierdo, vaya a *Administración > Agentes*.
-. Haz clic en el icono image:icon-action.png["Un icono que muestra tres puntos horizontales para acciones adicionales"] del agente de Console que gestiona tu sistema Cloud Volumes ONTAP.
+. Selecciona el icono image:icon-action.png["Un icono que muestra tres puntos horizontales para acciones adicionales"] del agente de Console que gestiona tu sistema Cloud Volumes ONTAP.
 . Seleccione *Configuración de Cloud Volumes ONTAP *.
 +
 image::screenshot-settings-cloud-volumes-ontap.png[Una captura de pantalla de la opción Configuración de Cloud Volumes ONTAP en el ícono Configuración.]
 
-. En *Azure*, haga clic en *Bloqueos CIFS de Azure para sistemas Azure HA*.
-. Haga clic en la casilla de verificación para habilitar la función y luego haga clic en *Guardar*.
+. En *Azure*, selecciona *bloqueos CIFS de Azure para sistemas HA de Azure*.
+. Marca la casilla de selección para activar la función y luego selecciona *Guardar*.
 

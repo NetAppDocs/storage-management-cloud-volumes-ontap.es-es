@@ -61,14 +61,14 @@ Los pasos descritos capturan cómo registrar su configuración de Cloud Volumes 
 .Crear un secreto de cliente de Azure
 . En el portal de Azure para el registro de su aplicación Azure Key Vault, seleccione el panel **Certificados y secretos**.
 . Seleccione **Nuevo secreto de cliente**.  Ingrese un nombre significativo para su secreto de cliente.  NetApp recomienda un período de vencimiento de 24 meses; sin embargo, sus políticas de gobernanza de la nube específicas pueden requerir una configuración diferente.
-. Haga clic en **Agregar** para crear el secreto del cliente.  Copie la cadena secreta que aparece en la columna **Valor** y guárdela en una ubicación segura para usarla más adelante.<<ontap>> .  El valor secreto no se mostrará nuevamente después de que salga de la página.
+. Selecciona **Add** para crear el secreto de cliente. Copia la cadena secreta que aparece en la columna **Value** y guárdala en un lugar seguro para usarla más adelante en <<ontap>>. El valor del secreto no volverá a mostrarse una vez que salgas de la página.
 
 
 [[create-akv]]
 .Crear un almacén de claves de Azure
 . Si tiene un Azure Key Vault existente, puede conectarlo a su configuración de Cloud Volumes ONTAP ; sin embargo, debe adaptar las políticas de acceso a la configuración en este proceso.
 . En el portal de Azure, navegue hasta la sección **Key Vaults**.
-. Haga clic en **+Crear** e ingrese la información requerida, incluido el grupo de recursos, la región y el nivel de precios.  Además, ingrese la cantidad de días que desea conservar las bóvedas eliminadas y seleccione **Habilitar protección de purga** en la bóveda de claves.
+. Selecciona **Crear** e introduce la información necesaria, incluidos el grupo de recursos, la región y el nivel de precios. Además, introduce el número de días para conservar los almacenes eliminados y selecciona **Habilitar protección contra la purga** en el almacén de claves.
 . Seleccione **Siguiente** para elegir una política de acceso.
 . Seleccione las siguientes opciones:
 +
@@ -76,8 +76,8 @@ Los pasos descritos capturan cómo registrar su configuración de Cloud Volumes 
 .. En **Acceso a recursos**, seleccione **Azure Disk Encryption para cifrado de volumen**.
 
 
-. Seleccione **+Crear** para agregar una política de acceso.
-. En **Configurar desde una plantilla**, haga clic en el menú desplegable y luego seleccione la plantilla **Administración de claves, secretos y certificados**.
+. Selecciona **Crear** para añadir una política de acceso.
+. En **Configurar a partir de una plantilla**, selecciona el menú desplegable y, a continuación, selecciona la plantilla **Key, Secret, and Certificate Management**.
 . Elija cada uno de los menús desplegables de permisos (clave, secreto, certificado) y luego **Seleccionar todo** en la parte superior de la lista del menú para seleccionar todos los permisos disponibles.  Deberías tener:
 +
 ** **Permisos clave**: 20 seleccionados
@@ -88,7 +88,7 @@ image:screenshot-azure-key-secret-cert-all-list.png["Captura de pantalla de Crea
 
 
 
-. Haga clic en **Siguiente** para seleccionar la **Aplicación principal** registrada en Azure que creó en<<azure-app>> . Seleccione **Siguiente**.
+. Selecciona **Siguiente** para seleccionar la aplicación de Azure registrada **Principal** que has creado en <<azure-app>>. Selecciona **Siguiente**.
 +
 
 NOTE: Sólo se puede asignar un director por póliza.
@@ -96,7 +96,7 @@ NOTE: Sólo se puede asignar un director por póliza.
 +
 image:screenshot-azure-key-secret-cert-principal.png["Captura de pantalla de la pestaña Crear una política de acceso principal"]
 
-. Haga clic en **Siguiente** dos veces hasta llegar a **Revisar y crear**.  Luego, haga clic en **Crear**.
+. Selecciona **Siguiente** dos veces hasta llegar a **Revisar y crear**. Luego, selecciona **Crear**.
 . Seleccione **Siguiente** para avanzar a las opciones de **Redes**.
 . Elija el método de acceso a la red adecuado o seleccione **Todas las redes** y **Revisar + Crear** para crear la bóveda de claves.  (El método de acceso a la red puede estar prescrito por una política de gobernanza o por su equipo de seguridad en la nube corporativa).
 . Registre la URI de la bóveda de claves: en la bóveda de claves que creó, navegue hasta el menú Descripción general y copie la **URI de la bóveda** de la columna de la derecha.  Necesitarás esto para un paso posterior.

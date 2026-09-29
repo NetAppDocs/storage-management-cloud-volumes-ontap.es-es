@@ -32,15 +32,13 @@ Algunas notas sobre el aprovisionamiento de volumen:
 
 * Al crear un volumen iSCSI, la Console crea automáticamente un LUN por ti. Lo hemos simplificado creando solo un LUN por volumen, así que no tienes que gestionarlo. Después de crear el volumen, link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-connect-lun.html["Utilice el IQN para conectarse al LUN desde sus hosts"^].
 * Puede crear LUN adicionales desde el Administrador del sistema ONTAP o la CLI de ONTAP .
+* En AWS:
++
+** Si quieres utilizar CIFS en AWS, debes haber configurado DNS y Active Directory. Para obtener más información, consulta link:reference-networking-aws.html["Requisitos de red para Cloud Volumes ONTAP para AWS"].
+** Si su configuración de Cloud Volumes ONTAP admite la función Amazon EBS Elastic Volumes, es posible que deseelink:concept-aws-elastic-volumes.html["Obtenga más información sobre lo que sucede cuando crea un volumen"] .
 
 
-ifdef::aws[]
 
-* Si quieres utilizar CIFS en AWS, debes haber configurado DNS y Active Directory. Para obtener más información, consulta link:reference-networking-aws.html["Requisitos de red para Cloud Volumes ONTAP en AWS"].
-* Si su configuración de Cloud Volumes ONTAP admite la función Amazon EBS Elastic Volumes, es posible que deseelink:concept-aws-elastic-volumes.html["Obtenga más información sobre lo que sucede cuando crea un volumen"] .
-
-
-endif::aws[]
 
 
 
@@ -60,12 +58,12 @@ Puede crear un volumen dejando que la consola se encargue de la asignación de d
 ====
 .Cualquier agregado
 --
-Seleccione la pestaña Volúmenes y haga clic en *Agregar volumen*.image:screenshot_add_volume_button.png["Una captura de pantalla del botón Agregar volumen en la pestaña Descripción general."]
+Selecciona la pestaña «Volumes» y selecciona *Add Volume*. image:screenshot_add_volume_button.png["Una captura de pantalla del botón Agregar volumen en la pestaña Descripción general."]
 
 --
 .Agregado específico
 --
-.. En la pestaña *Agregados*, ve al agregado que necesites y haz clic en el icono image:icon-action.png["Un icono que muestra tres puntos horizontales para acciones adicionales"].
+.. En la pestaña *Agregados*, ve al agregado que necesites y selecciona el icono image:icon-action.png["Un icono que muestra tres puntos horizontales para acciones adicionales"].
 .. Seleccione *Agregar volumen*.image:screenshot_add_volume_button_agg.png["Una captura de pantalla del botón Agregar volumen en la pestaña Agregados."]
 
 
@@ -96,7 +94,7 @@ Algunos de los campos de esta página se explican por sí solos. La siguiente li
 |===
 .. *Protocolo*: elija un protocolo para el volumen (NFS, CIFS o iSCSI) y luego proporcione la información requerida.
 +
-Si selecciona CIFS y no hay ningún servidor configurado, la consola le solicitará que configure la conectividad CIFS después de hacer clic en *Siguiente*.
+Si seleccionas CIFS y no hay ningún servidor configurado, la consola te pedirá que configures la conectividad CIFS después de seleccionar *Siguiente*.
 
 +
 link:concept-client-protocols.html["Obtenga información sobre los protocolos y versiones de cliente compatibles"] .
@@ -120,42 +118,21 @@ Permisos y usuarios/grupos:: Le permite controlar el nivel de acceso a un recurs
 Dirección IP primaria y secundaria de DNS:: Las direcciones IP de los servidores DNS que proporcionan resolución de nombres para el servidor CIFS.  Los servidores DNS enumerados deben contener los registros de ubicación de servicio (SRV) necesarios para ubicar los servidores LDAP de Active Directory y los controladores de dominio para el dominio al que se unirá el servidor CIFS.
 +
 --
-ifdef::gcp[]
-
---
-
-
 Si está configurando Google Managed Active Directory, se puede acceder a AD de forma predeterminada con la dirección IP 169.254.169.254.
 
-endif::gcp[]
-
+--
 Dominio de Active Directory al que unirse:: El FQDN del dominio de Active Directory (AD) al que desea que se una el servidor CIFS.
 Credenciales autorizadas para unirse al dominio:: El nombre y la contraseña de una cuenta de Windows con privilegios suficientes para agregar computadoras a la unidad organizativa (OU) especificada dentro del dominio de AD.
 Nombre NetBIOS del servidor CIFS:: Un nombre de servidor CIFS que es único en el dominio AD.
 Unidad organizativa:: La unidad organizativa dentro del dominio AD para asociarse con el servidor CIFS.  El valor predeterminado es CN=Computers.
-
-
-ifdef::aws[]
-
++
+--
 *** Para configurar AWS Managed Microsoft AD como servidor AD para Cloud Volumes ONTAP, ingrese *OU=Computers,OU=corp* en este campo.
-
-
-endif::aws[]
-
-ifdef::azure[]
-
 *** Para configurar Azure AD Domain Services como servidor de AD para Cloud Volumes ONTAP, ingrese *OU=AADDC Computers* o *OU=AADDC Users* en este campo.https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-ou["Documentación de Azure: Crear una unidad organizativa (OU) en un dominio administrado de Azure AD Domain Services"^]
-
-
-endif::azure[]
-
-ifdef::gcp[]
-
 *** Para configurar Google Managed Microsoft AD como servidor AD para Cloud Volumes ONTAP, ingrese *OU=Computers,OU=Cloud* en este campo.https://cloud.google.com/managed-microsoft-ad/docs/manage-active-directory-objects#organizational_units["Documentación de Google Cloud: Unidades organizativas en Google Managed Microsoft AD"^]
 
 
-endif::gcp[]
-
+--
 Dominio DNS:: El dominio DNS para la máquina virtual de almacenamiento (SVM) de Cloud Volumes ONTAP .  En la mayoría de los casos, el dominio es el mismo que el dominio de AD.
 Servidor NTP:: Selecciona *Usar dominio de Active Directory* para configurar un servidor NTP utilizando el DNS de Active Directory. Si necesitas configurar un servidor NTP utilizando una dirección diferente, debes utilizar la API. Para obtener más información, consulta https://docs.netapp.com/us-en/console-automation/index.html["NetApp Documentación sobre la automatización de NetApp Console"^].
 +
@@ -177,33 +154,12 @@ Iniciador del host (IQN):: Los objetivos iSCSI se conectan a la red a través de
 ====
 .. *Tipo de disco*: elija un tipo de disco subyacente para el volumen según sus necesidades de rendimiento y requisitos de costo.
 +
-ifdef::aws[]
-
-+
 *** link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-planning-your-config.html#size-your-system-in-aws["Dimensionar su sistema en AWS"^]
+*** link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-planning-your-config-azure.html#size-your-system-in-azure["Dimensionar su sistema en Azure"^]
+*** link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-planning-your-config-gcp.html#size-your-system-in-gcp["Dimensionar su sistema en Google Cloud"^]
 
 
-
-
-
-
-endif::aws[]
-
-ifdef::azure[]
-
-* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-planning-your-config-azure.html#size-your-system-in-azure["Dimensionar su sistema en Azure"^]
-
-
-endif::azure[]
-
-ifdef::gcp[]
-
-* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-planning-your-config-gcp.html#size-your-system-in-gcp["Dimensionar su sistema en Google Cloud"^]
-
-
-endif::gcp[]
-
-. *Perfil de uso y política de niveles*: elija si desea habilitar o deshabilitar las funciones de eficiencia de almacenamiento en el volumen y luego seleccione unalink:concept-data-tiering.html["política de niveles de volumen"] .
+.. *Perfil de uso y política de niveles*: elija si desea habilitar o deshabilitar las funciones de eficiencia de almacenamiento en el volumen y luego seleccione unalink:concept-data-tiering.html["política de niveles de volumen"] .
 +
 ONTAP incluye varias funciones de eficiencia de almacenamiento que pueden reducir la cantidad total de almacenamiento que necesita.  Las características de eficiencia de almacenamiento de NetApp brindan los siguientes beneficios:
 
@@ -213,7 +169,9 @@ Desduplicación:: Mejora la eficiencia al localizar bloques de datos idénticos 
 Compresión:: Reduce la capacidad física necesaria para almacenar datos al comprimirlos dentro de un volumen en el almacenamiento primario, secundario y de archivo.
 
 
-. *Revisar*: Revise los detalles sobre el volumen y luego haga clic en *Agregar*.
+.. *Revisar*: revisa los datos del volumen y, a continuación, selecciona *Add*.
+
+
 
 
 .Resultado
@@ -230,24 +188,20 @@ De forma predeterminada, la consola crea volúmenes en el primer nodo en una con
 .Pasos
 . Desde el menú de navegación de la izquierda, seleccione *Almacenamiento > Administración*.
 . En la página *Sistemas*, haga doble clic en el nombre del sistema Cloud Volumes ONTAP en el que desea administrar los agregados.
-. En la pestaña Agregados, haga clic en *Agregar agregado* y cree el agregado.
+. En la pestaña «Agregados», selecciona *Add Aggregate* y crea el agregado.
 +
 image:screenshot_add_aggregate_cvo.png["Una captura de pantalla que muestra el progreso de agregar un agregado."]
 
 . Para el nodo de inicio, elija el segundo nodo en el par HA.
-. Después de que la consola cree el agregado, selecciónelo y haga clic en *Crear volumen*.
-. Ingrese los detalles del nuevo volumen y luego haga clic en *Crear*.
+. Una vez que la consola haya creado el agregado, selecciónalo y, a continuación, selecciona *Crear volumen*.
+. Introduce los detalles del nuevo volumen y, a continuación, selecciona *Crear*.
 
 
 .Resultado
 La consola crea el volumen en el segundo nodo del par HA.
 
-ifdef::aws[]
-
 
 TIP: Para los pares de alta disponibilidad implementados en varias zonas de disponibilidad de AWS, debe montar el volumen en los clientes utilizando la dirección IP flotante del nodo en el que reside el volumen.
-
-endif::aws[]
 
 
 

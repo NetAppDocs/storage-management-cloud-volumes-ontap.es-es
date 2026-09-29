@@ -38,14 +38,14 @@ El agente de consola debe implementarse en la misma región de Azure que los sis
 
 .Pasos
 . Desde el panel de navegación izquierdo, vaya a *Administración > Agentes*.
-. Haz clic en el icono image:icon-action.png["Un icono que muestra tres puntos horizontales para acciones adicionales"] del agente de Console que gestiona tu sistema Cloud Volumes ONTAP.
+. Selecciona el icono image:icon-action.png["Un icono que muestra tres puntos horizontales para acciones adicionales"] del agente de Console que gestiona tu sistema Cloud Volumes ONTAP.
 . Seleccione *Configuración de Cloud Volumes ONTAP *.
 +
 image::screenshot-settings-cloud-volumes-ontap.png[Una captura de pantalla de la opción Configuración de Cloud Volumes ONTAP en el ícono Configuración.]
 
-. En *Azure*, haga clic en *Usar vínculo privado de Azure*.
+. En *Azure*, selecciona *Use Azure Private Link*.
 . Anule la selección de *Conexión de enlace privado entre Cloud Volumes ONTAP y las cuentas de almacenamiento*.
-. Haga clic en *Guardar*.
+. Selecciona *Guardar*.
 
 
 .Después de terminar

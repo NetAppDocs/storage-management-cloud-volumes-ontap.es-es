@@ -36,25 +36,11 @@ Al configurar FlexCache en un sistema Cloud Volumes ONTAP donde el volumen de or
 
 .Antes de empezar
 . *Configuración de cifrado*: asegúrese de que el volumen de origen esté completamente cifrado y operativo.  Para los sistemas Cloud Volumes ONTAP , esto implica la integración con servicios de administración de claves específicos de la nube.
++
+** *En el caso de AWS*, esto suele implicar el uso de AWS Key Management Service (KMS). Para obtener más información, consulta link:task-aws-key-management.html["Administrar claves con AWS Key Management Service"].
+** *En el caso de Azure*, debes configurar Azure Key Vault para NetApp Volume Encryption (NVE). Para obtener más información, consulta link:task-azure-key-vault.html["Administrar claves con Azure Key Vault"].
+** *Para Google Cloud*, utiliza Google Cloud Key Management Service. Para obtener más información, consulta link:task-google-key-manager.html["Administrar claves con el Servicio de administración de claves en la nube de Google"].
 
-
-ifdef::aws[]
-
-Para AWS, esto normalmente significa utilizar AWS Key Management Service (KMS).  Para obtener más información, consultelink:task-aws-key-management.html["Administrar claves con AWS Key Management Service"] .
-
-endif::aws[]
-
-ifdef::azure[]
-
-Para Azure, debe configurar Azure Key Vault para NetApp Volume Encryption (NVE).  Para obtener más información, consultelink:task-azure-key-vault.html["Administrar claves con Azure Key Vault"] .
-
-endif::azure[]
-
-ifdef::gcp[]
-
-Para Google Cloud, es el Servicio de administración de claves de Google Cloud.  Para obtener más información, consultelink:task-google-key-manager.html["Administrar claves con el Servicio de administración de claves en la nube de Google"] .
-
-endif::gcp[]
 
 . *Servicios de administración de claves*: antes de crear un volumen FlexCache , verifique que los servicios de administración de claves estén configurados correctamente en el sistema Cloud Volumes ONTAP .  Esta configuración es esencial para que el volumen FlexCache descifre los datos del volumen de origen.
 . *Licencia*: Confirme que haya una licencia de FlexCache válida disponible y activada en el sistema Cloud Volumes ONTAP .

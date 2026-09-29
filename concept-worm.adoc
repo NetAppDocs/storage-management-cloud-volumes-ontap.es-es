@@ -77,7 +77,7 @@ Puede habilitar el almacenamiento WORM al crear un sistema Cloud Volumes ONTAP e
 
 .Pasos
 . En la página *Sistemas*, haga doble clic en el nombre del sistema en el que desea habilitar WORM.
-. En la pestaña Descripción general, haga clic en el panel Características y luego haga clic en el ícono de lápiz junto a *WORM*.
+. En la pestaña «Descripción general», selecciona el panel «Funciones» y, a continuación, selecciona el icono de lápiz junto a *WORM*.
 +
 Si WORM ya está habilitado en el sistema, el ícono del lápiz estará deshabilitado.
 
@@ -85,7 +85,7 @@ Si WORM ya está habilitado en el sistema, el ícono del lápiz estará deshabil
 +
 Para obtener más información, consulte la https://docs.netapp.com/us-en/ontap/snaplock/initialize-complianceclock-task.html["Documentación de ONTAP : Inicializar el reloj de cumplimiento"^] .
 
-. Haga clic en *Establecer*.
+. Selecciona *Configurar*.
 
 
 .Después de terminar

@@ -10,19 +10,6 @@ settings:
     pdf_enabled: true
     harmony_enabled: false
   rss_page: whats-new.html
-  filter:
-    label: Proveedor de nube
-    default: Todos los proveedores de nube
-    options:
-    - name: Servicios web de Amazon
-      alias: AWS
-      id: aws
-    - name: Google Cloud
-      alias: Google Cloud
-      id: gcp
-    - name: Microsoft Azure
-      alias: Azur
-      id: azure
   langs: es-es,us-en,de-de,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-cn,zh-tw
 sidebar:
   entries:
@@ -59,7 +46,6 @@ sidebar:
       - title: Configuración de Cloud Volumes ONTAP HA
         url: "/concept-degraded-ha-pair.html"
     - title: Implementar en Amazon Web Services
-      flavor: aws
       entries:
       - title: Incorpora Cloud Volumes ONTAP desde AWS Marketplace
         url: "/task-onboard-cvo-aws-marketplace.html"
@@ -93,7 +79,6 @@ sidebar:
       - title: Implementar Cloud Volumes ONTAP en regiones secretas de AWS
         url: "/task-getting-started-aws-c2s.html"
     - title: Implementar en Microsoft Azure
-      flavor: azure
       entries:
       - title: Obtenga información sobre las opciones de implementación de Cloud Volumes
           ONTAP en Azure
@@ -136,7 +121,6 @@ sidebar:
       - title: Implementar en Azure Marketplace
         url: "/task-deploy-cvo-azure-mktplc.html"
     - title: Implementar en Google Cloud
-      flavor: gcp
       entries:
       - title: Resumen de la implementación
         url: "/task-getting-started-gcp.html"
@@ -177,13 +161,10 @@ sidebar:
       - title: Máquinas virtuales de almacenamiento Cloud Volumes ONTAP
         url: "/task-managing-svms.html"
       - title: Administrar máquinas virtuales de almacenamiento en AWS
-        flavor: aws
         url: "/task-managing-svms-aws.html"
       - title: Administrar máquinas virtuales de almacenamiento en Azure
-        flavor: azure
         url: "/task-managing-svms-azure.html"
       - title: Administrar máquinas virtuales de almacenamiento en Google Cloud
-        flavor: gcp
         url: "/task-managing-svms-gcp.html"
     - title: Administración agregada
       entries:
@@ -225,7 +206,6 @@ sidebar:
   - title: Gestión de la infraestructura en la nube
     entries:
     - title: Administración de AWS
-      flavor: aws
       entries:
       - title: Configuraciones compatibles en AWS
         url: "/reference-configs-aws.html"
@@ -242,7 +222,6 @@ sidebar:
       - title: Cambiar las tablas de rutas para pares HA
         url: "/task-change-route-tables.html"
     - title: Administración de Azure
-      flavor: azure
       entries:
       - title: Configuraciones admitidas en Azure
         url: "/reference-configs-azure.html"
@@ -267,7 +246,6 @@ sidebar:
       - title: Actualizar el nivel de rendimiento del disco en Azure
         url: "/task-upgrade-disk-perf-azure.html"
     - title: Administración de Google Cloud
-      flavor: gcp
       entries:
       - title: Configuraciones compatibles en Google Cloud
         url: "/reference-configs-gcp.html"

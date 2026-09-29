@@ -68,7 +68,7 @@ Necesita una política de IAM y un rol de IAM para cada uno de los siguientes:
 
 
 .Pasos
-. Vaya a la consola de AWS IAM y haga clic en *Políticas*.
+. Ve a la consola de AWS IAM y selecciona *Policies*.
 . Cree una política para la instancia del agente de consola.
 +
 
@@ -592,17 +592,17 @@ Si compró una licencia de NetApp, debe agregarla a la consola para poder selecc
 . Desde el menú de navegación de la izquierda, seleccione * Licenses and subscriptions*.
 . En el panel * Cloud Volumes ONTAP*, seleccione *Ver*.
 . En la pestaña * Cloud Volumes ONTAP*, seleccione *Licencias > Licencias basadas en nodos*.
-. Haga clic en *Sin asignar*.
-. Haga clic en *Agregar licencias no asignadas*.
+. Selecciona *Sin asignar*.
+. Selecciona *Add Unassigned Licenses*.
 . Ingrese el número de serie de la licencia o cargue el archivo de licencia.
 . Si aún no tiene el archivo de licencia, deberá cargarlo manualmente desde netapp.com.
 +
 .. Ir a lalink:https://register.netapp.com/site/vsnr/register/getlicensefile["Generador de archivos de licencia de NetApp"^] e inicie sesión utilizando sus credenciales del sitio de soporte de NetApp .
-.. Ingrese su contraseña, elija su producto, ingrese el número de serie, confirme que ha leído y aceptado la política de privacidad y luego haga clic en *Enviar*.
+.. Introduce tu contraseña, elige tu producto, introduce el número de serie, confirma que has leído y aceptado la política de privacidad y, a continuación, selecciona *Submit*.
 .. Elija si desea recibir el archivo JSON serialnumber.NLF por correo electrónico o descarga directa.
 
 
-. Haga clic en *Agregar licencia*.
+. Selecciona *Añadir licencia*.
 
 
 .Resultado
@@ -619,7 +619,7 @@ Puede iniciar instancias de Cloud Volumes ONTAP en AWS Secret Cloud y Top Secret
 Para los pares de HA, se requiere un par de claves para habilitar la autenticación SSH basada en clave para el mediador de HA.
 
 .Pasos
-. En la página *Sistemas*, haga clic en *Agregar sistema*.
+. En la página *Systems*, selecciona *Add System*.
 . En *Crear*, seleccione Cloud Volumes ONTAP.
 +
 Para HA: en *Crear*, seleccione Cloud Volumes ONTAP o Cloud Volumes ONTAP HA.
