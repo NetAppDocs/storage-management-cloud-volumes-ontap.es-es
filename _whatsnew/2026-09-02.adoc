@@ -11,7 +11,7 @@ Cloud Volumes ONTAP ya admite la implementación en las regiones «Secret» y «
 
 Para obtener más información, consulta la documentación de Azure:
 
-* https://azure.microsoft.com/en-us/blog/azure-government-top-secret-now-generally-available-for-us-national-security-missions/["Nube para misiones del gobierno de EE. UU.^"]
+* https://azure.microsoft.com/en-us/blog/azure-government-top-secret-now-generally-available-for-us-national-security-missions/["La nube para las misiones del Gobierno de EE. UU."^]
 * https://azure.microsoft.com/en-us/explore/global-infrastructure/government/national-security["Azure Government Secret"^]
 * https://azure.microsoft.com/en-us/blog/azure-government-top-secret-now-generally-available-for-us-national-security-missions["Azure Government Top Secret"^]
 

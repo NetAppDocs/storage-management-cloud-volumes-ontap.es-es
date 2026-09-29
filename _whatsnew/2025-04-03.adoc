@@ -9,4 +9,4 @@
 
 Ahora puede implementar Cloud Volumes ONTAP 9.13.1 en AWS en las regiones de China. Esto incluye soporte para implementaciones tanto de nodo único como de alta disponibilidad (HA). Solo se admiten licencias compradas directamente a NetApp .
 
-Para conocer la disponibilidad regional, consulte la https://bluexp.netapp.com/cloud-volumes-global-regions["Mapas de regiones globales para Cloud Volumes ONTAP"^] .
+Para conocer la disponibilidad regional, consulta la página https://www.netapp.com/cloud-volumes-ontap/supported-regions/["Mapas de regiones globales para Cloud Volumes ONTAP"^].

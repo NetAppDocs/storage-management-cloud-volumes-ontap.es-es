@@ -1298,7 +1298,7 @@ Los pares de HA usan Azure Managed Disks. Se admiten los siguientes tipos y tama
 [[supported-regions]]
 === Regiones compatibles
 
-Para obtener información sobre las regiones compatibles con Azure, consulta https://bluexp.netapp.com/cloud-volumes-global-regions["Cloud Volumes regiones globales"^].
+Para obtener información sobre las regiones compatibles con Azure, consulta https://www.netapp.com/cloud-volumes-ontap/supported-regions/["Cloud Volumes regiones globales"^].
 
 .Enlaces relacionados
 * link:task-planning-your-config-azure.html["Aprenda a elegir tipos y tamaños de discos para sus sistemas en Azure"]
