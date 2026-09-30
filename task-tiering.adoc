@@ -24,7 +24,6 @@ Se admiten la mayoría de las configuraciones.  Si tiene un sistema Cloud Volume
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"]Garantizar la conectividad entre Cloud Volumes ONTAP y el almacenamiento de objetos
 [role="quick-margin-list"]
-* En el caso de AWS, necesitas un punto de conexión de VPC a Amazon Simple Storage Service (Amazon S3). <<Requirements to tier cold data to AWS S3,Más información>>.
 * Para Azure, no necesitará hacer nada siempre que la NetApp Console tenga los permisos necesarios. <<Requisitos para organizar en niveles datos inactivos en el almacenamiento de blobs de Azure,Más información>> .
 * Para Google Cloud, debe configurar la subred para el acceso privado de Google y configurar una cuenta de servicio. <<Requisitos para agrupar datos fríos en un depósito de Google Cloud Storage,Más información>> .
 
