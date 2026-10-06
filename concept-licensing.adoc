@@ -253,7 +253,7 @@ La consola permite una conversión fluida de las licencias por nodo a licencias 
 
 Antes de realizar la transición, es bueno familiarizarse con la diferencia entre los dos modelos de licencia.  Las licencias basadas en nodos incluyen una capacidad fija para cada instancia de ONTAP , lo que puede restringir la flexibilidad.  Por otro lado, las licencias basadas en capacidad permiten un grupo compartido de almacenamiento entre múltiples instancias, lo que ofrece mayor flexibilidad, optimiza la utilización de recursos y reduce el potencial de sanciones financieras al redistribuir cargas de trabajo.  La carga basada en capacidad se ajusta perfectamente a los requisitos cambiantes de almacenamiento.
 
-##Si tienes suscripciones del Marketplace o implementaciones privadas con licencias basadas en nodos, puedes link:task-convert-node-capacity.html["Convierte tus licencias por nodo en licencias por capacidad"] utilizando la herramienta de conversión de licencias en la Console.##
+Si tienes suscripciones de marketplace o implementaciones privadas con licencias basadas en nodos, puedes link:task-convert-node-capacity.html["Convierte tus licencias por nodo en licencias por capacidad"] utilizando la herramienta de conversión de licencias de la Console.
 
 Para saber cómo puedes realizar esta conversión, consultalink:task-convert-node-capacity.html["Convertir una licencia basada en nodos de Cloud Volumes ONTAP a una licencia basada en capacidad"] .
 

@@ -42,6 +42,6 @@ El panel de control bien estructurado muestra el número total de sistemas anali
 
 
 .Enlaces relacionados
-* https://docs.netapp.com/us-en/console-well-architected/cvo/configuration-analysis-cvo.html["Análisis de la configuración de Cloud Volumes ONTAP"^]
-* https://docs.netapp.com/us-en/console-well-architected/cvo/improve-configurations-cvo.html["Implementa configuraciones de sistema Cloud Volumes ONTAP bien diseñadas"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/concept-configuration-analysis-cvo.html["Análisis de la configuración de Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-improve-configurations-cvo.html["Mejora las configuraciones de Cloud Volumes ONTAP en Azure con Workload Factory"^]
 

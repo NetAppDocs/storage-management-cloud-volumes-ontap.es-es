@@ -26,5 +26,5 @@ También puedes excluir una o varias configuraciones del análisis de well-archi
 
 Si deseas incluir más adelante una configuración que hayas descartado, puedes reactivarla en el panel de control de well-architected. Esto restaura la configuración en el análisis y te permite obtener recomendaciones y soluciones para ella.
 
-* link:https://docs.netapp.com/us-en/console-well-architected/cvo/improve-configurations-cvo.html["Corregir, descartar y reactivar configuraciones de Cloud Volumes ONTAP en Microsoft Azure"^]
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-improve-configurations-cvo.html["Corregir, descartar y reactivar configuraciones de Cloud Volumes ONTAP en Microsoft Azure"^]
 

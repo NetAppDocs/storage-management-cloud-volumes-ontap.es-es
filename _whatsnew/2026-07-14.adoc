@@ -64,7 +64,9 @@ Ahora puedes utilizar el asistente *Creación rápida* para implementar Cloud Vo
 [[introducing-access-roles-for-cloud-volumes-ontap]]
 === Presentación de los roles de acceso para Cloud Volumes ONTAP
 
-NetApp introduce roles de gestión de identidades y accesos (IAM) para Cloud Volumes ONTAP, lo que permite el control de acceso basado en roles (RBAC) para mejorar la seguridad y facilitar el cumplimiento normativo. Los usuarios pueden seguir iniciando sesión en la NetApp Console utilizando sus credenciales actuales para las operaciones de Cloud Volumes ONTAP. Sin embargo, ahora la autenticación se enruta a través de la federación de identidades, lo que permite al administrador de la Console tener un control más detallado sobre estas funciones. Cada usuario debe tener uno de los siguientes roles para realizar cualquier operación en Cloud Volumes ONTAP. Sin un rol, los usuarios no pueden ver ni acceder a las instancias de Cloud Volumes ONTAP.
+NetApp presenta roles de gestión de identidades y accesos (IAM) para Cloud Volumes ONTAP, lo que permite el control de acceso basado en roles (RBAC) para mejorar la seguridad y facilitar el cumplimiento normativo. Los usuarios pueden seguir iniciando sesión en NetApp Console con sus credenciales actuales para las operaciones de Cloud Volumes ONTAP. Sin embargo, la autenticación ahora se enruta a través de la federación de identidades, lo que permite al administrador de la Console tener un control más granular sobre estas funciones. El agente de la Console debe ejecutar la versión 4.9.0 o posterior antes de habilitar los roles de Cloud Volumes ONTAP.
+
+Cada usuario debe tener uno de los siguientes roles para realizar cualquier operación en Cloud Volumes ONTAP. Sin un rol, los usuarios no pueden ver ni acceder a las instancias de Cloud Volumes ONTAP.
 
 * *Cloud Volumes ONTAP viewer*: Otorga acceso de solo lectura a las pantallas y pestañas de Cloud Volumes ONTAP. Ciertas pantallas y botones de acción están deshabilitados en este rol.
 * *Cloud Volumes ONTAP operator*: Permite realizar tareas de gestión cotidianas, como añadir volúmenes, gestionar el almacenamiento y configurar la replicación.
@@ -76,11 +78,11 @@ El administrador de la consola asigna roles a los usuarios de Cloud Volumes ONTA
 Cloud Volumes ONTAP aplica el modelo RBAC mediante una caché local de los permisos de cada usuario, que se actualiza automáticamente una vez cada hora. Cuando se asigna un nuevo rol a un usuario o se modifica su rol actual, el cambio puede tardar hasta una hora en surtir efecto, después de lo cual se habilitan todos los flujos de trabajo permitidos por los roles.
 
 
-NOTE: Cuando se implementa un agente de Console por primera vez, o cuando se actualiza un agente de Console existente a la versión 4.9.0 o posterior, un proceso de configuración inicial único asigna automáticamente roles de Cloud Volumes ONTAP a todos los usuarios existentes de la organización. Este proceso puede tardar hasta 30 minutos en completarse. Y cuando termina, Console asigna los roles adecuados a los usuarios existentes.
+NOTE: Cuando se implementa un agente de Console por primera vez, o cuando se actualiza un agente de Console existente a Console 4.9.0 o una versión posterior, un proceso único de inicialización asigna automáticamente roles de Cloud Volumes ONTAP a todos los usuarios existentes de la organización. Este proceso puede tardar hasta 30 minutos en completarse. Una vez finalizado, Console asigna los roles adecuados a los usuarios existentes. El proceso de inicialización no se lleva a cabo a menos que haya un agente en ejecución.
 
-Las funciones de Cloud Volumes ONTAP aplican a los entornos de Amazon Web Services (AWS), Microsoft Azure (Azure) y Google Cloud.
+Los roles de Cloud Volumes ONTAP se aplican a los entornos de Amazon Web Service (AWS), Microsoft Azure (Azure) y Google Cloud. Los roles no se aplican a los modos de implementación privados y restringidos.
 
 .Enlaces relacionados
-* https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["NetApp roles de acceso a la consola"^]
 * https://docs.netapp.com/us-en/console-setup-admin/reference-iam-cvo-roles.html["Roles de acceso de Cloud Volumes ONTAP en NetApp Console"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-cvo-rbac-setup.html["Configura el acceso basado en roles para Cloud Volumes ONTAP en NetApp Console"^]
 
