@@ -47,7 +47,8 @@ sidebar:
         url: "/concept-degraded-ha-pair.html"
     - title: Implementar en Amazon Web Services
       entries:
-      - title: Incorpora Cloud Volumes ONTAP desde AWS Marketplace
+      - title: Implementa la versión independiente de Cloud Volumes ONTAP desde AWS
+          Marketplace
         url: "/task-onboard-cvo-aws-marketplace.html"
       - title: Resumen de la implementación
         url: "/task-getting-started-aws.html"
