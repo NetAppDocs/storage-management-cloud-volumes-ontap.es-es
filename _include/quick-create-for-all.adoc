@@ -2,7 +2,6 @@
 :allow-uri-read: 
 
 
-[role="lead"]
 Puedes implementar Cloud Volumes ONTAP en Amazon Web Services (AWS), Microsoft Azure y Google Cloud usando `Quick create` para acelerar la implementación tanto en configuraciones de un solo nodo como de alta disponibilidad (HA). Este proceso simplificado reduce los pasos de implementación en comparación con el método avanzado al establecer automáticamente los valores predeterminados en una sola página y minimizar la navegación.
 
 .Antes de empezar
