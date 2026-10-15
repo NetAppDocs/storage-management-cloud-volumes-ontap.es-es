@@ -1,0 +1,89 @@
+---
+sidebar: sidebar 
+permalink: task-azure-prevent-freeze.html 
+keywords: Azure, maintenance event, HA, takeover, giveback, freeze, disruption 
+summary: Evita interrupciones durante el mantenimiento de Azure desactivando la toma de control automática y la devolución automática de un par HA de Cloud Volumes ONTAP. 
+---
+= Evita interrupciones durante el mantenimiento de Azure para los pares de HA de Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puedes configurar los pares de alta disponibilidad (HA) de Cloud Volumes ONTAP para suprimir la toma de control automática y la devolución de control durante el mantenimiento programado de Azure. Esta función opcional está disponible con Cloud Volumes ONTAP 9.19.1 y versiones posteriores, y está desactivada de forma predeterminada.
+
+
+NOTE: Esta función está disponible como vista previa pública con Cloud Volumes ONTAP 9.19.1.
+
+Microsoft Azure puede poner en pausa temporalmente una VM durante un mantenimiento programado. En una configuración de HA de Cloud Volumes ONTAP, ONTAP podría interpretar la pausa como una interrupción del nodo y trasladar las operaciones de almacenamiento al nodo asociado, para luego devolverlas automáticamente cuando la VM en pausa se reanude (toma de control y devolución). Esto puede interrumpir las conexiones activas de los clientes. Si habilitas esta función, el par de HA seguirá funcionando durante una congelación por mantenimiento programado de Azure sin iniciar automáticamente la toma de control y la devolución.
+
+.Acerca de esta tarea
+* La E/S del cliente podría bloquearse durante una congelación de una Azure VM. ONTAP no inicia automáticamente la toma de control, por lo que la E/S del cliente permanece en el nodo afectado en lugar de pasar al partner de HA. La E/S podría bloquearse hasta que el nodo se reanude.
+* La duración de una interrupción depende del congelamiento de la VM de Azure. Un congelamiento más prolongado puede provocar una interrupción de E/S más prolongada.
+* La protección HA normal sigue activa para otras condiciones de fallo. Esta función suprime la toma de control y la devolución del control solo para la congelación por mantenimiento programado de Azure. Otras condiciones que normalmente activan la toma de control, como un fallo de nodo o un pánico, siguen haciéndolo.
+* Esta función se aplica a ambos nodos de un par de HA. El comportamiento ante eventos de mantenimiento se configura en ambos nodos y no se puede activar solo en uno de ellos.
+* Esta función se mantiene tras los reinicios y sigue activa hasta que la desactives. Al desactivarla, se restablece el comportamiento predeterminado de toma de control y devolución durante el mantenimiento programado.
+
+
+.Antes de empezar
+* Tu sistema Cloud Volumes ONTAP debe ejecutar la versión 9.19.1 o posterior.
+* Debes disponer de acceso de administrador a Cloud Volumes ONTAP para completar este procedimiento.
+* Comprueba que tus cargas de trabajo pueden tolerar bloqueos temporales de E/S durante una congelación por mantenimiento programado de Azure y que continuar durante la congelación es preferible a la respuesta predeterminada de toma de control y devolución.
+
+
+
+
+[[prevent-automatic-takeover-and-giveback-during-azure-scheduled-maintenance]]
+== Evitar la toma de control automática y la devolución durante el mantenimiento programado de Azure
+
+.Pasos
+. Identifica el ID del sistema del par de alta disponibilidad (HA) de Azure. Para obtener información sobre cómo identificar recursos y hacer llamadas a la API, consulta https://docs.netapp.com/us-en/console-automation/cm/your_api_call.html#step-1-select-the-identifie["Su primera llamada a la API"^].
+. Envía una `PUT` solicitud al siguiente endpoint, sustituyendo `{id}` por el ID del sistema:
++
+`PUT /occm/api/azure/ha/working-environments/{id}/opt-off-maintenance-event`
+
++
+Establece `enabled` como `true` en el cuerpo de la solicitud:
+
++
+[source, json]
+----
+{
+  "enabled": true
+}
+----
+
+
+.Resultado
+Una solicitud correcta devuelve HTTP 202 con un cuerpo vacío.
+
+
+IMPORTANT: La API actualiza los nodos del par de alta disponibilidad de forma secuencial. Si una solicitud falla antes de que finalice la operación, comprueba la configuración en ambos nodos antes de volver a intentar la solicitud, ya que los nodos podrían tener configuraciones diferentes.
+
+
+
+[[disable-the-feature-to-restore-default-behavior]]
+== Desactiva la función para restablecer el comportamiento predeterminado
+
+Para restablecer el comportamiento predeterminado de toma de control y devolución durante el mantenimiento programado de Azure, desactiva la función.
+
+.Pasos
+. Envía una `PUT` solicitud al mismo endpoint, sustituyendo `{id}` por el ID del sistema:
++
+`PUT /occm/api/azure/ha/working-environments/{id}/opt-off-maintenance-event`
+
++
+Establece `enabled` en `false` el cuerpo de la solicitud:
+
++
+[source, json]
+----
+{
+  "enabled": false
+}
+----
+

@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: task-enable-cluster-encryption.html 
+keywords: Backend cluster network encryption, encryption, security, TLS, IPsec, CSM, kTLS, backend encryption 
+summary: Activa el cifrado de red del clúster de backend para proteger el tráfico del clúster de Cloud Volumes ONTAP que aún no esté protegido por IPsec de ONTAP. 
+---
+= Habilita el cifrado de red del clúster de backend para Cloud Volumes ONTAP en Azure y Google Cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+En Cloud Volumes ONTAP 9.19.1 y versiones posteriores, habilita el cifrado de red del clúster back-end para proteger el tráfico interno de este a oeste en configuraciones de alta disponibilidad (HA) en Azure y Google Cloud. Esta configuración protege el tráfico en tránsito; no cifra los datos de los volúmenes en reposo.
+
+ONTAP utiliza Cluster Session Management (CSM) a través de Kernel TLS (kTLS) e IPsec de software para proteger el tráfico en las redes back-end para configuraciones de HA. Cloud Volumes ONTAP 9.19.1 y versiones posteriores amplían esta protección al tráfico del clúster back-end.
+
+
+NOTE: Habilitar el cifrado de la red del clúster podría afectar al rendimiento del clúster. Actúa con precaución y comprueba que tu entorno pueda soportar la sobrecarga adicional antes de habilitar esta función.
+
+.Antes de empezar
+* Debes tener instalado Cloud Volumes ONTAP 9.19.1 o una versión posterior.
+* Debes tener privilegios de administrador del clúster.
+* Debes comprobar que tu implementación de Cloud Volumes ONTAP utilice una configuración compatible.
+
+
+.Pasos
+. Utiliza la CLI de ONTAP para conectarte al clúster de Cloud Volumes ONTAP.
+. Comprueba que la configuración del cifrado de la red del clúster sea correcta:
++
+[source, cli]
+----
+security cluster-network show
+    Enabled: false
+    Mode: tls
+    Status: READY
+----
+. Habilita el cifrado de la red del clúster en los modos TLS e IPsec:
++
+[source, cli]
+----
+security cluster-network modify -enabled true -mode tls_ipsec
+----
+. Comprueba que el cifrado de la red del clúster esté activado:
++
+[source, cli]
+----
+security cluster-network show
+    Enabled: true
+    Mode: tls_ipsec
+    Status: READY
+----
++
+
+NOTE: Cuando activas el modo  `tls_ipsec`, el tráfico CSM usa TLS, mientras que el resto del tráfico de red del clúster usa IPsec. ONTAP genera y gestiona los certificados necesarios y las políticas de IPsec de backend.
+
+
+
+.Información relacionada
+* https://docs.netapp.com/us-en/ontap/networking/configure-backend-encryption.html["Configurar el cifrado de red del clúster de backend de ONTAP"^]
+* https://docs.netapp.com/us-en/ontap-cli/security-cluster-network-show.html["security cluster-network show"^]
+* https://docs.netapp.com/us-en/ontap-cli/security-cluster-network-modify.html["security cluster-network modify"^]
+

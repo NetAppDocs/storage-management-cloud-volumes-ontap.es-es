@@ -16,7 +16,70 @@ summary: Descubre las nuevas funciones y mejoras en la gestión de Cloud Volumes
 [role="lead"]
 Conozca las novedades sobre la administración de Cloud Volumes ONTAP en la NetApp Console.
 
-Las mejoras descritas en esta página son específicas para la administración de Cloud Volumes ONTAP a través de la consola.  Para conocer las novedades del software Cloud Volumes ONTAP , https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Vaya a las notas de la versión de Cloud Volumes ONTAP"^] .
+Las mejoras descritas en esta página son específicas de la gestión de Cloud Volumes ONTAP a través de Console. Para obtener más información sobre las versiones principales y los parches, consulta https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Notas de la versión de Cloud Volumes ONTAP"^].
+
+
+
+[[14-october-2026]]
+== 14 de octubre de 2026
+
+
+
+[[cloud-volumes-ontap-9-19-1-in-azure]]
+=== Cloud Volumes ONTAP 9.19.1 en Azure
+
+Ya puedes usar NetApp Console para implementar y gestionar la versión de disponibilidad general (GA) de Cloud Volumes ONTAP 9.19.1 en Azure.
+
+Console es compatible con Cloud Volumes ONTAP 9.19.1 en AWS y Google Cloud desde agosto de 2026.
+
+https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-new.html["Notas de la versión de Cloud Volumes ONTAP 9.19.1"^]
+
+
+
+[[azure-encryption-at-host-for-cloud-volumes-ontap]]
+=== Cifrado de Azure en el host para Cloud Volumes ONTAP
+
+A partir de Cloud Volumes ONTAP 9.19.1 GA, el cifrado de Azure en el host está habilitado de forma predeterminada para las nuevas implementaciones de Azure de un solo nodo y de alta disponibilidad (HA) que cumplan los requisitos previos. Esta función cifra los datos del servidor físico que aloja la VM, incluidos el disco efímero y las cachés asociadas a nivel de host, a medida que los datos se escriben y se leen desde el host.
+
+Antes de implementar Cloud Volumes ONTAP en Azure, asegúrate de que se cumplan los siguientes requisitos previos:
+
+* La función `EncryptionAtHost` está registrada para tu suscripción a Azure. Consulta https://learn.microsoft.com/en-us/azure/virtual-machines/linux/disks-enable-host-based-encryption-cli["Documentación de Microsoft: activar el cifrado en el host"^].
+* El tipo de instancia de VM que has seleccionado admite el cifrado en el host en tu región de Azure. Consulta https://learn.microsoft.com/en-us/azure/virtual-machines/linux/disks-enable-host-based-encryption-cli#finding-supported-vm-sizes["Documentación de Microsoft: cómo encontrar los tamaños de máquinas virtuales compatibles"^].
+
+
+Ten en cuenta estos puntos:
+
+* No se requiere ninguna configuración adicional.
+* Si no se cumplen estos requisitos previos, el cifrado de Azure en el host no estará habilitado para tu implementación de Cloud Volumes ONTAP.
+* El cifrado en el host solo se aplica a Azure, no a AWS ni a Google Cloud.
+
+
+Documentación de Microsoft: https://learn.microsoft.com/en-us/azure/virtual-machines/disks-enable-host-based-encryption-portal["Utiliza Azure portal para habilitar el cifrado de extremo a extremo mediante encryption at host"^]
+
+
+
+[[backend-network-encryption-on-cloud-volumes-ontap-clusters-in-azure-and-google-cloud]]
+=== Cifrado de red del backend en clústeres de Cloud Volumes ONTAP en Azure y Google Cloud
+
+Cloud Volumes ONTAP 9.19.1 y versiones posteriores admiten el cifrado de la red del clúster de backend para configuraciones de alta disponibilidad (HA) en Azure y Google Cloud.
+
+La activación del cifrado de red del clúster podría afectar al rendimiento del clúster. Actúa con precaución y comprueba que tu entorno pueda soportar la sobrecarga adicional antes de activar esta función.
+
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-enable-cluster-encryption.html["Activa el cifrado de red del backend en los clústeres de Cloud Volumes ONTAP"^]
+
+
+
+[[ability-to-reduce-disruptions-during-azure-scheduled-maintenance]]
+=== Capacidad para reducir las interrupciones durante el mantenimiento programado de Azure
+
+Durante el mantenimiento programado, Azure puede pausar brevemente una VM en un par de HA de Cloud Volumes ONTAP. ONTAP podría interpretar la pausa como una caída de nodo y mover las operaciones de almacenamiento al nodo asociado, y luego devolverlas cuando la VM se reanude (takeover and giveback). Este proceso puede interrumpir las conexiones activas de los clientes, incluso cuando no haya ningún fallo de nodo.
+
+Con Cloud Volumes ONTAP 9.19.1 y versiones posteriores, puedes activar una configuración opcional que permite que el par de HA siga funcionando durante una congelación por mantenimiento programado de Azure sin iniciar automáticamente la toma de control automática ni la devolución.
+
+
+NOTE: Esta función está disponible como vista previa pública con Cloud Volumes ONTAP 9.19.1.
+
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-azure-prevent-freeze.html["Evita interrupciones durante el mantenimiento de Azure para los pares de HA de Cloud Volumes ONTAP"^]
 
 
 
@@ -499,7 +562,7 @@ Todos los permisos listados para la versión de la NetApp Console en:
 
 
 |===
-En las implementaciones en modo privado, necesitas hacer algunos cambios en la configuración de Cloud Volumes ONTAP para empezar a usar Infrastructure Manager. Consulta https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#infrastructure-manager-configuration-for-private-mode-deployments["Configuración de Infrastructure Manager para implementaciones en modo privado"^].
+En las implementaciones en modo privado, necesitas hacer algunos cambios en la configuración de Cloud Volumes ONTAP para empezar a usar Infrastructure Manager. Consulta https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#infrastructure-manager-configuration-in-private-mode-or-protected-environments["Configuración de Infrastructure Manager en modo privado o en entornos protegidos"^].
 
 .Enlaces relacionados
 * https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#console-agent-4-2-0["NetApp Console Agent 4.2.0 Notas de la versión"^]

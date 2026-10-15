@@ -204,6 +204,8 @@ sidebar:
       - title: Cree copias instantáneas a prueba de manipulaciones para el almacenamiento
           WORM
         url: "/reference-worm-snaplock.html"
+      - title: Habilita el cifrado de red del clúster de backend
+        url: "/task-enable-cluster-encryption.html"
   - title: Gestión de la infraestructura en la nube
     entries:
     - title: Administración de AWS
@@ -230,6 +232,9 @@ sidebar:
         url: "/reference-limits-azure.html"
       - title: Conoce los pares de alta disponibilidad en Azure
         url: "/concept-ha-azure.html"
+      - title: Evita las interrupciones durante el mantenimiento de Azure de Cloud
+          Volumes ONTAP HA
+        url: "/task-azure-prevent-freeze.html"
       - title: Administrar claves con Azure Key Vault
         url: "/task-azure-key-vault.html"
       - title: Cambiar el tipo de máquina virtual de Azure
@@ -252,10 +257,6 @@ sidebar:
           url: "/concept-configuration-analysis-cvo.html"
         - title: Mejora las configuraciones de Cloud Volumes ONTAP en Azure
           url: "/task-improve-configurations-cvo.html"
-      - title: Análisis de la configuración de Cloud Volumes ONTAP en Azure
-        url: "/concept-configuration-analysis-cvo.html"
-      - title: Mejora las configuraciones de Cloud Volumes ONTAP en Azure
-        url: "/task-improve-configurations-cvo.html"
     - title: Administración de Google Cloud
       entries:
       - title: Configuraciones compatibles en Google Cloud

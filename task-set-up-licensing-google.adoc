@@ -160,7 +160,7 @@ Una suscripción a Keystone es un servicio basado en suscripción de pago por us
 .Pasos
 . Si aún no tienes una suscripción, https://www.netapp.com/forms/keystone-sales-contact/["Contactar con NetApp"^]
 . mailto:ng-keystone-success@netapp.com[Contacto NetApp] para autorizar su cuenta de usuario de la consola con una o más suscripciones de Keystone .
-. Después de que NetApp autorice su cuenta,link:task-manage-keystone.html#link-a-subscription["Vincula tus suscripciones para usarlas con Cloud Volumes ONTAP"] .
+. Una vez que NetApp autorice tu cuenta, link:task-manage-keystone.html["Vincula tus suscripciones para usarlas con Cloud Volumes ONTAP"].
 . En la página *Systems*, selecciona *Add System* y sigue los pasos.
 +
 .. Seleccione el método de cobro de suscripción de Keystone cuando se le solicite que elija un método de cobro.

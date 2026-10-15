@@ -79,7 +79,7 @@ NOTE: NetApp ha restringido la compra, ampliación y renovación de las licencia
 La consola consulta automáticamente el servicio de licencias de NetApp para obtener detalles sobre las licencias asociadas a su cuenta del sitio de soporte de NetApp .  Si no hay errores, la Consola agrega automáticamente las licencias a la Consola.
 
 +
-Tu licencia debe estar disponible en la consola antes de que puedas usarla con Cloud Volumes ONTAP. Si es necesario, puedes link:task-manage-capacity-licenses.html#how-licenses-are-added-to-netapp-console["agregar manualmente la licencia a la consola"].
+Tu licencia debe estar disponible en la consola antes de que puedas usarla con Cloud Volumes ONTAP. Si es necesario, puedes link:task-manage-capacity-licenses.html["agregar manualmente la licencia a la consola"].
 
 . En la página *Systems*, selecciona *Add System* y sigue los pasos.
 +
@@ -169,7 +169,7 @@ Una suscripción a Keystone es un servicio basado en suscripción de pago por us
 .Pasos
 . Si aún no tienes una suscripción, https://www.netapp.com/forms/keystone-sales-contact/["Contactar con NetApp"^]
 . mailto:ng-keystone-success@netapp.com[Contacto NetApp] para autorizar su cuenta de usuario en la Consola con una o más suscripciones de Keystone .
-. Después de que NetApp autorice su cuenta,link:task-manage-keystone.html#link-a-subscription["Vincula tus suscripciones para usarlas con Cloud Volumes ONTAP"] .
+. Una vez que NetApp autorice tu cuenta, link:task-manage-keystone.html["Vincula tus suscripciones para usarlas con Cloud Volumes ONTAP"].
 . En la página *Systems*, selecciona *Add System* y sigue los pasos.
 +
 .. Seleccione el método de cobro de suscripción de Keystone cuando se le solicite que elija un método de cobro.
