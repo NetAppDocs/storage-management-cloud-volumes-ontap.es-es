@@ -10,7 +10,7 @@
 Ya puedes implementar Cloud Volumes ONTAP 9.12.1 GA y versiones posteriores en la región Chile Central (chilecentral) en Azure. Se admiten los siguientes tipos de implementación:
 
 * Clúster de un solo nodo
-* HA en una única zona de disponibilidad usando almacenamiento con redundancia local (LRS)
+* HA en una única zona de disponibilidad mediante almacenamiento con redundancia local (LRS)
 * HA en varias zonas de disponibilidad mediante almacenamiento con redundancia por zona (ZRS)
 
 

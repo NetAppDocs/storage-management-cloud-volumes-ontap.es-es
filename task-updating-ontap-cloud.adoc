@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-updating-ontap-cloud.html 
 keywords: update, updating, upgrading, upgrade, software, downgrade, downgrading, FTP, HTTP, mediator, local image, revert, reverting, downgrading, cloud backup 
-summary: Actualice Cloud Volumes ONTAP desde la NetApp Console para obtener acceso a las últimas funciones y mejoras.  Debe preparar los sistemas Cloud Volumes ONTAP antes de actualizar el software. 
+summary: Revisa las rutas de actualización compatibles, prepara tus sistemas y actualiza Cloud Volumes ONTAP desde las notificaciones de NetApp Console o mediante una imagen en una URL. 
 ---
 = Actualizar Cloud Volumes ONTAP
 :hardbreaks:
@@ -21,14 +21,14 @@ Actualice Cloud Volumes ONTAP desde la NetApp Console para obtener acceso a las 
 [[upgrade-overview]]
 == Descripción general de la actualización
 
-Debe tener en cuenta lo siguiente antes de comenzar el proceso de actualización de Cloud Volumes ONTAP .
+Revisa estas consideraciones antes de iniciar el proceso de actualización de Cloud Volumes ONTAP.
 
 
 
 [[upgrade-from-console-only]]
 === Actualización solo desde la consola
 
-No debe actualizar Cloud Volumes ONTAP mediante ONTAP System Manager o la CLI de ONTAP , sino solo la consola.  De lo contrario, podría afectar la estabilidad del sistema.
+Actualiza Cloud Volumes ONTAP solo desde Console. La actualización con ONTAP System Manager o ONTAP CLI podría afectar la estabilidad del sistema.
 
 La consola ofrece dos formas de actualizar Cloud Volumes ONTAP:
 
@@ -302,9 +302,9 @@ Si tiene una versión inferior de Cloud Volumes ONTAP en Azure, primero debe act
 |===
 Tenga en cuenta lo siguiente:
 
-* Las rutas de actualización admitidas para Cloud Volumes ONTAP son diferentes a las de un clúster ONTAP local.
+* Las rutas de actualización compatibles para Cloud Volumes ONTAP difieren de las de un clúster de ONTAP en las instalaciones.
 * Si actualiza siguiendo las notificaciones que aparecen en un sistema, la consola le solicitará que actualice a una versión que siga estas rutas de actualización compatibles.
-* Si actualiza colocando una imagen de actualización en una ubicación HTTPS, asegúrese de seguir estas rutas de actualización compatibles.
+* Si realizas la actualización colocando una imagen de actualización en una ubicación HTTPS, sigue estas rutas de actualización compatibles.
 * En algunos casos, es posible que necesites actualizar varias veces para alcanzar la versión objetivo.
 +
 Por ejemplo, si está ejecutando la versión 9.8 y desea actualizar a la 9.10.1, primero deberá actualizar a la versión 9.9.1 y luego a la 9.10.1.
@@ -324,7 +324,7 @@ Para las versiones de parche 9.11.1 o anteriores, deberá utilizar un procedimie
 
 Como regla general para los lanzamientos de parches, puede actualizar desde una versión de parche inferior a cualquier versión de parche superior en la misma versión o en la siguiente de Cloud Volumes ONTAP .
 
-A continuación se muestran un par de ejemplos:
+Aquí tienes dos ejemplos:
 
 * 9.13.0 -> 9.13.1 P15
 * 9.12.1 -> 9.13.1 P2
@@ -342,7 +342,7 @@ No se admite la reversión o degradación de Cloud Volumes ONTAP a una versión 
 [[support-registration]]
 === Registro de soporte
 
-Cloud Volumes ONTAP debe estar registrado con NetApp Support para poder actualizar el software mediante cualquiera de los métodos descritos en esta página. Esto se aplica tanto al modelo de pago por uso (PAYGO) como al de Bring-Your-Own License (BYOL). Necesitarás link:task-registering.html["Registrar manualmente los sistemas PAYGO"], mientras que los sistemas BYOL ya están registrados por defecto.
+Debes registrar Cloud Volumes ONTAP con NetApp Support para actualizar el software por cualquier método. Esto se aplica tanto al modelo de pago por uso (PAYGO) como a Bring-Your-Own License (BYOL). Tendrás que link:task-registering.html["Registrar manualmente los sistemas PAYGO"], mientras que los sistemas BYOL ya están registrados de forma predeterminada.
 
 
 TIP: Un sistema que no esté registrado para recibir soporte seguirá recibiendo las notificaciones de actualización de software que aparecen en la Consola cuando hay una nueva versión disponible.  Pero necesitará registrar el sistema antes de poder actualizar el software.
@@ -359,15 +359,15 @@ La consola también actualiza la instancia del mediador según sea necesario dur
 [[upgrades-in-aws-with-c4-m4-and-r4-ec2-instance-types]]
 === Actualizaciones en AWS con los tipos de instancia EC2 c4, m4 y r4
 
-Cloud Volumes ONTAP ya no admite los tipos de instancias EC2 c4, m4 y r4.  Puede actualizar implementaciones existentes a las versiones 9.8 a 9.12.1 de Cloud Volumes ONTAP con estos tipos de instancias.  Antes de actualizar le recomendamos que<<Cambiar el tipo de instancia,cambiar el tipo de instancia>> .  Si no puede cambiar el tipo de instancia, debe hacerlo<<Habilitar redes mejoradas,permitir una red mejorada>> Antes de actualizar.  Lea las siguientes secciones para obtener más información sobre cómo cambiar el tipo de instancia y habilitar redes mejoradas.
+Cloud Volumes ONTAP ya no es compatible con los tipos de instancia de EC2 c4, m4 y r4. Puedes actualizar las implementaciones existentes a las versiones 9.8-9.12.1 de Cloud Volumes ONTAP con estos tipos de instancia. Antes de actualizar, te recomendamos que <<Cambiar el tipo de instancia,cambiar el tipo de instancia>>. Si no puedes cambiar el tipo de instancia, tendrás que <<Habilitar redes mejoradas,permitir una red mejorada>> antes de actualizar.
 
-En Cloud Volumes ONTAP que ejecuta las versiones 9.13.0 y superiores, no se puede actualizar con los tipos de instancias EC2 c4, m4 y r4.  En este caso, es necesario reducir el número de discos y luego<<Cambiar el tipo de instancia,cambiar el tipo de instancia>> o implementar una nueva configuración de par HA con los tipos de instancia EC2 c5, m5 y r5 y migrar los datos.
+En Cloud Volumes ONTAP con versiones 9.13.0 y superiores, no puedes actualizar con los tipos de instancia EC2 c4, m4 y r4. En este caso, tienes que reducir el número de discos y luego <<Cambiar el tipo de instancia,cambiar el tipo de instancia>> o implementar un nuevo par de HA con los tipos de instancia EC2 c5, m5 y r5 y migrar los datos.
 
 
 
 ==== Cambiar el tipo de instancia
 
-Los tipos de instancias EC2 c4, m4 y r4 permiten más discos por nodo que los tipos de instancias EC2 c5, m5 y r5.  Si la cantidad de discos por nodo para la instancia EC2 c4, m4 o r4 que está ejecutando es inferior a la asignación máxima de discos por nodo para las instancias c5, m5 y r5, puede cambiar el tipo de instancia EC2 a c5, m5 o r5.
+Los tipos de instancia EC2 c4, m4 y r4 permiten más discos por nodo que los tipos de instancia EC2 c5, m5 y r5. Si el número de discos por nodo de tu instancia EC2 c4, m4 o r4 es inferior al número máximo de discos por nodo para las instancias c5, m5 y r5, puedes cambiar el tipo de instancia EC2 a c5, m5 o r5.
 
 link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-aws.html#disk-and-tiering-limits-by-ec2-instance["Verificar los límites de disco y niveles por instancia EC2"^] link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-change-ec2-instance.html["Cambiar el tipo de instancia EC2 para Cloud Volumes ONTAP"^]
 
@@ -402,14 +402,14 @@ Cuando se actualiza un sistema de un solo nodo, el proceso de actualización dej
 
 En muchos casos, la actualización de un par HA no produce interrupciones y la E/S no se interrumpe.  Durante este proceso de actualización sin interrupciones, cada nodo se actualiza en conjunto para continuar brindando servicios de E/S a los clientes.
 
-Los protocolos orientados a sesiones pueden causar efectos adversos en los clientes y aplicaciones en ciertas áreas durante las actualizaciones. Para obtener más detalles, consulte la https://docs.netapp.com/us-en/ontap/upgrade/concept_considerations_for_session_oriented_protocols.html["Documentación de ONTAP"^]
+Los protocolos orientados a sesiones pueden provocar efectos adversos en los clientes y las aplicaciones en determinadas áreas durante las actualizaciones. Para obtener más información, consulta la https://docs.netapp.com/us-en/ontap/upgrade/concept_considerations_for_session_oriented_protocols.html["Documentación de ONTAP"^].
 
 
 
 [[verify-that-automatic-giveback-is-still-enabled]]
 === Verifique que la devolución automática aún esté habilitada
 
-La devolución automática debe estar habilitada en un par de Cloud Volumes ONTAP HA (esta es la configuración predeterminada).  Si no es así la operación fallará.
+La devolución automática debe estar activada en un par HA de Cloud Volumes ONTAP (esta es la configuración predeterminada). Si la devolución automática no está activada, la operación fallará.
 
 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/GUID-3F50DE15-0D01-49A5-BEFD-D529713EC1FA.html["Documentación de ONTAP : Comandos para configurar la devolución automática"^]
 
@@ -418,7 +418,7 @@ http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/GUID-3F50DE15-0D
 [[suspend-snapmirror-transfers]]
 === Suspender transferencias de SnapMirror
 
-Si un sistema Cloud Volumes ONTAP tiene relaciones SnapMirror activas, es mejor suspender las transferencias antes de actualizar el software Cloud Volumes ONTAP .  Suspender las transferencias evita fallas de SnapMirror .  Debes suspender las transferencias desde el sistema de destino.
+Si un sistema Cloud Volumes ONTAP tiene relaciones activas de SnapMirror, lo mejor es suspender las transferencias antes de actualizar el software de Cloud Volumes ONTAP. Suspender las transferencias evita fallos de SnapMirror. Debes suspender las transferencias desde el sistema de destino.
 
 
 NOTE: Si bien NetApp Backup and Recovery utiliza una implementación de SnapMirror para crear archivos de respaldo (llamada SnapMirror Cloud), no es necesario suspender los respaldos cuando se actualiza un sistema.
@@ -444,7 +444,7 @@ NOTE: La computadora desde la que accede a la consola debe tener una conexión d
 [[verify-that-aggregates-are-online]]
 === Verificar que los agregados estén en línea
 
-Los agregados para Cloud Volumes ONTAP deben estar en línea antes de actualizar el software.  Los agregados deben estar en línea en la mayoría de las configuraciones, pero si no lo están, entonces debe ponerlos en línea.
+Los agregados de Cloud Volumes ONTAP deben estar en línea antes de actualizar el software. En la mayoría de las configuraciones, los agregados deben estar en línea. Si no lo están, ponlos en línea.
 
 .Acerca de esta tarea
 Estos pasos describen cómo utilizar ONTAP System Manager para la versión 9.3 y posteriores.
@@ -470,7 +470,7 @@ image:screenshots_aggregate_details_state.png["Captura de pantalla: muestra el c
 
 Antes de actualizar, todos los LIF deben estar en los puertos locales.  Consulte la documentación de ONTAP paralink:https://docs.netapp.com/us-en/ontap/upgrade/task_enabling_and_reverting_lifs_to_home_ports_preparing_the_ontap_software_for_the_update.html["verificar que todos los LIF estén en los puertos de origen"^] .
 
-Si se produce un error de actualización, consulte el artículo de la Base de conocimientos (KB)link:https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/CVO_upgrade_fails["La actualización de Cloud Volumes ONTAP falla"^] .
+Si la actualización falla, consulta el artículo de la base de conocimientos (KB) link:https://kb.netapp.com/Cloud/Cloud_Volumes_ONTAP/CVO_upgrade_fails["La actualización de Cloud Volumes ONTAP falla"^].
 
 
 
@@ -479,19 +479,19 @@ Si se produce un error de actualización, consulte el artículo de la Base de co
 
 La consola le notifica cuando hay una nueva versión disponible para actualizar.  Puede iniciar el proceso de actualización desde esta notificación. Para obtener más información, consulte <<Actualización desde las notificaciones de la consola>> .
 
-Otra forma de realizar actualizaciones de software mediante el uso de una imagen en una URL externa.  Esta opción es útil si la consola no puede acceder al depósito S3 para actualizar el software o si se le proporcionó un parche. Para obtener más información, consulte <<Actualizar desde una imagen disponible en una URL>> .
+También puedes actualizar el software utilizando una imagen de una URL externa. Esta opción resulta útil si Console no puede acceder al bucket de S3 para actualizar el software o si se te ha facilitado un parche. Para obtener más información, consulta <<Actualizar desde una imagen disponible en una URL>>.
 
 
 
 [[upgrade-from-console-notifications]]
 === Actualización desde las notificaciones de la consola
 
-La consola muestra una notificación en los entornos de trabajo de Cloud Volumes ONTAP cuando hay una nueva versión de Cloud Volumes ONTAP disponible:
+La Console muestra una notificación en los sistemas Cloud Volumes ONTAP cuando hay una nueva versión de Cloud Volumes ONTAP disponible.
 
 
 NOTE: Antes de poder actualizar Cloud Volumes ONTAP a través de las notificaciones, debe tener una cuenta del sitio de soporte de NetApp .
 
-Puede iniciar el proceso de actualización desde esta notificación, que automatiza el proceso obteniendo la imagen del software de un depósito S3, instalando la imagen y luego reiniciando el sistema.
+Puedes iniciar el proceso de actualización desde esta notificación. Console obtiene la imagen de software de un bucket de S3, la instala y, a continuación, reinicia el sistema.
 
 .Antes de empezar
 Las operaciones como la creación de volúmenes o agregados no deben estar en curso en el sistema Cloud Volumes ONTAP .
@@ -517,7 +517,7 @@ Si quieres actualizar a otra versión, selecciona *Seleccionar otras versiones*.
 ** Verá 9.13.1P1 como la versión predeterminada para la actualización, y 9.12.1P13, 9.13.1P14, 9.13.1 y 9.13.1P1 como las otras versiones disponibles.
 
 
-. Si lo deseas, puedes seleccionar *Todas las versiones* para indicar otra versión a la que quieras actualizar (por ejemplo, el siguiente parche de la versión instalada). Para conocer la ruta de actualización compatible con tu versión actual de Cloud Volumes ONTAP, consulta link:task-updating-ontap-cloud.html#supported-upgrade-paths["Rutas de actualización admitidas"].
+. Opcional: selecciona *Todas las versiones* para introducir otra versión a la que desees actualizar (por ejemplo, el siguiente parche de la versión instalada). Para conocer la ruta de actualización compatible con tu versión actual de Cloud Volumes ONTAP, consulta link:task-updating-ontap-cloud.html#supported-upgrade-paths["Rutas de actualización admitidas"].
 . Selecciona *Guardar* y luego *Aplicar*. image:screenshot_upgrade_other_versions.png["Una captura de pantalla que muestra las versiones disponibles para actualizar."]
 . En la página Actualizar Cloud Volumes ONTAP , lea el EULA y luego seleccione *Leí y apruebo el EULA*.
 . Seleccione *Actualizar*.
@@ -525,7 +525,7 @@ Si quieres actualizar a otra versión, selecciona *Seleccionar otras versiones*.
 
 
 .Resultado
-La consola inicia la actualización del software.  Puede realizar acciones en el sistema cuando se complete la actualización del software.
+La consola inicia la actualización del software. Puedes realizar acciones en el sistema cuando se complete la actualización del software.
 
 .Después de terminar
 Si suspendió las transferencias de SnapMirror , utilice el Administrador del sistema para reanudarlas.
@@ -571,7 +571,7 @@ Hay dos caminos disponibles.  La ruta correcta depende de la versión del agente
 . En el sistema, selecciona el icono image:icon-action.png["Un icono que muestra tres puntos horizontales para acciones adicionales"] y, a continuación, selecciona *Actualizar Cloud Volumes ONTAP*.
 . En la página «Actualizar la versión de Cloud Volumes ONTAP», introduce la URL y, a continuación, selecciona *Change Image*.
 +
-Si copió la imagen del software al agente de la consola en la ruta que se muestra arriba, deberá ingresar la siguiente URL:
+Si has copiado la imagen de software en el Console agent en la ruta indicada anteriormente, introduce la siguiente URL:
 
 +
 \http://<dirección IP privada del agente de consola>/ontap/images/<nombre del archivo de imagen>
@@ -584,7 +584,7 @@ NOTE: En la URL, *nombre-del-archivo-de-imagen* debe seguir el formato "cot.imag
 
 
 .Resultado
-La consola inicia la actualización del software.  Puede realizar acciones en el sistema una vez que se complete la actualización del software.
+La consola inicia la actualización del software. Podrás realizar acciones en el sistema una vez finalizada la actualización del software.
 
 .Después de terminar
 Si suspendió las transferencias de SnapMirror , utilice el Administrador del sistema para reanudarlas.

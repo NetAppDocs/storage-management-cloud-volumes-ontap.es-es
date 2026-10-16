@@ -82,7 +82,7 @@ La consola crea la cuenta de almacenamiento con la siguiente configuración:
 * Rendimiento: Estándar
 * Redundancia: según la implementación de Cloud Volume ONTAP
 +
-** Zona de disponibilidad única: almacenamiento con redundancia local (LRS)
+** Una sola zona de disponibilidad: almacenamiento con redundancia local (LRS)
 ** Zona de disponibilidad múltiple: almacenamiento con redundancia de zona (ZRS)
 
 

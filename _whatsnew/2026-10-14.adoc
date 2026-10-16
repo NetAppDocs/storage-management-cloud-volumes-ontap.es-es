@@ -20,7 +20,7 @@ https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-new.html["N
 
 A partir de Cloud Volumes ONTAP 9.19.1 GA, el cifrado de Azure en el host está habilitado de forma predeterminada para las nuevas implementaciones de Azure de un solo nodo y de alta disponibilidad (HA) que cumplan los requisitos previos. Esta función cifra los datos del servidor físico que aloja la VM, incluidos el disco efímero y las cachés asociadas a nivel de host, a medida que los datos se escriben y se leen desde el host.
 
-Antes de implementar Cloud Volumes ONTAP en Azure, asegúrate de que se cumplan los siguientes requisitos previos:
+Antes de implementar Cloud Volumes ONTAP en Azure, comprueba que tu entorno cumpla los siguientes requisitos previos:
 
 * La función `EncryptionAtHost` está registrada para tu suscripción a Azure. Consulta https://learn.microsoft.com/en-us/azure/virtual-machines/linux/disks-enable-host-based-encryption-cli["Documentación de Microsoft: activar el cifrado en el host"^].
 * El tipo de instancia de VM que has seleccionado admite el cifrado en el host en tu región de Azure. Consulta https://learn.microsoft.com/en-us/azure/virtual-machines/linux/disks-enable-host-based-encryption-cli#finding-supported-vm-sizes["Documentación de Microsoft: cómo encontrar los tamaños de máquinas virtuales compatibles"^].

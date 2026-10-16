@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-azure-high-availability-mode.html 
 keywords: high availability mode, EnableHighAvailabilityMode, action required, nfsv4 
-summary: El modo de alta disponibilidad de Microsoft Azure debe estar habilitado para reducir los tiempos de conmutación por error no planificados y para habilitar la compatibilidad de NFSv4 con Cloud Volumes ONTAP. 
+summary: Activa el modo de alta disponibilidad de Microsoft Azure para reducir los tiempos de conmutación por error no planificados y habilitar la compatibilidad con NFSv4 para los pares de Cloud Volumes ONTAP HA. 
 ---
 = Habilitar el modo de alta disponibilidad para Cloud Volumes ONTAP en Azure
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: El modo de alta disponibilidad de Microsoft Azure debe estar habilitado
 
 
 [role="lead"]
-Activa el modo de alta disponibilidad (HA) de Microsoft Azure para tu par de Cloud Volumes ONTAP HA a fin de reducir los tiempos de conmutación por error no planificados y admitir NFSv4. Este modo puede ofrecer un objetivo de tiempo de recuperación (RTO) de 60 segundos para los clientes CIFS y NFSv4 durante las conmutaciones por error no planificadas.
+Activa el modo de alta disponibilidad (HA) de Microsoft Azure para tu par de alta disponibilidad de Cloud Volumes ONTAP a fin de reducir los tiempos de conmutación por error no planificados y admitir NFSv4. Este modo puede ofrecer un objetivo de tiempo de recuperación (RTO) de 60 segundos para los clientes CIFS y NFSv4 durante las conmutaciones por error no planificadas.
 
 A partir de Cloud Volumes ONTAP 9.10.1, hemos reducido el tiempo de failover no planificado para los pares de HA de Cloud Volumes ONTAP que se ejecutan en Microsoft Azure y hemos añadido compatibilidad con NFSv4. Para que estas mejoras estén disponibles para Cloud Volumes ONTAP, debes habilitar la función HA en tu suscripción de Azure.
 
