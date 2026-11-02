@@ -83,7 +83,7 @@ La consola crea la cuenta de almacenamiento con la siguiente configuración:
 * Redundancia: según la implementación de Cloud Volume ONTAP
 +
 ** Una sola zona de disponibilidad: almacenamiento con redundancia local (LRS)
-** Zona de disponibilidad múltiple: almacenamiento con redundancia de zona (ZRS)
+** Múltiples zonas de disponibilidad: almacenamiento con redundancia por zonas (ZRS)
 
 
 * Cuenta: StorageV2 (propósito general v2)

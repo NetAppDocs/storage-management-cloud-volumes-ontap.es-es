@@ -41,7 +41,7 @@ Microsoft Azure puede pausar brevemente una VM durante el mantenimiento programa
 == Evitar la toma de control automática y la devolución durante el mantenimiento programado de Azure
 
 .Pasos
-. Identifica el ID del sistema del par de alta disponibilidad (HA) de Azure. Para obtener información sobre cómo identificar recursos y hacer llamadas a la API, consulta https://docs.netapp.com/us-en/console-automation/cm/your_api_call.html#step-1-select-the-identifie["Su primera llamada a la API"^].
+. Identifica el ID del sistema del par de alta disponibilidad (HA) de Azure. Para obtener información sobre cómo identificar recursos y realizar llamadas a la API, consulta https://docs.netapp.com/us-en/console-automation/cm/your_api_call.html#step-1-select-the-identifier["Emite una llamada a la API de REST de gestión de ONTAP"^].
 . Envía una `PUT` solicitud al siguiente endpoint, sustituyendo `{id}` por el ID del sistema:
 +
 `PUT /occm/api/azure/ha/working-environments/{id}/opt-off-maintenance-event`
