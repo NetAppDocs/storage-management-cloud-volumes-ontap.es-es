@@ -38,6 +38,7 @@ Los sistemas Cloud Volumes ONTAP que utilizan Infrastructure Manager almacenan d
 * Comprueba que ninguno de los recursos de Cloud Volumes ONTAP ni sus propiedades se hayan editado manualmente desde Google Cloud Console.
 * Comprueba que las API de Google Cloud estén habilitadas, incluida la API de cuotas de Google Cloud. Consulta https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-google-gcloud.html#step-5-enable-google-cloud-apis["Habilita las API de Google Cloud"^].
 * Comprueba que la cuenta de servicio del agente de NetApp Console disponga de todos los permisos necesarios. Consulta https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#service-account-permissions["Permisos de Google Cloud para el agente de la consola"^].
+* Antes de iniciar la conversión, te recomendamos que realices una instantánea de los discos raíz y de arranque del sistema Cloud Volumes ONTAP.
 +
 .Para las implementaciones en modo privado, asegúrate de que se cumplan estos requisitos previos adicionales:
 [%collapsible]
@@ -173,6 +174,22 @@ Si estás ejecutando la herramienta en modo privado, añade también el `cloudbu
     --file=YAML_FILE_PATH` Para más información, consulta https://cloud.google.com/iam/docs/creating-custom-roles["Creación y gestión de roles personalizados"^].
 .. Adjunta el rol personalizado a la cuenta de servicio que vas a usar para crear la VM.
 .. Agrega el rol  `roles/iam.serviceAccountUser` a esta cuenta de servicio. Consulta  https://docs.cloud.google.com/iam/docs/service-account-overview["Descripción general de las cuentas de servicio"^].
+.. Activa la API de credenciales de cuentas de servicio de IAM en el proyecto:
++
+[source, cli]
+----
+gcloud services enable iamcredentials.googleapis.com --project=PROJECT_ID
+----
+.. Permite que la cuenta de servicio que has creado actúe en nombre de la cuenta de servicio del agente de NetApp Console. Para ello, concede el rol  `Service Account Token Creator` a la cuenta de servicio que has creado.
++
+[source, cli]
+----
+gcloud iam service-accounts add-iam-policy-binding \
+CONSOLE_AGENT_SA@PROJECT_ID.iam.gserviceaccount.com \ --
+member="serviceAccount:CONVERT_VM_SA@PROJECT_ID.iam.gserviceaccount.com" \  --
+role="roles/iam.serviceAccountTokenCreator" \  --
+project=PROJECT_ID
+----
 
 
 . [[create-vm]]Crea una VM con las siguientes configuraciones. Vas a ejecutar la herramienta en esta VM.
@@ -307,7 +324,7 @@ dmconvert \
 
 
 .Después de terminar
-La herramienta muestra una lista de todos los sistemas Cloud Volumes ONTAP y los detalles de las SVM. Cuando termina de ejecutarse, puedes ver el estado de todos los sistemas convertidos. Cada sistema convertido aparece en Google Cloud Console, en Infrastructure Manager, con un formato _<system-name-imdeploy>_, lo que indica que Google Cloud Console ahora usa las API de Infrastructure Manager para gestionar ese sistema Cloud Volumes ONTAP.
+La herramienta muestra una lista de todos los sistemas Cloud Volumes ONTAP y los detalles de las SVM. Cuando termine de ejecutarse, podrás ver los estados de todos los sistemas convertidos. Cada sistema convertido aparece en Google Cloud Console en Infrastructure Manager con el formato _<system-name-imdeploy>_. Este formato indica que la NetApp Console ahora utiliza las API de Infrastructure Manager para gestionar ese sistema Cloud Volumes ONTAP.
 
 
 CAUTION: Tras la conversión, no elimines el objeto de implementación de Deployment Manager en Google Cloud Console. Este objeto de implementación contiene información que podrías necesitar para revertir el sistema convertido.
