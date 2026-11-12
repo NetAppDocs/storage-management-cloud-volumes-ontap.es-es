@@ -14,7 +14,7 @@ summary: Activa el cifrado de red del clúster de backend para proteger el tráf
 
 
 [role="lead"]
-En Cloud Volumes ONTAP 9.19.1 y versiones posteriores, habilita el cifrado de red del clúster back-end para proteger el tráfico interno de este a oeste en configuraciones de alta disponibilidad (HA) en Azure y Google Cloud. Esta configuración protege el tráfico en tránsito; no cifra los datos de los volúmenes en reposo.
+A partir de Cloud Volumes ONTAP 9.19.1 y versiones posteriores, puedes habilitar el cifrado de red del clúster de back-end para proteger el tráfico interno de los nodos de Cloud Volumes ONTAP en configuraciones de alta disponibilidad (HA) de Azure y Google Cloud. Esta configuración protege el tráfico en tránsito, no cifra los datos de los volúmenes en reposo.
 
 ONTAP utiliza Cluster Session Management (CSM) a través de Kernel TLS (kTLS) e IPsec de software para proteger el tráfico en las redes back-end para configuraciones de HA. Cloud Volumes ONTAP 9.19.1 y versiones posteriores amplían esta protección al tráfico del clúster back-end.
 
