@@ -71,25 +71,25 @@ Busca la oferta independiente de Cloud Volumes ONTAP en AWS Marketplace.
 . Accede a AWS Marketplace utilizando tu cuenta de AWS con los permisos necesarios.
 . Busca la oferta independiente de NetApp Cloud Volumes ONTAP. AWS Marketplace ofrece dos opciones para Cloud Volumes ONTAP:
 +
-** La oferta independiente de la suscripción anual a Cloud Volumes ONTAP
-** La oferta combinada de NetApp Intelligent Service para los servicios de datos de NetApp y las suscripciones a Cloud Volumes ONTAP
+** La oferta independiente de Cloud Volumes ONTAP, disponible como suscripción anual o con pago por uso (PAYGO).
+** La oferta de NetApp Intelligent Service (NIS) para los servicios de datos de NetApp y Cloud Volumes ONTAP, también disponible como suscripción anual o pago por uso.
 
 
-. Elige la oferta _independiente_. Revisa los detalles del anuncio y las condiciones de precio.
+. Elige entre la suscripción anual o la opción PAYGO para la oferta _independiente_. Consulta los detalles del listado y las condiciones de precios.
 . Suscríbete y finaliza el proceso de compra.
 . Una vez que te hayas suscrito, selecciona *Configurar producto* para que se te redirija a la NetApp Console y así completar tu implementación.
 
 
 
 
-[[subscribe-to-the-netapp-intelligent-service-offering-for-data-services]]
-== Suscríbete a la oferta de Intelligent Service de NetApp para servicios de datos
+[[subscribe-to-netapp-intelligent-service-for-data-services]]
+== Suscríbete a NetApp Intelligent Service para servicios de datos
 
-Si deseas utilizar otros servicios de datos, como NetApp Backup and Recovery, deberás suscribirte a la oferta NetApp Intelligent Service además de la oferta independiente.
+Si quieres usar otros servicios de datos, como NetApp Backup and Recovery, debes suscribirte a la oferta de NIS además de a la oferta independiente.
 
 .Pasos
 . Accede a AWS Marketplace utilizando tu cuenta de AWS con los permisos necesarios.
-. Busca y selecciona la oferta de Intelligent Service de NetApp.
+. Busca y selecciona la opción anual o PAYGO para la oferta de NetApp Intelligent Service (NIS).
 . Revisa los detalles del anuncio y las condiciones de precio.
 . Suscríbete y finaliza el proceso de compra.
 . Una vez que te hayas suscrito, selecciona *Configurar producto* para que se te redirija a la NetApp Console y así completar tu implementación.
