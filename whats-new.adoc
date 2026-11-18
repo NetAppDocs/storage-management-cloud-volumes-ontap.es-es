@@ -20,6 +20,64 @@ Las mejoras descritas en esta página son específicas de la gestión de Cloud V
 
 
 
+[[17-november-2026]]
+== 17 noviembre 2026
+
+
+
+[[new-cloud-volumes-ontap-contributor-role]]
+=== Nuevo rol de colaborador de Cloud Volumes ONTAP
+
+NetApp añade el rol *Cloud Volumes ONTAP contributor*, que tiene más permisos que el rol de operador, pero menos que el rol de administrador. Un usuario con el rol de operador puede realizar varios flujos de trabajo diarios, incluidas las tareas de replicación de SnapMirror. El rol de administrador abarca estos flujos de trabajo, pero también permite a los usuarios administradores eliminar sistemas de Cloud Volumes ONTAP, algo que muchas organizaciones no quieren para los usuarios operativos. Este rol es importante porque NetApp Console no admite actualmente la verificación multiadministrador (MAV), sin la cual un usuario administrador puede realizar operaciones delicadas, como eliminar sistemas, sin una segunda aprobación. El rol de colaborador permite a los usuarios realizar la mayoría de las operaciones críticas, como crear sistemas, gestionar la replicación y gestionar el almacenamiento, al tiempo que evita la eliminación de sistemas.
+
+El rol de colaborador incluye todos los permisos de operador, además de capacidades adicionales para:
+
+* Crear sistemas Cloud Volumes ONTAP
+* Actualizar la configuración del sistema, como cambiar el tipo de instancia o actualizar la versión de ONTAP
+* Gestiona la replicación, incluida la interrupción, la resincronización, la resincronización inversa y la edición de las programaciones de replicación y las velocidades de transferencia
+* Gestionar el almacenamiento, por ejemplo, añadiendo agregados y aumentando la capacidad
+
+
+Un usuario con el rol de colaborador no puede realizar estas tareas:
+
+* Eliminar sistemas, volúmenes, agregados o relaciones de replicación
+* Activar o desactivar sistemas
+* Establece una contraseña
+* Accede a ONTAP System Manager
+
+
+Asignas el rol de colaborador desde *Administración > Identidad*, del mismo modo que asignas a los usuarios los demás roles de Cloud Volumes ONTAP.
+
+.Enlaces relacionados
+* https://docs.netapp.com/us-en/console-setup-admin/reference-iam-cvo-roles.html["Roles de acceso de Cloud Volumes ONTAP en NetApp Console"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-cvo-rbac-setup.html["Configura el acceso basado en roles para Cloud Volumes ONTAP en NetApp Console"^]
+* https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html#data-service-roles["NetApp roles de acceso a la consola"^]
+
+
+
+
+[[microsoft-entra-id-hybrid-user-authentication-for-smb-public-preview]]
+=== Autenticación híbrida de usuarios de Microsoft Entra ID para SMB (versión preliminar pública)
+
+Cloud Volumes ONTAP 9.19.1 y versiones posteriores admiten la autenticación híbrida de usuarios con https://www.microsoft.com/en-in/security/business/identity-access/microsoft-entra-id["Microsoft Entra ID"^] para acceder a recursos compartidos SMB.
+
+Anteriormente, Cloud Volumes ONTAP solo admitía la autenticación SMB para usuarios de dominio, lo que requería la configuración local de Active Directory (AD). Con la autenticación híbrida de usuarios, puedes ampliar la autenticación SMB a cloud a través de Microsoft Entra ID, sin dejar de usar tu infraestructura local de AD existente.
+
+Con la autenticación híbrida de usuarios, estos se crean en AD local y se sincronizan con Microsoft Entra ID mediante https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/whatis-azure-ad-connect["Microsoft Entra Connect"^]. ONTAP autentica a los usuarios que acceden a recursos compartidos SMB comunicándose tanto con AD local como con Microsoft Entra ID.
+
+Esta función está disponible como versión preliminar pública. La configuración solo es compatible a través de la CLI de ONTAP. La integración con NetApp Console aún no está disponible.
+
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-azure-entra-id-smb-auth.html["Configurar la autenticación de Microsoft Entra ID para SMB"^]
+
+
+
+[[16-november-2026]]
+== 16 noviembre 2026
+
+Directiva sin resolver en <stdin> - include::_whatsnew/2026-11-16.adoc[]
+
+
+
 [[02-november-2026]]
 == 02 noviembre 2026
 
